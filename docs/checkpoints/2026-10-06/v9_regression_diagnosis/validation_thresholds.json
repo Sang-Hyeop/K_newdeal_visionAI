@@ -1,0 +1,137 @@
+{
+  "split": "val",
+  "iou": 0.5,
+  "imgsz": 640,
+  "reports": [
+    {
+      "version": "v6",
+      "threshold": 0.1,
+      "counts": {
+        "person": {
+          "TP": 4,
+          "FP": 14,
+          "FN": 6
+        },
+        "forklift": {
+          "TP": 8,
+          "FP": 8,
+          "FN": 0
+        }
+      }
+    },
+    {
+      "version": "v6",
+      "threshold": 0.15,
+      "counts": {
+        "person": {
+          "TP": 4,
+          "FP": 9,
+          "FN": 6
+        },
+        "forklift": {
+          "TP": 8,
+          "FP": 6,
+          "FN": 0
+        }
+      }
+    },
+    {
+      "version": "v6",
+      "threshold": 0.2,
+      "counts": {
+        "person": {
+          "TP": 4,
+          "FP": 6,
+          "FN": 6
+        },
+        "forklift": {
+          "TP": 8,
+          "FP": 3,
+          "FN": 0
+        }
+      }
+    },
+    {
+      "version": "v6",
+      "threshold": 0.25,
+      "counts": {
+        "person": {
+          "TP": 4,
+          "FP": 4,
+          "FN": 6
+        },
+        "forklift": {
+          "TP": 8,
+          "FP": 3,
+          "FN": 0
+        }
+      }
+    },
+    {
+      "version": "v9",
+      "threshold": 0.1,
+      "counts": {
+        "person": {
+          "TP": 5,
+          "FP": 9,
+          "FN": 5
+        },
+        "forklift": {
+          "TP": 7,
+          "FP": 9,
+          "FN": 1
+        }
+      }
+    },
+    {
+      "version": "v9",
+      "threshold": 0.15,
+      "counts": {
+        "person": {
+          "TP": 5,
+          "FP": 6,
+          "FN": 5
+        },
+        "forklift": {
+          "TP": 7,
+          "FP": 8,
+          "FN": 1
+        }
+      }
+    },
+    {
+      "version": "v9",
+      "threshold": 0.2,
+      "counts": {
+        "person": {
+          "TP": 5,
+          "FP": 3,
+          "FN": 5
+        },
+        "forklift": {
+          "TP": 7,
+          "FP": 5,
+          "FN": 1
+        }
+      }
+    },
+    {
+      "version": "v9",
+      "threshold": 0.25,
+      "counts": {
+        "person": {
+          "TP": 5,
+          "FP": 3,
+          "FN": 5
+        },
+        "forklift": {
+          "TP": 7,
+          "FP": 5,
+          "FN": 1
+        }
+      }
+    }
+  ],
+  "selected_operating_threshold": null,
+  "status": "diagnostic; no automatic threshold change"
+}
