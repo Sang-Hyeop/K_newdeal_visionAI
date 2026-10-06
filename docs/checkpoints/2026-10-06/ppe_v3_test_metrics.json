@@ -1,0 +1,25 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/ppe_pilot_v3_expansion/weights/best.pt",
+  "metrics": {
+    "metrics/precision(B)": 0.5846289546839476,
+    "metrics/recall(B)": 0.5857142857142856,
+    "metrics/mAP50(B)": 0.663978021978022,
+    "metrics/mAP50-95(B)": 0.2577881370453083,
+    "fitness": 0.2577881370453083
+  },
+  "per_class": {
+    "helmeted_head": {
+      "precision": 0.7421823686672196,
+      "recall": 0.5714285714285714,
+      "mAP50": 0.8043846153846155,
+      "mAP50_95": 0.3287069943452922
+    },
+    "no_helmet_head": {
+      "precision": 0.4270755407006755,
+      "recall": 0.6,
+      "mAP50": 0.5235714285714286,
+      "mAP50_95": 0.1868692797453243
+    }
+  },
+  "status": "development pilot; not independent final CCTV benchmark"
+}

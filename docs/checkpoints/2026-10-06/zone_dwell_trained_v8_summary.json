@@ -1,0 +1,61 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/4_hazard_zone_dwell.mp4",
+  "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v8_preserved_head/person_forklift.pt",
+  "weights_sha256": "1973ab97df0ef76a7c3cdc5cbcd307a316520415a50856db1c3167559e6f0cbe",
+  "config": {
+    "camera_id": "dwell-demo",
+    "source_name": "4_hazard_zone_dwell.mp4",
+    "roi_id": "machine-work-area",
+    "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+    "polygon_normalized": [
+      [
+        0.02,
+        0.4
+      ],
+      [
+        0.61,
+        0.33
+      ],
+      [
+        0.53,
+        0.995
+      ],
+      [
+        0.02,
+        0.995
+      ]
+    ],
+    "safe_seconds": 3.0,
+    "critical_seconds": 8.0,
+    "max_gap_seconds": 1.0,
+    "anchor": "bbox_bottom_center_proxy"
+  },
+  "frames_sampled": 92,
+  "processed_fps": 4.795204795204795,
+  "imgsz": 1280,
+  "transition_events": 35,
+  "state_observation_counts": {
+    "SAFE": 215,
+    "WARNING": 26,
+    "UNKNOWN": 5,
+    "CRITICAL": 34
+  },
+  "max_observed_dwell_by_track": {
+    "0:1": 0,
+    "0:2": 0,
+    "0:3": 0,
+    "0:6": 0.2085416666666653,
+    "0:9": 14.59791666666667,
+    "0:10": 0,
+    "0:14": 0,
+    "0:18": 0,
+    "0:25": 0,
+    "0:42": 0,
+    "0:45": 0.6256249999999994
+  },
+  "critical_track_ids": [
+    "0:9"
+  ],
+  "limitation": "demo ROI, bbox footpoint proxy; missed people/ID switches possible; no independent ground truth"
+}

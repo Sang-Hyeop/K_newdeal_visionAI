@@ -1,0 +1,112 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/6_Helmet_forklift.mp4",
+  "sampled_frames": 58,
+  "processed_fps": 4.795204795204795,
+  "person_state_counts": {
+    "unknown": 120,
+    "helmet_detected": 181,
+    "conflicting_evidence": 2
+  },
+  "track_spans": {
+    "0:1": {
+      "first": 0.0,
+      "last": 0.20854166666666665,
+      "observations": 2
+    },
+    "0:2": {
+      "first": 0.0,
+      "last": 1.8768749999999998,
+      "observations": 6
+    },
+    "0:3": {
+      "first": 0.0,
+      "last": 5.839166666666666,
+      "observations": 29
+    },
+    "0:4": {
+      "first": 0.0,
+      "last": 5.839166666666666,
+      "observations": 28
+    },
+    "0:5": {
+      "first": 0.0,
+      "last": 0.0,
+      "observations": 1
+    },
+    "0:6": {
+      "first": 0.0,
+      "last": 1.8768749999999998,
+      "observations": 10
+    },
+    "0:8": {
+      "first": 0.8341666666666666,
+      "last": 1.4597916666666666,
+      "observations": 4
+    },
+    "0:10": {
+      "first": 1.25125,
+      "last": 5.839166666666666,
+      "observations": 23
+    },
+    "0:11": {
+      "first": 1.4597916666666666,
+      "last": 4.170833333333333,
+      "observations": 14
+    },
+    "0:14": {
+      "first": 2.0854166666666667,
+      "last": 5.839166666666666,
+      "observations": 19
+    },
+    "0:23": {
+      "first": 4.170833333333333,
+      "last": 5.839166666666666,
+      "observations": 9
+    },
+    "1:1": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:2": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:3": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:4": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:5": {
+      "first": 6.047708333333333,
+      "last": 8.550208333333332,
+      "observations": 13
+    },
+    "1:6": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    }
+  },
+  "scene_resets_seconds": [
+    6.047708333333333
+  ],
+  "scene_cut_threshold": 0.18,
+  "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+  "weights": {
+    "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pretrained/yolo26n.pt",
+    "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt"
+  },
+  "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+  "limitations": "Automatic scene-cut heuristic can miss cuts; no temporal PPE confirmation, ROI or alerts",
+  "weights_sha256": {
+    "objects": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "ppe": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09"
+  }
+}

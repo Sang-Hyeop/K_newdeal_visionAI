@@ -1,0 +1,80 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/ppe_pilot_v3_expansion/weights/best.pt",
+  "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/expansion_v3/ppe",
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "status": "small development diagnostic; not final independent evaluation",
+  "class_counts": {
+    "helmeted_head": {
+      "TP": 4,
+      "FP": 0,
+      "FN": 3,
+      "precision": 1.0,
+      "recall": 0.5714285714285714
+    },
+    "no_helmet_head": {
+      "TP": 2,
+      "FP": 3,
+      "FN": 3,
+      "precision": 0.4,
+      "recall": 0.4
+    }
+  },
+  "images": [
+    {
+      "image": "106946599-1632425135217-gettyimages-1235434529-rpe-l-wh-future-xxxx-12-wp_jpeg.rf.9d3fc4848a5f74e18b9ba3fc6b24158c.jpg",
+      "gt_count": 1,
+      "prediction_count": 1,
+      "matched": 1
+    },
+    {
+      "image": "fafd4dd5-4137-468d-810f-5908fccc1b42-MJS_Virus-roundys_nws_sears_16_jpg.rf.447baa52e84c95f8a8f09ebb2883895b.jpg",
+      "gt_count": 1,
+      "prediction_count": 0,
+      "matched": 0
+    },
+    {
+      "image": "hard_hat_workers108_png.rf.11f9d226f94c3707cc597bd7c0de0ba1.jpg",
+      "gt_count": 2,
+      "prediction_count": 1,
+      "matched": 1
+    },
+    {
+      "image": "hard_hat_workers129_png.rf.2b244d6a59c98ddf023603f835d086e6.jpg",
+      "gt_count": 1,
+      "prediction_count": 0,
+      "matched": 0
+    },
+    {
+      "image": "hard_hat_workers190_png.rf.14f43ffb516bc04ed2b48b1389a631e8.jpg",
+      "gt_count": 3,
+      "prediction_count": 6,
+      "matched": 3
+    },
+    {
+      "image": "images_jpg.rf.06f9864dabc1599189696c01dc53045d.jpg",
+      "gt_count": 1,
+      "prediction_count": 0,
+      "matched": 0
+    },
+    {
+      "image": "isor-standing-in-warehouse-with-his-arm-crossed-looking-at-camera-1936960675_jpg.rf.9e12fb62602061969d4c9812d96a22ad.jpg",
+      "gt_count": 1,
+      "prediction_count": 1,
+      "matched": 1
+    },
+    {
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.jpg",
+      "gt_count": 1,
+      "prediction_count": 0,
+      "matched": 0
+    },
+    {
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.jpg",
+      "gt_count": 1,
+      "prediction_count": 0,
+      "matched": 0
+    }
+  ]
+}

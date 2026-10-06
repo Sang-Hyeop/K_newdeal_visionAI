@@ -1,0 +1,98 @@
+{
+  "created_at": "2026-10-06T10:42:12.049575+00:00",
+  "checkpoint": "tracking-dwell",
+  "status": "local_same_disk_backup_verified",
+  "files": [
+    {
+      "source": "models/pilot_v8_preserved_head/person_forklift.pt",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/models/pilot_v8_preserved_head/person_forklift.pt",
+      "bytes": 5424709,
+      "sha256": "1973ab97df0ef76a7c3cdc5cbcd307a316520415a50856db1c3167559e6f0cbe"
+    },
+    {
+      "source": "models/pilot_v8_preserved_head/status.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/models/pilot_v8_preserved_head/status.json",
+      "bytes": 469,
+      "sha256": "aa8e9aa8380410f4340ec258c8106c5b4820ec5c1c815579b6f58a82e7547235"
+    },
+    {
+      "source": "models/pilot_v3_ppe_expansion/ppe.pt",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/models/pilot_v3_ppe_expansion/ppe.pt",
+      "bytes": 5383109,
+      "sha256": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09"
+    },
+    {
+      "source": "models/pilot_v3_ppe_expansion/status.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/models/pilot_v3_ppe_expansion/status.json",
+      "bytes": 682,
+      "sha256": "552367c58bac5801e96016ae5025e58f20a2b8c97525353ee5e7487fb9bef03e"
+    },
+    {
+      "source": "outputs/training/logistics_pilot_v4/weights/best.pt",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/training/logistics_pilot_v4/weights/best.pt",
+      "bytes": 5361605,
+      "sha256": "8c32294e6f9645e8f729a26c08a4a6596deee70524b5428c8f5fa9cd80f38c03"
+    },
+    {
+      "source": "outputs/video_validation/zone_dwell_v1/trained_v8/zone_dwell.mp4",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/video_validation/zone_dwell_v1/trained_v8/zone_dwell.mp4",
+      "bytes": 14418238,
+      "sha256": "3b1d35a78b67d662ca87bf0fdb4eccacda3506381774bdcfb415431090c9ba94"
+    },
+    {
+      "source": "outputs/video_validation/zone_dwell_v1/trained_v8/summary.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/video_validation/zone_dwell_v1/trained_v8/summary.json",
+      "bytes": 1527,
+      "sha256": "d9c426c7c3bfac64f42bcda7c69ff11a5befb29d30a295cb9020da72504d87ae"
+    },
+    {
+      "source": "outputs/video_validation/zone_dwell_v1/trained_v8/events.jsonl",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/video_validation/zone_dwell_v1/trained_v8/events.jsonl",
+      "bytes": 12459,
+      "sha256": "36c0a20169c9ae76d6fcaa7c2dc79906ba9e8066fca8243531eb2b44e520bcd8"
+    },
+    {
+      "source": "outputs/video_validation/zone_dwell_v1/trained_v8/observations.jsonl",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/video_validation/zone_dwell_v1/trained_v8/observations.jsonl",
+      "bytes": 198354,
+      "sha256": "e8a782b4c6cc8699fb7e93a5950201c0da3c2befbdd6c9fd5d378f4a88f2626d"
+    },
+    {
+      "source": "outputs/video_validation/tracked_ppe_v3/forklift/tracked_ppe.mp4",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/video_validation/tracked_ppe_v3/forklift/tracked_ppe.mp4",
+      "bytes": 4855859,
+      "sha256": "25c64fdf2c28eb55d1a883704504f03d12487b0622660f01aa642132c345c9a3"
+    },
+    {
+      "source": "outputs/video_validation/tracked_ppe_v3/walking/tracked_ppe.mp4",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/outputs/video_validation/tracked_ppe_v3/walking/tracked_ppe.mp4",
+      "bytes": 4108117,
+      "sha256": "ff63225f377e85bb4671132d09d9b5cf21a84a67f83144a1b1bde50d97cb88ad"
+    },
+    {
+      "source": "data/reviewed_pilot/expansion_v3/ppe/manifest.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/data/reviewed_pilot/expansion_v3/ppe/manifest.json",
+      "bytes": 66915,
+      "sha256": "08d5d1ef4fef9ea361fa71effa9a90f0d83feda518305f65b08382111b05a450"
+    },
+    {
+      "source": "data/reviewed_pilot/expansion_v3/ppe/dataset.yaml",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/data/reviewed_pilot/expansion_v3/ppe/dataset.yaml",
+      "bytes": 181,
+      "sha256": "5af6f77ed0ea9503685e4a3c556d859a24578f96f360f907b0b7b393db6985a9"
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_v7_full_scene/manifest.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/data/reviewed_pilot/logistics_v7_full_scene/manifest.json",
+      "bytes": 169133,
+      "sha256": "2649ac2128e26784be24369164540ceec8d7b23a234f6be55d046e89b6a19118"
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_v7_full_scene/dataset.yaml",
+      "backup": "_local_archive/checkpoints/2026-10-06-tracking-dwell/data/reviewed_pilot/logistics_v7_full_scene/dataset.yaml",
+      "bytes": 175,
+      "sha256": "39f19cf3e3e09919d6b9995fbf673dcedba4a0a82fd6a08d58e00d7558cd942c"
+    }
+  ],
+  "limits": "No off-device model/data backup; source datasets/ZIPs not fully copied; code recorded in Git commit"
+}

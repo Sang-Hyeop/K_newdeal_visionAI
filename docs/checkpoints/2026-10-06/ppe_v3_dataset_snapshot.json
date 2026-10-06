@@ -1,0 +1,439 @@
+{
+  "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/expansion_v3/ppe",
+  "files": [
+    {
+      "split": "train",
+      "image": "0504_WarehouseWorkers_png.rf.9ab0fd904f1e919258139e155b6689a7.jpg",
+      "image_sha256": "36141754ac0c072ae35e748293cd2a0de4d985c343ddee17e1dd8dd716b788b6",
+      "label_sha256": "0bf90baee283ea2f7b9e8e30122db332d2257c478410ceb5251a3c3808e9139a"
+    },
+    {
+      "split": "train",
+      "image": "0x0_jpg.rf.c0e4be134be30fcf4885dbb1b8c75ddb.jpg",
+      "image_sha256": "647ee3ca1599c47778679f229d9f20ff5b5d4cd4cce2d7dc4f8956444ba042c0",
+      "label_sha256": "044445273c6813c79b3a6e94824d36f52a3fad03021eb3b68eaa651802d59537"
+    },
+    {
+      "split": "train",
+      "image": "1000_F_284375138_FpZGFFWKiFWR4x2IdicSQ9ELvpJys6Vy_jpg.rf.1b5c1f7c04155d9cd990aa797b8c87ad.jpg",
+      "image_sha256": "30c91bc680f8e5e41c18e2bc89ea3c1f02abe2d2fa9507a79cc9e28a53fdb63a",
+      "label_sha256": "6c9cbbf77ec15ea31c6494f53760689d413f1904c5f955b3c49eb6082b874c16"
+    },
+    {
+      "split": "train",
+      "image": "123906371-group-of-business-people-and-warehouse-workers_jpg.rf.957a60d5c896091c60d6231ea69cfd67.jpg",
+      "image_sha256": "87750743460f60e176fae0cb0d5524e4f07db1413cb9bd18639dd492d0af277b",
+      "label_sha256": "dc97585293b8eb7d9162ec360217ae821b414542159fda95c9d015e38694665b"
+    },
+    {
+      "split": "train",
+      "image": "360_F_390579418_XxTdtqjqDtIaEhZ0RXTbHtoSqP2mTY9r_jpg.rf.999d9438161d30f3a9e7a89b10099de9.jpg",
+      "image_sha256": "cce85f7077b54a12e2b649bd076f2cb880ce229f5b1f0c08cb8765929cc5d118",
+      "label_sha256": "a7ded76be486bfcc07537d82d5170b8e39cf63fbadd7548863a87466a2908583"
+    },
+    {
+      "split": "train",
+      "image": "40132536_14117106_Large_jpg.rf.05bd1b6460ddbe524aa6cff6da251a4f.jpg",
+      "image_sha256": "974416d11bffe697a37891257eed5d2d98b15ebf3148501135b5c21f484255da",
+      "label_sha256": "14c2beaafe3b2a34e11882c6be257f6354f9c1fccf7c13f4c0cb3b06526aab09"
+    },
+    {
+      "split": "train",
+      "image": "51d9d69c-3ab0-11ed-9dda-0242ac110003-png-hero_image_png.rf.1520e0e91e8ee043f9bfb8161d710eed.jpg",
+      "image_sha256": "5dc2a2823c65769ab840dd20dc19f6265abf01f975ddb40ed73fc0ed95cfacbd",
+      "label_sha256": "294d27ed8863d9916f2b480afb98cccb9922a694d15a4bbcf92035bac42ff30d"
+    },
+    {
+      "split": "train",
+      "image": "5afcbd249d90c-image_jpg.rf.15c512b88a4a58a876f193b192c78950.jpg",
+      "image_sha256": "c02cf12dd04d1fee65e7ecb72024ec4d985655a798a14db5ae90a48d964de3dc",
+      "label_sha256": "3e1c888f5867a414193eb55bf778b1fe00c89ec3605242b85024547fef6d65c5"
+    },
+    {
+      "split": "train",
+      "image": "707a0c7f-ce9c-437c-84f5-9e12539433ca_jpg.rf.b845b636a93856cbef373f8efa2fe30c.jpg",
+      "image_sha256": "ad930ffe927b1feb7c0720cd24e70ce6a5221b3b42ec0d7162277cb2fad085ab",
+      "label_sha256": "c157a8bf344657a7d5808b44f9dccd6c09d112fba6cfd880680ce11354ba7cb5"
+    },
+    {
+      "split": "train",
+      "image": "7_Types_of_Positions_in_a_Warehouse_to_Consider_jpg.rf.7549075967345ac99752437845bc4611.jpg",
+      "image_sha256": "f29ba7399e98135e7f1a7e163052b6f141ee6860a60d201b660ab023c24d3381",
+      "label_sha256": "b13c8795c2b568d845ba05120863c06f1c8dd19f2e621fbba4726913d94cc720"
+    },
+    {
+      "split": "train",
+      "image": "Robust-AI-Workmates-Business_jpg.rf.3e6f6f1c3231c6001028c344c873ed49.jpg",
+      "image_sha256": "9334f041c62483bedc369cf4ef501de14100c2ab783d4cdd480a1cbb66453ceb",
+      "label_sha256": "8cc8753efdfd55d360a7f3f2c6f270a1228326c730136ec40942d5e294d27f21"
+    },
+    {
+      "split": "train",
+      "image": "Steel_King_guard_rails_in_use-629903b85ae5d_png.rf.1908ed54be10c7fa97315e2dc5060e7b.jpg",
+      "image_sha256": "4db93a37e9a3a3b938f4c46f8fb9412fc7f2221f2f28593e70e1164b183220d9",
+      "label_sha256": "d996ef14445cf7fded71ffea5da2c30def244354ddec63a5a0a1cee58852e8e2"
+    },
+    {
+      "split": "train",
+      "image": "Warehouse-Management-Outsourcing-When-Should-You-Consider-a-3PL-770x253_jpg.rf.efcc193d2dc5563e49b353a2fa07e475.jpg",
+      "image_sha256": "4a19c480d5e39a124c186b7a728aa02f1188e00654700ed74664bdddaf3aa792",
+      "label_sha256": "bc9f3e8970b6a6ca375b2a6a4bc8f8dfbf3c626554dfe53ed2ab9222a50f37ec"
+    },
+    {
+      "split": "train",
+      "image": "Warehouse_Worker_jpg.rf.94940605a555298570b1dc597d03b256.jpg",
+      "image_sha256": "3eec2e2f852ce8569b7a5104e31c1d9d1ea458a6f378baadf2f607ddf886ed06",
+      "label_sha256": "49fea7a613d5a0f443eb074957c589c2ef86b2ebc407d412044272784d3471ea"
+    },
+    {
+      "split": "train",
+      "image": "_CO60893_jpg.rf.62fc0a4f5352bd742094e0d9067ad62e.jpg",
+      "image_sha256": "5b72f7f5c2accac46ce3b1eeb5d6b9af3f2898d87c5dd439d371f21be396e3fa",
+      "label_sha256": "c1e281a6b052fab2ff540bdf8c6f800117cb217b7ba97f87a95e3dc5e59195af"
+    },
+    {
+      "split": "train",
+      "image": "benefits-of-warehouse-management-system-for-small-businesses-1200x627_jpg.rf.fef8c1f531827a6e2c505ad8b6da9f5c.jpg",
+      "image_sha256": "10c7b693db17d26341910fd3a5efe82f0b78d3c575866517946d09388b82c697",
+      "label_sha256": "2a154753cab7917330dba4fd6c30b65113e681457c8d7f5b433c40aaa2ca90c7"
+    },
+    {
+      "split": "train",
+      "image": "bigstock-wholesale-logistic-people-an-118565333-crop_jpg.rf.6a4c7192c523193cccbf68bed7330362.jpg",
+      "image_sha256": "0d65c7e7da9c2f4e70b0ba7b6b8a4f8d0ef47915da45ab5075d88291e5a7734d",
+      "label_sha256": "0a1e8845e4fcc84b333adb7a30696359c1097cfe85b9de240f701bfb3833f45f"
+    },
+    {
+      "split": "train",
+      "image": "blog-266-pic-min_jpg.rf.3fb84e52f58a2702a6361fef9d943553.jpg",
+      "image_sha256": "c30e66002c061fcd482024feeb5589023f832c4ff77763bb990b47ef6b068ddd",
+      "label_sha256": "59d9f146bb12e00b24e3b2249c84c6a516bb74c0a04f7a902a1569652983fac2"
+    },
+    {
+      "split": "train",
+      "image": "depositphotos_221570588-stock-photo-logistics-people-working-warehouse_jpg.rf.001f4da21e001c4118a46c39c92e4508.jpg",
+      "image_sha256": "3c8c7be2bc793fb31070fd97efb388849b58335818c53a926d4169e22eec2099",
+      "label_sha256": "38852c05f08607bbae3a9968d23380408fa5e4e855fb64af63808ad465382fdc"
+    },
+    {
+      "split": "train",
+      "image": "hard_hat_workers127_png.rf.561c748e1ba72603746c55f6f6f403e7.jpg",
+      "image_sha256": "7540c116e3380a89ea67938cec16233d2589542da921e87cd6101e1d3b3d3afc",
+      "label_sha256": "ecabf09142ba4431cca313a398584e61c101a55c8daabdbe2df1b6df417ab610"
+    },
+    {
+      "split": "train",
+      "image": "hard_hat_workers198_png.rf.2e146c471f5020589894e1a0c242ab76.jpg",
+      "image_sha256": "61570b9577e59dccccf35d84dc5af2c4d546988570f3349a341724adb8106893",
+      "label_sha256": "7917e3be6bed21421a461c18c39cc2582d3e26dd8c42fc3f7c820795fe8969bd"
+    },
+    {
+      "split": "train",
+      "image": "hard_hat_workers235_png.rf.1f26afda914221e4d1b70f4a3b1aa84e.jpg",
+      "image_sha256": "f436037043f030a6f90ba4a9540f42d08436da6cbda62bee901a829624d47e51",
+      "label_sha256": "635d1cbdf7ab3722787bd5298d3936ad8449428e124a395cfc12c92aa562f43c"
+    },
+    {
+      "split": "train",
+      "image": "hard_hat_workers94_png.rf.efbac90883c62f17c86d805cbb09c4ee.jpg",
+      "image_sha256": "7514e92e82877a655ffb63ae51d2843f94d65629fc1f3fd82230ca9c204f8b76",
+      "label_sha256": "10f65ba4770a58605ca775114573bb0edd2082e1852dd29557b66b2bcfc54c75"
+    },
+    {
+      "split": "train",
+      "image": "image26_jpeg.rf.2d834d90619276f4d577c30fb10f27aa.jpg",
+      "image_sha256": "518154c24f2d3df17bc266171e0379637b5838586bc4465c6164dd22e18be557",
+      "label_sha256": "ad4c0507854d076763cecc201de82691f6d1c39550d41f62a77f84d9a8f2f57d"
+    },
+    {
+      "split": "train",
+      "image": "images10_jpg.rf.fbc5d991afe385f45d7fa287a0fa9c4e.jpg",
+      "image_sha256": "d14641edd7846f9c1de5f5aa3d011e2ba38e151c96b273a8262bc78272174da0",
+      "label_sha256": "08c5a34f7fc82f50f33dcc24167f9a8a90cf5646f36c24b988a58546d812f838"
+    },
+    {
+      "split": "train",
+      "image": "images20_jpg.rf.0d1cf5229e44d1025780870bc5fdcd7c.jpg",
+      "image_sha256": "1a37c1920abcc378eeb85c31f3b24f39d261d90b55c9528b0a1e47680639da88",
+      "label_sha256": "e8e89874f23ba975b34720c5233622d7444af115aabfd941d9c70043aea160ae"
+    },
+    {
+      "split": "train",
+      "image": "images23_jpg.rf.1b3d874bb4deae6a2aacd5115c05c5e6.jpg",
+      "image_sha256": "d5b7432e1f9def3033a6b75a5c2ad2fcd2acede07548c93aeb0b5f830983ff5f",
+      "label_sha256": "f102df9582866fef0ae68344bbd0a10fb2c2f5849100a508eeeb980482166a48"
+    },
+    {
+      "split": "train",
+      "image": "images24_jpg.rf.0756ee69419cf87eab6f86f7dd13caf2.jpg",
+      "image_sha256": "07b2c2660eff3ef6b17dcceebb7bdc53c6edbc8c68ac87c23b1296e30a6dc504",
+      "label_sha256": "06289d4fd51ccb79ea2aa971e82339b060112ae8a0e9d82a18ee6ea74c75e0dc"
+    },
+    {
+      "split": "train",
+      "image": "images25_jpg.rf.281afdf0be68e12d27d83835fc0882ed.jpg",
+      "image_sha256": "f8e97df17c246155132fee0ac5ab4301c4d3aa85d7fd0c58f6aac5bbb99ea19a",
+      "label_sha256": "1f19bbca193b74d099aa2d25af9eed001f289469a69ba410306b6e20f75bf1fe"
+    },
+    {
+      "split": "train",
+      "image": "images29_jpg.rf.3d3003f756c38eabd98ccbb0058403df.jpg",
+      "image_sha256": "0fab5cba99acc34ce857023e3bda9af8d24c48312303f9e4d857e706d8e0e57b",
+      "label_sha256": "ab844b60f4f02f34dc60158088596380a3efb8ad46a12324f7f15923fea95543"
+    },
+    {
+      "split": "train",
+      "image": "industrial20pr208152220972x1296_jpg.rf.6a0030b2e1302aa1210f0fc1f3b31491.jpg",
+      "image_sha256": "bda14fb7ff5b624f4f9233a0ff8d1a322894a5103a892ba1ffcf5e43cd8f355f",
+      "label_sha256": "68cdb192f92c7759e2773ba62955e2872a97d4f2ce6c8596cb3f3513212c6cd0"
+    },
+    {
+      "split": "train",
+      "image": "learn-warehouse-1-1_jpg.rf.34e15c5c4bc039668a338f147258dd41.jpg",
+      "image_sha256": "2174e9ef2edbbddbbe7ee5be1ae1ec61585c4179a299188ab1854782938c5443",
+      "label_sha256": "2b2152a533db6b2823e6fcdc9cc122b75c7051a6b7feb3f73e9efd8d5fed9e8b"
+    },
+    {
+      "split": "train",
+      "image": "millennial-warehouse-workers-full-1024x683-1_jpeg.rf.0a53e56557f7d842f44635a977a6f455.jpg",
+      "image_sha256": "56d800f8fd17feeb1dd4530aa45a2d1eab1b9259ee91ffa579e6de371d106bbb",
+      "label_sha256": "adaaaa9005546b379b968fa9b1dafec255d6c554c25966ab94893707d2fca010"
+    },
+    {
+      "split": "train",
+      "image": "nt-and-people-concept-warehouse-worker-and-businessman-with-clipboard-and-ta_jpg.rf.2d12e57305bbb44a6d83763ec52b656c.jpg",
+      "image_sha256": "a0def51784fa74418bc11dc63dca202a109e2f26f59b7d91a3b958e6601cc3d7",
+      "label_sha256": "0bd97d9af441fd7cfe3a61086cdd318020d60e0b49880a84596a0fca40eb91a9"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-14-10-20_001_002561.jpg",
+      "image_sha256": "f5dfbc5b26c99384ab8ebe886478b1a3a57010cea8061bd40f53bb3089034385",
+      "label_sha256": "d259be64a5032de7d85dadfecacd7ca74d5259794ad2b06ba05489e80c6233ad"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-14-10-23_001_000706.jpg",
+      "image_sha256": "f7d7a6a475cad474fc0f18e54cc78d60526292f48a4921025d46f794492f60ea",
+      "label_sha256": "61869558e688d7f5fe2b7974944000970d3d9c098b93fc8b471a4cb543165e06"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-14-10-30_001_000904.jpg",
+      "image_sha256": "65df8996a1e1da2b73319c5380cfc29b84ee655fa87a629e52b4893093ddb29f",
+      "label_sha256": "04e2e5d6701b99bae30a76d0d2fcf7c937deabaec9946cb5b09144e674df0e31"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-14-10-31_001_000465.jpg",
+      "image_sha256": "4479f5ef29c9c7c0d9d439f035b8cc7fab3afcb16431c91aa6d9b38bf66f6c55",
+      "label_sha256": "8034b8e192a6950a06b4a6077d39389ba51a06d300cdfa6b5746fa9b85d056cb"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-14-10-33_001_001844.jpg",
+      "image_sha256": "8b3484c1119b0ac95e986f8e9f30802c6ee2efee3eea34454f55f580b5a05bb8",
+      "label_sha256": "e096aae4b13c2b2e8beb9e203c71334a79f3d7de67514393ed579b06f76fc872"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-14-10-35_002_000708.jpg",
+      "image_sha256": "eb88f3e5eaddd97d4af4dfbfb4cc774e5518822d8eb78720dac9909d913ced05",
+      "label_sha256": "8d8fd938e4a76323902c745ed3d8aef9a41fa3090cca52caead3a64b2aa8290c"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-10-25-15-36_046_001832.jpg",
+      "image_sha256": "1c1702529619718ee84f320146a4782a4a3f1f6a7b4eea91eea9974348960941",
+      "label_sha256": "0cb95b0b67fccc0b92bf84e88f6dbf7ef0df7df8b280e13d5df288b78cbd18e3"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-10-25-15-40_045_010308.jpg",
+      "image_sha256": "d7b36798427f32fa87dc4ac70cf750826f4d0dcab5238afb0f412c6ac9cbfc0a",
+      "label_sha256": "df88c67049ea58e457cd5323b30f5bace87eafbe5ac094d696d6b853ebaf666c"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-10-25-15-45_043_002538.jpg",
+      "image_sha256": "e2ad956397cb42b4bf7808182ec658bf1a20d9304fead6b4326bea30240f1370",
+      "label_sha256": "bb899f698f5c43acc153322267d9e566142645c328cd9f73ba8a74a94e53f900"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-10-25-15-49_021_000075.jpg",
+      "image_sha256": "e11bc609088f91a7b29654890d381016cdf1a487a33a49a533056c2851865645",
+      "label_sha256": "88a16da3afe4ef353f99caf8439eab42b832dd34e294892603ef89ddd83a96e9"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H1_L1_D2023-09-14-10-35_001_001115.jpg",
+      "image_sha256": "ebb8e1c64fffcb4d5264829405012aede6343ff70234eca2a79d7de4dffea27f",
+      "label_sha256": "47dc6f50399119244f202568168cee21a2645f82dafa64311e3ea3bb456d74c9"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H1_L1_D2023-09-14-10-36_002_000710.jpg",
+      "image_sha256": "0f026a88901756ba8c43e21360cebfe49260b00c2d93022d77e49cca8c2027b6",
+      "label_sha256": "609fe9189705eee305e03326bc441275342c623a1a17a9c18c600c9edd88e79b"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H1_L1_D2023-09-14-10-37_001_000967.jpg",
+      "image_sha256": "f45406b754cef2004b3c3b9f07b42bd077bd7cb765029f6175d53ec849c7326f",
+      "label_sha256": "81312cf40291b598ed18cd44c595ad122d2d54639a6b442a011f32a28e76e5a9"
+    },
+    {
+      "split": "train",
+      "image": "smartyard_S63_DATA3_H1_L1_D2023-10-25-13-40_001_001059.jpg",
+      "image_sha256": "1c4b87ce7aeed44cc17156c6d072d6f0c54f615c9c2ad024a5acb4bee5b26048",
+      "label_sha256": "37244397bb5cfdad40c3be1b9616bce0d1f6d5613a457557223c3aec7d4d7ac3"
+    },
+    {
+      "split": "train",
+      "image": "warehouse-labor-shortage_jpg.rf.73c93383fa93b6aae2a9ab71fe67a40d.jpg",
+      "image_sha256": "3305ea63f8d7a1661c00b1c92ca9f641f34cfa5cf046d1d04c69110aec7f9b6f",
+      "label_sha256": "927141c3c3d47b45c69134c865dc44a7aa28fdd4d1bcb74edd855d7a51fa3a98"
+    },
+    {
+      "split": "train",
+      "image": "warehouse-management-system-eostar_jpg.rf.55f4318fd2153778d3189808de05dff2.jpg",
+      "image_sha256": "585a15641b7e57d3fd19cdc34b7af416383162f1ba56f5f0297da4b1b0ab1220",
+      "label_sha256": "b98f535b0c4c9d2b367018b77ae6d53d74a747344ec30075c7dcf587f3386c82"
+    },
+    {
+      "split": "train",
+      "image": "warehouse-manager-1-3_jpg.rf.418a124efccf0dcfe778157170b15bb3.jpg",
+      "image_sha256": "49b1ae9bd493431ecd204b93d815ed050a87671ea96409d50636cad2d0437046",
+      "label_sha256": "238f322c5202a8b70822b9a04642fb8cc24f06e943987878f20c549878c34f65"
+    },
+    {
+      "split": "val",
+      "image": "750px_png.rf.52dd041f5cb4f1079d6df72c46d15fee.jpg",
+      "image_sha256": "dedda29ad454028b3a5f84a978f1111fa7ea91e54ee71e0a13a059b6b6d312c1",
+      "label_sha256": "d98f67b41809592d3aeb4d419c59a538e95a2f2474b1160b8744b6fe88634f04"
+    },
+    {
+      "split": "val",
+      "image": "AdobeStock_104079731-1_jpeg.rf.8411165e57d0e230d5241c8ad8692b24.jpg",
+      "image_sha256": "4a8e67a983335a1a85beb8fe6678b731a8a428d8d8d5b4046db23364f2ce1148",
+      "label_sha256": "c641155bae302de9f774388e69004049da8b329f3e9e85466ff9b51004d60fb6"
+    },
+    {
+      "split": "val",
+      "image": "hard_hat_workers185_png.rf.95bd6563098c373ccad749c6747908c3.jpg",
+      "image_sha256": "2789ac98b4c2c8bbd1926b0cac22b0f95562217f3aa67626dfe6985487d12e6c",
+      "label_sha256": "1ee11cf88275fad2ebc409dbb56ab414403be5cd2c2d69d3f928d10b14c55849"
+    },
+    {
+      "split": "val",
+      "image": "iStock-1198042394_jpg.rf.3b276776aa5248a4e6856e9214aac0ab.jpg",
+      "image_sha256": "8ac435d69ec4a1f28d6955bbb500708982c3fa881dce78dc1e550e9e03600cef",
+      "label_sha256": "cd9a3de2bf63d965cbd89e6740a7761d6b287c32eac18213780e7885e6b4d00f"
+    },
+    {
+      "split": "val",
+      "image": "image20_jpeg.rf.13336ec37febe553a18d2d3a0b82d933.jpg",
+      "image_sha256": "3b012d8604d67c4da88de6c87abdf0d49d090b2ddff4886fedaa6b488e96a574",
+      "label_sha256": "bbf40086e240ccc7214079383e549b551d9aeb5cc5a7cf8fa33f058a385e83c6"
+    },
+    {
+      "split": "val",
+      "image": "kinds_of_warehouse_jobs_1600x684_png.rf.1010c93364981dc8085c9db2431a7609.jpg",
+      "image_sha256": "3a915a6c73cce8d960708727c3d0b892262641b44f26d772514da816c053e9b0",
+      "label_sha256": "fdcc00290e7c342332bea3d8a4c12fe74d56a576bd6d9b812ef776c1f54ef3b8"
+    },
+    {
+      "split": "val",
+      "image": "logistic-business-success-people-concept-600w-1077995543_jpg.rf.8ce5b445a8d2c5cd0190b9c2193a73e5.jpg",
+      "image_sha256": "9afb5d35144f827328fd6c5061e5a6d1d456d94d6520e749d6db891a2c81229e",
+      "label_sha256": "c5322d762786b7de47a4b7a8e3d65e05c4ef351b667e0f29d2fb982d14485891"
+    },
+    {
+      "split": "val",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-10-12-10-17_001_001189.jpg",
+      "image_sha256": "bc676f82edac020043d61793568c9f3e9349638bdc41d0fa1bf981cbb36993f2",
+      "label_sha256": "6b1bc8973919427dac336717babdcc8d18c5aaeae9a3f3a30dbe63eeec729b7d"
+    },
+    {
+      "split": "val",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-10-12-10-21_001_001144.jpg",
+      "image_sha256": "865969b2285d1e06a1cf45bab5e3b4549bb14542997e9802f067d40f55992f43",
+      "label_sha256": "771ac3d91c1287a98b5d6974d1f968298192585be74954264bf86b8aeb2bfef5"
+    },
+    {
+      "split": "val",
+      "image": "smartyard_S63_DATA3_H1_L1_D2023-10-12-10-20_001_000775.jpg",
+      "image_sha256": "7af00d1477e91efd9cdb4348487446a0cafe94a0fa63f118d8562edc2a0df910",
+      "label_sha256": "36d78cdd7b4916e2504e7f848fe29c3bb9ba1196886f338eb7fd005edef834df"
+    },
+    {
+      "split": "val",
+      "image": "warehouse-job-for-deaf-person_jpg.rf.484cf777fc523ca46237f2bae1d57ddd.jpg",
+      "image_sha256": "0308f9dfda32892d69e3de6465299a2424b19596dc19051996961f2b29be9994",
+      "label_sha256": "4161304eaffa24c2d701b19302bb9fd8a79b0ca54d370e26aba4eead6aeeb6f4"
+    },
+    {
+      "split": "val",
+      "image": "warehouse-worker-job-description-4088x2727-2020121_jpeg.rf.f2023400377a078e1e0d5696d3bf7f6b.jpg",
+      "image_sha256": "ba644292a7910c28ab8afa423628b77058c9f6f09a485d3d198b45752f034a54",
+      "label_sha256": "8f4b54ef886f5c9a6f485e693ef4cdf397a7749974f93b0f168f327fa9c38e67"
+    },
+    {
+      "split": "test",
+      "image": "106946599-1632425135217-gettyimages-1235434529-rpe-l-wh-future-xxxx-12-wp_jpeg.rf.9d3fc4848a5f74e18b9ba3fc6b24158c.jpg",
+      "image_sha256": "35887056ed4e4ff34353afe323738e74de0508f404e43d692400f00c5861c1e2",
+      "label_sha256": "bccd3ca74fbd3b82d01d560ca365b6021413786725ddc543b88263e152ff256e"
+    },
+    {
+      "split": "test",
+      "image": "fafd4dd5-4137-468d-810f-5908fccc1b42-MJS_Virus-roundys_nws_sears_16_jpg.rf.447baa52e84c95f8a8f09ebb2883895b.jpg",
+      "image_sha256": "fed8ff4ebfc4d9c404a822f80fe91f7dabdfd6aca90bd456ea8a485a99134b30",
+      "label_sha256": "87e52ebc6338e073bb9580addf1e511833db0d5205cddcd5b8ed580be4987dd5"
+    },
+    {
+      "split": "test",
+      "image": "hard_hat_workers108_png.rf.11f9d226f94c3707cc597bd7c0de0ba1.jpg",
+      "image_sha256": "0b3ccbf72001b36dd9a7ddf987fe978c0d8589fec031717006799289df2f3a94",
+      "label_sha256": "887d223df208d841186dc86aa7f395ab4c78d918e49a83b7f44248ee1ecfc9eb"
+    },
+    {
+      "split": "test",
+      "image": "hard_hat_workers129_png.rf.2b244d6a59c98ddf023603f835d086e6.jpg",
+      "image_sha256": "1f4543ebbdb6bcec6ce5b0a2c5ad7a1bcda68e7ff1411d332e1ebc27c4261345",
+      "label_sha256": "82bbe0d992e2b54b859b4c2587a1667feaba564634e01f01fcb141aabe8c175b"
+    },
+    {
+      "split": "test",
+      "image": "hard_hat_workers190_png.rf.14f43ffb516bc04ed2b48b1389a631e8.jpg",
+      "image_sha256": "fddec0acaa3bb27b20774167c768dbf55a837d66fc789b076253e966612c07d2",
+      "label_sha256": "38a5eecc841a74c933d615afb7cc05665609774416fb7f38b271da61dafebe6b"
+    },
+    {
+      "split": "test",
+      "image": "images_jpg.rf.06f9864dabc1599189696c01dc53045d.jpg",
+      "image_sha256": "bb0bdbe17743c69d71126afce318fe03427a38efa96ce4359160cee2bdfa2bba",
+      "label_sha256": "8e371fbf846baa94509942371686bac90601a091033722d1b5f96efebff3aaf4"
+    },
+    {
+      "split": "test",
+      "image": "isor-standing-in-warehouse-with-his-arm-crossed-looking-at-camera-1936960675_jpg.rf.9e12fb62602061969d4c9812d96a22ad.jpg",
+      "image_sha256": "e7db13f746dac777fff86737a41111fccc2ec79de5babf49e1083f9b21c19f76",
+      "label_sha256": "9edd073800361baad775f32ca77d439fa59b8b251872d38f638171e816f5344a"
+    },
+    {
+      "split": "test",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.jpg",
+      "image_sha256": "5dc92565dcd22625d6dcb9b8bef9cccbbe15ccffdc03cd822a10e6d9def0c37b",
+      "label_sha256": "16efe57c03e816ed59d712204309efd1ae1403abb75c8d7396cfd19da2f1013b"
+    },
+    {
+      "split": "test",
+      "image": "smartyard_S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.jpg",
+      "image_sha256": "a27e83f96e1ce9374ca17646d6997659d4864c7c0a6facde59d23f29f9f638f1",
+      "label_sha256": "fb33ab5534a1cd26cc00c29fa507ecbe490b183fdacf78efaf3f9a1e821332e7"
+    }
+  ],
+  "initial_weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/ppe_pilot_v2/weights/best.pt",
+  "initial_weights_sha256": "196d9d4c28396d0bcbdaf6dec8cecfff2f8802c30ecc39bb6a45353a56afd6c9"
+}

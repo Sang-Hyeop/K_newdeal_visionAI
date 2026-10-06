@@ -1,0 +1,60 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/4_hazard_zone_dwell.mp4",
+  "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pretrained/yolo26n.pt",
+  "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "config": {
+    "camera_id": "dwell-demo",
+    "source_name": "4_hazard_zone_dwell.mp4",
+    "roi_id": "machine-work-area",
+    "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+    "polygon_normalized": [
+      [
+        0.02,
+        0.4
+      ],
+      [
+        0.61,
+        0.33
+      ],
+      [
+        0.53,
+        0.995
+      ],
+      [
+        0.02,
+        0.995
+      ]
+    ],
+    "safe_seconds": 3.0,
+    "critical_seconds": 8.0,
+    "max_gap_seconds": 1.0,
+    "anchor": "bbox_bottom_center_proxy"
+  },
+  "frames_sampled": 92,
+  "processed_fps": 4.795204795204795,
+  "imgsz": 1280,
+  "transition_events": 24,
+  "state_observation_counts": {
+    "SAFE": 192,
+    "WARNING": 25,
+    "UNKNOWN": 6,
+    "CRITICAL": 34
+  },
+  "max_observed_dwell_by_track": {
+    "0:1": 0,
+    "0:4": 0.2085416666666653,
+    "0:7": 0,
+    "0:8": 14.597916666666668,
+    "0:9": 0,
+    "0:12": 0,
+    "0:15": 0,
+    "0:17": 0,
+    "0:21": 0,
+    "0:32": 0
+  },
+  "critical_track_ids": [
+    "0:8"
+  ],
+  "limitation": "demo ROI, bbox footpoint proxy; missed people/ID switches possible; no independent ground truth"
+}

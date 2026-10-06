@@ -1,0 +1,16 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/5_PPE_Helmet.mp4",
+  "frames_sampled": 12,
+  "sample_stride": 24,
+  "confidence_threshold": 0.25,
+  "person_state_counts": {
+    "unknown": 28,
+    "helmet_detected": 10
+  },
+  "accuracy": "not measured; full ground truth absent",
+  "limitations": "frame-local indices; missed people not examined; no tracking or automatic PPE violation",
+  "weights": {
+    "objects": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v4/weights/best.pt",
+    "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt"
+  }
+}
