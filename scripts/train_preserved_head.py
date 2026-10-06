@@ -27,7 +27,8 @@ class PreservedTrainer(DetectionTrainer):
   if weights is None:raise ValueError('Local pretrained source required')
   return preserve_head(weights)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--epochs',type=int,default=12);p.add_argument('--run-name',default='logistics_pilot_v8_preserved_head');p.add_argument('--data-path',type=Path,default=ROOT/'data/reviewed_pilot/logistics_v7_full_scene');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--epochs',type=int,default=12);p.add_argument('--run-name',default='logistics_pilot_v8_preserved_head');p.add_argument('--data-path',type=Path,default=ROOT/'data/reviewed_pilot/logistics_v7_full_scene');p.add_argument('--learning-rate',type=float,default=.0003);p.add_argument('--warmup-bias-lr',type=float,default=.1);args=p.parse_args()
+ if not 0<args.learning_rate<1 or not 0<=args.warmup_bias_lr<1:raise ValueError('Invalid learning rate or bias warmup learning rate')
  base=args.data_path.resolve();rows=json.loads((base/'manifest.json').read_text());accepted=[r for r in rows if r['training_eligible']];snapshot=[]
  for split in ['train','val','test']:
   expected={r.get('image',r['stem']+'.jpg') for r in accepted if r['split']==split};actual={p.name for p in (base/split/'images').glob('*.jpg')};assert expected==actual and expected
@@ -44,8 +45,8 @@ def main():
   if '.cv3.' in key or '.one2one_cv3.' in key:
    target=preserved.state_dict()[key]
    if value.shape==target.shape:assert torch.equal(value,target)
- wrapper.train(trainer=PreservedTrainer,data=str(base/'dataset.yaml'),epochs=args.epochs,imgsz=640,batch=4,device='cpu',workers=0,amp=False,seed=20261006,deterministic=True,project=str(ROOT/'outputs/training'),name=args.run_name,exist_ok=False,optimizer='AdamW',lr0=.0003,warmup_epochs=1,freeze=10,mosaic=0,scale=.2,translate=.05,fliplr=.5,patience=12,plots=True)
- out=Path(wrapper.trainer.save_dir);(out/'dataset_snapshot.json').write_text(json.dumps({'dataset':str(base),'files':snapshot,'initial_weights_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'person_classifier_preserved':True,'forklift_initializer':'COCO truck prior, not a trained forklift class','frozen_backbone_layers':10},indent=2))
+ wrapper.train(trainer=PreservedTrainer,data=str(base/'dataset.yaml'),epochs=args.epochs,imgsz=640,batch=4,device='cpu',workers=0,amp=False,seed=20261006,deterministic=True,project=str(ROOT/'outputs/training'),name=args.run_name,exist_ok=False,optimizer='AdamW',lr0=args.learning_rate,warmup_bias_lr=args.warmup_bias_lr,warmup_epochs=1,freeze=10,mosaic=0,scale=.2,translate=.05,fliplr=.5,patience=12,plots=True)
+ out=Path(wrapper.trainer.save_dir);(out/'dataset_snapshot.json').write_text(json.dumps({'dataset':str(base),'files':snapshot,'initial_weights_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'person_classifier_preserved':True,'forklift_initializer':'COCO truck prior, not a trained forklift class','frozen_backbone_layers':10,'learning_rate':args.learning_rate,'warmup_bias_lr':wrapper.trainer.args.warmup_bias_lr,'epochs':args.epochs},indent=2))
  best=out/'weights/best.pt';reloaded=YOLO(str(best));assert reloaded.names==NAMES
  result=reloaded.val(data=str(base/'dataset.yaml'),split='test',imgsz=640,device='cpu',workers=0,plots=True,project=str(ROOT/'outputs/training'),name=args.run_name+'_test')
  (out/'test_metrics.json').write_text(json.dumps({'weights':str(best),'metrics':result.results_dict,'status':'development experiment, not final independent evaluation'},indent=2))

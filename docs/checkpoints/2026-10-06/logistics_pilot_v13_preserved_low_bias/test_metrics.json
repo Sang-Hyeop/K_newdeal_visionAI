@@ -1,0 +1,11 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v13_preserved_low_bias/weights/best.pt",
+  "metrics": {
+    "metrics/precision(B)": 0.5790558210778157,
+    "metrics/recall(B)": 0.5111503318737337,
+    "metrics/mAP50(B)": 0.5261913402651907,
+    "metrics/mAP50-95(B)": 0.3531369173975354,
+    "fitness": 0.3531369173975354
+  },
+  "status": "development experiment, not final independent evaluation"
+}

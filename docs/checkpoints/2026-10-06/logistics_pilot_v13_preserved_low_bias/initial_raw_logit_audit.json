@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "branch": "cv3",
+      "scale": 0,
+      "max_abs_difference": 9.5367431640625e-06,
+      "within_float32_tolerance": true
+    },
+    {
+      "branch": "cv3",
+      "scale": 1,
+      "max_abs_difference": 1.52587890625e-05,
+      "within_float32_tolerance": true
+    },
+    {
+      "branch": "cv3",
+      "scale": 2,
+      "max_abs_difference": 7.62939453125e-06,
+      "within_float32_tolerance": true
+    },
+    {
+      "branch": "one2one_cv3",
+      "scale": 0,
+      "max_abs_difference": 5.7220458984375e-06,
+      "within_float32_tolerance": true
+    },
+    {
+      "branch": "one2one_cv3",
+      "scale": 1,
+      "max_abs_difference": 1.52587890625e-05,
+      "within_float32_tolerance": true
+    },
+    {
+      "branch": "one2one_cv3",
+      "scale": 2,
+      "max_abs_difference": 1.52587890625e-05,
+      "within_float32_tolerance": true
+    }
+  ],
+  "note": "Numerical tolerance check before training; truck prior is not forklift ground truth."
+}

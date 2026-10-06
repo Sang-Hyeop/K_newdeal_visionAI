@@ -1,0 +1,92 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v13_preserved_low_bias/weights/best.pt",
+  "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_multisite_v1",
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "status": "small development diagnostic; not final independent evaluation",
+  "class_counts": {
+    "person": {
+      "TP": 11,
+      "FP": 3,
+      "FN": 7,
+      "precision": 0.7857142857142857,
+      "recall": 0.6111111111111112
+    },
+    "forklift": {
+      "TP": 7,
+      "FP": 8,
+      "FN": 4,
+      "precision": 0.4666666666666667,
+      "recall": 0.6363636363636364
+    }
+  },
+  "images": [
+    {
+      "image": "L-210929_G06_H_UA-10_001_0060.jpg",
+      "gt_count": 3,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-210929_G06_H_UA-10_002_0018.jpg",
+      "gt_count": 3,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "L-210929_G06_H_UA-10_004_0020.jpg",
+      "gt_count": 3,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-210929_G06_H_UA-12_001_0124.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "L-210929_G06_H_UA-12_001_0201.jpg",
+      "gt_count": 3,
+      "prediction_count": 5,
+      "matched": 2
+    },
+    {
+      "image": "L-210929_G06_H_UA-12_002_0124.jpg",
+      "gt_count": 3,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UA-11_002_0208.jpg",
+      "gt_count": 3,
+      "prediction_count": 1,
+      "matched": 0
+    },
+    {
+      "image": "L-211218_B08_H_UA-11_003_0007.jpg",
+      "gt_count": 2,
+      "prediction_count": 0,
+      "matched": 0
+    },
+    {
+      "image": "L-211218_B08_H_UA-11_005_0394.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UC-22_003_0249.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UC-22_005_0276.jpg",
+      "gt_count": 3,
+      "prediction_count": 3,
+      "matched": 2
+    }
+  ]
+}
