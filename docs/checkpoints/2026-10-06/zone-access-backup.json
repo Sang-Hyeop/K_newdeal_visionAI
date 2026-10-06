@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-06T10:51:06.189599+00:00",
+  "status": "verified_same_disk_backup",
+  "files": [
+    {
+      "source": "outputs/video_validation/zone_access_v4/trained_v8/zone_dwell.mp4",
+      "backup": "_local_archive/checkpoints/2026-10-06-zone-access/outputs/video_validation/zone_access_v4/trained_v8/zone_dwell.mp4",
+      "bytes": 14938845,
+      "sha256": "0010634686e2227fd0d9684ec3498883db371837379a79e9ebfd0523fda8ec66"
+    },
+    {
+      "source": "outputs/video_validation/zone_access_v4/trained_v8/observations.jsonl",
+      "backup": "_local_archive/checkpoints/2026-10-06-zone-access/outputs/video_validation/zone_access_v4/trained_v8/observations.jsonl",
+      "bytes": 469653,
+      "sha256": "bf852acd0a9e0855cd1ffb8e896a9209ba4f91d3f938ae431e87befd07fbc3b7"
+    },
+    {
+      "source": "outputs/video_validation/zone_access_v4/trained_v8/events.jsonl",
+      "backup": "_local_archive/checkpoints/2026-10-06-zone-access/outputs/video_validation/zone_access_v4/trained_v8/events.jsonl",
+      "bytes": 40652,
+      "sha256": "bc46452e6b695ea74387dcf92327d04c29caaf44ad304f2831b377c11f698c3a"
+    },
+    {
+      "source": "outputs/video_validation/zone_access_v4/trained_v8/summary.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-zone-access/outputs/video_validation/zone_access_v4/trained_v8/summary.json",
+      "bytes": 1931,
+      "sha256": "91c6897e27e6aabef386744bc85708e75d9cf92e281a4397b3737e6c4e30e439"
+    },
+    {
+      "source": "outputs/video_validation/zone_access_v4/trained_v8/entry_confirmed.jpg",
+      "backup": "_local_archive/checkpoints/2026-10-06-zone-access/outputs/video_validation/zone_access_v4/trained_v8/entry_confirmed.jpg",
+      "bytes": 594790,
+      "sha256": "d93944308d8d71b0f1c863313e958128b1b8a1af013c6e1fb9788ceace741c18"
+    },
+    {
+      "source": "configs/cameras/zone-access-demo.json",
+      "backup": "_local_archive/checkpoints/2026-10-06-zone-access/configs/cameras/zone-access-demo.json",
+      "bytes": 614,
+      "sha256": "ed093376327e7bfbfcf9b54b40b24283380d0bdd1c4f90a998f944ccd5ac5209"
+    }
+  ]
+}

@@ -48,6 +48,7 @@ class PersonTracker:
             identity=f'{self.scene}:{int(track[4])}'
             self.last_seen[identity]=timestamp
             observed.append({'track_id':identity,'bbox_xyxy':track[:4].tolist(),
+                             'detected_bbox_xyxy':rows[int(track[-1])][:4],
                              'confidence':float(track[5]),'observation_status':'confirmed'})
         observed_ids={row['track_id'] for row in observed}
         missing=[]

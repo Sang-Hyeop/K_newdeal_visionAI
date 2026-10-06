@@ -34,5 +34,26 @@ class IntegrationTests(unittest.TestCase):
         r=p.update(.2,[person()],(200,200),scene_cut=True)
         self.assertFalse(r['roi_active']);self.assertEqual(r['events'],[])
 
+    def test_access_and_dwell_are_independent_event_scopes(self):
+        c={**CONFIG,'access_enabled':True,'approach_margin_ratio':.05}
+        p=TrackedZone(c,(200,200),5);r=p.update(0,[person()],(200,200))
+        events={e['event_type']:e for e in r['events']}
+        self.assertEqual(events['zone_dwell']['severity'],'SAFE')
+        self.assertEqual(events['zone_access']['severity'],'CRITICAL')
+        self.assertFalse(events['zone_access']['entry_observed'])
+        self.assertEqual(len(r['transitions']),2)
+        self.assertEqual(p.update(.2,[person()],(200,200))['transitions'],[])
+        self.assertEqual(p.update(.4,[person()],(200,200),scene_cut=True)['events'],[])
+
+    def test_bottom_clipped_person_cannot_fabricate_zone_exit(self):
+        c={**CONFIG,'access_enabled':True,'approach_margin_ratio':.05}
+        p=TrackedZone(c,(200,200),5);p.update(0,[person()],(200,200))
+        clipped={'class':'person','bbox_xyxy':[30,30,70,200],'confidence':.9}
+        r=p.update(.2,[clipped],(200,200))
+        self.assertTrue(r['invalid_anchor_track_ids'])
+        for e in r['events']:
+            self.assertIsNone(e['severity'])
+            if e['event_type']=='zone_access':self.assertFalse(e['exit_observed'])
+
 
 if __name__=='__main__':unittest.main()
