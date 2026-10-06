@@ -1,0 +1,25 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v10_frozen_backbone/weights/best.pt",
+  "metrics": {
+    "metrics/precision(B)": 0.6712886011858423,
+    "metrics/recall(B)": 0.6927621483251287,
+    "metrics/mAP50(B)": 0.7239351311319818,
+    "metrics/mAP50-95(B)": 0.36103768507466993,
+    "fitness": 0.36103768507466993
+  },
+  "per_class": {
+    "person": {
+      "precision": 0.5930887329641286,
+      "recall": 0.5673424784684392,
+      "mAP50": 0.6305864276774974,
+      "mAP50_95": 0.33249684942987723
+    },
+    "forklift": {
+      "precision": 0.749488469407556,
+      "recall": 0.8181818181818182,
+      "mAP50": 0.8172838345864663,
+      "mAP50_95": 0.3895785207194627
+    }
+  },
+  "status": "development pilot; not independent final CCTV benchmark"
+}

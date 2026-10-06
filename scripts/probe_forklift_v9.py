@@ -1,12 +1,20 @@
 """Fixed representative-frame diagnostic; no ground-truth accuracy claim."""
 from pathlib import Path
-import os,json,cv2,torch
+import os,json,cv2,torch,argparse
 r=Path(__file__).resolve().parents[1];os.environ['YOLO_CONFIG_DIR']=str(r/'outputs/runtime/yolo');os.environ['MPLCONFIGDIR']=str(r/'outputs/runtime/matplotlib')
 from ultralytics import YOLO
 torch.set_num_threads(4)
-out=r/'outputs/video_validation/v9_frame_probe';out.mkdir(parents=True,exist_ok=True)
+parser=argparse.ArgumentParser()
+parser.add_argument('--candidate-weights',type=Path,default=r/'outputs/training/logistics_pilot_v9_hard_examples/weights/best.pt')
+parser.add_argument('--candidate-label',default='v9')
+parser.add_argument('--output',type=Path,default=r/'outputs/video_validation/v9_frame_probe')
+args=parser.parse_args()
+if not args.candidate_label.replace('_','').isalnum():raise ValueError('candidate-label must be alphanumeric or underscores')
+out=args.output
+if (out/'predictions.json').exists():raise SystemExit(f'Existing report protected: {out}')
+out.mkdir(parents=True,exist_ok=True)
 report=[]
-for version,weight in [('v6',r/'models/pilot_v6_corrected_forklift/person_forklift.pt'),('v9',r/'outputs/training/logistics_pilot_v9_hard_examples/weights/best.pt')]:
+for version,weight in [('v6',r/'models/pilot_v6_corrected_forklift/person_forklift.pt'),(args.candidate_label,args.candidate_weights)]:
  model=YOLO(str(weight))
  for name,times in [('1_forklift_forward.mp4',[0,5,10,15,20]),('2_forklift_back.mp4',[0,5,10,15,20])]:
   c=cv2.VideoCapture(str(r/'data/videos'/name))
