@@ -1,0 +1,130 @@
+{
+  "storage": "same-disk recovery copy, not off-device backup",
+  "files": [
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v12_640_025.json",
+      "sha256": "114000df5eac0258b1c7af49ca296f23d82dc452fd32ff45a4aba9742f86eafe",
+      "bytes": 1715
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v12_640_01.json",
+      "sha256": "12e4cc6e6007d708e2cdbca50a70155e23d59e13413ca3c32d1d8cdfe7ac3d81",
+      "bytes": 1746
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/default_compatibility_audit.json",
+      "sha256": "45e0f1d5244c39eb51307d79a34a91db82e4ae20c04c76db541eb5133e91169d",
+      "bytes": 2161
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v14_640_025.json",
+      "sha256": "dc392397f7a10ba7e87d34d09852ff9cd3bba71411e3ff2f28956eba3f17e3c5",
+      "bytes": 1745
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v12_960_01.json",
+      "sha256": "4006b057caf4f8a733d97e65fbdab185643bb2447326ae0c063124cede077070",
+      "bytes": 1745
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v6_960_025.json",
+      "sha256": "64510f7ca37da3cace697c23984899a76e6f46853b5aad3fefcbd34fbcc97a81",
+      "bytes": 1749
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v6_960_01.json",
+      "sha256": "51fde75c06ba961977f399ba028c3849505f337427e2e2096267cc6f8b2fcbd0",
+      "bytes": 1749
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v14_640_01.json",
+      "sha256": "5c4f938804f1fa4898bcbb8ddf015ac60ce3fbb4bf2394dec21f780941392914",
+      "bytes": 1746
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/initial_transfer_audit.json",
+      "sha256": "6afea1cd1e85ce041b571811fbe418bc786c3ab232bd8c6a6ccd6a18380049d1",
+      "bytes": 349
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v6_640_01.json",
+      "sha256": "edd4bcb5bffe3d0b97fcc6bfdb314b3f63b2def7e7524e5ac36f6e168959a564",
+      "bytes": 1732
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v14_960_01.json",
+      "sha256": "9abc73d8c0a9e89c487fb0d81fdee44b84c5732384d0dd91b6d3c591d6f10811",
+      "bytes": 1758
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/error_comparison.json",
+      "sha256": "e46fd264f87e24c21e19c73fd5ebf9b3c3ae01259295247495df04313fd69e37",
+      "bytes": 73081
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/validation_scale_comparison.json",
+      "sha256": "1236a78ad1cf1dfa6d8bede7fc0f54cd9f587260d95242fbd749607c4f7795d1",
+      "bytes": 5144
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/error_summary.json",
+      "sha256": "89afb32bacf8391c94ab5e09e9d98052bd85da93a769c2aeb9d3e0facaa6282c",
+      "bytes": 1656
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/training_distribution.json",
+      "sha256": "e468a0510b21b7dbabb0ae72ff85aec5d4d1473c5a32a0e6c703c1056b4c2636",
+      "bytes": 14732
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/verification.json",
+      "sha256": "d3dea4b347e8e6adecb1d4178c9c53a54cea2b172e9e138442c53a896ad2e7a6",
+      "bytes": 234
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v12_960_025.json",
+      "sha256": "ed052616c3e70fbca60796df3fc0e0fe1ed7c1ad589e46b84a0c80fbaeec79e9",
+      "bytes": 1734
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v6_640_025.json",
+      "sha256": "adcdb684018728cd71c73c65deb28e951a4c844c40368780d5b6f99770f4191a",
+      "bytes": 1732
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/v14_regression_diagnosis/val_v14_960_025.json",
+      "sha256": "6081e15700ef33c84b11420ac5b32888ccb5c2e22dfd19601987ace69613668d",
+      "bytes": 1758
+    },
+    {
+      "source": "outputs/diagnostics/v14_regression/review_L-210929_G06_H_UA-10_001_0060.jpg",
+      "sha256": "a07c16f0e3f438d9e698e60f8480703b396963e78c4ddb4d7067d50e9898b328",
+      "bytes": 233184
+    },
+    {
+      "source": "outputs/diagnostics/v14_regression/review_L-210929_G06_H_UA-10_002_0018.jpg",
+      "sha256": "41b341deee8e413cf6409c07d76c9b810a02d96281922c51d46725de0eebb549",
+      "bytes": 194728
+    },
+    {
+      "source": "outputs/diagnostics/v14_regression/review_L-211218_B08_H_UA-11_002_0208.jpg",
+      "sha256": "67cc3a2fa25c05822d1ed0e08c92ac01fd67de2eb07c1e8305dd3e8a4a0ce4e7",
+      "bytes": 225495
+    },
+    {
+      "source": "outputs/diagnostics/v14_regression/review_L-211218_B08_H_UA-11_005_0394.jpg",
+      "sha256": "c31e36f3579221bf2accb5d61486156617149900333600cb53d73ef432110e42",
+      "bytes": 235504
+    },
+    {
+      "source": "outputs/diagnostics/v14_regression/review_L-211218_B08_H_UC-22_005_0276.jpg",
+      "sha256": "1115f2c7d54872436b74a17b3dcf5cb4ebf9c952e6c2df36cfe6c9d66fcffb4d",
+      "bytes": 183048
+    },
+    {
+      "source": "docs/v14-regression-diagnosis.md",
+      "sha256": "bfad14ba3fb077a73ce1505146d1ede432372f8e2a434ee89a059de01f79b825",
+      "bytes": 4668
+    }
+  ]
+}
