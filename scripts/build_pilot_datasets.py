@@ -3,7 +3,11 @@ from pathlib import Path
 from collections import Counter,defaultdict
 import json,random,zipfile,shutil,hashlib
 import cv2,numpy as np,yaml
-ROOT=Path(__file__).resolve().parents[1];AUDIT=ROOT/'data/training_review/full_audit';OUT=ROOT/'data/pilot_v1';OUT.mkdir(exist_ok=True);rng=random.Random(20261006)
+ROOT=Path(__file__).resolve().parents[1];AUDIT=ROOT/'data/training_review/full_audit';OUT=ROOT/'data/pilot_v1';rng=random.Random(20261006)
+# 검수/수정한 사본을 보호한다. 재생성은 새 버전 디렉터리에서 수행한다.
+if OUT.exists() and any(OUT.iterdir()):
+ raise SystemExit(f'기존 데이터 보호: {OUT}가 비어 있지 않습니다. 새 OUT 버전을 지정하세요.')
+OUT.mkdir(parents=True,exist_ok=True)
 ppe=json.loads((AUDIT/'ppe-index.json').read_text())
 # contact-sheet 육안 선별 결과. 작은/불명확 객체는 오류 확정 대신 보류한다.
 hold_ranges=[(1,3),(22,28),(49,57),(71,72),(75,80),(82,86),(92,118),(123,138),(145,178),(182,183),(189,219),(225,228),(236,237),(250,253),(263,263),(270,272),(275,276),(301,304),(314,314),(317,320),(327,327),(331,347),(349,351),(353,356),(363,378),(380,380)]
@@ -49,8 +53,7 @@ print('PPE pilot',dict(Counter(r['split'] for r in ppeman)),'visual groups',len(
 pool=json.loads((AUDIT/'logistics-pool.json').read_text());valsites={'G04','G13','G18'};testsites={'G06','G08','B08'}
 BASE=Path('/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터');imagezip=next(BASE.rglob('TS_07_*.zip'))
 lman=[];resolution_mismatches=[]
-# 이번 스크립트가 만든 미완성 물류 사본만 재생성한다.
-if (OUT/"logistics").exists():shutil.rmtree(OUT/"logistics")
+# 기존 데이터 덮어쓰기는 시작 단계에서 차단한다.
 with zipfile.ZipFile(imagezip) as z:
  index={Path(n).stem:n for n in z.namelist() if n.endswith('.jpg')}
  for split,target in [('train',320),('val',64),('test',64)]:
