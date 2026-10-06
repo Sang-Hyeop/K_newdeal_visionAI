@@ -1,1 +1,32 @@
+# Existing exclusion
 a.txt
+# Local archive and macOS
+_local_archive/
+.DS_Store
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+# Credentials
+.env
+.env.*
+!.env.example
+# Data, weights and generated files
+data/*
+!data/README.md
+models/*
+!models/README.md
+outputs/*
+!outputs/README.md
+runs/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.pt
+*.pth
+*.onnx
+*.engine
