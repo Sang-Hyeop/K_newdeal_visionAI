@@ -1,0 +1,4 @@
+# Initial detection dependencies; pin after runtime validation.
+ultralytics
+opencv-python
+numpy
