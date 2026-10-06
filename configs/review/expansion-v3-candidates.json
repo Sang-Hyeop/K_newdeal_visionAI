@@ -1,0 +1,2104 @@
+{
+  "ppe": [
+    {
+      "id": 1,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_000775.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_000775.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-12-10-20_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          838.3100000000005,
+          344.9400000000003,
+          947.7933913727773,
+          474.53258570655225
+        ]
+      ],
+      "metadata": {
+        "id": 1498818,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-12-10-20_001_000775.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-12 10:20:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 2,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_002381.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_002381.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-25-13-35_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          1065.1899999999985,
+          388.0699999999985,
+          1182.4498805539838,
+          508.9675563473062
+        ]
+      ],
+      "metadata": {
+        "id": 1718060,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-25-13-35_001_002381.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 13:35:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 3,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001059.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001059.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-25-13-40_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          981.66,
+          354.48,
+          1131.001289920504,
+          530.8484315805185
+        ]
+      ],
+      "metadata": {
+        "id": 1720859,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-25-13-40_001_001059.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 13:40:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 4,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_001237.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_001237.json",
+      "group": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          826.9,
+          117.46,
+          948.4238461239327,
+          253.63819227417156
+        ]
+      ],
+      "metadata": {
+        "id": 1214025,
+        "file_name": "S63_DATA3_H1_L1_D2023-09-14-10-23_001_001237.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:23:00",
+        "location": "한화오션에코텍",
+        "environment": "실외",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 5,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_001590.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_001590.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-25-13-25_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          866.7,
+          407.3,
+          990.4377938225464,
+          530.7060718117962
+        ]
+      ],
+      "metadata": {
+        "id": 1710189,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-25-13-25_001_001590.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 13:25:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 6,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-13-10-20_001_000204.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-13-10-20_001_000204.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-13-10-20_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          627.289999999998,
+          384.6599999999988,
+          738.941325570314,
+          512.1946427445245
+        ]
+      ],
+      "metadata": {
+        "id": 1503465,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-13-10-20_001_000204.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-13 10:20:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "디지털카메라",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 7,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_001115.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_001115.json",
+      "group": "S63_DATA3_H1_L1_D2023-09-14-10-35_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          1043.31,
+          277.02,
+          1159.3443341663915,
+          406.2295502128368
+        ]
+      ],
+      "metadata": {
+        "id": 1214900,
+        "file_name": "S63_DATA3_H1_L1_D2023-09-14-10-35_001_001115.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:35:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 8,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000788.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000788.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          1024.3799999999987,
+          428.6699999999987,
+          1128.4902701875646,
+          485.8510866528817
+        ]
+      ],
+      "metadata": {
+        "id": 1712330,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-25-13-30_001_000788.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 13:30:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 9,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_000967.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_000967.json",
+      "group": "S63_DATA3_H1_L1_D2023-09-14-10-37_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          666.7900000000013,
+          397.0400000000017,
+          768.2180006610067,
+          513.5868240743157
+        ]
+      ],
+      "metadata": {
+        "id": 1216414,
+        "file_name": "S63_DATA3_H1_L1_D2023-09-14-10-37_001_000967.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:37:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 10,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000739.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000739.json",
+      "group": "S63_DATA3_H1_L1_D2023-09-14-10-30_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          1030.2487517163295,
+          323.6164063347512,
+          1143.7438248184658,
+          455.83872396923266
+        ]
+      ],
+      "metadata": {
+        "id": 1213176,
+        "file_name": "S63_DATA3_H1_L1_D2023-09-14-10-30_001_000739.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:30:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "디지털카메라",
+        "angle": 90
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 11,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-16_001_001437.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-16_001_001437.json",
+      "group": "S63_DATA3_H1_L1_D2023-10-12-10-16_001",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          718.87,
+          199.32,
+          812.0704214279925,
+          301.3001712726585
+        ]
+      ],
+      "metadata": {
+        "id": 1498277,
+        "file_name": "S63_DATA3_H1_L1_D2023-10-12-10-16_001_001437.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-12 10:16:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 12,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_000710.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_000710.json",
+      "group": "S63_DATA3_H1_L1_D2023-09-14-10-36_002",
+      "kind": "helmet_worn",
+      "boxes": [
+        [
+          0,
+          703.4,
+          421.66,
+          817.5216275307623,
+          547.6558376169592
+        ]
+      ],
+      "metadata": {
+        "id": 1215577,
+        "file_name": "S63_DATA3_H1_L1_D2023-09-14-10-36_002_000710.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:36:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 13,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_000708.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_000708.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-14-10-35_002",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          673.4337963178182,
+          430.7798970498757,
+          753.6603871094611,
+          530.4626371053603
+        ]
+      ],
+      "metadata": {
+        "id": 1226730,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-14-10-35_002_000708.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:35:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 14,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000465.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000465.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-14-10-31_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          606.3814383099023,
+          394.0293904948915,
+          694.7809042356889,
+          495.7049666879209
+        ]
+      ],
+      "metadata": {
+        "id": 1224500,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-14-10-31_001_000465.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:31:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 15,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_010308.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_010308.json",
+      "group": "S63_DATA3_H0_L1_D2023-10-25-15-40_045",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1001.6175700103646,
+          102.08,
+          1140.3592848410947,
+          269.44615531178727
+        ]
+      ],
+      "metadata": {
+        "id": 1685444,
+        "file_name": "S63_DATA3_H0_L1_D2023-10-25-15-40_045_010308.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 15:40:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 90
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 16,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_001844.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_001844.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          655.9599999999996,
+          148.2700000000003,
+          763.7199798430603,
+          250.2537321779376
+        ]
+      ],
+      "metadata": {
+        "id": 1227821,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-14-10-33_001_001844.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:33:00",
+        "location": "한화오션에코텍",
+        "environment": "실외",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 17,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_002538.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_002538.json",
+      "group": "S63_DATA3_H0_L1_D2023-10-25-15-45_043",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1025.6800000000023,
+          284.0700000000002,
+          1142.0378034462367,
+          432.4113996420873
+        ]
+      ],
+      "metadata": {
+        "id": 1690913,
+        "file_name": "S63_DATA3_H0_L1_D2023-10-25-15-45_043_002538.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 15:45:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 18,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-20-03-16_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1287.178146455196,
+          564.1701180201871,
+          1369.3038814401343,
+          655.0469559133567
+        ]
+      ],
+      "metadata": {
+        "id": 1495101,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-20 03:16:00",
+        "location": "한화오션에코텍",
+        "environment": "실외",
+        "device": "디지털카메라",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 19,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-49_021_000075.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-49_021_000075.json",
+      "group": "S63_DATA3_H0_L1_D2023-10-25-15-49_021",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1008.03,
+          83.25,
+          1148.5303866191282,
+          244.1551946977666
+        ]
+      ],
+      "metadata": {
+        "id": 1692315,
+        "file_name": "S63_DATA3_H0_L1_D2023-10-25-15-49_021_000075.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 15:49:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 20,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_001144.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_001144.json",
+      "group": "S63_DATA3_H0_L1_D2023-10-12-10-21_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          839.86,
+          564.3699999999997,
+          930.759074798475,
+          648.0301738091003
+        ]
+      ],
+      "metadata": {
+        "id": 1496913,
+        "file_name": "S63_DATA3_H0_L1_D2023-10-12-10-21_001_001144.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-12 10:21:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 90
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 21,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000706.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000706.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-14-10-23_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          959.0663049886695,
+          382.0689964090923,
+          1069.4619371079486,
+          506.30011244932507
+        ]
+      ],
+      "metadata": {
+        "id": 1223489,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-14-10-23_001_000706.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:23:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 22,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-17_001_001189.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-17_001_001189.json",
+      "group": "S63_DATA3_H0_L1_D2023-10-12-10-17_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          536.0761024114956,
+          127.7800000000004,
+          655.8386848584156,
+          258.80549411066124
+        ]
+      ],
+      "metadata": {
+        "id": 1497842,
+        "file_name": "S63_DATA3_H0_L1_D2023-10-12-10-17_001_001189.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-12 10:17:00",
+        "location": "한화오션에코텍",
+        "environment": "실외",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 23,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-20_001_002561.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-20_001_002561.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-14-10-20_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1055.0500000000015,
+          207.616263253536,
+          1139.1720581323623,
+          271.0550784033679
+        ]
+      ],
+      "metadata": {
+        "id": 1225833,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-14-10-20_001_002561.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:20:00",
+        "location": "한화오션에코텍",
+        "environment": "실외",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 24,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_000904.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_000904.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-14-10-30_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1066.0699999999993,
+          442.5399999999994,
+          1160.6880195622862,
+          549.6701444627641
+        ]
+      ],
+      "metadata": {
+        "id": 1224048,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-14-10-30_001_000904.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-14 10:30:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 25,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-36_046_001832.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-36_046_001832.json",
+      "group": "S63_DATA3_H0_L1_D2023-10-25-15-36_046",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          905.1,
+          196.14,
+          1039.0591906721536,
+          355.14270779957576
+        ]
+      ],
+      "metadata": {
+        "id": 1672914,
+        "file_name": "S63_DATA3_H0_L1_D2023-10-25-15-36_046_001832.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-10-25 15:36:00",
+        "location": "한화오션에코텍",
+        "environment": "실내",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    },
+    {
+      "id": 26,
+      "image": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.jpg",
+      "label": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.json",
+      "group": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+      "kind": "helmet_missing",
+      "boxes": [
+        [
+          1,
+          1425.7377797616741,
+          515.05,
+          1478.2984917910696,
+          585.0060250087784
+        ]
+      ],
+      "metadata": {
+        "id": 1161740,
+        "file_name": "S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.jpg",
+        "width": 1920,
+        "height": 1080,
+        "date": "2023-09-07 13:08:00",
+        "location": "한화오션에코텍",
+        "environment": "실외",
+        "device": "고프로",
+        "angle": 0
+      },
+      "training_eligible": false
+    }
+  ],
+  "logistics": [
+    {
+      "stem": "L-211007_G07_H_UA-12_004_0148",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-12_004_0148.json",
+      "group": "L-211007_G07_H_UA-12_004",
+      "site": "G07",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1778.0929513951,
+          353.32865757255,
+          47.717644881834,
+          52.964533138436
+        ],
+        [
+          1,
+          1580.8034170914,
+          244.90212482578,
+          267.86805432747,
+          234.75891143291
+        ],
+        [
+          0,
+          1878.3207240777,
+          366.0002682672,
+          41.679275922295,
+          43.707797413813
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-12_004_0148.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211007_G07_H_UA-12_003_0020",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-12_003_0020.json",
+      "group": "L-211007_G07_H_UA-12_003",
+      "site": "G07",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          534.36258620011,
+          439.31642574107,
+          46.461581203387,
+          66.130317246154
+        ],
+        [
+          1,
+          586.69898880252,
+          360.94410632002,
+          127.24946756447,
+          181.81986215818
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-12_003_0020.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211127_G16_H_UA-11_005_0252",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211127_G16_H_UA-11_005_0252.json",
+      "group": "L-211127_G16_H_UA-11_005",
+      "site": "G16",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1039.8949824866,
+          513.15066122912,
+          392.07232919296,
+          307.66338134696
+        ],
+        [
+          0,
+          1000.3265096077,
+          552.10396004879,
+          61.603061146569,
+          87.204776609084
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211127_G16_H_UA-11_005_0252.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210826_G01_H_UA-12_003_0100",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210826_G01_H_UA-12_003_0100.json",
+      "group": "L-210826_G01_H_UA-12_003",
+      "site": "G01",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          800.99806550309,
+          453.15860176301,
+          252.76877546166,
+          139.67423819369
+        ],
+        [
+          0,
+          774.32179786502,
+          490.40725463163,
+          49.648636857844,
+          89.583409982632
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210826_G01_H_UA-12_003_0100.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211007_G07_H_UA-12_001_0016",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-12_001_0016.json",
+      "group": "L-211007_G07_H_UA-12_001",
+      "site": "G07",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1387.9693438293,
+          303.83485303622,
+          156.53013738907,
+          265.40563179955
+        ],
+        [
+          0,
+          1436.313930498,
+          417.07600571296,
+          58.358196782705,
+          103.42705632621
+        ],
+        [
+          0,
+          1814.2071752529,
+          420.86432589968,
+          54.005598538819,
+          48.219857367021
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-12_001_0016.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211223_B09_H_UC-22_016_0139",
+      "member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211223_B09_H_UC-22_016_0139.json",
+      "group": "L-211223_B09_H_UC-22_016",
+      "site": "B09",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          267.8381112729,
+          277.62090936467,
+          107.29324841523,
+          140.20708249018
+        ],
+        [
+          0,
+          1350.5926871742,
+          271.7254265296,
+          41.377312825849,
+          127.26996772751
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211223_B09_H_UC-22_016_0139.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211209_B06_H_UA-10_004_0347",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211209_B06_H_UA-10_004_0347.json",
+      "group": "L-211209_B06_H_UA-10_004",
+      "site": "B06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1814.31,
+          357.72,
+          67.45,
+          132.47
+        ],
+        [
+          1,
+          1481.6776594587,
+          351.69628976397,
+          337.32705480975,
+          227.42061920732
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211209_B06_H_UA-10_004_0347.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211209_B06_H_UA-10_003_0119",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211209_B06_H_UA-10_003_0119.json",
+      "group": "L-211209_B06_H_UA-10_003",
+      "site": "B06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          715.39754394638,
+          70.907938421181,
+          192.96226218677,
+          250.31379773527
+        ],
+        [
+          0,
+          783.8730999923,
+          99.015827325109,
+          55.036143125958,
+          49.429131396902
+        ],
+        [
+          0,
+          683.40630138665,
+          125.24,
+          47.663640566558,
+          141.47
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211209_B06_H_UA-10_003_0119.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211007_G07_H_UA-10_003_0136",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-10_003_0136.json",
+      "group": "L-211007_G07_H_UA-10_003",
+      "site": "G07",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          741.22714504886,
+          342.51447561462,
+          114.42970549742,
+          258.66404236497
+        ],
+        [
+          0,
+          682.33893250645,
+          474.84417667028,
+          49.818213719981,
+          144.12763520482
+        ],
+        [
+          0,
+          768.7250254444,
+          468.66871603251,
+          60.962337388074,
+          103.20716321045
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-10_003_0136.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211029_G12_H_UA-10_004_0677",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211029_G12_H_UA-10_004_0677.json",
+      "group": "L-211029_G12_H_UA-10_004",
+      "site": "G12",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          933.0321207048,
+          438.77353738447,
+          53.777367041412,
+          145.23479693997
+        ],
+        [
+          1,
+          472.86997913434,
+          387.14267015929,
+          266.95534468035,
+          200.46626603383
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211029_G12_H_UA-10_004_0677.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211027_G10_H_UA-10_003_0395",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_H_UA-10_003_0395.json",
+      "group": "L-211027_G10_H_UA-10_003",
+      "site": "G10",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          268.21334034175,
+          506.89363574443,
+          60.252510804276,
+          147.60120824936
+        ],
+        [
+          1,
+          411.48131305488,
+          123.56567865771,
+          317.76089883666,
+          600.5152563052
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_H_UA-10_003_0395.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211021_G09_H_UA-14_001_0243",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_H_UA-14_001_0243.json",
+      "group": "L-211021_G09_H_UA-14_001",
+      "site": "G09",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          609.25485238967,
+          492.61692953502,
+          56.590552870251,
+          149.75908947079
+        ],
+        [
+          0,
+          799.72188060386,
+          464.20906800761,
+          53.648530316149,
+          75.246067478446
+        ],
+        [
+          1,
+          798.11950722957,
+          431.47626967779,
+          219.45952061495,
+          227.05058361854
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_H_UA-14_001_0243.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211209_B06_H_UA-14_003_0361",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211209_B06_H_UA-14_003_0361.json",
+      "group": "L-211209_B06_H_UA-14_003",
+      "site": "B06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          916.9724650565,
+          393.93567424071,
+          92.232716278149,
+          122.54436146282
+        ],
+        [
+          0,
+          1331.8180236774,
+          428.83030340575,
+          55.628924753212,
+          158.74635027052
+        ],
+        [
+          1,
+          683.35326148289,
+          373.10500353887,
+          467.52974980598,
+          242.78765165276
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211209_B06_H_UA-14_003_0361.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211007_G07_H_UA-10_002_0167",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-10_002_0167.json",
+      "group": "L-211007_G07_H_UA-10_002",
+      "site": "G07",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1119.9309385912,
+          370.4744993579,
+          154.37378995346,
+          273.08054090312
+        ],
+        [
+          0,
+          937.89353632834,
+          508.15146984482,
+          49.438444189637,
+          159.45761121939
+        ],
+        [
+          0,
+          978.09972169851,
+          516.72973552362,
+          40.833218579745,
+          133.86194264838
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211007_G07_H_UA-10_002_0167.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211029_G12_H_UA-10_002_0004",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211029_G12_H_UA-10_002_0004.json",
+      "group": "L-211029_G12_H_UA-10_002",
+      "site": "G12",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          245.75463257689,
+          383.17749976479,
+          53.475720715361,
+          117.57089028938
+        ],
+        [
+          0,
+          323.68842307259,
+          384.95489607973,
+          84.598793604319,
+          174.3470771104
+        ],
+        [
+          1,
+          39.562646976735,
+          346.65772928127,
+          275.63830505908,
+          198.30377305682
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211029_G12_H_UA-10_002_0004.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211110_F02_H_UA-10_004_0069",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_H_UA-10_004_0069.json",
+      "group": "L-211110_F02_H_UA-10_004",
+      "site": "F02",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1224.9724466836,
+          464.34200470175,
+          249.41710216092,
+          221.11099612622
+        ],
+        [
+          0,
+          1591.632664408,
+          499.66259991591,
+          79.434314687187,
+          176.55832201514
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_H_UA-10_004_0069.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210924_G05_H_UA-14_001_0030",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_001_0030.json",
+      "group": "L-210924_G05_H_UA-14_001",
+      "site": "G05",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          921.67125741492,
+          402.78570152379,
+          54.761567689971,
+          186.36504700865
+        ],
+        [
+          1,
+          402.52781408353,
+          343.39803185446,
+          307.12344523119,
+          253.60264298913
+        ],
+        [
+          0,
+          528.02566356438,
+          376.55421698509,
+          120.52599151029,
+          132.61566737723
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_001_0030.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210924_G05_H_UA-14_003_0144",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_003_0144.json",
+      "group": "L-210924_G05_H_UA-14_003",
+      "site": "G05",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          616.73631001879,
+          448.67999269205,
+          73.618356984658,
+          192.69511989244
+        ],
+        [
+          0,
+          890.10813292538,
+          429.42113623895,
+          65.336215517042,
+          86.888823035627
+        ],
+        [
+          1,
+          841.0348773514,
+          400.61039953332,
+          217.16463462574,
+          221.53441335682
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_003_0144.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210924_G05_H_UA-14_002_0134",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_002_0134.json",
+      "group": "L-210924_G05_H_UA-14_002",
+      "site": "G05",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          654.97002766482,
+          504.18507052068,
+          62.89534665191,
+          193.96884342154
+        ],
+        [
+          1,
+          853.10579056458,
+          470.40515119461,
+          192.2271153255,
+          228.72405101944
+        ],
+        [
+          0,
+          891.45676622531,
+          494.56379650752,
+          64.115110454199,
+          91.260358883136
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_002_0134.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211127_G16_H_UA-14_005_0460",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211127_G16_H_UA-14_005_0460.json",
+      "group": "L-211127_G16_H_UA-14_005",
+      "site": "G16",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1099.777096616,
+          453.92198249254,
+          387.61287885518,
+          270.91375669418
+        ],
+        [
+          0,
+          1039.5452012262,
+          510.79344592465,
+          64.529564415366,
+          194.20450196229
+        ],
+        [
+          0,
+          1169.214812362,
+          470.70171953148,
+          61.990630494379,
+          143.3333916108
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211127_G16_H_UA-14_005_0460.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210924_G05_H_UA-14_004_0137",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_004_0137.json",
+      "group": "L-210924_G05_H_UA-14_004",
+      "site": "G05",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          766.41695670878,
+          245.54489349398,
+          230.4579664491,
+          249.39845779401
+        ],
+        [
+          0,
+          654.2915190993,
+          289.53966870521,
+          75.732737574701,
+          198.09740823574
+        ],
+        [
+          0,
+          819.55956488052,
+          272.28816802792,
+          80.511725967415,
+          104.74095596709
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-14_004_0137.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211029_G12_H_UA-10_003_0524",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211029_G12_H_UA-10_003_0524.json",
+      "group": "L-211029_G12_H_UA-10_003",
+      "site": "G12",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          182.43374851558,
+          376.80705057725,
+          450.53407620019,
+          331.22958065982
+        ],
+        [
+          0,
+          842.7479268155,
+          457.14460901712,
+          114.91959377626,
+          201.20129878057
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211029_G12_H_UA-10_003_0524.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210924_G05_H_UA-10_001_0164",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-10_001_0164.json",
+      "group": "L-210924_G05_H_UA-10_001",
+      "site": "G05",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          959.37900440742,
+          352.56051154749,
+          188.69180463203,
+          257.55773024519
+        ],
+        [
+          0,
+          1183.5087532397,
+          401.9543764901,
+          65.605723814132,
+          204.80374176964
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210924_G05_H_UA-10_001_0164.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211021_G09_H_UA-14_002_0105",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_H_UA-14_002_0105.json",
+      "group": "L-211021_G09_H_UA-14_002",
+      "site": "G09",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1006.9336922263,
+          437.50194597002,
+          50.804245654127,
+          65.71390041335
+        ],
+        [
+          0,
+          624.66061041492,
+          438.08080069773,
+          81.995278717069,
+          208.2745467406
+        ],
+        [
+          1,
+          862.80552545237,
+          399.47109883618,
+          215.57041033479,
+          215.51914393314
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_H_UA-14_002_0105.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210917_G04_H_UA-14_002_0003",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_002_0003.json",
+      "group": "L-210917_G04_H_UA-14_002",
+      "site": "G04",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          722.62645984503,
+          164.56102812238,
+          59.51366780448,
+          153.28274413042
+        ],
+        [
+          1,
+          798.37627414122,
+          128.10251406752,
+          447.24708718504,
+          406.79626958921
+        ],
+        [
+          0,
+          913.09733097837,
+          193.39455982658,
+          100.5050367773,
+          135.96498629029
+        ],
+        [
+          1,
+          1712.0780842846,
+          66.403043238793,
+          66.620139384704,
+          61.259894713125
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "val",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_002_0003.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210917_G04_H_WS-22_004_0063",
+      "member": "└█╛≈╗≤╚▓(WS)/L-210917_G04_H_WS-22_004_0063.json",
+      "group": "L-210917_G04_H_WS-22_004",
+      "site": "G04",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1542.4658580509,
+          79.318574143135,
+          107.01370794513,
+          48.686402430908
+        ],
+        [
+          0,
+          516.32406657346,
+          297.58132932764,
+          109.76171866831,
+          165.01589586506
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "val",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-210917_G04_H_WS-22_004_0063.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210917_G04_H_UA-14_004_0103",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_004_0103.json",
+      "group": "L-210917_G04_H_UA-14_004",
+      "site": "G04",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          638.27392978083,
+          102.1073223955,
+          362.97824990148,
+          227.46762756621
+        ],
+        [
+          0,
+          517.29718975739,
+          142.93114838884,
+          76.04531843286,
+          169.15852412617
+        ],
+        [
+          0,
+          845.40216980806,
+          143.63961654889,
+          76.27555871635,
+          117.97297348097
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "val",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_004_0103.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210917_G04_H_UA-14_001_0030",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_001_0030.json",
+      "group": "L-210917_G04_H_UA-14_001",
+      "site": "G04",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          878.64942960664,
+          137.44803548492,
+          55.489424431897,
+          111.11927773616
+        ],
+        [
+          1,
+          650.05877002582,
+          105.6261214981,
+          346.15609777457,
+          248.63483647522
+        ],
+        [
+          0,
+          509.2711232084,
+          137.75579367924,
+          83.609659228006,
+          204.72981603999
+        ],
+        [
+          0,
+          1830.7488433762,
+          34.449891285286,
+          81.650312481037,
+          156.70854325924
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "val",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_001_0030.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210917_G04_H_UA-14_003_0125",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_003_0125.json",
+      "group": "L-210917_G04_H_UA-14_003",
+      "site": "G04",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          839.38494650111,
+          145.54596719824,
+          114.5617144732,
+          196.5208856971
+        ],
+        [
+          0,
+          600.09628750225,
+          153.20505183741,
+          92.143231787053,
+          273.35825430159
+        ],
+        [
+          1,
+          730.85993796544,
+          97.682656575245,
+          574.40080008905,
+          373.53026298628
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "val",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210917_G04_H_UA-14_003_0125.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210917_G04_H_WS-21_004_0022",
+      "member": "└█╛≈╗≤╚▓(WS)/L-210917_G04_H_WS-21_004_0022.json",
+      "group": "L-210917_G04_H_WS-21_004",
+      "site": "G04",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          210.89225737789,
+          320.71590237636,
+          170.49425847741,
+          450.04817728981
+        ],
+        [
+          1,
+          413.06694610209,
+          142.13686027921,
+          877.96239876595,
+          610.36748125737
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "val",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-210917_G04_H_WS-21_004_0022.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211218_B08_H_UC-22_005_0276",
+      "member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211218_B08_H_UC-22_005_0276.json",
+      "group": "L-211218_B08_H_UC-22_005",
+      "site": "B08",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1167.9727167188,
+          298.49734132802,
+          41.94,
+          101.10265867198
+        ],
+        [
+          1,
+          1600.4699916657,
+          126.28395582808,
+          272.01405583998,
+          404.10205500655
+        ],
+        [
+          0,
+          1712.06,
+          243.58,
+          75.261772277045,
+          90.47
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "test",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211218_B08_H_UC-22_005_0276.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-211218_B08_H_UA-11_002_0208",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211218_B08_H_UA-11_002_0208.json",
+      "group": "L-211218_B08_H_UA-11_002",
+      "site": "B08",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          462.99623429183,
+          189.32629011409,
+          336.1533563,
+          510.48175690439
+        ],
+        [
+          0,
+          601.1590050635,
+          271.7307418071,
+          80.307102583862,
+          102.81110397165
+        ],
+        [
+          0,
+          405.90403183568,
+          365.38731947157,
+          48.139638857298,
+          62.063277505769
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "test",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211218_B08_H_UA-11_002_0208.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210929_G06_H_UA-10_002_0018",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-10_002_0018.json",
+      "group": "L-210929_G06_H_UA-10_002",
+      "site": "G06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          475.73187100333,
+          479.17021167181,
+          51.509345945065,
+          144.17017899091
+        ],
+        [
+          0,
+          299.64953138815,
+          445.08376159292,
+          74.588933749737,
+          93.066273385302
+        ],
+        [
+          1,
+          237.24816396555,
+          426.61352806893,
+          186.66677978405,
+          206.08691810412
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "test",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-10_002_0018.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210929_G06_H_UA-10_004_0020",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-10_004_0020.json",
+      "group": "L-210929_G06_H_UA-10_004",
+      "site": "G06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          958.80818699023,
+          358.96614177517,
+          91.180522814003,
+          243.60269442948
+        ],
+        [
+          0,
+          1348.3580112239,
+          293.24419272755,
+          65.051555953042,
+          136.31201299938
+        ],
+        [
+          1,
+          1159.1931907162,
+          271.32804893244,
+          311.89814467926,
+          343.44826027821
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "test",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-10_004_0020.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210929_G06_H_UA-10_001_0060",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-10_001_0060.json",
+      "group": "L-210929_G06_H_UA-10_001",
+      "site": "G06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1496.8577931064,
+          281.4282001291,
+          70.536441149414,
+          251.43998293031
+        ],
+        [
+          0,
+          1259.79911965,
+          229.21315120731,
+          60.185831667516,
+          143.28201310044
+        ],
+        [
+          1,
+          1117.2217115475,
+          160.29544353491,
+          271.9085836415,
+          478.99378105929
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "test",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-10_001_0060.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    },
+    {
+      "stem": "L-210929_G06_H_UA-12_001_0124",
+      "member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-12_001_0124.json",
+      "group": "L-210929_G06_H_UA-12_001",
+      "site": "G06",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          668.32591081701,
+          338.40727075961,
+          87.403328408605,
+          270.54860778566
+        ],
+        [
+          1,
+          556.59684058587,
+          316.97734652989,
+          261.21058307205,
+          321.63290583887
+        ],
+        [
+          0,
+          1426.7360246248,
+          856.99028737865,
+          104.72095025104,
+          163.4108261078
+        ]
+      ],
+      "category": "people_outside_forklift",
+      "issues": [],
+      "split": "test",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-210929_G06_H_UA-12_001_0124.jpg",
+      "training_eligible": false,
+      "qa_status": "needs_full_label_completeness_review"
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+[
+  {
+    "review_id": 101,
+    "stem": "fork_corrected_L-211029_G12_H_UC-22_004_0193",
+    "group": "L-211029_G12_H_UC-22_004",
+    "site": "G12",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211029_G12_H_UC-22_004_0193.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211029_G12_H_UC-22_004_0193.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        1,
+        1030.3823809281,
+        411.15500029628,
+        303.31404393681,
+        236.36414074949
+      ],
+      [
+        0,
+        1256.9274530742,
+        454.44009916426,
+        69.220884246707,
+        79.881889953263
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211029_G12_H_UC-22_004_0193.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        1256.9274530742,
+        454.44009916426,
+        69.220884246707,
+        79.881889953263
+      ],
+      [
+        1,
+        1100.0,
+        410.0,
+        234.0,
+        242.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 105,
+    "stem": "fork_corrected_L-211209_B06_H_UC-08_001_0180",
+    "group": "L-211209_B06_H_UC-08_002",
+    "site": "B06",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_H_UC-08_001_0180.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_H_UC-08_001_0180.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        1,
+        724.55187193526,
+        336.62040888502,
+        439.54619979982,
+        222.81673871125
+      ],
+      [
+        0,
+        939.49428727319,
+        353.67670163417,
+        79.594611039595,
+        123.61671444995
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211209_B06_H_UC-08_001_0180.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        939.49428727319,
+        353.67670163417,
+        79.594611039595,
+        123.61671444995
+      ],
+      [
+        1,
+        724.0,
+        336.0,
+        440.0,
+        224.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 109,
+    "stem": "fork_corrected_L-211027_G10_H_UA-10_002_0030",
+    "group": "L-211027_G10_H_UA-10_002",
+    "site": "G10",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_H_UA-10_002_0030.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_H_UA-10_002_0030.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        0,
+        1646.1895152376,
+        471.82994744159,
+        134.80217274189,
+        277.20518046472
+      ],
+      [
+        1,
+        1394.2953497201,
+        101.18843222611,
+        333.61183909576,
+        627.99815241293
+      ],
+      [
+        0,
+        1612.0266496903,
+        470.72568482904,
+        40.064228670313,
+        85.376394604379
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211027_G10_H_UA-10_002_0030.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        1646.1895152376,
+        471.82994744159,
+        134.80217274189,
+        277.20518046472
+      ],
+      [
+        0,
+        1612.0266496903,
+        470.72568482904,
+        40.064228670313,
+        85.376394604379
+      ],
+      [
+        1,
+        1388.0,
+        0.0,
+        340.0,
+        734.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 113,
+    "stem": "fork_corrected_L-211007_G07_H_WS-22_004_0026",
+    "group": "L-211007_G07_H_WS-22_004",
+    "site": "G07",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "└█╛≈╗≤╚▓(WS)/L-211007_G07_H_WS-22_004_0026.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "└█╛≈╗≤╚▓(WS)/L-211007_G07_H_WS-22_004_0026.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        1,
+        444.0340369334,
+        28.942147680982,
+        349.88537642753,
+        533.68371442023
+      ],
+      [
+        0,
+        661.97378994968,
+        299.51050461883,
+        86.953508067481,
+        190.88486954699
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211007_G07_H_WS-22_004_0026.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        661.97378994968,
+        299.51050461883,
+        86.953508067481,
+        190.88486954699
+      ],
+      [
+        1,
+        442.0,
+        0.0,
+        354.0,
+        566.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 117,
+    "stem": "fork_corrected_L-211027_G10_H_UC-22_005_0046",
+    "group": "L-211027_G10_H_UC-22_005",
+    "site": "G10",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211027_G10_H_UC-22_005_0046.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211027_G10_H_UC-22_005_0046.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        1,
+        731.53436711686,
+        0.0,
+        793.91485111428,
+        1036.3055779149
+      ],
+      [
+        0,
+        813.14709495995,
+        459.79488159264,
+        171.50864801882,
+        171.9172012515
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211027_G10_H_UC-22_005_0046.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        813.14709495995,
+        459.79488159264,
+        171.50864801882,
+        171.9172012515
+      ],
+      [
+        1,
+        732.0,
+        0.0,
+        662.0,
+        1038.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 129,
+    "stem": "fork_corrected_L-210916_G03_H_UC-22_002_0090",
+    "group": "L-210916_G03_H_UC-22_002",
+    "site": "G03",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-210916_G03_H_UC-22_002_0090.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-210916_G03_H_UC-22_002_0090.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        1,
+        922.42145313883,
+        317.99946969721,
+        697.64040966647,
+        402.48250646332
+      ],
+      [
+        0,
+        1341.4224637276,
+        342.93745256356,
+        188.67547432981,
+        243.11528957989
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-210916_G03_H_UC-22_002_0090.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        1341.4224637276,
+        342.93745256356,
+        188.67547432981,
+        243.11528957989
+      ],
+      [
+        1,
+        1202.0,
+        316.0,
+        420.0,
+        406.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 145,
+    "stem": "fork_corrected_L-211102_F01_H_UA-12_004_0164",
+    "group": "L-211102_F01_H_UA-12_004",
+    "site": "F01",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211102_F01_H_UA-12_004_0164.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211102_F01_H_UA-12_004_0164.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        0,
+        722.381899343,
+        197.03731507565,
+        91.659449862211,
+        146.92862837735
+      ],
+      [
+        0,
+        880.36664302733,
+        128.05027238419,
+        99.961767846966,
+        201.52680279659
+      ],
+      [
+        1,
+        614.92280496735,
+        138.0567186897,
+        405.59260928896,
+        289.04068475302
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211102_F01_H_UA-12_004_0164.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        722.381899343,
+        197.03731507565,
+        91.659449862211,
+        146.92862837735
+      ],
+      [
+        0,
+        880.36664302733,
+        128.05027238419,
+        99.961767846966,
+        201.52680279659
+      ],
+      [
+        1,
+        612.0,
+        138.0,
+        408.0,
+        290.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  },
+  {
+    "review_id": 161,
+    "stem": "fork_corrected_L-211110_F02_H_UA-10_003_0183",
+    "group": "L-211110_F02_H_UA-10_003",
+    "site": "F02",
+    "split": "train",
+    "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+    "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_H_UA-10_003_0183.jpg",
+    "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+    "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_H_UA-10_003_0183.json",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "boxes": [
+      [
+        0,
+        668.60864861142,
+        260.00684968322,
+        67.442347525953,
+        168.77707961593
+      ],
+      [
+        1,
+        416.13993334212,
+        203.83363050278,
+        333.85990640907,
+        334.65844340914
+      ],
+      [
+        0,
+        480.98030202345,
+        261.36792285804,
+        122.05202150337,
+        324.43726980918
+      ]
+    ],
+    "training_eligible": true,
+    "qa_status": "manual_whole_image_review_and_forklift_box_correction",
+    "source_kind": "07",
+    "image": "fork_corrected_L-211110_F02_H_UA-10_003_0183.jpg",
+    "corrected_boxes": [
+      [
+        0,
+        668.60864861142,
+        260.00684968322,
+        67.442347525953,
+        168.77707961593
+      ],
+      [
+        0,
+        480.98030202345,
+        261.36792285804,
+        122.05202150337,
+        324.43726980918
+      ],
+      [
+        1,
+        416.0,
+        202.0,
+        334.0,
+        338.0
+      ]
+    ],
+    "review_method": "960x540 visual review; person boxes checked; forklift XYXY manually corrected; visible vehicle extent excluding cargo"
+  }
+]

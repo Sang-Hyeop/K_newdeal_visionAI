@@ -1,0 +1,14 @@
+{
+  "roots": [
+    "/Users/sanghyeopkim",
+    "/Volumes"
+  ],
+  "file_count": 493464,
+  "archive_paths": 744,
+  "video_paths": 959,
+  "access_error_lines": 499,
+  "focused_archives_inspected": 31,
+  "all_contents_reviewed": false,
+  "all_zip_crc_verified": false,
+  "scope": "accessible file listing, not all-file content review; no symlink recursion or nested archive extraction"
+}

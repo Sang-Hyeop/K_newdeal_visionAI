@@ -1,0 +1,331 @@
+[
+  {
+    "review_id": 1,
+    "stem": "L-211209_B06_H_WS-24_001_0137",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {
+      "forklift": [
+        387,
+        143,
+        625,
+        280
+      ]
+    }
+  },
+  {
+    "review_id": 2,
+    "stem": "L-211215_B07_H_UC-08_007_0490",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 3,
+    "stem": "L-211105_B03_H_WS-23_004_0809",
+    "split": "train",
+    "training_eligible": false,
+    "reason": "manual stacker class ambiguity; hold",
+    "changes": {}
+  },
+  {
+    "review_id": 4,
+    "stem": "L-211209_B06_H_WS-19_005_0104",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 5,
+    "stem": "L-211029_G12_H_UA-10_001_0232",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {
+      "forklift": [
+        455,
+        100,
+        631,
+        308
+      ],
+      "add_person": [
+        482,
+        132,
+        525,
+        207
+      ]
+    }
+  },
+  {
+    "review_id": 6,
+    "stem": "L-211209_B06_H_UA-13_002_0053",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 7,
+    "stem": "L-211215_B07_H_UC-08_003_0131",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 8,
+    "stem": "L-210924_G05_H_UA-10_003_0114",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {
+      "add_person": [
+        473,
+        163,
+        508,
+        233
+      ]
+    }
+  },
+  {
+    "review_id": 9,
+    "stem": "L-211127_G16_H_UA-11_003_0191",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 10,
+    "stem": "L-211209_B06_H_WS-25_002_0011",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 11,
+    "stem": "L-211029_G12_H_WS-19_005_0350",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 12,
+    "stem": "L-211029_G12_H_UA-12_002_0068",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {
+      "replace_last_person": [
+        594,
+        146,
+        631,
+        231
+      ]
+    }
+  },
+  {
+    "review_id": 13,
+    "stem": "L-211127_G16_H_UA-14_008_0030",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 14,
+    "stem": "L-211127_G16_H_UA-13_007_0192",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 15,
+    "stem": "L-211215_B07_H_UA-11_001_0137",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 16,
+    "stem": "L-211215_B07_H_UC-08_006_0842",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {
+      "forklift": [
+        400,
+        0,
+        875,
+        540
+      ]
+    }
+  },
+  {
+    "review_id": 17,
+    "stem": "L-211127_G16_H_UA-11_005_0427",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 18,
+    "stem": "L-211209_B06_H_UA-10_002_0275",
+    "split": "train",
+    "training_eligible": false,
+    "reason": "driver visibility ambiguous",
+    "changes": {}
+  },
+  {
+    "review_id": 19,
+    "stem": "L-211105_B03_H_UA-13_002_0518",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 20,
+    "stem": "L-211029_G12_H_UC-22_005_0122",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 21,
+    "stem": "L-211105_B03_H_WS-24_002_0112",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 22,
+    "stem": "L-211207_G17_H_UC-08_001_0324",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 23,
+    "stem": "L-211007_G07_H_UA-10_004_0123",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 24,
+    "stem": "L-211110_F02_H_WS-23_003_0086",
+    "split": "train",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 25,
+    "stem": "L-211211_G18_H_UA-11_006_0220",
+    "split": "val",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 26,
+    "stem": "L-210917_G04_H_UA-12_002_0037",
+    "split": "val",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 27,
+    "stem": "L-211211_G18_H_UA-11_001_0012",
+    "split": "val",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 28,
+    "stem": "L-211211_G18_H_UA-11_004_0267",
+    "split": "val",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 29,
+    "stem": "L-210917_G04_H_UC-08_004_0006",
+    "split": "val",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 30,
+    "stem": "L-210917_G04_H_WS-25_003_0085",
+    "split": "val",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 31,
+    "stem": "L-211013_G08_H_UA-14_001_0341",
+    "split": "test",
+    "training_eligible": false,
+    "reason": "driver behind reflective window uncertain; cargo box needs review",
+    "changes": {}
+  },
+  {
+    "review_id": 32,
+    "stem": "L-211218_B08_H_UC-22_003_0249",
+    "split": "test",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 33,
+    "stem": "L-210929_G06_H_UA-12_001_0201",
+    "split": "test",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 34,
+    "stem": "L-211218_B08_H_UA-11_005_0394",
+    "split": "test",
+    "training_eligible": true,
+    "reason": "visible person/forklift labels accepted for pilot",
+    "changes": {}
+  },
+  {
+    "review_id": 35,
+    "stem": "L-211013_G08_H_UA-14_004_0276",
+    "split": "test",
+    "training_eligible": false,
+    "reason": "driver behind reflective window uncertain; cargo box needs review",
+    "changes": {}
+  },
+  {
+    "review_id": 36,
+    "stem": "L-211013_G08_H_UA-14_002_0164",
+    "split": "test",
+    "training_eligible": false,
+    "reason": "driver behind reflective window uncertain; cargo box needs review",
+    "changes": {}
+  }
+]
