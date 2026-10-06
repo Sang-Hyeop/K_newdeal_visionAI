@@ -1,0 +1,13 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "fixed development test person FN6->10, forklift FN1->2 versus v6; equipment false positive visible in held demo at 10s",
+  "epochs": 12,
+  "learning_rate": 0.0001,
+  "dataset_counts": {
+    "train": 66,
+    "val": 8,
+    "test": 11
+  },
+  "initial_weights": "pilot_v6_corrected_forklift",
+  "sha256": "7238e4507944312ee463cb65ddbfc36842bdeb1df6ba1194688d4aa34dc1fc85"
+}
