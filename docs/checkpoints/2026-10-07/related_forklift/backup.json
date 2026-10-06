@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/training_review/related_forklift_v1/manifest.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/related_forklift_candidates_20261007/manifest.json",
+    "sha256": "8647402a252578fff2f420263101ae3ccec55df392bc957617b19206c45029be",
+    "bytes": 168430
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/training_review/related_forklift_v1/holds.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/related_forklift_candidates_20261007/holds.json",
+    "sha256": "7628202dad9fae42869fbb4a7834781c106276fdd4e683ae21a664224186d57a",
+    "bytes": 2210
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/training_review/related_forklift_v1/overlap_audit.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/related_forklift_candidates_20261007/overlap_audit.json",
+    "sha256": "9b091cc748bd3cdb4d420f90d94d1a5e168caad33c28b45e958234e840dc086f",
+    "bytes": 31757
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/training_review/related_forklift_v1/review_candidates.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/related_forklift_candidates_20261007/review_candidates.json",
+    "sha256": "1e5d5047dd8f00f828af1baed9423e4448d13e74344864ccf3b9a577148937c7",
+    "bytes": 163358
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/training_review/related_forklift_v1/current_summary.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/related_forklift_candidates_20261007/current_summary.json",
+    "sha256": "1d37b113f476dc8502aea41baa54ecf6407d4d495bbe67cfe50c07d55c612b52",
+    "bytes": 591
+  }
+]
