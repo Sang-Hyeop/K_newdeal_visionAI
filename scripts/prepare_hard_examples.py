@@ -1,13 +1,16 @@
 """Build a separately versioned, reviewed hard-example dataset from local ZIPs."""
 from pathlib import Path
-import json, shutil, zipfile, hashlib
+import json, shutil, zipfile, hashlib, argparse
 import cv2
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 
 def main():
-    config = json.loads((ROOT / 'configs/review/hard-examples-v1.json').read_text())
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--config',type=Path,default=ROOT/'configs/review/hard-examples-v1.json')
+    args=parser.parse_args()
+    config = json.loads(args.config.read_text())
     base, dest = ROOT / config['base'], ROOT / config['output']
     if dest.exists():
         raise SystemExit(f'Existing dataset protected: {dest}')
@@ -16,7 +19,7 @@ def main():
     held = [r for r in rows if r['split'] in ['val', 'test']]
     for i in config['positive_ids']:
         # The old pool is pending review; this explicit reviewed recipe approves it.
-        assert config['review_status'] == 'six_whole_frames_and_three_background_crops_visually_reviewed'
+        assert config['review_status'] in ['six_whole_frames_and_three_background_crops_visually_reviewed', 'multisite_whole_frames_and_background_crops_visually_reviewed']
         assert pool[i]['split'] == 'train'
         assert all(pool[i]['site'] != r.get('site') and pool[i]['group'] != r.get('group') for r in held)
     shutil.copytree(base, dest)
@@ -59,6 +62,24 @@ def main():
                    'source_member_sha256':hashlib.sha256(data).hexdigest(), 'crop_xyxy_original':crop,
                    'resolution':[ww,hh], 'qa_status':config['review_status'], 'training_eligible':True}
             rows.append(row); added.append(row)
+    for crop in config.get('base_negative_crops',[]):
+        original=base/'train/images'/crop['image']
+        parent=next(r for r in rows if r.get('image')==crop['image'] and r['split']=='train')
+        image=cv2.imread(str(original));h,w=image.shape[:2]
+        x1,y1,x2,y2=crop['xyxy_original']
+        assert 0<=x1<x2<=w and 0<=y1<y2<=h
+        for line in (base/'train/labels'/f'{original.stem}.txt').read_text().splitlines():
+            _,cx,cy,bw,bh=map(float,line.split())
+            x,y=(cx-bw/2)*w,(cy-bh/2)*h
+            assert min(x2,x+bw*w)<=max(x1,x) or min(y2,y+bh*h)<=max(y1,y)
+        stem=crop['stem'];im=image[y1:y2,x1:x2]
+        assert cv2.imwrite(str(dest/'train/images'/f'{stem}.jpg'),im)
+        (dest/'train/labels'/f'{stem}.txt').write_text('')
+        row={**parent,'stem':stem,'image':stem+'.jpg','corrected_boxes':[],
+             'resolution':[x2-x1,y2-y1],'crop_xyxy_original':[x1,y1,x2,y2],
+             'parent_image':str(original),'parent_image_sha256':hashlib.sha256(original.read_bytes()).hexdigest(),
+             'qa_status':config['review_status'],'training_eligible':True}
+        rows.append(row);added.append(row)
     for split in ['val','test']:
         for folder in ['images','labels']:
             for p in (base/split/folder).iterdir():
@@ -67,7 +88,9 @@ def main():
     (dest/'dataset.yaml').write_text(f'path: {dest}\ntrain: train/images\nval: val/images\ntest: test/images\nnames:\n  0: person\n  1: forklift\n')
     report = {'added':added, 'counts':{s:len(list((dest/s/'images').glob('*.jpg'))) for s in ['train','val','test']},
               'held_sets_unchanged':True, 'status':'prepared_not_trained', 'demo_frames_added':0}
-    (ROOT/'docs/checkpoints/2026-10-06/hard_examples_v1.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+    report_path=ROOT/config.get('report_path','docs/checkpoints/2026-10-06/hard_examples_v1.json')
+    if report_path.exists():raise SystemExit(f'Existing report protected: {report_path}')
+    report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2))
     print(report['counts'])
 
 if __name__ == '__main__':

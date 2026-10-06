@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "train": 92,
+    "val": 8,
+    "test": 11
+  },
+  "train_box_counts": {
+    "1": 68,
+    "0": 131
+  },
+  "train_background_images": 7,
+  "new_whole_frames": 22,
+  "new_background_crops": 4,
+  "new_whole_frame_site_codes": 11,
+  "decoded_exact_duplicates": 0,
+  "group_split_disjoint": true,
+  "held_sets_byte_identical_to_base": true,
+  "status": "prepared_not_trained",
+  "near_duplicate_visual_similarity_not_exhaustively_audited": true,
+  "box_rounding_tolerance": 1e-06
+}

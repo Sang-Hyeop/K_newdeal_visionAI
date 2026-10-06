@@ -1,0 +1,85 @@
+{
+  "base": "data/reviewed_pilot/logistics_v9_hard_examples",
+  "output": "data/reviewed_pilot/logistics_multisite_v1",
+  "positive_ids": [
+    2,
+    5,
+    9,
+    13,
+    21,
+    25,
+    29,
+    37,
+    41,
+    45,
+    53,
+    57,
+    110,
+    111,
+    114,
+    115,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123
+  ],
+  "forklift_xyxy_corrections": {
+    "122": [
+      95,
+      108,
+      552,
+      434
+    ]
+  },
+  "negative_crops": [
+    {
+      "id": 37,
+      "xyxy": [
+        650,
+        200,
+        960,
+        540
+      ]
+    },
+    {
+      "id": 121,
+      "xyxy": [
+        0,
+        0,
+        600,
+        540
+      ]
+    },
+    {
+      "id": 123,
+      "xyxy": [
+        0,
+        0,
+        550,
+        540
+      ]
+    }
+  ],
+  "base_negative_crops": [
+    {
+      "image": "cctv_full_source2_130.jpg",
+      "stem": "multisite_machine_background",
+      "xyxy_original": [
+        80,
+        270,
+        550,
+        650
+      ]
+    }
+  ],
+  "review_status": "multisite_whole_frames_and_background_crops_visually_reviewed",
+  "held_candidates": {
+    "112": "unlabelled partial legs at top edge; not silently background",
+    "116": "tiny background figures ambiguous and cargo boundary needs further review"
+  },
+  "report_path": "docs/checkpoints/2026-10-06/multisite_v1.json",
+  "status": "prepared_not_trained",
+  "box_policy": "visible person extent including partial operator; vehicle mast and forks; carried cargo may share axis-aligned rectangle"
+}
