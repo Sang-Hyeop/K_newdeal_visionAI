@@ -1,0 +1,18 @@
+{
+  "argument_differences": {
+    "name": [
+      "logistics_pilot_v12_low_bias_warmup",
+      "logistics_pilot_v14_error_focus"
+    ],
+    "data": [
+      "data/reviewed_pilot/logistics_multisite_v1/dataset.yaml",
+      "data/reviewed_pilot/logistics_error_focus_v1/dataset.yaml"
+    ],
+    "save_dir": [
+      "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup",
+      "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v14_error_focus"
+    ]
+  },
+  "old_image_label_files_byte_identical": 222,
+  "note": "Training set increased 92 to115; same configured epochs means more optimizer steps, and warmup batch count changes. Not single-example causal proof."
+}
