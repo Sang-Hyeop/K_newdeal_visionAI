@@ -1,0 +1,83 @@
+{
+  "purpose": "same_disk_recovery_not_off_device_backup",
+  "files": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v12_low_bias_warmup/person_forklift.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/models/pilot_v12_low_bias_warmup/person_forklift.pt",
+      "bytes": 5359301,
+      "sha256": "6b82c5d84f816d632d44e792b0f6b9ea8da15a5d6619623373da081d7fc5fdf3"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v12_low_bias_warmup/status.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/models/pilot_v12_low_bias_warmup/status.json",
+      "bytes": 279,
+      "sha256": "ce793cfa9d9a29c2f885bfd6947d12ab122c40f73fec23e247944410ead0ce5c"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup/fixed_threshold_audit.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/training/logistics_pilot_v12_low_bias_warmup/fixed_threshold_audit.json",
+      "bytes": 2179,
+      "sha256": "c87f29194bf5ab9f1c4e27a7bec0258f90acbc9f381bb422ef4553e14dc0f727"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup/results.csv",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/training/logistics_pilot_v12_low_bias_warmup/results.csv",
+      "bytes": 1594,
+      "sha256": "3e4ad86df675e20df0feab9c2558c7d5f250ddb5fd1bd548755cd60fc58c20da"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup/test_metrics.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/training/logistics_pilot_v12_low_bias_warmup/test_metrics.json",
+      "bytes": 798,
+      "sha256": "04d7fd942d33464a1736f471b7a7a37cc99d513a1a147263b329b79a845aa311"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup/dataset_snapshot.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/training/logistics_pilot_v12_low_bias_warmup/dataset_snapshot.json",
+      "bytes": 29649,
+      "sha256": "98336c0adf144c1b3af468bcd5ebab8bc6db130f19a059d85d95b5bbdb07ad1e"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup/args.yaml",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/training/logistics_pilot_v12_low_bias_warmup/args.yaml",
+      "bytes": 1885,
+      "sha256": "37bfe3e34c610f15b5d25378dc2e3caac7b48928dbdb43262594756616cd14ff"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup/controlled_config_difference.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/training/logistics_pilot_v12_low_bias_warmup/controlled_config_difference.json",
+      "bytes": 355,
+      "sha256": "5b1a9f844981da4f9f65aac16910e3b28599b354f4ac692d3a708795456e6a6e"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v12_frame_probe/predictions.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/video_validation/v12_frame_probe/predictions.json",
+      "bytes": 8555,
+      "sha256": "09e04b3631d2c2429fe7669dd61865a74ac81535776f08301bb769295cfa1a52"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v12/reverse/summary.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/video_validation/proximity_v12/reverse/summary.json",
+      "bytes": 1459,
+      "sha256": "0c5995b299a8b6c206c996bcac2a5be063e4840e3a411fe5c76437232f8ef660"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v12/reverse/events.jsonl",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/video_validation/proximity_v12/reverse/events.jsonl",
+      "bytes": 3210,
+      "sha256": "74e3d92cf6e1dc19d966ff03154f78d713b5bc5e47b1f78440f1a00d4fc1f66e"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v12/reverse/observations.jsonl",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/video_validation/proximity_v12/reverse/observations.jsonl",
+      "bytes": 80015,
+      "sha256": "8d6d29a1dcdf669950c7b5bba1e88854c47ba42c91baad01a77e945c1939fb41"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v12/reverse/proximity.mp4",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v12/outputs/video_validation/proximity_v12/reverse/proximity.mp4",
+      "bytes": 13175319,
+      "sha256": "5e4c327f269b713f67d6e720005e143dce65f3b4e389ac8c40add8c91fe97481"
+    }
+  ]
+}

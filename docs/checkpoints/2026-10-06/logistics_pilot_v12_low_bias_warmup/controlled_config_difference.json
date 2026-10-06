@@ -1,0 +1,14 @@
+{
+  "name": [
+    "logistics_pilot_v11_multisite",
+    "logistics_pilot_v12_low_bias_warmup"
+  ],
+  "warmup_bias_lr": [
+    0.1,
+    0.0001
+  ],
+  "save_dir": [
+    "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v11_multisite",
+    "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v12_low_bias_warmup"
+  ]
+}
