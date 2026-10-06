@@ -1,0 +1,135 @@
+[
+  {
+    "video": "1_forklift_forward.mp4",
+    "source_frames": 526,
+    "source_fps": 23.976023976023978,
+    "processed_frames": 22,
+    "sample_stride": 24,
+    "detection_counts": {
+      "person": 35,
+      "forklift": 8,
+      "helmeted_head": 7
+    },
+    "elapsed_seconds": 3.36,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  },
+  {
+    "video": "2_forklift_back.mp4",
+    "source_frames": 527,
+    "source_fps": 25.0,
+    "processed_frames": 22,
+    "sample_stride": 25,
+    "detection_counts": {
+      "forklift": 44,
+      "person": 57
+    },
+    "elapsed_seconds": 3.03,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  },
+  {
+    "video": "3_forklift_crush.mp4",
+    "source_frames": 432,
+    "source_fps": 23.976023976023978,
+    "processed_frames": 18,
+    "sample_stride": 24,
+    "detection_counts": {
+      "forklift": 26,
+      "person": 19,
+      "no_helmet_head": 3
+    },
+    "elapsed_seconds": 2.26,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  },
+  {
+    "video": "4_hazard_zone_dwell.mp4",
+    "source_frames": 457,
+    "source_fps": 23.976023976023978,
+    "processed_frames": 20,
+    "sample_stride": 24,
+    "detection_counts": {
+      "person": 52,
+      "forklift": 4
+    },
+    "elapsed_seconds": 2.76,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  },
+  {
+    "video": "5_PPE_Helmet.mp4",
+    "source_frames": 288,
+    "source_fps": 23.976023976023978,
+    "processed_frames": 12,
+    "sample_stride": 24,
+    "detection_counts": {
+      "forklift": 4,
+      "person": 50,
+      "helmeted_head": 5,
+      "no_helmet_head": 1
+    },
+    "elapsed_seconds": 1.43,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  },
+  {
+    "video": "6_Helmet_forklift.mp4",
+    "source_frames": 288,
+    "source_fps": 23.976023976023978,
+    "processed_frames": 12,
+    "sample_stride": 24,
+    "detection_counts": {
+      "forklift": 8,
+      "helmeted_head": 62,
+      "person": 44
+    },
+    "elapsed_seconds": 1.57,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  },
+  {
+    "video": "7_Logistics Warehouse.mp4",
+    "source_frames": 6528,
+    "source_fps": 23.999999019607884,
+    "processed_frames": 272,
+    "sample_stride": 24,
+    "detection_counts": {
+      "person": 519,
+      "forklift": 479,
+      "no_helmet_head": 21,
+      "helmeted_head": 5
+    },
+    "elapsed_seconds": 25.11,
+    "accuracy": "not measured; demo ground truth absent",
+    "weights": {
+      "objects": "outputs/training/logistics_pilot_v7_full_scene/weights/best.pt",
+      "ppe": "outputs/training/ppe_pilot_v2/weights/best.pt"
+    },
+    "confidence_threshold": 0.25
+  }
+]

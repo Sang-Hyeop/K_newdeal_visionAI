@@ -1,0 +1,36 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "Some background worker gains; seated worker still missed; forklift test regressed; tiling probe did not solve seated worker",
+  "epochs": 12,
+  "learning_rate": 0.0003,
+  "fixed_threshold_test": {
+    "person": {
+      "TP": 12,
+      "FP": 4,
+      "FN": 6,
+      "precision": 0.75,
+      "recall": 0.6666666666666666
+    },
+    "forklift": {
+      "TP": 8,
+      "FP": 5,
+      "FN": 3,
+      "precision": 0.6153846153846154,
+      "recall": 0.7272727272727273
+    }
+  },
+  "new_data": {
+    "frames": 10,
+    "raw_whole_frames": 6,
+    "masked_whole_frames": 4,
+    "person_boxes": 29,
+    "forklift_boxes": 4,
+    "source_train_videos": 4
+  },
+  "demo_videos_sampled": 7,
+  "demo_frames_processed": 378,
+  "sample_fps": 1,
+  "independent_evaluation": false,
+  "accuracy_on_demos": "not measured; full ground truth absent",
+  "weights_sha256": "c16fa5fa726b152548bc1c9a61c31e04eec6b38ca4979a0ceb3c91e546ad80a0"
+}

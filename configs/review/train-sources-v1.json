@@ -1,0 +1,4217 @@
+{
+  "added": [
+    {
+      "review_id": 1,
+      "stem": "archive_L-211127_G16_K_UC-15_005_0317",
+      "group": "L-211127_G16_K_UC-15_005",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_005_0317.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_005_0317.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1046.9194893301,
+          375.32226159542,
+          184.40051066991,
+          419.04
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_005_0317.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1046.9194893301,
+          375.32226159542,
+          184.40051066991,
+          419.04
+        ]
+      ]
+    },
+    {
+      "review_id": 2,
+      "stem": "archive_L-211027_G10_K_UA-16_004_0218",
+      "group": "L-211027_G10_K_UA-16_004",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_004_0218.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_004_0218.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          351.98368567459,
+          60.372490659318,
+          131.39427353386,
+          242.99224326203
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_004_0218.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          351.98368567459,
+          60.372490659318,
+          131.39427353386,
+          242.99224326203
+        ]
+      ]
+    },
+    {
+      "review_id": 3,
+      "stem": "archive_L-211207_G17_K_UC-16_001_0589",
+      "group": "L-211207_G17_K_UC-16_001",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_001_0589.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_001_0589.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          788.11614821258,
+          348.45429797582,
+          191.70385178742,
+          558.3599849128
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211207_G17_K_UC-16_001_0589.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          788.11614821258,
+          348.45429797582,
+          191.70385178742,
+          558.3599849128
+        ]
+      ]
+    },
+    {
+      "review_id": 4,
+      "stem": "archive_L-211206_B05_K_UC-16_003_0410",
+      "group": "L-211206_B05_K_UC-16_003",
+      "site": "B05",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_003_0410.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_003_0410.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          630.10529959093,
+          246.38521650378,
+          174.89709224604,
+          421.98
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211206_B05_K_UC-16_003_0410.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          630.10529959093,
+          246.38521650378,
+          174.89709224604,
+          421.98
+        ]
+      ]
+    },
+    {
+      "review_id": 5,
+      "stem": "archive_L-211207_G17_K_UC-16_003_0276",
+      "group": "L-211207_G17_K_UC-16_003",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_003_0276.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_003_0276.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          931.73911119973,
+          287.55451840036,
+          175.80177760053,
+          351.64548159964
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211207_G17_K_UC-16_003_0276.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          931.73911119973,
+          287.55451840036,
+          175.80177760053,
+          351.64548159964
+        ]
+      ]
+    },
+    {
+      "review_id": 6,
+      "stem": "archive_L-211110_F02_K_UA-16_004_0056",
+      "group": "L-211110_F02_K_UA-16_004",
+      "site": "F02",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_004_0056.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_004_0056.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          787.42182317428,
+          290.07,
+          134.32817682572,
+          328.3
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211110_F02_K_UA-16_004_0056.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          787.42182317428,
+          290.07,
+          134.32817682572,
+          328.3
+        ]
+      ]
+    },
+    {
+      "review_id": 7,
+      "stem": "archive_L-211027_G10_K_WS-35_004_0259",
+      "group": "L-211027_G10_K_WS-35_004",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_004_0259.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_004_0259.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          404.69070443228,
+          59.670699457119,
+          131.18237191946,
+          224.85477688024
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_004_0259.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          404.69070443228,
+          59.670699457119,
+          131.18237191946,
+          224.85477688024
+        ]
+      ]
+    },
+    {
+      "review_id": 8,
+      "stem": "archive_L-211209_B06_K_UC-15_008_0143",
+      "group": "L-211209_B06_K_UC-15_008",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_008_0143.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_008_0143.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1010.53,
+          77.88,
+          180.27,
+          629.65
+        ],
+        [
+          0,
+          437.62,
+          81.38,
+          224.28,
+          578.88
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_008_0143.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1010.53,
+          77.88,
+          180.27,
+          629.65
+        ],
+        [
+          0,
+          437.62,
+          81.38,
+          224.28,
+          578.88
+        ]
+      ]
+    },
+    {
+      "review_id": 9,
+      "stem": "archive_L-211021_G09_K_UA-16_001_0363",
+      "group": "L-211021_G09_K_UA-16_001",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_001_0363.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_001_0363.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          332.01804037711,
+          331.06332719361,
+          198.14525984394,
+          601.73282177444
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_001_0363.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          332.01804037711,
+          331.06332719361,
+          198.14525984394,
+          601.73282177444
+        ]
+      ]
+    },
+    {
+      "review_id": 10,
+      "stem": "archive_L-211110_F02_K_UA-16_004_0623",
+      "group": "L-211110_F02_K_UA-16_004",
+      "site": "F02",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_004_0623.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_004_0623.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          540.03,
+          305.54,
+          201.64984905248,
+          515.27768649527
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211110_F02_K_UA-16_004_0623.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          540.03,
+          305.54,
+          201.64984905248,
+          515.27768649527
+        ]
+      ]
+    },
+    {
+      "review_id": 11,
+      "stem": "archive_L-211127_G16_K_UC-15_001_0293",
+      "group": "L-211127_G16_K_UC-15_001",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_001_0293.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_001_0293.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          173.45,
+          251.97,
+          314.1,
+          526.92
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_001_0293.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          173.45,
+          251.97,
+          314.1,
+          526.92
+        ]
+      ]
+    },
+    {
+      "review_id": 12,
+      "stem": "archive_L-211110_F02_K_UA-16_001_0637",
+      "group": "L-211110_F02_K_UA-16_001",
+      "site": "F02",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_001_0637.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_001_0637.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1161.5,
+          286.58,
+          143.82,
+          341.52
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211110_F02_K_UA-16_001_0637.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1161.5,
+          286.58,
+          143.82,
+          341.52
+        ]
+      ]
+    },
+    {
+      "review_id": 13,
+      "stem": "archive_L-211209_B06_K_UC-16_002_0112",
+      "group": "L-211209_B06_K_UC-16_002",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_002_0112.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_002_0112.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1051.08,
+          410.63708839274,
+          316.22,
+          445.37555002553
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-16_002_0112.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1051.08,
+          410.63708839274,
+          316.22,
+          445.37555002553
+        ]
+      ]
+    },
+    {
+      "review_id": 14,
+      "stem": "archive_L-211021_G09_K_WS-35_002_0582",
+      "group": "L-211021_G09_K_WS-35_002",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_002_0582.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_002_0582.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          992.2,
+          225.29,
+          102.47,
+          334.75797200731
+        ],
+        [
+          0,
+          150.27,
+          192.73,
+          169.87,
+          539.35
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_002_0582.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          992.2,
+          225.29,
+          102.47,
+          334.75797200731
+        ],
+        [
+          0,
+          150.27,
+          192.73,
+          169.87,
+          539.35
+        ]
+      ]
+    },
+    {
+      "review_id": 15,
+      "stem": "archive_L-211209_B06_K_UC-16_003_0238",
+      "group": "L-211209_B06_K_UC-16_003",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_003_0238.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_003_0238.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          782.13995376834,
+          302.61002311583,
+          175.88027738996,
+          422.74990753668
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-16_003_0238.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          782.13995376834,
+          302.61002311583,
+          175.88027738996,
+          422.74990753668
+        ]
+      ]
+    },
+    {
+      "review_id": 16,
+      "stem": "archive_L-211021_G09_K_WS-35_004_0878",
+      "group": "L-211021_G09_K_WS-35_004",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_004_0878.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_004_0878.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          401.95561239571,
+          143.40864153301,
+          185.12950361449,
+          446.1827390426
+        ],
+        [
+          0,
+          1081.0949596106,
+          178.69053209726,
+          176.99876945908,
+          541.23129840721
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_004_0878.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          401.95561239571,
+          143.40864153301,
+          185.12950361449,
+          446.1827390426
+        ],
+        [
+          0,
+          1081.0949596106,
+          178.69053209726,
+          176.99876945908,
+          541.23129840721
+        ]
+      ]
+    },
+    {
+      "review_id": 17,
+      "stem": "archive_L-211127_G16_K_UC-15_008_0002",
+      "group": "L-211127_G16_K_UC-15_008",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_008_0002.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_008_0002.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          828.9,
+          274.81,
+          301.61,
+          740.78
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_008_0002.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          828.9,
+          274.81,
+          301.61,
+          740.78
+        ]
+      ]
+    },
+    {
+      "review_id": 18,
+      "stem": "archive_L-211209_B06_K_UC-15_007_0319",
+      "group": "L-211209_B06_K_UC-15_007",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_007_0319.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_007_0319.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          515.07,
+          729.03,
+          449.0379386113,
+          350.5
+        ],
+        [
+          0,
+          856.97,
+          244.76,
+          186.14,
+          360.48
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_007_0319.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          515.07,
+          729.03,
+          449.0379386113,
+          350.5
+        ],
+        [
+          0,
+          856.97,
+          244.76,
+          186.14,
+          360.48
+        ]
+      ]
+    },
+    {
+      "review_id": 19,
+      "stem": "archive_L-211021_G09_K_UA-16_004_0775",
+      "group": "L-211021_G09_K_UA-16_004",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_004_0775.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_004_0775.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          715.39012716089,
+          117.89778863602,
+          132.61121847474,
+          326.01698366456
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_004_0775.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          715.39012716089,
+          117.89778863602,
+          132.61121847474,
+          326.01698366456
+        ]
+      ]
+    },
+    {
+      "review_id": 20,
+      "stem": "archive_L-211125_B04_K_UC-16_003_0787",
+      "group": "L-211125_B04_K_UC-16_003",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_003_0787.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_003_0787.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1006.02,
+          272.08,
+          125.21472545064,
+          344.72629158261
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_003_0787.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1006.02,
+          272.08,
+          125.21472545064,
+          344.72629158261
+        ]
+      ]
+    },
+    {
+      "review_id": 21,
+      "stem": "archive_L-211125_B04_K_UC-16_003_0829",
+      "group": "L-211125_B04_K_UC-16_003",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_003_0829.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_003_0829.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1008.5,
+          119.89,
+          127.25101703325,
+          300.4784068133
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_003_0829.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1008.5,
+          119.89,
+          127.25101703325,
+          300.4784068133
+        ]
+      ]
+    },
+    {
+      "review_id": 22,
+      "stem": "archive_L-211021_G09_K_WS-35_002_0159",
+      "group": "L-211021_G09_K_WS-35_002",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_002_0159.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_002_0159.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1165.3,
+          165.63,
+          188.9,
+          554.73
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_002_0159.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1165.3,
+          165.63,
+          188.9,
+          554.73
+        ]
+      ]
+    },
+    {
+      "review_id": 23,
+      "stem": "archive_L-211021_G09_K_WS-35_001_0136",
+      "group": "L-211021_G09_K_WS-35_001",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_001_0136.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_001_0136.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          260.64933405286,
+          339.8780991646,
+          110.06580221879,
+          364.28189234144
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_001_0136.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          260.64933405286,
+          339.8780991646,
+          110.06580221879,
+          364.28189234144
+        ]
+      ]
+    },
+    {
+      "review_id": 24,
+      "stem": "archive_L-211207_G17_K_UC-16_001_0588",
+      "group": "L-211207_G17_K_UC-16_001",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_001_0588.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_001_0588.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          837.207635763,
+          354.39299925085,
+          203.986712858,
+          536.14185308239
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211207_G17_K_UC-16_001_0588.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          837.207635763,
+          354.39299925085,
+          203.986712858,
+          536.14185308239
+        ]
+      ]
+    },
+    {
+      "review_id": 25,
+      "stem": "archive_L-211209_B06_K_UC-16_001_0139",
+      "group": "L-211209_B06_K_UC-16_001",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_001_0139.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_001_0139.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          769.28,
+          403.9,
+          143.10140793586,
+          379.08
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-16_001_0139.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          769.28,
+          403.9,
+          143.10140793586,
+          379.08
+        ]
+      ]
+    },
+    {
+      "review_id": 26,
+      "stem": "archive_L-211209_B06_K_UC-15_005_0527",
+      "group": "L-211209_B06_K_UC-15_005",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_005_0527.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_005_0527.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1067.34,
+          207.07,
+          317.13,
+          795.83
+        ],
+        [
+          0,
+          718.72,
+          241.57,
+          226.77,
+          395.57
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_005_0527.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1067.34,
+          207.07,
+          317.13,
+          795.83
+        ],
+        [
+          0,
+          718.72,
+          241.57,
+          226.77,
+          395.57
+        ]
+      ]
+    },
+    {
+      "review_id": 27,
+      "stem": "archive_L-211209_B06_K_UC-16_003_0666",
+      "group": "L-211209_B06_K_UC-16_003",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_003_0666.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_003_0666.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1116.9100569071,
+          334.81171512038,
+          170.14317725357,
+          501.22008528877
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-16_003_0666.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1116.9100569071,
+          334.81171512038,
+          170.14317725357,
+          501.22008528877
+        ]
+      ]
+    },
+    {
+      "review_id": 28,
+      "stem": "archive_L-211021_G09_K_UA-16_004_0444",
+      "group": "L-211021_G09_K_UA-16_004",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_004_0444.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_004_0444.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          912.07006612149,
+          213.0748869914,
+          162.96221017134,
+          434.82192310223
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_004_0444.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          912.07006612149,
+          213.0748869914,
+          162.96221017134,
+          434.82192310223
+        ]
+      ]
+    },
+    {
+      "review_id": 29,
+      "stem": "archive_L-211207_G17_K_UC-16_002_0522",
+      "group": "L-211207_G17_K_UC-16_002",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_002_0522.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_002_0522.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1101.54,
+          427.03,
+          144.31,
+          371.31
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211207_G17_K_UC-16_002_0522.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1101.54,
+          427.03,
+          144.31,
+          371.31
+        ]
+      ]
+    },
+    {
+      "review_id": 30,
+      "stem": "archive_L-211027_G10_K_UA-16_001_0296",
+      "group": "L-211027_G10_K_UA-16_001",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_001_0296.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_001_0296.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          641.93831949055,
+          237.17134866562,
+          119.57099403818,
+          356.30926151756
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_001_0296.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          641.93831949055,
+          237.17134866562,
+          119.57099403818,
+          356.30926151756
+        ]
+      ]
+    },
+    {
+      "review_id": 31,
+      "stem": "archive_L-211027_G10_K_UA-16_001_0643",
+      "group": "L-211027_G10_K_UA-16_001",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_001_0643.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_001_0643.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          126.47298285395,
+          273.47521165796,
+          178.42308019513,
+          254.27324697206
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_001_0643.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          126.47298285395,
+          273.47521165796,
+          178.42308019513,
+          254.27324697206
+        ]
+      ]
+    },
+    {
+      "review_id": 32,
+      "stem": "archive_L-211027_G10_K_UA-16_003_0484",
+      "group": "L-211027_G10_K_UA-16_003",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_003_0484.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_003_0484.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1680.2944930441,
+          352.84819158753,
+          68.807686327698,
+          180.11423774015
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_003_0484.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1680.2944930441,
+          352.84819158753,
+          68.807686327698,
+          180.11423774015
+        ]
+      ]
+    },
+    {
+      "review_id": 33,
+      "stem": "archive_L-211027_G10_K_UA-16_002_0419",
+      "group": "L-211027_G10_K_UA-16_002",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_002_0419.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_002_0419.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          334.04236795156,
+          509.63938869457,
+          114.11176212746,
+          236.30537057216
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_002_0419.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          334.04236795156,
+          509.63938869457,
+          114.11176212746,
+          236.30537057216
+        ]
+      ]
+    },
+    {
+      "review_id": 34,
+      "stem": "archive_L-211021_G09_K_WS-35_004_0514",
+      "group": "L-211021_G09_K_WS-35_004",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_004_0514.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_004_0514.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          983.03310921105,
+          0.0,
+          71.689492178722,
+          227.15936873561
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_004_0514.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          983.03310921105,
+          0.0,
+          71.689492178722,
+          227.15936873561
+        ]
+      ]
+    },
+    {
+      "review_id": 35,
+      "stem": "archive_L-211027_G10_K_WS-35_001_0733",
+      "group": "L-211027_G10_K_WS-35_001",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_001_0733.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_001_0733.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          510.33963300509,
+          275.33453727239,
+          163.05085767991,
+          362.21175094303
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_001_0733.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          510.33963300509,
+          275.33453727239,
+          163.05085767991,
+          362.21175094303
+        ]
+      ]
+    },
+    {
+      "review_id": 36,
+      "stem": "archive_L-211127_G16_K_UC-15_002_0491",
+      "group": "L-211127_G16_K_UC-15_002",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_002_0491.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_002_0491.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          699.1,
+          238.52,
+          188.52,
+          618.31
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_002_0491.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          699.1,
+          238.52,
+          188.52,
+          618.31
+        ]
+      ]
+    },
+    {
+      "review_id": 37,
+      "stem": "archive_L-211021_G09_K_WS-35_003_0569",
+      "group": "L-211021_G09_K_WS-35_003",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_003_0569.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_003_0569.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1024.4568731595,
+          270.96277013148,
+          83.995229357706,
+          220.81004093117
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_003_0569.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1024.4568731595,
+          270.96277013148,
+          83.995229357706,
+          220.81004093117
+        ]
+      ]
+    },
+    {
+      "review_id": 38,
+      "stem": "archive_L-211127_G16_K_UC-15_001_0402",
+      "group": "L-211127_G16_K_UC-15_001",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_001_0402.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_001_0402.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          100.99,
+          282.23,
+          290.38,
+          531.28
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_001_0402.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          100.99,
+          282.23,
+          290.38,
+          531.28
+        ]
+      ]
+    },
+    {
+      "review_id": 39,
+      "stem": "archive_L-211021_G09_K_UA-16_003_0486",
+      "group": "L-211021_G09_K_UA-16_003",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_003_0486.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_003_0486.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          846.36033690202,
+          256.53055217126,
+          111.04543652708,
+          312.18434042519
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_003_0486.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          846.36033690202,
+          256.53055217126,
+          111.04543652708,
+          312.18434042519
+        ]
+      ]
+    },
+    {
+      "review_id": 40,
+      "stem": "archive_L-211110_F02_K_UA-16_001_0536",
+      "group": "L-211110_F02_K_UA-16_001",
+      "site": "F02",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_001_0536.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_001_0536.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1089.8,
+          289.45,
+          108.28,
+          337.67
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211110_F02_K_UA-16_001_0536.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1089.8,
+          289.45,
+          108.28,
+          337.67
+        ]
+      ]
+    },
+    {
+      "review_id": 41,
+      "stem": "archive_L-211110_F02_K_UA-16_003_0798",
+      "group": "L-211110_F02_K_UA-16_003",
+      "site": "F02",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_003_0798.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_003_0798.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          946.29,
+          380.56,
+          139.34,
+          373.78
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211110_F02_K_UA-16_003_0798.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          946.29,
+          380.56,
+          139.34,
+          373.78
+        ]
+      ]
+    },
+    {
+      "review_id": 42,
+      "stem": "archive_L-211209_B06_K_UC-15_001_0287",
+      "group": "L-211209_B06_K_UC-15_001",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_001_0287.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_001_0287.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          932.07837132867,
+          340.49,
+          262.00162867133,
+          429.34224529954
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_001_0287.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          932.07837132867,
+          340.49,
+          262.00162867133,
+          429.34224529954
+        ]
+      ]
+    },
+    {
+      "review_id": 43,
+      "stem": "archive_L-211027_G10_K_UA-16_005_0930",
+      "group": "L-211027_G10_K_UA-16_005",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_005_0930.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_005_0930.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1199.21,
+          437.97,
+          72.16,
+          154.65
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_005_0930.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1199.21,
+          437.97,
+          72.16,
+          154.65
+        ]
+      ]
+    },
+    {
+      "review_id": 44,
+      "stem": "archive_L-211021_G09_K_UA-16_002_0806",
+      "group": "L-211021_G09_K_UA-16_002",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_002_0806.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_002_0806.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          427.58,
+          236.11,
+          167.39,
+          515.08
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_002_0806.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          427.58,
+          236.11,
+          167.39,
+          515.08
+        ]
+      ]
+    },
+    {
+      "review_id": 45,
+      "stem": "archive_L-211027_G10_K_UA-16_003_0571",
+      "group": "L-211027_G10_K_UA-16_003",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_003_0571.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_003_0571.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1683.0808875603,
+          346.42035185687,
+          46.168083742249,
+          165.73515625358
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_003_0571.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1683.0808875603,
+          346.42035185687,
+          46.168083742249,
+          165.73515625358
+        ]
+      ]
+    },
+    {
+      "review_id": 46,
+      "stem": "archive_L-211021_G09_K_WS-35_003_0706",
+      "group": "L-211021_G09_K_WS-35_003",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_003_0706.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_003_0706.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1013.2473714827,
+          239.37776274002,
+          142.48253217834,
+          395.99811638914
+        ],
+        [
+          0,
+          640.05221030332,
+          240.11488355135,
+          126.95837642056,
+          423.56912848986
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_003_0706.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1013.2473714827,
+          239.37776274002,
+          142.48253217834,
+          395.99811638914
+        ],
+        [
+          0,
+          640.05221030332,
+          240.11488355135,
+          126.95837642056,
+          423.56912848986
+        ]
+      ]
+    },
+    {
+      "review_id": 47,
+      "stem": "archive_L-211027_G10_K_UA-16_002_0431",
+      "group": "L-211027_G10_K_UA-16_002",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_002_0431.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_002_0431.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          0.0,
+          472.0128514624,
+          165.42186358297,
+          361.6800106296
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_002_0431.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          0.0,
+          472.0128514624,
+          165.42186358297,
+          361.6800106296
+        ]
+      ]
+    },
+    {
+      "review_id": 48,
+      "stem": "archive_L-211125_B04_K_UC-16_007_0251",
+      "group": "L-211125_B04_K_UC-16_007",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_007_0251.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_007_0251.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          760.13,
+          354.0,
+          210.34,
+          531.38
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_007_0251.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          760.13,
+          354.0,
+          210.34,
+          531.38
+        ]
+      ]
+    },
+    {
+      "review_id": 49,
+      "stem": "archive_L-211027_G10_K_UA-16_005_0114",
+      "group": "L-211027_G10_K_UA-16_005",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_005_0114.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_005_0114.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1381.07,
+          370.54,
+          82.62,
+          293.2
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_005_0114.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1381.07,
+          370.54,
+          82.62,
+          293.2
+        ]
+      ]
+    },
+    {
+      "review_id": 50,
+      "stem": "archive_L-211209_B06_K_UC-15_003_0397",
+      "group": "L-211209_B06_K_UC-15_003",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_003_0397.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_003_0397.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          909.58788976891,
+          258.8,
+          138.99211023109,
+          307.07921335303
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_003_0397.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          909.58788976891,
+          258.8,
+          138.99211023109,
+          307.07921335303
+        ]
+      ]
+    },
+    {
+      "review_id": 51,
+      "stem": "archive_L-211206_B05_K_UC-16_006_0309",
+      "group": "L-211206_B05_K_UC-16_006",
+      "site": "B05",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_006_0309.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_006_0309.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1018.3,
+          339.26334692719,
+          194.52722833688,
+          530.62665307281
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211206_B05_K_UC-16_006_0309.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1018.3,
+          339.26334692719,
+          194.52722833688,
+          530.62665307281
+        ]
+      ]
+    },
+    {
+      "review_id": 52,
+      "stem": "archive_L-211027_G10_K_WS-35_003_0099",
+      "group": "L-211027_G10_K_WS-35_003",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_003_0099.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_003_0099.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1622.2327451592,
+          321.03327815722,
+          98.527902715924,
+          193.93994238152
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_003_0099.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1622.2327451592,
+          321.03327815722,
+          98.527902715924,
+          193.93994238152
+        ]
+      ]
+    },
+    {
+      "review_id": 53,
+      "stem": "archive_L-211021_G09_K_UA-16_002_0003",
+      "group": "L-211021_G09_K_UA-16_002",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_002_0003.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_002_0003.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1147.7897327259,
+          283.51015234073,
+          73.4579649486,
+          238.91681588833
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_002_0003.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1147.7897327259,
+          283.51015234073,
+          73.4579649486,
+          238.91681588833
+        ]
+      ]
+    },
+    {
+      "review_id": 54,
+      "stem": "archive_L-211127_G16_K_UC-15_002_0277",
+      "group": "L-211127_G16_K_UC-15_002",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_002_0277.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_002_0277.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          415.7,
+          296.17,
+          268.2,
+          575.53
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_002_0277.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          415.7,
+          296.17,
+          268.2,
+          575.53
+        ]
+      ]
+    },
+    {
+      "review_id": 55,
+      "stem": "archive_L-211021_G09_K_UA-16_001_0058",
+      "group": "L-211021_G09_K_UA-16_001",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_001_0058.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_001_0058.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          977.2565923083,
+          451.3772996914,
+          106.97882340783,
+          308.91948829257
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_001_0058.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          977.2565923083,
+          451.3772996914,
+          106.97882340783,
+          308.91948829257
+        ]
+      ]
+    },
+    {
+      "review_id": 56,
+      "stem": "archive_L-211209_B06_K_UC-15_004_0077",
+      "group": "L-211209_B06_K_UC-15_004",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_004_0077.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_004_0077.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          643.31256704042,
+          95.301532756994,
+          238.84925622138,
+          463.51107401105
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_004_0077.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          643.31256704042,
+          95.301532756994,
+          238.84925622138,
+          463.51107401105
+        ]
+      ]
+    },
+    {
+      "review_id": 57,
+      "stem": "archive_L-211207_G17_K_UC-16_003_0188",
+      "group": "L-211207_G17_K_UC-16_003",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_003_0188.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_003_0188.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          859.1,
+          322.82,
+          177.67,
+          457.08088880027
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211207_G17_K_UC-16_003_0188.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          859.1,
+          322.82,
+          177.67,
+          457.08088880027
+        ]
+      ]
+    },
+    {
+      "review_id": 58,
+      "stem": "archive_L-211209_B06_K_UC-15_003_0269",
+      "group": "L-211209_B06_K_UC-15_003",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_003_0269.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_003_0269.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          980.6,
+          244.72,
+          151.59003527957,
+          333.4685839745
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_003_0269.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          980.6,
+          244.72,
+          151.59003527957,
+          333.4685839745
+        ]
+      ]
+    },
+    {
+      "review_id": 59,
+      "stem": "archive_L-211209_B06_K_UC-15_005_0163",
+      "group": "L-211209_B06_K_UC-15_005",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_005_0163.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_005_0163.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          200.67408483757,
+          253.67,
+          222.11580911546,
+          667.33
+        ],
+        [
+          0,
+          850.87,
+          251.99,
+          157.18,
+          426.28
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_005_0163.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          200.67408483757,
+          253.67,
+          222.11580911546,
+          667.33
+        ],
+        [
+          0,
+          850.87,
+          251.99,
+          157.18,
+          426.28
+        ]
+      ]
+    },
+    {
+      "review_id": 60,
+      "stem": "archive_L-211027_G10_K_WS-35_002_0161",
+      "group": "L-211027_G10_K_WS-35_002",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_002_0161.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_002_0161.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          431.64435752267,
+          480.78707147652,
+          96.591343566864,
+          198.96696901139
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_002_0161.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          431.64435752267,
+          480.78707147652,
+          96.591343566864,
+          198.96696901139
+        ]
+      ]
+    },
+    {
+      "review_id": 61,
+      "stem": "archive_L-211027_G10_K_WS-35_002_0020",
+      "group": "L-211027_G10_K_WS-35_002",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_002_0020.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_002_0020.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          112.85036927403,
+          542.35066769902,
+          79.32473524353,
+          154.62180507905
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_002_0020.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          112.85036927403,
+          542.35066769902,
+          79.32473524353,
+          154.62180507905
+        ]
+      ]
+    },
+    {
+      "review_id": 62,
+      "stem": "archive_L-211127_G16_K_UC-15_003_0031",
+      "group": "L-211127_G16_K_UC-15_003",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_003_0031.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_003_0031.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1159.22,
+          191.30446960158,
+          328.4,
+          776.29553039842
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_003_0031.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1159.22,
+          191.30446960158,
+          328.4,
+          776.29553039842
+        ]
+      ]
+    },
+    {
+      "review_id": 63,
+      "stem": "archive_L-211127_G16_K_UC-15_004_0308",
+      "group": "L-211127_G16_K_UC-15_004",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_004_0308.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_004_0308.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1508.37,
+          388.58,
+          266.32,
+          623.73
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_004_0308.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1508.37,
+          388.58,
+          266.32,
+          623.73
+        ]
+      ]
+    },
+    {
+      "review_id": 64,
+      "stem": "archive_L-211209_B06_K_UC-16_002_0586",
+      "group": "L-211209_B06_K_UC-16_002",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_002_0586.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_002_0586.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          758.75994563401,
+          380.22019966124,
+          183.23005436599,
+          506.06980033876
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-16_002_0586.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          758.75994563401,
+          380.22019966124,
+          183.23005436599,
+          506.06980033876
+        ]
+      ]
+    },
+    {
+      "review_id": 65,
+      "stem": "archive_L-211207_G17_K_UC-16_002_0294",
+      "group": "L-211207_G17_K_UC-16_002",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_002_0294.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_K_UC-16_002_0294.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          835.36646946773,
+          408.08,
+          167.66353053227,
+          414.39
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211207_G17_K_UC-16_002_0294.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          835.36646946773,
+          408.08,
+          167.66353053227,
+          414.39
+        ]
+      ]
+    },
+    {
+      "review_id": 66,
+      "stem": "archive_L-211206_B05_K_UC-16_006_0008",
+      "group": "L-211206_B05_K_UC-16_006",
+      "site": "B05",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_006_0008.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_006_0008.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          791.89,
+          403.54,
+          154.98,
+          391.83
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211206_B05_K_UC-16_006_0008.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          791.89,
+          403.54,
+          154.98,
+          391.83
+        ]
+      ]
+    },
+    {
+      "review_id": 67,
+      "stem": "archive_L-211209_B06_K_UC-15_002_0245",
+      "group": "L-211209_B06_K_UC-15_002",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_002_0245.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_002_0245.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          728.64046134394,
+          130.23351069449,
+          295.05266825585,
+          730.15921548595
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_002_0245.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          728.64046134394,
+          130.23351069449,
+          295.05266825585,
+          730.15921548595
+        ]
+      ]
+    },
+    {
+      "review_id": 68,
+      "stem": "archive_L-211209_B06_K_UC-15_008_0395",
+      "group": "L-211209_B06_K_UC-15_008",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_008_0395.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_008_0395.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          917.99,
+          59.72277960693,
+          210.52,
+          496.63
+        ],
+        [
+          0,
+          1063.0504985411,
+          300.53,
+          320.2695014589,
+          779.47
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_008_0395.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          917.99,
+          59.72277960693,
+          210.52,
+          496.63
+        ],
+        [
+          0,
+          1063.0504985411,
+          300.53,
+          320.2695014589,
+          779.47
+        ]
+      ]
+    },
+    {
+      "review_id": 69,
+      "stem": "archive_L-211209_B06_K_UC-16_001_0688",
+      "group": "L-211209_B06_K_UC-16_001",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_001_0688.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-16_001_0688.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          668.23,
+          394.44,
+          181.22,
+          463.39
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-16_001_0688.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          668.23,
+          394.44,
+          181.22,
+          463.39
+        ]
+      ]
+    },
+    {
+      "review_id": 70,
+      "stem": "archive_L-211027_G10_K_WS-35_003_0255",
+      "group": "L-211027_G10_K_WS-35_003",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_003_0255.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_003_0255.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1296.4386972533,
+          348.02326831183,
+          144.78163015695,
+          264.0338863073
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_003_0255.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1296.4386972533,
+          348.02326831183,
+          144.78163015695,
+          264.0338863073
+        ]
+      ]
+    },
+    {
+      "review_id": 71,
+      "stem": "archive_L-211027_G10_K_WS-35_004_0108",
+      "group": "L-211027_G10_K_WS-35_004",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_004_0108.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_004_0108.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          140.62899942439,
+          173.1066982024,
+          258.06504215892,
+          451.12061821954
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_004_0108.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          140.62899942439,
+          173.1066982024,
+          258.06504215892,
+          451.12061821954
+        ]
+      ]
+    },
+    {
+      "review_id": 72,
+      "stem": "archive_L-211027_G10_K_UA-16_004_0121",
+      "group": "L-211027_G10_K_UA-16_004",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_004_0121.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211027_G10_K_UA-16_004_0121.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          53.63387036368,
+          51.743000503239,
+          134.65007030069,
+          179.53353205038
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_UA-16_004_0121.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          53.63387036368,
+          51.743000503239,
+          134.65007030069,
+          179.53353205038
+        ]
+      ]
+    },
+    {
+      "review_id": 73,
+      "stem": "archive_L-211206_B05_K_UC-16_003_0196",
+      "group": "L-211206_B05_K_UC-16_003",
+      "site": "B05",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_003_0196.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211206_B05_K_UC-16_003_0196.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          672.39254073564,
+          383.39,
+          166.55789191647,
+          255.23097937028
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211206_B05_K_UC-16_003_0196.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          672.39254073564,
+          383.39,
+          166.55789191647,
+          255.23097937028
+        ]
+      ]
+    },
+    {
+      "review_id": 74,
+      "stem": "archive_L-211209_B06_K_UC-15_007_0177",
+      "group": "L-211209_B06_K_UC-15_007",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_007_0177.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_007_0177.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          915.4,
+          339.56,
+          210.75,
+          265.22
+        ],
+        [
+          0,
+          377.27476925841,
+          211.25,
+          271.77523074159,
+          777.27
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_007_0177.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          915.4,
+          339.56,
+          210.75,
+          265.22
+        ],
+        [
+          0,
+          377.27476925841,
+          211.25,
+          271.77523074159,
+          777.27
+        ]
+      ]
+    },
+    {
+      "review_id": 75,
+      "stem": "archive_L-211209_B06_K_UC-15_002_0301",
+      "group": "L-211209_B06_K_UC-15_002",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_002_0301.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_002_0301.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1394.772569614,
+          107.34541900064,
+          286.47975366591,
+          452.96953814685
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_002_0301.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1394.772569614,
+          107.34541900064,
+          286.47975366591,
+          452.96953814685
+        ]
+      ]
+    },
+    {
+      "review_id": 76,
+      "stem": "archive_L-211110_F02_K_UA-16_003_0627",
+      "group": "L-211110_F02_K_UA-16_003",
+      "site": "F02",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_003_0627.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211110_F02_K_UA-16_003_0627.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          884.51,
+          347.09,
+          208.92,
+          539.51
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211110_F02_K_UA-16_003_0627.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          884.51,
+          347.09,
+          208.92,
+          539.51
+        ]
+      ]
+    },
+    {
+      "review_id": 77,
+      "stem": "archive_L-211027_G10_K_WS-35_001_0163",
+      "group": "L-211027_G10_K_WS-35_001",
+      "site": "G10",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_001_0163.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211027_G10_K_WS-35_001_0163.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          470.83959531274,
+          280.10021810048,
+          79.337020189357,
+          149.77532875397
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211027_G10_K_WS-35_001_0163.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          470.83959531274,
+          280.10021810048,
+          79.337020189357,
+          149.77532875397
+        ]
+      ]
+    },
+    {
+      "review_id": 78,
+      "stem": "archive_L-211125_B04_K_UC-16_004_0203",
+      "group": "L-211125_B04_K_UC-16_004",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_004_0203.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_004_0203.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1011.03,
+          301.99,
+          118.42,
+          296.74
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_004_0203.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1011.03,
+          301.99,
+          118.42,
+          296.74
+        ]
+      ]
+    },
+    {
+      "review_id": 79,
+      "stem": "archive_L-211127_G16_K_WS-33_001_0427",
+      "group": "L-211127_G16_K_WS-33_001",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_001_0427.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_001_0427.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          477.93,
+          441.19,
+          293.85,
+          361.0
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_WS-33_001_0427.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          477.93,
+          441.19,
+          293.85,
+          361.0
+        ]
+      ]
+    },
+    {
+      "review_id": 80,
+      "stem": "archive_L-211021_G09_K_UA-16_003_0814",
+      "group": "L-211021_G09_K_UA-16_003",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_003_0814.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╟α╡┐(UA)/L-211021_G09_K_UA-16_003_0814.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1172.0794921029,
+          246.50132477743,
+          105.7684772942,
+          417.96041825876
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_UA-16_003_0814.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1172.0794921029,
+          246.50132477743,
+          105.7684772942,
+          417.96041825876
+        ]
+      ]
+    },
+    {
+      "review_id": 81,
+      "stem": "archive_L-211127_G16_K_UC-15_005_0282",
+      "group": "L-211127_G16_K_UC-15_005",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_005_0282.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_005_0282.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1062.65,
+          366.26,
+          175.7,
+          427.02
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_005_0282.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1062.65,
+          366.26,
+          175.7,
+          427.02
+        ]
+      ]
+    },
+    {
+      "review_id": 82,
+      "stem": "archive_L-211125_B04_K_UC-16_005_0158",
+      "group": "L-211125_B04_K_UC-16_005",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_005_0158.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_005_0158.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          921.5,
+          386.31,
+          217.98,
+          567.75
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_005_0158.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          921.5,
+          386.31,
+          217.98,
+          567.75
+        ]
+      ]
+    },
+    {
+      "review_id": 83,
+      "stem": "archive_L-211127_G16_K_UC-15_008_0110",
+      "group": "L-211127_G16_K_UC-15_008",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_008_0110.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_008_0110.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          584.08,
+          281.41,
+          203.88,
+          714.67
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_008_0110.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          584.08,
+          281.41,
+          203.88,
+          714.67
+        ]
+      ]
+    },
+    {
+      "review_id": 84,
+      "stem": "archive_L-211209_B06_K_UC-15_001_0421",
+      "group": "L-211209_B06_K_UC-15_001",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_001_0421.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_001_0421.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          652.38,
+          242.08,
+          213.57580400773,
+          549.65
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_001_0421.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          652.38,
+          242.08,
+          213.57580400773,
+          549.65
+        ]
+      ]
+    },
+    {
+      "review_id": 85,
+      "stem": "archive_L-211125_B04_K_UC-16_005_0047",
+      "group": "L-211125_B04_K_UC-16_005",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_005_0047.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_005_0047.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          999.38,
+          435.58,
+          280.23,
+          515.31
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_005_0047.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          999.38,
+          435.58,
+          280.23,
+          515.31
+        ]
+      ]
+    },
+    {
+      "review_id": 86,
+      "stem": "archive_L-211127_G16_K_UC-15_004_0497",
+      "group": "L-211127_G16_K_UC-15_004",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_004_0497.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_004_0497.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          778.04,
+          335.84,
+          312.29939567387,
+          698.16
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_004_0497.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          778.04,
+          335.84,
+          312.29939567387,
+          698.16
+        ]
+      ]
+    },
+    {
+      "review_id": 87,
+      "stem": "archive_L-211125_B04_K_UC-16_004_0030",
+      "group": "L-211125_B04_K_UC-16_004",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_004_0030.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_004_0030.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          791.24,
+          359.11,
+          129.88,
+          355.14
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_004_0030.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          791.24,
+          359.11,
+          129.88,
+          355.14
+        ]
+      ]
+    },
+    {
+      "review_id": 88,
+      "stem": "archive_L-211021_G09_K_WS-35_001_0067",
+      "group": "L-211021_G09_K_WS-35_001",
+      "site": "G09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_001_0067.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211021_G09_K_WS-35_001_0067.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          243.46067831274,
+          291.85011424349,
+          161.31186249075,
+          464.20106749226
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211021_G09_K_WS-35_001_0067.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          243.46067831274,
+          291.85011424349,
+          161.31186249075,
+          464.20106749226
+        ]
+      ]
+    },
+    {
+      "review_id": 89,
+      "stem": "archive_L-211127_G16_K_WS-33_001_0214",
+      "group": "L-211127_G16_K_WS-33_001",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_001_0214.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_001_0214.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          269.4,
+          295.22,
+          287.23,
+          481.42
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_WS-33_001_0214.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          269.4,
+          295.22,
+          287.23,
+          481.42
+        ]
+      ]
+    },
+    {
+      "review_id": 90,
+      "stem": "archive_L-211209_B06_K_UC-15_006_0119",
+      "group": "L-211209_B06_K_UC-15_006",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_006_0119.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_006_0119.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          111.09654036522,
+          87.936540365221,
+          262.35784178252,
+          820.26
+        ],
+        [
+          0,
+          791.25,
+          102.06,
+          210.5,
+          422.02
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_006_0119.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          111.09654036522,
+          87.936540365221,
+          262.35784178252,
+          820.26
+        ],
+        [
+          0,
+          791.25,
+          102.06,
+          210.5,
+          422.02
+        ]
+      ]
+    },
+    {
+      "review_id": 91,
+      "stem": "archive_L-211127_G16_K_UC-15_003_0080",
+      "group": "L-211127_G16_K_UC-15_003",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_003_0080.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_003_0080.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1306.7018005793,
+          278.01180057932,
+          195.70985878038,
+          594.80819942068
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_003_0080.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1306.7018005793,
+          278.01180057932,
+          195.70985878038,
+          594.80819942068
+        ]
+      ]
+    },
+    {
+      "review_id": 92,
+      "stem": "archive_L-211125_B04_K_UC-16_002_0844",
+      "group": "L-211125_B04_K_UC-16_002",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_002_0844.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_002_0844.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1011.2753989102,
+          388.07023739642,
+          223.80892511984,
+          564.2153547354
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_002_0844.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1011.2753989102,
+          388.07023739642,
+          223.80892511984,
+          564.2153547354
+        ]
+      ]
+    },
+    {
+      "review_id": 93,
+      "stem": "archive_L-211209_B06_K_UC-15_004_0280",
+      "group": "L-211209_B06_K_UC-15_004",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_004_0280.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_004_0280.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1010.3074393936,
+          116.32906176338,
+          260.16332074731,
+          594.34278272558
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_004_0280.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1010.3074393936,
+          116.32906176338,
+          260.16332074731,
+          594.34278272558
+        ]
+      ]
+    },
+    {
+      "review_id": 94,
+      "stem": "archive_L-211209_B06_K_UC-15_006_0111",
+      "group": "L-211209_B06_K_UC-15_006",
+      "site": "B06",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_006_0111.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211209_B06_K_UC-15_006_0111.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          198.90667681051,
+          83.619446135085,
+          382.82498478423,
+          827.83
+        ],
+        [
+          0,
+          681.56,
+          89.139027991282,
+          209.62,
+          439.92097200872
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211209_B06_K_UC-15_006_0111.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          198.90667681051,
+          83.619446135085,
+          382.82498478423,
+          827.83
+        ],
+        [
+          0,
+          681.56,
+          89.139027991282,
+          209.62,
+          439.92097200872
+        ]
+      ]
+    },
+    {
+      "review_id": 95,
+      "stem": "archive_L-211125_B04_K_UC-16_007_0100",
+      "group": "L-211125_B04_K_UC-16_007",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_007_0100.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_007_0100.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          843.3,
+          326.47,
+          166.66,
+          558.6
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_007_0100.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          843.3,
+          326.47,
+          166.66,
+          558.6
+        ]
+      ]
+    },
+    {
+      "review_id": 96,
+      "stem": "archive_L-211127_G16_K_UC-15_006_0143",
+      "group": "L-211127_G16_K_UC-15_006",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_006_0143.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_006_0143.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          483.75,
+          279.15,
+          289.70398728689,
+          724.34797537165
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_006_0143.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          483.75,
+          279.15,
+          289.70398728689,
+          724.34797537165
+        ]
+      ]
+    },
+    {
+      "review_id": 97,
+      "stem": "archive_L-211127_G16_K_UC-15_006_0015",
+      "group": "L-211127_G16_K_UC-15_006",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_006_0015.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211127_G16_K_UC-15_006_0015.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          1438.06,
+          347.77,
+          332.78369275263,
+          627.29
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_UC-15_006_0015.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          1438.06,
+          347.77,
+          332.78369275263,
+          627.29
+        ]
+      ]
+    },
+    {
+      "review_id": 98,
+      "stem": "archive_L-211127_G16_K_WS-33_002_0216",
+      "group": "L-211127_G16_K_WS-33_002",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_002_0216.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_002_0216.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          531.99499240318,
+          360.46999493546,
+          170.93500759682,
+          408.38000506455
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_WS-33_002_0216.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          531.99499240318,
+          360.46999493546,
+          170.93500759682,
+          408.38000506455
+        ]
+      ]
+    },
+    {
+      "review_id": 99,
+      "stem": "archive_L-211127_G16_K_WS-33_002_0273",
+      "group": "L-211127_G16_K_WS-33_002",
+      "site": "G16",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_002_0273.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211127_G16_K_WS-33_002_0273.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          729.98543217217,
+          408.4313019747,
+          230.31109953411,
+          385.95173960506
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211127_G16_K_WS-33_002_0273.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          729.98543217217,
+          408.4313019747,
+          230.31109953411,
+          385.95173960506
+        ]
+      ]
+    },
+    {
+      "review_id": 100,
+      "stem": "archive_L-211125_B04_K_UC-16_002_0063",
+      "group": "L-211125_B04_K_UC-16_002",
+      "site": "B04",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_04_설비 및 장비.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_002_0063.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_04_설비 및 장비.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211125_B04_K_UC-16_002_0063.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          708.8493774803,
+          219.76567517572,
+          113.20454720647,
+          275.53851933939
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "source_annotation_structural_validation_and_7_of_100_visual_sample_review",
+      "source_kind": "04",
+      "review_method": "original official person boxes; no claim of exhaustive manual review",
+      "image": "archive_L-211125_B04_K_UC-16_002_0063.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          708.8493774803,
+          219.76567517572,
+          113.20454720647,
+          275.53851933939
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/0_safe_walkway_violation/0_tr19.mp4",
+      "fps": 24.8,
+      "frames": 422.0,
+      "timestamp": 8.508064516129032,
+      "action": "0_safe_walkway_violation",
+      "crop_xyxy": [
+        700,
+        850,
+        1000,
+        1080
+      ],
+      "source_sha256": "08918de31a92d4103989aadd70fd6076b5d1cb1c60dc67c842c3999bbc5cf9ca",
+      "group": "0_tr19",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_01",
+      "image": "trainvideo_01.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          50,
+          84,
+          128,
+          146
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/1_unauthorized_intervention/1_tr53.mp4",
+      "fps": 25.072550908224123,
+      "frames": 262.0,
+      "timestamp": 5.224837332248882,
+      "action": "1_unauthorized_intervention",
+      "crop_xyxy": [
+        500,
+        500,
+        950,
+        1080
+      ],
+      "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
+      "group": "1_tr53",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_02",
+      "image": "trainvideo_02.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          70,
+          165,
+          267,
+          415
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/2_opened_panel cover/2_tr40.mp4",
+      "fps": 25.08,
+      "frames": 125.0,
+      "timestamp": 2.4720893141945774,
+      "action": "2_opened_panel cover",
+      "crop_xyxy": [
+        500,
+        500,
+        950,
+        1080
+      ],
+      "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
+      "group": "2_tr40",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_03",
+      "image": "trainvideo_03.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          52,
+          208,
+          293,
+          372
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+      "fps": 25.0,
+      "frames": 125.0,
+      "timestamp": 2.48,
+      "action": "3_carrying_overload_with_forklift",
+      "crop_xyxy": [
+        1480,
+        350,
+        1800,
+        750
+      ],
+      "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+      "group": "3_tr31",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_04",
+      "image": "trainvideo_04.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          55,
+          78,
+          187,
+          188
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/5_authorized_intervention/5_tr2.mp4",
+      "fps": 25.05,
+      "frames": 174.0,
+      "timestamp": 3.4730538922155687,
+      "action": "5_authorized_intervention",
+      "crop_xyxy": [
+        0,
+        650,
+        1000,
+        1080
+      ],
+      "source_sha256": "e1b6d7bed8f36a5c587ed84fd96efbe0dfa79467e3b1a64edc452eec7385abeb",
+      "group": "5_tr2",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_06",
+      "image": "trainvideo_06.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          6,
+          192,
+          211,
+          238
+        ],
+        [
+          0,
+          183,
+          322,
+          176,
+          108
+        ],
+        [
+          0,
+          243,
+          0,
+          271,
+          430
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/6_closed_panel_cover/6_tr18.mp4",
+      "fps": 24.92,
+      "frames": 201.0,
+      "timestamp": 4.012841091492777,
+      "action": "6_closed_panel_cover",
+      "crop_xyxy": [
+        150,
+        60,
+        360,
+        290
+      ],
+      "source_sha256": "c762143bdd15baf3afc92511e6bf299322f32bb6c4c9593e68db99fc506e7533",
+      "group": "6_tr18",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_07",
+      "image": "trainvideo_07.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          65,
+          32,
+          60,
+          151
+        ],
+        [
+          0,
+          120,
+          45,
+          72,
+          68
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+      "fps": 24.920798927476582,
+      "frames": 228.0,
+      "timestamp": 4.5744921875,
+      "action": "7_safe_carrying",
+      "crop_xyxy": [
+        1480,
+        350,
+        1800,
+        750
+      ],
+      "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+      "group": "7_tr2",
+      "qa_status": "manually_reviewed_visible_person_crop_boxes",
+      "review_method": "manual visible body bounding boxes; partial bodies included",
+      "camera_generalization": "same factory camera domain as some demos; not unseen-site evaluation",
+      "stem": "trainvideo_08",
+      "image": "trainvideo_08.jpg",
+      "split": "train",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          53,
+          74,
+          206,
+          193
+        ]
+      ]
+    }
+  ],
+  "held_archive_kind": "07: cargo-inclusive forklift boxes require correction",
+  "held_video_crop": [
+    5
+  ],
+  "visual_sample_ids": [
+    1,
+    17,
+    33,
+    49,
+    65,
+    81,
+    97
+  ],
+  "demos_excluded_by_sha256": true
+}

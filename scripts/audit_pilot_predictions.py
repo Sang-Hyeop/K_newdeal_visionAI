@@ -11,9 +11,13 @@ def iou(a,b):
  iw=max(0,min(a[2],b[2])-max(a[0],b[0]));ih=max(0,min(a[3],b[3])-max(a[1],b[1]));inter=iw*ih
  return inter/((a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-inter+1e-9)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--task',choices=['ppe','logistics'],required=True);p.add_argument('--version',default='v2');args=p.parse_args();task=args.task
- data=ROOT/'data/reviewed_pilot'/('logistics_v2' if task=='logistics' and args.version=='v2' else task)
- out=ROOT/'outputs/training'/f'{task}_pilot_{args.version}';model=YOLO(str(out/'weights/best.pt'));torch.set_num_threads(4)
+ p=argparse.ArgumentParser();p.add_argument('--task',choices=['ppe','logistics'],required=True);p.add_argument('--version',default='v2');p.add_argument('--data-path',type=Path);p.add_argument('--run-name');p.add_argument('--report-name',default='fixed_threshold_audit.json');args=p.parse_args();task=args.task
+ data=args.data_path or ROOT/'data/reviewed_pilot'/('logistics_v2' if task=='logistics' and args.version=='v2' else task)
+ out=ROOT/'outputs/training'/(args.run_name or f'{task}_pilot_{args.version}')
+ if Path(args.report_name).name!=args.report_name:raise ValueError('report-name must be a filename')
+ report_path=out/args.report_name
+ if report_path.exists():raise SystemExit(f'Existing report protected: {report_path}')
+ model=YOLO(str(out/'weights/best.pt'));torch.set_num_threads(4)
  counts={name:{'TP':0,'FP':0,'FN':0} for name in model.names.values()};per_image=[]
  for path in sorted((data/'test/images').glob('*.jpg')):
   image=cv2.imread(str(path));h,w=image.shape[:2];gt=[]
@@ -30,5 +34,5 @@ def main():
  for c in counts.values():
   c['precision']=c['TP']/(c['TP']+c['FP']) if c['TP']+c['FP'] else None
   c['recall']=c['TP']/(c['TP']+c['FN']) if c['TP']+c['FN'] else None
- report={'confidence_threshold':.25,'iou_threshold':.5,'split':'test','status':'small development diagnostic; not final independent evaluation','class_counts':counts,'images':per_image};(out/'fixed_threshold_audit.json').write_text(json.dumps(report,indent=2));print(json.dumps(report['class_counts']))
+ report={'weights':str(out/'weights/best.pt'),'dataset':str(data.resolve()),'confidence_threshold':.25,'iou_threshold':.5,'split':'test','status':'small development diagnostic; not final independent evaluation','class_counts':counts,'images':per_image};report_path.write_text(json.dumps(report,indent=2));print(json.dumps(report['class_counts']))
 if __name__=='__main__':main()

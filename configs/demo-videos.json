@@ -1,0 +1,93 @@
+[
+  {
+    "file": "1_forklift_forward.mp4",
+    "fps": 23.976023976023978,
+    "frames": 576,
+    "seconds": 24.023999999999997,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "81ad4783e07b17951f55d67bc0a5e161a7a6ae97b255d3fab96e81f7b7826b7e",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  },
+  {
+    "file": "2_forklift_back.mp4",
+    "fps": 25.0,
+    "frames": 527,
+    "seconds": 21.08,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  },
+  {
+    "file": "3_forklift_crush.mp4",
+    "fps": 23.976023976023978,
+    "frames": 432,
+    "seconds": 18.017999999999997,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "45d88a410f60c27a593889f6e1988fa2f5b773a881cd97805cbcfa385ae119e7",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  },
+  {
+    "file": "4_hazard_zone_dwell.mp4",
+    "fps": 23.976023976023978,
+    "frames": 457,
+    "seconds": 19.06070833333333,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  },
+  {
+    "file": "5_PPE_Helmet.mp4",
+    "fps": 23.976023976023978,
+    "frames": 288,
+    "seconds": 12.011999999999999,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  },
+  {
+    "file": "6_Helmet_forklift.mp4",
+    "fps": 23.976023976023978,
+    "frames": 288,
+    "seconds": 12.011999999999999,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  },
+  {
+    "file": "7_Logistics Warehouse.mp4",
+    "fps": 23.999999019607884,
+    "frames": 6528,
+    "seconds": 272.0000111111111,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha256": "772f409b8e001559238cdee38cbb6094c55695076bd018ca1886e0febaaa6d18",
+    "training_eligible": false,
+    "purpose": "demo_and_development_validation"
+  }
+]

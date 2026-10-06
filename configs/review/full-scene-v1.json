@@ -1,0 +1,471 @@
+{
+  "added": [
+    {
+      "id": 2,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/1_unauthorized_intervention/1_tr53.mp4",
+      "fps": 25.072550908224123,
+      "frames": 262.0,
+      "timestamp": 5.224837332248882,
+      "action": "1_unauthorized_intervention",
+      "frame_index": 52,
+      "image": "cctv_full_source2_52.jpg",
+      "stem": "cctv_full_source2_52",
+      "split": "train",
+      "group": "1_tr53",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          574,
+          674,
+          258,
+          406
+        ],
+        [
+          0,
+          8,
+          324,
+          66,
+          164
+        ],
+        [
+          0,
+          174,
+          116,
+          48,
+          84
+        ],
+        [
+          0,
+          382,
+          194,
+          56,
+          28
+        ],
+        [
+          0,
+          700,
+          114,
+          70,
+          160
+        ],
+        [
+          0,
+          1004,
+          90,
+          66,
+          164
+        ]
+      ],
+      "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
+      "masked_regions_xyxy_960": [],
+      "qa_status": "manual_whole_frame_visible_person_review",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 2,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/1_unauthorized_intervention/1_tr53.mp4",
+      "fps": 25.072550908224123,
+      "frames": 262.0,
+      "timestamp": 5.224837332248882,
+      "action": "1_unauthorized_intervention",
+      "frame_index": 130,
+      "image": "cctv_full_source2_130.jpg",
+      "stem": "cctv_full_source2_130",
+      "split": "train",
+      "group": "1_tr53",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          570,
+          668,
+          264,
+          412
+        ],
+        [
+          0,
+          174,
+          116,
+          48,
+          84
+        ],
+        [
+          0,
+          374,
+          192,
+          66,
+          32
+        ],
+        [
+          0,
+          648,
+          112,
+          82,
+          146
+        ]
+      ],
+      "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
+      "masked_regions_xyxy_960": [],
+      "qa_status": "manual_whole_frame_visible_person_review",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 2,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/1_unauthorized_intervention/1_tr53.mp4",
+      "fps": 25.072550908224123,
+      "frames": 262.0,
+      "timestamp": 5.224837332248882,
+      "action": "1_unauthorized_intervention",
+      "frame_index": 208,
+      "image": "cctv_full_source2_208.jpg",
+      "stem": "cctv_full_source2_208",
+      "split": "train",
+      "group": "1_tr53",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          340,
+          742,
+          236,
+          338
+        ],
+        [
+          0,
+          10,
+          320,
+          74,
+          246
+        ],
+        [
+          0,
+          178,
+          130,
+          62,
+          72
+        ],
+        [
+          0,
+          374,
+          182,
+          66,
+          36
+        ]
+      ],
+      "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
+      "masked_regions_xyxy_960": [],
+      "qa_status": "manual_whole_frame_visible_person_review",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 3,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/2_opened_panel cover/2_tr40.mp4",
+      "fps": 25.08,
+      "frames": 125.0,
+      "timestamp": 2.4720893141945774,
+      "action": "2_opened_panel cover",
+      "frame_index": 24,
+      "image": "cctv_full_source3_24.jpg",
+      "stem": "cctv_full_source3_24",
+      "split": "train",
+      "group": "2_tr40",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          560,
+          682,
+          282,
+          398
+        ],
+        [
+          0,
+          174,
+          116,
+          48,
+          84
+        ],
+        [
+          0,
+          220,
+          92,
+          78,
+          86
+        ],
+        [
+          0,
+          532,
+          120,
+          80,
+          106
+        ]
+      ],
+      "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
+      "masked_regions_xyxy_960": [],
+      "qa_status": "manual_whole_frame_visible_person_review",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 3,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/2_opened_panel cover/2_tr40.mp4",
+      "fps": 25.08,
+      "frames": 125.0,
+      "timestamp": 2.4720893141945774,
+      "action": "2_opened_panel cover",
+      "frame_index": 62,
+      "image": "cctv_full_source3_62.jpg",
+      "stem": "cctv_full_source3_62",
+      "split": "train",
+      "group": "2_tr40",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          566,
+          700,
+          274,
+          380
+        ],
+        [
+          0,
+          174,
+          116,
+          48,
+          84
+        ],
+        [
+          0,
+          240,
+          104,
+          70,
+          74
+        ]
+      ],
+      "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
+      "masked_regions_xyxy_960": [],
+      "qa_status": "manual_whole_frame_visible_person_review",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 3,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/2_opened_panel cover/2_tr40.mp4",
+      "fps": 25.08,
+      "frames": 125.0,
+      "timestamp": 2.4720893141945774,
+      "action": "2_opened_panel cover",
+      "frame_index": 99,
+      "image": "cctv_full_source3_99.jpg",
+      "stem": "cctv_full_source3_99",
+      "split": "train",
+      "group": "2_tr40",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          0,
+          560,
+          690,
+          282,
+          390
+        ],
+        [
+          0,
+          12,
+          286,
+          66,
+          162
+        ],
+        [
+          0,
+          178,
+          114,
+          44,
+          86
+        ],
+        [
+          0,
+          222,
+          96,
+          56,
+          110
+        ]
+      ],
+      "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
+      "masked_regions_xyxy_960": [],
+      "qa_status": "manual_whole_frame_visible_person_review",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 4,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+      "fps": 25.0,
+      "frames": 125.0,
+      "timestamp": 2.48,
+      "action": "3_carrying_overload_with_forklift",
+      "frame_index": 24,
+      "image": "cctv_full_source4_24.jpg",
+      "stem": "cctv_full_source4_24",
+      "split": "train",
+      "group": "3_tr31",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          1,
+          166,
+          12,
+          132,
+          238
+        ],
+        [
+          0,
+          1526,
+          420,
+          174,
+          196
+        ]
+      ],
+      "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+      "masked_regions_xyxy_960": [
+        [
+          200,
+          0,
+          960,
+          200
+        ]
+      ],
+      "qa_status": "manual_whole_frame_review_with_declared_ignore_masks",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 4,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+      "fps": 25.0,
+      "frames": 125.0,
+      "timestamp": 2.48,
+      "action": "3_carrying_overload_with_forklift",
+      "frame_index": 62,
+      "image": "cctv_full_source4_62.jpg",
+      "stem": "cctv_full_source4_62",
+      "split": "train",
+      "group": "3_tr31",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          1,
+          184,
+          20,
+          164,
+          258
+        ],
+        [
+          0,
+          1526,
+          420,
+          174,
+          198
+        ]
+      ],
+      "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+      "masked_regions_xyxy_960": [
+        [
+          200,
+          0,
+          960,
+          200
+        ]
+      ],
+      "qa_status": "manual_whole_frame_review_with_declared_ignore_masks",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 4,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+      "fps": 25.0,
+      "frames": 125.0,
+      "timestamp": 2.48,
+      "action": "3_carrying_overload_with_forklift",
+      "frame_index": 99,
+      "image": "cctv_full_source4_99.jpg",
+      "stem": "cctv_full_source4_99",
+      "split": "train",
+      "group": "3_tr31",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          1,
+          218,
+          48,
+          178,
+          268
+        ],
+        [
+          0,
+          1528,
+          420,
+          168,
+          198
+        ]
+      ],
+      "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+      "masked_regions_xyxy_960": [
+        [
+          200,
+          0,
+          960,
+          200
+        ]
+      ],
+      "qa_status": "manual_whole_frame_review_with_declared_ignore_masks",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    },
+    {
+      "id": 8,
+      "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+      "fps": 24.920798927476582,
+      "frames": 228.0,
+      "timestamp": 4.5744921875,
+      "action": "7_safe_carrying",
+      "frame_index": 45,
+      "image": "cctv_full_source8_45.jpg",
+      "stem": "cctv_full_source8_45",
+      "split": "train",
+      "group": "7_tr2",
+      "training_eligible": true,
+      "corrected_boxes": [
+        [
+          1,
+          334,
+          104,
+          252,
+          318
+        ],
+        [
+          0,
+          1532,
+          420,
+          168,
+          198
+        ]
+      ],
+      "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+      "masked_regions_xyxy_960": [
+        [
+          300,
+          0,
+          960,
+          200
+        ]
+      ],
+      "qa_status": "manual_whole_frame_review_with_declared_ignore_masks",
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+    }
+  ],
+  "held": [
+    "source8_113",
+    "source8_181"
+  ],
+  "held_reason": "cab visibility and foreground occlusion remain ambiguous; no unverified automatic person labels",
+  "raw_frames": 6,
+  "masked_frames": 4,
+  "adjacent_frames_all_train": true
+}
