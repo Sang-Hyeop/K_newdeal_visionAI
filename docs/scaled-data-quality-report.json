@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "train": 451,
+    "val": 82,
+    "test": 40
+  },
+  "held": 192,
+  "confirmed_missing_driver_groups": [
+    "L-210924_G05_H_UA-10_002",
+    "L-210924_G05_H_WS-24_002",
+    "L-211007_G07_H_UA-10_002",
+    "L-211029_G12_H_UC-08_003",
+    "L-211215_B07_H_UC-22_001"
+  ],
+  "gate": "each forklift requires a person box with >=80% of person area contained; conservative exclusion, not proof of omissions",
+  "limitations": "765 frames structurally checked; 72 contact-sheet samples reviewed; no exhaustive manual label review; test is development-only; possible selection bias",
+  "demo_frames_added": 0,
+  "filesystem_search": {
+    "files_seen": 1815673,
+    "read_errors": 861,
+    "scope": "readable filesystem metadata including archive paths; not all archive contents inspected",
+    "private_inventory_uploaded": false
+  }
+}

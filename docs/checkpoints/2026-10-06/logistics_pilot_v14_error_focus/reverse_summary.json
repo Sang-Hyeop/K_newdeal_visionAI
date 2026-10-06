@@ -1,0 +1,49 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+  "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v14_error_focus/weights/best.pt",
+  "weights_sha256": "89ba8e9f5275e50d6dccf6331aad632a6344cd15e3880b0d85d243c95a9c8eb3",
+  "config": {
+    "camera_id": "reverse-proximity",
+    "source_name": "2_forklift_back.mp4",
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "forklift_ground_roi_normalized": [
+      [
+        0,
+        0.1
+      ],
+      [
+        0.6,
+        0.1
+      ],
+      [
+        0.8,
+        0.85
+      ],
+      [
+        0,
+        0.85
+      ]
+    ],
+    "warning_ratio": 1.0,
+    "critical_ratio": 0.3,
+    "hysteresis_ratio": 0.1,
+    "max_gap_seconds": 1,
+    "distance_unit": "person_height_normalized_image_gap",
+    "status": "unvalidated_camera_demo_rule",
+    "orientation_policy": "unknown_no_front_rear_claim"
+  },
+  "imgsz": 640,
+  "frames_sampled": 106,
+  "processed_fps": 5.0,
+  "pair_state_observation_counts": {
+    "SAFE": 3,
+    "UNKNOWN": 18,
+    "WARNING": 3
+  },
+  "frames_without_confirmed_pair": 100,
+  "rejected_forklift_boxes": 22,
+  "transition_events": 6,
+  "scene_cuts_seconds": [],
+  "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+}

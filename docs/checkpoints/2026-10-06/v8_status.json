@@ -1,0 +1,14 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "Fixed 640-pixel development audit regressed; 1280-pixel dwell probes detect seated worker at 7.5/15 seconds but miss at 0 and misclassify machinery as forklift",
+  "weights_sha256": "1973ab97df0ef76a7c3cdc5cbcd307a316520415a50856db1c3167559e6f0cbe",
+  "independent_evaluation": false,
+  "dataset_images": 76,
+  "train_images": 57,
+  "epochs": 12,
+  "resolution_probe_times_seconds": [
+    0,
+    7.5,
+    15
+  ]
+}

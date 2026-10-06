@@ -1,0 +1,9 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "person FN7 worse than v6 FN6; forklift FN3 worse than v6 FN1; machinery false positives remain",
+  "freeze_layers": 10,
+  "frozen_parameter_tensors_identical": 99,
+  "epochs": 12,
+  "learning_rate": 0.0001,
+  "sha256": "238ec74bea1e0ff5b7e83bbc7cfc621736fd6c95de006310ae94e2671bce1c30"
+}

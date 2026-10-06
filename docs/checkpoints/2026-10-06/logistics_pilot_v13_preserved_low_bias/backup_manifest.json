@@ -1,0 +1,110 @@
+{
+  "storage": "same disk recovery copy, not off-device backup",
+  "files": [
+    {
+      "source": "models/pilot_v13_preserved_low_bias/person_forklift.pt",
+      "sha256": "4768fe3f430d1a2cdb15f36e94d5c3f3d9b985493fa0912c537fd037a7fc4c48",
+      "bytes": 5424709
+    },
+    {
+      "source": "models/pilot_v13_preserved_low_bias/status.json",
+      "sha256": "62d09697c8c27a9f32c425397e2f7453cdc393afbeeb54f2ce82a84f2f875b3c",
+      "bytes": 145
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/frame_probe.json",
+      "sha256": "27ec9cb15bb843188285e15bfa318544fb2567c77c55b1c3122ae4eacb67ba93",
+      "bytes": 9892
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/dataset_snapshot.json",
+      "sha256": "de8cc7b00860418283bc431afe3c45406f05e4e11b88acdccc48860da836bdca",
+      "bytes": 29658
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/args.yaml",
+      "sha256": "8575c0485a34383db403628011cb18629e92393e90524d34d2f6fe52026fbf92",
+      "bytes": 1939
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/initial_raw_logit_audit.json",
+      "sha256": "450e43ed23a072464eebc71f460a4cc992d54b8ff8a575b409e8d818cefe172a",
+      "bytes": 986
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/reverse_summary.json",
+      "sha256": "cbd897152b21219636b9a9de7ec3618050d495669dbd7365fea442fc2534cc58",
+      "bytes": 1502
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/test_metrics.json",
+      "sha256": "7b54db0b9fae88f2d20debb952329806f742b58b81754c87cae81c6acba50f46",
+      "bytes": 438
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/forward_summary.json",
+      "sha256": "8fbbd792efac0e7765e0b0a4cbeb93b33fda911cdadff38ba49ec800dbfbe37d",
+      "bytes": 1545
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/results.csv",
+      "sha256": "acb01eae0727e40620b8d3f194bdf84f894b772f18d3b26b05a09245dbd79564",
+      "bytes": 1600
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/logistics_pilot_v13_preserved_low_bias/fixed_threshold_audit.json",
+      "sha256": "d1c94dc409094723bf205cb560bf717cfcb1f06b49c722d549dc31ed0acefbd6",
+      "bytes": 2181
+    },
+    {
+      "source": "outputs/proximity/v13_forward/proximity.mp4",
+      "sha256": "4beaee6e0951a0ecc6b6db3be952a651541f74b7195698105749f26d32378852",
+      "bytes": 6705146
+    },
+    {
+      "source": "outputs/proximity/v13_forward/observations.jsonl",
+      "sha256": "3ed170a0f39bee48435cd5104ca9855bd5e724d2137c854ab00fbff22ff4b158",
+      "bytes": 122181
+    },
+    {
+      "source": "outputs/proximity/v13_forward/events.jsonl",
+      "sha256": "5609917ce26a37589b40cfb40ccfd1f4516dd9382360bad522ff1fa608791cc2",
+      "bytes": 3266
+    },
+    {
+      "source": "outputs/proximity/v13_forward/summary.json",
+      "sha256": "8fbbd792efac0e7765e0b0a4cbeb93b33fda911cdadff38ba49ec800dbfbe37d",
+      "bytes": 1545
+    },
+    {
+      "source": "outputs/proximity/v13_forward/review_event.jpg",
+      "sha256": "823f822a6b733402d4d7e1c10756b5016d72dbbf22a651b1e4b1c25f0f9b1b30",
+      "bytes": 286534
+    },
+    {
+      "source": "outputs/proximity/v13_reverse/proximity.mp4",
+      "sha256": "b9a15d29ae212e9f1d9b94998077b638f6d00ba4216f7587b540a6a6d52a04cf",
+      "bytes": 14074301
+    },
+    {
+      "source": "outputs/proximity/v13_reverse/observations.jsonl",
+      "sha256": "d257c19183893aef921242503abafd2ddda85a1a077ef86e5567645522f22986",
+      "bytes": 271322
+    },
+    {
+      "source": "outputs/proximity/v13_reverse/events.jsonl",
+      "sha256": "6bce6e9fa99450d7faad547cf9e87d867bfc9e739e232c7c637d78cb0969a610",
+      "bytes": 19770
+    },
+    {
+      "source": "outputs/proximity/v13_reverse/summary.json",
+      "sha256": "cbd897152b21219636b9a9de7ec3618050d495669dbd7365fea442fc2534cc58",
+      "bytes": 1502
+    },
+    {
+      "source": "outputs/proximity/v13_reverse/review_event.jpg",
+      "sha256": "b4befaa3ab4dac2986a2e380c3abc5d8e06fa0c4abc80d138f2e47fd2558b9ed",
+      "bytes": 563747
+    }
+  ]
+}

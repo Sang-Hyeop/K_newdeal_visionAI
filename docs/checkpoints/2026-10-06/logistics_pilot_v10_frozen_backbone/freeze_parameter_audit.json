@@ -1,0 +1,7 @@
+{
+  "frozen_parameter_tensors": 99,
+  "different_float_tensors": 0,
+  "different_after_half_rounding": 0,
+  "changed_keys": [],
+  "note": "EMA and checkpoint half conversion can change exact float values; compare parameter tensors after half rounding, not BatchNorm running buffers"
+}

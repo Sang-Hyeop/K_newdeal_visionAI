@@ -1,0 +1,131 @@
+{
+  "purpose": "same_disk_recovery_not_off_device_backup",
+  "files": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/manifest.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/manifest.json",
+      "bytes": 182432,
+      "sha256": "d9094217c088609f6b972abd0222194e8c4c07f907c5aa8ec2e0e72a58cb9c54"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/dataset.yaml",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/dataset.yaml",
+      "bytes": 178,
+      "sha256": "26db83aa6eff412f95a4b8223fd89718b3fb93c5d42e227ee8a7c4cc459fdcad"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/configs/review/hard-examples-v1.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/configs/review/hard-examples-v1.json",
+      "bytes": 1012,
+      "sha256": "bbe223750957d92a6f0cbab8fd5aaa061c6c41ac775cb9a71d69551ae1259df3"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_102.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_102.jpg",
+      "bytes": 524558,
+      "sha256": "43cfce49bfd6e3451adf9ac83e2bcad7f05fb868fd053e8af7418c315245e297"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_103.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_103.jpg",
+      "bytes": 596254,
+      "sha256": "58a4d1270a77c0c0492af4b7fc9a1776e8fe6851c6441f748f50b5e9d0e5bb3b"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_107.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_107.jpg",
+      "bytes": 583283,
+      "sha256": "08dcf2a06b544bd60e96ad8baffdb490611e8a4bb9bb877341442f30dde6b3df"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_106.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_106.jpg",
+      "bytes": 1012642,
+      "sha256": "bf23464ebebaa1b67559737db4ba6a39ce38eb62b1e507fb66fd4a12e915b53f"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_104.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_104.jpg",
+      "bytes": 625306,
+      "sha256": "2201bddead7cdadcbc0489071ce853847f33530465c8cfd2f0d3281fe244962a"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_background_107.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_background_107.jpg",
+      "bytes": 292593,
+      "sha256": "f41d426ddbbab7698a739f125b1769347c86ac97965e5caed85ba655eafe6869"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_background_102.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_background_102.jpg",
+      "bytes": 145159,
+      "sha256": "40c95acf1fb5b77fad80ce595d7bfab03e81b90b4b88846dfc3583e78f4679c8"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_background_103.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_background_103.jpg",
+      "bytes": 208803,
+      "sha256": "08367f9a0ee648fdabf1dd1d391ad5696865aa725af760e34ac2f4791c59faba"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_108.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/images/hard_full_108.jpg",
+      "bytes": 671601,
+      "sha256": "2570092a2687ce5b65c7a2a0ad146a57f043bfe72a7a095e022abf63e71f1e72"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_103.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_103.txt",
+      "bytes": 92,
+      "sha256": "cfcb63636d53325d3c19a9ae54e7cbd6f3c43cdc2674b69f34931a586f9d92e4"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_102.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_102.txt",
+      "bytes": 92,
+      "sha256": "47b960c3b38ed116138fa77448bc8a0c9e31529f0b1761fd4760a2f7aaf11859"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_106.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_106.txt",
+      "bytes": 92,
+      "sha256": "e2ddd36c323f2f789e7d281720855b13cf1b4a2f01805a4f7a7282c7a7d78c9a"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_107.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_107.txt",
+      "bytes": 92,
+      "sha256": "437e7bbef84d94be963f95f96e6e0b8d858033c72045a5d2199d9ee3ff1187bc"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_104.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_104.txt",
+      "bytes": 92,
+      "sha256": "3c21effc02559dd30b24a42386124a75d2090375ac58a1e765e9d4f02bb9c3d3"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_108.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_full_108.txt",
+      "bytes": 92,
+      "sha256": "e440586c7257a7b3a481994c9b543ca9822ed1c5f48f7d20686bfbb650f91337"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_background_107.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_background_107.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_background_103.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_background_103.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_background_102.txt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-hard-examples/data/reviewed_pilot/logistics_v9_hard_examples/train/labels/hard_background_102.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

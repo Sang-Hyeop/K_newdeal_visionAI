@@ -1,0 +1,92 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/5_PPE_Helmet.mp4",
+  "sampled_frames": 58,
+  "processed_fps": 4.795204795204795,
+  "person_state_counts": {
+    "unknown": 91,
+    "helmet_detected": 39,
+    "conflicting_evidence": 1
+  },
+  "track_spans": {
+    "0:2": {
+      "first": 0.625625,
+      "last": 2.2939583333333333,
+      "observations": 9
+    },
+    "0:12": {
+      "first": 2.919583333333333,
+      "last": 5.839166666666666,
+      "observations": 15
+    },
+    "0:13": {
+      "first": 3.128125,
+      "last": 5.839166666666666,
+      "observations": 14
+    },
+    "0:23": {
+      "first": 4.587916666666667,
+      "last": 5.839166666666666,
+      "observations": 6
+    },
+    "0:31": {
+      "first": 5.422083333333333,
+      "last": 5.839166666666666,
+      "observations": 3
+    },
+    "1:1": {
+      "first": 6.464791666666666,
+      "last": 9.592916666666666,
+      "observations": 16
+    },
+    "1:2": {
+      "first": 6.881874999999999,
+      "last": 11.886875,
+      "observations": 25
+    },
+    "1:4": {
+      "first": 7.507499999999999,
+      "last": 7.924583333333333,
+      "observations": 3
+    },
+    "1:9": {
+      "first": 7.924583333333333,
+      "last": 11.886875,
+      "observations": 17
+    },
+    "1:12": {
+      "first": 8.341666666666667,
+      "last": 9.175833333333333,
+      "observations": 2
+    },
+    "1:27": {
+      "first": 10.01,
+      "last": 11.886875,
+      "observations": 9
+    },
+    "1:34": {
+      "first": 10.635625,
+      "last": 11.886875,
+      "observations": 7
+    },
+    "1:39": {
+      "first": 11.052708333333333,
+      "last": 11.886875,
+      "observations": 5
+    }
+  },
+  "scene_resets_seconds": [
+    6.047708333333333
+  ],
+  "scene_cut_threshold": 0.18,
+  "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+  "weights": {
+    "objects": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v4/weights/best.pt",
+    "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt"
+  },
+  "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+  "limitations": "Automatic scene-cut heuristic can miss cuts; no temporal PPE confirmation, ROI or alerts",
+  "weights_sha256": {
+    "objects": "8c32294e6f9645e8f729a26c08a4a6596deee70524b5428c8f5fa9cd80f38c03",
+    "ppe": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09"
+  }
+}

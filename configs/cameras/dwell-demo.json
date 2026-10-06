@@ -1,0 +1,12 @@
+{
+  "camera_id": "dwell-demo",
+  "source_name": "4_hazard_zone_dwell.mp4",
+  "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+  "roi_id": "machine-work-area",
+  "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+  "polygon_normalized": [[0.02, 0.4], [0.61, 0.33], [0.53, 0.995], [0.02, 0.995]],
+  "safe_seconds": 3.0,
+  "critical_seconds": 8.0,
+  "max_gap_seconds": 1.0,
+  "anchor": "bbox_bottom_center_proxy"
+}

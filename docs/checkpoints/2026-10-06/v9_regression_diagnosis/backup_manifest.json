@@ -1,0 +1,53 @@
+{
+  "purpose": "same_disk_recovery_not_off_device_backup",
+  "files": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/gt_L-210929_G06_H_UA-10_001_0060.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/gt_L-210929_G06_H_UA-10_001_0060.jpg",
+      "bytes": 625350,
+      "sha256": "0151b1c24f3837c53572894ab975e92867c317c515d1b8c6d0117804852db9b1"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/gt_L-210929_G06_H_UA-10_002_0018.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/gt_L-210929_G06_H_UA-10_002_0018.jpg",
+      "bytes": 504135,
+      "sha256": "53d7f6fede5114eb16fe31e93d6770d73e422ebbb50ac48e30c6135f5c84d114"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/gt_L-211218_B08_H_UC-22_003_0249.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/gt_L-211218_B08_H_UC-22_003_0249.jpg",
+      "bytes": 592014,
+      "sha256": "42f9540ab2bd92e2c089b81a1667998b0a0e34671bc1f151fd11da405d8c67dc"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/train_label_sheet_5.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/train_label_sheet_5.jpg",
+      "bytes": 125172,
+      "sha256": "b0ab412d5f3bdb2e0310913a9b89ed29d969027484be6767d7c1c040aef0f8e9"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/train_label_sheet_0.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/train_label_sheet_0.jpg",
+      "bytes": 170035,
+      "sha256": "13d385e9cf3b7111f9146382ed0db1732f02e303a8ac0cd4a4e9df24daeaab91"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/gt_L-210929_G06_H_UA-12_002_0124.jpg",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/gt_L-210929_G06_H_UA-12_002_0124.jpg",
+      "bytes": 751238,
+      "sha256": "101f0dbb70ee9fa7cfece6c339e734e0175cb7bfb3bb8b4916125b624d63e8c2"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/diagnosis.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/diagnosis.json",
+      "bytes": 16598,
+      "sha256": "bbb25392f77eca544556092f5dd1219417622a412aafd0a988b8587ab81ba49c"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_regression_diagnosis/validation_thresholds.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-diagnosis/validation_thresholds.json",
+      "bytes": 2259,
+      "sha256": "86e54b32583d7b16355f430f1577a6ab72a9ce73bd5ccf04499d9669552bf64c"
+    }
+  ]
+}

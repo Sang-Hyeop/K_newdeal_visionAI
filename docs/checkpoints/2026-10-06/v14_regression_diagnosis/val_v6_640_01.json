@@ -1,0 +1,75 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v6_corrected_forklift/person_forklift.pt",
+  "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_error_focus_v1",
+  "confidence_threshold": 0.1,
+  "imgsz": 640,
+  "iou_threshold": 0.5,
+  "split": "val",
+  "status": "small development diagnostic; not final independent evaluation",
+  "class_counts": {
+    "person": {
+      "TP": 4,
+      "FP": 14,
+      "FN": 6,
+      "precision": 0.2222222222222222,
+      "recall": 0.4
+    },
+    "forklift": {
+      "TP": 8,
+      "FP": 8,
+      "FN": 0,
+      "precision": 0.5,
+      "recall": 1.0
+    }
+  },
+  "images": [
+    {
+      "image": "L-210917_G04_H_UA-12_001_0068.jpg",
+      "gt_count": 3,
+      "prediction_count": 5,
+      "matched": 2
+    },
+    {
+      "image": "L-210917_G04_H_UA-12_002_0037.jpg",
+      "gt_count": 3,
+      "prediction_count": 6,
+      "matched": 2
+    },
+    {
+      "image": "L-210917_G04_H_UC-08_004_0006.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 1
+    },
+    {
+      "image": "L-210917_G04_H_WS-21_004_0022.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 1
+    },
+    {
+      "image": "L-210917_G04_H_WS-25_003_0085.jpg",
+      "gt_count": 2,
+      "prediction_count": 5,
+      "matched": 2
+    },
+    {
+      "image": "L-211211_G18_H_UA-11_001_0012.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-211211_G18_H_UA-11_004_0267.jpg",
+      "gt_count": 2,
+      "prediction_count": 5,
+      "matched": 1
+    },
+    {
+      "image": "L-211211_G18_H_UA-11_006_0220.jpg",
+      "gt_count": 2,
+      "prediction_count": 5,
+      "matched": 1
+    }
+  ]
+}

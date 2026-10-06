@@ -1,0 +1,47 @@
+{
+  "purpose": "same_disk_recovery_not_off_device_backup",
+  "files": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v9_hard_examples/person_forklift.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/models/pilot_v9_hard_examples/person_forklift.pt",
+      "sha256": "7238e4507944312ee463cb65ddbfc36842bdeb1df6ba1194688d4aa34dc1fc85",
+      "bytes": 5359301
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v9_hard_examples/status.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/models/pilot_v9_hard_examples/status.json",
+      "sha256": "08f450188a7f0e0fe1d37b41113e6ca4e33476bc2dcf3456dbaf492b55effa43",
+      "bytes": 425
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/v9_frame_probe/predictions.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/outputs/video_validation/v9_frame_probe/predictions.json",
+      "sha256": "9b84e8e255e81e1333c1472fdbf39c4aa477cc10c99157af2a332c34a7ccb6a6",
+      "bytes": 8541
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v9_hard_examples/fixed_threshold_audit.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/outputs/training/logistics_pilot_v9_hard_examples/fixed_threshold_audit.json",
+      "sha256": "40989519728c7d9f032448323325fbe9968887463c838b1617bba0f3fe9e1150",
+      "bytes": 2179
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v9_hard_examples/results.csv",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/outputs/training/logistics_pilot_v9_hard_examples/results.csv",
+      "sha256": "aa5c87d31a8d5f57694c4df6f9b9b50acec8eed5d79e9005a812405cb8ab51f0",
+      "bytes": 1597
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v9_hard_examples/test_metrics.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/outputs/training/logistics_pilot_v9_hard_examples/test_metrics.json",
+      "sha256": "061d82205572ec33ca3f23d3e5233dc0fd78c2fd811699dd29f5d444b740eb4f",
+      "bytes": 780
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v9_hard_examples/dataset_snapshot.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-v9-training/outputs/training/logistics_pilot_v9_hard_examples/dataset_snapshot.json",
+      "sha256": "b88ecc3f210846b3a10379adacba46aa604585a30977d654d87b06a9da8527e6",
+      "bytes": 22991
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "selected_development_detector",
+  "epochs_completed": 20,
+  "best_validation_epoch": 8,
+  "weights": "models/pilot_v15_scaled_filtered/person_forklift.pt",
+  "weights_sha256": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a",
+  "initial_weights": "models/pilot_v6_corrected_forklift/person_forklift.pt",
+  "dataset_counts": {
+    "train": 451,
+    "val": 82,
+    "test": 40
+  },
+  "classes": {
+    "0": "person",
+    "1": "forklift"
+  },
+  "resume_after_completed_epoch": 15,
+  "patience_after_resume": 0,
+  "ppe_unchanged": true,
+  "proximity_status": "not_ready_for_final_demo; object detection gaps remain",
+  "limitations": "Development-only benchmarks; sampled video review, not exhaustive labels; no validated collision/meter/front-rear claim"
+}

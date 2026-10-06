@@ -1,0 +1,71 @@
+{
+  "status": "interim_not_promoted",
+  "completed_epochs_at_copy": 2,
+  "scaled": {
+    "person": {
+      "TP": 30,
+      "FP": 17,
+      "FN": 10,
+      "precision": 0.6382978723404256,
+      "recall": 0.75
+    },
+    "forklift": {
+      "TP": 28,
+      "FP": 4,
+      "FN": 12,
+      "precision": 0.875,
+      "recall": 0.7
+    }
+  },
+  "old": {
+    "person": {
+      "TP": 9,
+      "FP": 6,
+      "FN": 9,
+      "precision": 0.6,
+      "recall": 0.5
+    },
+    "forklift": {
+      "TP": 10,
+      "FP": 1,
+      "FN": 1,
+      "precision": 0.9090909090909091,
+      "recall": 0.9090909090909091
+    }
+  },
+  "old_v6_baseline": {
+    "person": {
+      "TP": 12,
+      "FP": 5,
+      "FN": 6
+    },
+    "forklift": {
+      "TP": 10,
+      "FP": 2,
+      "FN": 1
+    }
+  },
+  "scaled_v6_baseline": {
+    "person": {
+      "TP": 21,
+      "FP": 19,
+      "FN": 19,
+      "precision": 0.525,
+      "recall": 0.525
+    },
+    "forklift": {
+      "TP": 27,
+      "FP": 10,
+      "FN": 13,
+      "precision": 0.7297297297297297,
+      "recall": 0.675
+    }
+  },
+  "snapshot": {
+    "status": "interim_not_promoted",
+    "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v15_scaled_filtered/weights/best.pt",
+    "sha256": "6f548b302af13edb6e3ddb7cacc48bc2c0e757adb9718d09faa13a111c0fccf5",
+    "completed_epochs_at_copy": 2
+  },
+  "limitations": "Two-epoch interim snapshot; development evaluation only; no final model promotion"
+}

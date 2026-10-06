@@ -1,0 +1,8 @@
+{
+  "default_audit_backward_compatible": true,
+  "invalid_imgsz_rejected": true,
+  "diagnostic_tp_fp_fn_matches_previous_three_audits": true,
+  "compiled_scripts": true,
+  "production_config_changes": false,
+  "model_changes": false
+}

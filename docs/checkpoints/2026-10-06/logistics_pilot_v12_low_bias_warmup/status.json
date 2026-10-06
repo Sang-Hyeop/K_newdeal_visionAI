@@ -1,0 +1,7 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "v11 development test improved, but person FN7 versus v6 FN6 and held video coverage insufficient",
+  "warmup_bias_lr": 0.0001,
+  "epochs": 12,
+  "sha256": "6b82c5d84f816d632d44e792b0f6b9ea8da15a5d6619623373da081d7fc5fdf3"
+}

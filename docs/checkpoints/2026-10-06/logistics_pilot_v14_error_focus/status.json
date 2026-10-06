@@ -1,0 +1,11 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "Same fixed test: person FN9 vs v12 FN7, forklift FN3 vs v12 FN1; video false critical from vehicle-as-person; sparse confirmed pairs.",
+  "initial_weight_sha_matches_v12": true,
+  "all_111_prior_image_label_sha_matches": true,
+  "added_images": 23,
+  "classes": {
+    "0": "person",
+    "1": "forklift"
+  }
+}

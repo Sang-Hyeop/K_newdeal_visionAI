@@ -1,0 +1,11 @@
+{
+  "ultralytics_version": "8.4.153",
+  "trainer_source": "/opt/anaconda3/envs/safety/lib/python3.11/site-packages/ultralytics/engine/trainer.py",
+  "trainer_source_sha256": "0062fd9267ce35c9735713e31cc4f8bdced8b196bd1ec0eafa129a67677d0a62",
+  "bias_warmup_implementation_lines": [
+    500,
+    512
+  ],
+  "finding": "explicit AdamW retains warmup_bias_lr default 0.1; optimizer auto branch alone resets it to zero; lr0 does not override bias warmup automatically",
+  "causal_scope": "one controlled development experiment, not sole-cause proof"
+}

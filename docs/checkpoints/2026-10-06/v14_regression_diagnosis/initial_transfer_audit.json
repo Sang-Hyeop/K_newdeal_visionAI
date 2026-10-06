@@ -1,0 +1,14 @@
+{
+  "source_names": {
+    "0": "person",
+    "1": "forklift"
+  },
+  "target_names": {
+    "0": "person",
+    "1": "forklift"
+  },
+  "source_tensor_count": 708,
+  "target_tensor_count": 708,
+  "different_tensors": [],
+  "same_structure_initialization_only": "Installed DetectionTrainer.get_model; excludes optimizer updates and later augmentation."
+}

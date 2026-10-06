@@ -1,0 +1,53 @@
+{
+  "purpose": "same_disk_recovery_copy_not_off_device_backup",
+  "files": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/forward/proximity.mp4",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/forward/proximity.mp4",
+      "bytes": 6559195,
+      "sha256": "c689a5f0d712ebc989db7656013ecc54760b31bbe062582fd0d9f862b36614c6"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/forward/observations.jsonl",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/forward/observations.jsonl",
+      "bytes": 139576,
+      "sha256": "542efcdcc58123b29913f71c902f8aacfe8dba74fdbeaef706ebe0a0da1949b0"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/forward/summary.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/forward/summary.json",
+      "bytes": 1509,
+      "sha256": "8ba75251d74904ec10bf84682992c2e6c88378ca4a90c076f400768c543f1025"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/forward/events.jsonl",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/forward/events.jsonl",
+      "bytes": 2205,
+      "sha256": "d7b1b688cc8e27dfe668b75e06852c67d2fb5b9f303d3bb6577b7e0a360428f6"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/reverse/proximity.mp4",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/reverse/proximity.mp4",
+      "bytes": 13425464,
+      "sha256": "4cc4e7794a8b241c74b236dd39cdba8c05924484d33c6aab49866db1e2cdf0ac"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/reverse/observations.jsonl",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/reverse/observations.jsonl",
+      "bytes": 127581,
+      "sha256": "01b8518f7e7ae0460f710a783671626c589df5c3efe2af9a01e0c89df4f182aa"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/reverse/summary.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/reverse/summary.json",
+      "bytes": 1479,
+      "sha256": "bc783c83a21e0dd1576f460da64be1311f6e52ad40c8f52f434baf408cb7090c"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/video_validation/proximity_v1/reverse/events.jsonl",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/_local_archive/checkpoints/2026-10-06-proximity/reverse/events.jsonl",
+      "bytes": 7558,
+      "sha256": "7b68e8cab3127ceae50a91bbc1b7b2df4e52c351febff9f8cc12907b764f9e98"
+    }
+  ]
+}

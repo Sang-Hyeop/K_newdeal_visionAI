@@ -1,0 +1,81 @@
+{
+  "base": "data/reviewed_pilot/logistics_multisite_v1",
+  "output": "data/reviewed_pilot/logistics_error_focus_v1",
+  "positive_ids": [
+    6,
+    31,
+    33,
+    34,
+    43,
+    52,
+    60,
+    61,
+    100,
+    127,
+    137,
+    143,
+    147,
+    150,
+    152,
+    153,
+    155,
+    162,
+    164
+  ],
+  "forklift_xyxy_corrections": {
+    "164": [
+      588,
+      187,
+      814,
+      336
+    ]
+  },
+  "negative_crops": [
+    {
+      "id": 6,
+      "xyxy": [
+        210,
+        190,
+        393,
+        315
+      ]
+    },
+    {
+      "id": 43,
+      "xyxy": [
+        0,
+        130,
+        550,
+        530
+      ]
+    },
+    {
+      "id": 52,
+      "xyxy": [
+        0,
+        100,
+        740,
+        540
+      ]
+    },
+    {
+      "id": 100,
+      "xyxy": [
+        0,
+        285,
+        300,
+        540
+      ]
+    }
+  ],
+  "review_status": "multisite_whole_frames_and_background_crops_visually_reviewed",
+  "report_path": "docs/checkpoints/2026-10-06/error_focus_v1.json",
+  "status": "prepared_not_trained",
+  "held_candidates": {
+    "19": "unlabelled visible lower legs at left edge",
+    "14": "possible background person/coat ambiguous; hold whole frame",
+    "77": "small green background figure between racks, incomplete labels possible"
+  },
+  "box_policy": "visible person extent including partial driver; vehicle mast and visible forks; axis aligned box may contain unavoidable carried cargo",
+  "selection_note": "40 contact previews, 22 full-frame previews, 6 negative crops inspected; approved 19 full frames and 4 crops. Others remain pending, not rejected automatically."
+}

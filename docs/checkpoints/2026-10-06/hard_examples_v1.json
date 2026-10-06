@@ -1,0 +1,459 @@
+{
+  "added": [
+    {
+      "review_id": 102,
+      "stem": "hard_full_102",
+      "group": "L-211223_B09_H_UC-22_012",
+      "site": "B09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211223_B09_H_UC-22_012_0217.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211223_B09_H_UC-22_012_0217.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1188.8223958029,
+          263.58178408852,
+          116.13204319852,
+          199.88368919507
+        ],
+        [
+          0,
+          1226.097293854,
+          280.81721089589,
+          45.304764605191,
+          67.39443339797
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_full_102.jpg",
+      "corrected_boxes": [
+        [
+          1,
+          1188.8223958029,
+          263.58178408852,
+          116.13204319852,
+          199.88368919507
+        ],
+        [
+          0,
+          1226.097293854,
+          280.81721089589,
+          45.304764605191,
+          67.39443339797
+        ]
+      ],
+      "source_member_sha256": "48372a85877c4d7b765f861a809006ed74200f0274b04a83c18d56827af98be1",
+      "crop_xyxy_original": null
+    },
+    {
+      "review_id": 102,
+      "stem": "hard_background_102",
+      "group": "L-211223_B09_H_UC-22_012",
+      "site": "B09",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211223_B09_H_UC-22_012_0217.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211223_B09_H_UC-22_012_0217.json",
+      "resolution": [
+        380,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1188.8223958029,
+          263.58178408852,
+          116.13204319852,
+          199.88368919507
+        ],
+        [
+          0,
+          1226.097293854,
+          280.81721089589,
+          45.304764605191,
+          67.39443339797
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_background_102.jpg",
+      "corrected_boxes": [],
+      "source_member_sha256": "48372a85877c4d7b765f861a809006ed74200f0274b04a83c18d56827af98be1",
+      "crop_xyxy_original": [
+        1540,
+        0,
+        1920,
+        1080
+      ]
+    },
+    {
+      "review_id": 103,
+      "stem": "hard_full_103",
+      "group": "L-211215_B07_H_UC-22_002",
+      "site": "B07",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_002_0288.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_002_0288.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1023.0682689669,
+          331.62354015353,
+          175.16507111743,
+          214.6380982986
+        ],
+        [
+          0,
+          1047.5138220165,
+          376.12587487139,
+          75.396473706176,
+          150.79659376689
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_full_103.jpg",
+      "corrected_boxes": [
+        [
+          1,
+          1023.0682689669,
+          331.62354015353,
+          175.16507111743,
+          214.6380982986
+        ],
+        [
+          0,
+          1047.5138220165,
+          376.12587487139,
+          75.396473706176,
+          150.79659376689
+        ]
+      ],
+      "source_member_sha256": "abafa9c36ddae2c56aeb43797a1625e3c03af23a038fc385b8562d6d2caf5947",
+      "crop_xyxy_original": null
+    },
+    {
+      "review_id": 103,
+      "stem": "hard_background_103",
+      "group": "L-211215_B07_H_UC-22_002",
+      "site": "B07",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_002_0288.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_002_0288.json",
+      "resolution": [
+        620,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          1023.0682689669,
+          331.62354015353,
+          175.16507111743,
+          214.6380982986
+        ],
+        [
+          0,
+          1047.5138220165,
+          376.12587487139,
+          75.396473706176,
+          150.79659376689
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_background_103.jpg",
+      "corrected_boxes": [],
+      "source_member_sha256": "abafa9c36ddae2c56aeb43797a1625e3c03af23a038fc385b8562d6d2caf5947",
+      "crop_xyxy_original": [
+        1300,
+        0,
+        1920,
+        1080
+      ]
+    },
+    {
+      "review_id": 104,
+      "stem": "hard_full_104",
+      "group": "L-211215_B07_H_UC-08_008",
+      "site": "B07",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-08_008_0391.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-08_008_0391.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          910.30002071437,
+          296.95001815471,
+          264.0648785397,
+          517.67619724529
+        ],
+        [
+          1,
+          812.86775034376,
+          120.86203728349,
+          774.99745887596,
+          775.48342695767
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_full_104.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          910.30002071437,
+          296.95001815471,
+          264.0648785397,
+          517.67619724529
+        ],
+        [
+          1,
+          810.0,
+          120.0,
+          668.0,
+          778.0
+        ]
+      ],
+      "source_member_sha256": "1d8216950c18238c864eeb22d192b5a7a9742c4bd02d80a3ec02f5f51687b1ca",
+      "crop_xyxy_original": null
+    },
+    {
+      "review_id": 106,
+      "stem": "hard_full_106",
+      "group": "L-211105_B03_H_WS-24_001",
+      "site": "B03",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "└█╛≈╗≤╚▓(WS)/L-211105_B03_H_WS-24_001_0324.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "└█╛≈╗≤╚▓(WS)/L-211105_B03_H_WS-24_001_0324.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          522.13,
+          270.2,
+          541.42,
+          455.75
+        ],
+        [
+          0,
+          766.22943163615,
+          315.34,
+          192.74056836385,
+          255.57062356232
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_full_106.jpg",
+      "corrected_boxes": [
+        [
+          1,
+          520.0,
+          268.0,
+          544.0,
+          460.0
+        ],
+        [
+          0,
+          766.22943163615,
+          315.34,
+          192.74056836385,
+          255.57062356232
+        ]
+      ],
+      "source_member_sha256": "ca545a184b59e06a9b4d83ff7ef33732962292b229e45a9b4d6a8697e9597539",
+      "crop_xyxy_original": null
+    },
+    {
+      "review_id": 107,
+      "stem": "hard_full_107",
+      "group": "L-211215_B07_H_UC-22_003",
+      "site": "B07",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_003_0328.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_003_0328.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          0,
+          213.75943525576,
+          278.75108521607,
+          203.48962935709,
+          401.617019014
+        ],
+        [
+          1,
+          116.99137017421,
+          173.21087490591,
+          317.24971733388,
+          562.41125449651
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_full_107.jpg",
+      "corrected_boxes": [
+        [
+          0,
+          213.75943525576,
+          278.75108521607,
+          203.48962935709,
+          401.617019014
+        ],
+        [
+          1,
+          116.99137017421,
+          173.21087490591,
+          317.24971733388,
+          562.41125449651
+        ]
+      ],
+      "source_member_sha256": "dc8b0778ac9d82d5d4b7e3638ce76b0b4f004319881dadce36eb1703914167ac",
+      "crop_xyxy_original": null
+    },
+    {
+      "review_id": 107,
+      "stem": "hard_background_107",
+      "group": "L-211215_B07_H_UC-22_003",
+      "site": "B07",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_003_0328.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211215_B07_H_UC-22_003_0328.json",
+      "resolution": [
+        1220,
+        820
+      ],
+      "boxes": [
+        [
+          0,
+          213.75943525576,
+          278.75108521607,
+          203.48962935709,
+          401.617019014
+        ],
+        [
+          1,
+          116.99137017421,
+          173.21087490591,
+          317.24971733388,
+          562.41125449651
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_background_107.jpg",
+      "corrected_boxes": [],
+      "source_member_sha256": "dc8b0778ac9d82d5d4b7e3638ce76b0b4f004319881dadce36eb1703914167ac",
+      "crop_xyxy_original": [
+        700,
+        180,
+        1920,
+        1000
+      ]
+    },
+    {
+      "review_id": 108,
+      "stem": "hard_full_108",
+      "group": "L-211207_G17_H_UC-22_006",
+      "site": "G17",
+      "split": "train",
+      "source_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/원천데이터/TS_07_지게차.zip",
+      "image_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_H_UC-22_006_0031.jpg",
+      "label_zip": "/Users/sanghyeopkim/Downloads/121.물류창고 내 작업 안전 데이터/01.데이터/1.Training/라벨링데이터/TL_07_지게차.zip",
+      "label_member": "║╥╛╚└ⁿ╟╤ ╗≤┼┬(UC)/L-211207_G17_H_UC-22_006_0031.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "boxes": [
+        [
+          1,
+          961.14380938515,
+          276.45694613811,
+          226.39391557645,
+          222.03997888119
+        ],
+        [
+          0,
+          1119.4584853544,
+          305.98430024888,
+          61.458218200289,
+          68.143398607054
+        ]
+      ],
+      "training_eligible": true,
+      "qa_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+      "source_kind": "07",
+      "image": "hard_full_108.jpg",
+      "corrected_boxes": [
+        [
+          1,
+          961.14380938515,
+          276.45694613811,
+          226.39391557645,
+          222.03997888119
+        ],
+        [
+          0,
+          1119.4584853544,
+          305.98430024888,
+          61.458218200289,
+          68.143398607054
+        ]
+      ],
+      "source_member_sha256": "3a08d4d008df4cdea86bc37bb402e3c9eea1d000c0314dfefdeedaf40de3b198",
+      "crop_xyxy_original": null
+    }
+  ],
+  "counts": {
+    "train": 66,
+    "val": 8,
+    "test": 11
+  },
+  "held_sets_unchanged": true,
+  "status": "prepared_not_trained",
+  "demo_frames_added": 0
+}

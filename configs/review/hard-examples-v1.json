@@ -1,0 +1,62 @@
+{
+  "base": "data/reviewed_pilot/logistics_v7_full_scene",
+  "output": "data/reviewed_pilot/logistics_v9_hard_examples",
+  "review_scale": [
+    960,
+    540
+  ],
+  "positive_ids": [
+    102,
+    103,
+    104,
+    106,
+    107,
+    108
+  ],
+  "forklift_xyxy_corrections": {
+    "104": [
+      405,
+      60,
+      739,
+      449
+    ],
+    "106": [
+      260,
+      134,
+      532,
+      364
+    ]
+  },
+  "negative_crops": [
+    {
+      "id": 102,
+      "xyxy": [
+        770,
+        0,
+        960,
+        540
+      ]
+    },
+    {
+      "id": 103,
+      "xyxy": [
+        650,
+        0,
+        960,
+        540
+      ]
+    },
+    {
+      "id": 107,
+      "xyxy": [
+        350,
+        90,
+        960,
+        500
+      ]
+    }
+  ],
+  "review_status": "six_whole_frames_and_three_background_crops_visually_reviewed",
+  "box_policy": "visible vehicle extent including mast/forks; exclude separable carried cargo, unavoidable cargo pixels within axis-aligned box remain",
+  "status": "prepared_not_trained"
+}

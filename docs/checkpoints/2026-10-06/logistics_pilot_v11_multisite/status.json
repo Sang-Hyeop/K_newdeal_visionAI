@@ -1,0 +1,6 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "person FN9 versus baseline6, forklift FP5 versus baseline2; held video false positives remain",
+  "sha256": "520f7e2e77863a42278a84dc66eb3d1ef86765e4f7e3a56fb2848bc476ce967d",
+  "warmup_bias_lr": 0.1
+}

@@ -1,0 +1,26 @@
+{
+  "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/scaled-data-v1",
+  "files": [
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1/manifest.json",
+      "bytes": 717508,
+      "sha256": "10341ffc469aec194741208d1cf0d4f15aea0ac52f7c90764f947fce319633cf"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1/dataset.yaml",
+      "bytes": 180,
+      "sha256": "a92ebada86e68a25e2fa9965fee5c9a2dc2c759716122396f227f6e033075428"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1/quality_report.json",
+      "bytes": 619,
+      "sha256": "a668ca0deb07aede6b2a72a4c60f58bac62c8dbbedb019c9c4227cbf88a40e2d"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1/holds.json",
+      "bytes": 234826,
+      "sha256": "47e64e28cadaed7cf4c465060931e9ad8a480521cbc21890bcf87dd77e31900c"
+    }
+  ],
+  "note": "metadata backup on same disk; source images remain in original ZIPs and dataset; not off-device backup"
+}

@@ -1,0 +1,260 @@
+{
+  "storage": "same-disk recovery copy",
+  "files": [
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_6.jpg",
+      "sha256": "2eb0055d299b38a7ae2995baade011d377d9969118f710263f1c1a61f4324423",
+      "bytes": 457799
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_6.txt",
+      "sha256": "c44f801156f2bf9eb023f78e63f73796a6e339d9e08ad604cf629c7f008878e2",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_31.jpg",
+      "sha256": "d2d668b9be089cc4f4ab33a8af5d8fa0a2e388781650288883949f2e6062759e",
+      "bytes": 729593
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_31.txt",
+      "sha256": "c7ec7c22abee53eb9849dfd7835660008ae051f8f48196f0d94f03ec1766c271",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_33.jpg",
+      "sha256": "b7e061c637c08548d5fe54ca1cbafe4d2600fff5a2581413499f146c73e351ad",
+      "bytes": 642926
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_33.txt",
+      "sha256": "b7d06d4198924fb198014fba5b4f2b5f28f7d6ec36612aa4ba662fc828cf09f7",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_34.jpg",
+      "sha256": "a06bc0508f852c43ee010aebe684601551ba685d070dfa07ed500964b417c696",
+      "bytes": 397938
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_34.txt",
+      "sha256": "29f1ab7c43b9fb0620591f6042374d90e6a335d60eb88934e7de42cde6053828",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_43.jpg",
+      "sha256": "9dbd46fff7474ee479f8960cead8eea99b863c399aa77cdc07317402dafeb259",
+      "bytes": 992152
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_43.txt",
+      "sha256": "e527985c693b601403a2d6e3c5c25e3932d741dd52039c7e888a7b5285d9e33d",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_52.jpg",
+      "sha256": "867572c0577040335ccaba8bfe933c3c55029ae864cdf45bfb91fc903a89a2a5",
+      "bytes": 600513
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_52.txt",
+      "sha256": "1d88da62fb2f640be5eef84a1291be4ac096c0506562867b1ac06264ccc60e32",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_60.jpg",
+      "sha256": "ac3c0754ec6ecf5b63bae450e720cba1fd8216e8a6d54be5db69de1345d4da1d",
+      "bytes": 633919
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_60.txt",
+      "sha256": "50938ae87260581994d2896895a7eca3c0185eca60f9400eeadc258db2a9d402",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_61.jpg",
+      "sha256": "c166b589eb4b35f88d095aa321f6e0a2e0faf22500e8b7947311a13ac666a090",
+      "bytes": 655931
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_61.txt",
+      "sha256": "97108307e8f2a791a799b05176cf754b5c128c81d577f0bd1863978cc89aa1e9",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_100.jpg",
+      "sha256": "01f1cb4fc1705dcacdd3dd38150938bcab55555d0ec3d5b102ba119872ff1090",
+      "bytes": 472593
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_100.txt",
+      "sha256": "6a2ca9b3bb8b47744a771dca1c0b36b1aaf285c5720c3a6f3a08af07c29d35d3",
+      "bytes": 46
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_127.jpg",
+      "sha256": "2507f6e728ccb46a440cc74e1aa3fc856f65a247de01d455994d937927ca1610",
+      "bytes": 670288
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_127.txt",
+      "sha256": "9d6657d2519f9010ae60a54f600a9459e7a231fba785c5d7789503cbe4385924",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_137.jpg",
+      "sha256": "f2adad8bf6c0956f6ce5a4404a6d6011520d83955e8e2639e13c3c53699a201c",
+      "bytes": 572753
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_137.txt",
+      "sha256": "b9f8f79e9db16985f5ce86a786765a37b2a2ae65f5fb0fe9fce3ac70d12b983b",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_143.jpg",
+      "sha256": "6e5c323a2384aeab2ed0b46b5d2015e2a7d347b5dae3cbb995eee174c37fb9fd",
+      "bytes": 538348
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_143.txt",
+      "sha256": "23f777aa6842101b3e0aa5874d247177a3c034dbed3bb0a74a2b2c5e7c46f007",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_147.jpg",
+      "sha256": "34a3e3fb026ee5b301756d29bceef9e3b3ef8d7724b79cee35da92d292f0651e",
+      "bytes": 498318
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_147.txt",
+      "sha256": "340412aa3579b18ba61f238cddf03f0699b9c6233da9d758e31fa1eb605b6928",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_150.jpg",
+      "sha256": "d46d3f50ea9bbccb322eebca11a2bc3cd8748bbd0c57eef543cba27dcd4e5b95",
+      "bytes": 449545
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_150.txt",
+      "sha256": "bc4e6103e38b2d0e15598e012e017b555c7931cedbc686ef7f428e67d3e248f4",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_152.jpg",
+      "sha256": "2923b3d8abfe8ee6774e3555b40187b4c5275c7c2880ec2ce5835af8b0d3c150",
+      "bytes": 1060407
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_152.txt",
+      "sha256": "52e683aa8277cf26d212f98221bd98a1448d33bbff92edbdb2a73985028dd3b8",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_153.jpg",
+      "sha256": "6adc7e06157a740ace879005a58fc153341cb5392d96d8ff06d737fc2ba4e475",
+      "bytes": 868608
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_153.txt",
+      "sha256": "0f3a005f3c9059b254e86dc0f0eafa98530097604a966c9dc6c747ac57d96dd5",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_155.jpg",
+      "sha256": "4dd2fce4166d5917fe099f2d1f3d737327fb81861b911fa49cba2e7d4e48eaae",
+      "bytes": 482932
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_155.txt",
+      "sha256": "72aa6fd79b8d4ca570c2bf4e72806285ec324bb9f66545728e0ebff0144a5c7e",
+      "bytes": 138
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_162.jpg",
+      "sha256": "50849421aaa6bc9aa83e4eb6fece2e592f6794950a0f300ba7dfa6696eb985ff",
+      "bytes": 679273
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_162.txt",
+      "sha256": "1720a424e616caecc9336b4fe8739a0d8575940250edbfbd3e3dc41e52155498",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_full_164.jpg",
+      "sha256": "2e20d0c35a2a8e343155f3dbc853bc1205caf78d0bdb8d9831932dcdd2007aff",
+      "bytes": 705981
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_full_164.txt",
+      "sha256": "c18703eb33f5d04eee0b01bf5d8eec00ee557ccae26bce4f01e0aae1141377c9",
+      "bytes": 92
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_background_6.jpg",
+      "sha256": "180434a2c617cbe4335daa860a48eeb39436d5682209f841177d7f434a06a856",
+      "bytes": 30776
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_background_6.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_background_43.jpg",
+      "sha256": "5a4a94f248d7184fe90b091c080cb576a9760651111cc538d1377a4af29bb219",
+      "bytes": 418059
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_background_43.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_background_52.jpg",
+      "sha256": "5e59d1a03aef247b685d883fd3ec498ec4a4517bbe070340e1418f5afb0876b2",
+      "bytes": 377469
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_background_52.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/images/hard_background_100.jpg",
+      "sha256": "98a24b95d792dabb6256a0581e1453a28725a03fe73f31e4bacd3e565024404c",
+      "bytes": 108117
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/train/labels/hard_background_100.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/manifest.json",
+      "sha256": "ae5ab6fbc8be7cdc77313788d560a975f985a25c219606f8b566b0ac34dcf6cd",
+      "bytes": 251166
+    },
+    {
+      "source": "data/reviewed_pilot/logistics_error_focus_v1/dataset.yaml",
+      "sha256": "e16c2458aee1c9150409ff0e9493e185b2f0d1e8ae7dc4792cbc995c6dacd13e",
+      "bytes": 176
+    },
+    {
+      "source": "configs/review/error-focus-v1.json",
+      "sha256": "f257449ca98b84e98eb740dbec4c08dbe9669d61770c1e71e532ec5bcc8fbb9c",
+      "bytes": 1607
+    },
+    {
+      "source": "docs/checkpoints/2026-10-06/error_focus_v1_qa.json",
+      "sha256": "9245cd4d5b79176d2753a683db7ca2a101d3b1b2f7f49343e071ec6f602f9eb4",
+      "bytes": 35564
+    },
+    {
+      "source": "data/training_review/error_focus_v1/candidates.json",
+      "sha256": "6091c3469f0b0df8bc9a05a984188fef951f59f879cca57155d148edba2f202f",
+      "bytes": 61426
+    }
+  ]
+}
