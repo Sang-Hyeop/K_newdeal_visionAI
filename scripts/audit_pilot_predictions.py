@@ -16,6 +16,7 @@ def main():
  data=args.data_path or ROOT/'data/reviewed_pilot'/('logistics_v2' if task=='logistics' and args.version=='v2' else task)
  out=ROOT/'outputs/training'/(args.run_name or f'{task}_pilot_{args.version}')
  if Path(args.report_name).name!=args.report_name:raise ValueError('report-name must be a filename')
+ out.mkdir(parents=True,exist_ok=True)
  report_path=out/args.report_name
  if report_path.exists():raise SystemExit(f'Existing report protected: {report_path}')
  weight=args.weights or out/'weights/best.pt'

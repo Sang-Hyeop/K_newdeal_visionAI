@@ -9,3 +9,5 @@
 YOLO26n 기반 기존 v6 가중치를 초기값으로 추가 학습 v15를 시작했다. 20 epochs / 640px / batch 4 / AdamW lr 0.0003 / warmup bias lr 0.0003 / CPU. 구조를 새로 만들지 않았다. 저장 시점에서 학습 중이며 성능 향상 여부와 최종 모델 승격은 미확정이다.
 
 다음 검증: 동일한 새 평가 묶음에서 v6와 v15 비교, 기존 평가 및 시연 영상의 누락·오탐 비교. PPE 데이터 확대와 실제 거리 보정은 이번 사람·지게차 데이터 확대와 별개로 남아 있다.
+
+새 평가 40장에서 v6 기준값: person TP21 FP19 FN19 / precision=recall=0.525; forklift TP27 FP10 FN13 / precision=0.730 recall=0.675. confidence 0.25 / IoU 0.5 / 640px.
