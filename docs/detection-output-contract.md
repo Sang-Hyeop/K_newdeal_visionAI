@@ -13,7 +13,9 @@
 
 프론트/로그 담당자는 지금 이 검출 출력을 읽는 작업부터 진행할 수 있다. no_helmet_head는 머리 검출 클래스이며 작업자 전체의 미착용 이벤트와 같지 않다. 두 모델 결과에 같은 사람이 중복 나타날 수 있고 아직 track_id가 없다.
 
-## 다음 이벤트 형식 (아직 미구현)
+## 다음 공통 이벤트 형식 (통합 미완료)
+
+구역 체류·접근/침범·근접의 개별 실행기는 현재 `events.jsonl`과 `observations.jsonl`을 출력한다. 아래 내용은 이 결과를 팀 로그·대시보드에서 공통으로 받기 위한 통합 초안이며, 모든 기능이 같은 스키마로 연결된 상태는 아니다. 최신 인계 상태는 `docs/handoff-2026-10-06.md`를 참고한다.
 검출과 이벤트를 분리한다. severity는 SAFE / WARNING / CRITICAL의 3종으로 유지하며 판단 불가 시 null, observation_status는 unconfirmed로 전달한다. 검출 목록이 비었다고 SAFE 이벤트를 만들지 않는다.
 
 예정 필드: schema_version, event_id, camera_id, video, timestamp_seconds, event_type, severity, observation_status, track_ids, evidence, model_version, config_version.
