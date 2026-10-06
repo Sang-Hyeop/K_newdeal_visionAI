@@ -1,0 +1,25 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v11_multisite/weights/best.pt",
+  "metrics": {
+    "metrics/precision(B)": 0.7145766926405441,
+    "metrics/recall(B)": 0.6263694098169696,
+    "metrics/mAP50(B)": 0.667326212143815,
+    "metrics/mAP50-95(B)": 0.29755762714289524,
+    "fitness": 0.29755762714289524
+  },
+  "per_class": {
+    "person": {
+      "precision": 0.7588151858173425,
+      "recall": 0.5254660923612119,
+      "mAP50": 0.5983537229889287,
+      "mAP50_95": 0.26908702528878264
+    },
+    "forklift": {
+      "precision": 0.6703381994637458,
+      "recall": 0.7272727272727273,
+      "mAP50": 0.7362987012987012,
+      "mAP50_95": 0.3260282289970078
+    }
+  },
+  "status": "development pilot; not independent final CCTV benchmark"
+}
