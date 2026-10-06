@@ -1,0 +1,12 @@
+{
+  "file": "data/videos/Logistics Warehouse.mp4",
+  "role": "final_combined_demo",
+  "duration_seconds": 272.0,
+  "fps": 24.0,
+  "width": 1280,
+  "height": 720,
+  "frames": 6528,
+  "split": "demo_holdout",
+  "content_reviewed": false,
+  "note": "기능별 5개 영상 시연 후 실행. 메타데이터만 확인, 학습에는 자동 포함하지 않음."
+}

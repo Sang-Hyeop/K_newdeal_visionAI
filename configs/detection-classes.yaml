@@ -1,0 +1,6 @@
+# 클래스 기준만 정의합니다. 학습용 dataset.yaml은 데이터 분리 후 생성합니다.
+names:
+  0: person
+  1: forklift
+  2: helmet
+  3: no_helmet_head
