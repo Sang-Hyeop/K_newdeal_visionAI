@@ -30,3 +30,9 @@ runs/
 *.pth
 *.onnx
 *.engine
+
+# Share demo mp4 files only; keep other datasets/generated media local
+!data/videos/
+data/videos/*
+!data/videos/*.mp4
+!data/videos/README.md

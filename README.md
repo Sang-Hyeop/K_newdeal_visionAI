@@ -38,4 +38,4 @@ python -m pip install -r requirements.txt
 
 ## 협업
 
-`docs/CONTRIBUTING.md`에 따라 작업 브랜치 → PR → 리뷰 → 병합 순서로 진행합니다. 데이터·영상·모델·실행 결과는 별도 공유하며 Git에서 제외됩니다.
+`docs/CONTRIBUTING.md`에 따라 작업 브랜치 → PR → 리뷰 → 병합 순서로 진행합니다. `data/videos`의 시연 MP4 7개는 Git으로 공유합니다. 나머지 학습 데이터·모델 가중치·실행 결과는 별도로 공유하며 Git에서 제외됩니다.
