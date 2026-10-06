@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v15_scaled_filtered/person_forklift.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/person_forklift.pt",
+      "bytes": 5360325,
+      "sha256": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v15_scaled_filtered/last_epoch20.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/last_epoch20.pt",
+      "bytes": 5360389,
+      "sha256": "50240164f49120ca466600aaf29dd3f5ef196bc9f26c4a8eca69b56759cf6ba6"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v15_scaled_filtered/dataset_snapshot.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/dataset_snapshot.json",
+      "bytes": 159070,
+      "sha256": "c85b6f3cf11d99ec2eafd62da59b625c845225bb68972cad62e0db53fd4cffb4"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v15_scaled_filtered/test_metrics.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/test_metrics.json",
+      "bytes": 798,
+      "sha256": "9fe4f8a188b02d85dc8b392cc20e46394ee2096d13c654cb5e82db3ed6ed1356"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v15_scaled_filtered/args.yaml",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/args.yaml",
+      "bytes": 1996,
+      "sha256": "6181d96a673775f2ff3a4b38df3afd23c65ba14fc20b3458ddce628e094ee689"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_pilot_v15_scaled_filtered/results.csv",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/results.csv",
+      "bytes": 2591,
+      "sha256": "aa490cd6e5594c030b4bc1bae7bcee99b3b5dd6729ff0a95945104b7ddaf847d"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_resume_checkpoint.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/v15_resume_checkpoint.pt",
+      "bytes": 20719557,
+      "sha256": "24829d7b5ed2f0fb791422d2e80a12ddc56faedc650e19cd4c2ad20bfc908751"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_resume_metadata.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/v15_resume_metadata.json",
+      "bytes": 301,
+      "sha256": "1bd8ebcb614d364e8946f7085a60d382020672b398d2d324d94aa9dd2011c512"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_final_validation/comparison.json",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v15_completed20/comparison.json",
+      "bytes": 19693,
+      "sha256": "083375fa1f44b2c11b975dba346fa253afb1cb28c418e534122444367234bd67"
+    }
+  ],
+  "note": "same-disk recovery backup; not external backup"
+}
