@@ -1,0 +1,280 @@
+{
+  "frames": [
+    {
+      "image": "3_tr11_f000211.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr11.mp4",
+      "source_sha256": "6b02ef1fad91f59529735d7ee536c3a28782d9c687c81beb80024c9074e5a641",
+      "source_group": "3_tr11",
+      "frame_index": 211,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        8,
+        11,
+        53,
+        52
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr12_f000211.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr12.mp4",
+      "source_sha256": "23925896131a11032c8dba17c6abde5e341843960a64b3a5113540284b1a3354",
+      "source_group": "3_tr12",
+      "frame_index": 211,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        31,
+        0,
+        83,
+        80
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr14_f000211.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr14.mp4",
+      "source_sha256": "0865376cd100cb3cdfbc4c25816f57222b020fba6ca085d19b7559a7a8745b7b",
+      "source_group": "3_tr14",
+      "frame_index": 211,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        20,
+        0,
+        51,
+        44
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr16_f000211.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr16.mp4",
+      "source_sha256": "12a798c0b94510a34710446916f5955cc5dd9f4b1e057c23eade6869cbfc55ae",
+      "source_group": "3_tr16",
+      "frame_index": 211,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        27,
+        4,
+        76,
+        73
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr18_f000190.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+      "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+      "source_group": "3_tr18",
+      "frame_index": 190,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        116,
+        4,
+        236,
+        150
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr27_f000105.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr27.mp4",
+      "source_sha256": "603f5debdefa14a184812e3256a3c24a62924048edf0d9bdfc906b1019815840",
+      "source_group": "3_tr27",
+      "frame_index": 105,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        43,
+        7,
+        96,
+        78
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr29_f000105.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr29.mp4",
+      "source_sha256": "74f9bd4518daac7ed9eebfa24aad255f807460056c62ddae952b6922ef254900",
+      "source_group": "3_tr29",
+      "frame_index": 105,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        123,
+        48,
+        228,
+        150
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr3_f000232.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr3.mp4",
+      "source_sha256": "f1da0d2b9672008146ec656f4d6fd68bf8bdbcc064e8a1058d66618982f37416",
+      "source_group": "3_tr3",
+      "frame_index": 232,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        21,
+        0,
+        60,
+        53
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr4_f000232.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+      "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+      "source_group": "3_tr4",
+      "frame_index": 232,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        94,
+        35,
+        180,
+        130
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr40_f000084.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+      "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+      "source_group": "3_tr40",
+      "frame_index": 84,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        53,
+        0,
+        104,
+        63
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr42_f000084.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr42.mp4",
+      "source_sha256": "c8e61b5634536a5f498c5c9a9246bf6ebc1e4bda37bfd79564b4e45766d061f2",
+      "source_group": "3_tr42",
+      "frame_index": 84,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        46,
+        0,
+        100,
+        90
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "3_tr43_f000063.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr43.mp4",
+      "source_sha256": "e4edf2affe7fc44069aaf4a4a27ba963e73beafb5abb912a8afd036cc1bdc256",
+      "source_group": "3_tr43",
+      "frame_index": 63,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        47,
+        2,
+        116,
+        105
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "7_tr11_f000085.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr11.mp4",
+      "source_sha256": "e4961cbf455781e9ef17bde187c2a737f17a9686879db21f11cb2a5d027bd7e4",
+      "source_group": "7_tr11",
+      "frame_index": 85,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        78,
+        29,
+        150,
+        117
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "7_tr20_f000238.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+      "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+      "source_group": "7_tr20",
+      "frame_index": 238,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        45,
+        0,
+        104,
+        75
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "7_tr21_f000236.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr21.mp4",
+      "source_sha256": "47d81a3921fd446d7c09592b0368d1f5c1f644bd7c73634ef77dd42c37d58257",
+      "source_group": "7_tr21",
+      "frame_index": 236,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        151,
+        33,
+        225,
+        134
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "7_tr22_f000230.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr22.mp4",
+      "source_sha256": "314a3c0430703aadeb448674682f4ee73b6cc8b974067dff38fccf2eee78bb3f",
+      "source_group": "7_tr22",
+      "frame_index": 230,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        34,
+        4,
+        83,
+        90
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "7_tr4_f000172.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr4.mp4",
+      "source_sha256": "47deef759545ae785cf9e9c028f89b91bc665abf095c512e9a369ba51cf54696",
+      "source_group": "7_tr4",
+      "frame_index": 172,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        175,
+        30,
+        300,
+        160
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    },
+    {
+      "image": "7_tr6_f000149.jpg",
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr6.mp4",
+      "source_sha256": "c3c42ab0447e618f126743380ef67cb2dbc8a5a8a563f4a58c911c4d2333d055",
+      "source_group": "7_tr6",
+      "frame_index": 149,
+      "training_eligible": true,
+      "bbox_xyxy_400": [
+        59,
+        0,
+        128,
+        113
+      ],
+      "label_scope": "loaded vehicle with visible cab/chassis anchor; cargo included; not standalone cargo"
+    }
+  ],
+  "coordinate_reference": [
+    400,
+    225
+  ],
+  "held_groups_excluded": true,
+  "qa": "18 contact overlays inspected; four ambiguous corner frames enlarged; boundaries corrected before dataset creation"
+}
