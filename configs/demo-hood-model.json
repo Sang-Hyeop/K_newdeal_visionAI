@@ -1,0 +1,26 @@
+{
+  "status": "review_candidate_auxiliary_validated_on_one_hood_track_not_general_detector",
+  "weights": "models/hoodie_auxiliary_v1/hoodie.pt",
+  "weights_sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371",
+  "inference": "full_frame_and_actual_person_context_crop",
+  "confidence": 0.25,
+  "matching_person_iou": 0.3,
+  "demo_videos": [
+    5,
+    6
+  ],
+  "default_main_model_replaced": false,
+  "normal_class_is_ppe_safe": false,
+  "hood_evidence_can_veto_safe": true,
+  "preserve_existing_warnings": true,
+  "script": "scripts/replay_hood_auxiliary.py",
+  "source": "https://universe.roboflow.com/jaydips-workspace/hoodie-detection-sojdq/dataset/1",
+  "license": "CC BY 4.0",
+  "author": "Jaydips Workspace",
+  "limitations": [
+    "hood review candidates can be false positives",
+    "external development hood recall .508; general zero misses unproven",
+    "person detection and crop context are required; full-frame missed source6 hood",
+    "hood evidence cannot prove whether a helmet is beneath the hood"
+  ]
+}

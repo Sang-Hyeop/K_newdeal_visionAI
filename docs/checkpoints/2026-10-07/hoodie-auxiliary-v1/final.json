@@ -1,0 +1,17 @@
+{
+  "status": "hood_training_and_5_6_candidate_integration_complete; seven_base_demo_sample_runs_complete",
+  "tests": 108,
+  "hood_model_sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371",
+  "hood_source6_target_samples": 29,
+  "hood_source6_candidate_hits_context": 29,
+  "hood_source6_full_frame_hits": 0,
+  "general_hood_development_recall": 0.5081967213,
+  "general_zero_misses_proven": false,
+  "main_merged": false,
+  "backup_index": "outputs/checkpoints/scenario_plan_v2_partial/sha256.json",
+  "backup_index_sha256": "3e55e719516e0d1a735b0118c867c6c34affdac093149062912b64c871282559",
+  "deliverables": [
+    "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/hoodie-auxiliary-v1",
+    "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/scenario-plan-v2"
+  ]
+}

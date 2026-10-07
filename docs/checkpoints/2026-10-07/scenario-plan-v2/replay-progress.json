@@ -1,5 +1,5 @@
 {
-  "status": "video4_and_hood_training_processing",
+  "status": "all_seven_sampled_videos_complete",
   "unit_tests": 108,
   "completed": [
     {
@@ -121,6 +121,32 @@
           "UNKNOWN": 48
         }
       }
+    },
+    {
+      "video": 4,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video4/summary.json",
+      "summary_sha256": "88ecb519d0d7fcb8b705276f396702b6f4061fab0225b55f79d9578d942a4fd1",
+      "samples": 92,
+      "features": {
+        "zone_access": {
+          "SAFE": 1,
+          "WARNING": 80,
+          "CRITICAL": 0,
+          "UNKNOWN": 11
+        },
+        "zone_dwell": {
+          "SAFE": 12,
+          "WARNING": 80,
+          "CRITICAL": 0,
+          "UNKNOWN": 0
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 90,
+          "CRITICAL": 0,
+          "UNKNOWN": 2
+        }
+      }
     }
   ],
   "reverse_target_sample_counts": {
@@ -131,5 +157,6 @@
     "video3 some vehicle boxes include both forklifts; image distance approximate",
     "PPE heads can falsely match equipment; warnings are review candidates",
     "hood guard prepared but not activated"
-  ]
+  ],
+  "hood_auxiliary": "configs/demo-hood-model.json; separate5_6reviewoutputs"
 }

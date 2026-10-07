@@ -1,0 +1,32 @@
+{
+  "status": "experimental_not_promoted",
+  "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+  "weights_sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371",
+  "reviewed_target": "scene1 track1:1 blue hood; body boxes from cached real person detections",
+  "target_samples": 29,
+  "matching_iou": 0.3,
+  "inference_method": "full_frame plus actual detected person context crop; no synthetic boxes",
+  "full_frame_hood_hits_by_confidence": {
+    "0.1": 0,
+    "0.25": 0,
+    "0.5": 0
+  },
+  "hood_hits_by_confidence": {
+    "0.1": 29,
+    "0.25": 29,
+    "0.5": 19
+  },
+  "limitation": "one reviewed track, sampled frames, not a general PPE accuracy estimate; Normal never means helmet safe",
+  "development_test_per_class": {
+    "hooded_person": {
+      "precision": 0.5696091205221226,
+      "recall": 0.5081967213114754,
+      "mAP50": 0.5955188393549832
+    },
+    "normal_person": {
+      "precision": 0.6709090885077182,
+      "recall": 0.7329545454545454,
+      "mAP50": 0.697054927543706
+    }
+  }
+}

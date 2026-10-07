@@ -14,7 +14,7 @@ from src.ppe_unassigned_heads import UnassignedHeadEvents
 from src.person_tracker import PersonTracker
 from src.tracked_proximity import TrackedProximity
 from src.tracked_zone import TrackedZone
-from src.scenario_zone import ScenarioZone
+from src.scenario_zone import ScenarioZone,mark_uncertain_lane_events
 from src.forklift_proximity import ForkliftProximity
 from src.scenario_render import render
 from src.feature_status import feature_status
@@ -47,6 +47,7 @@ def main():
     else:
      prediction=models.predict(frame,conf=.1,imgsz=1280 if n in[4,7]else 640,device='cpu',verbose=False)[0];detections=[{'class':prediction.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in prediction.boxes]
     groups={};zrow=zone.update(t,detections,(h,w),cut)if zone else None
+    if zrow:mark_uncertain_lane_events(zrow['events'])
     if zrow:
      for kind in['zone_access','zone_dwell']:groups[kind]=[e for e in zrow['events']if e['event_type']==kind]
     if prox:

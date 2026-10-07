@@ -3,6 +3,11 @@ import cv2,numpy as np
 from src.person_tracker import PersonTracker
 from src.zone_dwell import ZoneDwell
 from src.lane_hazard import LaneHazard
+def mark_uncertain_lane_events(events):
+ for e in events:
+  if e.get('inside') is True and e.get('vehicle_observation_status')=='unconfirmed' and e.get('severity') is not None:
+   e.update(last_risk_severity=e['severity'],severity=None,observation_status='unconfirmed')
+ return events
 class ScenarioZone:
  def __init__(self,config,shape,fps):
   self.config=config;h,w=shape
@@ -24,9 +29,7 @@ class ScenarioZone:
     e['person_bbox_xyxy']=boxes[e['track_id']];b=boxes[e['track_id']];point=((b[0]+b[2])/2,b[3])
     if cv2.pointPolygonTest(self.polygon,point,False)<0:e.update(inside=None,severity=None,observation_status='unconfirmed',risk_reason='outside_monitored_floor')
   state=self.lane.update(timestamp,events,vehicles,shape)if self.roi_active else None;access=[];transitions=[]
-  for e in events:
-   if e.get('inside') is True and e.get('vehicle_observation_status')=='unconfirmed' and e.get('severity') is not None:
-    e.update(last_risk_severity=e['severity'],severity=None,observation_status='unconfirmed')
+  for e in mark_uncertain_lane_events(events):
    old=self.previous.get(e['track_id']);inside=e['inside'];entry=bool(old and old['inside']is False and inside is True);exit=bool(old and old['inside']is True and inside is False)
    e.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],roi_purpose='floor_minus_safe_storage_zones',distance_meters=None)
    a={**e,'event_type':'zone_access','entry_observed':entry,'exit_observed':exit,'authorization_status':'not_assessed'};access.append(a)

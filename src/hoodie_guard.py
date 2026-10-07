@@ -14,6 +14,8 @@ def apply_hood_guard(events,detections,minimum_confidence=.5,minimum_iou=.3):
         matches=[d for d in detections if d['class_id']==0 and d['confidence']>=minimum_confidence and box and _iou(box,d['bbox_xyxy'])>=minimum_iou]
         if matches:
             event['hood_evidence']=matches
+            event['classification_status']='unconfirmed'
+            event['hood_review_status']='whole_person_hood_candidate_ppe_requires_review'
             event['hood_evidence_scope']='whole_person_not_head_or_helmet'
             if event.get('severity')=='SAFE':
                 event.update(severity=None,observation_status='unconfirmed',classification_status='unconfirmed',reason='hood_and_helmet_evidence_requires_review',ppe_state='unknown')
