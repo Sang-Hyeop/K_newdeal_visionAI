@@ -1,0 +1,25 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "context hood recall improves but original full-frame AP and normal recall regress; demo improvement is modest",
+  "selected_demo_hood_model": "models/hoodie_auxiliary_v1/hoodie.pt",
+  "candidate_weights": "models/hoodie_context_v2/hoodie.pt",
+  "candidate_sha256": "eb87d887a6e249e010e397408ec7bf44aa44e7c39dc71533a6ab683216d1d51a",
+  "context_hood_recall": {
+    "v1": 0.45454545454545453,
+    "v2": 0.6060606060606061
+  },
+  "source6_candidate_hits_confidence_0_25": {
+    "v1": 29,
+    "v2": 29
+  },
+  "source6_candidate_hits_confidence_0_5": {
+    "v1": 19,
+    "v2": 20
+  },
+  "demo_video_training": false,
+  "next": "review source labels by hood-on-head semantics; no identical training repeats",
+  "cursor_changes_reviewed_through_commit": "c3dd5f49ff5b5520ad8eaaac0f99fb95a28ac7e1",
+  "tests": 119,
+  "main_pr": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/pull/6",
+  "merge_status": "awaiting_required_approval; automatic_merge_disabled"
+}
