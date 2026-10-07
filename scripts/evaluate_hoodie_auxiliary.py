@@ -1,6 +1,6 @@
 """Evaluate the externally trained hood model on the reviewed source6 hood track."""
 from pathlib import Path
-import json,os,sys,hashlib
+import json,os,sys,hashlib,argparse
 ROOT=Path(__file__).resolve().parents[1]
 os.environ.setdefault('YOLO_CONFIG_DIR',str(ROOT/'outputs/runtime/yolo'))
 os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'outputs/runtime/matplotlib'))
@@ -12,7 +12,8 @@ def iou(a,b):
  x=max(0,min(a[2],b[2])-max(a[0],b[0]));y=max(0,min(a[3],b[3])-max(a[1],b[1]));inter=x*y
  return inter/max(1,(a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-inter)
 def main():
- torch.set_num_threads(2);weights=ROOT/'models/hoodie_auxiliary_v1/hoodie.pt';model=YOLO(str(weights));source=ROOT/'data/videos/6_Helmet_forklift.mp4';cap=cv2.VideoCapture(str(source));out=ROOT/'outputs/diagnostics/hoodie_auxiliary_v1_video6';out.mkdir(parents=True,exist_ok=True);rows=[]
+ parser=argparse.ArgumentParser();parser.add_argument('--weights',type=Path,default=ROOT/'models/hoodie_auxiliary_v1/hoodie.pt');parser.add_argument('--output',type=Path,default=ROOT/'outputs/diagnostics/hoodie_auxiliary_v1_video6');parser.add_argument('--skip-test-validation',action='store_true');args=parser.parse_args()
+ torch.set_num_threads(2);weights=args.weights;model=YOLO(str(weights));source=ROOT/'data/videos/6_Helmet_forklift.mp4';cap=cv2.VideoCapture(str(source));out=args.output;out.mkdir(parents=True,exist_ok=True);rows=[]
  cached=ROOT/'outputs/diagnostics/scenario_plan_v2_conservative_ppe/video6/detections.jsonl'
  for row in map(json.loads,cached.read_text().splitlines()):
   cap.set(cv2.CAP_PROP_POS_FRAMES,row['frame_index']);ok,frame=cap.read()
@@ -35,7 +36,8 @@ def main():
    cv2.imwrite(str(out/f"frame_{row['frame_index']}.jpg"),frame)
  cap.release();(out/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n'for r in rows));targets=[r for r in rows if r['reviewed_hood_target_present']]
  report={'status':'experimental_not_promoted','source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'weights_sha256':hashlib.sha256(weights.read_bytes()).hexdigest(),'reviewed_target':'scene1 track1:1 blue hood; body boxes from cached real person detections','target_samples':len(targets),'matching_iou':.3,'inference_method':'full_frame plus actual detected person context crop; no synthetic boxes','full_frame_hood_hits_by_confidence':{str(c):sum(r['hood_target_full_frame_confidence']>=c for r in targets)for c in [.1,.25,.5]},'hood_hits_by_confidence':{str(c):sum(r['hood_target_confidence']>=c for r in targets)for c in [.1,.25,.5]},'limitation':'one reviewed track, sampled frames, not a general PPE accuracy estimate; Normal never means helmet safe'}
- validation=model.val(data=str(ROOT/'data/reviewed_pilot/hoodie_roboflow_v1/dataset.yaml'),split='test',device='cpu',workers=0,batch=4,plots=False,verbose=False)
- report['development_test_per_class']={validation.names[int(c)]:{'precision':float(validation.box.p[i]),'recall':float(validation.box.r[i]),'mAP50':float(validation.box.ap50[i])}for i,c in enumerate(validation.box.ap_class_index)}
+ if not args.skip_test_validation:
+  validation=model.val(data=str(ROOT/'data/reviewed_pilot/hoodie_roboflow_v1/dataset.yaml'),split='test',device='cpu',workers=0,batch=4,plots=False,verbose=False)
+  report['development_test_per_class']={validation.names[int(c)]:{'precision':float(validation.box.p[i]),'recall':float(validation.box.r[i]),'mAP50':float(validation.box.ap50[i])}for i,c in enumerate(validation.box.ap_class_index)}
  (out/'report.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
 if __name__=='__main__':main()
