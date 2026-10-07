@@ -1,5 +1,5 @@
 """Build reviewed context crops without promoting model-generated draft labels."""
-import json,shutil
+import json,shutil,hashlib
 from pathlib import Path
 import cv2,yaml
 ROOT=Path(__file__).resolve().parents[1]
@@ -16,7 +16,9 @@ def main():
   original=candidates[decision['candidate_id']]
   assert decision['training_eligible'] and decision['source_sha256']==original['source_sha256']
   assert decision['split']=='train'
-  image=cv2.imread(str(source/original['image']))
+  image_path=source/original['image']
+  assert hashlib.sha256(image_path.read_bytes()).hexdigest()==decision['source_frame_image_sha256']
+  image=cv2.imread(str(image_path))
   x1,y1,x2,y2=[int(v*2) for v in decision['crop_xyxy_960']]
   crop=image[y1:y2,x1:x2];h,w=crop.shape[:2];labels=[]
   for cls,l,t,r,b in decision['corrected_boxes_xyxy_960']:

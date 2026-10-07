@@ -59,7 +59,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "95eb6a17571b455af078dae29e443d1a6f06fbf201ada87773ea0aa2bdc22898"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
@@ -121,7 +122,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "6134c7d188277aa06957a49ab9bc5740768e09a969daccf096ed2691a2142051"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
@@ -183,7 +185,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "e2af4fed483db7955669826aabe7993b93295738bd12c16b12d3b41f2b9b56d1"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
@@ -245,7 +248,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "5fd6b7f1b55c6b908d068b9a0849d9084a1315325d83f2bdf7062d31ba59e716"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
@@ -307,7 +311,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "477fee63633e98252d68c47db602c776c757563e5ee04a99db8cd57d482b4fa8"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
@@ -369,7 +374,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "71f4ee8307bfe65a7c1df81374b9d6825e92f28dd4a0ce94f789ec83ff5d3ecf"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
@@ -431,7 +437,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "a9adb52483bf09551d722e5ef5f1ef3b44773b65fa3e441378a6865ade3bd175"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
@@ -493,7 +500,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "0eb29556815f3714382a90336ade9e0f960ccc8847c931de6a31378b47988bf4"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
@@ -555,7 +563,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "843cfe86f83e86a540b7e09dfa2daec3c02f6f87abbeb2f855171d2dd58c5eb4"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
@@ -617,7 +626,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "cf84766b929ecfefa5828efd53f02fde980f88269a09defae76678d4fde54b61"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
@@ -679,7 +689,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "86727b8ce78e5d6152e4b2de806c1d77ecfb42d6b76871a57113ef94aad8e534"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
@@ -755,7 +766,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "cb55e03884b41d7e7c735be6b3b9fd90bbe8fc7a0f20fae20533fbf134503599"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
@@ -831,7 +843,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "59aa65a288ff2df97e78914a638bf46a9a5d1d19e8cb7f7fa0e23431e31737c3"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
@@ -900,7 +913,8 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "1427a13bdc6e64508ae36d41923db80f67390d29a1c9b5447a791b3cb6974182"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
@@ -962,6 +976,7 @@
       ]
     ],
     "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
-    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop"
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "7fb8721decbad82f3da483f28f6c581ac4a53d8150ef61ff4f1214fe611a7bc4"
   }
 ]

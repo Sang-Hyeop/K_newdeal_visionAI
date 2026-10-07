@@ -34,7 +34,9 @@ class Proximity:
                 elif f[0]<=0 or f[2]>=width-1 or f[3]>=height-1:reason='forklift_extent_clipped'
                 else:
                     intersection=max(0,min(p[2],f[2])-max(p[0],f[0]))*max(0,min(p[3],f[3])-max(p[1],f[1]))
-                    if intersection/((p[2]-p[0])*(p[3]-p[1]))>=.8 and p[3]<footprint[1]:
+                    # High overlap cannot distinguish driver, occluded pedestrian, or a false person box.
+                    # A foot at the vehicle bottom must not turn this ambiguity into CRITICAL.
+                    if intersection/((p[2]-p[0])*(p[3]-p[1]))>=.8:
                         reason='possible_operator_or_occluded_person'
                 continuous=old is not None and old['severity'] is not None and timestamp-old['timestamp']<=self.gap
                 trend=None
