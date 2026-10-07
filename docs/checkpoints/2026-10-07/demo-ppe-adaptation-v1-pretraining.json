@@ -1,0 +1,14 @@
+{
+  "status": "prepared",
+  "initial_weights_sha256": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09",
+  "counts": {
+    "train": 85,
+    "val": 12,
+    "test": 9
+  },
+  "hoods_not_labeled_no_helmet": true,
+  "old_splits_preserved": true,
+  "snapshot_sha256": "c991e111e40e254d25855c329b0eb54efdf2de46c5dc8e45aa6b16ac328c6b30",
+  "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/demo_ppe_adaptation_v1_pretraining",
+  "demo_adaptation_not_independent_accuracy": true
+}

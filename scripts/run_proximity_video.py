@@ -12,6 +12,7 @@ from src.event_contract import export_events
 def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','weights','config']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--demo-adapted',action='store_true',help='Label training-exposed demo adaptation honestly')
     p.add_argument('--sample-fps',type=float,default=5)
     args=p.parse_args()
     if args.output.exists() or not math.isfinite(args.sample_fps) or args.sample_fps<=0:raise ValueError('New output and positive FPS required')
@@ -39,10 +40,10 @@ def main():
                 prediction=model.predict(frame,conf=.1,imgsz=640,device='cpu',verbose=False)[0]
                 detections=[{'class':prediction.names[int(box.cls.item())],'bbox_xyxy':box.xyxy[0].tolist(),'confidence':float(box.conf.item())} for box in prediction.boxes]
                 timestamp=idx/fps
-                record=pipeline.update(timestamp,detections,(h,w),cut);record['frame_index']=idx
+                record=pipeline.update(timestamp,detections,(h,w),cut);record['frame_index']=idx;record['detections']=detections
                 pt=record['people'];ft=record['forklifts'];events=record['events']
                 records.append(record);canvas=frame.copy()
-                cv2.putText(canvas,'IMAGE PROXIMITY CANDIDATES / NOT METERS OR COLLISION PROOF',(15,25),cv2.FONT_HERSHEY_SIMPLEX,.55,(0,190,255),2)
+                cv2.putText(canvas,'DEMO-ADAPTED MODEL / IMAGE PROXIMITY / NOT METERS' if args.demo_adapted else 'IMAGE PROXIMITY CANDIDATES / NOT METERS OR COLLISION PROOF',(15,25),cv2.FONT_HERSHEY_SIMPLEX,.55,(0,190,255),2)
                 cv2.putText(canvas,f't={timestamp:.2f}s {record["pair_observation_status"]}',(15,50),cv2.FONT_HERSHEY_SIMPLEX,.6,(0,190,255),2)
                 for track in pt+ft:
                     a,b,c,d=map(int,track['bbox_xyxy']);cv2.rectangle(canvas,(a,b),(c,d),(255,180,0),2)
@@ -71,7 +72,7 @@ def main():
         'frames_without_confirmed_pair':sum(r['pair_observation_status']=='unconfirmed' for r in records),
         'zone_roi_used':False,'detection_scope':'full_frame','common_events':len(common),
         'transition_events':len(transitions),'scene_cuts_seconds':[r['timestamp_seconds'] for r in records if r['scene_cut']],
-        'limitations':'No 3D calibration/front-rear orientation; detector errors remain; full-frame false positives require review; no ground truth accuracy'}
+        'model_scope':'demo_adapted' if args.demo_adapted else 'development','limitations':'No 3D calibration/front-rear orientation; detector errors remain; full-frame false positives require review; no ground truth accuracy'}
     (args.output/'summary.json').write_text(json.dumps(summary,indent=2));print(json.dumps(summary))
 
 
