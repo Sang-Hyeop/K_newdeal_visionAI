@@ -7,11 +7,13 @@ import cv2,numpy as np,torch
 from ultralytics import YOLO
 from src.tracked_zone import TrackedZone
 from src.event_contract import export_events
+from src.detection_sources import route_detections, model_version
 
 
 def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','weights','config']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--person-weights',type=Path,help='Experimental separate person source; default unchanged')
     p.add_argument('--sample-fps',type=float,default=5)
     p.add_argument('--imgsz',type=int,default=1280)
     args=p.parse_args()
@@ -24,6 +26,11 @@ def main():
     torch.set_num_threads(4);model=YOLO(str(args.weights))
     if model.names.get(0)!='person':raise ValueError('Expected person class 0')
     if config.get('vehicle_conditioned') and model.names!={0:'person',1:'forklift'}:raise ValueError('Conditional lane requires person/forklift model')
+    person_model=YOLO(str(args.person_weights)) if args.person_weights else None
+    if person_model and person_model.names.get(0)!='person':raise ValueError('Separate source requires person class 0')
+    object_hash=hashlib.sha256(args.weights.read_bytes()).hexdigest()
+    person_hash=hashlib.sha256(args.person_weights.read_bytes()).hexdigest() if args.person_weights else None
+    effective_version=model_version(object_hash,person_hash)
     cap=cv2.VideoCapture(str(args.source));fps=cap.get(5);w,h=int(cap.get(3)),int(cap.get(4))
     if not cap.isOpened() or fps<=0:raise ValueError('Unreadable source')
     stride=max(1,round(fps/args.sample_fps));pipeline=TrackedZone(config,(h,w),fps/stride)
@@ -48,6 +55,10 @@ def main():
                 cut=previous is not None and float(np.abs(small-previous).mean())>.18;previous=small
                 prediction=model.predict(frame,classes=None if pipeline.forklift_tracker else [0],conf=.1,imgsz=args.imgsz,device='cpu',verbose=False)[0]
                 detections=[{'class':prediction.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()} for b in prediction.boxes]
+                if person_model:
+                    pp=person_model.predict(frame,classes=[0],conf=.1,imgsz=args.imgsz,device='cpu',verbose=False)[0]
+                    people=[{'class':pp.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()} for b in pp.boxes]
+                    detections=route_detections(detections,people)
                 r=pipeline.update(idx/fps,detections,(h,w),cut);r['frame_index']=idx;r['scene_cut']=cut;r['detections']=detections
                 records.append(r);canvas=frame.copy();polygon=np.array(pipeline.polygon,dtype=np.int32)
                 cv2.polylines(canvas,[polygon],True,(255,190,0) if r['roi_active'] else (120,120,120),3)
@@ -86,7 +97,7 @@ def main():
     (args.output/'observations.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in records))
     transitions=[e for r in records for e in r['transitions']]
     (args.output/'events.jsonl').write_text(''.join(json.dumps(e)+'\n' for e in transitions))
-    export_events(records,args.output/'events_v1.jsonl',feature='zone',context={'camera_id':config['camera_id'],'video':args.source.name,'source_sha256':source_sha256,'model_version':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'config_version':hashlib.sha256(args.config.read_bytes()).hexdigest()})
+    export_events(records,args.output/'events_v1.jsonl',feature='zone',context={'camera_id':config['camera_id'],'video':args.source.name,'source_sha256':source_sha256,'model_version':effective_version,'config_version':hashlib.sha256(args.config.read_bytes()).hexdigest()})
     maxima={};critical=set();states={};access_states={};entries=[];exits=[]
     for r in records:
         for event in r['events']:
@@ -100,7 +111,8 @@ def main():
             if state=='CRITICAL':critical.add(key)
     summary={'source':str(args.source.resolve()),'source_sha256':source_sha256,
              'weights':str(args.weights.resolve()),'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),
-             'config':config,'frames_sampled':len(records),'processed_fps':fps/stride,'imgsz':args.imgsz,
+             'person_weights':str(args.person_weights.resolve()) if args.person_weights else None,'person_weights_sha256':person_hash,'model_version':effective_version,
+             'person_source_status':'experimental_not_promoted' if person_model else 'selected_v16','config':config,'frames_sampled':len(records),'processed_fps':fps/stride,'imgsz':args.imgsz,
              'transition_events':len(transitions),'state_observation_counts':states,
              'max_observed_dwell_by_track':maxima,'critical_track_ids':sorted(critical),
              'access_state_observation_counts':access_states,'observed_entries':entries,'observed_exits':exits,
