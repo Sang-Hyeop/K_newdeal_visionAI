@@ -2,24 +2,31 @@
 import math
 
 
-def head_matches_person(head, person):
+def head_matches_person(head, person, image_height=None):
     """Reject body-sized boxes and heads outside this person's upper region."""
     x1, y1, x2, y2 = person
     a, b, c, d = head
     pw, ph = x2 - x1, y2 - y1
     if pw <= 0 or ph <= 0 or c <= a or d <= b:
         return False
+    clipped = image_height is not None and y1 > 3 and image_height - max(2, .01 * image_height) <= y2 <= image_height + 1
+    # Visible head size cannot use full-body proportions when legs are off-frame.
+    # Continue rejecting body-sized proposals; do not change risk foot anchors.
+    head_width, head_height = c-a, d-b
+    height_limit = min(.85 * ph, .95 * pw, 1.6 * head_width) if clipped else .4 * ph
+    width_limit = .9 * pw if clipped else 1.1 * pw
+    upper_fraction = .65 if clipped else .35
     return (x1 - .15 * pw <= (a + c) / 2 <= x2 + .15 * pw
-            and y1 - .1 * ph <= (b + d) / 2 <= y1 + .35 * ph
-            and d - b <= .4 * ph and c - a <= 1.1 * pw)
+            and y1 - .1 * ph <= (b + d) / 2 <= y1 + upper_fraction * ph
+            and head_height <= height_limit and head_width <= width_limit)
 
 
-def head_owner(head, people):
+def head_owner(head, people, image_height=None):
     """Select nearest compatible upper-head anchor; ties stay unassigned."""
     a,b,c,d=head;cx,cy=(a+c)/2,(b+d)/2
     scores=[]
     for index,person in enumerate(people):
-        if head_matches_person(head,person):
+        if head_matches_person(head,person,image_height):
             x1,y1,x2,y2=person
             scores.append(((cx-(x1+x2)/2)**2+(cy-(y1+.1*(y2-y1)))**2,index))
     scores.sort()
@@ -56,8 +63,8 @@ def infer_person_ppe(frame, people, model, conf=.25, imgsz=640, full_frame_heads
                   'head_candidates': [], 'rejected_candidates': [],
                   'risk_status': 'not_evaluated'}
         for candidate in full_frame_heads or []:
-            if candidate['confidence'] >= conf and head_owner(candidate['bbox_xyxy'], people)==index:
-                record['head_candidates'].append({**candidate, 'source': 'full_frame'})
+            if candidate['confidence'] >= conf and head_owner(candidate['bbox_xyxy'], people,h)==index:
+                record['head_candidates'].append({**candidate, 'source': candidate.get('source','full_frame')})
         if c <= a or d <= b:
             observations.append(record)
             continue
@@ -70,7 +77,7 @@ def infer_person_ppe(frame, people, model, conf=.25, imgsz=640, full_frame_heads
                          'confidence': float(box.conf.item()), 'bbox_xyxy': head,
                          'source': 'person_crop',
                          'model_sources': getattr(box, 'model_sources', ['single_ppe_model'])}
-            key = 'head_candidates' if head_owner(head, people)==index else 'rejected_candidates'
+            key = 'head_candidates' if head_owner(head, people,h)==index else 'rejected_candidates'
             record[key].append(candidate)
         classes = {r['class'] for r in record['head_candidates']}
         if classes == {'helmeted_head'}:

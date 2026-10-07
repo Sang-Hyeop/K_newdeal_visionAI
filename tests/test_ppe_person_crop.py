@@ -2,7 +2,7 @@ import unittest
 from types import SimpleNamespace
 import numpy as np
 import torch
-from src.ppe_person_crop import infer_person_ppe
+from src.ppe_person_crop import infer_person_ppe,head_matches_person
 
 
 class FakeModel:
@@ -21,6 +21,17 @@ class PPEAssignmentTests(unittest.TestCase):
     def observe(self, detections):
         return infer_person_ppe(np.zeros((300,300,3),dtype=np.uint8),
                                 [[100,100,160,260]], FakeModel(detections))[0]
+
+    def test_visible_head_with_clipped_lower_body_is_not_discarded(self):
+        head=[220,590,324,684];person=[219,588,422,720]
+        self.assertFalse(head_matches_person(head,person))
+        self.assertTrue(head_matches_person(head,person,image_height=720))
+
+    def test_clipped_body_box_still_cannot_be_helmet(self):
+        self.assertFalse(head_matches_person([219,588,422,720],[219,588,422,720],image_height=720))
+
+    def test_top_clipped_body_does_not_get_relaxed_head_gate(self):
+        self.assertFalse(head_matches_person([5,0,100,400],[0,0,200,720],image_height=720))
 
     def test_context_change_does_not_relax_head_assignment(self):
         rows=infer_person_ppe(np.zeros((300,300,3),dtype=np.uint8),

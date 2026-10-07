@@ -1,0 +1,2814 @@
+{
+  "status": "training_running_not_promoted",
+  "training": {
+    "initial": "models/pilot_v3_ppe_expansion/ppe.pt",
+    "epochs": 10,
+    "freeze": 10,
+    "lr": 0.0007,
+    "conf_evaluation": 0.5,
+    "iou_evaluation": 0.5
+  },
+  "counts": {
+    "train": 255,
+    "val": 12,
+    "test": 9
+  },
+  "target_unique_crops": 53,
+  "target_repeats": 2,
+  "official_unique_crops": 64,
+  "official_groups": 23,
+  "manual_draft_rejected_before_training": true,
+  "holdouts_preserved": true,
+  "demo_exposed": true,
+  "baseline_reviewed_crop_metrics": {
+    "0": {
+      "TP": 6,
+      "FN": 37,
+      "FP": 5
+    },
+    "1": {
+      "TP": 0,
+      "FN": 21,
+      "FP": 0
+    }
+  },
+  "tests": 75,
+  "optional_inference": "overlapping tiles; real unassigned head WARNING candidates; no fake person box, no unlinked helmet SAFE, conflicts UNKNOWN",
+  "files": [
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/build_report.json",
+      "bytes": 381,
+      "sha256": "7942c660488f967c5e7a0a9c670fa140e18ee11768ebc24286fa0406192ddfc4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/dataset.yaml",
+      "bytes": 181,
+      "sha256": "9a7315ba964e888ccd5310dc224d90feda81dc5d85c6be6b56eba12b7a6f3f2c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/manifest.json",
+      "bytes": 340667,
+      "sha256": "ceed144977670671a66834d43a34f88b2194ad3e47ac1481c4889f2f58cb61b0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/106946599-1632425135217-gettyimages-1235434529-rpe-l-wh-future-xxxx-12-wp_jpeg.rf.9d3fc4848a5f74e18b9ba3fc6b24158c.jpg",
+      "bytes": 93438,
+      "sha256": "35887056ed4e4ff34353afe323738e74de0508f404e43d692400f00c5861c1e2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/fafd4dd5-4137-468d-810f-5908fccc1b42-MJS_Virus-roundys_nws_sears_16_jpg.rf.447baa52e84c95f8a8f09ebb2883895b.jpg",
+      "bytes": 79619,
+      "sha256": "fed8ff4ebfc4d9c404a822f80fe91f7dabdfd6aca90bd456ea8a485a99134b30"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/hard_hat_workers108_png.rf.11f9d226f94c3707cc597bd7c0de0ba1.jpg",
+      "bytes": 63943,
+      "sha256": "0b3ccbf72001b36dd9a7ddf987fe978c0d8589fec031717006799289df2f3a94"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/hard_hat_workers129_png.rf.2b244d6a59c98ddf023603f835d086e6.jpg",
+      "bytes": 48557,
+      "sha256": "1f4543ebbdb6bcec6ce5b0a2c5ad7a1bcda68e7ff1411d332e1ebc27c4261345"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/hard_hat_workers190_png.rf.14f43ffb516bc04ed2b48b1389a631e8.jpg",
+      "bytes": 62482,
+      "sha256": "fddec0acaa3bb27b20774167c768dbf55a837d66fc789b076253e966612c07d2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/images_jpg.rf.06f9864dabc1599189696c01dc53045d.jpg",
+      "bytes": 79033,
+      "sha256": "bb0bdbe17743c69d71126afce318fe03427a38efa96ce4359160cee2bdfa2bba"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/isor-standing-in-warehouse-with-his-arm-crossed-looking-at-camera-1936960675_jpg.rf.9e12fb62602061969d4c9812d96a22ad.jpg",
+      "bytes": 57386,
+      "sha256": "e7db13f746dac777fff86737a41111fccc2ec79de5babf49e1083f9b21c19f76"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/smartyard_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.jpg",
+      "bytes": 77489,
+      "sha256": "5dc92565dcd22625d6dcb9b8bef9cccbbe15ccffdc03cd822a10e6d9def0c37b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/images/smartyard_S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.jpg",
+      "bytes": 72445,
+      "sha256": "a27e83f96e1ce9374ca17646d6997659d4864c7c0a6facde59d23f29f9f638f1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/106946599-1632425135217-gettyimages-1235434529-rpe-l-wh-future-xxxx-12-wp_jpeg.rf.9d3fc4848a5f74e18b9ba3fc6b24158c.txt",
+      "bytes": 42,
+      "sha256": "bccd3ca74fbd3b82d01d560ca365b6021413786725ddc543b88263e152ff256e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/fafd4dd5-4137-468d-810f-5908fccc1b42-MJS_Virus-roundys_nws_sears_16_jpg.rf.447baa52e84c95f8a8f09ebb2883895b.txt",
+      "bytes": 44,
+      "sha256": "87e52ebc6338e073bb9580addf1e511833db0d5205cddcd5b8ed580be4987dd5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/hard_hat_workers108_png.rf.11f9d226f94c3707cc597bd7c0de0ba1.txt",
+      "bytes": 79,
+      "sha256": "887d223df208d841186dc86aa7f395ab4c78d918e49a83b7f44248ee1ecfc9eb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/hard_hat_workers129_png.rf.2b244d6a59c98ddf023603f835d086e6.txt",
+      "bytes": 42,
+      "sha256": "82bbe0d992e2b54b859b4c2587a1667feaba564634e01f01fcb141aabe8c175b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/hard_hat_workers190_png.rf.14f43ffb516bc04ed2b48b1389a631e8.txt",
+      "bytes": 124,
+      "sha256": "38a5eecc841a74c933d615afb7cc05665609774416fb7f38b271da61dafebe6b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/images_jpg.rf.06f9864dabc1599189696c01dc53045d.txt",
+      "bytes": 40,
+      "sha256": "8e371fbf846baa94509942371686bac90601a091033722d1b5f96efebff3aaf4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/isor-standing-in-warehouse-with-his-arm-crossed-looking-at-camera-1936960675_jpg.rf.9e12fb62602061969d4c9812d96a22ad.txt",
+      "bytes": 40,
+      "sha256": "9edd073800361baad775f32ca77d439fa59b8b251872d38f638171e816f5344a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/smartyard_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000513.txt",
+      "bytes": 46,
+      "sha256": "16efe57c03e816ed59d712204309efd1ae1403abb75c8d7396cfd19da2f1013b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/test/labels/smartyard_S63_DATA3_H0_L1_D2023-09-20-03-16_001_000836.txt",
+      "bytes": 46,
+      "sha256": "fb33ab5534a1cd26cc00c29fa507ecbe490b183fdacf78efaf3f9a1e821332e7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/0504_WarehouseWorkers_png.rf.9ab0fd904f1e919258139e155b6689a7.jpg",
+      "bytes": 40469,
+      "sha256": "36141754ac0c072ae35e748293cd2a0de4d985c343ddee17e1dd8dd716b788b6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/0x0_jpg.rf.c0e4be134be30fcf4885dbb1b8c75ddb.jpg",
+      "bytes": 75522,
+      "sha256": "647ee3ca1599c47778679f229d9f20ff5b5d4cd4cce2d7dc4f8956444ba042c0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/1000_F_284375138_FpZGFFWKiFWR4x2IdicSQ9ELvpJys6Vy_jpg.rf.1b5c1f7c04155d9cd990aa797b8c87ad.jpg",
+      "bytes": 66370,
+      "sha256": "30c91bc680f8e5e41c18e2bc89ea3c1f02abe2d2fa9507a79cc9e28a53fdb63a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/123906371-group-of-business-people-and-warehouse-workers_jpg.rf.957a60d5c896091c60d6231ea69cfd67.jpg",
+      "bytes": 61206,
+      "sha256": "87750743460f60e176fae0cb0d5524e4f07db1413cb9bd18639dd492d0af277b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/360_F_390579418_XxTdtqjqDtIaEhZ0RXTbHtoSqP2mTY9r_jpg.rf.999d9438161d30f3a9e7a89b10099de9.jpg",
+      "bytes": 46121,
+      "sha256": "cce85f7077b54a12e2b649bd076f2cb880ce229f5b1f0c08cb8765929cc5d118"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/40132536_14117106_Large_jpg.rf.05bd1b6460ddbe524aa6cff6da251a4f.jpg",
+      "bytes": 65479,
+      "sha256": "974416d11bffe697a37891257eed5d2d98b15ebf3148501135b5c21f484255da"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/51d9d69c-3ab0-11ed-9dda-0242ac110003-png-hero_image_png.rf.1520e0e91e8ee043f9bfb8161d710eed.jpg",
+      "bytes": 82432,
+      "sha256": "5dc2a2823c65769ab840dd20dc19f6265abf01f975ddb40ed73fc0ed95cfacbd"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/5afcbd249d90c-image_jpg.rf.15c512b88a4a58a876f193b192c78950.jpg",
+      "bytes": 96517,
+      "sha256": "c02cf12dd04d1fee65e7ecb72024ec4d985655a798a14db5ae90a48d964de3dc"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/707a0c7f-ce9c-437c-84f5-9e12539433ca_jpg.rf.b845b636a93856cbef373f8efa2fe30c.jpg",
+      "bytes": 77898,
+      "sha256": "ad930ffe927b1feb7c0720cd24e70ce6a5221b3b42ec0d7162277cb2fad085ab"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/7_Types_of_Positions_in_a_Warehouse_to_Consider_jpg.rf.7549075967345ac99752437845bc4611.jpg",
+      "bytes": 50909,
+      "sha256": "f29ba7399e98135e7f1a7e163052b6f141ee6860a60d201b660ab023c24d3381"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/Robust-AI-Workmates-Business_jpg.rf.3e6f6f1c3231c6001028c344c873ed49.jpg",
+      "bytes": 74737,
+      "sha256": "9334f041c62483bedc369cf4ef501de14100c2ab783d4cdd480a1cbb66453ceb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/Steel_King_guard_rails_in_use-629903b85ae5d_png.rf.1908ed54be10c7fa97315e2dc5060e7b.jpg",
+      "bytes": 114865,
+      "sha256": "4db93a37e9a3a3b938f4c46f8fb9412fc7f2221f2f28593e70e1164b183220d9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/Warehouse-Management-Outsourcing-When-Should-You-Consider-a-3PL-770x253_jpg.rf.efcc193d2dc5563e49b353a2fa07e475.jpg",
+      "bytes": 47014,
+      "sha256": "4a19c480d5e39a124c186b7a728aa02f1188e00654700ed74664bdddaf3aa792"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/Warehouse_Worker_jpg.rf.94940605a555298570b1dc597d03b256.jpg",
+      "bytes": 63736,
+      "sha256": "3eec2e2f852ce8569b7a5104e31c1d9d1ea458a6f378baadf2f607ddf886ed06"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/_CO60893_jpg.rf.62fc0a4f5352bd742094e0d9067ad62e.jpg",
+      "bytes": 50658,
+      "sha256": "5b72f7f5c2accac46ce3b1eeb5d6b9af3f2898d87c5dd439d371f21be396e3fa"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/benefits-of-warehouse-management-system-for-small-businesses-1200x627_jpg.rf.fef8c1f531827a6e2c505ad8b6da9f5c.jpg",
+      "bytes": 61723,
+      "sha256": "10c7b693db17d26341910fd3a5efe82f0b78d3c575866517946d09388b82c697"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/bigstock-wholesale-logistic-people-an-118565333-crop_jpg.rf.6a4c7192c523193cccbf68bed7330362.jpg",
+      "bytes": 84556,
+      "sha256": "0d65c7e7da9c2f4e70b0ba7b6b8a4f8d0ef47915da45ab5075d88291e5a7734d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/blog-266-pic-min_jpg.rf.3fb84e52f58a2702a6361fef9d943553.jpg",
+      "bytes": 65975,
+      "sha256": "c30e66002c061fcd482024feeb5589023f832c4ff77763bb990b47ef6b068ddd"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_0_r0.jpg",
+      "bytes": 244654,
+      "sha256": "c423f394e2bc1f9cf1df03441c85254dfbc3ae270238c0d185714847a0d751f5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_0_r1.jpg",
+      "bytes": 244654,
+      "sha256": "c423f394e2bc1f9cf1df03441c85254dfbc3ae270238c0d185714847a0d751f5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_0_r2.jpg",
+      "bytes": 244654,
+      "sha256": "c423f394e2bc1f9cf1df03441c85254dfbc3ae270238c0d185714847a0d751f5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_1_r0.jpg",
+      "bytes": 263954,
+      "sha256": "ff4a6e34ecd472b579f5094647325fed182e1ed4f051d890bf677c25e282bd7d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_1_r1.jpg",
+      "bytes": 263954,
+      "sha256": "ff4a6e34ecd472b579f5094647325fed182e1ed4f051d890bf677c25e282bd7d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_1_r2.jpg",
+      "bytes": 263954,
+      "sha256": "ff4a6e34ecd472b579f5094647325fed182e1ed4f051d890bf677c25e282bd7d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_2_r0.jpg",
+      "bytes": 268966,
+      "sha256": "64bca952e7f618e63646894b7d16833d975de1370865eda6abf7dcb442dc438d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_2_r1.jpg",
+      "bytes": 268966,
+      "sha256": "64bca952e7f618e63646894b7d16833d975de1370865eda6abf7dcb442dc438d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_2_r2.jpg",
+      "bytes": 268966,
+      "sha256": "64bca952e7f618e63646894b7d16833d975de1370865eda6abf7dcb442dc438d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_3_r0.jpg",
+      "bytes": 417422,
+      "sha256": "fd0057ccd06b5eb6ca33dcdae9f5af941fbd763f400a4f49832c0ee033a11f4b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_3_r1.jpg",
+      "bytes": 417422,
+      "sha256": "fd0057ccd06b5eb6ca33dcdae9f5af941fbd763f400a4f49832c0ee033a11f4b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_3_r2.jpg",
+      "bytes": 417422,
+      "sha256": "fd0057ccd06b5eb6ca33dcdae9f5af941fbd763f400a4f49832c0ee033a11f4b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_4_r0.jpg",
+      "bytes": 417132,
+      "sha256": "27733458b3837f9bce089f44a16c6bd225cb2e17bdf34b8fdb2e400de311dc1e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_4_r1.jpg",
+      "bytes": 417132,
+      "sha256": "27733458b3837f9bce089f44a16c6bd225cb2e17bdf34b8fdb2e400de311dc1e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_4_r2.jpg",
+      "bytes": 417132,
+      "sha256": "27733458b3837f9bce089f44a16c6bd225cb2e17bdf34b8fdb2e400de311dc1e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_5_r0.jpg",
+      "bytes": 469660,
+      "sha256": "44745610f30db2278867053db61b73bc4693dff952bdb8f9e2132b0ca9077734"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_5_r1.jpg",
+      "bytes": 469660,
+      "sha256": "44745610f30db2278867053db61b73bc4693dff952bdb8f9e2132b0ca9077734"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_5_r2.jpg",
+      "bytes": 469660,
+      "sha256": "44745610f30db2278867053db61b73bc4693dff952bdb8f9e2132b0ca9077734"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_6_r0.jpg",
+      "bytes": 11226,
+      "sha256": "4ef25f5441f1f72fa708e8db77e0b13d867d48ce15d3ad3312dbfdf93a95090a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_6_r1.jpg",
+      "bytes": 11226,
+      "sha256": "4ef25f5441f1f72fa708e8db77e0b13d867d48ce15d3ad3312dbfdf93a95090a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_6_r2.jpg",
+      "bytes": 11226,
+      "sha256": "4ef25f5441f1f72fa708e8db77e0b13d867d48ce15d3ad3312dbfdf93a95090a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_7_r0.jpg",
+      "bytes": 9808,
+      "sha256": "d56b6b232b05b8f94a6dcc88b2f61a13bf9468295206012624a146db4bc0ad8c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_7_r1.jpg",
+      "bytes": 9808,
+      "sha256": "d56b6b232b05b8f94a6dcc88b2f61a13bf9468295206012624a146db4bc0ad8c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_7_r2.jpg",
+      "bytes": 9808,
+      "sha256": "d56b6b232b05b8f94a6dcc88b2f61a13bf9468295206012624a146db4bc0ad8c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_8_r0.jpg",
+      "bytes": 17026,
+      "sha256": "11a4ed5d59b18a09fb6182d5730c7fc0949ed2dde37d32e7608c9b923e79dd00"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_8_r1.jpg",
+      "bytes": 17026,
+      "sha256": "11a4ed5d59b18a09fb6182d5730c7fc0949ed2dde37d32e7608c9b923e79dd00"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/demo_ppe_8_r2.jpg",
+      "bytes": 17026,
+      "sha256": "11a4ed5d59b18a09fb6182d5730c7fc0949ed2dde37d32e7608c9b923e79dd00"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/depositphotos_221570588-stock-photo-logistics-people-working-warehouse_jpg.rf.001f4da21e001c4118a46c39c92e4508.jpg",
+      "bytes": 80638,
+      "sha256": "3c8c7be2bc793fb31070fd97efb388849b58335818c53a926d4169e22eec2099"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/hard_hat_workers127_png.rf.561c748e1ba72603746c55f6f6f403e7.jpg",
+      "bytes": 55672,
+      "sha256": "7540c116e3380a89ea67938cec16233d2589542da921e87cd6101e1d3b3d3afc"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/hard_hat_workers198_png.rf.2e146c471f5020589894e1a0c242ab76.jpg",
+      "bytes": 44255,
+      "sha256": "61570b9577e59dccccf35d84dc5af2c4d546988570f3349a341724adb8106893"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/hard_hat_workers235_png.rf.1f26afda914221e4d1b70f4a3b1aa84e.jpg",
+      "bytes": 36887,
+      "sha256": "f436037043f030a6f90ba4a9540f42d08436da6cbda62bee901a829624d47e51"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/hard_hat_workers94_png.rf.efbac90883c62f17c86d805cbb09c4ee.jpg",
+      "bytes": 33705,
+      "sha256": "7514e92e82877a655ffb63ae51d2843f94d65629fc1f3fd82230ca9c204f8b76"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/image26_jpeg.rf.2d834d90619276f4d577c30fb10f27aa.jpg",
+      "bytes": 69700,
+      "sha256": "518154c24f2d3df17bc266171e0379637b5838586bc4465c6164dd22e18be557"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/images10_jpg.rf.fbc5d991afe385f45d7fa287a0fa9c4e.jpg",
+      "bytes": 68515,
+      "sha256": "d14641edd7846f9c1de5f5aa3d011e2ba38e151c96b273a8262bc78272174da0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/images20_jpg.rf.0d1cf5229e44d1025780870bc5fdcd7c.jpg",
+      "bytes": 62962,
+      "sha256": "1a37c1920abcc378eeb85c31f3b24f39d261d90b55c9528b0a1e47680639da88"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/images23_jpg.rf.1b3d874bb4deae6a2aacd5115c05c5e6.jpg",
+      "bytes": 70874,
+      "sha256": "d5b7432e1f9def3033a6b75a5c2ad2fcd2acede07548c93aeb0b5f830983ff5f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/images24_jpg.rf.0756ee69419cf87eab6f86f7dd13caf2.jpg",
+      "bytes": 57198,
+      "sha256": "07b2c2660eff3ef6b17dcceebb7bdc53c6edbc8c68ac87c23b1296e30a6dc504"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/images25_jpg.rf.281afdf0be68e12d27d83835fc0882ed.jpg",
+      "bytes": 56213,
+      "sha256": "f8e97df17c246155132fee0ac5ab4301c4d3aa85d7fd0c58f6aac5bbb99ea19a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/images29_jpg.rf.3d3003f756c38eabd98ccbb0058403df.jpg",
+      "bytes": 70163,
+      "sha256": "0fab5cba99acc34ce857023e3bda9af8d24c48312303f9e4d857e706d8e0e57b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/industrial20pr208152220972x1296_jpg.rf.6a0030b2e1302aa1210f0fc1f3b31491.jpg",
+      "bytes": 90460,
+      "sha256": "bda14fb7ff5b624f4f9233a0ff8d1a322894a5103a892ba1ffcf5e43cd8f355f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/learn-warehouse-1-1_jpg.rf.34e15c5c4bc039668a338f147258dd41.jpg",
+      "bytes": 65509,
+      "sha256": "2174e9ef2edbbddbbe7ee5be1ae1ec61585c4179a299188ab1854782938c5443"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/millennial-warehouse-workers-full-1024x683-1_jpeg.rf.0a53e56557f7d842f44635a977a6f455.jpg",
+      "bytes": 77211,
+      "sha256": "56d800f8fd17feeb1dd4530aa45a2d1eab1b9259ee91ffa579e6de371d106bbb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/nt-and-people-concept-warehouse-worker-and-businessman-with-clipboard-and-ta_jpg.rf.2d12e57305bbb44a6d83763ec52b656c.jpg",
+      "bytes": 63104,
+      "sha256": "a0def51784fa74418bc11dc63dca202a109e2f26f59b7d91a3b958e6601cc3d7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_000_r0.jpg",
+      "bytes": 27948,
+      "sha256": "0511d2fe79cb383361d4c788723e5fdcc40020767d2cedb6e44f4595b811322e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_001_r0.jpg",
+      "bytes": 73997,
+      "sha256": "e688b735ed236c8bc157b847a20a868f63f39fa71db77127ebc4ac92a24c6060"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_002_r0.jpg",
+      "bytes": 27393,
+      "sha256": "b853c70496763ebb86f3d167a73749457c8ffa617eb89975f356d0f549099d09"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_003_r0.jpg",
+      "bytes": 51411,
+      "sha256": "71774d62d0e28974d43d2c4802038f78c7760fabe2592137da427df13200e272"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_004_r0.jpg",
+      "bytes": 32811,
+      "sha256": "4bdfdb0704976345dce27b5f3321eb412ea619d852a3ab7da1f91c51de147130"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_005_r0.jpg",
+      "bytes": 36311,
+      "sha256": "5f195ad56ea251de0a04a88877874ee7ff160f2242d6c6afb67f2f7486aff996"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_006_r0.jpg",
+      "bytes": 31052,
+      "sha256": "3e8cfd0030af28962651eeaf657b7b536c657570a30f1549765e6007c5e09d5d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_007_r0.jpg",
+      "bytes": 26072,
+      "sha256": "72aa8878123d5210758ce0d7ac1bf2adcd386a97f24870ab1d9ccc79ce06a391"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_008_r0.jpg",
+      "bytes": 26828,
+      "sha256": "03aaa817243169381b1f2750d6f9f04bda67c0a5295b43666eeee4a0af6e1b88"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_009_r0.jpg",
+      "bytes": 67364,
+      "sha256": "6aa5da673c530f7d7ca84037dd16919b24a91128ed2923f520d62153340638ac"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_010_r0.jpg",
+      "bytes": 54845,
+      "sha256": "26bb8aeb6f2a93627ce10d9e98e4eaf0b522ca2b38dded9cd7110a742848ef8d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_011_r0.jpg",
+      "bytes": 78505,
+      "sha256": "714fd81205b8ddc1cfd034c614b1fbb8b78929b0580bbcc7d32085732431e7a8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_012_r0.jpg",
+      "bytes": 46636,
+      "sha256": "f0ea0b83b3bb80c55c7a709e901f595106f53851ca690adf9f842c9bd547c5b5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_013_r0.jpg",
+      "bytes": 40432,
+      "sha256": "99d7676b0d3f1e132c30cd60024399ffbb4e243635a43e395b9e876fd1ca1cfe"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_014_r0.jpg",
+      "bytes": 83212,
+      "sha256": "b588613315d0a7d7580873c518953c527da9ca737930f0e8dd11609b9cde9784"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_015_r0.jpg",
+      "bytes": 112450,
+      "sha256": "be325cc4a3379d7a9f1566d0eb08bd4aba633e620d4ecccdb3f5cf2195a09354"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_016_r0.jpg",
+      "bytes": 58067,
+      "sha256": "78ef42f5f358da7fbc6dd8c73e875e825cc97de27e9de3b290b44d3a8d938a9f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_017_r0.jpg",
+      "bytes": 57955,
+      "sha256": "b1c6f1f556e89e14e9a3f862a9032bb7e4051b33255abfc487b12332e8e92537"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_018_r0.jpg",
+      "bytes": 33135,
+      "sha256": "6dfd2a68f845f44ff44ac65e209223a3fa3aa05c7a89ccf43941e1bce9694590"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_019_r0.jpg",
+      "bytes": 54627,
+      "sha256": "8874ca7ccd828e63e8ceeed5643e1baccb9030b9b3a404ffda02b02c0b53db4a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_020_r0.jpg",
+      "bytes": 32005,
+      "sha256": "22dee1304f4d203e8470bdd286cc142868dbc4ee058e4fceca8bf847f4f5c809"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_021_r0.jpg",
+      "bytes": 52108,
+      "sha256": "967781a219255f4ae9ba7b49a8b6ae0fe04ce75d0427440f8530420b2841dbf5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_022_r0.jpg",
+      "bytes": 45338,
+      "sha256": "766d1ac048f59ca3a6e6e54309aeb2021c6e2ab516319eeabb28ecb607899eb8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_023_r0.jpg",
+      "bytes": 87505,
+      "sha256": "0d8dbff0147752eec19bf66b28242090de9a68b2723dd12a71dae7006a56ac2c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_024_r0.jpg",
+      "bytes": 36072,
+      "sha256": "c847619992b7d13bb86e0f85f9c74a5fb02fcba337f11d7b006557a8dd1c9c7c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_025_r0.jpg",
+      "bytes": 22410,
+      "sha256": "0d704f752c4e4b56d9ae5592188a9126b25204ade0a1f3db35c1a470240ad099"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_026_r0.jpg",
+      "bytes": 13784,
+      "sha256": "412635a5ff66232c4536fa57e317700c4add92705d7d22ca6adb19e33d8c3e54"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_027_r0.jpg",
+      "bytes": 7538,
+      "sha256": "bec3223efd33ce60d9d93550485413314e619d7dd7e3e24e1ffb1a7c5dcafe11"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_028_r0.jpg",
+      "bytes": 33898,
+      "sha256": "ea12f837e5b41e647ea4fc775677552cc902d71398f0758ce7a1732bb4b2b529"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_029_r0.jpg",
+      "bytes": 26769,
+      "sha256": "675654459a5aa7e1fdcf811a9cd97e57a19000e024f6938bfe23e471da6259b1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_030_r0.jpg",
+      "bytes": 35109,
+      "sha256": "1196f48969784686aeb4b2566bc9d0e9f9a61b8b2095b9600fa17c51b03386f5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_031_r0.jpg",
+      "bytes": 31344,
+      "sha256": "a1f43d9ebd3a4410ed7d552fc9c89ec44c3ce4f6d6fac791341346e85dea896a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_032_r0.jpg",
+      "bytes": 75909,
+      "sha256": "e10d35036091c6389f372b1b6241985eb694b35448eea0b0701a05485344ca7a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_033_r0.jpg",
+      "bytes": 21436,
+      "sha256": "121c1ff1221f281c41b4a44c12550fcccd8db2818153d70bf7f17af039d60e36"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_034_r0.jpg",
+      "bytes": 8431,
+      "sha256": "adb0c063eadd8ce79c48d93d5b229ad4546ad6796ffbae9d0d2ab3497cddddff"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_035_r0.jpg",
+      "bytes": 47823,
+      "sha256": "1e5e3fa4932a7e646181d8ffbbde291d11db3dab49c6ced0098a7bbf30187d92"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_036_r0.jpg",
+      "bytes": 22883,
+      "sha256": "71144271694c861590e7a159242b7b902a31b6a3629df927198a9f91f706be80"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_037_r0.jpg",
+      "bytes": 82148,
+      "sha256": "505ae62b0cb2952f19346c2b9ab0d455134e2f53e12057e964adf6239d99d503"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_038_r0.jpg",
+      "bytes": 67317,
+      "sha256": "60b963ae42fa63de607e1dbae6c7ba6350a00159db023759bff90717d0dc0ed7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_039_r0.jpg",
+      "bytes": 61801,
+      "sha256": "488d8d44d1d5375ba624157e45938f5745fc069df7ecfb3a1a6939cf445f691f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_040_r0.jpg",
+      "bytes": 51108,
+      "sha256": "29a58d88e52921785ab856920f39e42f90df0282387ca395bd85d8e301fd9327"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_041_r0.jpg",
+      "bytes": 21590,
+      "sha256": "cf4411d44d273adbdb981ebde7612944183630fbfa55f16684c5d505ce44db76"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_042_r0.jpg",
+      "bytes": 20347,
+      "sha256": "85cbc27e3e868dd9b051517d6108e51dc107858ab6adfabca13c5662d602c460"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_043_r0.jpg",
+      "bytes": 70437,
+      "sha256": "681bbe7bb8f5138e57d1c6d9e01cc3925c24cfd128ceb3d9ddf62e0b1f26f832"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_044_r0.jpg",
+      "bytes": 59331,
+      "sha256": "bafe44192802bf46e2cefeb7c749fcedfe53a989f4315554ba526fd64408811a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_045_r0.jpg",
+      "bytes": 11007,
+      "sha256": "52a09996bba49995108c6b002375ee77751844bbdd5272611deced368f3d23cb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_046_r0.jpg",
+      "bytes": 32228,
+      "sha256": "a3a8e155464509189e123330b3d1714463773d531323169fd2254e3e07536ae3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_047_r0.jpg",
+      "bytes": 19622,
+      "sha256": "4830c97d49409b8204f497172805e47b78872559cfaa0764a1619fe8149c70b6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_048_r0.jpg",
+      "bytes": 55683,
+      "sha256": "6a037e9fe888b1ae4c2b142428d1d3772f6fed806ca503cc00c189f5d9eea6c4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_049_r0.jpg",
+      "bytes": 26208,
+      "sha256": "11879940bd10a4ceea6531278914b1e92b3ba76dc30978e8684656bdd0f75d84"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_050_r0.jpg",
+      "bytes": 49642,
+      "sha256": "b7db48281f2e8f239da7d905a85a96f12282e3f03e7c774ac844d9bd2c3d1fa7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_051_r0.jpg",
+      "bytes": 19714,
+      "sha256": "79fcb3411fe414bed390a3ce3dc67e2f6e22432fe435ae689ae6ffa06703ca20"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_052_r0.jpg",
+      "bytes": 31763,
+      "sha256": "5030be0b35fda0435e88e86e0dc99f639922dc7a7e87dc22ff130c07e7c28b1d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_053_r0.jpg",
+      "bytes": 46546,
+      "sha256": "f921164f01c4c11358d8651ed469f1ca90b9b117a0a494171e1e1605e22cdb72"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_054_r0.jpg",
+      "bytes": 4877,
+      "sha256": "d0099192f532f9e44f498b940974a012eefda271077fcca765adce5b47b326ed"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_055_r0.jpg",
+      "bytes": 16055,
+      "sha256": "6cc7ab3a34dfe23d8a08c1792a830607a08944cabe2c6d3e6feea2ea49b59b07"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_056_r0.jpg",
+      "bytes": 43363,
+      "sha256": "a624c63c4cab61a753360f17d56b4be5a3c7c8415d9b875b8cf770ba93d1aaca"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_057_r0.jpg",
+      "bytes": 41127,
+      "sha256": "9f79bbc6d8c84dc18ded8993250b97992f9bb7e9dd054df24d63bf60340e7a2b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_058_r0.jpg",
+      "bytes": 36457,
+      "sha256": "7b0a1da37e4908916f688f451fc4939e4de496fba2072d8ea7d85fdd1e672916"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_059_r0.jpg",
+      "bytes": 57637,
+      "sha256": "3e1b0cb26b57a26068452e684ef36d2281f4bf0ccc87def7c8945e569a486cda"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_060_r0.jpg",
+      "bytes": 36743,
+      "sha256": "1a83f17baf9954ae8aabb7e50999d8b2ed28c53014392104ca59208f0273d238"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_061_r0.jpg",
+      "bytes": 46169,
+      "sha256": "a1b4b389b1c8abb52b18232b2ae2197aee523855aadca5f7722052062b686894"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_062_r0.jpg",
+      "bytes": 56005,
+      "sha256": "7562aeb141791df5a0531d3555b184a33edc32c509f35f3e711d4cd9bae768f3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_support_063_r0.jpg",
+      "bytes": 47868,
+      "sha256": "bd7553ec810705376d118597bcea5999e6cc5db7985836c637e0b1f31a00d638"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_000_r0.jpg",
+      "bytes": 5512,
+      "sha256": "69f1c2c93641620f0384bb4d99ccce65775585492da690a91a6976de0bfb1191"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_000_r1.jpg",
+      "bytes": 5512,
+      "sha256": "69f1c2c93641620f0384bb4d99ccce65775585492da690a91a6976de0bfb1191"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_001_r0.jpg",
+      "bytes": 5323,
+      "sha256": "b1a81cc75dc34f73f670da372a981b662e13c5d61f5b6bac414cb3a7b6aeb382"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_001_r1.jpg",
+      "bytes": 5323,
+      "sha256": "b1a81cc75dc34f73f670da372a981b662e13c5d61f5b6bac414cb3a7b6aeb382"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_002_r0.jpg",
+      "bytes": 6298,
+      "sha256": "5bc16b87b3481c4e6d216eaddae43be533e5996a84b1ebd44aadb96b5c89ee7a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_002_r1.jpg",
+      "bytes": 6298,
+      "sha256": "5bc16b87b3481c4e6d216eaddae43be533e5996a84b1ebd44aadb96b5c89ee7a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_003_r0.jpg",
+      "bytes": 5322,
+      "sha256": "aec19c86d07b1c7149bf49215ab5cf378be4054b2fa92aee882ac92ff42799cb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_003_r1.jpg",
+      "bytes": 5322,
+      "sha256": "aec19c86d07b1c7149bf49215ab5cf378be4054b2fa92aee882ac92ff42799cb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_004_r0.jpg",
+      "bytes": 6490,
+      "sha256": "785abb6f594ccad5a26c0738a59bcaf507351227affc16715ebfd67c03810b65"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_004_r1.jpg",
+      "bytes": 6490,
+      "sha256": "785abb6f594ccad5a26c0738a59bcaf507351227affc16715ebfd67c03810b65"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_005_r0.jpg",
+      "bytes": 4826,
+      "sha256": "1cf52d4c6ec979aa186a6641ea7e7c13a496888a9d00ea277a191c9f74d554a8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_005_r1.jpg",
+      "bytes": 4826,
+      "sha256": "1cf52d4c6ec979aa186a6641ea7e7c13a496888a9d00ea277a191c9f74d554a8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_006_r0.jpg",
+      "bytes": 4976,
+      "sha256": "693423f2bcaf68abc6f06c4ac048a14c2526e0242cd74d13770832683ceba3d9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_006_r1.jpg",
+      "bytes": 4976,
+      "sha256": "693423f2bcaf68abc6f06c4ac048a14c2526e0242cd74d13770832683ceba3d9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_008_r0.jpg",
+      "bytes": 6158,
+      "sha256": "a5ee313113991b248dee96343f343a0e154f19b0b2656345b166fae5d09794f0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_008_r1.jpg",
+      "bytes": 6158,
+      "sha256": "a5ee313113991b248dee96343f343a0e154f19b0b2656345b166fae5d09794f0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_009_r0.jpg",
+      "bytes": 7393,
+      "sha256": "11ef9cf800c5b818b571edbf9036ddb194ce2ed36b5680da69b17c5a391b78bb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_009_r1.jpg",
+      "bytes": 7393,
+      "sha256": "11ef9cf800c5b818b571edbf9036ddb194ce2ed36b5680da69b17c5a391b78bb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_010_r0.jpg",
+      "bytes": 6756,
+      "sha256": "c347feb62cccc547cee4d482d2c53d57bb640439f1a8d90a03f12440b34d04a1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_010_r1.jpg",
+      "bytes": 6756,
+      "sha256": "c347feb62cccc547cee4d482d2c53d57bb640439f1a8d90a03f12440b34d04a1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_011_r0.jpg",
+      "bytes": 9929,
+      "sha256": "bc36f8ab8d53c4e76737d7fe5e02b454fe3744eb1f960ec6b5d46023c52a122d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_011_r1.jpg",
+      "bytes": 9929,
+      "sha256": "bc36f8ab8d53c4e76737d7fe5e02b454fe3744eb1f960ec6b5d46023c52a122d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_012_r0.jpg",
+      "bytes": 3175,
+      "sha256": "8b11db277387b31203c9c93d6797ebcf95b9be82f2733da41b965bcad08e4716"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_012_r1.jpg",
+      "bytes": 3175,
+      "sha256": "8b11db277387b31203c9c93d6797ebcf95b9be82f2733da41b965bcad08e4716"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_013_r0.jpg",
+      "bytes": 5363,
+      "sha256": "b53b13cab3867fd3068a640aaee8b8f209ed52b5b63e44bb4513f147b89d1cc9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_013_r1.jpg",
+      "bytes": 5363,
+      "sha256": "b53b13cab3867fd3068a640aaee8b8f209ed52b5b63e44bb4513f147b89d1cc9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_014_r0.jpg",
+      "bytes": 8962,
+      "sha256": "2ceeddae89f9235743229e8a5c70b010a331e543588f19fbe08e012ea1869b38"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_014_r1.jpg",
+      "bytes": 8962,
+      "sha256": "2ceeddae89f9235743229e8a5c70b010a331e543588f19fbe08e012ea1869b38"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_016_r0.jpg",
+      "bytes": 14320,
+      "sha256": "c359a3381805520da79a4d0442c279fe7cfc906e7a680e821f0b4f44881b45c7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_016_r1.jpg",
+      "bytes": 14320,
+      "sha256": "c359a3381805520da79a4d0442c279fe7cfc906e7a680e821f0b4f44881b45c7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_017_r0.jpg",
+      "bytes": 6538,
+      "sha256": "e9fed2f31147cc746ae4ba44cfef5546034e086b447c1783ba4980c9d526c472"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_017_r1.jpg",
+      "bytes": 6538,
+      "sha256": "e9fed2f31147cc746ae4ba44cfef5546034e086b447c1783ba4980c9d526c472"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_018_r0.jpg",
+      "bytes": 8321,
+      "sha256": "6293135bdb08b9c54b7fad175c2cc980a52eac2dcd72dc6dd2a0cf7503d8bc4b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_018_r1.jpg",
+      "bytes": 8321,
+      "sha256": "6293135bdb08b9c54b7fad175c2cc980a52eac2dcd72dc6dd2a0cf7503d8bc4b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_019_r0.jpg",
+      "bytes": 7744,
+      "sha256": "ea31af0f034525e695ffdd61cff4ba8b014e8a4ff08c25c6eb7761954459a44b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_019_r1.jpg",
+      "bytes": 7744,
+      "sha256": "ea31af0f034525e695ffdd61cff4ba8b014e8a4ff08c25c6eb7761954459a44b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_020_r0.jpg",
+      "bytes": 6925,
+      "sha256": "027bd98dda09aec6230b04474d0bb636beab3c719549c8fd42cdb68b8b406061"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_020_r1.jpg",
+      "bytes": 6925,
+      "sha256": "027bd98dda09aec6230b04474d0bb636beab3c719549c8fd42cdb68b8b406061"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_021_r0.jpg",
+      "bytes": 3419,
+      "sha256": "e353ba05e9c3f7818c92ea027d3580459285ad501704b6fecfede0f16802d86a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_021_r1.jpg",
+      "bytes": 3419,
+      "sha256": "e353ba05e9c3f7818c92ea027d3580459285ad501704b6fecfede0f16802d86a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_022_r0.jpg",
+      "bytes": 20731,
+      "sha256": "066ecc1fb95610d50885c784405e03e7b97919ea8a26ab09b71c24c46d78633d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_022_r1.jpg",
+      "bytes": 20731,
+      "sha256": "066ecc1fb95610d50885c784405e03e7b97919ea8a26ab09b71c24c46d78633d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_023_r0.jpg",
+      "bytes": 9096,
+      "sha256": "0e34fefc0e631a1714271fa29969b6723dd4d5a473a653b74d792798df23075c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_023_r1.jpg",
+      "bytes": 9096,
+      "sha256": "0e34fefc0e631a1714271fa29969b6723dd4d5a473a653b74d792798df23075c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_024_r0.jpg",
+      "bytes": 6888,
+      "sha256": "6cf4786b168dcc920c94ef2a434a0237affc2a2c5d019deda3426d6059e7de7e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_024_r1.jpg",
+      "bytes": 6888,
+      "sha256": "6cf4786b168dcc920c94ef2a434a0237affc2a2c5d019deda3426d6059e7de7e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_025_r0.jpg",
+      "bytes": 5706,
+      "sha256": "11210bad2831d150933a16a93f0cf072940bf6396b263b90bfa9fe134afd42ad"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_025_r1.jpg",
+      "bytes": 5706,
+      "sha256": "11210bad2831d150933a16a93f0cf072940bf6396b263b90bfa9fe134afd42ad"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_026_r0.jpg",
+      "bytes": 5043,
+      "sha256": "e3bdfcf14d5adcfed62357f40fdd02347464ec05201cfac5a131e8956be95b91"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_026_r1.jpg",
+      "bytes": 5043,
+      "sha256": "e3bdfcf14d5adcfed62357f40fdd02347464ec05201cfac5a131e8956be95b91"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_027_r0.jpg",
+      "bytes": 5652,
+      "sha256": "8c686a5d02d004d6a993deef63bfe1881b03fb3e38e11cf2ca421ba279c68a07"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_027_r1.jpg",
+      "bytes": 5652,
+      "sha256": "8c686a5d02d004d6a993deef63bfe1881b03fb3e38e11cf2ca421ba279c68a07"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_029_r0.jpg",
+      "bytes": 3348,
+      "sha256": "b78e6cea2eea089b2de6ea350c73cca13d23a4aa68ff5881aa4b18cba3032ab6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_029_r1.jpg",
+      "bytes": 3348,
+      "sha256": "b78e6cea2eea089b2de6ea350c73cca13d23a4aa68ff5881aa4b18cba3032ab6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_030_r0.jpg",
+      "bytes": 18276,
+      "sha256": "a819815905914cdacbc55e32ac722443ee842acee82a2ec0ab82e1fc17ae4341"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_030_r1.jpg",
+      "bytes": 18276,
+      "sha256": "a819815905914cdacbc55e32ac722443ee842acee82a2ec0ab82e1fc17ae4341"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_031_r0.jpg",
+      "bytes": 10288,
+      "sha256": "38fe6aa3b682a5303a2f0579ea20e321530552b1fd99bde53004e008fec04580"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_031_r1.jpg",
+      "bytes": 10288,
+      "sha256": "38fe6aa3b682a5303a2f0579ea20e321530552b1fd99bde53004e008fec04580"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_032_r0.jpg",
+      "bytes": 9157,
+      "sha256": "7a565ad491cbf3b51877b027412efeded703650bdddf08871c0b9cc1f43cc795"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_032_r1.jpg",
+      "bytes": 9157,
+      "sha256": "7a565ad491cbf3b51877b027412efeded703650bdddf08871c0b9cc1f43cc795"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_033_r0.jpg",
+      "bytes": 4578,
+      "sha256": "7ec9272ddab7a9131925303949a80c4c030fe8113fbe28aadbf34f492b12f686"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_033_r1.jpg",
+      "bytes": 4578,
+      "sha256": "7ec9272ddab7a9131925303949a80c4c030fe8113fbe28aadbf34f492b12f686"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_034_r0.jpg",
+      "bytes": 5011,
+      "sha256": "e470518a37df31873c430ae1529b01b0c6f561508531b570f2765b3cc6398658"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_034_r1.jpg",
+      "bytes": 5011,
+      "sha256": "e470518a37df31873c430ae1529b01b0c6f561508531b570f2765b3cc6398658"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_035_r0.jpg",
+      "bytes": 4589,
+      "sha256": "0fe38fc2b7431ce398b721b22889e26a85b045214abd4954356a5ea8bec8525c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_035_r1.jpg",
+      "bytes": 4589,
+      "sha256": "0fe38fc2b7431ce398b721b22889e26a85b045214abd4954356a5ea8bec8525c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_036_r0.jpg",
+      "bytes": 11190,
+      "sha256": "e7d42599e6d7cd9a173f10a72acbbd23375d4f544c84df0051f71d343bc00ca7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_036_r1.jpg",
+      "bytes": 11190,
+      "sha256": "e7d42599e6d7cd9a173f10a72acbbd23375d4f544c84df0051f71d343bc00ca7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_037_r0.jpg",
+      "bytes": 18979,
+      "sha256": "6327e3856de605e9e8184b4be92f7160745101dbb97e84ff4df420202a4dcee9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_037_r1.jpg",
+      "bytes": 18979,
+      "sha256": "6327e3856de605e9e8184b4be92f7160745101dbb97e84ff4df420202a4dcee9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_038_r0.jpg",
+      "bytes": 9983,
+      "sha256": "9be255ab08d812d47e9fca23dd3f6d4177c2657aac0fbac8ea66458e93d2ee81"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_038_r1.jpg",
+      "bytes": 9983,
+      "sha256": "9be255ab08d812d47e9fca23dd3f6d4177c2657aac0fbac8ea66458e93d2ee81"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_039_r0.jpg",
+      "bytes": 7411,
+      "sha256": "b17cab61dca8aaaed510129707f5fd05fb3ab12e005fcdeb1174b0e3bc320de9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_039_r1.jpg",
+      "bytes": 7411,
+      "sha256": "b17cab61dca8aaaed510129707f5fd05fb3ab12e005fcdeb1174b0e3bc320de9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_040_r0.jpg",
+      "bytes": 5550,
+      "sha256": "8b336f48bd00a18605629dbcf07f513145b5cf5ef59e94dd7b5fb7245548710b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_040_r1.jpg",
+      "bytes": 5550,
+      "sha256": "8b336f48bd00a18605629dbcf07f513145b5cf5ef59e94dd7b5fb7245548710b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_041_r0.jpg",
+      "bytes": 4766,
+      "sha256": "e31132b398b8f057ba0359e6ea2b8c2e35c78674e900a31982560f92fccf8f23"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_041_r1.jpg",
+      "bytes": 4766,
+      "sha256": "e31132b398b8f057ba0359e6ea2b8c2e35c78674e900a31982560f92fccf8f23"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_043_r0.jpg",
+      "bytes": 10559,
+      "sha256": "2be49c603517c9db6451e05dfea1411468b84fe792835d3573b9a6929a7028c0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_043_r1.jpg",
+      "bytes": 10559,
+      "sha256": "2be49c603517c9db6451e05dfea1411468b84fe792835d3573b9a6929a7028c0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_044_r0.jpg",
+      "bytes": 22299,
+      "sha256": "8c6c3b30b314448c936347e4ff5cf585824a9a6b3046c90fe9a960777787421f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_044_r1.jpg",
+      "bytes": 22299,
+      "sha256": "8c6c3b30b314448c936347e4ff5cf585824a9a6b3046c90fe9a960777787421f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_045_r0.jpg",
+      "bytes": 5356,
+      "sha256": "06f5d31a3b3ef5dc382c3524e4f87dfc681dd6073c1ef68769c57730168f0408"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_045_r1.jpg",
+      "bytes": 5356,
+      "sha256": "06f5d31a3b3ef5dc382c3524e4f87dfc681dd6073c1ef68769c57730168f0408"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_046_r0.jpg",
+      "bytes": 6979,
+      "sha256": "0207b77bdbc2aa5c33cb856668b8a537f35b6ab91954acea9b739d5268c67c25"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_046_r1.jpg",
+      "bytes": 6979,
+      "sha256": "0207b77bdbc2aa5c33cb856668b8a537f35b6ab91954acea9b739d5268c67c25"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_047_r0.jpg",
+      "bytes": 7858,
+      "sha256": "2520cb1f7698396c108a2f4f6ef0cb6849bb3257c0f564958891416e0f281715"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_047_r1.jpg",
+      "bytes": 7858,
+      "sha256": "2520cb1f7698396c108a2f4f6ef0cb6849bb3257c0f564958891416e0f281715"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_048_r0.jpg",
+      "bytes": 19697,
+      "sha256": "9955f686b3bc3cf4645f2187c17ad9aed9ae1b17f808e812b56bf64187f52bf9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_048_r1.jpg",
+      "bytes": 19697,
+      "sha256": "9955f686b3bc3cf4645f2187c17ad9aed9ae1b17f808e812b56bf64187f52bf9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_049_r0.jpg",
+      "bytes": 4327,
+      "sha256": "cf97259780b7befe833c089d314850079be9a7d8dc35dd30fc19f42bd9a37d54"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_049_r1.jpg",
+      "bytes": 4327,
+      "sha256": "cf97259780b7befe833c089d314850079be9a7d8dc35dd30fc19f42bd9a37d54"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_050_r0.jpg",
+      "bytes": 18213,
+      "sha256": "647a4e1d02b0984c18de094699949539d6b1a1904f4f9c2aa0011ea63b895a9c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_050_r1.jpg",
+      "bytes": 18213,
+      "sha256": "647a4e1d02b0984c18de094699949539d6b1a1904f4f9c2aa0011ea63b895a9c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_051_r0.jpg",
+      "bytes": 7627,
+      "sha256": "73cd0d279f379ae63926b1678466a1be3073323785eae58922d6cb20896e07d8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_051_r1.jpg",
+      "bytes": 7627,
+      "sha256": "73cd0d279f379ae63926b1678466a1be3073323785eae58922d6cb20896e07d8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_052_r0.jpg",
+      "bytes": 22088,
+      "sha256": "fc909c2b7b3978197de1f5943f658794386b1948926282e970100fd3cc35372a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_052_r1.jpg",
+      "bytes": 22088,
+      "sha256": "fc909c2b7b3978197de1f5943f658794386b1948926282e970100fd3cc35372a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_053_r0.jpg",
+      "bytes": 5793,
+      "sha256": "1134edadcec5322dba0e5049c886d22d02f9faf705c70df1ed425b692b60c683"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_053_r1.jpg",
+      "bytes": 5793,
+      "sha256": "1134edadcec5322dba0e5049c886d22d02f9faf705c70df1ed425b692b60c683"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_054_r0.jpg",
+      "bytes": 6992,
+      "sha256": "70c0b845bc291972f05bdf2db0b7fc1c95d7eef70c87eb3baf4e95c588dadca0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_054_r1.jpg",
+      "bytes": 6992,
+      "sha256": "70c0b845bc291972f05bdf2db0b7fc1c95d7eef70c87eb3baf4e95c588dadca0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_055_r0.jpg",
+      "bytes": 6035,
+      "sha256": "f408ac63851944ab4172382f76924637324886b291648f29cdf1f5c9a6029701"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_055_r1.jpg",
+      "bytes": 6035,
+      "sha256": "f408ac63851944ab4172382f76924637324886b291648f29cdf1f5c9a6029701"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_056_r0.jpg",
+      "bytes": 13530,
+      "sha256": "13ad4b182c900530e15ce169cbc0e1e0522865ac188bbdea0ea9553952ea71f8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/remaining_target_056_r1.jpg",
+      "bytes": 13530,
+      "sha256": "13ad4b182c900530e15ce169cbc0e1e0522865ac188bbdea0ea9553952ea71f8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-20_001_002561.jpg",
+      "bytes": 63467,
+      "sha256": "f5dfbc5b26c99384ab8ebe886478b1a3a57010cea8061bd40f53bb3089034385"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-23_001_000706.jpg",
+      "bytes": 83593,
+      "sha256": "f7d7a6a475cad474fc0f18e54cc78d60526292f48a4921025d46f794492f60ea"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-30_001_000904.jpg",
+      "bytes": 85031,
+      "sha256": "65df8996a1e1da2b73319c5380cfc29b84ee655fa87a629e52b4893093ddb29f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-31_001_000465.jpg",
+      "bytes": 84936,
+      "sha256": "4479f5ef29c9c7c0d9d439f035b8cc7fab3afcb16431c91aa6d9b38bf66f6c55"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-33_001_001844.jpg",
+      "bytes": 64222,
+      "sha256": "8b3484c1119b0ac95e986f8e9f30802c6ee2efee3eea34454f55f580b5a05bb8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-35_002_000708.jpg",
+      "bytes": 85161,
+      "sha256": "eb88f3e5eaddd97d4af4dfbfb4cc774e5518822d8eb78720dac9909d913ced05"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-36_046_001832.jpg",
+      "bytes": 79337,
+      "sha256": "1c1702529619718ee84f320146a4782a4a3f1f6a7b4eea91eea9974348960941"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-40_045_010308.jpg",
+      "bytes": 69024,
+      "sha256": "d7b36798427f32fa87dc4ac70cf750826f4d0dcab5238afb0f412c6ac9cbfc0a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-45_043_002538.jpg",
+      "bytes": 75048,
+      "sha256": "e2ad956397cb42b4bf7808182ec658bf1a20d9304fead6b4326bea30240f1370"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-49_021_000075.jpg",
+      "bytes": 75066,
+      "sha256": "e11bc609088f91a7b29654890d381016cdf1a487a33a49a533056c2851865645"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H1_L1_D2023-09-14-10-35_001_001115.jpg",
+      "bytes": 85502,
+      "sha256": "ebb8e1c64fffcb4d5264829405012aede6343ff70234eca2a79d7de4dffea27f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H1_L1_D2023-09-14-10-36_002_000710.jpg",
+      "bytes": 85496,
+      "sha256": "0f026a88901756ba8c43e21360cebfe49260b00c2d93022d77e49cca8c2027b6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H1_L1_D2023-09-14-10-37_001_000967.jpg",
+      "bytes": 84416,
+      "sha256": "f45406b754cef2004b3c3b9f07b42bd077bd7cb765029f6175d53ec849c7326f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_S63_DATA3_H1_L1_D2023-10-25-13-40_001_001059.jpg",
+      "bytes": 65603,
+      "sha256": "1c4b87ce7aeed44cc17156c6d072d6f0c54f615c9c2ad024a5acb4bee5b26048"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_0_0_r0.jpg",
+      "bytes": 5033,
+      "sha256": "c039fa6c33c3f56e6d5ce75c5f2ecb6314479404260ab7e5725453ee18182c1a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_1_0_r0.jpg",
+      "bytes": 28656,
+      "sha256": "877ff7aa0096d7c969ff568354f48fb9284d4109584cc47bbc3a8737107bd516"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_1_1_r0.jpg",
+      "bytes": 54184,
+      "sha256": "c5ba643805f5c4c82c75c39bb126ab4bd30ccdd7d4e186cff9318bffe0b90585"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_2_0_r0.jpg",
+      "bytes": 28529,
+      "sha256": "3b7e7c7eb4a3e1eb9ba7c90583b50e67ee95cfa71a83403b9f72b41c2f4ad9b1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_3_0_r0.jpg",
+      "bytes": 21684,
+      "sha256": "07b3156dcaa6647305f151487472a9a7b2fa6c6879b4b9e6cdca0f54d51a3280"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_4_0_r0.jpg",
+      "bytes": 32735,
+      "sha256": "952ddfd5bf7a7fe6641495a512b74a33c20a49830fb25ad278448784a42ac5af"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/smartyard_ppe_support_5_0_r0.jpg",
+      "bytes": 48399,
+      "sha256": "be54d0f52a2044026fcdb01592275e54ae8a8fb595bec48cf9cd7089744e1766"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/warehouse-labor-shortage_jpg.rf.73c93383fa93b6aae2a9ab71fe67a40d.jpg",
+      "bytes": 76528,
+      "sha256": "3305ea63f8d7a1661c00b1c92ca9f641f34cfa5cf046d1d04c69110aec7f9b6f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/warehouse-management-system-eostar_jpg.rf.55f4318fd2153778d3189808de05dff2.jpg",
+      "bytes": 49601,
+      "sha256": "585a15641b7e57d3fd19cdc34b7af416383162f1ba56f5f0297da4b1b0ab1220"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/images/warehouse-manager-1-3_jpg.rf.418a124efccf0dcfe778157170b15bb3.jpg",
+      "bytes": 67766,
+      "sha256": "49b1ae9bd493431ecd204b93d815ed050a87671ea96409d50636cad2d0437046"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/0504_WarehouseWorkers_png.rf.9ab0fd904f1e919258139e155b6689a7.txt",
+      "bytes": 46,
+      "sha256": "0bf90baee283ea2f7b9e8e30122db332d2257c478410ceb5251a3c3808e9139a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/0x0_jpg.rf.c0e4be134be30fcf4885dbb1b8c75ddb.txt",
+      "bytes": 87,
+      "sha256": "044445273c6813c79b3a6e94824d36f52a3fad03021eb3b68eaa651802d59537"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/1000_F_284375138_FpZGFFWKiFWR4x2IdicSQ9ELvpJys6Vy_jpg.rf.1b5c1f7c04155d9cd990aa797b8c87ad.txt",
+      "bytes": 80,
+      "sha256": "6c9cbbf77ec15ea31c6494f53760689d413f1904c5f955b3c49eb6082b874c16"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/123906371-group-of-business-people-and-warehouse-workers_jpg.rf.957a60d5c896091c60d6231ea69cfd67.txt",
+      "bytes": 165,
+      "sha256": "dc97585293b8eb7d9162ec360217ae821b414542159fda95c9d015e38694665b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/360_F_390579418_XxTdtqjqDtIaEhZ0RXTbHtoSqP2mTY9r_jpg.rf.999d9438161d30f3a9e7a89b10099de9.txt",
+      "bytes": 40,
+      "sha256": "a7ded76be486bfcc07537d82d5170b8e39cf63fbadd7548863a87466a2908583"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/40132536_14117106_Large_jpg.rf.05bd1b6460ddbe524aa6cff6da251a4f.txt",
+      "bytes": 77,
+      "sha256": "14c2beaafe3b2a34e11882c6be257f6354f9c1fccf7c13f4c0cb3b06526aab09"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/51d9d69c-3ab0-11ed-9dda-0242ac110003-png-hero_image_png.rf.1520e0e91e8ee043f9bfb8161d710eed.txt",
+      "bytes": 131,
+      "sha256": "294d27ed8863d9916f2b480afb98cccb9922a694d15a4bbcf92035bac42ff30d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/5afcbd249d90c-image_jpg.rf.15c512b88a4a58a876f193b192c78950.txt",
+      "bytes": 87,
+      "sha256": "3e1c888f5867a414193eb55bf778b1fe00c89ec3605242b85024547fef6d65c5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/707a0c7f-ce9c-437c-84f5-9e12539433ca_jpg.rf.b845b636a93856cbef373f8efa2fe30c.txt",
+      "bytes": 42,
+      "sha256": "c157a8bf344657a7d5808b44f9dccd6c09d112fba6cfd880680ce11354ba7cb5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/7_Types_of_Positions_in_a_Warehouse_to_Consider_jpg.rf.7549075967345ac99752437845bc4611.txt",
+      "bytes": 129,
+      "sha256": "b13c8795c2b568d845ba05120863c06f1c8dd19f2e621fbba4726913d94cc720"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/Robust-AI-Workmates-Business_jpg.rf.3e6f6f1c3231c6001028c344c873ed49.txt",
+      "bytes": 46,
+      "sha256": "8cc8753efdfd55d360a7f3f2c6f270a1228326c730136ec40942d5e294d27f21"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/Steel_King_guard_rails_in_use-629903b85ae5d_png.rf.1908ed54be10c7fa97315e2dc5060e7b.txt",
+      "bytes": 35,
+      "sha256": "d996ef14445cf7fded71ffea5da2c30def244354ddec63a5a0a1cee58852e8e2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/Warehouse-Management-Outsourcing-When-Should-You-Consider-a-3PL-770x253_jpg.rf.efcc193d2dc5563e49b353a2fa07e475.txt",
+      "bytes": 43,
+      "sha256": "bc9f3e8970b6a6ca375b2a6a4bc8f8dfbf3c626554dfe53ed2ab9222a50f37ec"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/Warehouse_Worker_jpg.rf.94940605a555298570b1dc597d03b256.txt",
+      "bytes": 44,
+      "sha256": "49fea7a613d5a0f443eb074957c589c2ef86b2ebc407d412044272784d3471ea"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/_CO60893_jpg.rf.62fc0a4f5352bd742094e0d9067ad62e.txt",
+      "bytes": 42,
+      "sha256": "c1e281a6b052fab2ff540bdf8c6f800117cb217b7ba97f87a95e3dc5e59195af"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/benefits-of-warehouse-management-system-for-small-businesses-1200x627_jpg.rf.fef8c1f531827a6e2c505ad8b6da9f5c.txt",
+      "bytes": 39,
+      "sha256": "2a154753cab7917330dba4fd6c30b65113e681457c8d7f5b433c40aaa2ca90c7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/bigstock-wholesale-logistic-people-an-118565333-crop_jpg.rf.6a4c7192c523193cccbf68bed7330362.txt",
+      "bytes": 80,
+      "sha256": "0a1e8845e4fcc84b333adb7a30696359c1097cfe85b9de240f701bfb3833f45f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/blog-266-pic-min_jpg.rf.3fb84e52f58a2702a6361fef9d943553.txt",
+      "bytes": 86,
+      "sha256": "59d9f146bb12e00b24e3b2249c84c6a516bb74c0a04f7a902a1569652983fac2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_0_r0.txt",
+      "bytes": 138,
+      "sha256": "0784cee6ba8223f384c52fc7e4b462eb977bac91746d3ef7e28fba189cdac2ae"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_0_r1.txt",
+      "bytes": 138,
+      "sha256": "0784cee6ba8223f384c52fc7e4b462eb977bac91746d3ef7e28fba189cdac2ae"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_0_r2.txt",
+      "bytes": 138,
+      "sha256": "0784cee6ba8223f384c52fc7e4b462eb977bac91746d3ef7e28fba189cdac2ae"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_1_r0.txt",
+      "bytes": 138,
+      "sha256": "b8ff2188d13fa9a8ea029193f2c7ea711f83b9c071cca95a8fde49ecf8271e8d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_1_r1.txt",
+      "bytes": 138,
+      "sha256": "b8ff2188d13fa9a8ea029193f2c7ea711f83b9c071cca95a8fde49ecf8271e8d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_1_r2.txt",
+      "bytes": 138,
+      "sha256": "b8ff2188d13fa9a8ea029193f2c7ea711f83b9c071cca95a8fde49ecf8271e8d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_2_r0.txt",
+      "bytes": 138,
+      "sha256": "e076307b342560cb9ad46854658b47b050446761f3a23e490bcc4c79b42e4643"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_2_r1.txt",
+      "bytes": 138,
+      "sha256": "e076307b342560cb9ad46854658b47b050446761f3a23e490bcc4c79b42e4643"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_2_r2.txt",
+      "bytes": 138,
+      "sha256": "e076307b342560cb9ad46854658b47b050446761f3a23e490bcc4c79b42e4643"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_3_r0.txt",
+      "bytes": 184,
+      "sha256": "4583fb783ee7ece64809b1cbb694b2a44f587ed01eb219386626c488ae10fe03"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_3_r1.txt",
+      "bytes": 184,
+      "sha256": "4583fb783ee7ece64809b1cbb694b2a44f587ed01eb219386626c488ae10fe03"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_3_r2.txt",
+      "bytes": 184,
+      "sha256": "4583fb783ee7ece64809b1cbb694b2a44f587ed01eb219386626c488ae10fe03"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_4_r0.txt",
+      "bytes": 184,
+      "sha256": "2e08b08b84babc4fcb930cbe4d8f135612b9faf44c4af692d70917bc832250d5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_4_r1.txt",
+      "bytes": 184,
+      "sha256": "2e08b08b84babc4fcb930cbe4d8f135612b9faf44c4af692d70917bc832250d5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_4_r2.txt",
+      "bytes": 184,
+      "sha256": "2e08b08b84babc4fcb930cbe4d8f135612b9faf44c4af692d70917bc832250d5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_5_r0.txt",
+      "bytes": 184,
+      "sha256": "4ffe4f381238db89bb9591f08aa38399e37d1c6b8a49e2cc1a91822e2e8057df"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_5_r1.txt",
+      "bytes": 184,
+      "sha256": "4ffe4f381238db89bb9591f08aa38399e37d1c6b8a49e2cc1a91822e2e8057df"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_5_r2.txt",
+      "bytes": 184,
+      "sha256": "4ffe4f381238db89bb9591f08aa38399e37d1c6b8a49e2cc1a91822e2e8057df"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_6_r0.txt",
+      "bytes": 46,
+      "sha256": "a273a9a9936cf3389817ad2bcb363e04053eae6b7420cfe7d20546b1932c610c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_6_r1.txt",
+      "bytes": 46,
+      "sha256": "a273a9a9936cf3389817ad2bcb363e04053eae6b7420cfe7d20546b1932c610c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_6_r2.txt",
+      "bytes": 46,
+      "sha256": "a273a9a9936cf3389817ad2bcb363e04053eae6b7420cfe7d20546b1932c610c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_7_r0.txt",
+      "bytes": 46,
+      "sha256": "2261d5a01cd86f1673331bee9a8b6477caa15debb3086ef0a92269dab7267f28"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_7_r1.txt",
+      "bytes": 46,
+      "sha256": "2261d5a01cd86f1673331bee9a8b6477caa15debb3086ef0a92269dab7267f28"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_7_r2.txt",
+      "bytes": 46,
+      "sha256": "2261d5a01cd86f1673331bee9a8b6477caa15debb3086ef0a92269dab7267f28"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_8_r0.txt",
+      "bytes": 46,
+      "sha256": "5398366fa96080fdd8e16b44a7e816e275ec148356130d5c5fe53230b401b6e7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_8_r1.txt",
+      "bytes": 46,
+      "sha256": "5398366fa96080fdd8e16b44a7e816e275ec148356130d5c5fe53230b401b6e7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/demo_ppe_8_r2.txt",
+      "bytes": 46,
+      "sha256": "5398366fa96080fdd8e16b44a7e816e275ec148356130d5c5fe53230b401b6e7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/depositphotos_221570588-stock-photo-logistics-people-working-warehouse_jpg.rf.001f4da21e001c4118a46c39c92e4508.txt",
+      "bytes": 77,
+      "sha256": "38852c05f08607bbae3a9968d23380408fa5e4e855fb64af63808ad465382fdc"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/hard_hat_workers127_png.rf.561c748e1ba72603746c55f6f6f403e7.txt",
+      "bytes": 88,
+      "sha256": "ecabf09142ba4431cca313a398584e61c101a55c8daabdbe2df1b6df417ab610"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/hard_hat_workers198_png.rf.2e146c471f5020589894e1a0c242ab76.txt",
+      "bytes": 86,
+      "sha256": "7917e3be6bed21421a461c18c39cc2582d3e26dd8c42fc3f7c820795fe8969bd"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/hard_hat_workers235_png.rf.1f26afda914221e4d1b70f4a3b1aa84e.txt",
+      "bytes": 44,
+      "sha256": "635d1cbdf7ab3722787bd5298d3936ad8449428e124a395cfc12c92aa562f43c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/hard_hat_workers94_png.rf.efbac90883c62f17c86d805cbb09c4ee.txt",
+      "bytes": 43,
+      "sha256": "10f65ba4770a58605ca775114573bb0edd2082e1852dd29557b66b2bcfc54c75"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/image26_jpeg.rf.2d834d90619276f4d577c30fb10f27aa.txt",
+      "bytes": 44,
+      "sha256": "ad4c0507854d076763cecc201de82691f6d1c39550d41f62a77f84d9a8f2f57d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/images10_jpg.rf.fbc5d991afe385f45d7fa287a0fa9c4e.txt",
+      "bytes": 43,
+      "sha256": "08c5a34f7fc82f50f33dcc24167f9a8a90cf5646f36c24b988a58546d812f838"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/images20_jpg.rf.0d1cf5229e44d1025780870bc5fdcd7c.txt",
+      "bytes": 42,
+      "sha256": "e8e89874f23ba975b34720c5233622d7444af115aabfd941d9c70043aea160ae"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/images23_jpg.rf.1b3d874bb4deae6a2aacd5115c05c5e6.txt",
+      "bytes": 43,
+      "sha256": "f102df9582866fef0ae68344bbd0a10fb2c2f5849100a508eeeb980482166a48"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/images24_jpg.rf.0756ee69419cf87eab6f86f7dd13caf2.txt",
+      "bytes": 44,
+      "sha256": "06289d4fd51ccb79ea2aa971e82339b060112ae8a0e9d82a18ee6ea74c75e0dc"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/images25_jpg.rf.281afdf0be68e12d27d83835fc0882ed.txt",
+      "bytes": 44,
+      "sha256": "1f19bbca193b74d099aa2d25af9eed001f289469a69ba410306b6e20f75bf1fe"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/images29_jpg.rf.3d3003f756c38eabd98ccbb0058403df.txt",
+      "bytes": 44,
+      "sha256": "ab844b60f4f02f34dc60158088596380a3efb8ad46a12324f7f15923fea95543"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/industrial20pr208152220972x1296_jpg.rf.6a0030b2e1302aa1210f0fc1f3b31491.txt",
+      "bytes": 41,
+      "sha256": "68cdb192f92c7759e2773ba62955e2872a97d4f2ce6c8596cb3f3513212c6cd0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/learn-warehouse-1-1_jpg.rf.34e15c5c4bc039668a338f147258dd41.txt",
+      "bytes": 88,
+      "sha256": "2b2152a533db6b2823e6fcdc9cc122b75c7051a6b7feb3f73e9efd8d5fed9e8b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/millennial-warehouse-workers-full-1024x683-1_jpeg.rf.0a53e56557f7d842f44635a977a6f455.txt",
+      "bytes": 247,
+      "sha256": "adaaaa9005546b379b968fa9b1dafec255d6c554c25966ab94893707d2fca010"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/nt-and-people-concept-warehouse-worker-and-businessman-with-clipboard-and-ta_jpg.rf.2d12e57305bbb44a6d83763ec52b656c.txt",
+      "bytes": 82,
+      "sha256": "0bd97d9af441fd7cfe3a61086cdd318020d60e0b49880a84596a0fca40eb91a9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_000_r0.txt",
+      "bytes": 46,
+      "sha256": "032e807f376f74fa64eb103fc090c1b10800535cb7802fb5fda90c542385432c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_001_r0.txt",
+      "bytes": 46,
+      "sha256": "721250ce9b0320e1b2a226b0e6dc7aa122fd5848e8c26a70d6067b267eb32791"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_002_r0.txt",
+      "bytes": 46,
+      "sha256": "c86b343fe1d03b880f880dc6342572ec61f3df1949c18d81398363614a8f5f2a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_003_r0.txt",
+      "bytes": 46,
+      "sha256": "b8685e4a8ddcebc1b085a1a4373c0862469706ac996c01de04446de8ea3574c1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_004_r0.txt",
+      "bytes": 46,
+      "sha256": "d2620143fce54203886fcc828b4f9d19986ced6144f5c4181e0d958857ea5893"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_005_r0.txt",
+      "bytes": 46,
+      "sha256": "01bb9e0ee40e1442ac8d03cc97b1600729341258c6570cdd4ff696b6bb12cb46"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_006_r0.txt",
+      "bytes": 46,
+      "sha256": "27f4a900c8ae3661c88e0ebda5d7bd7f05a8b83a442be931a4f0bd05b0b94f9f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_007_r0.txt",
+      "bytes": 46,
+      "sha256": "54c98cc3d11aad3d938ec429ba8764077811cb0e94010e486a848b38bc39211e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_008_r0.txt",
+      "bytes": 46,
+      "sha256": "0bb933fd387f4dd672710e1a317631e45ed1be544f425803d4e961bf74054d9f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_009_r0.txt",
+      "bytes": 46,
+      "sha256": "12c745b7d47424719038eb2ff84e0a8ed49d830d3bbd1822afcbb7202b700d1e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_010_r0.txt",
+      "bytes": 46,
+      "sha256": "e58d1f70bd854f9a7f81585a171eb5990b5b0da5c8c2865c86d26ebbfc9757ab"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_011_r0.txt",
+      "bytes": 46,
+      "sha256": "52ecd0ee3f86efb1b72b067491b489a0265031a1fb4a8a1ab67cf9aa0f957875"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_012_r0.txt",
+      "bytes": 46,
+      "sha256": "d99cc2b832d430dcaa56df85705c87cf489ac6bac2208d03b2346e6a6df25fa6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_013_r0.txt",
+      "bytes": 46,
+      "sha256": "4800aa213f9771849fbe00aff06fb879e0dac44158867e2e87e7419e8fc5fce1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_014_r0.txt",
+      "bytes": 46,
+      "sha256": "32123098dd137a509b53ecf75d351657313c181b60689bcd298ac70f38d24e1f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_015_r0.txt",
+      "bytes": 46,
+      "sha256": "2f721522a7fae837b3f26227a55abb81b4677f490cc2e68b3e5f96e741cf5b46"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_016_r0.txt",
+      "bytes": 46,
+      "sha256": "fe0aca561955268aa5d4cbd0483c366316b741a7d7a5db225f31ddd3936aef3a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_017_r0.txt",
+      "bytes": 46,
+      "sha256": "f0cf1710694f6a4cf1fb455e7204efd3265f7c872c81fa1e0ae2ca163e8d2f9e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_018_r0.txt",
+      "bytes": 46,
+      "sha256": "410e06588f8fd877dc0ebca657d5ef75f736411ac82d93752d2e085cf17153c3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_019_r0.txt",
+      "bytes": 46,
+      "sha256": "2f67bed64f09003017f5399d5855f75e0a83b9698144b9190cf14526629ce6b1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_020_r0.txt",
+      "bytes": 46,
+      "sha256": "9b9fdb7dd28fbbf65e643a6292cdad8a3435137a858e383a12cc0a49b6545fd7"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_021_r0.txt",
+      "bytes": 46,
+      "sha256": "09c8a4df9df4a68326cd7c5b5985bbbb7f36b46a00c4b278fd5314ba9f82865c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_022_r0.txt",
+      "bytes": 46,
+      "sha256": "f59757dcf2bf9b8aa0705c567579d688e2b16225ee212d15e7434cac8713564b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_023_r0.txt",
+      "bytes": 46,
+      "sha256": "7a10725d842913061a8d0ee97572f12cbd7fe60f99e3af1090d0eeef35eeea1c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_024_r0.txt",
+      "bytes": 46,
+      "sha256": "123007dc0f99ce7affe87cc7598a6087ef280aea39abbef39a8b2b5d78757200"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_025_r0.txt",
+      "bytes": 46,
+      "sha256": "2551a14f0f789099d41a2b16a27e73bebef1fb39c0d81f93babc92b2b5f1649f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_026_r0.txt",
+      "bytes": 46,
+      "sha256": "bc1a6f99d420fab2a13d060bc776600dd1a7d9fc398d257fc5781c425da8c214"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_027_r0.txt",
+      "bytes": 46,
+      "sha256": "77867b337111c4e611c2a7b0e692b35bf7630506575047796bc4db007750c99b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_028_r0.txt",
+      "bytes": 46,
+      "sha256": "1c060f10d26fa5c7e77d4c7cb69845344a5182f8aa6abd267c52e23ed1b0c4f5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_029_r0.txt",
+      "bytes": 46,
+      "sha256": "41b5fd0f86ccf1b8b3ba26aadaf5f3905a0278b4a3c8e176e640d1ba8a7d4c8c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_030_r0.txt",
+      "bytes": 46,
+      "sha256": "8ff902651221c7c3a9d7b24e696bb64445b18346cc6683fb6fe1bd37bf779e42"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_031_r0.txt",
+      "bytes": 46,
+      "sha256": "46cb2360247348d858af300c8016b432b214404b9068dd71f19eb5a26fbf803b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_032_r0.txt",
+      "bytes": 46,
+      "sha256": "11a4a625a69ca92abe776f115e7fdbd8a36556a82680d167c43ffa99fdfacf43"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_033_r0.txt",
+      "bytes": 46,
+      "sha256": "95ab00cf03b095dadb9b9b78cd5e37bcb47fa080dcd671ab61de3aa13b1dda26"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_034_r0.txt",
+      "bytes": 46,
+      "sha256": "a4d404a6748e1506be3390ee5fc0b76daf8c5fe1fa3e0c3011658786b73e5d84"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_035_r0.txt",
+      "bytes": 46,
+      "sha256": "e180e6549d0296574857ad7f0c5d0ad885f0d7225ab7cb07c45cfdd3beec3c4c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_036_r0.txt",
+      "bytes": 46,
+      "sha256": "d7853349f1a6bd0b22966f363e35990abc988c12f4d9ca6f23fb0cff458dd28c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_037_r0.txt",
+      "bytes": 46,
+      "sha256": "66ba0e57e7e368db842d6e03a7face98825216fe9b721b3f93d006766cc6752b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_038_r0.txt",
+      "bytes": 46,
+      "sha256": "0d0b9f13420192f11904b8cabed689ed54fd901067b00a1c1dadbaf3efe063c9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_039_r0.txt",
+      "bytes": 46,
+      "sha256": "b378edfcd216804e45fedffaac70c3f3c3d472d6f7a82725940462929cbb225e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_040_r0.txt",
+      "bytes": 46,
+      "sha256": "2365f804a347290d0bcc1a68a3021beb18a97d001457b17598a0169067fc85f2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_041_r0.txt",
+      "bytes": 46,
+      "sha256": "4a7c0f0f3afd1b143ebe9144008316fe02e83bdbd2a9f28591670e969a3da5a3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_042_r0.txt",
+      "bytes": 46,
+      "sha256": "c86c4b3311aef822d9a64ccf953b2f9a9c85fd6f11e029caf081cc778eba2185"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_043_r0.txt",
+      "bytes": 46,
+      "sha256": "2e8358e9508284b5f2b9a608cbf589aa1d3d7194b4c27c0f32e54492ec9801d3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_044_r0.txt",
+      "bytes": 46,
+      "sha256": "e6102fd0d4c8d93eaf04bf1cd513dcf53d07544e9bdf589a2af5d7bbfc7de19b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_045_r0.txt",
+      "bytes": 46,
+      "sha256": "39d9df4dcbada98657895ba435d1ce0e344a2582d250af6738d857efd2f37324"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_046_r0.txt",
+      "bytes": 46,
+      "sha256": "292402a062028ec189a79c44e7934a44d47437e421410a7f3526878e97608f56"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_047_r0.txt",
+      "bytes": 46,
+      "sha256": "aef51d951743dcbc7e29f51f3cbdf6a71023e794d0e5ddea768c6dff311af217"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_048_r0.txt",
+      "bytes": 46,
+      "sha256": "a907bcbbdb360816697ce0ae91980100abecb634af261b19db174a2db77b4d7a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_049_r0.txt",
+      "bytes": 46,
+      "sha256": "b3495ccb3a3125dcb9b586cea362924e0d5e10a108fe5651a2f800e1be1f7d44"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_050_r0.txt",
+      "bytes": 46,
+      "sha256": "f5fc15203ca0f74c8b189fdffcbbdc50014029c408d19efcc98f039f37e495e6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_051_r0.txt",
+      "bytes": 46,
+      "sha256": "43c1277d5a8b5c7169cebf0b242c3fdde067fb75d92d28b8053c5c2a0d9656ec"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_052_r0.txt",
+      "bytes": 46,
+      "sha256": "b494e02a73ec1296973ee4b9feff853016818715deabee6c74ad15047676596f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_053_r0.txt",
+      "bytes": 46,
+      "sha256": "7d776ea613e185900b66167812e5eeadcf0fb938e0b6833ba69785b5224946df"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_054_r0.txt",
+      "bytes": 46,
+      "sha256": "c91b959d72abc272c46fcef1debfb93acf3aa060d97e9dcc4954f01ef1795d81"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_055_r0.txt",
+      "bytes": 46,
+      "sha256": "76c3642e9bdb5674938de3d59227bf950a566fe76a78561ecd4d8ad461427375"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_056_r0.txt",
+      "bytes": 46,
+      "sha256": "92a57f0e07748f2a8015d9dfff6f7ff2ed7f6dea8c2a46f35b4cfcc1eb99f0b1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_057_r0.txt",
+      "bytes": 46,
+      "sha256": "146d9f8b05b0507686d3b96444517d196908823e43343e63e88ca337f98edb3b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_058_r0.txt",
+      "bytes": 46,
+      "sha256": "409e18cffa05f62976d38cc37f976cfdffa31e489e05a47521e4aa4a0c00da4c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_059_r0.txt",
+      "bytes": 46,
+      "sha256": "e4130438f09ed3c912e101b537289867b8b988a4b1ac9ecd68c0ed2343404e79"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_060_r0.txt",
+      "bytes": 46,
+      "sha256": "effc12f2fc7fb335791c9e851519070377c511938f3a02eda84da21b4ab07084"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_061_r0.txt",
+      "bytes": 46,
+      "sha256": "49a6f3c7c4da6280d0d991b3a82a0971a2862f0a9b4408661f4bb0aa02edfcb3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_062_r0.txt",
+      "bytes": 46,
+      "sha256": "23761946c25e37774d30668f0934b324b985eb9bf1597d2fbfa8b1c700bec2be"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_support_063_r0.txt",
+      "bytes": 46,
+      "sha256": "2e4189177eebccf01c9b827e536735db5d7a7810f4d22a2897cddf09462b570d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_000_r0.txt",
+      "bytes": 46,
+      "sha256": "860c96fca414c6eff0ebf85d06ad39e5606533adf317f1d25b584ca8c28bd202"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_000_r1.txt",
+      "bytes": 46,
+      "sha256": "860c96fca414c6eff0ebf85d06ad39e5606533adf317f1d25b584ca8c28bd202"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_001_r0.txt",
+      "bytes": 46,
+      "sha256": "6d8de6adb7b5a0e07aa8e5ebfc103138758df0e6767a9cd72b07185da06016c9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_001_r1.txt",
+      "bytes": 46,
+      "sha256": "6d8de6adb7b5a0e07aa8e5ebfc103138758df0e6767a9cd72b07185da06016c9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_002_r0.txt",
+      "bytes": 46,
+      "sha256": "dc1d78c693a4757d19aeebee70585204cae3ce4900c75b49bd625874b869e740"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_002_r1.txt",
+      "bytes": 46,
+      "sha256": "dc1d78c693a4757d19aeebee70585204cae3ce4900c75b49bd625874b869e740"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_003_r0.txt",
+      "bytes": 46,
+      "sha256": "81730c19103a0cc9f003d8eb73879bffee579823f55a0486e3e145a66b0de49c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_003_r1.txt",
+      "bytes": 46,
+      "sha256": "81730c19103a0cc9f003d8eb73879bffee579823f55a0486e3e145a66b0de49c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_004_r0.txt",
+      "bytes": 46,
+      "sha256": "147a5b2773a9e5021c6e94dac41bd74e134c6ad896bd7e445228959eaa152ff4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_004_r1.txt",
+      "bytes": 46,
+      "sha256": "147a5b2773a9e5021c6e94dac41bd74e134c6ad896bd7e445228959eaa152ff4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_005_r0.txt",
+      "bytes": 46,
+      "sha256": "27c024d74872f7a098334eb51a0a2cefe72731e1480208302c34003e622649d4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_005_r1.txt",
+      "bytes": 46,
+      "sha256": "27c024d74872f7a098334eb51a0a2cefe72731e1480208302c34003e622649d4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_006_r0.txt",
+      "bytes": 46,
+      "sha256": "47bdf54eb131564523bd8c37bfedb82ae47824f3d72fe2b03ba0536c1a0ff1c5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_006_r1.txt",
+      "bytes": 46,
+      "sha256": "47bdf54eb131564523bd8c37bfedb82ae47824f3d72fe2b03ba0536c1a0ff1c5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_008_r0.txt",
+      "bytes": 46,
+      "sha256": "cd080155575301050d73d96a2523cd02f81d8cef945b3fbc71204ff323fb455a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_008_r1.txt",
+      "bytes": 46,
+      "sha256": "cd080155575301050d73d96a2523cd02f81d8cef945b3fbc71204ff323fb455a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_009_r0.txt",
+      "bytes": 46,
+      "sha256": "307306f02b328e5e80f345a94d6bfa360f7582369aab7e6aab2adfabb669aaa8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_009_r1.txt",
+      "bytes": 46,
+      "sha256": "307306f02b328e5e80f345a94d6bfa360f7582369aab7e6aab2adfabb669aaa8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_010_r0.txt",
+      "bytes": 46,
+      "sha256": "e19b33a8e1f0892725bda1853261d76f2d9c257f2862142b21e34d1bf7e191b8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_010_r1.txt",
+      "bytes": 46,
+      "sha256": "e19b33a8e1f0892725bda1853261d76f2d9c257f2862142b21e34d1bf7e191b8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_011_r0.txt",
+      "bytes": 46,
+      "sha256": "5ebd1c8be1c2d894623081f92c29474306fe63c23cedc814b33f263447f79c33"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_011_r1.txt",
+      "bytes": 46,
+      "sha256": "5ebd1c8be1c2d894623081f92c29474306fe63c23cedc814b33f263447f79c33"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_012_r0.txt",
+      "bytes": 46,
+      "sha256": "4ec507eea4cb62f6d4e9f84b0ca958f49d617cacce021d9f92322e7cb05c32be"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_012_r1.txt",
+      "bytes": 46,
+      "sha256": "4ec507eea4cb62f6d4e9f84b0ca958f49d617cacce021d9f92322e7cb05c32be"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_013_r0.txt",
+      "bytes": 46,
+      "sha256": "6671d57a9692c9a24fff4466a7596193d0ec823caf8824649df55c290eda2fa3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_013_r1.txt",
+      "bytes": 46,
+      "sha256": "6671d57a9692c9a24fff4466a7596193d0ec823caf8824649df55c290eda2fa3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_014_r0.txt",
+      "bytes": 92,
+      "sha256": "39610252f4005affa72537a85d51d7d86c7d5e51b018ec4aba0b0f37faa9c73f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_014_r1.txt",
+      "bytes": 92,
+      "sha256": "39610252f4005affa72537a85d51d7d86c7d5e51b018ec4aba0b0f37faa9c73f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_016_r0.txt",
+      "bytes": 46,
+      "sha256": "fefd637a64a6735e9ba6a4177990e1fb47dc66da253387a009bd69b29f8bd064"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_016_r1.txt",
+      "bytes": 46,
+      "sha256": "fefd637a64a6735e9ba6a4177990e1fb47dc66da253387a009bd69b29f8bd064"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_017_r0.txt",
+      "bytes": 46,
+      "sha256": "9893610c529fc98190afee11d52b2eb60e9fc6897bebb53e24c9326cd265f2ad"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_017_r1.txt",
+      "bytes": 46,
+      "sha256": "9893610c529fc98190afee11d52b2eb60e9fc6897bebb53e24c9326cd265f2ad"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_018_r0.txt",
+      "bytes": 46,
+      "sha256": "676e20bd6d7ab7122467b51051c03b563bc1b56ec1bf72c83e6ef23971426a7a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_018_r1.txt",
+      "bytes": 46,
+      "sha256": "676e20bd6d7ab7122467b51051c03b563bc1b56ec1bf72c83e6ef23971426a7a"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_019_r0.txt",
+      "bytes": 92,
+      "sha256": "655fe929edb177dc517838e8daec9e2265cc2f7fc6040353b51d8b414861f436"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_019_r1.txt",
+      "bytes": 92,
+      "sha256": "655fe929edb177dc517838e8daec9e2265cc2f7fc6040353b51d8b414861f436"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_020_r0.txt",
+      "bytes": 46,
+      "sha256": "45eb580deb7f188c1c704cf6461a59172d278a09d5aafb92f6d78b95bb9a2277"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_020_r1.txt",
+      "bytes": 46,
+      "sha256": "45eb580deb7f188c1c704cf6461a59172d278a09d5aafb92f6d78b95bb9a2277"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_021_r0.txt",
+      "bytes": 92,
+      "sha256": "5201f1e6e6cdd4f0d23836a6ae37c1e08c279f504380f81b45c2228dcec9ec62"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_021_r1.txt",
+      "bytes": 92,
+      "sha256": "5201f1e6e6cdd4f0d23836a6ae37c1e08c279f504380f81b45c2228dcec9ec62"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_022_r0.txt",
+      "bytes": 46,
+      "sha256": "ec26e30dbc3c7ae0ec6a0bc3930f41923a26f662e4393266c54f9cc45a13fd9b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_022_r1.txt",
+      "bytes": 46,
+      "sha256": "ec26e30dbc3c7ae0ec6a0bc3930f41923a26f662e4393266c54f9cc45a13fd9b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_023_r0.txt",
+      "bytes": 46,
+      "sha256": "a40c41a0babb31caae84742ac6a2b5e924180c3038fed3baf4fd5902b4452621"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_023_r1.txt",
+      "bytes": 46,
+      "sha256": "a40c41a0babb31caae84742ac6a2b5e924180c3038fed3baf4fd5902b4452621"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_024_r0.txt",
+      "bytes": 46,
+      "sha256": "8213b2c531987427de6da4145aa61d30a40ac8a128ef017549e74bef4d3de552"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_024_r1.txt",
+      "bytes": 46,
+      "sha256": "8213b2c531987427de6da4145aa61d30a40ac8a128ef017549e74bef4d3de552"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_025_r0.txt",
+      "bytes": 46,
+      "sha256": "03ebad250e809ea8097ecd61abcd1320e0bd8ad35684e280d6c1211732b718a9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_025_r1.txt",
+      "bytes": 46,
+      "sha256": "03ebad250e809ea8097ecd61abcd1320e0bd8ad35684e280d6c1211732b718a9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_026_r0.txt",
+      "bytes": 46,
+      "sha256": "429434884c1d3cd0b153fe16c69ceb5a4f26b2289af2cd3412607310d1501541"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_026_r1.txt",
+      "bytes": 46,
+      "sha256": "429434884c1d3cd0b153fe16c69ceb5a4f26b2289af2cd3412607310d1501541"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_027_r0.txt",
+      "bytes": 92,
+      "sha256": "f6ba9f922863b09b466efee10ad895efa4788522f85d6849159080ee2563e207"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_027_r1.txt",
+      "bytes": 92,
+      "sha256": "f6ba9f922863b09b466efee10ad895efa4788522f85d6849159080ee2563e207"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_029_r0.txt",
+      "bytes": 46,
+      "sha256": "f9a155f951dda5c49f8b0f4b9494ad8ab89babac140a59b039140309c44a46e2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_029_r1.txt",
+      "bytes": 46,
+      "sha256": "f9a155f951dda5c49f8b0f4b9494ad8ab89babac140a59b039140309c44a46e2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_030_r0.txt",
+      "bytes": 46,
+      "sha256": "4ad7900c4f70874b454f8ea957f9d0124fa6fb543b00bf16e68dc70ef4add0ee"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_030_r1.txt",
+      "bytes": 46,
+      "sha256": "4ad7900c4f70874b454f8ea957f9d0124fa6fb543b00bf16e68dc70ef4add0ee"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_031_r0.txt",
+      "bytes": 46,
+      "sha256": "5a66511c57ac4e14a971d7ac5cdb1b660ee419958b4beb613998af48b9ee3e03"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_031_r1.txt",
+      "bytes": 46,
+      "sha256": "5a66511c57ac4e14a971d7ac5cdb1b660ee419958b4beb613998af48b9ee3e03"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_032_r0.txt",
+      "bytes": 46,
+      "sha256": "ba7fecb8befd65c08bfe95f24cccc50f512094e8e5dee491d8161f0eb37c4782"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_032_r1.txt",
+      "bytes": 46,
+      "sha256": "ba7fecb8befd65c08bfe95f24cccc50f512094e8e5dee491d8161f0eb37c4782"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_033_r0.txt",
+      "bytes": 46,
+      "sha256": "e92de64955ad160056dc8a755de214be7f9e0aa4ae96bfcb89fed3f5b0e0df22"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_033_r1.txt",
+      "bytes": 46,
+      "sha256": "e92de64955ad160056dc8a755de214be7f9e0aa4ae96bfcb89fed3f5b0e0df22"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_034_r0.txt",
+      "bytes": 46,
+      "sha256": "add90c453011e1f2e4271e4af28fa749e3b343c0ffd0eb0cba08336f50fb5aa1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_034_r1.txt",
+      "bytes": 46,
+      "sha256": "add90c453011e1f2e4271e4af28fa749e3b343c0ffd0eb0cba08336f50fb5aa1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_035_r0.txt",
+      "bytes": 92,
+      "sha256": "d3d6569013105c2b9193f9cc37ee011eb1389edddacc6b2fc945278de15f9297"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_035_r1.txt",
+      "bytes": 92,
+      "sha256": "d3d6569013105c2b9193f9cc37ee011eb1389edddacc6b2fc945278de15f9297"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_036_r0.txt",
+      "bytes": 46,
+      "sha256": "e8c05f64b7b17e95e249b4e2de9cb09321d263685ce61e0895bee63682899116"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_036_r1.txt",
+      "bytes": 46,
+      "sha256": "e8c05f64b7b17e95e249b4e2de9cb09321d263685ce61e0895bee63682899116"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_037_r0.txt",
+      "bytes": 46,
+      "sha256": "bc3038ffb5a70bd0334459becfc48e7bba235d80b315a52b92be0d0c841f614f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_037_r1.txt",
+      "bytes": 46,
+      "sha256": "bc3038ffb5a70bd0334459becfc48e7bba235d80b315a52b92be0d0c841f614f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_038_r0.txt",
+      "bytes": 46,
+      "sha256": "e273294d5c95d345c8c11dc11f2ce0396a19271e959a6c24763494767efb6a6d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_038_r1.txt",
+      "bytes": 46,
+      "sha256": "e273294d5c95d345c8c11dc11f2ce0396a19271e959a6c24763494767efb6a6d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_039_r0.txt",
+      "bytes": 46,
+      "sha256": "1ecf8ca40069662d44af1bb2f7dbcf422299442e3a6ddba68eb34b38c54e5eac"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_039_r1.txt",
+      "bytes": 46,
+      "sha256": "1ecf8ca40069662d44af1bb2f7dbcf422299442e3a6ddba68eb34b38c54e5eac"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_040_r0.txt",
+      "bytes": 92,
+      "sha256": "e82b52ad4c03029ada4405b3b309ee0cef91daabf5a5f4cfbf4938cfb97ea461"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_040_r1.txt",
+      "bytes": 92,
+      "sha256": "e82b52ad4c03029ada4405b3b309ee0cef91daabf5a5f4cfbf4938cfb97ea461"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_041_r0.txt",
+      "bytes": 92,
+      "sha256": "c942d03ea84a57aa5b3748c6440774d2bf1eb003abc3f592d7b5d4b9c997f948"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_041_r1.txt",
+      "bytes": 92,
+      "sha256": "c942d03ea84a57aa5b3748c6440774d2bf1eb003abc3f592d7b5d4b9c997f948"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_043_r0.txt",
+      "bytes": 46,
+      "sha256": "4132ce07d03ee0d9561f58a77c41a8bccf7ae6df31e42e5348486791dd1e035c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_043_r1.txt",
+      "bytes": 46,
+      "sha256": "4132ce07d03ee0d9561f58a77c41a8bccf7ae6df31e42e5348486791dd1e035c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_044_r0.txt",
+      "bytes": 46,
+      "sha256": "6e0f868beb3a2c79efaec06faa6868cde61a3ba5ab61fc7915d1372ed239529f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_044_r1.txt",
+      "bytes": 46,
+      "sha256": "6e0f868beb3a2c79efaec06faa6868cde61a3ba5ab61fc7915d1372ed239529f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_045_r0.txt",
+      "bytes": 92,
+      "sha256": "6ddba086381746087e40bc4555d66fff5b06a219caee51a50a6d3c0a5712c532"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_045_r1.txt",
+      "bytes": 92,
+      "sha256": "6ddba086381746087e40bc4555d66fff5b06a219caee51a50a6d3c0a5712c532"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_046_r0.txt",
+      "bytes": 46,
+      "sha256": "11c8b4469980b375a1ff4de1ec09d7bc4578beca7d1b92f6d3593a1437387b89"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_046_r1.txt",
+      "bytes": 46,
+      "sha256": "11c8b4469980b375a1ff4de1ec09d7bc4578beca7d1b92f6d3593a1437387b89"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_047_r0.txt",
+      "bytes": 46,
+      "sha256": "cbd4f1feb4467eb2be2e9087a35b69af524804c7619f7dcdfd46f217770cea33"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_047_r1.txt",
+      "bytes": 46,
+      "sha256": "cbd4f1feb4467eb2be2e9087a35b69af524804c7619f7dcdfd46f217770cea33"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_048_r0.txt",
+      "bytes": 46,
+      "sha256": "2414c72a8adb943b280fb66b8df77ccda3467117afda6b5e9f649861b018e7c1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_048_r1.txt",
+      "bytes": 46,
+      "sha256": "2414c72a8adb943b280fb66b8df77ccda3467117afda6b5e9f649861b018e7c1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_049_r0.txt",
+      "bytes": 46,
+      "sha256": "1dcaf7fed66cbe1b641bc4155dfb2e62f899a90d2597d43a4cab27808de87715"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_049_r1.txt",
+      "bytes": 46,
+      "sha256": "1dcaf7fed66cbe1b641bc4155dfb2e62f899a90d2597d43a4cab27808de87715"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_050_r0.txt",
+      "bytes": 46,
+      "sha256": "07501892a6caf342e31d670f199bdcdd3d0501b35fe28ce758a8ddfe6990b91f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_050_r1.txt",
+      "bytes": 46,
+      "sha256": "07501892a6caf342e31d670f199bdcdd3d0501b35fe28ce758a8ddfe6990b91f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_051_r0.txt",
+      "bytes": 92,
+      "sha256": "114136a3059e2736328a8b02356c2204f659cf7588d23ce0c331c7c9054a67a6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_051_r1.txt",
+      "bytes": 92,
+      "sha256": "114136a3059e2736328a8b02356c2204f659cf7588d23ce0c331c7c9054a67a6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_052_r0.txt",
+      "bytes": 46,
+      "sha256": "d258dc2387fd6cf5175b382b00cdb572343c1bae9639eec63c25f33e5c963bea"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_052_r1.txt",
+      "bytes": 46,
+      "sha256": "d258dc2387fd6cf5175b382b00cdb572343c1bae9639eec63c25f33e5c963bea"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_053_r0.txt",
+      "bytes": 46,
+      "sha256": "313f2a9ee649a300b867e786d43861bc45ff6c89c26c2e409b79ad511ce9dd4d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_053_r1.txt",
+      "bytes": 46,
+      "sha256": "313f2a9ee649a300b867e786d43861bc45ff6c89c26c2e409b79ad511ce9dd4d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_054_r0.txt",
+      "bytes": 92,
+      "sha256": "7da4b29fa4619d6b80f87697ed2c2da9d1a825ca6e2279e8f2e8ec018b406eec"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_054_r1.txt",
+      "bytes": 92,
+      "sha256": "7da4b29fa4619d6b80f87697ed2c2da9d1a825ca6e2279e8f2e8ec018b406eec"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_055_r0.txt",
+      "bytes": 92,
+      "sha256": "afec964e2c44a5c47a12396e786a6db8c5242059f6599772bd2d71405f561190"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_055_r1.txt",
+      "bytes": 92,
+      "sha256": "afec964e2c44a5c47a12396e786a6db8c5242059f6599772bd2d71405f561190"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_056_r0.txt",
+      "bytes": 46,
+      "sha256": "941a31d13423c6f53ba788e826b0d9d6b0ad5dd8c5f19194bfdd8440ba5da223"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/remaining_target_056_r1.txt",
+      "bytes": 46,
+      "sha256": "941a31d13423c6f53ba788e826b0d9d6b0ad5dd8c5f19194bfdd8440ba5da223"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-20_001_002561.txt",
+      "bytes": 46,
+      "sha256": "d259be64a5032de7d85dadfecacd7ca74d5259794ad2b06ba05489e80c6233ad"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-23_001_000706.txt",
+      "bytes": 92,
+      "sha256": "61869558e688d7f5fe2b7974944000970d3d9c098b93fc8b471a4cb543165e06"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-30_001_000904.txt",
+      "bytes": 46,
+      "sha256": "04e2e5d6701b99bae30a76d0d2fcf7c937deabaec9946cb5b09144e674df0e31"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-31_001_000465.txt",
+      "bytes": 46,
+      "sha256": "8034b8e192a6950a06b4a6077d39389ba51a06d300cdfa6b5746fa9b85d056cb"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-33_001_001844.txt",
+      "bytes": 46,
+      "sha256": "e096aae4b13c2b2e8beb9e203c71334a79f3d7de67514393ed579b06f76fc872"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-09-14-10-35_002_000708.txt",
+      "bytes": 46,
+      "sha256": "8d8fd938e4a76323902c745ed3d8aef9a41fa3090cca52caead3a64b2aa8290c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-36_046_001832.txt",
+      "bytes": 46,
+      "sha256": "0cb95b0b67fccc0b92bf84e88f6dbf7ef0df7df8b280e13d5df288b78cbd18e3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-40_045_010308.txt",
+      "bytes": 46,
+      "sha256": "df88c67049ea58e457cd5323b30f5bace87eafbe5ac094d696d6b853ebaf666c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-45_043_002538.txt",
+      "bytes": 46,
+      "sha256": "bb899f698f5c43acc153322267d9e566142645c328cd9f73ba8a74a94e53f900"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H0_L1_D2023-10-25-15-49_021_000075.txt",
+      "bytes": 46,
+      "sha256": "88a16da3afe4ef353f99caf8439eab42b832dd34e294892603ef89ddd83a96e9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H1_L1_D2023-09-14-10-35_001_001115.txt",
+      "bytes": 46,
+      "sha256": "47dc6f50399119244f202568168cee21a2645f82dafa64311e3ea3bb456d74c9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H1_L1_D2023-09-14-10-36_002_000710.txt",
+      "bytes": 46,
+      "sha256": "609fe9189705eee305e03326bc441275342c623a1a17a9c18c600c9edd88e79b"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H1_L1_D2023-09-14-10-37_001_000967.txt",
+      "bytes": 46,
+      "sha256": "81312cf40291b598ed18cd44c595ad122d2d54639a6b442a011f32a28e76e5a9"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_S63_DATA3_H1_L1_D2023-10-25-13-40_001_001059.txt",
+      "bytes": 46,
+      "sha256": "37244397bb5cfdad40c3be1b9616bce0d1f6d5613a457557223c3aec7d4d7ac3"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_0_0_r0.txt",
+      "bytes": 46,
+      "sha256": "6267d0d5af0e89df3e53038ddb3f89ce47ec4f490f33c8be396346910e2e7e5e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_1_0_r0.txt",
+      "bytes": 92,
+      "sha256": "fe8c94c158ec79a97451786d356f871942878d9478a77df16d1d7e26bab7d376"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_1_1_r0.txt",
+      "bytes": 92,
+      "sha256": "592e82a35d2827563bf8511e4cf1a06878f9fd6cfd4270a4c36ed5778637e487"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_2_0_r0.txt",
+      "bytes": 46,
+      "sha256": "1bd9f92c3861c08a5e4173bf300178be2ff742d7aa69ad3852766ad91073d102"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_3_0_r0.txt",
+      "bytes": 46,
+      "sha256": "c137638d2a3e2da7b92a1eaaad51b482899b655ae25b48149606d520be024f64"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_4_0_r0.txt",
+      "bytes": 46,
+      "sha256": "84789bd408f747f78d23fa8f846b507776d5a11ec8221813405d598190d7dfec"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/smartyard_ppe_support_5_0_r0.txt",
+      "bytes": 46,
+      "sha256": "8b6a26af82b3bb9c8932785c71ae84bad2bf8666a5025cc028e5d4989e25d402"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/warehouse-labor-shortage_jpg.rf.73c93383fa93b6aae2a9ab71fe67a40d.txt",
+      "bytes": 43,
+      "sha256": "927141c3c3d47b45c69134c865dc44a7aa28fdd4d1bcb74edd855d7a51fa3a98"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/warehouse-management-system-eostar_jpg.rf.55f4318fd2153778d3189808de05dff2.txt",
+      "bytes": 87,
+      "sha256": "b98f535b0c4c9d2b367018b77ae6d53d74a747344ec30075c7dcf587f3386c82"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/train/labels/warehouse-manager-1-3_jpg.rf.418a124efccf0dcfe778157170b15bb3.txt",
+      "bytes": 90,
+      "sha256": "238f322c5202a8b70822b9a04642fb8cc24f06e943987878f20c549878c34f65"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/750px_png.rf.52dd041f5cb4f1079d6df72c46d15fee.jpg",
+      "bytes": 83504,
+      "sha256": "dedda29ad454028b3a5f84a978f1111fa7ea91e54ee71e0a13a059b6b6d312c1"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/AdobeStock_104079731-1_jpeg.rf.8411165e57d0e230d5241c8ad8692b24.jpg",
+      "bytes": 53104,
+      "sha256": "4a8e67a983335a1a85beb8fe6678b731a8a428d8d8d5b4046db23364f2ce1148"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/hard_hat_workers185_png.rf.95bd6563098c373ccad749c6747908c3.jpg",
+      "bytes": 49992,
+      "sha256": "2789ac98b4c2c8bbd1926b0cac22b0f95562217f3aa67626dfe6985487d12e6c"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/iStock-1198042394_jpg.rf.3b276776aa5248a4e6856e9214aac0ab.jpg",
+      "bytes": 55701,
+      "sha256": "8ac435d69ec4a1f28d6955bbb500708982c3fa881dce78dc1e550e9e03600cef"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/image20_jpeg.rf.13336ec37febe553a18d2d3a0b82d933.jpg",
+      "bytes": 73229,
+      "sha256": "3b012d8604d67c4da88de6c87abdf0d49d090b2ddff4886fedaa6b488e96a574"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/kinds_of_warehouse_jobs_1600x684_png.rf.1010c93364981dc8085c9db2431a7609.jpg",
+      "bytes": 74437,
+      "sha256": "3a915a6c73cce8d960708727c3d0b892262641b44f26d772514da816c053e9b0"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/logistic-business-success-people-concept-600w-1077995543_jpg.rf.8ce5b445a8d2c5cd0190b9c2193a73e5.jpg",
+      "bytes": 77459,
+      "sha256": "9afb5d35144f827328fd6c5061e5a6d1d456d94d6520e749d6db891a2c81229e"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/smartyard_S63_DATA3_H0_L1_D2023-10-12-10-17_001_001189.jpg",
+      "bytes": 70450,
+      "sha256": "bc676f82edac020043d61793568c9f3e9349638bdc41d0fa1bf981cbb36993f2"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/smartyard_S63_DATA3_H0_L1_D2023-10-12-10-21_001_001144.jpg",
+      "bytes": 81680,
+      "sha256": "865969b2285d1e06a1cf45bab5e3b4549bb14542997e9802f067d40f55992f43"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/smartyard_S63_DATA3_H1_L1_D2023-10-12-10-20_001_000775.jpg",
+      "bytes": 81285,
+      "sha256": "7af00d1477e91efd9cdb4348487446a0cafe94a0fa63f118d8562edc2a0df910"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/warehouse-job-for-deaf-person_jpg.rf.484cf777fc523ca46237f2bae1d57ddd.jpg",
+      "bytes": 49247,
+      "sha256": "0308f9dfda32892d69e3de6465299a2424b19596dc19051996961f2b29be9994"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/images/warehouse-worker-job-description-4088x2727-2020121_jpeg.rf.f2023400377a078e1e0d5696d3bf7f6b.jpg",
+      "bytes": 95265,
+      "sha256": "ba644292a7910c28ab8afa423628b77058c9f6f09a485d3d198b45752f034a54"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/750px_png.rf.52dd041f5cb4f1079d6df72c46d15fee.txt",
+      "bytes": 84,
+      "sha256": "d98f67b41809592d3aeb4d419c59a538e95a2f2474b1160b8744b6fe88634f04"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/AdobeStock_104079731-1_jpeg.rf.8411165e57d0e230d5241c8ad8692b24.txt",
+      "bytes": 79,
+      "sha256": "c641155bae302de9f774388e69004049da8b329f3e9e85466ff9b51004d60fb6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/hard_hat_workers185_png.rf.95bd6563098c373ccad749c6747908c3.txt",
+      "bytes": 121,
+      "sha256": "1ee11cf88275fad2ebc409dbb56ab414403be5cd2c2d69d3f928d10b14c55849"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/iStock-1198042394_jpg.rf.3b276776aa5248a4e6856e9214aac0ab.txt",
+      "bytes": 130,
+      "sha256": "cd9a3de2bf63d965cbd89e6740a7761d6b287c32eac18213780e7885e6b4d00f"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/image20_jpeg.rf.13336ec37febe553a18d2d3a0b82d933.txt",
+      "bytes": 210,
+      "sha256": "bbf40086e240ccc7214079383e549b551d9aeb5cc5a7cf8fa33f058a385e83c6"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/kinds_of_warehouse_jobs_1600x684_png.rf.1010c93364981dc8085c9db2431a7609.txt",
+      "bytes": 167,
+      "sha256": "fdcc00290e7c342332bea3d8a4c12fe74d56a576bd6d9b812ef776c1f54ef3b8"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/logistic-business-success-people-concept-600w-1077995543_jpg.rf.8ce5b445a8d2c5cd0190b9c2193a73e5.txt",
+      "bytes": 38,
+      "sha256": "c5322d762786b7de47a4b7a8e3d65e05c4ef351b667e0f29d2fb982d14485891"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/smartyard_S63_DATA3_H0_L1_D2023-10-12-10-17_001_001189.txt",
+      "bytes": 46,
+      "sha256": "6b1bc8973919427dac336717babdcc8d18c5aaeae9a3f3a30dbe63eeec729b7d"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/smartyard_S63_DATA3_H0_L1_D2023-10-12-10-21_001_001144.txt",
+      "bytes": 46,
+      "sha256": "771ac3d91c1287a98b5d6974d1f968298192585be74954264bf86b8aeb2bfef5"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/smartyard_S63_DATA3_H1_L1_D2023-10-12-10-20_001_000775.txt",
+      "bytes": 46,
+      "sha256": "36d78cdd7b4916e2504e7f848fe29c3bb9ba1196886f338eb7fd005edef834df"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/warehouse-job-for-deaf-person_jpg.rf.484cf777fc523ca46237f2bae1d57ddd.txt",
+      "bytes": 121,
+      "sha256": "4161304eaffa24c2d701b19302bb9fd8a79b0ca54d370e26aba4eead6aeeb6f4"
+    },
+    {
+      "path": "data/reviewed_pilot/ppe_remaining_v2/val/labels/warehouse-worker-job-description-4088x2727-2020121_jpeg.rf.f2023400377a078e1e0d5696d3bf7f6b.txt",
+      "bytes": 44,
+      "sha256": "8f4b54ef886f5c9a6f485e693ef4cdf397a7749974f93b0f168f327fa9c38e67"
+    }
+  ]
+}
