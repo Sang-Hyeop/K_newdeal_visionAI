@@ -11,7 +11,7 @@ class Visit:
     observed_previous: bool = True
 
 class ZoneDwell:
-    def __init__(self, polygon, safe_seconds=3.0, critical_seconds=8.0, max_gap_seconds=1.0):
+    def __init__(self, polygon, safe_seconds=3.0, critical_seconds=8.0, max_gap_seconds=1.0, contains=None):
         self.polygon=np.asarray(polygon,dtype=np.float32)
         if self.polygon.ndim!=2 or self.polygon.shape[1]!=2 or len(self.polygon)<3 or not np.isfinite(self.polygon).all():
             raise ValueError('ROI requires at least three finite XY points')
@@ -20,7 +20,7 @@ class ZoneDwell:
         if not 0<=safe_seconds<critical_seconds or max_gap_seconds<=0:
             raise ValueError('Invalid time thresholds')
         self.safe=safe_seconds;self.critical=critical_seconds;self.max_gap=max_gap_seconds
-        self.visits={};self.last_timestamp=None
+        self.visits={};self.last_timestamp=None;self.contains=contains
 
     def reset(self):
         """Call on scene cut, ROI change or tracking identity reset."""
@@ -45,7 +45,7 @@ class ZoneDwell:
             prepared[key]=((x1+x2)/2,y2)
         self.last_timestamp=timestamp;result=[]
         for key,point in prepared.items():
-            inside=cv2.pointPolygonTest(self.polygon,point,False)>=0
+            inside=self.contains(point) if self.contains else cv2.pointPolygonTest(self.polygon,point,False)>=0
             if inside:
                 visit=self.visits.get(key)
                 if visit is None or timestamp-visit.last_seen>self.max_gap:

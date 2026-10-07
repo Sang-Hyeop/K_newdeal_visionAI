@@ -497,3 +497,9 @@ Codex 구현·검증 이력: docs/checkpoints/2026-10-07/, docs/event-module-v1.
 - 근접: `src/tracked_proximity.py`, `src/proximity.py` (`person_forklift_proximity`)  
 - 구역: `src/tracked_zone.py`  
 - PPE: `scripts/validate_tracked_ppe.py` 등  
+
+## 2026-10-07 최종 추가 확정 — 구현 기준
+
+사용자 직접 수정 후 전체 진행을 승인했다. 7번 무차량: 3초 미만 정상, 3초 이상 주의. 유차량: 통로 진입 즉시 주의, 관측 체류 5초 이상 위험. 4번 유차량 즉시 위험은 유지한다. 차량 존재는 동일 감시 통로의 실제 관측으로 판단한다. 4·7번 ROI 채우기는 alpha=0.15(정상), 0.20(주의/위험); 미확인은 회색 테두리로 표시한다. 머리가 후드로 가려지면 사람 검출 여부와 별개로 PPE 미확인이다.
+
+`configs/demo-scenarios.json`과 7번 `configs/cameras/warehouse-summary.json`에 실행 기준을 저장한다. 원본 장면이 바뀌면 기존 ROI를 비활성화하고 미확인으로 남긴다. 시연 재생은 샘플링된 실제 검출 기반이며, 전 프레임 미탐 0 또는 독립 현장 성능을 의미하지 않는다.

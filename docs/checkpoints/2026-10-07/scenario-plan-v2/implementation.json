@@ -1,0 +1,24 @@
+{
+  "status": "implementation_tested_actual_video_processing_in_progress",
+  "tests_passed": 102,
+  "thresholds_v7": {
+    "no_vehicle_normal_below_seconds": 3,
+    "vehicle_critical_from_seconds": 5,
+    "clock": "observed_person_lane_dwell; missing time not counted"
+  },
+  "vehicle_scope": "same_monitor_floor_lane",
+  "roi_alpha": {
+    "safe": 0.15,
+    "warning_and_critical": 0.2,
+    "unknown": "outline_only"
+  },
+  "new_feature": "forklift_forklift_proximity",
+  "hood": "PPE SAFE requires baseline helmet evidence; adaptation-only helmet -> UNKNOWN; review WARNING not verified absence of helmet",
+  "actual_processing": {
+    "video1": "completed raw inference; final policy replay pending",
+    "video5_video6": "completed cached real inference; conservative-policy outputs saved",
+    "video2_3_4_7": "processing"
+  },
+  "general_zero_misses_proven": false,
+  "single_pt_complete": false
+}

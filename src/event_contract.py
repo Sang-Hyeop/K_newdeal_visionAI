@@ -8,9 +8,10 @@ def normalize_event(event,*,camera_id,video,source_sha256,model_version,config_v
     if severity not in {None,'SAFE','WARNING','CRITICAL'}:raise ValueError('Invalid severity')
     if status not in {'confirmed','unconfirmed'}:raise ValueError('Invalid observation status')
     if status!='confirmed':severity=None
-    kind={'person_forklift_proximity':'proximity','zone_access':'zone_access','zone_dwell':'zone_dwell','feature_status':'status','ppe':'ppe'}.get(event['event_type'])
+    kind={'forklift_forklift_proximity':'forklift_proximity','person_forklift_proximity':'proximity','zone_access':'zone_access','zone_dwell':'zone_dwell','feature_status':'status','ppe':'ppe'}.get(event['event_type'])
     if kind is None:raise ValueError('Unsupported event type')
     identities=[event[k] for k in ['track_id','person_track_id','forklift_track_id'] if k in event]
+    identities+=event.get('forklift_track_ids',[])
     evidence={k:v for k,v in event.items() if k not in {'event_type','timestamp_seconds','severity','observation_status','camera_id'}}
     envelope={'schema_version':'1.0','camera_id':camera_id,'video':video,'source_sha256':source_sha256,
               'timestamp_seconds':timestamp,'event_type':kind,'severity':severity,'observation_status':status,

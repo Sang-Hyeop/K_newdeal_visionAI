@@ -1,5 +1,5 @@
 {
-  "policy_version": "ppe-recall-review-v4",
+  "policy_version": "ppe-recall-review-v5-conservative-helmet",
   "minimum_consecutive_frames": 3,
   "minimum_confirmed_seconds": 0.4,
   "maximum_observation_gap_seconds": 0.45,
@@ -9,5 +9,7 @@
   "conflicting_bare_head_policy": "warning_candidate",
   "minimum_no_helmet_candidate_confidence": 0.25,
   "confirmation_key": "Persistent observed bare-head evidence, including conflicts; no reset solely due to state label change",
-  "head_candidate_continuity": true
+  "head_candidate_continuity": true,
+  "require_baseline_helmet_confirmation": true,
+  "helmet_confirmation": "SAFE requires temporally stable baseline helmet confidence >=0.5; adaptation-only helmets remain UNKNOWN"
 }
