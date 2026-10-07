@@ -1,0 +1,10 @@
+{
+  "status": "local_package_ready_not_in_git",
+  "package": "outputs/checkpoints/demo_models_share_20261007-165749.zip",
+  "bytes": 33677992,
+  "sha256": "f01e53082d12d4a86c79ec5ad8d8780feef54a32096ecea4f33c81d1bd4c25b7",
+  "file_count": 7,
+  "builder": "scripts/pack_demo_models.py",
+  "manifest": "docs/checkpoints/2026-10-07/model-share-manifest.json",
+  "note": "Zip is gitignored under outputs/; share out of band and verify sha256"
+}

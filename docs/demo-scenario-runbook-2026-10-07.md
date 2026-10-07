@@ -18,6 +18,16 @@
 | PPE baseline / supplement / helmet | `configs/demo-ppe-model.json` 참고 | ensemble, 단일 pt 아님 |
 | 후드 보조 (5·6 옵션) | `models/hoodie_auxiliary_v1/hoodie.pt` | experimental |
 
+한 번에 묶기:
+
+```bash
+python scripts/pack_demo_models.py
+# → outputs/checkpoints/demo_models_share_*.zip  (약 32MB)
+# 해시 기록: docs/checkpoints/2026-10-07/model-share-package.json
+```
+
+수신 측은 zip을 저장소 루트에 풀어 `models/...` 경로가 맞게 두고, zip 안 `manifest.json` SHA와 대조한다.
+
 설정 스냅샷:
 
 - `configs/demo-scenarios.json`
