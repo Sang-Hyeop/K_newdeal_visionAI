@@ -1,0 +1,110 @@
+{
+  "status": "videos3_4_and_hood_training_processing",
+  "unit_tests": 107,
+  "completed": [
+    {
+      "video": 1,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video1/summary.json",
+      "summary_sha256": "d572495d7c3e01eeeb9c192528cf7381fb3bc6d50d3389e3e863ce1b4edda1bc",
+      "samples": 106,
+      "features": {
+        "proximity": {
+          "SAFE": 2,
+          "WARNING": 26,
+          "CRITICAL": 3,
+          "UNKNOWN": 75
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 58,
+          "CRITICAL": 0,
+          "UNKNOWN": 48
+        }
+      }
+    },
+    {
+      "video": 2,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video2/summary.json",
+      "summary_sha256": "8d919aef283522e8278cabc54ea0c5914ac3debc581385ff4d33b11a6ace058a",
+      "samples": 106,
+      "features": {
+        "proximity": {
+          "SAFE": 0,
+          "WARNING": 22,
+          "CRITICAL": 0,
+          "UNKNOWN": 84
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 40,
+          "CRITICAL": 0,
+          "UNKNOWN": 66
+        }
+      }
+    },
+    {
+      "video": 5,
+      "summary": "outputs/diagnostics/scenario_plan_v2_conservative_ppe/video5/summary.json",
+      "summary_sha256": "ef662f278b12b555d2e9599f662823015b370875d6c07e6641266092ac92347c",
+      "samples": 58,
+      "features": {
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 32,
+          "CRITICAL": 0,
+          "UNKNOWN": 26
+        }
+      }
+    },
+    {
+      "video": 6,
+      "summary": "outputs/diagnostics/scenario_plan_v2_conservative_ppe/video6/summary.json",
+      "summary_sha256": "002c2200e0a0476dff37240ff1bbbe4bb46181c0a0b287c6c2f8be0bde7f88b9",
+      "samples": 58,
+      "features": {
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 42,
+          "CRITICAL": 0,
+          "UNKNOWN": 16
+        }
+      }
+    },
+    {
+      "video": 7,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_long/video7/summary.json",
+      "summary_sha256": "6bc1f60a1f1eb85584c2a0ae8ddf542e11e11a5d5bb0b7502a6d6aa79de4a300",
+      "samples": 870,
+      "features": {
+        "zone_access": {
+          "SAFE": 108,
+          "WARNING": 210,
+          "CRITICAL": 105,
+          "UNKNOWN": 447
+        },
+        "zone_dwell": {
+          "SAFE": 108,
+          "WARNING": 210,
+          "CRITICAL": 105,
+          "UNKNOWN": 447
+        },
+        "proximity": {
+          "SAFE": 37,
+          "WARNING": 138,
+          "CRITICAL": 5,
+          "UNKNOWN": 690
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 441,
+          "CRITICAL": 0,
+          "UNKNOWN": 429
+        }
+      }
+    }
+  ],
+  "reverse_target_sample_counts": {
+    "WARNING": 8
+  },
+  "caution": "status counts not ground truth recall; hood helper not activated"
+}
