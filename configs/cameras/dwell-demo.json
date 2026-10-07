@@ -2,29 +2,50 @@
   "camera_id": "dwell-demo",
   "source_name": "4_hazard_zone_dwell.mp4",
   "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
-  "roi_id": "machine-work-area",
-  "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+  "roi_id": "yellow_line_vehicle_lane",
+  "roi_purpose": "user_defined_forklift_lane_pedestrian_conditional_warning",
   "polygon_normalized": [
     [
-      0.02,
-      0.4
+      0.65625,
+      0
     ],
     [
-      0.61,
-      0.33
+      0.728125,
+      0
     ],
     [
-      0.53,
-      0.995
+      0.909375,
+      1
     ],
     [
-      0.02,
-      0.995
+      0.5208333333333334,
+      1
+    ],
+    [
+      0.540625,
+      0.8703703703703703
+    ],
+    [
+      0.5739583333333333,
+      0.6481481481481481
+    ],
+    [
+      0.603125,
+      0.4444444444444444
+    ],
+    [
+      0.6322916666666667,
+      0.18518518518518517
     ]
   ],
   "safe_seconds": 3.0,
   "critical_seconds": 8.0,
   "max_gap_seconds": 1.0,
   "anchor": "bbox_bottom_center_proxy",
-  "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+  "roi_review_status": "business_rule_confirmed_by_user; floor_geometry_manually_reviewed",
+  "vehicle_conditioned": true,
+  "vehicle_missing_hold_seconds": 1.0,
+  "access_enabled": true,
+  "approach_margin_ratio": 0.005,
+  "policy_version": "vehicle_lane_conditional_v1"
 }

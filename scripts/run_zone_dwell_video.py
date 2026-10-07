@@ -23,6 +23,7 @@ def main():
     if config.get('source_sha256',source_sha256)!=source_sha256:raise ValueError('Source changed; review ROI before reuse')
     torch.set_num_threads(4);model=YOLO(str(args.weights))
     if model.names.get(0)!='person':raise ValueError('Expected person class 0')
+    if config.get('vehicle_conditioned') and model.names!={0:'person',1:'forklift'}:raise ValueError('Conditional lane requires person/forklift model')
     cap=cv2.VideoCapture(str(args.source));fps=cap.get(5);w,h=int(cap.get(3)),int(cap.get(4))
     if not cap.isOpened() or fps<=0:raise ValueError('Unreadable source')
     stride=max(1,round(fps/args.sample_fps));pipeline=TrackedZone(config,(h,w),fps/stride)
@@ -45,13 +46,13 @@ def main():
             if idx%stride==0:
                 small=cv2.resize(frame,(96,54)).astype(np.float32)/255
                 cut=previous is not None and float(np.abs(small-previous).mean())>.18;previous=small
-                prediction=model.predict(frame,classes=[0],conf=.1,imgsz=args.imgsz,device='cpu',verbose=False)[0]
-                detections=[{'class':'person','confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()} for b in prediction.boxes]
-                r=pipeline.update(idx/fps,detections,(h,w),cut);r['frame_index']=idx;r['scene_cut']=cut
+                prediction=model.predict(frame,classes=None if pipeline.forklift_tracker else [0],conf=.1,imgsz=args.imgsz,device='cpu',verbose=False)[0]
+                detections=[{'class':prediction.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()} for b in prediction.boxes]
+                r=pipeline.update(idx/fps,detections,(h,w),cut);r['frame_index']=idx;r['scene_cut']=cut;r['detections']=detections
                 records.append(r);canvas=frame.copy();polygon=np.array(pipeline.polygon,dtype=np.int32)
                 cv2.polylines(canvas,[polygon],True,(255,190,0) if r['roi_active'] else (120,120,120),3)
                 if approach_contours and r['roi_active']:cv2.drawContours(canvas,approach_contours,-1,(0,190,255),2)
-                cv2.putText(canvas,'DEMO ROI / ACCESS + DWELL / NOT SITE VIOLATION',(15,30),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)
+                cv2.putText(canvas,'VEHICLE LANE / CONDITIONAL PEDESTRIAN WARNING' if pipeline.lane else 'DEMO ROI / ACCESS + DWELL / NOT SITE VIOLATION',(15,30),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)
                 cv2.putText(canvas,f"t={idx/fps:.2f}s  {'ROI ACTIVE' if r['roi_active'] else 'ROI RECONFIGURATION REQUIRED'}",(15,60),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)
                 events={e['track_id']:e for e in r['events'] if e['event_type']=='zone_dwell'}
                 access={e['track_id']:e for e in r['events'] if e['event_type']=='zone_access'}
@@ -72,6 +73,9 @@ def main():
                     if access_event:
                         access_severity=access_event['severity']
                         cv2.putText(canvas,f"ACCESS {access_severity or 'UNKNOWN'}",(x1,max(115,y1+18)),cv2.FONT_HERSHEY_SIMPLEX,.6,colors[access_severity],2)
+                if r.get('vehicle_lane_state'):cv2.putText(canvas,r['vehicle_lane_state']['state'],(15,90),cv2.FONT_HERSHEY_SIMPLEX,.55,(0,190,255),2)
+                for vehicle in r.get('forklifts',[]):
+                    a,b,c,d=map(int,vehicle['detected_bbox_xyxy']);cv2.rectangle(canvas,(a,b),(c,d),(255,180,0),2)
                 unknown=sum(e['severity'] is None for e in r['events'])
                 if not r['tracks'] or unknown:
                     cv2.putText(canvas,f'UNCONFIRMED OBSERVATIONS: {unknown}',(15,90),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)

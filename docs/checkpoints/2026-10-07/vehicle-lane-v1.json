@@ -1,0 +1,181 @@
+{
+  "policy": "vehicle_lane_conditional_v1",
+  "tests_passed": 54,
+  "model_changed": false,
+  "training_run": false,
+  "summary": {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/4_hazard_zone_dwell.mp4",
+    "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+    "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+    "config": {
+      "camera_id": "dwell-demo",
+      "source_name": "4_hazard_zone_dwell.mp4",
+      "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "roi_id": "yellow_line_vehicle_lane",
+      "roi_purpose": "user_defined_forklift_lane_pedestrian_conditional_warning",
+      "polygon_normalized": [
+        [
+          0.65625,
+          0
+        ],
+        [
+          0.728125,
+          0
+        ],
+        [
+          0.909375,
+          1
+        ],
+        [
+          0.5208333333333334,
+          1
+        ],
+        [
+          0.540625,
+          0.8703703703703703
+        ],
+        [
+          0.5739583333333333,
+          0.6481481481481481
+        ],
+        [
+          0.603125,
+          0.4444444444444444
+        ],
+        [
+          0.6322916666666667,
+          0.18518518518518517
+        ]
+      ],
+      "safe_seconds": 3.0,
+      "critical_seconds": 8.0,
+      "max_gap_seconds": 1.0,
+      "anchor": "bbox_bottom_center_proxy",
+      "access_enabled": true,
+      "approach_margin_ratio": 0.005,
+      "roi_review_status": "business_rule_confirmed_by_user; floor_geometry_manually_reviewed",
+      "vehicle_conditioned": true,
+      "vehicle_missing_hold_seconds": 1.0,
+      "policy_version": "vehicle_lane_conditional_v1"
+    },
+    "frames_sampled": 92,
+    "processed_fps": 4.795204795204795,
+    "imgsz": 1280,
+    "transition_events": 83,
+    "state_observation_counts": {
+      "SAFE": 340,
+      "WARNING": 71
+    },
+    "max_observed_dwell_by_track": {
+      "0:1": 0,
+      "0:2": 0,
+      "0:3": 0,
+      "0:12": 14.597916666666665,
+      "0:17": 0,
+      "0:32": 0,
+      "0:33": 0,
+      "0:46": 0,
+      "0:48": 0,
+      "0:52": 0,
+      "0:54": 0,
+      "0:60": 0,
+      "0:67": 0
+    },
+    "critical_track_ids": [],
+    "access_state_observation_counts": {
+      "SAFE": 340,
+      "UNKNOWN": 81,
+      "WARNING": 71
+    },
+    "observed_entries": [],
+    "observed_exits": [
+      {
+        "track_id": "0:12",
+        "timestamp_seconds": 16.26625
+      }
+    ],
+    "limitation": "demo ROI, bbox footpoint proxy; missed people/ID switches possible; no independent ground truth"
+  },
+  "real_vehicle_present_path_verified": false,
+  "actual_output_invariants_passed": true,
+  "limitations": [
+    "detector false people remain",
+    "PPE bare-head misses remain",
+    "reverse forklift misses remain",
+    "image bottom-center occupancy proxy",
+    "no independent accuracy ground truth"
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/vehicle-lane-v1/observations_v1.jsonl",
+      "bytes": 1444189,
+      "sha256": "87890f4155a6f4563271e10f5dfc31c722712157b2b85d005b35fd43ebbaff13"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/vehicle-lane-v1/events_v1.jsonl",
+      "bytes": 126330,
+      "sha256": "42e2af430ed9733e44adba059e287f1f78b89377a0cbff7b8983b8bc2b1ea495"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/vehicle-lane-v1/지게차통로_조건부_침범_체류.mp4",
+      "bytes": 13866527,
+      "sha256": "7721158975d59d7ae48d223122974d8ccb73f1a23beb9786cbf06c8142ba0560"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/vehicle-lane-v1/통로_ROI_확인.jpg",
+      "bytes": 526895,
+      "sha256": "1582583967fc4016951e78b13a6aaef0f934ec643c245e915f7b0dd29f4476e3"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/summary.json",
+      "bytes": 2365,
+      "sha256": "7a90e667de663663ae2fe3dc1551eb506e4e1ed11e3c7e28b0ac8f4451d57b9b"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/observations_v1.jsonl",
+      "bytes": 1444189,
+      "sha256": "87890f4155a6f4563271e10f5dfc31c722712157b2b85d005b35fd43ebbaff13"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/events_v1.jsonl",
+      "bytes": 126330,
+      "sha256": "42e2af430ed9733e44adba059e287f1f78b89377a0cbff7b8983b8bc2b1ea495"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/tests/test_lane_hazard.py",
+      "bytes": 3407,
+      "sha256": "bb4001d51ce72292c27ed11cb40efd307ea9af79501bcbf4bcf736e722f180df"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/configs/cameras/zone-access-demo.json",
+      "bytes": 1093,
+      "sha256": "69b2eccf767ea8a7e506e097dba8650029e506a4c3853ad13ffece72e463d271"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/configs/cameras/dwell-demo.json",
+      "bytes": 1093,
+      "sha256": "a0e2faea73a601a7702f4587e8bb802f274df0bab948988cca6de913cb0e187c"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/scripts/run_zone_dwell_video.py",
+      "bytes": 8638,
+      "sha256": "825688acf37b3627437d83bddf1a443b9f616710f0eee9be08912b56669bb990"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/scripts/render_lane_events.py",
+      "bytes": 2689,
+      "sha256": "a248b54ffde2ff66ad393b4ffd044940dbe03124cbb978515a46ad80ee1d2428"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/src/tracked_zone.py",
+      "bytes": 4751,
+      "sha256": "89c037535a084512be1034c27c32071570b4b3c314bc735b88d31e73f8b2bb0d"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/vehicle_lane_20261007/src/lane_hazard.py",
+      "bytes": 4123,
+      "sha256": "0fcc5cd32f38683e48e43c37a7fd704ac3cc6a256e06765ac78770b416fc216c"
+    }
+  ]
+}
