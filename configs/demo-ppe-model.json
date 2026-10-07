@@ -36,7 +36,7 @@
     "Three PPE networks plus pretrained person model; one standalone pt goal is not complete",
     "Not exhaustive every-frame ground truth",
     "Faster playback uses saved detections; no live CPU FPS claim",
-    "Missing heads remain UNKNOWN; conflict WARNING requires strong stable bare-head evidence; never verified violation",
+    "Missing heads remain UNKNOWN; WARNING is a stable actual bare-head review candidate, not a verified violation.",
     "Source6 hood/face ambiguity can produce WARNING review false positives; no verified violation claim"
   ],
   "sha256": {
@@ -76,5 +76,9 @@
     "score_fusion": false,
     "anchor": "Original current head box before contextual recheck; no predicted gap boxes",
     "minimum_actual_observations": 3
-  }
+  },
+  "integrated_source5_verified": true,
+  "integrated_source5_run": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video5_integrated",
+  "integrated_source6_verified": true,
+  "integrated_source6_run": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video6_integrated"
 }

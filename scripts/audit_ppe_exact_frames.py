@@ -9,7 +9,7 @@ from src.ppe_recall_ensemble import PPERecallEnsemble
 from src.ppe_tiled_inference import infer_tiled_heads,iou
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--ppe-weights',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--references',type=Path,default=ROOT/'data/training_review/ppe_remaining_v2/global_target_references.json');p.add_argument('--baseline-ppe-weights',type=Path);p.add_argument('--object-imgsz',type=int,default=640);p.add_argument('--helmet-specialist-weights',type=Path);p.add_argument('--source',type=Path,default=ROOT/'data/videos/5_PPE_Helmet.mp4');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--ppe-weights',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--references',type=Path,default=ROOT/'docs/checkpoints/2026-10-07/ppe-recall-specialists-v1/references_v3.json');p.add_argument('--baseline-ppe-weights',type=Path);p.add_argument('--object-imgsz',type=int,default=640);p.add_argument('--helmet-specialist-weights',type=Path);p.add_argument('--source',type=Path,default=ROOT/'data/videos/5_PPE_Helmet.mp4');args=p.parse_args()
  if args.output.exists():raise ValueError('Protected output')
  args.output.mkdir(parents=True);torch.set_num_threads(4);ppe=YOLO(str(args.ppe_weights));people_model=YOLO(str(ROOT/'models/pretrained/yolo26n.pt'));refs=json.loads(args.references.read_text());cap=cv2.VideoCapture(str(args.source));totals={str(c):{'TP':0,'FN':0}for c in [0,1]};rows=[]
  if args.baseline_ppe_weights:ppe=PPERecallEnsemble(YOLO(str(args.baseline_ppe_weights)),ppe,preserve_union=True,helmet_specialist=YOLO(str(args.helmet_specialist_weights))if args.helmet_specialist_weights else None)

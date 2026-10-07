@@ -1,0 +1,97 @@
+{
+  "ppe_preserve_union": false,
+  "helmet_specialist_weights": null,
+  "supplement_object_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_object_adaptation_v1/best.pt",
+  "supplement_ppe_weights": null,
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+  "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v6_corrected_forklift",
+  "confidence_threshold": 0.25,
+  "imgsz": 1280,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "status": "small development diagnostic; not final independent evaluation",
+  "class_counts": {
+    "person": {
+      "TP": 17,
+      "FP": 5,
+      "FN": 1,
+      "precision": 0.7727272727272727,
+      "recall": 0.9444444444444444
+    },
+    "forklift": {
+      "TP": 9,
+      "FP": 4,
+      "FN": 2,
+      "precision": 0.6923076923076923,
+      "recall": 0.8181818181818182
+    }
+  },
+  "images": [
+    {
+      "image": "L-210929_G06_H_UA-10_001_0060.jpg",
+      "gt_count": 3,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "L-210929_G06_H_UA-10_002_0018.jpg",
+      "gt_count": 3,
+      "prediction_count": 4,
+      "matched": 3
+    },
+    {
+      "image": "L-210929_G06_H_UA-10_004_0020.jpg",
+      "gt_count": 3,
+      "prediction_count": 5,
+      "matched": 3
+    },
+    {
+      "image": "L-210929_G06_H_UA-12_001_0124.jpg",
+      "gt_count": 2,
+      "prediction_count": 1,
+      "matched": 1
+    },
+    {
+      "image": "L-210929_G06_H_UA-12_001_0201.jpg",
+      "gt_count": 3,
+      "prediction_count": 3,
+      "matched": 3
+    },
+    {
+      "image": "L-210929_G06_H_UA-12_002_0124.jpg",
+      "gt_count": 3,
+      "prediction_count": 3,
+      "matched": 3
+    },
+    {
+      "image": "L-211218_B08_H_UA-11_002_0208.jpg",
+      "gt_count": 3,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UA-11_003_0007.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UA-11_005_0394.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UC-22_003_0249.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "L-211218_B08_H_UC-22_005_0276.jpg",
+      "gt_count": 3,
+      "prediction_count": 6,
+      "matched": 3
+    }
+  ]
+}

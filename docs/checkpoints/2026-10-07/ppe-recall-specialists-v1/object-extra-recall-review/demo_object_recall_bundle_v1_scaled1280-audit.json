@@ -1,0 +1,271 @@
+{
+  "ppe_preserve_union": false,
+  "helmet_specialist_weights": null,
+  "supplement_object_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_object_adaptation_v1/best.pt",
+  "supplement_ppe_weights": null,
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+  "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1",
+  "confidence_threshold": 0.25,
+  "imgsz": 1280,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "status": "small development diagnostic; not final independent evaluation",
+  "class_counts": {
+    "person": {
+      "TP": 37,
+      "FP": 23,
+      "FN": 3,
+      "precision": 0.6166666666666667,
+      "recall": 0.925
+    },
+    "forklift": {
+      "TP": 35,
+      "FP": 25,
+      "FN": 5,
+      "precision": 0.5833333333333334,
+      "recall": 0.875
+    }
+  },
+  "images": [
+    {
+      "image": "source07_L-210929_G06_H_UA-11_002_0018.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UA-11_002_0060.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 1
+    },
+    {
+      "image": "source07_L-210929_G06_H_UA-11_002_0102.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UA-11_004_0018.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UA-11_004_0060.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UA-11_004_0103.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_001_0038.jpg",
+      "gt_count": 2,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_001_0054.jpg",
+      "gt_count": 2,
+      "prediction_count": 6,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_001_0076.jpg",
+      "gt_count": 2,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_003_0014.jpg",
+      "gt_count": 2,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_003_0057.jpg",
+      "gt_count": 2,
+      "prediction_count": 5,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_003_0088.jpg",
+      "gt_count": 2,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_004_0017.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_UC-22_004_0125.jpg",
+      "gt_count": 2,
+      "prediction_count": 6,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-21_002_0021.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-21_002_0041.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-21_002_0060.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-21_004_0020.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-21_004_0045.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-21_004_0069.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_001_0084.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 1
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_001_0145.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_003_0089.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_003_0150.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_004_0037.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_004_0109.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-22_004_0170.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-24_003_0019.jpg",
+      "gt_count": 2,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-24_003_0057.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-210929_G06_H_WS-24_003_0098.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211013_G08_H_UA-14_003_0225.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211218_B08_H_UA-11_001_0040.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 1
+    },
+    {
+      "image": "source07_L-211218_B08_H_UA-11_001_0139.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211218_B08_H_UA-11_001_0241.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211218_B08_H_UC-22_002_0049.jpg",
+      "gt_count": 2,
+      "prediction_count": 5,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211218_B08_H_UC-22_002_0155.jpg",
+      "gt_count": 2,
+      "prediction_count": 2,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211218_B08_H_UC-22_002_0269.jpg",
+      "gt_count": 2,
+      "prediction_count": 4,
+      "matched": 2
+    },
+    {
+      "image": "source07_L-211218_B08_H_UC-22_004_0029.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 1
+    },
+    {
+      "image": "source07_L-211218_B08_H_UC-22_004_0110.jpg",
+      "gt_count": 2,
+      "prediction_count": 3,
+      "matched": 0
+    },
+    {
+      "image": "source07_L-211218_B08_H_UC-22_004_0188.jpg",
+      "gt_count": 2,
+      "prediction_count": 5,
+      "matched": 0
+    }
+  ]
+}

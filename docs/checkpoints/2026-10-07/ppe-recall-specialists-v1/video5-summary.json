@@ -192,12 +192,14 @@
   "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
   "supplement_object_weights": null,
   "supplement_ppe_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_interpolated_v4/ppe.pt",
-  "helmet_specialist_weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/ppe_failure_context_v3/weights/last.pt",
+  "helmet_specialist_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_failure_context_v3/last.pt",
   "ppe_head_assignment_version": "clipped_body_head_v2",
   "tiled_head_search": true,
   "unassigned_head_events": true,
   "ppe_preserve_union": true,
   "object_imgsz": 1280,
+  "ppe_candidate_tracks": true,
+  "weak_head_context_recheck": true,
   "ppe_crop_height_fraction": 1.0,
   "ppe_inference_mode": "baseline_preserved_union_plus_helmet_specialist",
   "model_hashes": {
@@ -224,21 +226,7 @@
     "video": "5_PPE_Helmet.mp4",
     "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
     "model_version": "7ac66354f488e41721da6fd815c14de9007f2d6e33257565c5e6d6e762a25200",
-    "config_version": "deed5be558f04ec7cefb745dc59e82b49965f96d56d08148399b1752f2622228"
+    "config_version": "a82e6d42c19e5791083c7270b4fbce02b22c625f07b3f6bf564ad07ea6fa5fd4"
   },
-  "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN",
-  "ppe_candidate_tracks": true,
-  "candidate_replay": {
-    "parent": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video5",
-    "real_new_candidate_observations": 34,
-    "no_predicted_missing_bodies": true
-  },
-  "weak_head_context_recheck": true,
-  "context_recheck_predictions": 80,
-  "events_require_rule_replay": false,
-  "rule_replay": {
-    "raw_predictions": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video5_context/detections.jsonl",
-    "sha256": "2be9bc654677a8a3251a89ad88f3837819390ebd4d43576158a234381114e4f1",
-    "new_inference": false
-  }
+  "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
 }
