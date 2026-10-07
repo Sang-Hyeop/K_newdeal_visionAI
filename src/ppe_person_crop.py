@@ -28,9 +28,11 @@ def head_owner(head, people):
     return scores[0][1]
 
 
-def infer_person_ppe(frame, people, model, conf=.25, imgsz=640, full_frame_heads=None):
+def infer_person_ppe(frame, people, model, conf=.25, imgsz=640, full_frame_heads=None, crop_height_fraction=.55):
     if model.names != {0: 'helmeted_head', 1: 'no_helmet_head'}:
         raise ValueError('Unexpected PPE classes')
+    if not math.isfinite(crop_height_fraction) or not .35 <= crop_height_fraction <= 1:
+        raise ValueError('crop_height_fraction must be in [.35, 1]')
     if not 0 < conf <= 1:
         raise ValueError('conf must be in (0, 1]')
     h, w = frame.shape[:2]
@@ -48,7 +50,7 @@ def infer_person_ppe(frame, people, model, conf=.25, imgsz=640, full_frame_heads
         if pw <= 0 or ph <= 0:
             raise ValueError('Invalid person box')
         a, b = max(0, int(x1 - .15 * pw)), max(0, int(y1 - .1 * ph))
-        c, d = min(w, math.ceil(x2 + .15 * pw)), min(h, math.ceil(y1 + .55 * ph))
+        c, d = min(w, math.ceil(x2 + .15 * pw)), min(h, math.ceil(y1 + crop_height_fraction * ph))
         record = {'person_index': index, 'person_bbox_xyxy': person,
                   'crop_bbox_xyxy': [a, b, c, d], 'state': 'unknown',
                   'head_candidates': [], 'rejected_candidates': [],
@@ -66,7 +68,8 @@ def infer_person_ppe(frame, people, model, conf=.25, imgsz=640, full_frame_heads
             head = [hx1 + a, hy1 + b, hx2 + a, hy2 + b]
             candidate = {'class': model.names[int(box.cls.item())],
                          'confidence': float(box.conf.item()), 'bbox_xyxy': head,
-                         'source': 'person_crop'}
+                         'source': 'person_crop',
+                         'model_sources': getattr(box, 'model_sources', ['single_ppe_model'])}
             key = 'head_candidates' if head_owner(head, people)==index else 'rejected_candidates'
             record[key].append(candidate)
         classes = {r['class'] for r in record['head_candidates']}

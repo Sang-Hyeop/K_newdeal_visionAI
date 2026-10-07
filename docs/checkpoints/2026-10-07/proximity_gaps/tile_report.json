@@ -1,0 +1,666 @@
+{
+  "status": "diagnostic_only_not_promoted",
+  "same_weights": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a",
+  "confidence": 0.1,
+  "tile_side_ratio": 0.8,
+  "overlap_ratio": 0.25,
+  "rows": [
+    {
+      "source": "1_forklift_forward.mp4",
+      "frame_index": 225,
+      "timestamp_seconds": 9.384374999999999,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.6576651930809021,
+          "bbox_xyxy": [
+            579.4769744873047,
+            23.35547637939453,
+            709.8338623046875,
+            420.5660400390625
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.1446228176355362,
+          "bbox_xyxy": [
+            690.5130615234375,
+            3.9084134101867676,
+            727.5890808105469,
+            86.27432250976562
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.5995960235595703,
+          "bbox_xyxy": [
+            580.9947052001953,
+            144.0,
+            710.9896545410156,
+            433.4847412109375
+          ],
+          "tile_xyxy": [
+            432,
+            144,
+            1008,
+            720
+          ],
+          "tile_edge_clipped": true
+        }
+      ]
+    },
+    {
+      "source": "1_forklift_forward.mp4",
+      "frame_index": 240,
+      "timestamp_seconds": 10.01,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.6065100431442261,
+          "bbox_xyxy": [
+            444.1425561904907,
+            91.14613342285156,
+            717.9241027832031,
+            519.4291381835938
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.23546108603477478,
+          "bbox_xyxy": [
+            692.304931640625,
+            3.0430891513824463,
+            728.485107421875,
+            85.95286560058594
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.41029927134513855,
+          "bbox_xyxy": [
+            445.36522483825684,
+            144.0,
+            720.033935546875,
+            532.1080627441406
+          ],
+          "tile_xyxy": [
+            432,
+            144,
+            1008,
+            720
+          ],
+          "tile_edge_clipped": true
+        }
+      ]
+    },
+    {
+      "source": "1_forklift_forward.mp4",
+      "frame_index": 250,
+      "timestamp_seconds": 10.427083333333332,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.9753113389015198,
+          "bbox_xyxy": [
+            432.0,
+            120.54423522949219,
+            725.5299682617188,
+            527.3983154296875
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.4005490243434906,
+          "bbox_xyxy": [
+            695.2262573242188,
+            1.5844275951385498,
+            732.9866943359375,
+            85.2337646484375
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.9625674486160278,
+          "bbox_xyxy": [
+            432.0,
+            144.0,
+            726.2700500488281,
+            535.4101257324219
+          ],
+          "tile_xyxy": [
+            432,
+            144,
+            1008,
+            720
+          ],
+          "tile_edge_clipped": true
+        }
+      ]
+    },
+    {
+      "source": "1_forklift_forward.mp4",
+      "frame_index": 265,
+      "timestamp_seconds": 11.052708333333333,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.7191720008850098,
+          "bbox_xyxy": [
+            432.0,
+            161.57212829589844,
+            738.7791137695312,
+            530.7857666015625
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.5983708500862122,
+          "bbox_xyxy": [
+            703.2144775390625,
+            0.0,
+            741.5411682128906,
+            84.0977554321289
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.11579936742782593,
+          "bbox_xyxy": [
+            504.88277435302734,
+            181.38441467285156,
+            737.0852661132812,
+            496.6946716308594
+          ],
+          "tile_xyxy": [
+            432,
+            0,
+            1008,
+            576
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.15158501267433167,
+          "bbox_xyxy": [
+            704.0,
+            0.0,
+            740.6172294616699,
+            83.84979248046875
+          ],
+          "tile_xyxy": [
+            704,
+            0,
+            1280,
+            576
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.8758530020713806,
+          "bbox_xyxy": [
+            432.0,
+            154.15543174743652,
+            738.4081420898438,
+            528.5744323730469
+          ],
+          "tile_xyxy": [
+            432,
+            144,
+            1008,
+            720
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.14609427750110626,
+          "bbox_xyxy": [
+            501.7250061035156,
+            159.96379280090332,
+            737.6261901855469,
+            494.5770568847656
+          ],
+          "tile_xyxy": [
+            432,
+            144,
+            1008,
+            720
+          ],
+          "tile_edge_clipped": false
+        }
+      ]
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 310,
+      "timestamp_seconds": 12.4,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.4204852283000946,
+          "bbox_xyxy": [
+            208.4649658203125,
+            0.0,
+            491.328125,
+            372.6684875488281
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.25597432255744934,
+          "bbox_xyxy": [
+            0.0,
+            39.65279006958008,
+            221.78684997558594,
+            459.8724365234375
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.10205112397670746,
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            172.01747131347656,
+            463.01898193359375
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.12024138122797012,
+          "bbox_xyxy": [
+            1414.4432983398438,
+            0.0,
+            1700.497314453125,
+            617.5842895507812
+          ],
+          "tile_xyxy": [
+            1056,
+            0,
+            1920,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.46309855580329895,
+          "bbox_xyxy": [
+            211.2527618408203,
+            217.33276867866516,
+            482.3764343261719,
+            371.53953552246094
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.18311357498168945,
+          "bbox_xyxy": [
+            0.0,
+            216.0,
+            222.06871032714844,
+            461.92759704589844
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.3851051926612854,
+          "bbox_xyxy": [
+            1426.84716796875,
+            216.0,
+            1679.4603271484375,
+            584.9317626953125
+          ],
+          "tile_xyxy": [
+            1056,
+            216,
+            1920,
+            1080
+          ],
+          "tile_edge_clipped": true
+        }
+      ]
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 320,
+      "timestamp_seconds": 12.8,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.15232335031032562,
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            170.20970153808594,
+            460.14117431640625
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.16700710356235504,
+          "bbox_xyxy": [
+            1417.9728698730469,
+            0.0,
+            1706.0797119140625,
+            600.803466796875
+          ],
+          "tile_xyxy": [
+            1056,
+            0,
+            1920,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.13631141185760498,
+          "bbox_xyxy": [
+            200.90589904785156,
+            218.25956511497498,
+            454.3397521972656,
+            358.37835693359375
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.12510034441947937,
+          "bbox_xyxy": [
+            0.0,
+            216.0,
+            217.99842834472656,
+            462.37074279785156
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.2737105190753937,
+          "bbox_xyxy": [
+            1425.0037841796875,
+            218.0426743030548,
+            1695.41015625,
+            584.9585266113281
+          ],
+          "tile_xyxy": [
+            1056,
+            216,
+            1920,
+            1080
+          ],
+          "tile_edge_clipped": false
+        }
+      ]
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 330,
+      "timestamp_seconds": 13.2,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.24265548586845398,
+          "bbox_xyxy": [
+            0.0,
+            45.80775833129883,
+            230.55865478515625,
+            459.4217529296875
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.2185339629650116,
+          "bbox_xyxy": [
+            0.2918621301651001,
+            3.177905321121216,
+            164.81370544433594,
+            461.71746826171875
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.11560635268688202,
+          "bbox_xyxy": [
+            1114.3370971679688,
+            113.44721984863281,
+            1265.55126953125,
+            476.3716125488281
+          ],
+          "tile_xyxy": [
+            648,
+            0,
+            1512,
+            864
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.10355007648468018,
+          "bbox_xyxy": [
+            1417.1290893554688,
+            0.0,
+            1727.488037109375,
+            616.3659057617188
+          ],
+          "tile_xyxy": [
+            1056,
+            0,
+            1920,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.20941168069839478,
+          "bbox_xyxy": [
+            186.12020874023438,
+            217.4702900648117,
+            416.58563232421875,
+            351.7735900878906
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": false
+        },
+        {
+          "confidence": 0.18801328539848328,
+          "bbox_xyxy": [
+            0.0,
+            216.0,
+            222.73196411132812,
+            461.7025604248047
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": true
+        }
+      ]
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 345,
+      "timestamp_seconds": 13.8,
+      "tile_count": 6,
+      "forklift_proposals": [
+        {
+          "confidence": 0.3294926881790161,
+          "bbox_xyxy": [
+            0.0,
+            12.420841217041016,
+            230.00608825683594,
+            459.098876953125
+          ],
+          "tile_xyxy": [
+            0,
+            0,
+            864,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.1183413416147232,
+          "bbox_xyxy": [
+            1424.4217224121094,
+            0.0,
+            1730.147705078125,
+            633.2086791992188
+          ],
+          "tile_xyxy": [
+            1056,
+            0,
+            1920,
+            864
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.18397027254104614,
+          "bbox_xyxy": [
+            0.0,
+            216.0,
+            227.90219116210938,
+            460.64967346191406
+          ],
+          "tile_xyxy": [
+            0,
+            216,
+            864,
+            1080
+          ],
+          "tile_edge_clipped": true
+        },
+        {
+          "confidence": 0.12037872523069382,
+          "bbox_xyxy": [
+            1427.7069396972656,
+            216.0,
+            1703.9057006835938,
+            592.4690551757812
+          ],
+          "tile_xyxy": [
+            1056,
+            216,
+            1920,
+            1080
+          ],
+          "tile_edge_clipped": true
+        }
+      ]
+    }
+  ],
+  "limitations": "Duplicate and clipped proposals not fused; no end-to-end accuracy"
+}

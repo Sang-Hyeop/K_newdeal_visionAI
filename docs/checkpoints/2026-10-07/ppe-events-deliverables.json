@@ -1,0 +1,91 @@
+{
+  "artifacts": [
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/forward_observations_v1.jsonl",
+      "bytes": 298918,
+      "sha256": "7b4d401dedc62aec0acf182b5598afd36f2e0a8489b1fb15b1a15c3bfd7c9d82"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/ppe6_events_v1.jsonl",
+      "bytes": 57354,
+      "sha256": "187a8f995c3c829faccaa09c890d3a30e14326e364cfeef1e668445d087ee4c2"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/안전모_5번_이벤트.jpg",
+      "bytes": 269662,
+      "sha256": "df401142cc60872214864ef53c397d195cfe51758f8fa9e3effd16c69ecba7d5"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/reverse_events_v1.jsonl",
+      "bytes": 21101,
+      "sha256": "96ad78c43fadced940cb9f8b635141b1a0c7f275d95535434950ffa15ba53085"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/안전모_6번_이벤트.jpg",
+      "bytes": 483729,
+      "sha256": "7de6f4d750595ef5a1e9dd25e4022c6333bd182e61839de1af1a4b8c83b745a9"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/forward_events_v1.jsonl",
+      "bytes": 94076,
+      "sha256": "c9b1360791e304b0bd4c4e15ed2c90ab8c1e5d392c170f6312c3702279ca44c6"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/ppe5_observations_v1.jsonl",
+      "bytes": 286273,
+      "sha256": "d57105cfaf718ec3e67dd95d47f38dbf9f77c275d5423a6729ee2e920bd25d8f"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/안전모_6번_이벤트.mp4",
+      "bytes": 4482826,
+      "sha256": "2b8d6286e92211db561cf380b7f2f9382ea21385b7a860252e4aee62bba0b61c"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/zone_observations_v1.jsonl",
+      "bytes": 1077329,
+      "sha256": "7c0ec5ae0101dfb0ebb9ae1f44a852603386adfe26f9955c308952e62498faf9"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/ppe5_events_v1.jsonl",
+      "bytes": 97270,
+      "sha256": "96dd9b6166636e25adb3ce447a0bbc27cb46882928f149c5408a54de2c2b3619"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/전진_근접_ROI분리.mp4",
+      "bytes": 6883346,
+      "sha256": "f1f9b4df8803282e2df55f176d8dbcc416fdcfeafbb1e4d9c160c5e922473811"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/안전모_5번_이벤트.mp4",
+      "bytes": 3882102,
+      "sha256": "14fe3cd7a5723d97f8b720315b1ae51480fdd57cb456fa53311859486aaedaad"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/zone_events_v1.jsonl",
+      "bytes": 103606,
+      "sha256": "092d0670ca5650337b43cd35653c1789ee3559b8f98bf947c2cfb11e671566d0"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/ppe6_observations_v1.jsonl",
+      "bytes": 294792,
+      "sha256": "8660e817408c4a4b1ef1787e9e384919282d5ca403c15edaf9bc99df4b42cfcd"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/feature_registry.json",
+      "bytes": 3998,
+      "sha256": "a364191c3aa9e837c06cb7afa3986866d11dab42786bda9a6872d2dae8acdb1e"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/구역_접근_체류_개발검증.mp4",
+      "bytes": 15467594,
+      "sha256": "05933fbb2ab428d1876145d38e6deb9cdd9443d4986cd5b90b8aeeb8836d00e9"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/event-module-v1/reverse_observations_v1.jsonl",
+      "bytes": 169462,
+      "sha256": "6359ecc67b1d96c20423c1308afa7c4f06afc733c0454f3e91e2516687dffb51"
+    }
+  ],
+  "backup": "outputs/checkpoints/ppe_events_20261007",
+  "ROI_business_rule": "pending user clarification; no arbitrary prohibition boundary change"
+}

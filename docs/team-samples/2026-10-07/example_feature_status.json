@@ -1,0 +1,9 @@
+{
+  "severity": null,
+  "display_state": "UNKNOWN",
+  "observed_event_count": 2,
+  "unknown_event_count": 1,
+  "coverage": "partial",
+  "scope": "this_feature_and_observed_subjects_only",
+  "global_safety_status": "not_evaluated"
+}

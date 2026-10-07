@@ -1,22 +1,27 @@
 {
   "status": "selected_development_detector",
-  "epochs_completed": 20,
-  "best_validation_epoch": 8,
-  "weights": "models/pilot_v15_scaled_filtered/person_forklift.pt",
-  "weights_sha256": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a",
-  "initial_weights": "models/pilot_v6_corrected_forklift/person_forklift.pt",
+  "epochs_completed": 10,
+  "best_validation_epoch": 6,
+  "weights": "models/pilot_v16_related/person_forklift.pt",
+  "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "initial_weights": "models/pilot_v15_scaled_filtered/person_forklift.pt",
+  "previous_selected_model_preserved": "models/pilot_v15_scaled_filtered/person_forklift.pt",
   "dataset_counts": {
-    "train": 451,
+    "train": 466,
     "val": 82,
     "test": 40
   },
+  "new_unique_source_frames": 15,
   "classes": {
     "0": "person",
     "1": "forklift"
   },
-  "resume_after_completed_epoch": 15,
-  "patience_after_resume": 0,
+  "freeze_layers": 10,
+  "learning_rate": 0.0003,
   "ppe_unchanged": true,
-  "proximity_status": "not_ready_for_final_demo; object detection gaps remain",
-  "limitations": "Development-only benchmarks; sampled video review, not exhaustive labels; no validated collision/meter/front-rear claim"
+  "ppe_weights": "models/pilot_v3_ppe_expansion/ppe.pt",
+  "proximity_status": "demo_reverse_occlusion_improved_via_optional_bundle; default remains v16",
+  "demo_proximity_bundle_config": "configs/selected-demo-object-bundle.json",
+  "selection_basis": "Keep v16 as default. Optional demo recall bundle passed reverse 8/8 and fixed-set miss gates without replacing baseline boxes.",
+  "limitations": "Demo adaptation trained on demo frames; not independent site accuracy. Meters unsupported. PPE no-helmet quality still incomplete."
 }

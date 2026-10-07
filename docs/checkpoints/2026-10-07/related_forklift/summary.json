@@ -1,0 +1,13 @@
+{
+  "source_train_videos_found": 70,
+  "initial_frames": 201,
+  "retained_video_files": 65,
+  "review_candidate_frames": 195,
+  "held_video_files": 5,
+  "labels_finalized": 0,
+  "training_started": false,
+  "demo_videos_used_for_training": 0,
+  "domain": "same factory/camera as reverse demo; not independent-site validation",
+  "review_status": "first 48 thumbnails and one original frame viewed; not exhaustive manual review",
+  "overlap_check": "all retained source clips sampled at approx 2fps against 3 forklift demos at approx 2fps; MAE<4 held; no guarantee of no overlapping events"
+}

@@ -1,0 +1,332 @@
+[
+  {
+    "source": "5_PPE_Helmet.mp4",
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "frame_index": 24,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        357,
+        370,
+        400,
+        422
+      ],
+      [
+        0,
+        447,
+        426,
+        494,
+        488
+      ],
+      [
+        0,
+        262,
+        452,
+        318,
+        514
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes"
+  },
+  {
+    "source": "5_PPE_Helmet.mp4",
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "frame_index": 72,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        392,
+        267,
+        422,
+        310
+      ],
+      [
+        0,
+        440,
+        224,
+        466,
+        261
+      ],
+      [
+        0,
+        500,
+        226,
+        526,
+        261
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes"
+  },
+  {
+    "source": "5_PPE_Helmet.mp4",
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "frame_index": 120,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        260,
+        315,
+        292,
+        348
+      ],
+      [
+        0,
+        428,
+        195,
+        451,
+        225
+      ],
+      [
+        0,
+        475,
+        185,
+        499,
+        216
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes"
+  },
+  {
+    "source": "6_Helmet_forklift.mp4",
+    "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+    "frame_index": 24,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        365,
+        320,
+        408,
+        372
+      ],
+      [
+        0,
+        432,
+        269,
+        461,
+        317
+      ],
+      [
+        0,
+        495,
+        270,
+        531,
+        315
+      ],
+      [
+        0,
+        524,
+        331,
+        565,
+        382
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes"
+  },
+  {
+    "source": "6_Helmet_forklift.mp4",
+    "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+    "frame_index": 120,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        397,
+        246,
+        431,
+        289
+      ],
+      [
+        0,
+        440,
+        220,
+        467,
+        260
+      ],
+      [
+        0,
+        497,
+        219,
+        532,
+        263
+      ],
+      [
+        0,
+        521,
+        254,
+        555,
+        299
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes"
+  },
+  {
+    "source": "6_Helmet_forklift.mp4",
+    "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+    "frame_index": 216,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        372,
+        244,
+        415,
+        295
+      ],
+      [
+        0,
+        426,
+        211,
+        460,
+        262
+      ],
+      [
+        0,
+        501,
+        210,
+        539,
+        258
+      ],
+      [
+        0,
+        563,
+        229,
+        602,
+        279
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes"
+  },
+  {
+    "source": "5_PPE_Helmet.mp4",
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "frame_index": 168,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        380,
+        150,
+        405,
+        181
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes",
+    "crop_xyxy_reference": [
+      340,
+      110,
+      450,
+      280
+    ]
+  },
+  {
+    "source": "5_PPE_Helmet.mp4",
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "frame_index": 216,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        470,
+        155,
+        497,
+        189
+      ]
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "manual visible helmet/head boxes; hood covered heads excluded from both classes",
+    "crop_xyxy_reference": [
+      440,
+      120,
+      540,
+      315
+    ]
+  },
+  {
+    "source": "5_PPE_Helmet.mp4",
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "frame_index": 216,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        209,
+        359,
+        279,
+        425
+      ]
+    ],
+    "crop_xyxy_reference": [
+      160,
+      330,
+      350,
+      540
+    ],
+    "repeats": 3,
+    "split": "train",
+    "training_eligible": true,
+    "demo_adaptation": true,
+    "review": "visible hair and uncovered head; hood lowered around shoulders, no helmet visible on head"
+  }
+]

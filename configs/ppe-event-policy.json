@@ -1,0 +1,9 @@
+{
+ "policy_version":"ppe-observation-v1",
+ "minimum_consecutive_frames":3,
+ "minimum_confirmed_seconds":0.4,
+ "maximum_observation_gap_seconds":0.45,
+ "minimum_head_confidence":0.5,
+ "no_helmet_policy":"WARNING candidate requiring review; never automatically verified violation",
+ "missing_conflict_policy":"UNKNOWN immediately; restart confirmation"
+}

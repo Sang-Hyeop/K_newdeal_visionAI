@@ -34,7 +34,9 @@ class Proximity:
                 elif f[0]<=0 or f[2]>=width-1 or f[3]>=height-1:reason='forklift_extent_clipped'
                 else:
                     intersection=max(0,min(p[2],f[2])-max(p[0],f[0]))*max(0,min(p[3],f[3])-max(p[1],f[1]))
-                    if intersection/((p[2]-p[0])*(p[3]-p[1]))>=.8 and p[3]<footprint[1]:
+                    # High overlap cannot distinguish driver, occluded pedestrian, or a false person box.
+                    # A foot at the vehicle bottom must not turn this ambiguity into CRITICAL.
+                    if intersection/((p[2]-p[0])*(p[3]-p[1]))>=.8:
                         reason='possible_operator_or_occluded_person'
                 continuous=old is not None and old['severity'] is not None and timestamp-old['timestamp']<=self.gap
                 trend=None
@@ -47,7 +49,7 @@ class Proximity:
                 self.previous[key]={'timestamp':timestamp,'ratio':ratio,'severity':severity}
                 events.append({'event_type':'person_forklift_proximity','person_track_id':key[0],'forklift_track_id':key[1],
                     'timestamp_seconds':timestamp,'severity':severity,'observation_status':'unconfirmed' if reason else 'confirmed',
-                    'reason':reason or 'image_plane_proximity_rule','person_anchor_xy':list(point),'forklift_ground_proxy_xyxy':footprint,
+                    'reason':reason or 'image_plane_proximity_rule','person_bbox_xyxy':list(p),'forklift_bbox_xyxy':list(f),'person_anchor_xy':list(point),'forklift_ground_proxy_xyxy':footprint,
                     'nearest_vehicle_point_xy':list(nearest),'image_gap_pixels':distance,'normalized_image_gap':ratio,
                     'image_gap_closing_rate':trend,'orientation_status':'unknown','distance_meters':None,
                     'scope':'camera_image_plane_proximity_candidate'})

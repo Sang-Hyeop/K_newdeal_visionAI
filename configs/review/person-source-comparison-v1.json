@@ -1,0 +1,8 @@
+{
+  "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+  "reference_tracks": {"0:2": "visible_seated_worker", "0:12": "visible_lane_worker", "0:52": "robot_equipment_false_person", "0:54": "sign_stand_false_person"},
+  "review": "Targets manually inspected in source crops at sample 50; overlap counts are diagnostic relative to baseline tracks, not complete ground-truth accuracy.",
+  "matching_iou": 0.25,
+  "training_allowed": false,
+  "decision": "experimental_not_promoted: loss of observed seated worker in initial segment; default v16 unchanged"
+}

@@ -1,0 +1,15 @@
+{
+  "new_unique_source_frames": 15,
+  "train": 466,
+  "val": 82,
+  "test": 40,
+  "same_camera_adaptation": true,
+  "independent_site_test": false,
+  "demo_frames_used": 0,
+  "all_195_labelled": false,
+  "unchanged_evaluation_files": 244,
+  "labels_by_class": {
+    "1": 15,
+    "0": 17
+  }
+}

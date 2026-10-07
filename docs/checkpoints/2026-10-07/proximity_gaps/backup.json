@@ -1,0 +1,26 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/proximity_gaps_20261007/report.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/proximity_gaps_20261007/report.json",
+    "sha256": "a8e65091eb1f444d9c81dc1d3e8d9649bc947c2734c5196f9eb55d3e509784bd",
+    "bytes": 79727
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/proximity_gaps_20261007/tiles/report.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/proximity_gaps_20261007/tile_report.json",
+    "sha256": "ac16e47be0d7c16958b10a5ff3ca40b16c8095e20abba7947426ba7f29300d2b",
+    "bytes": 14914
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/proximity_gaps_20261007/tiles/1_forklift_forward_250.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/proximity_gaps_20261007/1_forklift_forward_250.jpg",
+    "sha256": "524a92084abdd40f81a071b64b049aaa00657dbf23abf088c114c2e49279cd52",
+    "bytes": 288884
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/proximity_gaps_20261007/tiles/2_forklift_back_330.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/proximity_gaps_20261007/2_forklift_back_330.jpg",
+    "sha256": "e9d2b70c60bc9ec08bdc760101987ea742dfb5c8214ac0b05596c83cc9570819",
+    "bytes": 587211
+  }
+]

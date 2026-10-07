@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-07",
+  "status": "experimental_not_promoted",
+  "default_v16_unchanged": true,
+  "training_performed": false,
+  "thresholds_changed": false,
+  "tests_passed": 57,
+  "full_video_comparison": {
+    "0:2": {
+      "review_label": "visible_seated_worker",
+      "baseline_observations": 89,
+      "candidate_overlap_matches": 74
+    },
+    "0:12": {
+      "review_label": "visible_lane_worker",
+      "baseline_observations": 74,
+      "candidate_overlap_matches": 73
+    },
+    "0:52": {
+      "review_label": "robot_equipment_false_person",
+      "baseline_observations": 40,
+      "candidate_overlap_matches": 0
+    },
+    "0:54": {
+      "review_label": "sign_stand_false_person",
+      "baseline_observations": 39,
+      "candidate_overlap_matches": 0
+    }
+  },
+  "crop_support": {
+    "0:2": {
+      "observations": 9,
+      "support": 6
+    },
+    "0:12": {
+      "observations": 7,
+      "support": 5
+    },
+    "0:52": {
+      "observations": 4,
+      "support": 0
+    },
+    "0:54": {
+      "observations": 3,
+      "support": 0
+    }
+  },
+  "reverse_12_4_to_13_8": "8 sampled observations UNKNOWN; earlier risk only one sample at 8.4 seconds, not stable demo evidence",
+  "reason": "False-person support reduced at reviewed equipment but real seated/lane worker support lost. Do not adopt automatic veto. Baseline-relative overlap, not ground-truth FN rates.",
+  "next": "Keep operational v16; preserve evaluation-only paired true-worker/equipment cases. Any future person hard negatives must come from non-demo training sources; no blind repeat of v17 forklift training.",
+  "artifacts": [
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/report.json",
+      "bytes": 27010,
+      "sha256": "343f5a96e28dad35460d44ba349f23a805bbb9fd9a8e02cb816c46db22ae0f76"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/crop_audit_verified.json",
+      "bytes": 4697,
+      "sha256": "529befb256e3a960d53dc83ee73da03cc2bf0956cefdc8c6d2e7b991d36147fb"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/comparison.json",
+      "bytes": 39440,
+      "sha256": "2cdc5bb6293e37dbf396fb936b957340e223e29d41c8d55a2092e0e89a20be65"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/tests/test_detection_sources.py",
+      "bytes": 1109,
+      "sha256": "edb2bb28e522ebea62c6fc3f6ae9e3e2c9f6790681ff94db6fffc78e35f9d687"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/configs/review/person-source-comparison-v1.json",
+      "bytes": 589,
+      "sha256": "32325e8c172df881fb9405d2a8ca1d15a45dde691f2ec39efb0dd74e520d7c2f"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/scripts/run_zone_dwell_video.py",
+      "bytes": 9845,
+      "sha256": "bd098e5fc60521874940a2ebb1c9daa765416fdc14f07ac3a84e8705e67f1875"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/scripts/compare_person_sources.py",
+      "bytes": 2270,
+      "sha256": "f1120c1232fe9c02fef097b87d7fd9b4ed5aeb3a2b7db6244bc0c366182a18e3"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/scripts/audit_person_crop_support.py",
+      "bytes": 2839,
+      "sha256": "d09cee6d839229829aff6a7e4431a80a659b9f3adc5ad918e0c3af55a1e60087"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/person_source_audit_20261007/src/detection_sources.py",
+      "bytes": 770,
+      "sha256": "579730c3169256127593f2db7655eb25af9a761dfa12eb19ecb5f6198d52c540"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/person_source_comparison_v1/rendered/vehicle_lane.mp4",
+      "bytes": 13631458,
+      "sha256": "3e78c57b98cd655c8ae04f10effcd1c229dd19bf133b71ecee149fa7ea303e88"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/person-source-audit-v1/원본모델_검수_10초.jpg",
+      "bytes": 514422,
+      "sha256": "75425093c2c38731cfd6eb04a7f4ed495564791c007829a0504653b725705ab2"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/person-source-audit-v1/설비_오탐_검수.jpg",
+      "bytes": 55506,
+      "sha256": "90cbb4c12272579999422f7b5ac8fb3883b83df21ad43812ea412fccf5665fc2"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/person-source-audit-v1/안내대_오탐_검수.jpg",
+      "bytes": 33019,
+      "sha256": "f9b9b2aed439c35f70ef27b979d5779224fe66eca245561e582364b6848d6cce"
+    }
+  ]
+}

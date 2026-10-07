@@ -1,0 +1,25 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/logistics_demo_adaptation_v1/weights/best.pt",
+  "metrics": {
+    "metrics/precision(B)": 0.9046112740441903,
+    "metrics/recall(B)": 0.8825041426125996,
+    "metrics/mAP50(B)": 0.9418595548278716,
+    "metrics/mAP50-95(B)": 0.637503803562353,
+    "fitness": 0.637503803562353
+  },
+  "per_class": {
+    "person": {
+      "precision": 0.8989752087410461,
+      "recall": 0.8900082852251991,
+      "mAP50": 0.9434617604617604,
+      "mAP50_95": 0.5494734202999718
+    },
+    "forklift": {
+      "precision": 0.9102473393473346,
+      "recall": 0.875,
+      "mAP50": 0.9402573491939828,
+      "mAP50_95": 0.7255341868247343
+    }
+  },
+  "status": "development pilot; not independent final CCTV benchmark"
+}

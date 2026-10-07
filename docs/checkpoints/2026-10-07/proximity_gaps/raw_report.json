@@ -1,0 +1,2767 @@
+{
+  "weights_sha256": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a",
+  "imgsz": 640,
+  "diagnostic_confidence": 0.01,
+  "operating_threshold_changed": false,
+  "training_started": false,
+  "rows": [
+    {
+      "source": "1_forklift_forward.mp4",
+      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+      "frame_index": 225,
+      "timestamp_seconds": 9.384374999999999,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            467.02545166015625,
+            324.550048828125,
+            570.3735961914062,
+            555.3260498046875
+          ],
+          "confidence": 0.6395485401153564,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            693.0841064453125,
+            9.332263946533203,
+            726.0177001953125,
+            84.06288146972656
+          ],
+          "confidence": 0.39956387877464294,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            581.7473754882812,
+            127.66644287109375,
+            706.4212036132812,
+            412.75531005859375
+          ],
+          "confidence": 0.17840693891048431,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            581.542724609375,
+            3.163848876953125,
+            710.8167724609375,
+            400.7503356933594
+          ],
+          "confidence": 0.1268998682498932,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            563.6801147460938,
+            716.1875610351562
+          ],
+          "confidence": 0.09172870963811874,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            655.3294677734375,
+            159.35888671875,
+            698.323974609375,
+            282.6779479980469
+          ],
+          "confidence": 0.06966428458690643,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            273.54351806640625,
+            90.76803588867188,
+            447.27606201171875,
+            342.0562744140625
+          ],
+          "confidence": 0.06816653907299042,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            360.9898681640625,
+            321.44085693359375,
+            573.824462890625,
+            545.0663452148438
+          ],
+          "confidence": 0.053924400359392166,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            656.0240478515625,
+            155.86575317382812,
+            696.9522705078125,
+            252.36611938476562
+          ],
+          "confidence": 0.042757559567689896,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            616.8377685546875,
+            150.09109497070312,
+            691.2132568359375,
+            240.0753173828125
+          ],
+          "confidence": 0.031606607139110565,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            618.720703125,
+            149.79052734375,
+            669.911865234375,
+            243.4593505859375
+          ],
+          "confidence": 0.03151201829314232,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            602.4129638671875,
+            149.7471923828125,
+            659.6907958984375,
+            244.587158203125
+          ],
+          "confidence": 0.030918844044208527,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            615.8104248046875,
+            169.64370727539062,
+            654.7774658203125,
+            245.11398315429688
+          ],
+          "confidence": 0.03073074296116829,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            586.2940673828125,
+            12.330718994140625,
+            679.5208740234375,
+            243.2344970703125
+          ],
+          "confidence": 0.029381604865193367,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            265.71099853515625,
+            90.4769287109375,
+            455.700439453125,
+            548.2966918945312
+          ],
+          "confidence": 0.01943717524409294,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            609.10400390625,
+            20.156097412109375,
+            674.578369140625,
+            106.11592102050781
+          ],
+          "confidence": 0.012383976951241493,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            453.8608093261719,
+            18.762908935546875,
+            507.5080871582031,
+            104.22221374511719
+          ],
+          "confidence": 0.012331802397966385,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            583.20361328125,
+            7.190185546875,
+            709.940673828125,
+            363.9630126953125
+          ],
+          "confidence": 0.011819278821349144,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            408.6868896484375,
+            5.1865692138671875,
+            499.0592041015625,
+            105.79318237304688
+          ],
+          "confidence": 0.010814178735017776,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            475.2763671875,
+            324.9196472167969,
+            569.0650634765625,
+            475.3554382324219
+          ],
+          "confidence": 0.010316651314496994,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [],
+      "saved_people": [
+        {
+          "track_id": "P0:15",
+          "bbox_xyxy": [
+            449.1529846191406,
+            326.56719970703125,
+            592.2666625976562,
+            557.3126831054688
+          ],
+          "detected_bbox_xyxy": [
+            467.02545166015625,
+            324.550048828125,
+            570.3735961914062,
+            555.3260498046875
+          ],
+          "confidence": 0.6395485401153564,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [
+        {
+          "track_id": "F0:7",
+          "bbox_xyxy": [
+            584.6724853515625,
+            122.28141784667969,
+            705.4614868164062,
+            393.16192626953125
+          ],
+          "detected_bbox_xyxy": [
+            581.7473754882812,
+            127.66644287109375,
+            706.4212036132812,
+            412.75531005859375
+          ],
+          "confidence": 0.17840693891048431,
+          "observation_status": "confirmed"
+        }
+      ],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "1_forklift_forward.mp4",
+      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+      "frame_index": 240,
+      "timestamp_seconds": 10.01,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            476.03778076171875,
+            324.45977783203125,
+            584.9762573242188,
+            557.4935913085938
+          ],
+          "confidence": 0.8932416439056396,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            727.2169189453125,
+            630.3892211914062
+          ],
+          "confidence": 0.7126133441925049,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            697.248046875,
+            11.147270202636719,
+            729.1630859375,
+            83.16643524169922
+          ],
+          "confidence": 0.2878866493701935,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            588.4840087890625,
+            12.022216796875,
+            676.9051513671875,
+            295.38885498046875
+          ],
+          "confidence": 0.08468200266361237,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            634.5450439453125,
+            191.7637939453125,
+            691.5362548828125,
+            338.1641845703125
+          ],
+          "confidence": 0.07930177450180054,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            557.6790771484375,
+            21.09820556640625,
+            718.5245361328125,
+            377.6116943359375
+          ],
+          "confidence": 0.052401039749383926,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            427.9195556640625,
+            6.620548248291016,
+            502.8753662109375,
+            105.95361328125
+          ],
+          "confidence": 0.04488959163427353,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            379.80889892578125,
+            322.4366455078125,
+            448.08465576171875,
+            435.84912109375
+          ],
+          "confidence": 0.025139600038528442,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            523.040771484375,
+            0.0,
+            712.4423828125,
+            471.80999755859375
+          ],
+          "confidence": 0.023371897637844086,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            634.2528076171875,
+            187.77322387695312,
+            679.76953125,
+            256.0097351074219
+          ],
+          "confidence": 0.02320193313062191,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            455.8427734375,
+            13.455978393554688,
+            526.9696655273438,
+            105.38449096679688
+          ],
+          "confidence": 0.022925017401576042,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            634.2747192382812,
+            189.28631591796875,
+            683.2308959960938,
+            293.55908203125
+          ],
+          "confidence": 0.022810716181993484,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            451.52630615234375,
+            8.409378051757812,
+            508.98602294921875,
+            103.00215148925781
+          ],
+          "confidence": 0.022789714857935905,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            593.7374267578125,
+            50.857818603515625,
+            659.1341552734375,
+            255.25616455078125
+          ],
+          "confidence": 0.02008771523833275,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            395.63031005859375,
+            3.28155517578125,
+            498.01092529296875,
+            110.63764953613281
+          ],
+          "confidence": 0.020037367939949036,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            546.24072265625,
+            0.0,
+            672.0909423828125,
+            295.55499267578125
+          ],
+          "confidence": 0.01835690811276436,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            487.42205810546875,
+            34.02421569824219,
+            532.947021484375,
+            103.63136291503906
+          ],
+          "confidence": 0.013116653077304363,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            181.35467529296875,
+            0.0,
+            706.5167236328125,
+            570.7596435546875
+          ],
+          "confidence": 0.012114587239921093,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            487.7520446777344,
+            327.1357421875,
+            559.7298583984375,
+            478.5640869140625
+          ],
+          "confidence": 0.011618539690971375,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            238.93667602539062,
+            75.47270965576172,
+            422.9745178222656,
+            325.62823486328125
+          ],
+          "confidence": 0.010249496437609196,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            727.2169189453125,
+            630.3892211914062
+          ],
+          "confidence": 0.7126133441925049,
+          "reason": "ground_anchor_outside_configured_floor_or_roi_inactive"
+        }
+      ],
+      "saved_people": [
+        {
+          "track_id": "P0:15",
+          "bbox_xyxy": [
+            467.9644470214844,
+            321.8362121582031,
+            600.1303100585938,
+            547.094970703125
+          ],
+          "detected_bbox_xyxy": [
+            476.03778076171875,
+            324.45977783203125,
+            584.9762573242188,
+            557.4935913085938
+          ],
+          "confidence": 0.8932416439056396,
+          "observation_status": "confirmed"
+        },
+        {
+          "track_id": "P0:22",
+          "bbox_xyxy": [
+            696.9806518554688,
+            10.955066680908203,
+            728.775634765625,
+            83.1615982055664
+          ],
+          "detected_bbox_xyxy": [
+            697.248046875,
+            11.147270202636719,
+            729.1630859375,
+            83.16643524169922
+          ],
+          "confidence": 0.2878866493701935,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "1_forklift_forward.mp4",
+      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+      "frame_index": 250,
+      "timestamp_seconds": 10.427083333333332,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            457.5022277832031,
+            341.0189208984375,
+            583.71142578125,
+            564.5577392578125
+          ],
+          "confidence": 0.6056199669837952,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            616.372314453125,
+            206.1371612548828,
+            692.1121826171875,
+            325.48504638671875
+          ],
+          "confidence": 0.5390738248825073,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            700.2948608398438,
+            698.8313598632812
+          ],
+          "confidence": 0.4684203863143921,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            283.891845703125,
+            91.8131332397461,
+            409.602783203125,
+            325.6979064941406
+          ],
+          "confidence": 0.43042880296707153,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            698.4835815429688,
+            8.652755737304688,
+            734.1188354492188,
+            83.513427734375
+          ],
+          "confidence": 0.24232801795005798,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            83.55584716796875,
+            0.0,
+            719.424072265625,
+            573.729736328125
+          ],
+          "confidence": 0.12233196198940277,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            614.7008056640625,
+            209.63461303710938,
+            696.5003662109375,
+            361.5288391113281
+          ],
+          "confidence": 0.07855936884880066,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            613.389892578125,
+            205.8738555908203,
+            674.1690673828125,
+            306.40802001953125
+          ],
+          "confidence": 0.07056571543216705,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            616.2030639648438,
+            207.2904815673828,
+            673.5735473632812,
+            271.44024658203125
+          ],
+          "confidence": 0.049502406269311905,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            499.06689453125,
+            0.0,
+            718.4718017578125,
+            496.9476318359375
+          ],
+          "confidence": 0.040071140974760056,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            519.0335693359375,
+            182.4385528564453,
+            717.0626220703125,
+            447.03070068359375
+          ],
+          "confidence": 0.037325989454984665,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            369.55572509765625,
+            336.0198974609375,
+            586.2660522460938,
+            566.510498046875
+          ],
+          "confidence": 0.03064311482012272,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            285.13848876953125,
+            0.0,
+            703.4639892578125,
+            580.43798828125
+          ],
+          "confidence": 0.020206067711114883,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            598.9676513671875,
+            175.1014404296875,
+            721.7801513671875,
+            422.03240966796875
+          ],
+          "confidence": 0.017710581421852112,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            398.98565673828125,
+            342.90838623046875,
+            460.47711181640625,
+            431.3948974609375
+          ],
+          "confidence": 0.017140481621026993,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            3.192474365234375,
+            200.91680908203125,
+            208.72579956054688,
+            424.2802734375
+          ],
+          "confidence": 0.015937285497784615,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            468.50469970703125,
+            11.15362548828125,
+            539.5308227539062,
+            104.74989318847656
+          ],
+          "confidence": 0.013471266254782677,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            487.2999267578125,
+            15.155487060546875,
+            539.00732421875,
+            104.13369750976562
+          ],
+          "confidence": 0.010184803046286106,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            700.2948608398438,
+            698.8313598632812
+          ],
+          "confidence": 0.4684203863143921,
+          "reason": "ground_anchor_outside_configured_floor_or_roi_inactive"
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            83.55584716796875,
+            0.0,
+            719.424072265625,
+            573.729736328125
+          ],
+          "confidence": 0.12233196198940277,
+          "reason": "ground_anchor_outside_configured_floor_or_roi_inactive"
+        }
+      ],
+      "saved_people": [
+        {
+          "track_id": "P0:15",
+          "bbox_xyxy": [
+            461.2109680175781,
+            335.0906677246094,
+            589.352783203125,
+            557.3624267578125
+          ],
+          "detected_bbox_xyxy": [
+            457.5022277832031,
+            341.0189208984375,
+            583.71142578125,
+            564.5577392578125
+          ],
+          "confidence": 0.6056199669837952,
+          "observation_status": "confirmed"
+        },
+        {
+          "track_id": "P0:22",
+          "bbox_xyxy": [
+            699.704833984375,
+            8.901654243469238,
+            732.63623046875,
+            83.35762023925781
+          ],
+          "detected_bbox_xyxy": [
+            698.4835815429688,
+            8.652755737304688,
+            734.1188354492188,
+            83.513427734375
+          ],
+          "confidence": 0.24232801795005798,
+          "observation_status": "confirmed"
+        },
+        {
+          "track_id": "P0:23",
+          "bbox_xyxy": [
+            625.9166870117188,
+            207.01495361328125,
+            685.5338134765625,
+            329.46490478515625
+          ],
+          "detected_bbox_xyxy": [
+            616.372314453125,
+            206.1371612548828,
+            692.1121826171875,
+            325.48504638671875
+          ],
+          "confidence": 0.5390738248825073,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "1_forklift_forward.mp4",
+      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+      "frame_index": 265,
+      "timestamp_seconds": 11.052708333333333,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            392.1361083984375,
+            324.084716796875,
+            517.0761108398438,
+            560.595458984375
+          ],
+          "confidence": 0.9471157789230347,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            578.224609375,
+            223.19546508789062,
+            695.288818359375,
+            389.3000183105469
+          ],
+          "confidence": 0.8470999598503113,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            737.6152954101562,
+            614.1729736328125
+          ],
+          "confidence": 0.629925012588501,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            706.1043090820312,
+            6.103321075439453,
+            739.2528686523438,
+            81.69551086425781
+          ],
+          "confidence": 0.1550566405057907,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            296.99951171875,
+            85.1666259765625,
+            395.4605712890625,
+            291.3487243652344
+          ],
+          "confidence": 0.05327610298991203,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            879.8892211914062,
+            0.2532501220703125,
+            1016.9574584960938,
+            196.50111389160156
+          ],
+          "confidence": 0.04926474392414093,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            382.5005798339844,
+            0.0,
+            736.8922119140625,
+            494.691650390625
+          ],
+          "confidence": 0.0428377240896225,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            590.4033203125,
+            718.42431640625
+          ],
+          "confidence": 0.041212547570466995,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            488.99603271484375,
+            0.0,
+            594.6069946289062,
+            363.883544921875
+          ],
+          "confidence": 0.0411614254117012,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            311.2023620605469,
+            98.19477081298828,
+            387.8464050292969,
+            203.14642333984375
+          ],
+          "confidence": 0.03611144423484802,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            600.421875,
+            232.76458740234375,
+            697.9835205078125,
+            374.54595947265625
+          ],
+          "confidence": 0.028988666832447052,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            217.752685546875,
+            21.34765625,
+            739.9747314453125,
+            518.7286987304688
+          ],
+          "confidence": 0.018197685480117798,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            578.1343383789062,
+            234.93798828125,
+            665.7174682617188,
+            380.2200927734375
+          ],
+          "confidence": 0.014289011247456074,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            403.33782958984375,
+            161.0016632080078,
+            741.8598022460938,
+            493.95501708984375
+          ],
+          "confidence": 0.013499444350600243,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            446.82330322265625,
+            62.07322692871094,
+            740.1104125976562,
+            490.8585205078125
+          ],
+          "confidence": 0.0132440235465765,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            569.5853271484375,
+            185.4477081298828,
+            734.8079833984375,
+            400.00543212890625
+          ],
+          "confidence": 0.01312826294451952,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            602.861572265625,
+            51.725372314453125,
+            663.8583984375,
+            142.134521484375
+          ],
+          "confidence": 0.012835917994379997,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            490.6406555175781,
+            0.83099365234375,
+            676.938232421875,
+            375.8424987792969
+          ],
+          "confidence": 0.01015397347509861,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            399.40753173828125,
+            41.263671875,
+            446.76104736328125,
+            99.57948303222656
+          ],
+          "confidence": 0.010095632635056973,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            595.13720703125,
+            225.43572998046875,
+            639.533203125,
+            281.93719482421875
+          ],
+          "confidence": 0.010094345547258854,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            0.0,
+            737.6152954101562,
+            614.1729736328125
+          ],
+          "confidence": 0.629925012588501,
+          "reason": "ground_anchor_outside_configured_floor_or_roi_inactive"
+        }
+      ],
+      "saved_people": [
+        {
+          "track_id": "P0:23",
+          "bbox_xyxy": [
+            594.5592651367188,
+            222.3022003173828,
+            677.2412719726562,
+            386.9839782714844
+          ],
+          "detected_bbox_xyxy": [
+            578.224609375,
+            223.19546508789062,
+            695.288818359375,
+            389.3000183105469
+          ],
+          "confidence": 0.8470999598503113,
+          "observation_status": "confirmed"
+        },
+        {
+          "track_id": "P0:25",
+          "bbox_xyxy": [
+            354.0470275878906,
+            325.8933410644531,
+            555.1343994140625,
+            561.3533325195312
+          ],
+          "detected_bbox_xyxy": [
+            392.1361083984375,
+            324.084716796875,
+            517.0761108398438,
+            560.595458984375
+          ],
+          "confidence": 0.9471157789230347,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "frame_index": 310,
+      "timestamp_seconds": 12.4,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            468.5541687011719,
+            135.69973754882812,
+            520.1473999023438,
+            295.1155700683594
+          ],
+          "confidence": 0.5406937003135681,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1113.8382568359375,
+            129.3273468017578,
+            1193.01416015625,
+            395.2795715332031
+          ],
+          "confidence": 0.11138618737459183,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1797.3868408203125,
+            65.36075592041016,
+            1865.2376708984375,
+            201.09376525878906
+          ],
+          "confidence": 0.09273895621299744,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            107.50706481933594,
+            227.6553955078125,
+            446.5842590332031
+          ],
+          "confidence": 0.07423931360244751,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1122.1378173828125,
+            128.7466278076172,
+            1190.702392578125,
+            271.6365966796875
+          ],
+          "confidence": 0.07103364914655685,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1112.44921875,
+            113.59056091308594,
+            1263.359130859375,
+            477.388916015625
+          ],
+          "confidence": 0.04797990992665291,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1643.6759033203125,
+            103.4589614868164,
+            1711.6871337890625,
+            249.69686889648438
+          ],
+          "confidence": 0.041661422699689865,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1290.69189453125,
+            130.93556213378906,
+            1374.070068359375,
+            274.24139404296875
+          ],
+          "confidence": 0.040544912219047546,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            832.6810913085938,
+            215.01113891601562,
+            893.1637573242188,
+            349.00048828125
+          ],
+          "confidence": 0.03027445264160633,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1432.85400390625,
+            1.4574737548828125,
+            1722.6719970703125,
+            656.2069091796875
+          ],
+          "confidence": 0.02851790562272072,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1110.3143310546875,
+            113.82440185546875,
+            1259.390380859375,
+            476.2380065917969
+          ],
+          "confidence": 0.027886422351002693,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            208.27130126953125,
+            40.029361724853516,
+            496.8061828613281,
+            377.40301513671875
+          ],
+          "confidence": 0.027725204825401306,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1264.486572265625,
+            123.77682495117188,
+            1397.13916015625,
+            421.3274230957031
+          ],
+          "confidence": 0.024197982624173164,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            700.1118774414062,
+            163.32064819335938,
+            957.4810791015625,
+            356.5284118652344
+          ],
+          "confidence": 0.019275829195976257,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1279.42724609375,
+            134.6365966796875,
+            1375.39208984375,
+            324.0093994140625
+          ],
+          "confidence": 0.015440614894032478,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            817.2662353515625,
+            189.031494140625,
+            968.4902954101562,
+            361.5799255371094
+          ],
+          "confidence": 0.01540695782750845,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1139.649169921875,
+            123.3732681274414,
+            1196.88671875,
+            215.594970703125
+          ],
+          "confidence": 0.014442150481045246,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1558.8885498046875,
+            99.66847229003906,
+            1635.193359375,
+            237.94757080078125
+          ],
+          "confidence": 0.01330845057964325,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1308.4266357421875,
+            133.40553283691406,
+            1373.97216796875,
+            249.08511352539062
+          ],
+          "confidence": 0.013216905295848846,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            829.7515869140625,
+            256.40728759765625,
+            884.8547973632812,
+            353.4317626953125
+          ],
+          "confidence": 0.012691803276538849,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1561.54833984375,
+            129.4845428466797,
+            1630.042236328125,
+            240.6427459716797
+          ],
+          "confidence": 0.012130284681916237,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            844.8707885742188,
+            211.3501739501953,
+            898.9801025390625,
+            306.688232421875
+          ],
+          "confidence": 0.010103712789714336,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [],
+      "saved_people": [],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "frame_index": 320,
+      "timestamp_seconds": 12.8,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            458.7572937011719,
+            141.60617065429688,
+            514.2144165039062,
+            290.08770751953125
+          ],
+          "confidence": 0.6295061707496643,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1115.314208984375,
+            129.59683227539062,
+            1192.496826171875,
+            388.5008239746094
+          ],
+          "confidence": 0.18920524418354034,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1795.8812255859375,
+            64.5373306274414,
+            1863.454833984375,
+            203.26132202148438
+          ],
+          "confidence": 0.12531517446041107,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            109.96065521240234,
+            225.38673400878906,
+            445.3628845214844
+          ],
+          "confidence": 0.08512353152036667,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1122.5562744140625,
+            127.58773803710938,
+            1190.6162109375,
+            297.32110595703125
+          ],
+          "confidence": 0.06347806751728058,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1112.9593505859375,
+            112.62030029296875,
+            1263.491455078125,
+            480.45556640625
+          ],
+          "confidence": 0.0565665028989315,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            194.35153198242188,
+            58.41783142089844,
+            452.3394775390625,
+            368.8173522949219
+          ],
+          "confidence": 0.048435013741254807,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1641.703857421875,
+            103.07025909423828,
+            1713.506103515625,
+            249.665771484375
+          ],
+          "confidence": 0.041129905730485916,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1111.03564453125,
+            112.36805725097656,
+            1257.539306640625,
+            479.17510986328125
+          ],
+          "confidence": 0.03302663564682007,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1432.878662109375,
+            0.0,
+            1714.3857421875,
+            674.947509765625
+          ],
+          "confidence": 0.027060043066740036,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            821.7243041992188,
+            193.7186279296875,
+            965.4093627929688,
+            363.0898132324219
+          ],
+          "confidence": 0.022174594923853874,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1281.4703369140625,
+            128.58778381347656,
+            1375.7266845703125,
+            277.3876037597656
+          ],
+          "confidence": 0.019006716087460518,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1142.185302734375,
+            123.05625915527344,
+            1196.2728271484375,
+            196.20291137695312
+          ],
+          "confidence": 0.01621641404926777,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1304.5455322265625,
+            133.16064453125,
+            1376.9693603515625,
+            265.20367431640625
+          ],
+          "confidence": 0.015789220109581947,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1232.7020263671875,
+            103.880859375,
+            1394.0128173828125,
+            434.50433349609375
+          ],
+          "confidence": 0.014323816634714603,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            832.5337524414062,
+            212.86683654785156,
+            894.8855590820312,
+            347.4882507324219
+          ],
+          "confidence": 0.014307143166661263,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            716.56640625,
+            178.49588012695312,
+            958.597412109375,
+            358.6896057128906
+          ],
+          "confidence": 0.013832397758960724,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1421.250244140625,
+            0.0,
+            1918.3634033203125,
+            676.3265991210938
+          ],
+          "confidence": 0.013588353991508484,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1559.40380859375,
+            94.87916564941406,
+            1636.89990234375,
+            237.68765258789062
+          ],
+          "confidence": 0.012517164461314678,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1562.6385498046875,
+            151.80596923828125,
+            1629.4925537109375,
+            240.93919372558594
+          ],
+          "confidence": 0.012198586016893387,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            426.4755554199219,
+            125.98873901367188,
+            519.2720947265625,
+            298.56878662109375
+          ],
+          "confidence": 0.01216949988156557,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1115.0079345703125,
+            186.0234832763672,
+            1183.662353515625,
+            386.95123291015625
+          ],
+          "confidence": 0.011409095488488674,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            529.65185546875,
+            102.12753295898438,
+            1450.868408203125,
+            1080.0
+          ],
+          "confidence": 0.010644990019500256,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1447.7266845703125,
+            44.22784423828125,
+            1710.8741455078125,
+            585.6372680664062
+          ],
+          "confidence": 0.010622937232255936,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            435.1783447265625,
+            139.0960693359375,
+            508.9910888671875,
+            299.63702392578125
+          ],
+          "confidence": 0.01034478098154068,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [],
+      "saved_people": [
+        {
+          "track_id": "P0:12",
+          "bbox_xyxy": [
+            463.12591552734375,
+            140.29360961914062,
+            511.8572082519531,
+            290.306396484375
+          ],
+          "detected_bbox_xyxy": [
+            458.7572937011719,
+            141.60617065429688,
+            514.2144165039062,
+            290.08770751953125
+          ],
+          "confidence": 0.6295061707496643,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "frame_index": 330,
+      "timestamp_seconds": 13.2,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            444.20758056640625,
+            136.5512237548828,
+            499.9381103515625,
+            291.43280029296875
+          ],
+          "confidence": 0.5690476298332214,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1797.690673828125,
+            66.5243911743164,
+            1863.9385986328125,
+            204.13980102539062
+          ],
+          "confidence": 0.1382967084646225,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1122.8636474609375,
+            129.60003662109375,
+            1189.5623779296875,
+            269.9480895996094
+          ],
+          "confidence": 0.07011277228593826,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1120.1898193359375,
+            130.22557067871094,
+            1190.0430908203125,
+            347.6575927734375
+          ],
+          "confidence": 0.06465546786785126,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1113.7335205078125,
+            116.97317504882812,
+            1264.2073974609375,
+            477.3190612792969
+          ],
+          "confidence": 0.054320916533470154,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            103.26828002929688,
+            221.1859588623047,
+            447.4203186035156
+          ],
+          "confidence": 0.05056385323405266,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1304.001708984375,
+            133.95086669921875,
+            1377.1761474609375,
+            247.1172332763672
+          ],
+          "confidence": 0.033663559705019,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            180.2951202392578,
+            62.300846099853516,
+            419.28497314453125,
+            353.2311706542969
+          ],
+          "confidence": 0.02881375513970852,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1431.4588623046875,
+            0.0,
+            1726.320556640625,
+            667.4144897460938
+          ],
+          "confidence": 0.02514990232884884,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            697.8563842773438,
+            166.1964569091797,
+            958.52587890625,
+            356.6949768066406
+          ],
+          "confidence": 0.022570595145225525,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1286.4354248046875,
+            130.77415466308594,
+            1375.233154296875,
+            280.064697265625
+          ],
+          "confidence": 0.02240929752588272,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            818.2980346679688,
+            177.83628845214844,
+            966.700439453125,
+            362.9465637207031
+          ],
+          "confidence": 0.020642297342419624,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1424.79638671875,
+            0.0,
+            1920.0,
+            671.0423583984375
+          ],
+          "confidence": 0.01823420077562332,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1115.2486572265625,
+            134.4158935546875,
+            1201.2646484375,
+            402.5752258300781
+          ],
+          "confidence": 0.018073249608278275,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1640.7388916015625,
+            89.2845458984375,
+            1717.7786865234375,
+            246.14122009277344
+          ],
+          "confidence": 0.016131501644849777,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1141.8310546875,
+            123.76128387451172,
+            1196.31201171875,
+            209.0155029296875
+          ],
+          "confidence": 0.01588737592101097,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            856.3683471679688,
+            200.71517944335938,
+            899.4376831054688,
+            247.55081176757812
+          ],
+          "confidence": 0.01260416116565466,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1310.51416015625,
+            135.31356811523438,
+            1377.270751953125,
+            213.1084442138672
+          ],
+          "confidence": 0.011882612481713295,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1116.6060791015625,
+            111.33201599121094,
+            1380.2008056640625,
+            459.966064453125
+          ],
+          "confidence": 0.011461414396762848,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1454.402587890625,
+            58.18144226074219,
+            1713.8873291015625,
+            585.3129272460938
+          ],
+          "confidence": 0.010872543789446354,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1797.5679931640625,
+            33.92373275756836,
+            1920.0,
+            336.09735107421875
+          ],
+          "confidence": 0.010062766261398792,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [],
+      "saved_people": [
+        {
+          "track_id": "P0:12",
+          "bbox_xyxy": [
+            448.923095703125,
+            138.33340454101562,
+            499.47296142578125,
+            292.8130187988281
+          ],
+          "detected_bbox_xyxy": [
+            444.20758056640625,
+            136.5512237548828,
+            499.9381103515625,
+            291.43280029296875
+          ],
+          "confidence": 0.5690476298332214,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    },
+    {
+      "source": "2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "frame_index": 345,
+      "timestamp_seconds": 13.8,
+      "raw_predictions": [
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            424.9748840332031,
+            136.58038330078125,
+            486.0934753417969,
+            289.5142822265625
+          ],
+          "confidence": 0.45282864570617676,
+          "passes_detector_0_1": true,
+          "passes_new_track_0_25": true,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1800.251220703125,
+            66.2782974243164,
+            1864.482421875,
+            201.43035888671875
+          ],
+          "confidence": 0.09488473832607269,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1309.2587890625,
+            133.12002563476562,
+            1376.4991455078125,
+            261.7838439941406
+          ],
+          "confidence": 0.07727842032909393,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1119.7705078125,
+            127.52742004394531,
+            1192.634765625,
+            354.6285095214844
+          ],
+          "confidence": 0.06735433638095856,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1123.283203125,
+            128.51846313476562,
+            1192.32861328125,
+            269.97869873046875
+          ],
+          "confidence": 0.06729874014854431,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            0.0,
+            108.8094711303711,
+            224.99102783203125,
+            449.9899597167969
+          ],
+          "confidence": 0.06635311245918274,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1431.577392578125,
+            0.0,
+            1722.0296630859375,
+            648.7435913085938
+          ],
+          "confidence": 0.04965955764055252,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1111.930419921875,
+            116.94571685791016,
+            1266.212890625,
+            475.3021545410156
+          ],
+          "confidence": 0.0371624194085598,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            161.42344665527344,
+            71.37078857421875,
+            386.5794372558594,
+            336.7536926269531
+          ],
+          "confidence": 0.025517722591757774,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            1428.5433349609375,
+            2.229217529296875,
+            1915.332275390625,
+            663.2442626953125
+          ],
+          "confidence": 0.02320149913430214,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1312.72119140625,
+            135.1622314453125,
+            1376.20361328125,
+            216.3643798828125
+          ],
+          "confidence": 0.02302815578877926,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1143.6790771484375,
+            123.6036605834961,
+            1197.08203125,
+            205.10719299316406
+          ],
+          "confidence": 0.01921721175312996,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1110.45068359375,
+            118.62300109863281,
+            1260.31591796875,
+            477.8676452636719
+          ],
+          "confidence": 0.014403054490685463,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            833.0753173828125,
+            207.28573608398438,
+            894.6915893554688,
+            348.93182373046875
+          ],
+          "confidence": 0.014175810851156712,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1113.6563720703125,
+            127.91121673583984,
+            1200.574951171875,
+            409.50927734375
+          ],
+          "confidence": 0.013829686678946018,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            820.2119750976562,
+            18.468395233154297,
+            973.7990112304688,
+            362.2027587890625
+          ],
+          "confidence": 0.01369401067495346,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1294.349609375,
+            135.75137329101562,
+            1376.1885986328125,
+            282.79443359375
+          ],
+          "confidence": 0.013046571053564548,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1642.7720947265625,
+            100.8978271484375,
+            1714.9200439453125,
+            247.7002716064453
+          ],
+          "confidence": 0.012960683554410934,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            694.3873901367188,
+            125.35359191894531,
+            966.2422485351562,
+            357.0732421875
+          ],
+          "confidence": 0.01280270516872406,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            866.032470703125,
+            206.69142150878906,
+            929.7117919921875,
+            348.0193176269531
+          ],
+          "confidence": 0.012510247528553009,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            847.317626953125,
+            206.45301818847656,
+            901.218017578125,
+            336.08270263671875
+          ],
+          "confidence": 0.01226624846458435,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1431.9776611328125,
+            72.951416015625,
+            1710.49658203125,
+            587.7752075195312
+          ],
+          "confidence": 0.011505741626024246,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        },
+        {
+          "class": "forklift",
+          "bbox_xyxy": [
+            627.9796142578125,
+            99.17825317382812,
+            1505.4803466796875,
+            1080.0
+          ],
+          "confidence": 0.011338203214108944,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": false
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            858.61962890625,
+            202.155029296875,
+            901.6766967773438,
+            249.52423095703125
+          ],
+          "confidence": 0.01068020612001419,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": true,
+          "passes_roi": true
+        },
+        {
+          "class": "person",
+          "bbox_xyxy": [
+            1638.5174560546875,
+            114.4885482788086,
+            1700.9461669921875,
+            251.1787872314453
+          ],
+          "confidence": 0.010502065531909466,
+          "passes_detector_0_1": false,
+          "passes_new_track_0_25": false,
+          "ground_anchor_in_roi": false,
+          "passes_roi": true
+        }
+      ],
+      "saved_roi_rejections": [],
+      "saved_people": [
+        {
+          "track_id": "P0:12",
+          "bbox_xyxy": [
+            430.3434143066406,
+            136.84375,
+            482.2486877441406,
+            290.89178466796875
+          ],
+          "detected_bbox_xyxy": [
+            424.9748840332031,
+            136.58038330078125,
+            486.0934753417969,
+            289.5142822265625
+          ],
+          "confidence": 0.45282864570617676,
+          "observation_status": "confirmed"
+        }
+      ],
+      "saved_forklifts": [],
+      "roi_active": true,
+      "scene_cut": false
+    }
+  ],
+  "limitations": "Selected failed demo frames; low confidence proposals include false positives; not accuracy benchmark"
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/manifest.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/manifest.json",
+    "sha256": "cffac0aa5e6ece74d83884861a018acc11e140f538bb9698aec028582317b17f"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/dataset.yaml",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/dataset.yaml",
+    "sha256": "1f172585e9599e9de49eeb6c384d0790f5f039d632288a283f9a763c3500b785"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/configs/review/related-forklift-v16.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/related-forklift-v16.json",
+    "sha256": "7920242f2220d53b71e6857a55e5dbffd398eaad835f383f0bfa92a62e92788f"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C68.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C68.jpg",
+    "sha256": "b90659e36349d75106a5f93d9f7bfe5c6984a1d80b6ecccb1ac0ae98daa1446c"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C41.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C41.jpg",
+    "sha256": "bc3602f24e8f6d476c5afc490f90d0456b872bae1859ecea5065e9810f1d1243"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C173.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C173.jpg",
+    "sha256": "85c352446787aae6fe65cf6095f8648eb34178a8b67ad148f3079b4727df7f2e"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C53.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C53.jpg",
+    "sha256": "7d0fe3dceb052953583f29e89f332c0a59ceb9252613d80cb72b6238572562eb"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C170.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C170.jpg",
+    "sha256": "006a6b2a8bdc02c425f2f8c94814d169125f3c835482511aa1f157a02e480d09"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C86.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C86.jpg",
+    "sha256": "e3c3a389f6c215af7588656941174456444d08df0e6a954c3c213387d8c7e86d"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C92.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C92.jpg",
+    "sha256": "4ec33bff67db730b987d4798f8cbe1064c56359fa3468888a8f713f2df79c05b"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C101.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C101.jpg",
+    "sha256": "77a3aa6a240fec969260623dc003a4827ac49558a76d1f763602cb4ecdc17287"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C35.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C35.jpg",
+    "sha256": "931fe269a15c4b7a05dc9635d5b0a3218114c909ad0a58f95f03abb91fce050f"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C128.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C128.jpg",
+    "sha256": "167781a6b0378e606b4d01f44d01246fcff26553b7a0f122ee7031a601714008"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C113.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C113.jpg",
+    "sha256": "085eabaf3c4eceeb27ff6f496870beabb31b3105ac6050db3680b4fc1ad111fd"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C26.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C26.jpg",
+    "sha256": "2a9581af2daacdaada5203a9460d0591845ebc5918cd8cfa8205a627f0e772e8"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C32.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C32.jpg",
+    "sha256": "177bae048c5948af09a857314ad4fe084fca196c2608b0296b31a29fc4863f9d"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C119.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C119.jpg",
+    "sha256": "5387e91968ae1d84bfeb8732ea9caa30bc9c6a06c059b78460453c2725773c9e"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/images/related_C98.jpg",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/images/related_C98.jpg",
+    "sha256": "c68809bf53b65eac5859b57e6387c9e14d41048cea28bbfa6ac161941984be45"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C128.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C128.txt",
+    "sha256": "7f502e5a9e7e3360d7e8422f79ead3d5216bdadb424d79e61e508501efc9b11c"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C35.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C35.txt",
+    "sha256": "ba0f740dd68f150869bd1fb793a53f850c51220feac75d0a475af74442be30e0"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C101.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C101.txt",
+    "sha256": "85dde7143249ad99cce3603ef78c2e3ac16f20d2aea40bef0dd4e9a45958299e"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C26.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C26.txt",
+    "sha256": "becbd2ce0d052fdd5637851a900aa9dd86ee412b34a5f92dfbaf60d874c4b5da"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C32.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C32.txt",
+    "sha256": "45034531de3baf1795e0f7ec4ff4fa2322c6376331950d3240140585f7069dfb"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C113.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C113.txt",
+    "sha256": "86009bf33d798cf23e4d8a13efaa71b3546f7988a36ec61a830497a2d66295ff"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C41.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C41.txt",
+    "sha256": "bf29c9bab6838a42ad36ed2d5748222774a6c339fef4bbc6deac49be37372827"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C68.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C68.txt",
+    "sha256": "8c878c3d01b5285b477b22edbc3716ee57efbb1e53c6ad91649b4ee3c13bc6eb"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C53.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C53.txt",
+    "sha256": "b6309c32e519dbcbd75907deadc768a5c09c0e1d70b2e58482e5824b5a2efa9c"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C173.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C173.txt",
+    "sha256": "06c0764968c7303f5ee563fa137dfc4d523c89d1efe5bf7161140edad60a4ae2"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C86.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C86.txt",
+    "sha256": "3d641e8071e0f8e953d7d985809d57707012a45a60ef5ef72c0982d981ce01a9"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C92.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C92.txt",
+    "sha256": "79f8cfae4f2fac65ac66fdecd0de2028718fe318a8a909f5eb01211ff1d3b7f4"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C170.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C170.txt",
+    "sha256": "869bd8a23f3df2cd8ca6de872200f37452c9f1fc14625fde8807207133a747ac"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C98.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C98.txt",
+    "sha256": "dcf297eae013eec4dd79dde77118473f8e41dcc1c7ddfad853247fed0dc11b29"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_related_v16/train/labels/related_C119.txt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/labels/related_C119.txt",
+    "sha256": "ca440d68b4d668b317c4b8cc5b8500f6ba2c1428134c6d6ff28204f2df09da58"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/configs/review/related-forklift-v16.json",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_dataset_20261007/related-forklift-v16-final.json",
+    "sha256": "e42db9d1c30b782d689669e6be596904465510673a7fbee653dc2da3a7c35f43",
+    "note": "Final provenance adds source frame hashes; preserves earlier backup too"
+  }
+]

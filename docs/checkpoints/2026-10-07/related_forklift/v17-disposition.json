@@ -1,0 +1,36 @@
+{
+  "status": "experimental_not_promoted",
+  "selected_model_preserved": "v16",
+  "repeat_training_stopped": true,
+  "run_count": 1,
+  "epochs": 6,
+  "target_vehicle_detection_before_after": [
+    1,
+    4
+  ],
+  "target_vehicle_tracking_before_after": [
+    0,
+    0
+  ],
+  "reserved_vehicle_detection_before_after": [
+    2,
+    5
+  ],
+  "old_person_FN_before_after": [
+    5,
+    6
+  ],
+  "backup": "outputs/checkpoints/v17_completed6",
+  "user_deliverables": [
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v17/후진_실제차량_검출비교.jpg",
+      "bytes": 949756,
+      "sha256": "2e46184d6a0a383a4673df83d439947b8bac7559b6a5d744ece7cbf90be59b2f"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v17/후진_불합격_검증.mp4",
+      "bytes": 13685361,
+      "sha256": "1290f2feb3a4824f2b677b8ca38df8215f96d2236f1819013fd525cea0b02d0d"
+    }
+  ]
+}

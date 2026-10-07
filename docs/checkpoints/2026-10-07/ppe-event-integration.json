@@ -1,0 +1,117 @@
+{
+  "status": "common_events_connected_for_proximity_zone_ppe; detection quality incomplete",
+  "tests": 45,
+  "reports": {
+    "forward": {
+      "frames": 106,
+      "common_event_count": 81,
+      "states": {
+        "SAFE": 19,
+        "UNKNOWN": 175,
+        "WARNING": 22
+      },
+      "banner_states": {
+        "UNKNOWN": 82,
+        "WARNING": 22,
+        "SAFE": 2
+      },
+      "context": {
+        "camera_id": "forward-proximity",
+        "video": "1_forklift_forward.mp4",
+        "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+        "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+        "config_version": "3d2b959d3aaae25532a0923a53990bd8f7fa1f6cf432d1352029486aa2b5b169"
+      },
+      "checks": "unique IDs, unknown-null, empty-not-safe, critical precedence passed"
+    },
+    "reverse": {
+      "frames": 106,
+      "common_event_count": 20,
+      "states": {
+        "UNKNOWN": 85,
+        "SAFE": 16,
+        "WARNING": 1
+      },
+      "banner_states": {
+        "UNKNOWN": 105,
+        "WARNING": 1
+      },
+      "context": {
+        "camera_id": "reverse-proximity",
+        "video": "2_forklift_back.mp4",
+        "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+        "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+        "config_version": "8055844dd7e6d49ed833cab1500c2770121dfffd36f31db7f758714ff67a3a97"
+      },
+      "checks": "unique IDs, unknown-null, empty-not-safe, critical precedence passed"
+    },
+    "zone": {
+      "frames": 92,
+      "common_event_count": 94,
+      "states": {
+        "SAFE": 602,
+        "CRITICAL": 168,
+        "UNKNOWN": 96,
+        "WARNING": 52
+      },
+      "banner_states": {
+        "SAFE": 2,
+        "CRITICAL": 90
+      },
+      "context": {
+        "camera_id": "dwell-demo",
+        "video": "4_hazard_zone_dwell.mp4",
+        "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+        "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+        "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad"
+      },
+      "checks": "unique IDs, unknown-null, empty-not-safe, critical precedence passed"
+    },
+    "ppe5": {
+      "frames": 58,
+      "common_event_count": 92,
+      "states": {
+        "UNKNOWN": 246,
+        "SAFE": 14
+      },
+      "banner_states": {
+        "UNKNOWN": 58
+      },
+      "context": {
+        "camera_id": "5_PPE_Helmet-ppe",
+        "video": "5_PPE_Helmet.mp4",
+        "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+        "model_version": "f773dd30e9e7d0fdf01c930c6dc0a4b732d34ee13cabf8b97bc1d8db6001be43",
+        "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e"
+      },
+      "checks": "unique IDs, unknown-null, empty-not-safe, critical precedence passed"
+    },
+    "ppe6": {
+      "frames": 58,
+      "common_event_count": 48,
+      "states": {
+        "UNKNOWN": 82,
+        "SAFE": 127
+      },
+      "banner_states": {
+        "UNKNOWN": 40,
+        "SAFE": 18
+      },
+      "context": {
+        "camera_id": "6_Helmet_forklift-ppe",
+        "video": "6_Helmet_forklift.mp4",
+        "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+        "model_version": "f773dd30e9e7d0fdf01c930c6dc0a4b732d34ee13cabf8b97bc1d8db6001be43",
+        "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e"
+      },
+      "checks": "unique IDs, unknown-null, empty-not-safe, critical precedence passed"
+    }
+  },
+  "limits": [
+    "PPE5 and PPE6 no no-helmet WARNING observations; visible bare heads remain undetected",
+    "reverse loaded-forklift misses persist",
+    "zone equipment falsely detected as people; prohibition boundary remains unconfirmed"
+  ],
+  "no_training_performed": true,
+  "no_model_changed": true
+}

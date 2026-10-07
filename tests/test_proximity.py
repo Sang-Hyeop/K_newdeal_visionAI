@@ -23,6 +23,21 @@ class ProximityTests(unittest.TestCase):
         r=p.update(0,[driver],[FORK],(500,500))[0]
         self.assertIsNone(r['severity']);self.assertEqual(r['reason'],'possible_operator_or_occluded_person')
 
+    def test_overlapping_person_at_vehicle_bottom_is_unknown(self):
+        # Actual v16 video regression: foot extends 0.31 px beyond the forklift box.
+        p=Proximity()
+        person_box={'track_id':'p','bbox_xyxy':[640.64,132.14,687.21,249.32]}
+        vehicle={'track_id':'f','bbox_xyxy':[629.25,54.85,701.30,249.00]}
+        r=p.update(0,[person_box],[vehicle],(720,1280))[0]
+        self.assertIsNone(r['severity'])
+        self.assertEqual(r['reason'],'possible_operator_or_occluded_person')
+
+    def test_partial_overlap_pedestrian_remains_critical(self):
+        # Nearby pedestrian is mostly outside vehicle; do not suppress every overlap.
+        p=Proximity()
+        r=p.update(0,[person(298)],[FORK],(500,500))[0]
+        self.assertEqual(r['severity'],'CRITICAL')
+
     def test_clipped_foot_and_unscaled_meters(self):
         p=Proximity();r=p.update(0,[{'track_id':'p','bbox_xyxy':[200,100,230,500]}],[FORK],(500,500))[0]
         self.assertIsNone(r['severity']);self.assertIsNone(r['distance_meters'])

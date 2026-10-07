@@ -1,0 +1,1498 @@
+{
+  "scaled": {
+    "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v16_related_validation/best_snapshot.pt",
+    "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1",
+    "confidence_threshold": 0.25,
+    "imgsz": 640,
+    "iou_threshold": 0.5,
+    "split": "test",
+    "status": "small development diagnostic; not final independent evaluation",
+    "class_counts": {
+      "person": {
+        "TP": 36,
+        "FP": 9,
+        "FN": 4,
+        "precision": 0.8,
+        "recall": 0.9
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 7,
+        "FN": 2,
+        "precision": 0.8444444444444444,
+        "recall": 0.95
+      }
+    },
+    "images": [
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0018.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0102.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0018.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0103.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0038.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0054.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0076.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0014.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0057.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0088.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_004_0017.jpg",
+        "gt_count": 2,
+        "prediction_count": 5,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_004_0125.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0021.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0041.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0020.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0045.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0069.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_001_0084.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_001_0145.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_003_0089.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_003_0150.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0037.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0109.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0170.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0019.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0057.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0098.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211013_G08_H_UA-14_003_0225.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0040.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0139.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0241.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0049.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0155.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0269.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0029.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0110.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0188.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      }
+    ]
+  },
+  "old": {
+    "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v16_related_validation/best_snapshot.pt",
+    "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v6_corrected_forklift",
+    "confidence_threshold": 0.25,
+    "imgsz": 640,
+    "iou_threshold": 0.5,
+    "split": "test",
+    "status": "small development diagnostic; not final independent evaluation",
+    "class_counts": {
+      "person": {
+        "TP": 13,
+        "FP": 1,
+        "FN": 5,
+        "precision": 0.9285714285714286,
+        "recall": 0.7222222222222222
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 1,
+        "FN": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1.0
+      }
+    },
+    "images": [
+      {
+        "image": "L-210929_G06_H_UA-10_001_0060.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-10_002_0018.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-10_004_0020.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-12_001_0124.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-210929_G06_H_UA-12_001_0201.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-12_002_0124.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UA-11_002_0208.jpg",
+        "gt_count": 3,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UA-11_003_0007.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "L-211218_B08_H_UA-11_005_0394.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UC-22_003_0249.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UC-22_005_0276.jpg",
+        "gt_count": 3,
+        "prediction_count": 1,
+        "matched": 1
+      }
+    ]
+  },
+  "v15_scaled": {
+    "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_final_validation/best_snapshot.pt",
+    "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1",
+    "confidence_threshold": 0.25,
+    "imgsz": 640,
+    "iou_threshold": 0.5,
+    "split": "test",
+    "status": "small development diagnostic; not final independent evaluation",
+    "class_counts": {
+      "person": {
+        "TP": 34,
+        "FP": 13,
+        "FN": 6,
+        "precision": 0.723404255319149,
+        "recall": 0.85
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 9,
+        "FN": 2,
+        "precision": 0.8085106382978723,
+        "recall": 0.95
+      }
+    },
+    "images": [
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0018.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 5,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0102.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0018.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 5,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0103.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0038.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0054.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0076.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0014.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0057.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0088.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_004_0017.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_004_0125.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0021.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0041.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0020.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0045.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0069.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_001_0084.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_001_0145.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_003_0089.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_003_0150.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0037.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0109.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0170.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0019.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0057.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0098.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211013_G08_H_UA-14_003_0225.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0040.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0139.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0241.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0049.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0155.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0269.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0029.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0110.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0188.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      }
+    ]
+  },
+  "v15_old": {
+    "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_final_validation/best_snapshot.pt",
+    "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_v6_corrected_forklift",
+    "confidence_threshold": 0.25,
+    "imgsz": 640,
+    "iou_threshold": 0.5,
+    "split": "test",
+    "status": "small development diagnostic; not final independent evaluation",
+    "class_counts": {
+      "person": {
+        "TP": 13,
+        "FP": 3,
+        "FN": 5,
+        "precision": 0.8125,
+        "recall": 0.7222222222222222
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 2,
+        "FN": 0,
+        "precision": 0.8461538461538461,
+        "recall": 1.0
+      }
+    },
+    "images": [
+      {
+        "image": "L-210929_G06_H_UA-10_001_0060.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-10_002_0018.jpg",
+        "gt_count": 3,
+        "prediction_count": 3,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-10_004_0020.jpg",
+        "gt_count": 3,
+        "prediction_count": 5,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-12_001_0124.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-210929_G06_H_UA-12_001_0201.jpg",
+        "gt_count": 3,
+        "prediction_count": 4,
+        "matched": 3
+      },
+      {
+        "image": "L-210929_G06_H_UA-12_002_0124.jpg",
+        "gt_count": 3,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "L-211218_B08_H_UA-11_002_0208.jpg",
+        "gt_count": 3,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UA-11_003_0007.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "L-211218_B08_H_UA-11_005_0394.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UC-22_003_0249.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "L-211218_B08_H_UC-22_005_0276.jpg",
+        "gt_count": 3,
+        "prediction_count": 2,
+        "matched": 2
+      }
+    ]
+  },
+  "baseline_scaled": {
+    "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v6_corrected_forklift/person_forklift.pt",
+    "dataset": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/logistics_scaled_filtered_v1",
+    "confidence_threshold": 0.25,
+    "imgsz": 640,
+    "iou_threshold": 0.5,
+    "split": "test",
+    "status": "small development diagnostic; not final independent evaluation",
+    "class_counts": {
+      "person": {
+        "TP": 21,
+        "FP": 19,
+        "FN": 19,
+        "precision": 0.525,
+        "recall": 0.525
+      },
+      "forklift": {
+        "TP": 27,
+        "FP": 10,
+        "FN": 13,
+        "precision": 0.7297297297297297,
+        "recall": 0.675
+      }
+    },
+    "images": [
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0018.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_002_0102.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0018.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UA-11_004_0103.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0038.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0054.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_001_0076.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0014.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0057.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_003_0088.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_004_0017.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_UC-22_004_0125.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0021.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0041.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_002_0060.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0020.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0045.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-21_004_0069.jpg",
+        "gt_count": 2,
+        "prediction_count": 4,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_001_0084.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_001_0145.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_003_0089.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_003_0150.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0037.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0109.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-22_004_0170.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0019.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0057.jpg",
+        "gt_count": 2,
+        "prediction_count": 2,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-210929_G06_H_WS-24_003_0098.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211013_G08_H_UA-14_003_0225.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0040.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0139.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UA-11_001_0241.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0049.jpg",
+        "gt_count": 2,
+        "prediction_count": 3,
+        "matched": 2
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0155.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_002_0269.jpg",
+        "gt_count": 2,
+        "prediction_count": 1,
+        "matched": 1
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0029.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0110.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      },
+      {
+        "image": "source07_L-211218_B08_H_UC-22_004_0188.jpg",
+        "gt_count": 2,
+        "prediction_count": 0,
+        "matched": 0
+      }
+    ]
+  },
+  "videos": {
+    "forward": {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/1_forklift_forward.mp4",
+      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v16_related_validation/best_snapshot.pt",
+      "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "config": {
+        "camera_id": "forward-proximity",
+        "source_name": "1_forklift_forward.mp4",
+        "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+        "forklift_ground_roi_normalized": [
+          [
+            0.49,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            0.65,
+            1
+          ],
+          [
+            0.4,
+            1
+          ]
+        ],
+        "warning_ratio": 1.0,
+        "critical_ratio": 0.3,
+        "hysteresis_ratio": 0.1,
+        "max_gap_seconds": 1,
+        "distance_unit": "person_height_normalized_image_gap",
+        "status": "unvalidated_camera_demo_rule",
+        "orientation_policy": "unknown_no_front_rear_claim"
+      },
+      "imgsz": 640,
+      "frames_sampled": 106,
+      "processed_fps": 4.795204795204795,
+      "pair_state_observation_counts": {
+        "WARNING": 17,
+        "CRITICAL": 3,
+        "UNKNOWN": 50,
+        "SAFE": 5
+      },
+      "frames_without_confirmed_pair": 84,
+      "rejected_forklift_boxes": 72,
+      "transition_events": 20,
+      "scene_cuts_seconds": [
+        12.095416666666665,
+        16.05770833333333
+      ],
+      "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+    },
+    "reverse": {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v16_related_validation/best_snapshot.pt",
+      "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "config": {
+        "camera_id": "reverse-proximity",
+        "source_name": "2_forklift_back.mp4",
+        "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+        "forklift_ground_roi_normalized": [
+          [
+            0,
+            0.1
+          ],
+          [
+            0.6,
+            0.1
+          ],
+          [
+            0.8,
+            0.85
+          ],
+          [
+            0,
+            0.85
+          ]
+        ],
+        "warning_ratio": 1.0,
+        "critical_ratio": 0.3,
+        "hysteresis_ratio": 0.1,
+        "max_gap_seconds": 1,
+        "distance_unit": "person_height_normalized_image_gap",
+        "status": "unvalidated_camera_demo_rule",
+        "orientation_policy": "unknown_no_front_rear_claim"
+      },
+      "imgsz": 640,
+      "frames_sampled": 106,
+      "processed_fps": 5.0,
+      "pair_state_observation_counts": {
+        "UNKNOWN": 85,
+        "SAFE": 16,
+        "WARNING": 1
+      },
+      "frames_without_confirmed_pair": 89,
+      "rejected_forklift_boxes": 3,
+      "transition_events": 17,
+      "scene_cuts_seconds": [],
+      "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+    }
+  },
+  "model_promoted": true,
+  "data_notes": {
+    "new_unique_source_frames": 15,
+    "train_images": 466,
+    "val_images": 82,
+    "test_images": 40,
+    "unreviewed_candidates_remaining": 180,
+    "demo_frames_used": 0,
+    "evaluation_scope": "development tests and same-camera demo adaptation; not independent-site accuracy"
+  },
+  "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "fixed_count_changes": {
+    "scaled": {
+      "person": {
+        "TP": {
+          "before": 34,
+          "after": 36,
+          "delta": 2
+        },
+        "FP": {
+          "before": 13,
+          "after": 9,
+          "delta": -4
+        },
+        "FN": {
+          "before": 6,
+          "after": 4,
+          "delta": -2
+        }
+      },
+      "forklift": {
+        "TP": {
+          "before": 38,
+          "after": 38,
+          "delta": 0
+        },
+        "FP": {
+          "before": 9,
+          "after": 7,
+          "delta": -2
+        },
+        "FN": {
+          "before": 2,
+          "after": 2,
+          "delta": 0
+        }
+      }
+    },
+    "old": {
+      "person": {
+        "TP": {
+          "before": 13,
+          "after": 13,
+          "delta": 0
+        },
+        "FP": {
+          "before": 3,
+          "after": 1,
+          "delta": -2
+        },
+        "FN": {
+          "before": 5,
+          "after": 5,
+          "delta": 0
+        }
+      },
+      "forklift": {
+        "TP": {
+          "before": 11,
+          "after": 11,
+          "delta": 0
+        },
+        "FP": {
+          "before": 2,
+          "after": 1,
+          "delta": -1
+        },
+        "FN": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      }
+    }
+  },
+  "video_before_after": {
+    "forward": {
+      "before": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/1_forklift_forward.mp4",
+        "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+        "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_final_validation/best_snapshot.pt",
+        "weights_sha256": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a",
+        "config": {
+          "camera_id": "forward-proximity",
+          "source_name": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "forklift_ground_roi_normalized": [
+            [
+              0.49,
+              0
+            ],
+            [
+              0.6,
+              0
+            ],
+            [
+              0.65,
+              1
+            ],
+            [
+              0.4,
+              1
+            ]
+          ],
+          "warning_ratio": 1.0,
+          "critical_ratio": 0.3,
+          "hysteresis_ratio": 0.1,
+          "max_gap_seconds": 1,
+          "distance_unit": "person_height_normalized_image_gap",
+          "status": "unvalidated_camera_demo_rule",
+          "orientation_policy": "unknown_no_front_rear_claim"
+        },
+        "imgsz": 640,
+        "frames_sampled": 106,
+        "processed_fps": 4.795204795204795,
+        "pair_state_observation_counts": {
+          "WARNING": 5,
+          "UNKNOWN": 41,
+          "SAFE": 11
+        },
+        "frames_without_confirmed_pair": 91,
+        "rejected_forklift_boxes": 108,
+        "transition_events": 21,
+        "scene_cuts_seconds": [
+          12.095416666666665,
+          16.05770833333333
+        ],
+        "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+      },
+      "after": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/1_forklift_forward.mp4",
+        "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+        "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v16_related_validation/best_snapshot.pt",
+        "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+        "config": {
+          "camera_id": "forward-proximity",
+          "source_name": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "forklift_ground_roi_normalized": [
+            [
+              0.49,
+              0
+            ],
+            [
+              0.6,
+              0
+            ],
+            [
+              0.65,
+              1
+            ],
+            [
+              0.4,
+              1
+            ]
+          ],
+          "warning_ratio": 1.0,
+          "critical_ratio": 0.3,
+          "hysteresis_ratio": 0.1,
+          "max_gap_seconds": 1,
+          "distance_unit": "person_height_normalized_image_gap",
+          "status": "unvalidated_camera_demo_rule",
+          "orientation_policy": "unknown_no_front_rear_claim"
+        },
+        "imgsz": 640,
+        "frames_sampled": 106,
+        "processed_fps": 4.795204795204795,
+        "pair_state_observation_counts": {
+          "WARNING": 17,
+          "CRITICAL": 3,
+          "UNKNOWN": 50,
+          "SAFE": 5
+        },
+        "frames_without_confirmed_pair": 84,
+        "rejected_forklift_boxes": 72,
+        "transition_events": 20,
+        "scene_cuts_seconds": [
+          12.095416666666665,
+          16.05770833333333
+        ],
+        "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+      }
+    },
+    "reverse": {
+      "before": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+        "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+        "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v15_final_validation/best_snapshot.pt",
+        "weights_sha256": "63c4d3efd41b3662842196b547297b8d84f83475bdb6fee060de6cf93ec8179a",
+        "config": {
+          "camera_id": "reverse-proximity",
+          "source_name": "2_forklift_back.mp4",
+          "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+          "forklift_ground_roi_normalized": [
+            [
+              0,
+              0.1
+            ],
+            [
+              0.6,
+              0.1
+            ],
+            [
+              0.8,
+              0.85
+            ],
+            [
+              0,
+              0.85
+            ]
+          ],
+          "warning_ratio": 1.0,
+          "critical_ratio": 0.3,
+          "hysteresis_ratio": 0.1,
+          "max_gap_seconds": 1,
+          "distance_unit": "person_height_normalized_image_gap",
+          "status": "unvalidated_camera_demo_rule",
+          "orientation_policy": "unknown_no_front_rear_claim"
+        },
+        "imgsz": 640,
+        "frames_sampled": 106,
+        "processed_fps": 5.0,
+        "pair_state_observation_counts": {
+          "SAFE": 17,
+          "UNKNOWN": 12
+        },
+        "frames_without_confirmed_pair": 89,
+        "rejected_forklift_boxes": 4,
+        "transition_events": 5,
+        "scene_cuts_seconds": [],
+        "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+      },
+      "after": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+        "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+        "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/v16_related_validation/best_snapshot.pt",
+        "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+        "config": {
+          "camera_id": "reverse-proximity",
+          "source_name": "2_forklift_back.mp4",
+          "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+          "forklift_ground_roi_normalized": [
+            [
+              0,
+              0.1
+            ],
+            [
+              0.6,
+              0.1
+            ],
+            [
+              0.8,
+              0.85
+            ],
+            [
+              0,
+              0.85
+            ]
+          ],
+          "warning_ratio": 1.0,
+          "critical_ratio": 0.3,
+          "hysteresis_ratio": 0.1,
+          "max_gap_seconds": 1,
+          "distance_unit": "person_height_normalized_image_gap",
+          "status": "unvalidated_camera_demo_rule",
+          "orientation_policy": "unknown_no_front_rear_claim"
+        },
+        "imgsz": 640,
+        "frames_sampled": 106,
+        "processed_fps": 5.0,
+        "pair_state_observation_counts": {
+          "UNKNOWN": 85,
+          "SAFE": 16,
+          "WARNING": 1
+        },
+        "frames_without_confirmed_pair": 89,
+        "rejected_forklift_boxes": 3,
+        "transition_events": 17,
+        "scene_cuts_seconds": [],
+        "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+      }
+    }
+  },
+  "overlap_guard_validation": {
+    "forward": {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/1_forklift_forward.mp4",
+      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+      "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "config": {
+        "camera_id": "forward-proximity",
+        "source_name": "1_forklift_forward.mp4",
+        "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+        "forklift_ground_roi_normalized": [
+          [
+            0.49,
+            0
+          ],
+          [
+            0.6,
+            0
+          ],
+          [
+            0.65,
+            1
+          ],
+          [
+            0.4,
+            1
+          ]
+        ],
+        "warning_ratio": 1.0,
+        "critical_ratio": 0.3,
+        "hysteresis_ratio": 0.1,
+        "max_gap_seconds": 1,
+        "distance_unit": "person_height_normalized_image_gap",
+        "status": "unvalidated_camera_demo_rule",
+        "orientation_policy": "unknown_no_front_rear_claim"
+      },
+      "imgsz": 640,
+      "frames_sampled": 106,
+      "processed_fps": 4.795204795204795,
+      "pair_state_observation_counts": {
+        "WARNING": 17,
+        "UNKNOWN": 53,
+        "SAFE": 5
+      },
+      "frames_without_confirmed_pair": 84,
+      "rejected_forklift_boxes": 72,
+      "transition_events": 20,
+      "scene_cuts_seconds": [
+        12.095416666666665,
+        16.05770833333333
+      ],
+      "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+    },
+    "reverse": {
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+      "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "config": {
+        "camera_id": "reverse-proximity",
+        "source_name": "2_forklift_back.mp4",
+        "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+        "forklift_ground_roi_normalized": [
+          [
+            0,
+            0.1
+          ],
+          [
+            0.6,
+            0.1
+          ],
+          [
+            0.8,
+            0.85
+          ],
+          [
+            0,
+            0.85
+          ]
+        ],
+        "warning_ratio": 1.0,
+        "critical_ratio": 0.3,
+        "hysteresis_ratio": 0.1,
+        "max_gap_seconds": 1,
+        "distance_unit": "person_height_normalized_image_gap",
+        "status": "unvalidated_camera_demo_rule",
+        "orientation_policy": "unknown_no_front_rear_claim"
+      },
+      "imgsz": 640,
+      "frames_sampled": 106,
+      "processed_fps": 5.0,
+      "pair_state_observation_counts": {
+        "UNKNOWN": 85,
+        "SAFE": 16,
+        "WARNING": 1
+      },
+      "frames_without_confirmed_pair": 89,
+      "rejected_forklift_boxes": 3,
+      "transition_events": 17,
+      "scene_cuts_seconds": [],
+      "limitations": "No 3D calibration/front-rear orientation; detector errors remain; floor ROI limits coverage; no ground truth accuracy"
+    }
+  },
+  "manual_review": {
+    "decision": "selected_development_detector",
+    "reason": "Both unchanged development tests improve TP/FP or retain TP with fewer FP; video samples reviewed; operator/occlusion overlap false-critical fixed separately",
+    "not_final_safety_pipeline": true,
+    "remaining_gap": "Loaded forklift at reverse12.4/12.8/13.2/13.8 does not establish stable tracking; frontal cargo occlusion underrepresented",
+    "tests_passed": 30,
+    "model_only_comparison_uses_original_proximity_rule": true,
+    "postprocessing_fix_reported_separately": true
+  }
+}

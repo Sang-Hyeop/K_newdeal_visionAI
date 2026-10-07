@@ -1,0 +1,17 @@
+{
+  "version": "demo-ppe-adaptation-v1",
+  "user_authorization": "2026-10-07 use demo scenes to reduce missed detections",
+  "initial_weights": "models/pilot_v3_ppe_expansion/ppe.pt",
+  "epochs": 8,
+  "freeze": 0,
+  "learning_rate": 0.0007,
+  "imgsz": 640,
+  "minimum_head_confidence_unchanged": 0.5,
+  "minimum_confirmation_unchanged": "3 consecutive frames and .4 seconds",
+  "hood_policy": "unknown when head/helmet unobservable; do not label as no_helmet_head",
+  "selection": "best checkpoint by preserved validation; confirm actual bare heads in full demo pipeline and inspect helmet errors; no independent generalization claim",
+  "classes": {
+    "0": "helmeted_head",
+    "1": "no_helmet_head"
+  }
+}

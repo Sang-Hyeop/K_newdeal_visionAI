@@ -1,0 +1,4097 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr10.mp4",
+    "source_sha256": "7b795c96972bc6eed92519cb7b7aa0898f9135b81617784bf877a94c96f393bc",
+    "video_group": "3_tr10",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 38,
+    "timestamp_seconds": 1.52,
+    "image": "3_3_tr10_38.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.38753890991211
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 1
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr10.mp4",
+    "source_sha256": "7b795c96972bc6eed92519cb7b7aa0898f9135b81617784bf877a94c96f393bc",
+    "video_group": "3_tr10",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 125,
+    "timestamp_seconds": 5.0,
+    "image": "3_3_tr10_125.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 25,
+      "gray_mae": 9.748456954956055
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 2
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr10.mp4",
+    "source_sha256": "7b795c96972bc6eed92519cb7b7aa0898f9135b81617784bf877a94c96f393bc",
+    "video_group": "3_tr10",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr10_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 125,
+      "gray_mae": 7.2615742683410645
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 3
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr11.mp4",
+    "source_sha256": "6b02ef1fad91f59529735d7ee536c3a28782d9c687c81beb80024c9074e5a641",
+    "video_group": "3_tr11",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr11_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.804591178894043
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 4
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr11.mp4",
+    "source_sha256": "6b02ef1fad91f59529735d7ee536c3a28782d9c687c81beb80024c9074e5a641",
+    "video_group": "3_tr11",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 124,
+    "timestamp_seconds": 4.96,
+    "image": "3_3_tr11_124.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 6.809220790863037
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 5
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr11.mp4",
+    "source_sha256": "6b02ef1fad91f59529735d7ee536c3a28782d9c687c81beb80024c9074e5a641",
+    "video_group": "3_tr11",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr11_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 7.124228477478027
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 6
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr12.mp4",
+    "source_sha256": "23925896131a11032c8dba17c6abde5e341843960a64b3a5113540284b1a3354",
+    "video_group": "3_tr12",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr12_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 7.218943119049072
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 7
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr12.mp4",
+    "source_sha256": "23925896131a11032c8dba17c6abde5e341843960a64b3a5113540284b1a3354",
+    "video_group": "3_tr12",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 124,
+    "timestamp_seconds": 4.96,
+    "image": "3_3_tr12_124.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 11.609761238098145
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 8
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr12.mp4",
+    "source_sha256": "23925896131a11032c8dba17c6abde5e341843960a64b3a5113540284b1a3354",
+    "video_group": "3_tr12",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr12_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.190008163452148
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 9
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr13.mp4",
+    "source_sha256": "a28d1a2156fe65283696c54dce16ebf0ea22f631b8a82011cbefbd2f05ef61da",
+    "video_group": "3_tr13",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr13_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 7.0742669105529785
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 10
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr13.mp4",
+    "source_sha256": "a28d1a2156fe65283696c54dce16ebf0ea22f631b8a82011cbefbd2f05ef61da",
+    "video_group": "3_tr13",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 124,
+    "timestamp_seconds": 4.96,
+    "image": "3_3_tr13_124.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.375193119049072
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 11
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr13.mp4",
+    "source_sha256": "a28d1a2156fe65283696c54dce16ebf0ea22f631b8a82011cbefbd2f05ef61da",
+    "video_group": "3_tr13",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr13_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.798611164093018
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 12
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr14.mp4",
+    "source_sha256": "0865376cd100cb3cdfbc4c25816f57222b020fba6ca085d19b7559a7a8745b7b",
+    "video_group": "3_tr14",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr14_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 525,
+      "gray_mae": 5.208333492279053
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 13
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr14.mp4",
+    "source_sha256": "0865376cd100cb3cdfbc4c25816f57222b020fba6ca085d19b7559a7a8745b7b",
+    "video_group": "3_tr14",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 124,
+    "timestamp_seconds": 4.96,
+    "image": "3_3_tr14_124.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 475,
+      "gray_mae": 5.715470790863037
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 14
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr14.mp4",
+    "source_sha256": "0865376cd100cb3cdfbc4c25816f57222b020fba6ca085d19b7559a7a8745b7b",
+    "video_group": "3_tr14",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr14_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 425,
+      "gray_mae": 10.70814037322998
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 15
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr15.mp4",
+    "source_sha256": "f8068e102a1f929a94c35892d67b0bf3eb9aa01b8127fea8dff0ff270d09b4e0",
+    "video_group": "3_tr15",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr15_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 50,
+      "gray_mae": 13.725308418273926
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 16
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr15.mp4",
+    "source_sha256": "f8068e102a1f929a94c35892d67b0bf3eb9aa01b8127fea8dff0ff270d09b4e0",
+    "video_group": "3_tr15",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 124,
+    "timestamp_seconds": 4.96,
+    "image": "3_3_tr15_124.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 100,
+      "gray_mae": 12.260416984558105
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 17
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr15.mp4",
+    "source_sha256": "f8068e102a1f929a94c35892d67b0bf3eb9aa01b8127fea8dff0ff270d09b4e0",
+    "video_group": "3_tr15",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr15_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 12.061342239379883
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 18
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr16.mp4",
+    "source_sha256": "12a798c0b94510a34710446916f5955cc5dd9f4b1e057c23eade6869cbfc55ae",
+    "video_group": "3_tr16",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr16_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 475,
+      "gray_mae": 9.84567928314209
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 19
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr16.mp4",
+    "source_sha256": "12a798c0b94510a34710446916f5955cc5dd9f4b1e057c23eade6869cbfc55ae",
+    "video_group": "3_tr16",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 124,
+    "timestamp_seconds": 4.96,
+    "image": "3_3_tr16_124.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 425,
+      "gray_mae": 12.009451866149902
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 20
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr16.mp4",
+    "source_sha256": "12a798c0b94510a34710446916f5955cc5dd9f4b1e057c23eade6869cbfc55ae",
+    "video_group": "3_tr16",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr16_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.896026611328125
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 21
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+    "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+    "video_group": "3_tr18",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 34,
+    "timestamp_seconds": 1.36,
+    "image": "3_3_tr18_34.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 425,
+      "gray_mae": 10.472029685974121
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 25
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+    "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+    "video_group": "3_tr18",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 112,
+    "timestamp_seconds": 4.48,
+    "image": "3_3_tr18_112.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 10.851273536682129
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 26
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+    "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+    "video_group": "3_tr18",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 190,
+    "timestamp_seconds": 7.6,
+    "image": "3_3_tr18_190.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 10.103009223937988
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 27
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr19.mp4",
+    "source_sha256": "fcfeaafbc86acce9a7374d6b774df75c39a9a4abc02e5ff3871753ffa13e498c",
+    "video_group": "3_tr19",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 34,
+    "timestamp_seconds": 1.36,
+    "image": "3_3_tr19_34.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 25,
+      "gray_mae": 15.50868034362793
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 28
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr19.mp4",
+    "source_sha256": "fcfeaafbc86acce9a7374d6b774df75c39a9a4abc02e5ff3871753ffa13e498c",
+    "video_group": "3_tr19",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 112,
+    "timestamp_seconds": 4.48,
+    "image": "3_3_tr19_112.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 25,
+      "gray_mae": 16.42804718017578
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 29
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr19.mp4",
+    "source_sha256": "fcfeaafbc86acce9a7374d6b774df75c39a9a4abc02e5ff3871753ffa13e498c",
+    "video_group": "3_tr19",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 190,
+    "timestamp_seconds": 7.6,
+    "image": "3_3_tr19_190.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 0,
+      "gray_mae": 16.84027862548828
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 30
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr2.mp4",
+    "source_sha256": "93fbd4851e4ec8b25467f899f9f4f4c7caf8ac6f0f7e95b9d08ce26ef03c4337",
+    "video_group": "3_tr2",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 45,
+    "timestamp_seconds": 1.8,
+    "image": "3_3_tr2_45.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 9.91685962677002
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 31
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr2.mp4",
+    "source_sha256": "93fbd4851e4ec8b25467f899f9f4f4c7caf8ac6f0f7e95b9d08ce26ef03c4337",
+    "video_group": "3_tr2",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 150,
+    "timestamp_seconds": 6.0,
+    "image": "3_3_tr2_150.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 11.018325805664062
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 32
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr2.mp4",
+    "source_sha256": "93fbd4851e4ec8b25467f899f9f4f4c7caf8ac6f0f7e95b9d08ce26ef03c4337",
+    "video_group": "3_tr2",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 254,
+    "timestamp_seconds": 10.16,
+    "image": "3_3_tr2_254.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.274112701416016
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 33
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
+    "source_sha256": "666c64d82d8b85699dd4982da3ab8b338d5fdf9d4d1d0f47bb28d1ad2b0de692",
+    "video_group": "3_tr20",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 30,
+    "timestamp_seconds": 1.2,
+    "image": "3_3_tr20_30.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 13.49633502960205
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 34
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
+    "source_sha256": "666c64d82d8b85699dd4982da3ab8b338d5fdf9d4d1d0f47bb28d1ad2b0de692",
+    "video_group": "3_tr20",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 100,
+    "timestamp_seconds": 4.0,
+    "image": "3_3_tr20_100.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 13.534143447875977
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 35
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
+    "source_sha256": "666c64d82d8b85699dd4982da3ab8b338d5fdf9d4d1d0f47bb28d1ad2b0de692",
+    "video_group": "3_tr20",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 170,
+    "timestamp_seconds": 6.8,
+    "image": "3_3_tr20_170.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 14.940779685974121
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 36
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr21.mp4",
+    "source_sha256": "bd06d9f21da14073aa85f94819fc51090193ac744ed59f10fbc17b93ddd697b5",
+    "video_group": "3_tr21",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 30,
+    "timestamp_seconds": 1.2,
+    "image": "3_3_tr21_30.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 25,
+      "gray_mae": 17.662809371948242
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 37
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr21.mp4",
+    "source_sha256": "bd06d9f21da14073aa85f94819fc51090193ac744ed59f10fbc17b93ddd697b5",
+    "video_group": "3_tr21",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 100,
+    "timestamp_seconds": 4.0,
+    "image": "3_3_tr21_100.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 19.717784881591797
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 38
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr21.mp4",
+    "source_sha256": "bd06d9f21da14073aa85f94819fc51090193ac744ed59f10fbc17b93ddd697b5",
+    "video_group": "3_tr21",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 169,
+    "timestamp_seconds": 6.76,
+    "image": "3_3_tr21_169.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 15.342206954956055
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 39
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
+    "source_sha256": "bd6c10654363213cf226784e4c77a12a09e6834e274c022f52447089e485c629",
+    "video_group": "3_tr22",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 26,
+    "timestamp_seconds": 1.04,
+    "image": "3_3_tr22_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 12.07619571685791
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 40
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
+    "source_sha256": "bd6c10654363213cf226784e4c77a12a09e6834e274c022f52447089e485c629",
+    "video_group": "3_tr22",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 87,
+    "timestamp_seconds": 3.48,
+    "image": "3_3_tr22_87.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.992862701416016
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 41
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
+    "source_sha256": "bd6c10654363213cf226784e4c77a12a09e6834e274c022f52447089e485c629",
+    "video_group": "3_tr22",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 148,
+    "timestamp_seconds": 5.92,
+    "image": "3_3_tr22_148.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 12.335841178894043
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 42
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr23.mp4",
+    "source_sha256": "02afdc719b9cb39edbcde3233cdd01587a4458f4462792fe7a79861d39c3abcc",
+    "video_group": "3_tr23",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 26,
+    "timestamp_seconds": 1.04,
+    "image": "3_3_tr23_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.865740776062012
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 43
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr23.mp4",
+    "source_sha256": "02afdc719b9cb39edbcde3233cdd01587a4458f4462792fe7a79861d39c3abcc",
+    "video_group": "3_tr23",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 87,
+    "timestamp_seconds": 3.48,
+    "image": "3_3_tr23_87.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 12.925732612609863
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 44
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr23.mp4",
+    "source_sha256": "02afdc719b9cb39edbcde3233cdd01587a4458f4462792fe7a79861d39c3abcc",
+    "video_group": "3_tr23",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 148,
+    "timestamp_seconds": 5.92,
+    "image": "3_3_tr23_148.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 75,
+      "gray_mae": 16.102237701416016
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 45
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr24.mp4",
+    "source_sha256": "4ca9a2b10211db5d40f93fafc7bfac25bc5cd3171f047c798e1567bb0a9d82f3",
+    "video_group": "3_tr24",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 22,
+    "timestamp_seconds": 0.88,
+    "image": "3_3_tr24_22.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.1365742683410645
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 46
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr24.mp4",
+    "source_sha256": "4ca9a2b10211db5d40f93fafc7bfac25bc5cd3171f047c798e1567bb0a9d82f3",
+    "video_group": "3_tr24",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 74,
+    "timestamp_seconds": 2.96,
+    "image": "3_3_tr24_74.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 6.2370758056640625
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 47
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr24.mp4",
+    "source_sha256": "4ca9a2b10211db5d40f93fafc7bfac25bc5cd3171f047c798e1567bb0a9d82f3",
+    "video_group": "3_tr24",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 127,
+    "timestamp_seconds": 5.08,
+    "image": "3_3_tr24_127.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 6.051118850708008
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 48
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr25.mp4",
+    "source_sha256": "5ed837ed236df6f7ecf6c4d4a4d5b1fc307e927804f2e29d7feb0314b4ed3965",
+    "video_group": "3_tr25",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 22,
+    "timestamp_seconds": 0.88,
+    "image": "3_3_tr25_22.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 6.355710029602051
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 49
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr25.mp4",
+    "source_sha256": "5ed837ed236df6f7ecf6c4d4a4d5b1fc307e927804f2e29d7feb0314b4ed3965",
+    "video_group": "3_tr25",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 74,
+    "timestamp_seconds": 2.96,
+    "image": "3_3_tr25_74.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 250,
+      "gray_mae": 5.224151134490967
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 50
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr25.mp4",
+    "source_sha256": "5ed837ed236df6f7ecf6c4d4a4d5b1fc307e927804f2e29d7feb0314b4ed3965",
+    "video_group": "3_tr25",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 127,
+    "timestamp_seconds": 5.08,
+    "image": "3_3_tr25_127.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 325,
+      "gray_mae": 4.812306880950928
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 51
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
+    "source_sha256": "87938a21c72674bb5732a85399207d1b12ccb0bc72b4da6fd070542b6259e17d",
+    "video_group": "3_tr26",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 22,
+    "timestamp_seconds": 0.88,
+    "image": "3_3_tr26_22.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 0,
+      "gray_mae": 16.858989715576172
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 52
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
+    "source_sha256": "87938a21c72674bb5732a85399207d1b12ccb0bc72b4da6fd070542b6259e17d",
+    "video_group": "3_tr26",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 74,
+    "timestamp_seconds": 2.96,
+    "image": "3_3_tr26_74.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 14.351273536682129
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 53
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
+    "source_sha256": "87938a21c72674bb5732a85399207d1b12ccb0bc72b4da6fd070542b6259e17d",
+    "video_group": "3_tr26",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 127,
+    "timestamp_seconds": 5.08,
+    "image": "3_3_tr26_127.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 225,
+      "gray_mae": 12.748456954956055
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 54
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr27.mp4",
+    "source_sha256": "603f5debdefa14a184812e3256a3c24a62924048edf0d9bdfc906b1019815840",
+    "video_group": "3_tr27",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr27_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 225,
+      "gray_mae": 7.192129611968994
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 55
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr27.mp4",
+    "source_sha256": "603f5debdefa14a184812e3256a3c24a62924048edf0d9bdfc906b1019815840",
+    "video_group": "3_tr27",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr27_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 5.705053806304932
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 56
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr27.mp4",
+    "source_sha256": "603f5debdefa14a184812e3256a3c24a62924048edf0d9bdfc906b1019815840",
+    "video_group": "3_tr27",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr27_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 325,
+      "gray_mae": 5.697530746459961
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 57
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr28.mp4",
+    "source_sha256": "44ada746ddd0704610f44b61171045be329059eb86bcba4b3dd9b693d669ac13",
+    "video_group": "3_tr28",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr28_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.131365776062012
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 58
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr28.mp4",
+    "source_sha256": "44ada746ddd0704610f44b61171045be329059eb86bcba4b3dd9b693d669ac13",
+    "video_group": "3_tr28",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr28_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 425,
+      "gray_mae": 9.600115776062012
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 59
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr28.mp4",
+    "source_sha256": "44ada746ddd0704610f44b61171045be329059eb86bcba4b3dd9b693d669ac13",
+    "video_group": "3_tr28",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr28_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.624421119689941
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 60
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr29.mp4",
+    "source_sha256": "74f9bd4518daac7ed9eebfa24aad255f807460056c62ddae952b6922ef254900",
+    "video_group": "3_tr29",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr29_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 12.594907760620117
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 61
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr29.mp4",
+    "source_sha256": "74f9bd4518daac7ed9eebfa24aad255f807460056c62ddae952b6922ef254900",
+    "video_group": "3_tr29",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr29_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 12.966628074645996
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 62
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr29.mp4",
+    "source_sha256": "74f9bd4518daac7ed9eebfa24aad255f807460056c62ddae952b6922ef254900",
+    "video_group": "3_tr29",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr29_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 12.824073791503906
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 63
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr3.mp4",
+    "source_sha256": "f1da0d2b9672008146ec656f4d6fd68bf8bdbcc064e8a1058d66618982f37416",
+    "video_group": "3_tr3",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 41,
+    "timestamp_seconds": 1.64,
+    "image": "3_3_tr3_41.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.6824846267700195
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 64
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr3.mp4",
+    "source_sha256": "f1da0d2b9672008146ec656f4d6fd68bf8bdbcc064e8a1058d66618982f37416",
+    "video_group": "3_tr3",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 137,
+    "timestamp_seconds": 5.48,
+    "image": "3_3_tr3_137.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.798032283782959
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 65
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr3.mp4",
+    "source_sha256": "f1da0d2b9672008146ec656f4d6fd68bf8bdbcc064e8a1058d66618982f37416",
+    "video_group": "3_tr3",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 233,
+    "timestamp_seconds": 9.32,
+    "image": "3_3_tr3_233.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 12.691551208496094
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 66
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
+    "source_sha256": "1a08e951af7bc7db26ec57b913a826b6bbc3f5e6f463d1d52ff3cca2dfe4e866",
+    "video_group": "3_tr30",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr30_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 125,
+      "gray_mae": 13.275270462036133
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 67
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
+    "source_sha256": "1a08e951af7bc7db26ec57b913a826b6bbc3f5e6f463d1d52ff3cca2dfe4e866",
+    "video_group": "3_tr30",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr30_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.537036895751953
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 68
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
+    "source_sha256": "1a08e951af7bc7db26ec57b913a826b6bbc3f5e6f463d1d52ff3cca2dfe4e866",
+    "video_group": "3_tr30",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr30_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.984182357788086
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 69
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+    "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+    "video_group": "3_tr31",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr31_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 450,
+      "gray_mae": 11.605131149291992
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 70
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+    "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+    "video_group": "3_tr31",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr31_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 11.551697731018066
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 71
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+    "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+    "video_group": "3_tr31",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr31_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 12.486689567565918
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 72
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr32.mp4",
+    "source_sha256": "bb6c5dc11abe221ae3efb3204d96c6336750026a5371f7eded8b651d60b13a54",
+    "video_group": "3_tr32",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr32_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 375,
+      "gray_mae": 9.870948791503906
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 73
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr32.mp4",
+    "source_sha256": "bb6c5dc11abe221ae3efb3204d96c6336750026a5371f7eded8b651d60b13a54",
+    "video_group": "3_tr32",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr32_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.046488761901855
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 74
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr32.mp4",
+    "source_sha256": "bb6c5dc11abe221ae3efb3204d96c6336750026a5371f7eded8b651d60b13a54",
+    "video_group": "3_tr32",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr32_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.13696002960205
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 75
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr33.mp4",
+    "source_sha256": "5ff9dee5a340577a32704f27ee4ce11ad5b3f320909d355051fbb230a4ce414c",
+    "video_group": "3_tr33",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr33_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.11631965637207
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 76
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr33.mp4",
+    "source_sha256": "5ff9dee5a340577a32704f27ee4ce11ad5b3f320909d355051fbb230a4ce414c",
+    "video_group": "3_tr33",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr33_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 10.17361068725586
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 77
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr33.mp4",
+    "source_sha256": "5ff9dee5a340577a32704f27ee4ce11ad5b3f320909d355051fbb230a4ce414c",
+    "video_group": "3_tr33",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr33_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.838155746459961
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 78
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr34.mp4",
+    "source_sha256": "e1bf5ca774e1602353aca10b52abfe2ad08862b8bf7cf3bfe9bdb37d4bbea673",
+    "video_group": "3_tr34",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 19,
+    "timestamp_seconds": 0.76,
+    "image": "3_3_tr34_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 50,
+      "gray_mae": 12.144097328186035
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 79
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr34.mp4",
+    "source_sha256": "e1bf5ca774e1602353aca10b52abfe2ad08862b8bf7cf3bfe9bdb37d4bbea673",
+    "video_group": "3_tr34",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "3_3_tr34_62.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 100,
+      "gray_mae": 10.518133163452148
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 80
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr34.mp4",
+    "source_sha256": "e1bf5ca774e1602353aca10b52abfe2ad08862b8bf7cf3bfe9bdb37d4bbea673",
+    "video_group": "3_tr34",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 105,
+    "timestamp_seconds": 4.2,
+    "image": "3_3_tr34_105.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 11.662229537963867
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 81
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr35.mp4",
+    "source_sha256": "5d19425ab3400047dab56a888d5e6962a5c8506b997e95b56ff687c4dc292656",
+    "video_group": "3_tr35",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 16,
+    "timestamp_seconds": 0.64,
+    "image": "3_3_tr35_16.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.62133502960205
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 82
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr35.mp4",
+    "source_sha256": "5d19425ab3400047dab56a888d5e6962a5c8506b997e95b56ff687c4dc292656",
+    "video_group": "3_tr35",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 54,
+    "timestamp_seconds": 2.16,
+    "image": "3_3_tr35_54.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 15.16319465637207
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 83
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr35.mp4",
+    "source_sha256": "5d19425ab3400047dab56a888d5e6962a5c8506b997e95b56ff687c4dc292656",
+    "video_group": "3_tr35",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 93,
+    "timestamp_seconds": 3.72,
+    "image": "3_3_tr35_93.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 0,
+      "gray_mae": 14.308642387390137
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 84
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
+    "source_sha256": "5f98bdeb1ab1609bcd46af3b5ec176d8ad4c9a487e0849afe72848e7bb25d8fd",
+    "video_group": "3_tr36",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6,
+    "image": "3_3_tr36_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 14.319637298583984
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 85
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
+    "source_sha256": "5f98bdeb1ab1609bcd46af3b5ec176d8ad4c9a487e0849afe72848e7bb25d8fd",
+    "video_group": "3_tr36",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "3_3_tr36_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 12.405092239379883
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 86
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
+    "source_sha256": "5f98bdeb1ab1609bcd46af3b5ec176d8ad4c9a487e0849afe72848e7bb25d8fd",
+    "video_group": "3_tr36",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 84,
+    "timestamp_seconds": 3.36,
+    "image": "3_3_tr36_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 11.708333015441895
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 87
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr37.mp4",
+    "source_sha256": "c33a5103766ac79f6a3223b5d785af0ea611565dbe3a902268e36f8145235f89",
+    "video_group": "3_tr37",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6,
+    "image": "3_3_tr37_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.900270462036133
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 88
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr37.mp4",
+    "source_sha256": "c33a5103766ac79f6a3223b5d785af0ea611565dbe3a902268e36f8145235f89",
+    "video_group": "3_tr37",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "3_3_tr37_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 125,
+      "gray_mae": 14.170524597167969
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 89
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr37.mp4",
+    "source_sha256": "c33a5103766ac79f6a3223b5d785af0ea611565dbe3a902268e36f8145235f89",
+    "video_group": "3_tr37",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 84,
+    "timestamp_seconds": 3.36,
+    "image": "3_3_tr37_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 125,
+      "gray_mae": 13.766975402832031
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 90
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
+    "source_sha256": "846ebd111b4bfb69cf692c489023e40ddfe2e3b4e9fa100e6802beff9b16140a",
+    "video_group": "3_tr38",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6,
+    "image": "3_3_tr38_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 12.024691581726074
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 91
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
+    "source_sha256": "846ebd111b4bfb69cf692c489023e40ddfe2e3b4e9fa100e6802beff9b16140a",
+    "video_group": "3_tr38",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "3_3_tr38_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 9.445795059204102
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 92
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
+    "source_sha256": "846ebd111b4bfb69cf692c489023e40ddfe2e3b4e9fa100e6802beff9b16140a",
+    "video_group": "3_tr38",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 84,
+    "timestamp_seconds": 3.36,
+    "image": "3_3_tr38_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 225,
+      "gray_mae": 7.969714641571045
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 93
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr39.mp4",
+    "source_sha256": "0ac96bee40ac4a02959a5ed84a5c8a63d4366f789468519595ce92a88d1c9c34",
+    "video_group": "3_tr39",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6,
+    "image": "3_3_tr39_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 13.940200805664062
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 94
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr39.mp4",
+    "source_sha256": "0ac96bee40ac4a02959a5ed84a5c8a63d4366f789468519595ce92a88d1c9c34",
+    "video_group": "3_tr39",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "3_3_tr39_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 15.868441581726074
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 95
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr39.mp4",
+    "source_sha256": "0ac96bee40ac4a02959a5ed84a5c8a63d4366f789468519595ce92a88d1c9c34",
+    "video_group": "3_tr39",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 84,
+    "timestamp_seconds": 3.36,
+    "image": "3_3_tr39_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 75,
+      "gray_mae": 15.272377014160156
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 96
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+    "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+    "video_group": "3_tr4",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 41,
+    "timestamp_seconds": 1.64,
+    "image": "3_3_tr4_41.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 7.9436726570129395
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 97
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+    "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+    "video_group": "3_tr4",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 137,
+    "timestamp_seconds": 5.48,
+    "image": "3_3_tr4_137.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 10.87808609008789
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 98
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+    "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+    "video_group": "3_tr4",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 233,
+    "timestamp_seconds": 9.32,
+    "image": "3_3_tr4_233.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 12.660107612609863
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 99
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+    "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+    "video_group": "3_tr40",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6,
+    "image": "3_3_tr40_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 525,
+      "gray_mae": 5.833333492279053
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 100
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+    "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+    "video_group": "3_tr40",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "3_3_tr40_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 525,
+      "gray_mae": 6.02874231338501
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 101
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+    "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+    "video_group": "3_tr40",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 84,
+    "timestamp_seconds": 3.36,
+    "image": "3_3_tr40_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 525,
+      "gray_mae": 6.133294582366943
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 102
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr42.mp4",
+    "source_sha256": "c8e61b5634536a5f498c5c9a9246bf6ebc1e4bda37bfd79564b4e45766d061f2",
+    "video_group": "3_tr42",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6,
+    "image": "3_3_tr42_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 11.865354537963867
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 103
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr42.mp4",
+    "source_sha256": "c8e61b5634536a5f498c5c9a9246bf6ebc1e4bda37bfd79564b4e45766d061f2",
+    "video_group": "3_tr42",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "3_3_tr42_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 11.469714164733887
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 104
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr42.mp4",
+    "source_sha256": "c8e61b5634536a5f498c5c9a9246bf6ebc1e4bda37bfd79564b4e45766d061f2",
+    "video_group": "3_tr42",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 84,
+    "timestamp_seconds": 3.36,
+    "image": "3_3_tr42_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 325,
+      "gray_mae": 11.236883163452148
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 105
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr43.mp4",
+    "source_sha256": "e4edf2affe7fc44069aaf4a4a27ba963e73beafb5abb912a8afd036cc1bdc256",
+    "video_group": "3_tr43",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 11,
+    "timestamp_seconds": 0.44,
+    "image": "3_3_tr43_11.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 17.17264747619629
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 106
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr43.mp4",
+    "source_sha256": "e4edf2affe7fc44069aaf4a4a27ba963e73beafb5abb912a8afd036cc1bdc256",
+    "video_group": "3_tr43",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 38,
+    "timestamp_seconds": 1.52,
+    "image": "3_3_tr43_38.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.543017387390137
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 107
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr43.mp4",
+    "source_sha256": "e4edf2affe7fc44069aaf4a4a27ba963e73beafb5abb912a8afd036cc1bdc256",
+    "video_group": "3_tr43",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 64,
+    "timestamp_seconds": 2.56,
+    "image": "3_3_tr43_64.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 13.634838104248047
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 108
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr44.mp4",
+    "source_sha256": "889277f1f38849dbf9ed52aa65e230c032afa5395fa35285c6824f2ee9897a3f",
+    "video_group": "3_tr44",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 11,
+    "timestamp_seconds": 0.44,
+    "image": "3_3_tr44_11.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 9.365740776062012
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 109
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr44.mp4",
+    "source_sha256": "889277f1f38849dbf9ed52aa65e230c032afa5395fa35285c6824f2ee9897a3f",
+    "video_group": "3_tr44",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr44_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.134259223937988
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 110
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr44.mp4",
+    "source_sha256": "889277f1f38849dbf9ed52aa65e230c032afa5395fa35285c6824f2ee9897a3f",
+    "video_group": "3_tr44",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 63,
+    "timestamp_seconds": 2.52,
+    "image": "3_3_tr44_63.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.179204940795898
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 111
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
+    "source_sha256": "2020127242e62532028e5f2a4947d0611c97dd0b7f68b5c52e8fe813b07e0dbf",
+    "video_group": "3_tr45",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 11,
+    "timestamp_seconds": 0.44,
+    "image": "3_3_tr45_11.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 8.371527671813965
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 112
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
+    "source_sha256": "2020127242e62532028e5f2a4947d0611c97dd0b7f68b5c52e8fe813b07e0dbf",
+    "video_group": "3_tr45",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr45_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 8.162423133850098
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 113
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
+    "source_sha256": "2020127242e62532028e5f2a4947d0611c97dd0b7f68b5c52e8fe813b07e0dbf",
+    "video_group": "3_tr45",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 63,
+    "timestamp_seconds": 2.52,
+    "image": "3_3_tr45_63.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 8.974536895751953
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 114
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr46.mp4",
+    "source_sha256": "04f08654a205f07ff0edf4f99c82bf6f5f09df098398b37891b35fe1192c1f9b",
+    "video_group": "3_tr46",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 11,
+    "timestamp_seconds": 0.44,
+    "image": "3_3_tr46_11.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.000578880310059
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 115
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr46.mp4",
+    "source_sha256": "04f08654a205f07ff0edf4f99c82bf6f5f09df098398b37891b35fe1192c1f9b",
+    "video_group": "3_tr46",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr46_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 13.581597328186035
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 116
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr46.mp4",
+    "source_sha256": "04f08654a205f07ff0edf4f99c82bf6f5f09df098398b37891b35fe1192c1f9b",
+    "video_group": "3_tr46",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 63,
+    "timestamp_seconds": 2.52,
+    "image": "3_3_tr46_63.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 0,
+      "gray_mae": 12.291666984558105
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 117
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
+    "source_sha256": "22ff762fc6e4a01bef321b3403d63bd342c5e9adae054f2a98c1bed97761b8c0",
+    "video_group": "3_tr47",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 11,
+    "timestamp_seconds": 0.44,
+    "image": "3_3_tr47_11.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 125,
+      "gray_mae": 10.313078880310059
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 118
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
+    "source_sha256": "22ff762fc6e4a01bef321b3403d63bd342c5e9adae054f2a98c1bed97761b8c0",
+    "video_group": "3_tr47",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr47_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 9.657214164733887
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 119
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
+    "source_sha256": "22ff762fc6e4a01bef321b3403d63bd342c5e9adae054f2a98c1bed97761b8c0",
+    "video_group": "3_tr47",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 63,
+    "timestamp_seconds": 2.52,
+    "image": "3_3_tr47_63.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 9.12307071685791
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 120
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr48.mp4",
+    "source_sha256": "9dac64de68214c8feb9e5a2c8bcbf0d09ceac9fdc8061acdacf5ef6963ee92e7",
+    "video_group": "3_tr48",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 11,
+    "timestamp_seconds": 0.44,
+    "image": "3_3_tr48_11.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 0,
+      "gray_mae": 12.87673568725586
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 121
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr48.mp4",
+    "source_sha256": "9dac64de68214c8feb9e5a2c8bcbf0d09ceac9fdc8061acdacf5ef6963ee92e7",
+    "video_group": "3_tr48",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "3_3_tr48_37.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 25,
+      "gray_mae": 11.917823791503906
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 122
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr48.mp4",
+    "source_sha256": "9dac64de68214c8feb9e5a2c8bcbf0d09ceac9fdc8061acdacf5ef6963ee92e7",
+    "video_group": "3_tr48",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 63,
+    "timestamp_seconds": 2.52,
+    "image": "3_3_tr48_63.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 25,
+      "gray_mae": 11.287423133850098
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 123
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr5.mp4",
+    "source_sha256": "6d92e2b7289950554a3dcda096b97d46b46ecccca0bc7fb62a7261df3bc4b2f9",
+    "video_group": "3_tr5",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 41,
+    "timestamp_seconds": 1.64,
+    "image": "3_3_tr5_41.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 250,
+      "gray_mae": 10.872878074645996
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 124
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr5.mp4",
+    "source_sha256": "6d92e2b7289950554a3dcda096b97d46b46ecccca0bc7fb62a7261df3bc4b2f9",
+    "video_group": "3_tr5",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 137,
+    "timestamp_seconds": 5.48,
+    "image": "3_3_tr5_137.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 9.281057357788086
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 125
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr5.mp4",
+    "source_sha256": "6d92e2b7289950554a3dcda096b97d46b46ecccca0bc7fb62a7261df3bc4b2f9",
+    "video_group": "3_tr5",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 233,
+    "timestamp_seconds": 9.32,
+    "image": "3_3_tr5_233.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.907021522521973
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 126
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
+    "source_sha256": "cb37dab2a913aa3fa1a8c002ddeda85a6558c35176c6223bbe355ba79034d84b",
+    "video_group": "3_tr6",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 41,
+    "timestamp_seconds": 1.64,
+    "image": "3_3_tr6_41.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 16.722415924072266
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 127
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
+    "source_sha256": "cb37dab2a913aa3fa1a8c002ddeda85a6558c35176c6223bbe355ba79034d84b",
+    "video_group": "3_tr6",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 137,
+    "timestamp_seconds": 5.48,
+    "image": "3_3_tr6_137.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 14.663966178894043
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 128
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
+    "source_sha256": "cb37dab2a913aa3fa1a8c002ddeda85a6558c35176c6223bbe355ba79034d84b",
+    "video_group": "3_tr6",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 233,
+    "timestamp_seconds": 9.32,
+    "image": "3_3_tr6_233.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 15.466435432434082
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 129
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr9.mp4",
+    "source_sha256": "f395c5de1c62f55fb23c6c564d3ffb249aad5ffca9dc3a2dbff9a31c0b6ba789",
+    "video_group": "3_tr9",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 38,
+    "timestamp_seconds": 1.52,
+    "image": "3_3_tr9_38.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 250,
+      "gray_mae": 8.481674194335938
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 133
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr9.mp4",
+    "source_sha256": "f395c5de1c62f55fb23c6c564d3ffb249aad5ffca9dc3a2dbff9a31c0b6ba789",
+    "video_group": "3_tr9",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 125,
+    "timestamp_seconds": 5.0,
+    "image": "3_3_tr9_125.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 325,
+      "gray_mae": 6.541280746459961
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 134
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr9.mp4",
+    "source_sha256": "f395c5de1c62f55fb23c6c564d3ffb249aad5ffca9dc3a2dbff9a31c0b6ba789",
+    "video_group": "3_tr9",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 212,
+    "timestamp_seconds": 8.48,
+    "image": "3_3_tr9_212.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 6.5196757316589355
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 135
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr1.mp4",
+    "source_sha256": "86f301485074d22fd1df5024ec53d1f293d40b2bcdc374fbeb20fbe38e468cb8",
+    "video_group": "7_tr1",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 38,
+    "timestamp_seconds": 1.5153598671259843,
+    "image": "7_7_tr1_38.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.410880088806152
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 136
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr1.mp4",
+    "source_sha256": "86f301485074d22fd1df5024ec53d1f293d40b2bcdc374fbeb20fbe38e468cb8",
+    "video_group": "7_tr1",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 126,
+    "timestamp_seconds": 5.024614296259843,
+    "image": "7_7_tr1_126.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.843171119689941
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 137
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr1.mp4",
+    "source_sha256": "86f301485074d22fd1df5024ec53d1f293d40b2bcdc374fbeb20fbe38e468cb8",
+    "video_group": "7_tr1",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 215,
+    "timestamp_seconds": 8.573746616633859,
+    "image": "7_7_tr1_215.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 425,
+      "gray_mae": 16.46797752380371
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 138
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr10.mp4",
+    "source_sha256": "a87fa8e3c8a04f4836b63ae7bda4752f63aef373573e6109530b44627f01fa0a",
+    "video_group": "7_tr10",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 19,
+    "timestamp_seconds": 0.7564554769101516,
+    "image": "7_7_tr10_19.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 11.264660835266113
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 139
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr10.mp4",
+    "source_sha256": "a87fa8e3c8a04f4836b63ae7bda4752f63aef373573e6109530b44627f01fa0a",
+    "video_group": "7_tr10",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 63,
+    "timestamp_seconds": 2.5082471076494497,
+    "image": "7_7_tr10_63.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 10.789545059204102
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 140
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr10.mp4",
+    "source_sha256": "a87fa8e3c8a04f4836b63ae7bda4752f63aef373573e6109530b44627f01fa0a",
+    "video_group": "7_tr10",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 107,
+    "timestamp_seconds": 4.260038738388748,
+    "image": "7_7_tr10_107.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.754436492919922
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 141
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr11.mp4",
+    "source_sha256": "e4961cbf455781e9ef17bde187c2a737f17a9686879db21f11cb2a5d027bd7e4",
+    "video_group": "7_tr11",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 15,
+    "timestamp_seconds": 0.5963809742647059,
+    "image": "7_7_tr11_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.802469253540039
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 142
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr11.mp4",
+    "source_sha256": "e4961cbf455781e9ef17bde187c2a737f17a9686879db21f11cb2a5d027bd7e4",
+    "video_group": "7_tr11",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 50,
+    "timestamp_seconds": 1.987936580882353,
+    "image": "7_7_tr11_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 15.442130088806152
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 143
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr11.mp4",
+    "source_sha256": "e4961cbf455781e9ef17bde187c2a737f17a9686879db21f11cb2a5d027bd7e4",
+    "video_group": "7_tr11",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 86,
+    "timestamp_seconds": 3.4192509191176472,
+    "image": "7_7_tr11_86.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 15.967206954956055
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 144
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr12.mp4",
+    "source_sha256": "4345d2c6368d720ffbf2419756117d28e63e6736c3ac8798d36cca1ea69df9dd",
+    "video_group": "7_tr12",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 15,
+    "timestamp_seconds": 0.6055295658682635,
+    "image": "7_7_tr12_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 17.208526611328125
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 145
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr12.mp4",
+    "source_sha256": "4345d2c6368d720ffbf2419756117d28e63e6736c3ac8798d36cca1ea69df9dd",
+    "video_group": "7_tr12",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 50,
+    "timestamp_seconds": 2.018431886227545,
+    "image": "7_7_tr12_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 16.7573299407959
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 146
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr12.mp4",
+    "source_sha256": "4345d2c6368d720ffbf2419756117d28e63e6736c3ac8798d36cca1ea69df9dd",
+    "video_group": "7_tr12",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 84,
+    "timestamp_seconds": 3.3909655688622755,
+    "image": "7_7_tr12_84.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 0,
+      "gray_mae": 16.780672073364258
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 147
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr13.mp4",
+    "source_sha256": "7afbb5e349cd01226055d50bee4353ca8edf1cc386728bd886d441b2daf2d757",
+    "video_group": "7_tr13",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 15,
+    "timestamp_seconds": 0.596792182960811,
+    "image": "7_7_tr13_15.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 17.134838104248047
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 148
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr13.mp4",
+    "source_sha256": "7afbb5e349cd01226055d50bee4353ca8edf1cc386728bd886d441b2daf2d757",
+    "video_group": "7_tr13",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 50,
+    "timestamp_seconds": 1.989307276536037,
+    "image": "7_7_tr13_50.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 16.681135177612305
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 149
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr13.mp4",
+    "source_sha256": "7afbb5e349cd01226055d50bee4353ca8edf1cc386728bd886d441b2daf2d757",
+    "video_group": "7_tr13",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 85,
+    "timestamp_seconds": 3.3818223701112626,
+    "image": "7_7_tr13_85.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 100,
+      "gray_mae": 17.020641326904297
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 150
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr14.mp4",
+    "source_sha256": "3f7d8f45a980c50228a04536c07d9a9c059286d796c95456c26010f00cb9ff3d",
+    "video_group": "7_tr14",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 14,
+    "timestamp_seconds": 0.5599529194898366,
+    "image": "7_7_tr14_14.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.830439567565918
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 151
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr14.mp4",
+    "source_sha256": "3f7d8f45a980c50228a04536c07d9a9c059286d796c95456c26010f00cb9ff3d",
+    "video_group": "7_tr14",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 48,
+    "timestamp_seconds": 1.9198385811080112,
+    "image": "7_7_tr14_48.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.100308418273926
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 152
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr14.mp4",
+    "source_sha256": "3f7d8f45a980c50228a04536c07d9a9c059286d796c95456c26010f00cb9ff3d",
+    "video_group": "7_tr14",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 81,
+    "timestamp_seconds": 3.239727605619769,
+    "image": "7_7_tr14_81.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.50173568725586
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 153
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr15.mp4",
+    "source_sha256": "c686dd4787b819a6ee259efd1722112e6509b4e1270cb7563e8587e15f62fdb3",
+    "video_group": "7_tr15",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 8,
+    "timestamp_seconds": 0.3254447115384615,
+    "image": "7_7_tr15_8.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 16.984952926635742
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 154
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr15.mp4",
+    "source_sha256": "c686dd4787b819a6ee259efd1722112e6509b4e1270cb7563e8587e15f62fdb3",
+    "video_group": "7_tr15",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 26,
+    "timestamp_seconds": 1.0576953125,
+    "image": "7_7_tr15_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 16.940778732299805
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 155
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr15.mp4",
+    "source_sha256": "c686dd4787b819a6ee259efd1722112e6509b4e1270cb7563e8587e15f62fdb3",
+    "video_group": "7_tr15",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 43,
+    "timestamp_seconds": 1.7492653245192307,
+    "image": "7_7_tr15_43.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 16.1875
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 156
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+    "video_group": "7_tr16",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 8,
+    "timestamp_seconds": 0.3248918269230769,
+    "image": "7_7_tr16_8.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 17.679977416992188
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 157
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+    "video_group": "7_tr16",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 26,
+    "timestamp_seconds": 1.0558984375,
+    "image": "7_7_tr16_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 17.19753074645996
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 158
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+    "video_group": "7_tr16",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 43,
+    "timestamp_seconds": 1.7462935697115383,
+    "image": "7_7_tr16_43.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 75,
+      "gray_mae": 16.472415924072266
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 159
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr17.mp4",
+    "source_sha256": "888f4c70c79ab271da5f797b49c08e74e768edd289f791217130745aa59f55b4",
+    "video_group": "7_tr17",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 45,
+    "timestamp_seconds": 1.794738127055921,
+    "image": "7_7_tr17_45.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.75501537322998
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 160
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr17.mp4",
+    "source_sha256": "888f4c70c79ab271da5f797b49c08e74e768edd289f791217130745aa59f55b4",
+    "video_group": "7_tr17",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 152,
+    "timestamp_seconds": 6.0622265625,
+    "image": "7_7_tr17_152.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.637731552124023
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 161
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr17.mp4",
+    "source_sha256": "888f4c70c79ab271da5f797b49c08e74e768edd289f791217130745aa59f55b4",
+    "video_group": "7_tr17",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 258,
+    "timestamp_seconds": 10.289831928453948,
+    "image": "7_7_tr17_258.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 12.112268447875977
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 162
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+    "video_group": "7_tr18",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 45,
+    "timestamp_seconds": 1.8050056912251655,
+    "image": "7_7_tr18_45.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 100,
+      "gray_mae": 16.66628074645996
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 163
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+    "video_group": "7_tr18",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 150,
+    "timestamp_seconds": 6.016685637417218,
+    "image": "7_7_tr18_150.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 9.703703880310059
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 164
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+    "video_group": "7_tr18",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 256,
+    "timestamp_seconds": 10.268476821192053,
+    "image": "7_7_tr18_256.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.611496925354004
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 165
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr19.mp4",
+    "source_sha256": "5e09d09102e9c5706c238378a12008fc41a8631103cde9fccfbd8f91879dcad6",
+    "video_group": "7_tr19",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 45,
+    "timestamp_seconds": 1.7953476562500001,
+    "image": "7_7_tr19_45.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 12.420717239379883
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 166
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr19.mp4",
+    "source_sha256": "5e09d09102e9c5706c238378a12008fc41a8631103cde9fccfbd8f91879dcad6",
+    "video_group": "7_tr19",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 150,
+    "timestamp_seconds": 5.984492187500001,
+    "image": "7_7_tr19_150.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 375,
+      "gray_mae": 9.578317642211914
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 167
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr19.mp4",
+    "source_sha256": "5e09d09102e9c5706c238378a12008fc41a8631103cde9fccfbd8f91879dcad6",
+    "video_group": "7_tr19",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 254,
+    "timestamp_seconds": 10.133740104166668,
+    "image": "7_7_tr19_254.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.691743850708008
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 168
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+    "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+    "video_group": "7_tr2",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 34,
+    "timestamp_seconds": 1.364322231359649,
+    "image": "7_7_tr2_34.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 13.777970314025879
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 169
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+    "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+    "video_group": "7_tr2",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 114,
+    "timestamp_seconds": 4.5744921875,
+    "image": "7_7_tr2_114.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 14.44116497039795
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 170
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+    "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+    "video_group": "7_tr2",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 193,
+    "timestamp_seconds": 7.744535019188596,
+    "image": "7_7_tr2_193.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 12.437113761901855
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 171
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+    "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+    "video_group": "7_tr20",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 42,
+    "timestamp_seconds": 1.68,
+    "image": "7_7_tr20_42.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.39428997039795
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 172
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+    "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+    "video_group": "7_tr20",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 140,
+    "timestamp_seconds": 5.6,
+    "image": "7_7_tr20_140.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.260802268981934
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 173
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+    "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+    "video_group": "7_tr20",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 238,
+    "timestamp_seconds": 9.52,
+    "image": "7_7_tr20_238.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.984953880310059
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 174
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr21.mp4",
+    "source_sha256": "47d81a3921fd446d7c09592b0368d1f5c1f644bd7c73634ef77dd42c37d58257",
+    "video_group": "7_tr21",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 42,
+    "timestamp_seconds": 1.6768363575268819,
+    "image": "7_7_tr21_42.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 13.480131149291992
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 175
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr21.mp4",
+    "source_sha256": "47d81a3921fd446d7c09592b0368d1f5c1f644bd7c73634ef77dd42c37d58257",
+    "video_group": "7_tr21",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 139,
+    "timestamp_seconds": 5.549529849910394,
+    "image": "7_7_tr21_139.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 325,
+      "gray_mae": 13.762924194335938
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 176
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr21.mp4",
+    "source_sha256": "47d81a3921fd446d7c09592b0368d1f5c1f644bd7c73634ef77dd42c37d58257",
+    "video_group": "7_tr21",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 236,
+    "timestamp_seconds": 9.422223342293908,
+    "image": "7_7_tr21_236.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.51253890991211
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 177
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr22.mp4",
+    "source_sha256": "314a3c0430703aadeb448674682f4ee73b6cc8b974067dff38fccf2eee78bb3f",
+    "video_group": "7_tr22",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 41,
+    "timestamp_seconds": 1.634783145680147,
+    "image": "7_7_tr22_41.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.857060432434082
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 178
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr22.mp4",
+    "source_sha256": "314a3c0430703aadeb448674682f4ee73b6cc8b974067dff38fccf2eee78bb3f",
+    "video_group": "7_tr22",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 136,
+    "timestamp_seconds": 5.4226953125,
+    "image": "7_7_tr22_136.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.09548568725586
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 179
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr22.mp4",
+    "source_sha256": "314a3c0430703aadeb448674682f4ee73b6cc8b974067dff38fccf2eee78bb3f",
+    "video_group": "7_tr22",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 230,
+    "timestamp_seconds": 9.170734719669117,
+    "image": "7_7_tr22_230.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.731095314025879
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 180
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr3.mp4",
+    "source_sha256": "4399e69036efcfa9fc8b65dff0cb1ebc06485d17f9a0a230928530609a0f1778",
+    "video_group": "7_tr3",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 34,
+    "timestamp_seconds": 1.3643412720264316,
+    "image": "7_7_tr3_34.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 125,
+      "gray_mae": 12.978395462036133
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 181
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr3.mp4",
+    "source_sha256": "4399e69036efcfa9fc8b65dff0cb1ebc06485d17f9a0a230928530609a0f1778",
+    "video_group": "7_tr3",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 113,
+    "timestamp_seconds": 4.534428345264317,
+    "image": "7_7_tr3_113.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 200,
+      "gray_mae": 11.536844253540039
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 182
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr3.mp4",
+    "source_sha256": "4399e69036efcfa9fc8b65dff0cb1ebc06485d17f9a0a230928530609a0f1778",
+    "video_group": "7_tr3",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 192,
+    "timestamp_seconds": 7.7045154185022025,
+    "image": "7_7_tr3_192.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 300,
+      "gray_mae": 9.60243034362793
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 183
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr4.mp4",
+    "source_sha256": "47deef759545ae785cf9e9c028f89b91bc665abf095c512e9a369ba51cf54696",
+    "video_group": "7_tr4",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 30,
+    "timestamp_seconds": 1.196243106617647,
+    "image": "7_7_tr4_30.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 15.098572731018066
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 184
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr4.mp4",
+    "source_sha256": "47deef759545ae785cf9e9c028f89b91bc665abf095c512e9a369ba51cf54696",
+    "video_group": "7_tr4",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 102,
+    "timestamp_seconds": 4.0672265625,
+    "image": "7_7_tr4_102.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 225,
+      "gray_mae": 15.509451866149902
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 185
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr4.mp4",
+    "source_sha256": "47deef759545ae785cf9e9c028f89b91bc665abf095c512e9a369ba51cf54696",
+    "video_group": "7_tr4",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 173,
+    "timestamp_seconds": 6.898335248161765,
+    "image": "7_7_tr4_173.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 15.663579940795898
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 186
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr5.mp4",
+    "source_sha256": "a0e7b25c2d584c818215e4190373f275c0159c165f57cab9636fda6245516990",
+    "video_group": "7_tr5",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 26,
+    "timestamp_seconds": 1.0457379943502825,
+    "image": "7_7_tr5_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.723958015441895
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 187
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr5.mp4",
+    "source_sha256": "a0e7b25c2d584c818215e4190373f275c0159c165f57cab9636fda6245516990",
+    "video_group": "7_tr5",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 88,
+    "timestamp_seconds": 3.5394209039548024,
+    "image": "7_7_tr5_88.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.079668045043945
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 188
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr5.mp4",
+    "source_sha256": "a0e7b25c2d584c818215e4190373f275c0159c165f57cab9636fda6245516990",
+    "video_group": "7_tr5",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 150,
+    "timestamp_seconds": 6.033103813559323,
+    "image": "7_7_tr5_150.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.203511238098145
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 189
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr6.mp4",
+    "source_sha256": "c3c42ab0447e618f126743380ef67cb2dbc8a5a8a563f4a58c911c4d2333d055",
+    "video_group": "7_tr6",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 26,
+    "timestamp_seconds": 1.0385310734463278,
+    "image": "7_7_tr6_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 16.287036895751953
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 190
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr6.mp4",
+    "source_sha256": "c3c42ab0447e618f126743380ef67cb2dbc8a5a8a563f4a58c911c4d2333d055",
+    "video_group": "7_tr6",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 88,
+    "timestamp_seconds": 3.5150282485875706,
+    "image": "7_7_tr6_88.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 15.901041984558105
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 191
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr6.mp4",
+    "source_sha256": "c3c42ab0447e618f126743380ef67cb2dbc8a5a8a563f4a58c911c4d2333d055",
+    "video_group": "7_tr6",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 150,
+    "timestamp_seconds": 5.991525423728814,
+    "image": "7_7_tr6_150.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 325,
+      "gray_mae": 16.622879028320312
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 192
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr7.mp4",
+    "source_sha256": "73047267384eb7d8a23a5c8f7597600dc645621d18f8e60a9aa4d634bf6dfd33",
+    "video_group": "7_tr7",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 26,
+    "timestamp_seconds": 1.0367313218390806,
+    "image": "7_7_tr7_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.958333015441895
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 193
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr7.mp4",
+    "source_sha256": "73047267384eb7d8a23a5c8f7597600dc645621d18f8e60a9aa4d634bf6dfd33",
+    "video_group": "7_tr7",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 86,
+    "timestamp_seconds": 3.4291882183908045,
+    "image": "7_7_tr7_86.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.344521522521973
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 194
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr7.mp4",
+    "source_sha256": "73047267384eb7d8a23a5c8f7597600dc645621d18f8e60a9aa4d634bf6dfd33",
+    "video_group": "7_tr7",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 147,
+    "timestamp_seconds": 5.861519396551724,
+    "image": "7_7_tr7_147.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.411072731018066
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 195
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr8.mp4",
+    "source_sha256": "71ddcb9be69afb38aaf592012502582dd74b6ba6e13219b13b063d8690946f6f",
+    "video_group": "7_tr8",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 23,
+    "timestamp_seconds": 0.9142570465686274,
+    "image": "7_7_tr8_23.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 250,
+      "gray_mae": 10.269097328186035
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 196
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr8.mp4",
+    "source_sha256": "71ddcb9be69afb38aaf592012502582dd74b6ba6e13219b13b063d8690946f6f",
+    "video_group": "7_tr8",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 76,
+    "timestamp_seconds": 3.0210232843137255,
+    "image": "7_7_tr8_76.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 9.517746925354004
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 197
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr8.mp4",
+    "source_sha256": "71ddcb9be69afb38aaf592012502582dd74b6ba6e13219b13b063d8690946f6f",
+    "video_group": "7_tr8",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 129,
+    "timestamp_seconds": 5.127789522058823,
+    "image": "7_7_tr8_129.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 9.096064567565918
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 198
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr9.mp4",
+    "source_sha256": "f10c52fe41ede3ee5cc717ec5bab9acb227bfa895e881937fdef7ab6c2d8e657",
+    "video_group": "7_tr9",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 22,
+    "timestamp_seconds": 0.8830312536307657,
+    "image": "7_7_tr9_22.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.021026611328125
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 199
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr9.mp4",
+    "source_sha256": "f10c52fe41ede3ee5cc717ec5bab9acb227bfa895e881937fdef7ab6c2d8e657",
+    "video_group": "7_tr9",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 75,
+    "timestamp_seconds": 3.0103338191957922,
+    "image": "7_7_tr9_75.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.304398536682129
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 200
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr9.mp4",
+    "source_sha256": "f10c52fe41ede3ee5cc717ec5bab9acb227bfa895e881937fdef7ab6c2d8e657",
+    "video_group": "7_tr9",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 128,
+    "timestamp_seconds": 5.137636384760818,
+    "image": "7_7_tr9_128.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.329475402832031
+    },
+    "training_eligible": false,
+    "status": "unlabelled_pending_visual_review_and_duplicate_check",
+    "candidate_id": 201
+  }
+]

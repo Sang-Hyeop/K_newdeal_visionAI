@@ -1,0 +1,982 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr2.mp4",
+    "source_sha256": "93fbd4851e4ec8b25467f899f9f4f4c7caf8ac6f0f7e95b9d08ce26ef03c4337",
+    "video_group": "3_tr2",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 150,
+    "timestamp_seconds": 6.0,
+    "image": "related_C32.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 11.018325805664062
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 32,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      100,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        385,
+        119,
+        617,
+        371
+      ],
+      [
+        0,
+        474,
+        173,
+        521,
+        279
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        270,
+        38,
+        734,
+        542
+      ],
+      [
+        0,
+        448,
+        146,
+        542,
+        358
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "95eb6a17571b455af078dae29e443d1a6f06fbf201ada87773ea0aa2bdc22898"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
+    "source_sha256": "666c64d82d8b85699dd4982da3ab8b338d5fdf9d4d1d0f47bb28d1ad2b0de692",
+    "video_group": "3_tr20",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 100,
+    "timestamp_seconds": 4.0,
+    "image": "related_C35.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 13.534143447875977
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 35,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      100,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        348,
+        108,
+        557,
+        345
+      ],
+      [
+        0,
+        416,
+        154,
+        463,
+        276
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        196,
+        16,
+        614,
+        490
+      ],
+      [
+        0,
+        332,
+        108,
+        426,
+        352
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "6134c7d188277aa06957a49ab9bc5740768e09a969daccf096ed2691a2142051"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
+    "source_sha256": "87938a21c72674bb5732a85399207d1b12ccb0bc72b4da6fd070542b6259e17d",
+    "video_group": "3_tr26",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 74,
+    "timestamp_seconds": 2.96,
+    "image": "related_C53.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 14.351273536682129
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 53,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      100,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        337,
+        133,
+        560,
+        394
+      ],
+      [
+        0,
+        391,
+        170,
+        441,
+        291
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        174,
+        66,
+        620,
+        588
+      ],
+      [
+        0,
+        282,
+        140,
+        382,
+        382
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "e2af4fed483db7955669826aabe7993b93295738bd12c16b12d3b41f2b9b56d1"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
+    "source_sha256": "846ebd111b4bfb69cf692c489023e40ddfe2e3b4e9fa100e6802beff9b16140a",
+    "video_group": "3_tr38",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "related_C92.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 9.445795059204102
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 92,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      65,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        302,
+        74,
+        496,
+        281
+      ],
+      [
+        0,
+        333,
+        117,
+        369,
+        177
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        104,
+        18,
+        492,
+        432
+      ],
+      [
+        0,
+        166,
+        104,
+        238,
+        224
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "5fd6b7f1b55c6b908d068b9a0849d9084a1315325d83f2bdf7062d31ba59e716"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
+    "source_sha256": "2020127242e62532028e5f2a4947d0611c97dd0b7f68b5c52e8fe813b07e0dbf",
+    "video_group": "3_tr45",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "related_C113.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 8.162423133850098
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 113,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      75,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        304,
+        85,
+        530,
+        296
+      ],
+      [
+        0,
+        342,
+        111,
+        381,
+        172
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        108,
+        20,
+        560,
+        442
+      ],
+      [
+        0,
+        184,
+        72,
+        262,
+        194
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "477fee63633e98252d68c47db602c776c757563e5ee04a99db8cd57d482b4fa8"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
+    "source_sha256": "22ff762fc6e4a01bef321b3403d63bd342c5e9adae054f2a98c1bed97761b8c0",
+    "video_group": "3_tr47",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 37,
+    "timestamp_seconds": 1.48,
+    "image": "related_C119.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 150,
+      "gray_mae": 9.657214164733887
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 119,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      80,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        324,
+        95,
+        575,
+        332
+      ],
+      [
+        0,
+        383,
+        122,
+        421,
+        208
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        148,
+        30,
+        650,
+        504
+      ],
+      [
+        0,
+        266,
+        84,
+        342,
+        256
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "71f4ee8307bfe65a7c1df81374b9d6825e92f28dd4a0ce94f789ec83ff5d3ecf"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
+    "source_sha256": "cb37dab2a913aa3fa1a8c002ddeda85a6558c35176c6223bbe355ba79034d84b",
+    "video_group": "3_tr6",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 137,
+    "timestamp_seconds": 5.48,
+    "image": "related_C128.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 14.663966178894043
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 128,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      100,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        331,
+        104,
+        530,
+        335
+      ],
+      [
+        0,
+        388,
+        145,
+        443,
+        247
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        162,
+        8,
+        560,
+        470
+      ],
+      [
+        0,
+        276,
+        90,
+        386,
+        294
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "a9adb52483bf09551d722e5ef5f1ef3b44773b65fa3e441378a6865ade3bd175"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+    "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+    "video_group": "7_tr2",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 114,
+    "timestamp_seconds": 4.5744921875,
+    "image": "related_C170.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 175,
+      "gray_mae": 14.44116497039795
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 170,
+    "split": "train",
+    "crop_xyxy_960": [
+      250,
+      90,
+      730,
+      540
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        351,
+        101,
+        561,
+        323
+      ],
+      [
+        0,
+        410,
+        144,
+        464,
+        246
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        202,
+        22,
+        622,
+        466
+      ],
+      [
+        0,
+        320,
+        108,
+        428,
+        312
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "0eb29556815f3714382a90336ade9e0f960ccc8847c931de6a31378b47988bf4"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+    "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+    "video_group": "3_tr18",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 112,
+    "timestamp_seconds": 4.48,
+    "image": "related_C26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 10.851273536682129
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 26,
+    "split": "train",
+    "crop_xyxy_960": [
+      150,
+      35,
+      325,
+      245
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        185,
+        60,
+        315,
+        230
+      ],
+      [
+        0,
+        205,
+        99,
+        240,
+        177
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        70,
+        50,
+        330,
+        390
+      ],
+      [
+        0,
+        110,
+        128,
+        180,
+        284
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "843cfe86f83e86a540b7e09dfa2daec3c02f6f87abbeb2f855171d2dd58c5eb4"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+    "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+    "video_group": "3_tr4",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 137,
+    "timestamp_seconds": 5.48,
+    "image": "related_C98.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 350,
+      "gray_mae": 10.87808609008789
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 98,
+    "split": "train",
+    "crop_xyxy_960": [
+      110,
+      10,
+      260,
+      200
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        149,
+        38,
+        252,
+        180
+      ],
+      [
+        0,
+        173,
+        77,
+        197,
+        136
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        78,
+        56,
+        284,
+        340
+      ],
+      [
+        0,
+        126,
+        134,
+        174,
+        252
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "cf84766b929ecfefa5828efd53f02fde980f88269a09defae76678d4fde54b61"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+    "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+    "video_group": "7_tr20",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 140,
+    "timestamp_seconds": 5.6,
+    "image": "related_C173.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 10.260802268981934
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 173,
+    "split": "train",
+    "crop_xyxy_960": [
+      70,
+      0,
+      210,
+      150
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        79,
+        9,
+        162,
+        117
+      ],
+      [
+        0,
+        120,
+        26,
+        142,
+        62
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        18,
+        18,
+        184,
+        234
+      ],
+      [
+        0,
+        100,
+        52,
+        144,
+        124
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "86727b8ce78e5d6152e4b2de806c1d77ecfb42d6b76871a57113ef94aad8e534"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
+    "source_sha256": "bd6c10654363213cf226784e4c77a12a09e6834e274c022f52447089e485c629",
+    "video_group": "3_tr22",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 87,
+    "timestamp_seconds": 3.48,
+    "image": "related_C41.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.992862701416016
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 41,
+    "split": "train",
+    "crop_xyxy_960": [
+      440,
+      150,
+      800,
+      430
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        556,
+        162,
+        788,
+        422
+      ],
+      [
+        0,
+        677,
+        219,
+        727,
+        326
+      ],
+      [
+        0,
+        782,
+        219,
+        832,
+        305
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        232,
+        24,
+        696,
+        544
+      ],
+      [
+        0,
+        474,
+        138,
+        574,
+        352
+      ],
+      [
+        0,
+        684,
+        138,
+        720,
+        310
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "cb55e03884b41d7e7c735be6b3b9fd90bbe8fc7a0f20fae20533fbf134503599"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
+    "source_sha256": "1a08e951af7bc7db26ec57b913a826b6bbc3f5e6f463d1d52ff3cca2dfe4e866",
+    "video_group": "3_tr30",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 62,
+    "timestamp_seconds": 2.48,
+    "image": "related_C68.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 14.537036895751953
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 68,
+    "split": "train",
+    "crop_xyxy_960": [
+      470,
+      135,
+      795,
+      420
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        550,
+        144,
+        790,
+        406
+      ],
+      [
+        0,
+        659,
+        204,
+        715,
+        311
+      ],
+      [
+        0,
+        783,
+        216,
+        832,
+        300
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        160,
+        18,
+        640,
+        542
+      ],
+      [
+        0,
+        378,
+        138,
+        490,
+        352
+      ],
+      [
+        0,
+        626,
+        162,
+        650,
+        330
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "59aa65a288ff2df97e78914a638bf46a9a5d1d19e8cb7f7fa0e23431e31737c3"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
+    "source_sha256": "5f98bdeb1ab1609bcd46af3b5ec176d8ad4c9a487e0849afe72848e7bb25d8fd",
+    "video_group": "3_tr36",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "related_C86.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 12.405092239379883
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 86,
+    "split": "train",
+    "crop_xyxy_960": [
+      480,
+      140,
+      785,
+      400
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        562,
+        145,
+        784,
+        369
+      ],
+      [
+        0,
+        669,
+        196,
+        727,
+        281
+      ],
+      [
+        0,
+        785,
+        216,
+        833,
+        306
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        164,
+        10,
+        608,
+        458
+      ],
+      [
+        0,
+        378,
+        112,
+        494,
+        282
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "1427a13bdc6e64508ae36d41923db80f67390d29a1c9b5447a791b3cb6974182"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+    "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+    "video_group": "3_tr40",
+    "class_folder": "3_carrying_overload_with_forklift",
+    "frame_index": 50,
+    "timestamp_seconds": 2.0,
+    "image": "related_C101.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 525,
+      "gray_mae": 6.02874231338501
+    },
+    "training_eligible": true,
+    "status": "visually_corrected_context_crop",
+    "candidate_id": 101,
+    "split": "train",
+    "crop_xyxy_960": [
+      110,
+      0,
+      220,
+      120
+    ],
+    "corrected_boxes_xyxy_960": [
+      [
+        1,
+        142,
+        3,
+        218,
+        104
+      ],
+      [
+        0,
+        178,
+        18,
+        207,
+        52
+      ]
+    ],
+    "visible_boxes_in_crop": [
+      [
+        1,
+        64,
+        6,
+        216,
+        208
+      ],
+      [
+        0,
+        136,
+        36,
+        194,
+        104
+      ]
+    ],
+    "split_group": "safe_unsafe_factory_camera_adaptation_train_only",
+    "review_method": "visual inspection of annotated full frame; corrected body/cargo boundary, driver, known visible seated worker; ambiguous background excluded by crop",
+    "source_frame_image_sha256": "7fb8721decbad82f3da483f28f6c581ac4a53d8150ef61ff4f1214fe611a7bc4"
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000002.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000002.json",
+    "class_folder": "helmet_worn",
+    "boxes_xyxy": [
+      [
+        0,
+        1497.66,
+        351.33,
+        1534.8185292718738,
+        380.8144851831172
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-30_001",
+    "source_image_sha256": "b26e8210afd16d5ac3e4aa7a4ff97f4d37a693c649c4cfb3bdc86b00ce79731c",
+    "training_eligible": true,
+    "split": "train",
+    "review": "head context crops; excluded two strongly image-edge-clipped helmet examples; original missing class 0 remapped to own class 1"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_000008.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_000008.json",
+    "class_folder": "helmet_worn",
+    "boxes_xyxy": [
+      [
+        0,
+        942.8796844181461,
+        337.0890735551702,
+        1000.2582033351265,
+        466.9079726048385
+      ],
+      [
+        0,
+        794.609507301815,
+        139.1844238623203,
+        905.4317335086567,
+        264.5339081861636
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-35_001",
+    "source_image_sha256": "399f02e8130abdada70d151d264dc4784f47bffc3e7890f7555adfd2f70ed05d",
+    "training_eligible": true,
+    "split": "train",
+    "review": "head context crops; excluded two strongly image-edge-clipped helmet examples; original missing class 0 remapped to own class 1"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000085.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000085.json",
+    "class_folder": "helmet_missing",
+    "boxes_xyxy": [
+      [
+        1,
+        1647.3985223727282,
+        462.6999999999986,
+        1756.6097820503928,
+        555.4163353187749
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "group": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+    "source_image_sha256": "0fc74c3a32a0ed164c5cba07fa8b2d29bfa268d4052b6d5b1ff658b9f186b09b",
+    "training_eligible": true,
+    "split": "train",
+    "review": "head context crops; excluded two strongly image-edge-clipped helmet examples; original missing class 0 remapped to own class 1"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-20_001_000001.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-20_001_000001.json",
+    "class_folder": "helmet_missing",
+    "boxes_xyxy": [
+      [
+        1,
+        1048.42,
+        51.56,
+        1174.428290136885,
+        192.36699021477352
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-20_001",
+    "source_image_sha256": "3aa9b823c9585606174106a91e818b8a5acb5bc3fda9cdccedf5a28a116cbe56",
+    "training_eligible": true,
+    "split": "train",
+    "review": "head context crops; excluded two strongly image-edge-clipped helmet examples; original missing class 0 remapped to own class 1"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000006.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000006.json",
+    "class_folder": "helmet_missing",
+    "boxes_xyxy": [
+      [
+        1,
+        195.643607207763,
+        0.3868911478427,
+        424.799955234839,
+        163.7158105380077
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-23_001",
+    "source_image_sha256": "3aa719ffaff55f6fd9315b2c210b3e3695d7ffe0b831e7c8d6b1f9a4a06549d4",
+    "training_eligible": true,
+    "split": "train",
+    "review": "head context crops; excluded two strongly image-edge-clipped helmet examples; original missing class 0 remapped to own class 1"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_000002.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_000002.json",
+    "class_folder": "helmet_missing",
+    "boxes_xyxy": [
+      [
+        1,
+        1124.2800000000002,
+        233.829999999999,
+        1232.6975369545614,
+        362.11707036377607
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-30_001",
+    "source_image_sha256": "e915488a7a730014ef3f493abad14d9014f7f186d46a1752e3bdedd5d8236954",
+    "training_eligible": true,
+    "split": "train",
+    "review": "head context crops; excluded two strongly image-edge-clipped helmet examples; original missing class 0 remapped to own class 1"
+  }
+]

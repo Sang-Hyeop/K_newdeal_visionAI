@@ -1,0 +1,20 @@
+{
+  "status": "selected_for_demo_adaptation_only",
+  "not_independent_site_accuracy": true,
+  "replaces_selected_development_detector": false,
+  "baseline_weights": "models/pilot_v16_related/person_forklift.pt",
+  "baseline_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "supplement_weights": "models/demo_object_adaptation_v1/best.pt",
+  "supplement_sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+  "routing": "preserve_baseline_high_025_supplement_iou_05_v1",
+  "evidence_report": "outputs/diagnostics/demo_object_recall_bundle_v1/report.json",
+  "sample_videos": {
+    "forward": "outputs/diagnostics/demo_object_recall_bundle_v1/forward/proximity.mp4",
+    "reverse": "outputs/diagnostics/demo_object_recall_bundle_v1/reverse/proximity.mp4"
+  },
+  "decision": "Use v16 alone as default development detector. For reverse-occlusion demo proximity, run v16 + demo adaptation supplement so established boxes survive and missing proposals are filled.",
+  "solo_adaptation_rejected_because": "Demo-adapted best/last alone improved reverse 8/8 tracking but increased fixed-set forklift FN (2→5).",
+  "ppe_default_unchanged": true,
+  "ppe_demo_candidate": "models/demo_ppe_adaptation_v1/ppe.pt",
+  "ppe_demo_candidate_status": "experimental_not_promoted; helmet recall regressed when used alone"
+}

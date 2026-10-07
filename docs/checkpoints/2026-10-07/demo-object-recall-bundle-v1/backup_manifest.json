@@ -1,0 +1,92 @@
+[
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/args.yaml",
+    "bytes": 1861,
+    "sha256": "5f85eba8dbdebb97ba314252619af86250cca415f3748ef9245b5a8c8a7183c7"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/best.pt",
+    "bytes": 5358789,
+    "sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/bundle_dense.json",
+    "bytes": 66996,
+    "sha256": "3631bdc7857ac9dc1ae45d74d9fb3f9eca582f3296055674d9b109d427aaed43"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/bundle_fixed_and_target.json",
+    "bytes": 17232,
+    "sha256": "5e566d7c9ae790981acbc734b2010cbb4a2208f581d81df9d562d1d5cf6f2c79"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/dataset_snapshot.json",
+    "bytes": 191795,
+    "sha256": "463c31bd989d641eda178640d8ee00c81ed84eab2a2b23ff842a683c42906133"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/dense_video.mp4",
+    "bytes": 2484275,
+    "sha256": "d690004619d1bf757415090cef17e07801608a462e5875f1d304a4317b7ad166"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/forward_video.mp4",
+    "bytes": 7116575,
+    "sha256": "90a6acfccf07d5ddc5d870e6ce0c65c68209b17b49cc974d50ba33d8f8a1ecf4"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/input_integrity_verification.json",
+    "bytes": 364,
+    "sha256": "ecf79e590a42357c38570fd5df238d5490e466ea5fc182812fe2f858d8716552"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/last.pt",
+    "bytes": 5358789,
+    "sha256": "282d1b0a3f72b9097205f0b28ca5268279eb16f5b732705996582df643f5ffa9"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/results.csv",
+    "bytes": 1156,
+    "sha256": "413130df7dcbfb4de74339a8d5cf109778ed9534ae540e231a97449edb0b8591"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/reverse_video.mp4",
+    "bytes": 13949059,
+    "sha256": "b42c1763403231486cb30e1994318152171f8ea193c4a15f2df0312231cc4f0e"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/single_best.json",
+    "bytes": 17035,
+    "sha256": "c9911e9d700e9eb31bfd3a9a2e302950597c2da52305a25689eb7217c8c619ed"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/single_last.json",
+    "bytes": 17027,
+    "sha256": "c71941c21b794fe351590aef6609c5abc3fe4a1dfda5953be161bf21d83eeb01"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/test_metrics.json",
+    "bytes": 775,
+    "sha256": "53df8aa684a55ab818a940c89b9ff63a4e0b873f6b06155438bf3102099b0b2a"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/training_complete.json",
+    "bytes": 1391,
+    "sha256": "b27899b406fbd3e08d0ca423861b573c29887f6ff7140e253d53f16c2f1a254f"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/zone_recall_review.json",
+    "bytes": 42934,
+    "sha256": "d8132bde051e6c323ea6ed77ddf5c6488339ac15931e9d3bac32197ae75e459a"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/zone_summary.json",
+    "bytes": 3022,
+    "sha256": "614427c184274b38c9ca5aaed893f21f7aefece3c3175ff07daeb332d8fb4b00"
+  },
+  {
+    "path": "outputs/checkpoints/demo_object_adaptation_v1_final/zone_video.mp4",
+    "bytes": 13974987,
+    "sha256": "4326c5024e1a4cc16aaf3a87be1d656d0a1dcdc6881ee66c8f4610236ded33e5"
+  }
+]

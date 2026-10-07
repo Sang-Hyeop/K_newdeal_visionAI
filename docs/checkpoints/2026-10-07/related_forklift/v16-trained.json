@@ -1,0 +1,27 @@
+{
+  "status": "selected_development_detector",
+  "epochs_completed": 10,
+  "best_epoch": 6,
+  "best_val_map50_95": 0.7224,
+  "weights": [
+    {
+      "model": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_completed10/person_forklift.pt",
+      "sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "bytes": 5359045
+    },
+    {
+      "model": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/last_epoch10.pt",
+      "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/v16_completed10/last_epoch10.pt",
+      "sha256": "7c2f3dfc8497b42b81be9326d4c7ab232a297ea9dcf774969932aba9e5eda1b0",
+      "bytes": 5359045
+    }
+  ],
+  "selected_model_unchanged": false,
+  "new_unique_source_frames": 15,
+  "train": 466,
+  "val": 82,
+  "test": 40,
+  "demo_training": 0,
+  "previous_model_preserved": true
+}

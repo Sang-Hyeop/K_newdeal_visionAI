@@ -87,16 +87,18 @@
   },
   {
     "file": "7_Logistics Warehouse.mp4",
-    "fps": 23.999999019607884,
-    "frames": 6528,
-    "seconds": 272.0000111111111,
+    "fps": 24.0,
+    "frames": 4349,
+    "seconds": 181.20833333333334,
     "resolution": [
       1280,
       720
     ],
-    "sha256": "772f409b8e001559238cdee38cbb6094c55695076bd018ca1886e0febaaa6d18",
+    "sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
     "training_eligible": false,
     "purpose": "demo_and_development_validation",
-    "size_bytes": 26893515
+    "size_bytes": 21890089,
+    "previously_registered_sha256": "772f409b8e001559238cdee38cbb6094c55695076bd018ca1886e0febaaa6d18",
+    "metadata_update_note": "Shortened to ~3:01 and recompressed with x264 CRF23; previous upload was 272s / ~26.9 MiB"
   }
 ]

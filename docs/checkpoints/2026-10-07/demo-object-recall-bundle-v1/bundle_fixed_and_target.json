@@ -1,0 +1,548 @@
+{
+  "baseline_weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+  "baseline_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_object_adaptation_v1/best.pt",
+  "weights_sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+  "checks": {
+    "vehicle_detected_8_of_8": true,
+    "vehicle_tracked_8_of_8": true,
+    "worker_tracked_8_of_8": true,
+    "same_real_vehicle_id": true,
+    "scaled_person_misses_not_worse": true,
+    "scaled_forklift_misses_not_worse": true,
+    "old_person_misses_not_worse": true,
+    "old_forklift_misses_not_worse": true
+  },
+  "demo_target_pass": true,
+  "all_checks_pass": true,
+  "target": [
+    {
+      "frame_index": 310,
+      "timestamp_seconds": 12.4,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.8615115222553131,
+      "vehicle_confidence": 0.9291719198226929,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 12.4,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            469.4642028808594,
+            134.34690856933594,
+            518.428955078125,
+            294.18780517578125
+          ],
+          "forklift_bbox_xyxy": [
+            209.68638610839844,
+            81.93658447265625,
+            411.9057312011719,
+            364.84490966796875
+          ],
+          "person_anchor_xy": [
+            493.9465789794922,
+            294.18780517578125
+          ],
+          "forklift_ground_proxy_xyxy": [
+            209.68638610839844,
+            322.4086608886719,
+            411.9057312011719,
+            364.84490966796875
+          ],
+          "nearest_vehicle_point_xy": [
+            411.9057312011719,
+            322.4086608886719
+          ],
+          "image_gap_pixels": 86.7589615045807,
+          "normalized_image_gap": 0.5427832510111326,
+          "image_gap_closing_rate": -0.5302414226346011,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 315,
+      "timestamp_seconds": 12.6,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.8834363324269637,
+      "vehicle_confidence": 0.9400091767311096,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 12.6,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            464.8695373535156,
+            132.8222198486328,
+            515.7008666992188,
+            288.72894287109375
+          ],
+          "forklift_bbox_xyxy": [
+            201.80804443359375,
+            86.66011047363281,
+            406.9693908691406,
+            364.2823791503906
+          ],
+          "person_anchor_xy": [
+            490.2852020263672,
+            288.72894287109375
+          ],
+          "forklift_ground_proxy_xyxy": [
+            201.80804443359375,
+            322.63903884887696,
+            406.9693908691406,
+            364.2823791503906
+          ],
+          "nearest_vehicle_point_xy": [
+            406.9693908691406,
+            322.63903884887696
+          ],
+          "image_gap_pixels": 89.95231513423714,
+          "normalized_image_gap": 0.5769623874480257,
+          "image_gap_closing_rate": -0.17089568218446655,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 320,
+      "timestamp_seconds": 12.8,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.9351050002340727,
+      "vehicle_confidence": 0.9371414184570312,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 12.8,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            461.2361755371094,
+            137.89210510253906,
+            512.5375366210938,
+            288.7464294433594
+          ],
+          "forklift_bbox_xyxy": [
+            196.7699432373047,
+            85.77195739746094,
+            385.7804260253906,
+            353.2354736328125
+          ],
+          "person_anchor_xy": [
+            486.88685607910156,
+            288.7464294433594
+          ],
+          "forklift_ground_proxy_xyxy": [
+            196.7699432373047,
+            313.11594619750974,
+            385.7804260253906,
+            353.2354736328125
+          ],
+          "nearest_vehicle_point_xy": [
+            385.7804260253906,
+            313.11594619750974
+          ],
+          "image_gap_pixels": 104.00184395017598,
+          "normalized_image_gap": 0.6894190432036139,
+          "image_gap_closing_rate": -0.5622832787779378,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 325,
+      "timestamp_seconds": 13.0,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.9682831625836206,
+      "vehicle_confidence": 0.9352689981460571,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 13.0,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            455.4134216308594,
+            139.3846893310547,
+            508.7945251464844,
+            296.0517272949219
+          ],
+          "forklift_bbox_xyxy": [
+            190.15635681152344,
+            84.7291259765625,
+            379.3319396972656,
+            347.9046936035156
+          ],
+          "person_anchor_xy": [
+            482.1039733886719,
+            296.0517272949219
+          ],
+          "forklift_ground_proxy_xyxy": [
+            190.15635681152344,
+            308.42835845947263,
+            379.3319396972656,
+            347.9046936035156
+          ],
+          "nearest_vehicle_point_xy": [
+            379.3319396972656,
+            308.42835845947263
+          ],
+          "image_gap_pixels": 103.51459756020341,
+          "normalized_image_gap": 0.6607299078704574,
+          "image_gap_closing_rate": 0.14344567666578317,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 330,
+      "timestamp_seconds": 13.2,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.968683852318914,
+      "vehicle_confidence": 0.9041869640350342,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 13.2,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            445.3964538574219,
+            137.40939331054688,
+            497.9832458496094,
+            293.6375732421875
+          ],
+          "forklift_bbox_xyxy": [
+            184.09918212890625,
+            91.21458435058594,
+            362.5918884277344,
+            340.4939880371094
+          ],
+          "person_anchor_xy": [
+            471.6898498535156,
+            293.6375732421875
+          ],
+          "forklift_ground_proxy_xyxy": [
+            184.09918212890625,
+            303.10207748413086,
+            362.5918884277344,
+            340.4939880371094
+          ],
+          "nearest_vehicle_point_xy": [
+            362.5918884277344,
+            303.10207748413086
+          ],
+          "image_gap_pixels": 109.50772588181628,
+          "normalized_image_gap": 0.700947331843286,
+          "image_gap_closing_rate": -0.20108711986414357,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 335,
+      "timestamp_seconds": 13.4,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.8857022982882669,
+      "vehicle_confidence": 0.9532899260520935,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 13.4,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            437.2550354003906,
+            136.57896423339844,
+            494.3753356933594,
+            292.71417236328125
+          ],
+          "forklift_bbox_xyxy": [
+            176.52383422851562,
+            78.10933685302734,
+            343.629638671875,
+            334.5033874511719
+          ],
+          "person_anchor_xy": [
+            465.815185546875,
+            292.71417236328125
+          ],
+          "forklift_ground_proxy_xyxy": [
+            176.52383422851562,
+            296.0442798614502,
+            343.629638671875,
+            334.5033874511719
+          ],
+          "nearest_vehicle_point_xy": [
+            343.629638671875,
+            296.0442798614502
+          ],
+          "image_gap_pixels": 122.23091867891766,
+          "normalized_image_gap": 0.7828530165805941,
+          "image_gap_closing_rate": -0.4095284236865388,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 340,
+      "timestamp_seconds": 13.6,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.8805948556323566,
+      "vehicle_confidence": 0.9658781290054321,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 13.6,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            432.7542419433594,
+            136.5855712890625,
+            495.7275085449219,
+            294.98223876953125
+          ],
+          "forklift_bbox_xyxy": [
+            174.01524353027344,
+            83.82540893554688,
+            338.0032958984375,
+            329.5607604980469
+          ],
+          "person_anchor_xy": [
+            464.2408752441406,
+            294.98223876953125
+          ],
+          "forklift_ground_proxy_xyxy": [
+            174.01524353027344,
+            292.70045776367186,
+            338.0032958984375,
+            329.5607604980469
+          ],
+          "nearest_vehicle_point_xy": [
+            338.0032958984375,
+            294.98223876953125
+          ],
+          "image_gap_pixels": 126.23757934570312,
+          "normalized_image_gap": 0.7969711822457942,
+          "image_gap_closing_rate": -0.07059082832600064,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "frame_index": 345,
+      "timestamp_seconds": 13.8,
+      "vehicle_detected": true,
+      "vehicle_detection_iou": 0.8207907955360726,
+      "vehicle_confidence": 0.9721802473068237,
+      "vehicle_tracked": true,
+      "vehicle_track_id": "F0:3",
+      "worker_tracked": true,
+      "worker_track_id": "P0:29",
+      "matched_actual_pair_events": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:29",
+          "forklift_track_id": "F0:3",
+          "timestamp_seconds": 13.8,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "person_bbox_xyxy": [
+            425.90216064453125,
+            134.21571350097656,
+            485.16424560546875,
+            297.008544921875
+          ],
+          "forklift_bbox_xyxy": [
+            169.93679809570312,
+            79.88566589355469,
+            323.807373046875,
+            325.2767028808594
+          ],
+          "person_anchor_xy": [
+            455.533203125,
+            297.008544921875
+          ],
+          "forklift_ground_proxy_xyxy": [
+            169.93679809570312,
+            288.46804733276366,
+            323.807373046875,
+            325.2767028808594
+          ],
+          "nearest_vehicle_point_xy": [
+            323.807373046875,
+            297.008544921875
+          ],
+          "image_gap_pixels": 131.725830078125,
+          "normalized_image_gap": 0.809162350260681,
+          "image_gap_closing_rate": -0.06095584007443334,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    }
+  ],
+  "fixed_tests": {
+    "scaled": {
+      "person": {
+        "TP": 38,
+        "FP": 11,
+        "FN": 2,
+        "precision": 0.7755102040816326,
+        "recall": 0.95
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 8,
+        "FN": 2,
+        "precision": 0.8260869565217391,
+        "recall": 0.95
+      }
+    },
+    "old": {
+      "person": {
+        "TP": 16,
+        "FP": 2,
+        "FN": 2,
+        "precision": 0.8888888888888888,
+        "recall": 0.8888888888888888
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 1,
+        "FN": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1.0
+      }
+    }
+  },
+  "baseline_fixed_tests": {
+    "scaled": {
+      "person": {
+        "TP": 36,
+        "FP": 9,
+        "FN": 4,
+        "precision": 0.8,
+        "recall": 0.9
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 7,
+        "FN": 2,
+        "precision": 0.8444444444444444,
+        "recall": 0.95
+      }
+    },
+    "old": {
+      "person": {
+        "TP": 13,
+        "FP": 1,
+        "FN": 5,
+        "precision": 0.9285714285714286,
+        "recall": 0.7222222222222222
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 1,
+        "FN": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1.0
+      }
+    }
+  },
+  "demo_target_training_exposed": true,
+  "independent_site_accuracy_claim": false,
+  "model_promoted": false,
+  "proximity_thresholds_changed": false
+}

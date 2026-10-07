@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v16/\uac80\uc218\ud55c_15\uac1c_\uc7a5\uba74.jpg",
+    "bytes": 650456,
+    "sha256": "874c628a850f8ac9c600bf1e2411f1718b57cd616afcdd2de52220e30066bb38"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v16/\ud6c4\uc9c4_\ub204\ub77d_\ube44\uad50.jpg",
+    "bytes": 894889,
+    "sha256": "07e7cb564f4d443997164b7a4489d02c377c4a94696a5a9f8f9395d00c1cb420"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v16/person_forklift_v16.pt",
+    "bytes": 5359045,
+    "sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v16/\ud6c4\uc9c4_\uac80\uc99d.mp4",
+    "bytes": 13536148,
+    "sha256": "53256e262adeab7e8bafc005bb2ae3d455280bddfee14c38af1f8b91eb665c96"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-06/new-chat/outputs/related-forklift-v16/\uc804\uc9c4_\uac80\uc99d.mp4",
+    "bytes": 6987774,
+    "sha256": "2e7ce929907a4332dc5c3c0187d1deabd092af1f3046064c544cc8d656d37de6"
+  }
+]

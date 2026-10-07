@@ -1,0 +1,67 @@
+[
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/args.yaml",
+    "bytes": 1837,
+    "sha256": "5234c3f300c83c84abb829497927ce6d9fb6e9fa93d71b326764c2b661071e19"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/best.pt",
+    "bytes": 5382533,
+    "sha256": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/dataset_snapshot.json",
+    "bytes": 31067,
+    "sha256": "c84c0de11cdc37a4619f868638d0b2a95e3de1dc1433056b2f041121af5954da"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/ensemble5_summary.json",
+    "bytes": 4095,
+    "sha256": "139e3bfcd49ab37d6ff2c424e04c9434060cdf71da5e9f93a11f5af3c6058b3f"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/ensemble6_summary.json",
+    "bytes": 3381,
+    "sha256": "e7eb89d571abf7fb7ab736983e098231ce4513aecd07f4c43a0f89f434eb527c"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/fullbody5_summary.json",
+    "bytes": 3945,
+    "sha256": "e1a92fe73b4a444156b18d91dd94afb675459716d50db33028545e701d692ce6"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/fullbody6_summary.json",
+    "bytes": 3201,
+    "sha256": "4b0c1528af679b048ac39b9c29a316993d38c94fd68ba6b9638b279e72e2be94"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/last.pt",
+    "bytes": 5382533,
+    "sha256": "5d0a4a37284d0ed74af1faad537cbfd3fad24ccc4c2db0a796cf4c9ce018dedd"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/ppe5_summary.json",
+    "bytes": 3837,
+    "sha256": "c8e9cdc199bfdb013c9838263724c3943fef1e6db8b1451a99877f65ffba2baf"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/ppe6_summary.json",
+    "bytes": 3092,
+    "sha256": "3d76c13e084fb07abc78e6983147efbff36838ee39bb99964343a1b0b8a73a99"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/report.json",
+    "bytes": 28991,
+    "sha256": "d69cabc3adc79dff482d91a95d283559a1294c25ddec8b067129ae2c13dbd1bf"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/results.csv",
+    "bytes": 1173,
+    "sha256": "e83be33f455e3cc8ba393688df808596e9161117b4b7d0f71bee8c1a3da207cd"
+  },
+  {
+    "path": "outputs/checkpoints/demo_ppe_adaptation_v1_final/test_metrics.json",
+    "bytes": 795,
+    "sha256": "21c496c3ce7171b4e433a4e5608ce90c03dd7d49a44e28b94b963cf27f0d855b"
+  }
+]

@@ -1,0 +1,176 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+    "video_group": "7_tr16",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 8,
+    "timestamp_seconds": 0.3248918269230769,
+    "image": "7_7_tr16_8.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 500,
+      "gray_mae": 17.679977416992188
+    },
+    "training_eligible": false,
+    "status": "manually_reviewed_target_vehicle_only",
+    "candidate_id": 157,
+    "target_forklift_xyxy_960": [
+      482,
+      194,
+      696,
+      540
+    ],
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_frame_image_sha256": "0740f4f2fdcf892955e329a2fcc9618d9af1d317f999bf25a7bd23679b3fdbee"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+    "video_group": "7_tr16",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 26,
+    "timestamp_seconds": 1.0558984375,
+    "image": "7_7_tr16_26.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 17.19753074645996
+    },
+    "training_eligible": false,
+    "status": "manually_reviewed_target_vehicle_only",
+    "candidate_id": 158,
+    "target_forklift_xyxy_960": [
+      488,
+      185,
+      690,
+      537
+    ],
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_frame_image_sha256": "80e35d9d7b3b39480f9341db3ffc484d315236b83bc17ef82a2d822e2ad03f9d"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+    "video_group": "7_tr16",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 43,
+    "timestamp_seconds": 1.7462935697115383,
+    "image": "7_7_tr16_43.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 75,
+      "gray_mae": 16.472415924072266
+    },
+    "training_eligible": false,
+    "status": "manually_reviewed_target_vehicle_only",
+    "candidate_id": 159,
+    "target_forklift_xyxy_960": [
+      497,
+      158,
+      683,
+      518
+    ],
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_frame_image_sha256": "a634544593697f8882f175ff6ba195457155d92fbd85cf5b712f25c1d2e77d27"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+    "video_group": "7_tr18",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 45,
+    "timestamp_seconds": 1.8050056912251655,
+    "image": "7_7_tr18_45.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 100,
+      "gray_mae": 16.66628074645996
+    },
+    "training_eligible": false,
+    "status": "manually_reviewed_target_vehicle_only",
+    "candidate_id": 163,
+    "target_forklift_xyxy_960": [
+      451,
+      131,
+      746,
+      399
+    ],
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_frame_image_sha256": "fb7fcd38d0286dbe54f53570c732b50a7b89b7d2aa15067c0a3788f15c12cf12"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+    "video_group": "7_tr18",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 150,
+    "timestamp_seconds": 6.016685637417218,
+    "image": "7_7_tr18_150.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 275,
+      "gray_mae": 9.703703880310059
+    },
+    "training_eligible": false,
+    "status": "manually_reviewed_target_vehicle_only",
+    "candidate_id": 164,
+    "target_forklift_xyxy_960": [
+      148,
+      45,
+      279,
+      199
+    ],
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_frame_image_sha256": "b8883ab14bc8be114203d4010378637811c104743b13b7e3cc34995c12e07dfa"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+    "video_group": "7_tr18",
+    "class_folder": "7_safe_carrying",
+    "frame_index": 256,
+    "timestamp_seconds": 10.268476821192053,
+    "image": "7_7_tr18_256.jpg",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "closest_demo": {
+      "source": "2_forklift_back.mp4",
+      "frame_index": 400,
+      "gray_mae": 9.611496925354004
+    },
+    "training_eligible": false,
+    "status": "manually_reviewed_target_vehicle_only",
+    "candidate_id": 165,
+    "target_forklift_xyxy_960": [
+      57,
+      15,
+      135,
+      119
+    ],
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_frame_image_sha256": "3d43843938ee3f5ead39cda2bbd4dfd01aa986e53839e56eb72efd69663f2b69"
+  }
+]
