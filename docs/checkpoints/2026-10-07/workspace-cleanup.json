@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-07",
+  "inventory_scope": "All filesystem entries inventoried excluding .git internals; project text read. Images/videos/weights are inventoried, not content-reviewed.",
+  "files_before": 28231,
+  "project_text_files_read": 432,
+  "directory_totals_before": {
+    ".DS_Store": {
+      "files": 1,
+      "bytes": 14340
+    },
+    "requirements.txt": {
+      "files": 1,
+      "bytes": 96
+    },
+    "README.md": {
+      "files": 1,
+      "bytes": 2285
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 522
+    },
+    "AGENTS.md": {
+      "files": 1,
+      "bytes": 1046
+    },
+    ".cursor": {
+      "files": 2,
+      "bytes": 1476
+    },
+    "_local_archive": {
+      "files": 284,
+      "bytes": 437213073
+    },
+    "tests": {
+      "files": 38,
+      "bytes": 183748
+    },
+    "models": {
+      "files": 44,
+      "bytes": 139838854
+    },
+    "docs": {
+      "files": 301,
+      "bytes": 3126421
+    },
+    "configs": {
+      "files": 45,
+      "bytes": 608068
+    },
+    "scripts": {
+      "files": 133,
+      "bytes": 921535
+    },
+    ".github": {
+      "files": 1,
+      "bytes": 89
+    },
+    "data": {
+      "files": 24055,
+      "bytes": 5618492541
+    },
+    "outputs": {
+      "files": 3275,
+      "bytes": 4038443812
+    },
+    "src": {
+      "files": 48,
+      "bytes": 216805
+    }
+  },
+  "document_moves": [
+    {
+      "from": "docs/pilot-training.md",
+      "to": "docs/history/training/pilot-training.md",
+      "sha256": "47989e50a0b03059626da065ab5bfc05a299bf5dddc40c1f6e2156b737f0ac08"
+    },
+    {
+      "from": "docs/corrected-forklift-training.md",
+      "to": "docs/history/training/corrected-forklift-training.md",
+      "sha256": "6755da0ea608c440b68282b6deb6221c6524b8e69be9a3525dcf857dc0be6f59"
+    },
+    {
+      "from": "docs/v15-completed20.md",
+      "to": "docs/history/training/v15-completed20.md",
+      "sha256": "972ce94a4777c18b8d05b509dcb8eaf365e3f9786499be17cf506189eac1fa76"
+    },
+    {
+      "from": "docs/v15-validation-progress.md",
+      "to": "docs/history/training/v15-validation-progress.md",
+      "sha256": "f793015fdda8c1f5bd0499e77ea450285eeb9f36d599d1e170eff65d88ab6208"
+    },
+    {
+      "from": "docs/data-expansion-v3.md",
+      "to": "docs/history/training/data-expansion-v3.md",
+      "sha256": "fa1f2f4321d342c7b086a3df20446bbb8af2ff78080af290108bd5da58b634d0"
+    },
+    {
+      "from": "docs/scaled-data-checkpoint.md",
+      "to": "docs/history/training/scaled-data-checkpoint.md",
+      "sha256": "25c381e4c1b37f7a72fe73e8ff1288f02f4ba29c43c2544c79c348b82b0f8a96"
+    },
+    {
+      "from": "docs/full-scene-training.md",
+      "to": "docs/history/training/full-scene-training.md",
+      "sha256": "4f22ca09fd298b095ca192c58b1b1eac9bf56539e83ac28f6ff73233385d5ee0"
+    },
+    {
+      "from": "docs/small-worker-review.md",
+      "to": "docs/history/training/small-worker-review.md",
+      "sha256": "923e5496b7fc27a89b1fb58658eb9b085d4440e8b02f153da09f0a7188e33f27"
+    },
+    {
+      "from": "docs/targeted-forklift-v17.md",
+      "to": "docs/history/training/targeted-forklift-v17.md",
+      "sha256": "7728a13c8036d1ad839dd7c05b271b5813665ef6e180bd7936cbf10b02f28baa"
+    },
+    {
+      "from": "docs/ppe-baseline-review.md",
+      "to": "docs/history/training/ppe-baseline-review.md",
+      "sha256": "fb0dad44871885f0661a22fc475b51583464285d0767922dd3b135779e1fb06a"
+    },
+    {
+      "from": "docs/v15-interim-comparison.json",
+      "to": "docs/history/training/v15-interim-comparison.json",
+      "sha256": "f40c8dd70a7828598e81b540276fa58023e68acbcbe3c8662dbe240e76c98a57"
+    },
+    {
+      "from": "docs/v15-final-comparison.json",
+      "to": "docs/history/training/v15-final-comparison.json",
+      "sha256": "083375fa1f44b2c11b975dba346fa253afb1cb28c418e534122444367234bd67"
+    },
+    {
+      "from": "docs/scaled-data-quality-report.json",
+      "to": "docs/history/training/scaled-data-quality-report.json",
+      "sha256": "45aff6288f6d0047bd696c4fdbbf936772f9c820e91d0a162cece8000a2ee9a1"
+    },
+    {
+      "from": "docs/scaled-data-backup.json",
+      "to": "docs/history/training/scaled-data-backup.json",
+      "sha256": "533842f6b03e37d652492da36db4640d2e41c28d40ae83adf43b4f10a75b55fa"
+    },
+    {
+      "from": "docs/v15-completed-backup.json",
+      "to": "docs/history/training/v15-completed-backup.json",
+      "sha256": "55c2d2154e8d490572a16977b0f3646ab5591da19a92c5657686912e6f806788"
+    }
+  ],
+  "recoverable_cache_moves": [
+    ".DS_Store",
+    "tests/__pycache__",
+    "models/.DS_Store",
+    "configs/.DS_Store",
+    "scripts/__pycache__",
+    "data/.DS_Store",
+    "data/videos/.DS_Store",
+    "data/pilot_v1/.DS_Store",
+    "data/pilot_v1/logistics/.DS_Store",
+    "data/pilot_v1/logistics/test/.DS_Store",
+    "data/pilot_v1/logistics/train/.DS_Store",
+    "data/label_review/.DS_Store",
+    "data/label_review/annotated_examples/.DS_Store",
+    "data/reviewed_pilot/.DS_Store",
+    "data/reviewed_pilot/ppe/.DS_Store",
+    "data/reviewed_pilot/ppe/train/.DS_Store",
+    "outputs/.DS_Store",
+    "outputs/checkpoints/.DS_Store",
+    "outputs/checkpoints/v16_dataset_20261007/.DS_Store",
+    "outputs/diagnostics/.DS_Store",
+    "outputs/diagnostics/scenario_plan_v2_final_short/.DS_Store",
+    "outputs/video_validation/.DS_Store",
+    "outputs/video_validation/all_demos_v7/.DS_Store",
+    "src/__pycache__",
+    "src/.DS_Store"
+  ],
+  "preserved": [
+    "all source/scripts/configs/tests",
+    "all models/weights",
+    "all datasets/videos",
+    "all outputs and frozen checkpoint records"
+  ],
+  "model_policy": "hood v2 experimental not promoted; v1 selected",
+  "git_merge": "main postponed by user",
+  "validation": {
+    "unit_tests_passed": 122,
+    "python_syntax_files": 112,
+    "selected_model_hashes_verified": 7,
+    "moved_document_hashes_verified": 15
+  }
+}
