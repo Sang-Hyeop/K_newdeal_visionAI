@@ -1,0 +1,873 @@
+{
+  "status": "experimental_not_promoted",
+  "epochs_completed": 8,
+  "candidate_sha256": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08",
+  "demo_training_exposed": true,
+  "fixed_diagnostic": {
+    "baseline": {
+      "helmeted_head": {
+        "TP": 3,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.42857142857142855
+      },
+      "no_helmet_head": {
+        "TP": 2,
+        "FP": 1,
+        "FN": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.4
+      }
+    },
+    "candidate": {
+      "helmeted_head": {
+        "TP": 0,
+        "FP": 1,
+        "FN": 7,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "no_helmet_head": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 2,
+        "precision": 0.75,
+        "recall": 0.6
+      }
+    },
+    "ensemble": {
+      "helmeted_head": {
+        "TP": 3,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.42857142857142855
+      },
+      "no_helmet_head": {
+        "TP": 3,
+        "FP": 1,
+        "FN": 2,
+        "precision": 0.75,
+        "recall": 0.6
+      }
+    }
+  },
+  "video_diagnostics": {
+    "ppe5": {
+      "severity_observation_counts": {
+        "UNKNOWN": 256,
+        "SAFE": 1,
+        "WARNING": 3
+      },
+      "warning_times": [
+        8.75875,
+        8.967291666666666,
+        9.175833333333333
+      ],
+      "summary": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/5_PPE_Helmet.mp4",
+        "sampled_frames": 58,
+        "processed_fps": 4.795204795204795,
+        "person_state_counts": {
+          "conflicting_evidence": 36,
+          "unknown": 98,
+          "helmet_detected": 50,
+          "no_helmet_candidate": 20
+        },
+        "track_spans": {
+          "0:3": {
+            "first": 1.25125,
+            "last": 4.170833333333333,
+            "observations": 13
+          },
+          "0:4": {
+            "first": 1.25125,
+            "last": 3.128125,
+            "observations": 10
+          },
+          "0:5": {
+            "first": 1.4597916666666666,
+            "last": 3.128125,
+            "observations": 5
+          },
+          "0:9": {
+            "first": 2.2939583333333333,
+            "last": 5.839166666666666,
+            "observations": 17
+          },
+          "0:13": {
+            "first": 3.128125,
+            "last": 5.839166666666666,
+            "observations": 11
+          },
+          "0:15": {
+            "first": 3.545208333333333,
+            "last": 5.839166666666666,
+            "observations": 12
+          },
+          "0:19": {
+            "first": 4.170833333333333,
+            "last": 5.839166666666666,
+            "observations": 9
+          },
+          "0:24": {
+            "first": 4.587916666666667,
+            "last": 5.005,
+            "observations": 3
+          },
+          "0:29": {
+            "first": 5.005,
+            "last": 5.839166666666666,
+            "observations": 5
+          },
+          "1:1": {
+            "first": 6.464791666666666,
+            "last": 11.886875,
+            "observations": 27
+          },
+          "1:2": {
+            "first": 6.464791666666666,
+            "last": 11.886875,
+            "observations": 26
+          },
+          "1:5": {
+            "first": 7.090416666666666,
+            "last": 10.218541666666665,
+            "observations": 10
+          },
+          "1:12": {
+            "first": 7.924583333333333,
+            "last": 11.886875,
+            "observations": 20
+          },
+          "1:16": {
+            "first": 8.550208333333332,
+            "last": 9.801458333333333,
+            "observations": 7
+          },
+          "1:19": {
+            "first": 9.384374999999999,
+            "last": 10.635625,
+            "observations": 7
+          },
+          "1:20": {
+            "first": 9.592916666666666,
+            "last": 11.886875,
+            "observations": 12
+          },
+          "1:23": {
+            "first": 10.635625,
+            "last": 11.469791666666666,
+            "observations": 5
+          },
+          "1:25": {
+            "first": 10.844166666666666,
+            "last": 11.052708333333333,
+            "observations": 2
+          },
+          "1:29": {
+            "first": 11.469791666666666,
+            "last": 11.886875,
+            "observations": 3
+          }
+        },
+        "scene_resets_seconds": [
+          6.047708333333333
+        ],
+        "scene_cut_threshold": 0.18,
+        "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+        "weights": {
+          "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+          "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_adaptation_v1/ppe.pt"
+        },
+        "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+        "model_hashes": {
+          "objects": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "ppe": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+        },
+        "policy": {
+          "policy_version": "ppe-observation-v1",
+          "minimum_consecutive_frames": 3,
+          "minimum_confirmed_seconds": 0.4,
+          "maximum_observation_gap_seconds": 0.45,
+          "minimum_head_confidence": 0.5,
+          "no_helmet_policy": "WARNING candidate requiring review; never automatically verified violation",
+          "missing_conflict_policy": "UNKNOWN immediately; restart confirmation"
+        },
+        "event_context": {
+          "camera_id": "5_PPE_Helmet-ppe",
+          "video": "5_PPE_Helmet.mp4",
+          "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+          "model_version": "e53ab060ccd3f604ab89d519ae0731a4df5f704cd37948664aa4c48a6feee2ba",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e"
+        },
+        "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
+      }
+    },
+    "ppe6": {
+      "severity_observation_counts": {
+        "UNKNOWN": 119,
+        "SAFE": 90
+      },
+      "warning_times": [],
+      "summary": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/6_Helmet_forklift.mp4",
+        "sampled_frames": 58,
+        "processed_fps": 4.795204795204795,
+        "person_state_counts": {
+          "helmet_detected": 144,
+          "conflicting_evidence": 35,
+          "unknown": 7
+        },
+        "track_spans": {
+          "0:1": {
+            "first": 0.0,
+            "last": 1.4597916666666666,
+            "observations": 7
+          },
+          "0:2": {
+            "first": 0.4170833333333333,
+            "last": 5.839166666666666,
+            "observations": 27
+          },
+          "0:3": {
+            "first": 0.625625,
+            "last": 5.839166666666666,
+            "observations": 25
+          },
+          "0:4": {
+            "first": 0.8341666666666666,
+            "last": 1.0427083333333333,
+            "observations": 2
+          },
+          "0:8": {
+            "first": 1.4597916666666666,
+            "last": 2.0854166666666667,
+            "observations": 4
+          },
+          "0:13": {
+            "first": 2.5025,
+            "last": 5.213541666666666,
+            "observations": 14
+          },
+          "0:17": {
+            "first": 4.796458333333333,
+            "last": 5.213541666666666,
+            "observations": 3
+          },
+          "0:18": {
+            "first": 5.630624999999999,
+            "last": 5.839166666666666,
+            "observations": 2
+          },
+          "1:1": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:2": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:3": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:5": {
+            "first": 8.967291666666666,
+            "last": 11.886875,
+            "observations": 15
+          }
+        },
+        "scene_resets_seconds": [
+          6.047708333333333
+        ],
+        "scene_cut_threshold": 0.18,
+        "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+        "weights": {
+          "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+          "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_adaptation_v1/ppe.pt"
+        },
+        "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+        "model_hashes": {
+          "objects": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "ppe": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+        },
+        "policy": {
+          "policy_version": "ppe-observation-v1",
+          "minimum_consecutive_frames": 3,
+          "minimum_confirmed_seconds": 0.4,
+          "maximum_observation_gap_seconds": 0.45,
+          "minimum_head_confidence": 0.5,
+          "no_helmet_policy": "WARNING candidate requiring review; never automatically verified violation",
+          "missing_conflict_policy": "UNKNOWN immediately; restart confirmation"
+        },
+        "event_context": {
+          "camera_id": "6_Helmet_forklift-ppe",
+          "video": "6_Helmet_forklift.mp4",
+          "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+          "model_version": "e53ab060ccd3f604ab89d519ae0731a4df5f704cd37948664aa4c48a6feee2ba",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e"
+        },
+        "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
+      }
+    },
+    "ensemble5": {
+      "severity_observation_counts": {
+        "UNKNOWN": 256,
+        "SAFE": 2,
+        "WARNING": 2
+      },
+      "warning_times": [
+        8.75875,
+        10.218541666666665
+      ],
+      "summary": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/5_PPE_Helmet.mp4",
+        "sampled_frames": 58,
+        "processed_fps": 4.795204795204795,
+        "person_state_counts": {
+          "conflicting_evidence": 24,
+          "no_helmet_candidate": 32,
+          "unknown": 96,
+          "helmet_detected": 52
+        },
+        "track_spans": {
+          "0:3": {
+            "first": 1.25125,
+            "last": 4.170833333333333,
+            "observations": 13
+          },
+          "0:4": {
+            "first": 1.25125,
+            "last": 3.128125,
+            "observations": 10
+          },
+          "0:5": {
+            "first": 1.4597916666666666,
+            "last": 3.128125,
+            "observations": 5
+          },
+          "0:9": {
+            "first": 2.2939583333333333,
+            "last": 5.839166666666666,
+            "observations": 17
+          },
+          "0:13": {
+            "first": 3.128125,
+            "last": 5.839166666666666,
+            "observations": 11
+          },
+          "0:15": {
+            "first": 3.545208333333333,
+            "last": 5.839166666666666,
+            "observations": 12
+          },
+          "0:19": {
+            "first": 4.170833333333333,
+            "last": 5.839166666666666,
+            "observations": 9
+          },
+          "0:24": {
+            "first": 4.587916666666667,
+            "last": 5.005,
+            "observations": 3
+          },
+          "0:29": {
+            "first": 5.005,
+            "last": 5.839166666666666,
+            "observations": 5
+          },
+          "1:1": {
+            "first": 6.464791666666666,
+            "last": 11.886875,
+            "observations": 27
+          },
+          "1:2": {
+            "first": 6.464791666666666,
+            "last": 11.886875,
+            "observations": 26
+          },
+          "1:5": {
+            "first": 7.090416666666666,
+            "last": 10.218541666666665,
+            "observations": 10
+          },
+          "1:12": {
+            "first": 7.924583333333333,
+            "last": 11.886875,
+            "observations": 20
+          },
+          "1:16": {
+            "first": 8.550208333333332,
+            "last": 9.801458333333333,
+            "observations": 7
+          },
+          "1:19": {
+            "first": 9.384374999999999,
+            "last": 10.635625,
+            "observations": 7
+          },
+          "1:20": {
+            "first": 9.592916666666666,
+            "last": 11.886875,
+            "observations": 12
+          },
+          "1:23": {
+            "first": 10.635625,
+            "last": 11.469791666666666,
+            "observations": 5
+          },
+          "1:25": {
+            "first": 10.844166666666666,
+            "last": 11.052708333333333,
+            "observations": 2
+          },
+          "1:29": {
+            "first": 11.469791666666666,
+            "last": 11.886875,
+            "observations": 3
+          }
+        },
+        "scene_resets_seconds": [
+          6.047708333333333
+        ],
+        "scene_cut_threshold": 0.18,
+        "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+        "weights": {
+          "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+          "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt"
+        },
+        "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+        "supplement_ppe_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_adaptation_v1/ppe.pt",
+        "ppe_inference_mode": "baseline_plus_bare_head_supplement",
+        "model_hashes": {
+          "objects": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "ppe": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09",
+          "ppe_supplement": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+        },
+        "policy": {
+          "policy_version": "ppe-observation-v1",
+          "minimum_consecutive_frames": 3,
+          "minimum_confirmed_seconds": 0.4,
+          "maximum_observation_gap_seconds": 0.45,
+          "minimum_head_confidence": 0.5,
+          "no_helmet_policy": "WARNING candidate requiring review; never automatically verified violation",
+          "missing_conflict_policy": "UNKNOWN immediately; restart confirmation"
+        },
+        "event_context": {
+          "camera_id": "5_PPE_Helmet-ppe",
+          "video": "5_PPE_Helmet.mp4",
+          "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+          "model_version": "f7fb49b5b0bdaef7830af9544ef0f8f5b3555fd5de9af4a6d82be3e49274da81",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e"
+        },
+        "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
+      }
+    },
+    "ensemble6": {
+      "severity_observation_counts": {
+        "UNKNOWN": 131,
+        "SAFE": 78
+      },
+      "warning_times": [],
+      "summary": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/6_Helmet_forklift.mp4",
+        "sampled_frames": 58,
+        "processed_fps": 4.795204795204795,
+        "person_state_counts": {
+          "helmet_detected": 134,
+          "no_helmet_candidate": 3,
+          "unknown": 17,
+          "conflicting_evidence": 32
+        },
+        "track_spans": {
+          "0:1": {
+            "first": 0.0,
+            "last": 1.4597916666666666,
+            "observations": 7
+          },
+          "0:2": {
+            "first": 0.4170833333333333,
+            "last": 5.839166666666666,
+            "observations": 27
+          },
+          "0:3": {
+            "first": 0.625625,
+            "last": 5.839166666666666,
+            "observations": 25
+          },
+          "0:4": {
+            "first": 0.8341666666666666,
+            "last": 1.0427083333333333,
+            "observations": 2
+          },
+          "0:8": {
+            "first": 1.4597916666666666,
+            "last": 2.0854166666666667,
+            "observations": 4
+          },
+          "0:13": {
+            "first": 2.5025,
+            "last": 5.213541666666666,
+            "observations": 14
+          },
+          "0:17": {
+            "first": 4.796458333333333,
+            "last": 5.213541666666666,
+            "observations": 3
+          },
+          "0:18": {
+            "first": 5.630624999999999,
+            "last": 5.839166666666666,
+            "observations": 2
+          },
+          "1:1": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:2": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:3": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:5": {
+            "first": 8.967291666666666,
+            "last": 11.886875,
+            "observations": 15
+          }
+        },
+        "scene_resets_seconds": [
+          6.047708333333333
+        ],
+        "scene_cut_threshold": 0.18,
+        "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+        "weights": {
+          "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+          "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt"
+        },
+        "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+        "supplement_ppe_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_adaptation_v1/ppe.pt",
+        "ppe_inference_mode": "baseline_plus_bare_head_supplement",
+        "model_hashes": {
+          "objects": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "ppe": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09",
+          "ppe_supplement": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+        },
+        "policy": {
+          "policy_version": "ppe-observation-v1",
+          "minimum_consecutive_frames": 3,
+          "minimum_confirmed_seconds": 0.4,
+          "maximum_observation_gap_seconds": 0.45,
+          "minimum_head_confidence": 0.5,
+          "no_helmet_policy": "WARNING candidate requiring review; never automatically verified violation",
+          "missing_conflict_policy": "UNKNOWN immediately; restart confirmation"
+        },
+        "event_context": {
+          "camera_id": "6_Helmet_forklift-ppe",
+          "video": "6_Helmet_forklift.mp4",
+          "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+          "model_version": "f7fb49b5b0bdaef7830af9544ef0f8f5b3555fd5de9af4a6d82be3e49274da81",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e"
+        },
+        "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
+      }
+    },
+    "fullbody5": {
+      "severity_observation_counts": {
+        "UNKNOWN": 226,
+        "SAFE": 32,
+        "WARNING": 2
+      },
+      "warning_times": [
+        8.967291666666666,
+        9.175833333333333
+      ],
+      "summary": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/5_PPE_Helmet.mp4",
+        "sampled_frames": 58,
+        "processed_fps": 4.795204795204795,
+        "person_state_counts": {
+          "conflicting_evidence": 8,
+          "helmet_detected": 82,
+          "unknown": 89,
+          "no_helmet_candidate": 25
+        },
+        "track_spans": {
+          "0:3": {
+            "first": 1.25125,
+            "last": 4.170833333333333,
+            "observations": 13
+          },
+          "0:4": {
+            "first": 1.25125,
+            "last": 3.128125,
+            "observations": 10
+          },
+          "0:5": {
+            "first": 1.4597916666666666,
+            "last": 3.128125,
+            "observations": 5
+          },
+          "0:9": {
+            "first": 2.2939583333333333,
+            "last": 5.839166666666666,
+            "observations": 17
+          },
+          "0:13": {
+            "first": 3.128125,
+            "last": 5.839166666666666,
+            "observations": 11
+          },
+          "0:15": {
+            "first": 3.545208333333333,
+            "last": 5.839166666666666,
+            "observations": 12
+          },
+          "0:19": {
+            "first": 4.170833333333333,
+            "last": 5.839166666666666,
+            "observations": 9
+          },
+          "0:24": {
+            "first": 4.587916666666667,
+            "last": 5.005,
+            "observations": 3
+          },
+          "0:29": {
+            "first": 5.005,
+            "last": 5.839166666666666,
+            "observations": 5
+          },
+          "1:1": {
+            "first": 6.464791666666666,
+            "last": 11.886875,
+            "observations": 27
+          },
+          "1:2": {
+            "first": 6.464791666666666,
+            "last": 11.886875,
+            "observations": 26
+          },
+          "1:5": {
+            "first": 7.090416666666666,
+            "last": 10.218541666666665,
+            "observations": 10
+          },
+          "1:12": {
+            "first": 7.924583333333333,
+            "last": 11.886875,
+            "observations": 20
+          },
+          "1:16": {
+            "first": 8.550208333333332,
+            "last": 9.801458333333333,
+            "observations": 7
+          },
+          "1:19": {
+            "first": 9.384374999999999,
+            "last": 10.635625,
+            "observations": 7
+          },
+          "1:20": {
+            "first": 9.592916666666666,
+            "last": 11.886875,
+            "observations": 12
+          },
+          "1:23": {
+            "first": 10.635625,
+            "last": 11.469791666666666,
+            "observations": 5
+          },
+          "1:25": {
+            "first": 10.844166666666666,
+            "last": 11.052708333333333,
+            "observations": 2
+          },
+          "1:29": {
+            "first": 11.469791666666666,
+            "last": 11.886875,
+            "observations": 3
+          }
+        },
+        "scene_resets_seconds": [
+          6.047708333333333
+        ],
+        "scene_cut_threshold": 0.18,
+        "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+        "weights": {
+          "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+          "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_adaptation_v1/ppe.pt"
+        },
+        "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+        "supplement_ppe_weights": null,
+        "ppe_crop_height_fraction": 1.0,
+        "ppe_inference_mode": "single_model",
+        "model_hashes": {
+          "objects": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "ppe": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+        },
+        "policy": {
+          "policy_version": "ppe-observation-v1",
+          "minimum_consecutive_frames": 3,
+          "minimum_confirmed_seconds": 0.4,
+          "maximum_observation_gap_seconds": 0.45,
+          "minimum_head_confidence": 0.5,
+          "no_helmet_policy": "WARNING candidate requiring review; never automatically verified violation",
+          "missing_conflict_policy": "UNKNOWN immediately; restart confirmation"
+        },
+        "event_context": {
+          "camera_id": "5_PPE_Helmet-ppe",
+          "video": "5_PPE_Helmet.mp4",
+          "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+          "model_version": "e53ab060ccd3f604ab89d519ae0731a4df5f704cd37948664aa4c48a6feee2ba",
+          "config_version": "27d737d0cb2beced38ff61057bb9105073f3a3b273ed24e77f1b02f508387539"
+        },
+        "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
+      }
+    },
+    "fullbody6": {
+      "severity_observation_counts": {
+        "UNKNOWN": 99,
+        "SAFE": 110
+      },
+      "warning_times": [],
+      "summary": {
+        "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/6_Helmet_forklift.mp4",
+        "sampled_frames": 58,
+        "processed_fps": 4.795204795204795,
+        "person_state_counts": {
+          "helmet_detected": 151,
+          "unknown": 7,
+          "conflicting_evidence": 28
+        },
+        "track_spans": {
+          "0:1": {
+            "first": 0.0,
+            "last": 1.4597916666666666,
+            "observations": 7
+          },
+          "0:2": {
+            "first": 0.4170833333333333,
+            "last": 5.839166666666666,
+            "observations": 27
+          },
+          "0:3": {
+            "first": 0.625625,
+            "last": 5.839166666666666,
+            "observations": 25
+          },
+          "0:4": {
+            "first": 0.8341666666666666,
+            "last": 1.0427083333333333,
+            "observations": 2
+          },
+          "0:8": {
+            "first": 1.4597916666666666,
+            "last": 2.0854166666666667,
+            "observations": 4
+          },
+          "0:13": {
+            "first": 2.5025,
+            "last": 5.213541666666666,
+            "observations": 14
+          },
+          "0:17": {
+            "first": 4.796458333333333,
+            "last": 5.213541666666666,
+            "observations": 3
+          },
+          "0:18": {
+            "first": 5.630624999999999,
+            "last": 5.839166666666666,
+            "observations": 2
+          },
+          "1:1": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:2": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:3": {
+            "first": 6.047708333333333,
+            "last": 11.886875,
+            "observations": 29
+          },
+          "1:5": {
+            "first": 8.967291666666666,
+            "last": 11.886875,
+            "observations": 15
+          }
+        },
+        "scene_resets_seconds": [
+          6.047708333333333
+        ],
+        "scene_cut_threshold": 0.18,
+        "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+        "weights": {
+          "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+          "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_adaptation_v1/ppe.pt"
+        },
+        "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+        "supplement_ppe_weights": null,
+        "ppe_crop_height_fraction": 1.0,
+        "ppe_inference_mode": "single_model",
+        "model_hashes": {
+          "objects": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "ppe": "ec2e9a79bd66f2335dd97511560267294003a65a851836b6362db06656039b08"
+        },
+        "policy": {
+          "policy_version": "ppe-observation-v1",
+          "minimum_consecutive_frames": 3,
+          "minimum_confirmed_seconds": 0.4,
+          "maximum_observation_gap_seconds": 0.45,
+          "minimum_head_confidence": 0.5,
+          "no_helmet_policy": "WARNING candidate requiring review; never automatically verified violation",
+          "missing_conflict_policy": "UNKNOWN immediately; restart confirmation"
+        },
+        "event_context": {
+          "camera_id": "6_Helmet_forklift-ppe",
+          "video": "6_Helmet_forklift.mp4",
+          "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+          "model_version": "e53ab060ccd3f604ab89d519ae0731a4df5f704cd37948664aa4c48a6feee2ba",
+          "config_version": "27d737d0cb2beced38ff61057bb9105073f3a3b273ed24e77f1b02f508387539"
+        },
+        "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN"
+      }
+    }
+  },
+  "input_verification": {
+    "train": {
+      "checked_files": 170,
+      "changed": []
+    },
+    "val": {
+      "checked_files": 24,
+      "changed": []
+    },
+    "test": {
+      "checked_files": 18,
+      "changed": []
+    }
+  },
+  "reason": "Bare-head detections improve but helmet fixed-test FN regresses; ensemble increases video conflicts; body-context ablation partially helps but does not eliminate misses. Original PPE model retained.",
+  "thresholds_changed": false,
+  "crop_ablation": {
+    "default": 0.55,
+    "experimental": 1
+  },
+  "backup_path": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/demo_ppe_adaptation_v1_final"
+}

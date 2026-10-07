@@ -22,6 +22,16 @@ class PPEAssignmentTests(unittest.TestCase):
         return infer_person_ppe(np.zeros((300,300,3),dtype=np.uint8),
                                 [[100,100,160,260]], FakeModel(detections))[0]
 
+    def test_context_change_does_not_relax_head_assignment(self):
+        rows=infer_person_ppe(np.zeros((300,300,3),dtype=np.uint8),
+              [[100,100,160,260]], FakeModel([(0,[9,16,69,140])]),crop_height_fraction=1)
+        self.assertEqual(rows[0]['state'],'unknown')
+        self.assertEqual(len(rows[0]['rejected_candidates']),1)
+
+    def test_invalid_context_fraction_rejected(self):
+        with self.assertRaises(ValueError):
+            infer_person_ppe(np.zeros((300,300,3),dtype=np.uint8),[],FakeModel([]),crop_height_fraction=float('nan'))
+
     def test_no_head_evidence_is_unknown(self):
         self.assertEqual(self.observe([])['state'], 'unknown')
 
