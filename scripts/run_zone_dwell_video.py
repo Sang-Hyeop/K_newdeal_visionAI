@@ -8,11 +8,13 @@ from ultralytics import YOLO
 from src.tracked_zone import TrackedZone
 from src.event_contract import export_events
 from src.detection_sources import route_detections, model_version
+from src.object_recall_ensemble import ObjectRecallEnsemble,object_bundle_version
 
 
 def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','weights','config']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--supplement-object-weights',type=Path)
     p.add_argument('--demo-adapted',action='store_true',help='Label training-exposed demo diagnostics')
     p.add_argument('--person-weights',type=Path,help='Experimental separate person source; default unchanged')
     p.add_argument('--sample-fps',type=float,default=5)
@@ -27,11 +29,14 @@ def main():
     torch.set_num_threads(4);model=YOLO(str(args.weights))
     if model.names.get(0)!='person':raise ValueError('Expected person class 0')
     if config.get('vehicle_conditioned') and model.names!={0:'person',1:'forklift'}:raise ValueError('Conditional lane requires person/forklift model')
+    if args.person_weights and args.supplement_object_weights:raise ValueError('Choose separate person source or recall ensemble')
+    supplement_hash=hashlib.sha256(args.supplement_object_weights.read_bytes()).hexdigest() if args.supplement_object_weights else None
+    if args.supplement_object_weights:model=ObjectRecallEnsemble(model,YOLO(str(args.supplement_object_weights)))
     person_model=YOLO(str(args.person_weights)) if args.person_weights else None
     if person_model and person_model.names.get(0)!='person':raise ValueError('Separate source requires person class 0')
     object_hash=hashlib.sha256(args.weights.read_bytes()).hexdigest()
     person_hash=hashlib.sha256(args.person_weights.read_bytes()).hexdigest() if args.person_weights else None
-    effective_version=model_version(object_hash,person_hash)
+    effective_version=object_bundle_version(object_hash,supplement_hash) if supplement_hash else model_version(object_hash,person_hash)
     cap=cv2.VideoCapture(str(args.source));fps=cap.get(5);w,h=int(cap.get(3)),int(cap.get(4))
     if not cap.isOpened() or fps<=0:raise ValueError('Unreadable source')
     stride=max(1,round(fps/args.sample_fps));pipeline=TrackedZone(config,(h,w),fps/stride)
@@ -55,7 +60,7 @@ def main():
                 small=cv2.resize(frame,(96,54)).astype(np.float32)/255
                 cut=previous is not None and float(np.abs(small-previous).mean())>.18;previous=small
                 prediction=model.predict(frame,classes=None if pipeline.forklift_tracker else [0],conf=.1,imgsz=args.imgsz,device='cpu',verbose=False)[0]
-                detections=[{'class':prediction.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()} for b in prediction.boxes]
+                detections=[{'class':prediction.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'detection_source':getattr(b,'detection_source','single_object_model')} for b in prediction.boxes]
                 if person_model:
                     pp=person_model.predict(frame,classes=[0],conf=.1,imgsz=args.imgsz,device='cpu',verbose=False)[0]
                     people=[{'class':pp.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()} for b in pp.boxes]
@@ -112,6 +117,7 @@ def main():
             if state=='CRITICAL':critical.add(key)
     summary={'source':str(args.source.resolve()),'source_sha256':source_sha256,
              'weights':str(args.weights.resolve()),'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),
+             'supplement_object_weights':str(args.supplement_object_weights.resolve()) if args.supplement_object_weights else None,'supplement_sha256':supplement_hash,
              'person_weights':str(args.person_weights.resolve()) if args.person_weights else None,'person_weights_sha256':person_hash,'model_version':effective_version,
              'demo_training_exposed':args.demo_adapted,'person_source_status':'experimental_not_promoted' if person_model else 'demo_adapted_candidate' if args.demo_adapted else 'configured_object_model','config':config,'frames_sampled':len(records),'processed_fps':fps/stride,'imgsz':args.imgsz,
              'transition_events':len(transitions),'state_observation_counts':states,

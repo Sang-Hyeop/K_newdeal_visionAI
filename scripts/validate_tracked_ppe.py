@@ -11,12 +11,14 @@ from src.ppe_events import PPEEvents
 from src.event_contract import export_events
 from src.ppe_person_crop import infer_person_ppe
 from src.ppe_recall_ensemble import PPERecallEnsemble
+from src.object_recall_ensemble import ObjectRecallEnsemble
 
 
 def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','objects-weights','ppe-weights']:
         p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--supplement-object-weights',type=Path)
     p.add_argument('--supplement-ppe-weights',type=Path)
     p.add_argument('--config',type=Path,default=ROOT/'configs/ppe-event-policy.json')
     p.add_argument('--ppe-crop-height',type=float,default=.55)
@@ -29,6 +31,8 @@ def main():
     if not 0<args.scene_cut_threshold<=1:raise ValueError('Invalid scene cut threshold')
     torch.set_num_threads(4)
     objects,ppe=YOLO(str(args.objects_weights)),YOLO(str(args.ppe_weights))
+    if args.supplement_object_weights:
+        objects=ObjectRecallEnsemble(objects,YOLO(str(args.supplement_object_weights)))
     if args.supplement_ppe_weights:
         ppe=PPERecallEnsemble(ppe,YOLO(str(args.supplement_ppe_weights)))
     if objects.names.get(0)!='person':raise ValueError('Expected person class at index 0')
@@ -50,7 +54,7 @@ def main():
                 cut=cut_score>args.scene_cut_threshold;previous=small
                 result=objects.predict(frame,classes=[0],conf=.1,imgsz=640,device='cpu',verbose=False)[0]
                 detections=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),
-                             'bbox_xyxy':b.xyxy[0].tolist()} for b in result.boxes]
+                             'bbox_xyxy':b.xyxy[0].tolist(),'detection_source':getattr(b,'detection_source','single_object_model')} for b in result.boxes]
                 timestamp=idx/fps;tracks,missing=tracker.update(timestamp,detections,(h,w),scene_cut=cut)
                 raw=ppe.predict(frame,conf=.25,imgsz=640,device='cpu',verbose=False)[0]
                 heads=[{'class':raw.names[int(b.cls.item())],'confidence':float(b.conf.item()),
@@ -79,6 +83,8 @@ def main():
     finally:cap.release();writer.release()
     (args.output/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in records))
     model_hash={key:hashlib.sha256(path.read_bytes()).hexdigest() for key,path in [('objects',args.objects_weights),('ppe',args.ppe_weights)]}
+    if args.supplement_object_weights:
+        model_hash['objects_supplement']=hashlib.sha256(args.supplement_object_weights.read_bytes()).hexdigest()
     if args.supplement_ppe_weights:
         model_hash['ppe_supplement']=hashlib.sha256(args.supplement_ppe_weights.read_bytes()).hexdigest()
     context={'camera_id':args.source.stem+'-ppe','video':args.source.name,'source_sha256':hashlib.sha256(args.source.read_bytes()).hexdigest(),'model_version':hashlib.sha256(json.dumps(model_hash,sort_keys=True).encode()).hexdigest(),'config_version':hashlib.sha256(json.dumps({'policy':policy,'sample_fps':args.sample_fps,'cut_threshold':args.scene_cut_threshold,'ppe_crop_height':args.ppe_crop_height},sort_keys=True).encode()).hexdigest()}
@@ -95,6 +101,7 @@ def main():
              'scene_cut_threshold':args.scene_cut_threshold,'tracker':'ByteTrack; high .25 / low .1 / gap 1 second',
              'weights':{'objects':str(args.objects_weights.resolve()),'ppe':str(args.ppe_weights.resolve())},
              'accuracy':'Not measured; ID ground truth absent; track count is not headcount',
+             'supplement_object_weights':str(args.supplement_object_weights.resolve()) if args.supplement_object_weights else None,
              'supplement_ppe_weights':str(args.supplement_ppe_weights.resolve()) if args.supplement_ppe_weights else None,
              'ppe_crop_height_fraction':args.ppe_crop_height,
              'ppe_inference_mode':'baseline_plus_bare_head_supplement' if args.supplement_ppe_weights else 'single_model',

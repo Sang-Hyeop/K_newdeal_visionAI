@@ -1,46 +1,33 @@
 import unittest
 from types import SimpleNamespace
 import torch
-from src.object_recall_ensemble import ObjectRecallEnsemble
+from src.object_recall_ensemble import ObjectRecallEnsemble,object_bundle_version
 
+class ObjectModel:
+    def __init__(self,boxes):self.boxes=boxes
+    def predict(self,frame,**kwargs):
+        return [SimpleNamespace(boxes=[SimpleNamespace(cls=torch.tensor([c]),conf=torch.tensor([p]),xyxy=torch.tensor([b],dtype=torch.float32)) for c,p,b in self.boxes])]
+    names={0:'person',1:'forklift'}
 
-class FakeModel:
-    names = {0: 'person', 1: 'forklift'}
+class ObjectRecallTests(unittest.TestCase):
+    def test_established_baseline_box_not_replaced_by_new_high_score(self):
+        model=ObjectRecallEnsemble(ObjectModel([(1,.3,[10,10,30,40])]),ObjectModel([(1,.9,[12,10,32,40])]))
+        boxes=model.predict(None)[0].boxes
+        self.assertEqual(len(boxes),1)
+        self.assertEqual(boxes[0].xyxy[0].tolist(),[10,10,30,40])
+        self.assertEqual(boxes[0].detection_source,'v16_baseline')
+    def test_supplement_can_start_tracking_when_old_proposal_is_weak(self):
+        model=ObjectRecallEnsemble(ObjectModel([(1,.11,[10,10,30,40])]),ObjectModel([(1,.9,[12,10,32,40])]))
+        boxes=model.predict(None)[0].boxes
+        self.assertEqual(len(boxes),1)
+        self.assertGreater(boxes[0].conf.item(),.25)
+        self.assertEqual(boxes[0].detection_source,'demo_adaptation')
+    def test_new_region_and_other_class_do_not_erase_baseline(self):
+        model=ObjectRecallEnsemble(ObjectModel([(1,.8,[10,10,30,40])]),ObjectModel([(0,.9,[10,10,30,40]),(1,.9,[100,10,130,40])]))
+        self.assertEqual(len(model.predict(None)[0].boxes),3)
+    def test_bundle_hash_includes_both_models(self):
+        self.assertNotEqual(object_bundle_version('a','b'),object_bundle_version('a','c'))
+        self.assertNotEqual(object_bundle_version('a','b'),object_bundle_version('b','a'))
+        self.assertEqual(object_bundle_version('a'),'a')
 
-    def __init__(self, boxes):
-        self.boxes = boxes
-
-    def predict(self, frame, **kwargs):
-        return [SimpleNamespace(boxes=[
-            SimpleNamespace(cls=torch.tensor([c]), conf=torch.tensor([p]), xyxy=torch.tensor([b], dtype=torch.float32))
-            for c, p, b in self.boxes
-        ])]
-
-
-class ObjectRecallEnsembleTests(unittest.TestCase):
-    def test_baseline_boxes_survive_weaker_overlap(self):
-        baseline = FakeModel([(1, 0.4, [10, 10, 50, 50]), (0, 0.3, [80, 10, 100, 40])])
-        supplement = FakeModel([(1, 0.95, [12, 12, 48, 48]), (1, 0.9, [200, 20, 260, 90])])
-        boxes = ObjectRecallEnsemble(baseline, supplement).predict(None)[0].boxes
-        self.assertEqual(len(boxes), 3)
-        kept_baseline = next(b for b in boxes if b.detection_source == 'v16_baseline' and int(b.cls.item()) == 1)
-        self.assertAlmostEqual(kept_baseline.conf.item(), 0.4, places=5)
-        self.assertTrue(any(b.detection_source == 'demo_adaptation' and int(b.cls.item()) == 1 and b.conf.item() > 0.8 for b in boxes))
-
-    def test_uncovered_supplement_fills_gap(self):
-        baseline = FakeModel([(0, 0.2, [0, 0, 10, 10])])
-        supplement = FakeModel([(1, 0.8, [40, 40, 80, 80])])
-        boxes = ObjectRecallEnsemble(baseline, supplement).predict(None)[0].boxes
-        self.assertTrue(any(b.detection_source == 'demo_adaptation' and int(b.cls.item()) == 1 for b in boxes))
-
-    def test_weak_overlapping_baseline_yields_to_stronger_supplement(self):
-        baseline = FakeModel([(1, 0.2, [10, 10, 50, 50])])
-        supplement = FakeModel([(1, 0.9, [12, 12, 48, 48])])
-        boxes = ObjectRecallEnsemble(baseline, supplement).predict(None)[0].boxes
-        self.assertEqual(len(boxes), 1)
-        self.assertEqual(boxes[0].detection_source, 'demo_adaptation')
-        self.assertAlmostEqual(boxes[0].conf.item(), 0.9, places=5)
-
-
-if __name__ == '__main__':
-    unittest.main()
+if __name__=='__main__':unittest.main()

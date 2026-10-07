@@ -23,7 +23,7 @@ def main():
   for index in range(start,end+1):
    ok,frame=cap.read()
    if not ok:raise ValueError('Cannot read diagnostic frame')
-   pred=model.predict(frame,conf=.1,imgsz=640,device='cpu',verbose=False)[0];d=[{'class':pred.names[int(b.cls.item())],'bbox_xyxy':b.xyxy[0].tolist(),'confidence':float(b.conf.item())} for b in pred.boxes];r=pipeline.update(index/fps,d,(h,w))
+   pred=model.predict(frame,conf=.1,imgsz=640,device='cpu',verbose=False)[0];d=[{'class':pred.names[int(b.cls.item())],'bbox_xyxy':b.xyxy[0].tolist(),'confidence':float(b.conf.item()),'detection_source':getattr(b,'detection_source','single_object_model')} for b in pred.boxes];r=pipeline.update(index/fps,d,(h,w))
    if index<idxs[0]:continue
    boxes={key:[float(np.interp(index,idxs,[row[key][j] for row in gt])) for j in range(4)] for key in ['forklift_xyxy','worker_xyxy']}
    ds,dt=match([t for t in d if t['class']=='forklift'],boxes['forklift_xyxy']);fs,ft=match(r['forklifts'],boxes['forklift_xyxy'],'detected_bbox_xyxy');ps,pt=match(r['people'],boxes['worker_xyxy'],'detected_bbox_xyxy')
