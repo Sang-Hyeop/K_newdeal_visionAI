@@ -55,5 +55,17 @@ class IntegrationTests(unittest.TestCase):
             self.assertIsNone(e['severity'])
             if e['event_type']=='zone_access':self.assertFalse(e['exit_observed'])
 
+    def test_vehicle_conditioned_lane_is_timed_without_vehicle(self):
+        c={**CONFIG,'vehicle_conditioned':True,'critical_seconds':5,'vehicle_missing_hold_seconds':1,'lane_policy':'timed','roi_alpha_safe':.15,'roi_alpha_alert':.2}
+        p=TrackedZone(c,(200,200),5)
+        early=p.update(0,[person()],(200,200))['events'][0]
+        self.assertEqual(early['severity'],'SAFE')
+        self.assertEqual(early['roi_polygon_normalized'],c['polygon_normalized'])
+        late=None
+        for i in range(1,25):
+            late=p.update(i/5,[person()],(200,200))['events'][0]
+        self.assertEqual(late['severity'],'WARNING')
+        self.assertLess(late['observed_dwell_seconds'],5)
+
 
 if __name__=='__main__':unittest.main()

@@ -20,7 +20,8 @@ class TrackedZone:
             if not 0<ratio<1:raise ValueError('Approach margin must be a normalized image ratio')
             self.access=ZoneAccess(self.polygon,min(w,h)*ratio,config['max_gap_seconds'])
         self.forklift_tracker=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F') if config.get('vehicle_conditioned',False) else None
-        self.lane=LaneHazard(self.polygon,config.get('vehicle_missing_hold_seconds',1.0)) if self.forklift_tracker else None
+        # Demo rule (videos 4/7): no vehicle <safe SAFE / >=safe WARNING; with vehicle immediate WARNING / >=critical CRITICAL.
+        self.lane=LaneHazard(self.polygon,config.get('vehicle_missing_hold_seconds',1.0),policy=config.get('lane_policy','timed'),safe_seconds=config['safe_seconds'],critical_seconds=config['critical_seconds']) if self.forklift_tracker else None
         self.config=config
         self.previous={}
         self.roi_active=True
@@ -56,7 +57,8 @@ class TrackedZone:
         for event in events:
             if event['observation_status']=='confirmed' and event['track_id'] in observed_boxes:event['person_bbox_xyxy']=observed_boxes[event['track_id']]
             event.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],
-                         scope='configured_demo_dwell_rule' if event['event_type']=='zone_dwell' else 'configured_demo_access_rule',roi_purpose=self.config['roi_purpose'],roi_review_status=self.config.get('roi_review_status','not_reviewed'))
+                         scope='configured_demo_dwell_rule' if event['event_type']=='zone_dwell' else 'configured_demo_access_rule',roi_purpose=self.config['roi_purpose'],roi_review_status=self.config.get('roi_review_status','not_reviewed'),
+                         roi_polygon_normalized=self.config.get('polygon_normalized'),roi_alpha_safe=self.config.get('roi_alpha_safe',.15),roi_alpha_alert=self.config.get('roi_alpha_alert',.2))
             key=(event['event_type'],event['track_id']);current_ids.add(key)
             state=(event['severity'],event['observation_status'],event['inside'],event.get('vehicle_lane_state'),event.get('risk_reason'),tuple(event.get('vehicle_track_ids',[])))
             if self.previous.get(key)!=state:transitions.append(event.copy())

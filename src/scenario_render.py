@@ -2,22 +2,23 @@
 import cv2,numpy as np
 from src.feature_status import feature_status
 COLORS={'SAFE':(0,180,0),'WARNING':(0,140,255),'CRITICAL':(0,0,255),None:(150,150,150)}
-def roi_overlay(frame,polygon,safe_polygons,severity,active=True):
+def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,alpha_alert=.2):
  mask=np.zeros(frame.shape[:2],np.uint8);cv2.fillPoly(mask,[np.asarray(polygon,np.int32)],255)
  for p in safe_polygons:cv2.fillPoly(mask,[np.asarray(p,np.int32)],0)
  if not active:severity=None
  if severity is not None:
-  layer=frame.copy();layer[mask>0]=COLORS[severity];alpha=.15 if severity=='SAFE'else .2;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
+  layer=frame.copy();layer[mask>0]=COLORS[severity];alpha=alpha_safe if severity=='SAFE'else alpha_alert;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
  if active:
   layer=frame.copy()
   for p in safe_polygons:cv2.fillPoly(layer,[np.asarray(p,np.int32)],COLORS['SAFE'])
-  frame[:]=cv2.addWeighted(layer,.15,frame,.85,0)
+  frame[:]=cv2.addWeighted(layer,alpha_safe,frame,1-alpha_safe,0)
  for p in [polygon,*safe_polygons]:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS['SAFE'] if active and any(p is q for q in safe_polygons) else COLORS[severity],2)
  return frame
 
 def render(frame,groups,zone=None):
  if zone:
-  pipeline,row=zone;roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'])
+  pipeline,row=zone;cfg=getattr(pipeline,'config',{})
+  roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2))
  for feature,events in groups.items():
   for e in events:
    color=COLORS[e['severity'] if e.get('observation_status')=='confirmed'else None];box=e.get('person_bbox_xyxy',e.get('head_bbox_xyxy'))

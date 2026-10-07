@@ -39,7 +39,8 @@
     ]
   ],
   "safe_seconds": 3.0,
-  "critical_seconds": 8.0,
+  "critical_seconds": 5.0,
+  "lane_policy": "timed",
   "max_gap_seconds": 1.0,
   "anchor": "bbox_bottom_center_proxy",
   "roi_review_status": "business_rule_confirmed_by_user; floor_geometry_manually_reviewed",

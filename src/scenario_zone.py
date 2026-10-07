@@ -31,7 +31,9 @@ class ScenarioZone:
   state=self.lane.update(timestamp,events,vehicles,shape)if self.roi_active else None;access=[];transitions=[]
   for e in mark_uncertain_lane_events(events):
    old=self.previous.get(e['track_id']);inside=e['inside'];entry=bool(old and old['inside']is False and inside is True);exit=bool(old and old['inside']is True and inside is False)
-   e.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],roi_purpose='floor_minus_safe_storage_zones',distance_meters=None)
+   e.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],roi_purpose='floor_minus_safe_storage_zones',distance_meters=None,
+            roi_polygon_normalized=self.config.get('monitor_floor_normalized'),safe_polygons_normalized=self.config.get('safe_polygons_normalized'),
+            roi_alpha_safe=self.config.get('roi_alpha_safe',.15),roi_alpha_alert=self.config.get('roi_alpha_alert',.2))
    a={**e,'event_type':'zone_access','entry_observed':entry,'exit_observed':exit,'authorization_status':'not_assessed'};access.append(a)
    key=(e['severity'],e['observation_status'],inside,e.get('vehicle_lane_state'))
    if old is None or old['key']!=key:transitions.extend([e.copy(),a.copy()])

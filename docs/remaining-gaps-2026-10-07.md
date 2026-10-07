@@ -21,6 +21,8 @@
 | 팀 실행 안내 | `docs/demo-scenario-runbook-2026-10-07.md` |
 | pt 해시 목록 | `docs/checkpoints/2026-10-07/model-share-manifest.json` |
 | pt 묶음 스크립트 | `scripts/pack_demo_models.py` |
+| 4번 즉시WARNING/즉시CRITICAL | `lane_policy=timed` + critical 5s (시연계획과 동일) |
+| zone 이벤트 ROI 좌표 | `roi_polygon_normalized`·알파 필드 (보드가 직접 fill) |
 
 품질 가드 샘플 효과(캐시 재계산, 정확도 주장 아님):
 
@@ -48,6 +50,7 @@
 | 후드+WARNING 공존 | 정책: WARNING 보존(후드 FP가 실제 위험 지우지 않게). 후드 트랙만 UNKNOWN 강제하려면 별도 승인 | 정책 선택지 |
 | 3번 박스 합침 근본 | 검출/NMS·추적 품질. 후처리는 이미 UNKNOWN 가드 | 학습/추적 후속 |
 | 4번 실영상 유차량 CRITICAL | 해당 구간 샘플로 재실행·육안 확인 | 검증 작업 |
+| 관제보드 ROI 미표시 | 보드가 `roi_polygon_normalized` / camera_config 다각형을 직접 fill | 대시보드 담당 |
 
 ### C. 의도적 보류
 
@@ -62,10 +65,11 @@
 
 ## 3. 바로 다음 실행 순서 (추천)
 
-1. `conda activate safety && python scripts/pack_demo_models.py`
-2. 생성된 `outputs/checkpoints/demo_models_share_*.zip` 팀 공유
-3. `docs/pr-draft-2026-10-07.md`에서 PR 생성
-4. (선택) 설비 오탐·4번 유차량 구간만 육안 검수 리스트 작성
+1. ~~모델 zip·브랜치 팀 공유~~ (완료)
+2. 4번 실영상 재실행으로 timed(무차량 3s / 유차량 5s CRITICAL) 육안 확인
+3. 관제보드: 이벤트 `roi_polygon_normalized` fill 연동 (대시보드 담당)
+4. `docs/pr-draft-2026-10-07.md`로 PR 생성·리뷰
+5. (선택) 설비 오탐 hard-negative 소량 검수
 
 자동 검사:
 
