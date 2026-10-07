@@ -1,0 +1,48 @@
+{
+  "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+  "samples": 106,
+  "profile": {
+    "policy_version": "video1-camera-reviewed-object-v1",
+    "person_source": "coco_person_1280",
+    "vehicle_sources": [
+      "baseline_640",
+      "supplement_640",
+      "supplement_1280"
+    ],
+    "maximum_vehicle_frame_area": 0.35,
+    "ppe_requires_observed_person": true,
+    "renderer": "object_first",
+    "status": "camera_specific_review_not_generalized",
+    "limitation": "Oversized vehicles are retained in diagnostic review proposals, not confirmed as objects. A real vehicle occupying >35% of this image would also require review; do not use this threshold unchanged on a new camera."
+  },
+  "features": {
+    "proximity": {
+      "SAFE": 3,
+      "WARNING": 37,
+      "CRITICAL": 10,
+      "UNKNOWN": 56
+    },
+    "ppe": {
+      "SAFE": 2,
+      "WARNING": 35,
+      "CRITICAL": 0,
+      "UNKNOWN": 69
+    }
+  },
+  "first_critical_seconds": 1.6683333333333332,
+  "warning_ratio": 1.6,
+  "critical_ratio": 0.8,
+  "old_warning_ratio": 1.0,
+  "old_critical_ratio": 0.3,
+  "first_frame_oversized_shelf_proposal_rejected": true,
+  "person_unassociated_heads_retained_in_diagnostics": true,
+  "object_cache_sha256": "3d8f0d7d8c099644e517d691f21252e562c30d145110273b775ddb7a1b6636de",
+  "limitations": [
+    "Independent field performance unproven",
+    "Vehicle/person gaps remain UNKNOWN",
+    "Vehicle area cap is camera-specific and may suppress real oversized vehicles",
+    "Forklift box localization remains imperfect after near collision",
+    "Only 106 sampled frames evaluated; no zero-miss claim"
+  ],
+  "tests_passed": 126
+}

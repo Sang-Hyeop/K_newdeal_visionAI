@@ -15,11 +15,14 @@ def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,
  for p in [polygon,*safe_polygons]:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS['SAFE'] if active and any(p is q for q in safe_polygons) else COLORS[severity],2)
  return frame
 
-def render(frame,groups,zone=None):
+def render(frame,groups,zone=None,detections=None):
  if zone:
   pipeline,row=zone;cfg=getattr(pipeline,'config',{})
   roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2))
+ if detections is not None:
+  draw_review_objects(frame,detections,groups)
  for feature,events in groups.items():
+  if detections is not None:continue
   for e in events:
    color=COLORS[e['severity'] if e.get('observation_status')=='confirmed'else None];box=e.get('person_bbox_xyxy',e.get('head_bbox_xyxy'))
    if feature=='ppe'and e['severity']=='WARNING':
@@ -40,3 +43,26 @@ def render(frame,groups,zone=None):
   status=feature_status(events);color=COLORS[status['severity']];label=f"{feature.upper()}: {status['display_state']}  UNKNOWN={status['unknown_event_count']}"
   cv2.rectangle(frame,(5,y-17),(min(frame.shape[1]-5,660),y+5),(20,20,20),-1);cv2.putText(frame,label,(12,y),0,.55,color,2);y+=27
  return frame
+
+
+def draw_review_objects(frame,detections,groups):
+ """Draw each observed object once; unassociated head proposals stay in diagnostics."""
+ for d in detections:
+  if d['confidence']<.25:continue
+  a,y,c,b=map(int,d['bbox_xyxy']);color=(255,170,0)if d['class']=='person'else(0,210,255)
+  cv2.rectangle(frame,(a,y),(c,b),color,2)
+  cv2.putText(frame,f"{d['class'].upper()} {d['confidence']:.2f}",(a,max(105,y-5)),0,.5,color,1)
+ for e in groups.get('ppe',[]):
+  if not e.get('person_bbox_xyxy'):continue
+  expected='helmeted_head'if e.get('ppe_state')=='helmet_detected'else'no_helmet_head'if e.get('severity')=='WARNING'else None
+  candidates=[h for h in e.get('head_candidates',[])if h['class']==expected]
+  if not candidates:continue
+  h=max(candidates,key=lambda h:h['confidence']);a,y,c,b=map(int,h['bbox_xyxy']);color=COLORS[e['severity']]
+  label='HELMET'if e['severity']=='SAFE'else'NO HELMET? REVIEW'if e['severity']=='WARNING'else'HELMET? UNCONFIRMED'
+  cv2.rectangle(frame,(a,y),(c,b),color,2);cv2.putText(frame,label,(a,max(120,y-5)),0,.43,color,1)
+ pairs=[e for e in groups.get('proximity',[])if e.get('observation_status')=='confirmed'and e.get('person_anchor_xy')]
+ if pairs:
+  e=min(pairs,key=lambda e:e['normalized_image_gap']);a=tuple(map(int,e['person_anchor_xy']));b=tuple(map(int,e['nearest_vehicle_point_xy']));color=COLORS[e['severity']]
+  cv2.line(frame,a,b,color,2);cv2.circle(frame,a,4,color,-1);cv2.circle(frame,b,4,color,-1)
+  cv2.rectangle(frame,(5,73),(min(frame.shape[1]-5,770),101),(20,20,20),-1)
+  cv2.putText(frame,f"GAP {e['image_gap_pixels']:.0f}px / PERSON HEIGHT = {e['normalized_image_gap']:.2f} | {e['severity']}",(12,93),0,.5,color,1)

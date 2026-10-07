@@ -2,8 +2,8 @@
   "camera_id": "forward-proximity",
   "source_name": "1_forklift_forward.mp4",
   "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
-  "warning_ratio": 1.0,
-  "critical_ratio": 0.3,
+  "warning_ratio": 1.6,
+  "critical_ratio": 0.8,
   "hysteresis_ratio": 0.1,
   "max_gap_seconds": 1,
   "distance_unit": "person_height_normalized_image_gap",
@@ -12,5 +12,7 @@
   "detection_scope": "full_frame",
   "distance_mode": "image_plane",
   "zone_roi_used": false,
-  "policy_version": "proximity-full-frame-v2"
+  "policy_version": "proximity-forward-reviewed-v3",
+  "object_review_profile": "configs/video1-object-review.json",
+  "tracker_fuse_score": false
 }

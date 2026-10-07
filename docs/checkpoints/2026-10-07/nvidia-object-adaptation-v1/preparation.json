@@ -1,0 +1,44 @@
+{
+  "counts": {
+    "train": 201,
+    "val": 84,
+    "test": 42
+  },
+  "new_full_frames": 24,
+  "vehicle_context_crops": 33,
+  "background_negatives": 20,
+  "source_video_groups": {
+    "train": [
+      247,
+      263,
+      266,
+      267,
+      271,
+      280,
+      284,
+      285,
+      287,
+      288
+    ],
+    "val": [
+      286
+    ],
+    "test": [
+      293
+    ]
+  },
+  "selected_from_52_sources": true,
+  "limitations": "Same-camera adaptation; tiny new-camera-held-out set; original old test remains. Crop boxes are clipped visible extents.",
+  "label_files_verified": 327,
+  "manifest_sha256": "72473020b84ed043bde8ba9bcd1dc365f1364954b98d77c80fe6db58b97d44df",
+  "initial_weights_sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+  "training_configuration": {
+    "epochs": 8,
+    "freeze": 10,
+    "imgsz": 640,
+    "batch": 4,
+    "learning_rate": 0.0005,
+    "device": "CPU"
+  },
+  "status": "training_started_not_promoted"
+}
