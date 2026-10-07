@@ -37,6 +37,11 @@ class ScenarioTests(unittest.TestCase):
   rule=ScenarioZone(self.config(),(500,500),5);r=rule.update(0,[{'class':'person','confidence':.9,'bbox_xyxy':[20,20,40,80]}],(500,500));self.assertIsNone(r['events'][0]['severity'])
  def test_long_gap_does_not_prove_vehicle_absence(self):
   rule=ScenarioZone(self.config(),(500,500),5);p={'class':'person','confidence':.9,'bbox_xyxy':[380,50,410,100]};f={'class':'forklift','confidence':.9,'bbox_xyxy':[70,70,140,150]};rule.update(0,[p,f],(500,500));r=rule.update(2,[p],(500,500));self.assertIsNone(r['events'][0]['severity'])
+ def test_recent_missing_vehicle_is_unknown_in_display_and_log(self):
+  from src.feature_status import feature_status
+  rule=ScenarioZone(self.config(),(500,500),5);p={'class':'person','confidence':.9,'bbox_xyxy':[380,50,410,100]};f={'class':'forklift','confidence':.9,'bbox_xyxy':[70,70,140,150]}
+  rule.update(0,[p,f],(500,500));r=rule.update(.2,[p],(500,500))
+  self.assertEqual(feature_status(r['events'])['display_state'],'UNKNOWN');self.assertIsNone(r['events'][0]['severity']);self.assertEqual(r['events'][0]['last_risk_severity'],'WARNING')
  def test_adaptation_only_helmet_cannot_claim_safe(self):
   from src.ppe_events import PPEEvents
   policy={'minimum_consecutive_frames':3,'minimum_confirmed_seconds':.4,'maximum_observation_gap_seconds':.45,'minimum_head_confidence':.5,'require_baseline_helmet_confirmation':True};rule=PPEEvents(policy);track={'track_id':'p','bbox_xyxy':[10,10,50,100],'ppe':{'state':'helmet_detected','head_candidates':[{'class':'helmeted_head','confidence':.99,'bbox_xyxy':[15,10,40,35],'model_sources':['helmet_specialist']}]}}

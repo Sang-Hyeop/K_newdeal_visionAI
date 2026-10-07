@@ -1,6 +1,6 @@
 {
-  "status": "videos3_4_and_hood_training_processing",
-  "unit_tests": 107,
+  "status": "video4_and_hood_training_processing",
+  "unit_tests": 108,
   "completed": [
     {
       "video": 1,
@@ -72,21 +72,21 @@
     },
     {
       "video": 7,
-      "summary": "outputs/diagnostics/scenario_plan_v2_final_long/video7/summary.json",
-      "summary_sha256": "6bc1f60a1f1eb85584c2a0ae8ddf542e11e11a5d5bb0b7502a6d6aa79de4a300",
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_long_consistent/video7/summary.json",
+      "summary_sha256": "d3c1a397e4fddd1e6f84967d8082fc59f48f336dc430ea60c686db5b0cc300fd",
       "samples": 870,
       "features": {
         "zone_access": {
           "SAFE": 108,
-          "WARNING": 210,
-          "CRITICAL": 105,
-          "UNKNOWN": 447
+          "WARNING": 150,
+          "CRITICAL": 89,
+          "UNKNOWN": 523
         },
         "zone_dwell": {
           "SAFE": 108,
-          "WARNING": 210,
-          "CRITICAL": 105,
-          "UNKNOWN": 447
+          "WARNING": 150,
+          "CRITICAL": 89,
+          "UNKNOWN": 523
         },
         "proximity": {
           "SAFE": 37,
@@ -101,10 +101,35 @@
           "UNKNOWN": 429
         }
       }
+    },
+    {
+      "video": 3,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video3/summary.json",
+      "summary_sha256": "6be51b2b550a37aaaca9e7958ee4c2c00b5420d8d625647ff63697ef7873a9a7",
+      "samples": 87,
+      "features": {
+        "forklift_proximity": {
+          "SAFE": 5,
+          "WARNING": 13,
+          "CRITICAL": 10,
+          "UNKNOWN": 59
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 39,
+          "CRITICAL": 0,
+          "UNKNOWN": 48
+        }
+      }
     }
   ],
   "reverse_target_sample_counts": {
     "WARNING": 8
   },
-  "caution": "status counts not ground truth recall; hood helper not activated"
+  "caution": "status counts not ground truth recall; hood helper not activated",
+  "limitations": [
+    "video3 some vehicle boxes include both forklifts; image distance approximate",
+    "PPE heads can falsely match equipment; warnings are review candidates",
+    "hood guard prepared but not activated"
+  ]
 }

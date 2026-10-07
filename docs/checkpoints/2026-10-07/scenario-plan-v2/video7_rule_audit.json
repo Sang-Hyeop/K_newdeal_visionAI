@@ -1,0 +1,8 @@
+{
+  "status": "rule_consistency_not_detection_accuracy",
+  "samples": 870,
+  "critical_events": 192,
+  "vehicle_uncertain_events": 1258,
+  "violations": [],
+  "summary_path": "outputs/diagnostics/scenario_plan_v2_final_long_consistent/video7/summary.json"
+}
