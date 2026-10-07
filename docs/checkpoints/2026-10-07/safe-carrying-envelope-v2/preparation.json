@@ -1,0 +1,90 @@
+{
+  "counts": {
+    "train": 729,
+    "val": 88,
+    "test": 50
+  },
+  "new_reviewed_full_frames": 107,
+  "source_groups_by_split": {
+    "train": [
+      "3_tr10",
+      "3_tr11",
+      "3_tr12",
+      "3_tr14",
+      "3_tr15",
+      "3_tr16",
+      "3_tr18",
+      "3_tr19",
+      "3_tr2",
+      "3_tr20",
+      "3_tr21",
+      "3_tr22",
+      "3_tr23",
+      "3_tr25",
+      "3_tr26",
+      "3_tr27",
+      "3_tr29",
+      "3_tr3",
+      "3_tr30",
+      "3_tr31",
+      "3_tr34",
+      "3_tr35",
+      "3_tr36",
+      "3_tr37",
+      "3_tr38",
+      "3_tr39",
+      "3_tr4",
+      "3_tr40",
+      "3_tr42",
+      "3_tr43",
+      "3_tr45",
+      "3_tr46",
+      "3_tr47",
+      "3_tr48",
+      "3_tr5",
+      "3_tr6",
+      "7_tr10",
+      "7_tr11",
+      "7_tr12",
+      "7_tr13",
+      "7_tr14",
+      "7_tr15",
+      "7_tr17",
+      "7_tr19",
+      "7_tr2",
+      "7_tr20",
+      "7_tr21",
+      "7_tr22",
+      "7_tr3",
+      "7_tr4",
+      "7_tr6",
+      "7_tr8"
+    ],
+    "val": [
+      "3_tr17",
+      "3_tr7"
+    ],
+    "test": [
+      "3_tr1",
+      "3_tr9",
+      "7_tr16",
+      "7_tr18"
+    ]
+  },
+  "taxonomy": [
+    "forklift"
+  ],
+  "limits": [
+    "New review uses whole loaded-vehicle envelope anchored by visible parts; carried cargo inside rectangle is not a standalone vehicle",
+    "Same factory camera, clips may overlap recording events",
+    "Original held groups retained; no new-site generalization claim",
+    "Do not replace person or PPE detectors with single-class specialist"
+  ],
+  "status": "correction_training_started_not_promoted",
+  "epochs": 2,
+  "learning_rate": 0.0002,
+  "freeze": 6,
+  "initial_weights": "models/demo_object_adaptation_v1/best.pt",
+  "initial_sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+  "qa": "107 positive annotation overlays visually inspected; 33 ambiguous samples held, not negative"
+}

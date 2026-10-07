@@ -25,12 +25,19 @@ from src.event_contract import export_events
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def main():
- p=argparse.ArgumentParser();p.add_argument('--object-review-cache',type=Path);p.add_argument('--videos',type=int,nargs='+',default=list(range(1,8)));p.add_argument('--output',type=Path,required=True);p.add_argument('--sample-fps',type=float,default=5);p.add_argument('--append',action='store_true');p.add_argument('--reuse-run',type=Path);p.add_argument('--ppe-search',choices=['full_recall','person_context'],default='full_recall');p.add_argument('--hood-auxiliary',action='store_true');p.add_argument('--reuse-hood-run',type=Path);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--forklift-specialist',type=Path);p.add_argument('--object-review-cache',type=Path);p.add_argument('--videos',type=int,nargs='+',default=list(range(1,8)));p.add_argument('--output',type=Path,required=True);p.add_argument('--sample-fps',type=float,default=5);p.add_argument('--append',action='store_true');p.add_argument('--reuse-run',type=Path);p.add_argument('--ppe-search',choices=['full_recall','person_context'],default='full_recall');p.add_argument('--hood-auxiliary',action='store_true');p.add_argument('--reuse-hood-run',type=Path);a=p.parse_args()
  if (a.output.exists()and not a.append)or any((a.output/f'video{n}').exists()for n in a.videos)or len(set(a.videos))!=len(a.videos)or any(n not in range(1,8)for n in a.videos)or not math.isfinite(a.sample_fps)or a.sample_fps<=0:raise ValueError('New output, valid videos and positive FPS required')
+ if a.forklift_specialist and not set(a.videos)<= {2,3}:raise ValueError('Factory specialist comparison is restricted to videos2/3; other camera routes remain unchanged')
  if a.reuse_hood_run and not a.hood_auxiliary:raise ValueError('--reuse-hood-run requires --hood-auxiliary')
  torch.set_num_threads(4);manifest=json.load(open(ROOT/'configs/demo-scenarios.json'));obj=json.load(open(ROOT/'configs/demo-object-model.json'));profile=json.load(open(ROOT/'configs/demo-ppe-model.json'));policy=json.load(open(ROOT/'configs/ppe-recall-review-policy.json'));hood=json.load(open(ROOT/'configs/demo-hood-model.json'))if a.hood_auxiliary else None;paths=[obj['baseline_weights'],obj['supplement_weights'],*profile['weights'].values()];hashes={s:sha(ROOT/s)for s in paths};models=None;ppe=None;person_model=None;hood_model=None;a.output.mkdir(parents=True,exist_ok=a.append);totals=json.load(open(a.output/'manifest.json'))if a.append and (a.output/'manifest.json').exists()else []
  if hood:
   weights=ROOT/hood['weights'];assert sha(weights)==hood['weights_sha256'];hashes[hood['weights']]=hood['weights_sha256']
+ specialist=None
+ if a.forklift_specialist:
+  from src.forklift_specialist_ensemble import supplement_forklift_records
+  specialist_path=a.forklift_specialist.resolve();specialist=YOLO(str(specialist_path))
+  if specialist.names!={0:'forklift'}:raise ValueError('Expected single-class forklift specialist')
+  hashes[str(specialist_path.relative_to(ROOT))]=sha(specialist_path)
  for n in a.videos:
   spec=next(s for s in manifest['scenarios']if s['video_number']==n);source=ROOT/'data/videos'/spec['source_name'];assert sha(source)==spec['source_sha256'];dest=a.output/f'video{n}';dest.mkdir();cap=cv2.VideoCapture(str(source));fps=cap.get(5);h,w=int(cap.get(4)),int(cap.get(3));stride=max(1,round(fps/a.sample_fps));rate=fps/stride;cached={};hood_saved={};use_hood=bool(hood and n in hood['demo_videos'])
   pcfg=json.load(open(ROOT/spec['camera_config']))if spec['camera_config']else None
@@ -73,6 +80,10 @@ def main():
       if review.get('vehicle_weights'):models.supplement=YOLO(ROOT/review['vehicle_weights']) if not getattr(models,'review_weight_loaded',False) else models.supplement;models.review_weight_loaded=True
       if review_person_model is None:review_person_model=YOLO(ROOT/profile['weights']['objects'])
       detections,rejected_objects=predict_review_objects(models,review_person_model,frame,review)
+    if specialist:
+     result=specialist.predict(frame,imgsz=640,conf=.1,device='cpu',verbose=False)[0]
+     proposals=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in result.boxes]
+     detections=supplement_forklift_records(detections,proposals)
     groups={};zrow=zone.update(t,detections,(h,w),cut)if zone else None
     if zrow:mark_uncertain_lane_events(zrow['events'])
     if zrow:
@@ -118,7 +129,7 @@ def main():
       identity=tuple(e.get('forklift_track_ids',[]))or tuple(str(e.get(k,''))for k in['track_id','person_track_id','forklift_track_id']);key=(e['event_type'],identity);state=(e.get('severity'),e.get('observation_status'),e.get('ppe_state'),e.get('inside'),e.get('reason'),e.get('risk_reason'),bool(e.get('hood_evidence')));now[key]=state
       if old.get(key)!=state:transitions.append(e)
      laststate[feature]=now;feature_rows.setdefault(feature,[]).append({'frame_index':idx,'timestamp_seconds':t,'events':events,'transitions':transitions,'scene_id':zrow['scene_id']if zrow else pt.scene,'roi_active':zrow['roi_active']if zrow else True})
-    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review else None)
+    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None)
     if review:
      cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} person-height gap",(12,125),0,.48,(230,230,230),1)
     if use_hood:
@@ -130,12 +141,13 @@ def main():
     if len(rows)%25==0:print(f'video{n}: {len(rows)} samples / {t:.1f}s',flush=True)
     idx+=1
   finally:cap.release();writer.release()
-  (dest/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n'for r in rows));context={'camera_id':f'demo-video{n}','video':source.name,'source_sha256':spec['source_sha256'],'model_version':hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),'config_version':hashlib.sha256(json.dumps({'spec':spec,'camera':pcfg,'ppe_policy':policy,'sample_fps':a.sample_fps,'ppe_search':a.ppe_search,'hood_auxiliary':use_hood,'object_review_profile':review},sort_keys=True).encode()).hexdigest()}
+  (dest/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n'for r in rows));context={'camera_id':f'demo-video{n}','video':source.name,'source_sha256':spec['source_sha256'],'model_version':hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),'config_version':hashlib.sha256(json.dumps({'spec':spec,'camera':pcfg,'ppe_policy':policy,'sample_fps':a.sample_fps,'ppe_search':a.ppe_search,'hood_auxiliary':use_hood,'object_review_profile':review,'forklift_specialist':str(a.forklift_specialist)if specialist else None},sort_keys=True).encode()).hexdigest()}
   if use_hood:context['config_version']='experimental_hood_safe_veto_v1';context['model_version']=hashlib.sha256((context['model_version']+hood['weights_sha256']).encode()).hexdigest()
   counts={}
   for feature,records in feature_rows.items():
    directory=dest/feature;directory.mkdir();export_events(records,directory/'events_v1.jsonl',feature=feature,context=context);counts[feature]={state:sum(feature_status(r['events'])['display_state']==state for r in records)for state in['SAFE','WARNING','CRITICAL','UNKNOWN']}
   summary={'source':str(source),'source_sha256':spec['source_sha256'],'video_number':n,'samples':len(rows),'processed_fps':rate,'ppe_enabled':True,'ppe_cache_reused':bool(cached),'all_real_inference_reused_from':str(a.reuse_run)if a.reuse_run else None,'ppe_search':a.ppe_search,'features':counts,'context':context,'model_hashes':hashes,'camera_config':pcfg,'limitations':['Sampled frames; zero misses not proven for unseen scenes','No calibrated meter distance','Hoods and missing detections remain UNKNOWN','PPE WARNING is review candidate, not verified violation','ROI floor proxies and geometry require review; scene cuts disable ROI','Hood auxiliary is experimental; Normal never means PPE safe']}
+  if specialist:summary.update(forklift_specialist=str(a.forklift_specialist),status='experimental_not_promoted',all_real_inference_reused_from=None,ppe_inference_reused_from=str(a.reuse_run)if a.reuse_run else None)
   if review:summary.update(object_review_profile=review,object_review_cache=str(a.object_review_cache)if a.object_review_cache else None)
   if use_hood:summary.update(status='experimental_not_promoted',hood_auxiliary=True,hood_weights_sha256=hood['weights_sha256'],hood_samples=hood_samples,hood_safe_vetoes=hood_vetoes)
   (dest/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');totals.append(summary);(a.output/'manifest.json').write_text(json.dumps(totals,indent=2)+'\n');print(f'video{n} complete',flush=True)
