@@ -1,0 +1,20 @@
+{
+  "train": {
+    "checked_files": 1148,
+    "changed": []
+  },
+  "val": {
+    "checked_files": 164,
+    "changed": []
+  },
+  "test": {
+    "checked_files": 80,
+    "changed": []
+  },
+  "jpeg_exact_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "checked_at": "during epoch 7; image and label files immutable during YOLO training"
+}

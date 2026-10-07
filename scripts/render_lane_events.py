@@ -25,7 +25,7 @@ def main():
    for vehicle in r.get('forklifts',[]):
     a,b,c,d=map(int,vehicle['detected_bbox_xyxy']);cv2.rectangle(frame,(a,b),(c,d),(255,180,0),2)
    cv2.rectangle(frame,(0,0),(920,115),(30,30,30),-1)
-   cv2.putText(frame,'VEHICLE LANE: PEDESTRIAN WARNING / VEHICLE PRESENT CRITICAL',(15,25),cv2.FONT_HERSHEY_SIMPLEX,.58,(0,190,255),2)
+   cv2.putText(frame,'DEMO-ADAPTED / LANE WARNING / VEHICLE PRESENT CRITICAL' if s.get('demo_training_exposed') else 'VEHICLE LANE: PEDESTRIAN WARNING / VEHICLE PRESENT CRITICAL',(15,25),cv2.FONT_HERSHEY_SIMPLEX,.58,(0,190,255),2)
    state=r['vehicle_lane_state']['state'] if r.get('vehicle_lane_state') else 'ROI INACTIVE'
    cv2.putText(frame,f"t={r['timestamp_seconds']:.2f}s {state}",(15,55),cv2.FONT_HERSHEY_SIMPLEX,.65,(0,190,255),2)
    cv2.putText(frame,'NO DETECTION IS NOT PROOF OF ABSENCE / IMAGE ANCHORS',(15,88),cv2.FONT_HERSHEY_SIMPLEX,.55,(180,180,180),2)

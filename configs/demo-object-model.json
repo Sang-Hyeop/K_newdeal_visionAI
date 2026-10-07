@@ -1,0 +1,109 @@
+{
+  "status": "selected_recall_first_demo_bundle",
+  "general_baseline_kept": "configs/selected-object-model.json",
+  "baseline_weights": "models/pilot_v16_related/person_forklift.pt",
+  "baseline_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "supplement_weights": "models/demo_object_adaptation_v1/best.pt",
+  "supplement_sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+  "model_version": "c2ee91adc16d3358aef899b1a8192251f925cdce9713ff52b7d9591557a95e1a",
+  "classes": {
+    "0": "person",
+    "1": "forklift"
+  },
+  "inference_rule": "retain every baseline box >=0.25; supplement non-overlapping same-class regions, then remaining weak proposals; no lower detection/tracking threshold",
+  "imgsz_proximity": 640,
+  "imgsz_zone": 1280,
+  "sample_fps": 5,
+  "distance_unit": "image_plane; not calibrated meters",
+  "training_exposed_sources": [
+    "2_forklift_back.mp4",
+    "4_hazard_zone_dwell.mp4"
+  ],
+  "target_verification": {
+    "reference_frames": 8,
+    "all_reference_vehicle_worker_tracks": true,
+    "dense_frames": 36,
+    "dense_vehicle_detected": 36,
+    "dense_vehicle_tracked": 36,
+    "dense_worker_tracked": 36,
+    "same_vehicle_id": true,
+    "actual_pair_warning_frames": 36,
+    "dense_reference": "8 reviewed boxes; intermediate reference boxes interpolated; diagnostic, not independent ground truth"
+  },
+  "fixed_tests": {
+    "scaled": {
+      "person": {
+        "TP": 38,
+        "FP": 11,
+        "FN": 2,
+        "precision": 0.7755102040816326,
+        "recall": 0.95
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 8,
+        "FN": 2,
+        "precision": 0.8260869565217391,
+        "recall": 0.95
+      }
+    },
+    "old": {
+      "person": {
+        "TP": 16,
+        "FP": 2,
+        "FN": 2,
+        "precision": 0.8888888888888888,
+        "recall": 0.8888888888888888
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 1,
+        "FN": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1.0
+      }
+    }
+  },
+  "baseline_fixed_tests": {
+    "scaled": {
+      "person": {
+        "TP": 36,
+        "FP": 9,
+        "FN": 4,
+        "precision": 0.8,
+        "recall": 0.9
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 7,
+        "FN": 2,
+        "precision": 0.8444444444444444,
+        "recall": 0.95
+      }
+    },
+    "old": {
+      "person": {
+        "TP": 13,
+        "FP": 1,
+        "FN": 5,
+        "precision": 0.9285714285714286,
+        "recall": 0.7222222222222222
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 1,
+        "FN": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1.0
+      }
+    }
+  },
+  "ppe": "unchanged general PPE; demo PPE adaptation not promoted",
+  "limitations": [
+    "Two object models required; single replacement regresses old forklift detection",
+    "Some equipment/person false positives remain; fixed-test FP slightly increases",
+    "Training-exposed scene success is not proof of unseen-site zero misses",
+    "PPE bare-head misses remain",
+    "No front/rear orientation or camera-to-meter calibration"
+  ]
+}
