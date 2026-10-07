@@ -16,4 +16,4 @@ python scripts/run_zone_dwell_video.py --source data/videos/4_hazard_zone_dwell.
 
 팀 전달 형식은 `docs/detection-output-contract.md`를 참고한다. `events_v1.jsonl`은 로그 저장, `observations_v1.jsonl`은 최신 프레임 상태 배너에 사용한다. SAFE는 해당 관측 대상·기능의 규칙 결과이며 전체 현장 안전이 아니다. 침범CRITICAL을 짧은 체류SAFE가 덮어쓰면 안 된다.
 
-검증 결과는 `docs/checkpoints/2026-10-07/event-module-v1.json`에 기록했다. 36개 테스트와3개 실제 영상 실행/공통출력 검사를 통과했지만, 후진 차량 미탐·설비의 사람 오탐·임시ROI 문제는 남아 있다. 현재 구역 영상에는 실제 금지표지와 권한 규칙이 확인되지 않아 불법/무단 침범의 정답 데이터로 사용할 수 없다. PPE 공통 이벤트 연결은 아직 수행하지 않았다.
+검증 결과는 `docs/checkpoints/2026-10-07/event-module-v1.json`에 기록했다. 36개 테스트와3개 실제 영상 실행/공통출력 검사를 통과했지만, 후진 차량 미탐·설비의 사람 오탐·임시ROI 문제는 남아 있다. 현재 구역 영상에는 실제 금지표지와 권한 규칙이 확인되지 않아 불법/무단 침범의 정답 데이터로 사용할 수 없다. PPE 공통 이벤트는 후속 단계에서 연결했다. 최신 결과는 docs/checkpoints/2026-10-07/ppe-event-integration.json에 있으며, 미착용 검출은 아직 미완성이다.

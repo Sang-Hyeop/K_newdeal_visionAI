@@ -27,5 +27,6 @@
   "max_gap_seconds": 1.0,
   "anchor": "bbox_bottom_center_proxy",
   "access_enabled": true,
-  "approach_margin_ratio": 0.05
+  "approach_margin_ratio": 0.05,
+  "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
 }

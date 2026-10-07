@@ -31,7 +31,7 @@
 
 ## 실제 연결된 공통 출력 v1 (2026-10-07)
 
-근접 실행기와 구역 접근·체류 실행기는 이제 `events_v1.jsonl`(상태 전환 로그) 및 `observations_v1.jsonl`(현재 프레임 관측)을 출력한다. 예전 `events.jsonl`/`observations.jsonl`은 개별 기능 형식으로 함께 보존한다. PPE 공통 출력은 아직 연결하지 않았다.
+근접 실행기와 구역 접근·체류 실행기는 이제 `events_v1.jsonl`(상태 전환 로그) 및 `observations_v1.jsonl`(현재 프레임 관측)을 출력한다. 예전 `events.jsonl`/`observations.jsonl`은 개별 기능 형식으로 함께 보존한다. PPE도 아래 후속 단계에서 공통 출력에 연결했다.
 
 공통 이벤트의 구현 필드: schema_version=1.0, event_id, camera_id, video, source_sha256, timestamp_seconds, event_type, severity, observation_status, track_ids, evidence, model_version(가중치SHA256), config_version(설정SHA256), scope. event_id는 동일 입력·버전·내용의 재실행 시 동일하며 백엔드 중복 저장 방지에 사용할 수 있다.
 
@@ -44,3 +44,13 @@
 - 구역 침범이 CRITICAL이고 체류가 SAFE인 경우 서로 다른 기능의 판정이다. 대시보드는 체류SAFE로 침범CRITICAL을 덮어쓰면 안 된다.
 
 팀 검사용 실제 영상 출력 위치: outputs/diagnostics/events_separated_v1/{forward,reverse,zone}. 현재 시연용 개발 출력이며 알림 개수는 정확도 지표가 아니다.
+
+## PPE 연결 및 상태 배너 (2026-10-07 후속)
+
+`validate_tracked_ppe.py`도 동일 공통출력을 생성한다. event_type=ppe가 추가됐으며 model_version은 사람 모델과PPE모델의 해시를 합친 버전이다. evidence에 ppe_state, 사람박스, 머리 후보, 이유, violation_status가 포함된다.
+
+PPE는 신뢰도0.5 이상 같은 종류 머리 근거가3개 연속 관측이면서0.4초 이상 이어져야 상태를 확정한다. 착용근거는SAFE, 미착용후보는WARNING(검토 필요), 누락·충돌·미확정은null이다. 후드·가림을 고려해 미착용 후보를 검증된 위반으로 격상하지 않는다. 누락·장면 전환 시 확인을 새로 시작한다.
+
+관측파일의 feature_status는 기능별 배너용 집계다. CRITICAL > WARNING을 유지하고, 위험·주의가 없더라도 미확인 대상이 섞이면SAFE로 만들지 않는다. 대상이 없는 경우UNKNOWN이다. coverage와unknown_event_count를 함께 표시한다. 이 상태도 전체 현장 안전이나 검출 정확도를 보증하지 않는다.
+
+5/6번 실제 영상에서 미착용 주의는0개였다. 안전모가 없는 실제 사람도 있어 미착용 감지 성공으로 보고하지 않는다. 공통 출력 연결과 검출 성능 완료는 구분한다.

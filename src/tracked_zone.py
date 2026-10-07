@@ -47,7 +47,7 @@ class TrackedZone:
         for event in events:
             if event['observation_status']=='confirmed' and event['track_id'] in observed_boxes:event['person_bbox_xyxy']=observed_boxes[event['track_id']]
             event.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],
-                         scope='configured_demo_dwell_rule' if event['event_type']=='zone_dwell' else 'configured_demo_access_rule',roi_purpose=self.config['roi_purpose'])
+                         scope='configured_demo_dwell_rule' if event['event_type']=='zone_dwell' else 'configured_demo_access_rule',roi_purpose=self.config['roi_purpose'],roi_review_status=self.config.get('roi_review_status','not_reviewed'))
             key=(event['event_type'],event['track_id']);current_ids.add(key)
             state=(event['severity'],event['observation_status'],event['inside'])
             if self.previous.get(key)!=state:transitions.append(event.copy())

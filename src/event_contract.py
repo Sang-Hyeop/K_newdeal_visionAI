@@ -1,5 +1,6 @@
 """Common event envelopes for observed rule transitions, never global safety."""
 import hashlib,json,math
+from .feature_status import feature_status
 
 def normalize_event(event,*,camera_id,video,source_sha256,model_version,config_version):
     timestamp=event['timestamp_seconds'];severity=event.get('severity');status=event.get('observation_status','unconfirmed')
@@ -7,7 +8,7 @@ def normalize_event(event,*,camera_id,video,source_sha256,model_version,config_v
     if severity not in {None,'SAFE','WARNING','CRITICAL'}:raise ValueError('Invalid severity')
     if status not in {'confirmed','unconfirmed'}:raise ValueError('Invalid observation status')
     if status!='confirmed':severity=None
-    kind={'person_forklift_proximity':'proximity','zone_access':'zone_access','zone_dwell':'zone_dwell','feature_status':'status'}.get(event['event_type'])
+    kind={'person_forklift_proximity':'proximity','zone_access':'zone_access','zone_dwell':'zone_dwell','feature_status':'status','ppe':'ppe'}.get(event['event_type'])
     if kind is None:raise ValueError('Unsupported event type')
     identities=[event[k] for k in ['track_id','person_track_id','forklift_track_id'] if k in event]
     evidence={k:v for k,v in event.items() if k not in {'event_type','timestamp_seconds','severity','observation_status','camera_id'}}
@@ -22,7 +23,7 @@ def export_events(records,path,*,feature,context):
     """Export transitions; emit UNKNOWN on empty observations, not SAFE."""
     result=[];snapshots=[];previous_empty=None
     for record in records:
-        snapshots.append({'schema_version':'1.0','feature':feature,'camera_id':context['camera_id'],'video':context['video'],'timestamp_seconds':record['timestamp_seconds'],'frame_index':record.get('frame_index'),'scene_id':record.get('scene_id',0),'global_safety_status':'not_evaluated','observation_status':'confirmed' if any(e.get('observation_status')=='confirmed' for e in record['events']) else 'unconfirmed','events':[normalize_event(e,**context) for e in record['events']]})
+        snapshots.append({'schema_version':'1.0','feature':feature,'camera_id':context['camera_id'],'video':context['video'],'timestamp_seconds':record['timestamp_seconds'],'frame_index':record.get('frame_index'),'scene_id':record.get('scene_id',0),'global_safety_status':'not_evaluated','feature_status':feature_status(record['events']),'observation_status':'confirmed' if any(e.get('observation_status')=='confirmed' for e in record['events']) else 'unconfirmed','events':[normalize_event(e,**context) for e in record['events']]})
         for event in record['transitions']:result.append(normalize_event(event,**context))
         empty=not record['events']
         state=(empty,record.get('scene_id',0),record.get('roi_active',True))

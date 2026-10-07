@@ -1,12 +1,14 @@
 """Saved-video person tracking and per-observation PPE; no risk decisions."""
 from pathlib import Path
-import argparse,json,os,sys,math
+import argparse,json,os,sys,math,hashlib
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 os.environ.setdefault('YOLO_CONFIG_DIR',str(ROOT/'outputs/runtime/yolo'))
 import cv2,numpy as np,torch
 from ultralytics import YOLO
 from src.person_tracker import PersonTracker
+from src.ppe_events import PPEEvents
+from src.event_contract import export_events
 from src.ppe_person_crop import infer_person_ppe
 
 
@@ -14,6 +16,7 @@ def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','objects-weights','ppe-weights']:
         p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--config',type=Path,default=ROOT/'configs/ppe-event-policy.json')
     p.add_argument('--sample-fps',type=float,default=5)
     p.add_argument('--scene-cut-threshold',type=float,default=.18)
     args=p.parse_args()
@@ -29,6 +32,7 @@ def main():
     args.output.mkdir(parents=True)
     writer=cv2.VideoWriter(str(args.output/'tracked_ppe.mp4'),cv2.VideoWriter_fourcc(*'mp4v'),fps/stride,(w,h))
     if not writer.isOpened():raise RuntimeError('Cannot open video writer')
+    policy=json.loads(args.config.read_text());event_rule=PPEEvents(policy)
     records=[];idx=0;previous=None
     try:
         while True:
@@ -45,7 +49,7 @@ def main():
                 raw=ppe.predict(frame,conf=.25,imgsz=640,device='cpu',verbose=False)[0]
                 heads=[{'class':raw.names[int(b.cls.item())],'confidence':float(b.conf.item()),
                         'bbox_xyxy':b.xyxy[0].tolist()} for b in raw.boxes]
-                observations=infer_person_ppe(frame,[t['bbox_xyxy'] for t in tracks],ppe,full_frame_heads=heads)
+                observations=infer_person_ppe(frame,[t['detected_bbox_xyxy'] for t in tracks],ppe,full_frame_heads=heads)
                 canvas=frame.copy()
                 for track,observation in zip(tracks,observations):
                     observation['track_id']=track['track_id'];track['ppe']=observation
@@ -54,16 +58,23 @@ def main():
                     cv2.putText(canvas,f"ID {track['track_id']} {observation['state']}",(x1,max(50,y1-5)),cv2.FONT_HERSHEY_SIMPLEX,.5,color,1)
                     for head in observation['head_candidates']:
                         a,b,c,d=map(int,head['bbox_xyxy']);cv2.rectangle(canvas,(a,b),(c,d),(255,200,0),1)
-                cv2.putText(canvas,'TRACKING PILOT / RISK NOT EVALUATED',(15,25),cv2.FONT_HERSHEY_SIMPLEX,.65,(0,200,255),2)
+                events,transitions=event_rule.update(timestamp,tracks,missing,scene_cut=cut)
+                for event in events:
+                    if 'person_bbox_xyxy' in event:
+                        x,y,x2,y2=map(int,event['person_bbox_xyxy']);cv2.rectangle(canvas,(x,y),(x2,y2),{'SAFE':(0,180,0),'WARNING':(0,190,255),None:(160,160,160)}[event['severity']],2);cv2.putText(canvas,event['severity'] or 'UNKNOWN',(x,max(75,y+20)),cv2.FONT_HERSHEY_SIMPLEX,.55,(0,180,0) if event['severity']=='SAFE' else (0,190,255),2)
+                cv2.putText(canvas,'PPE CANDIDATES / NOT VERIFIED VIOLATIONS',(15,25),cv2.FONT_HERSHEY_SIMPLEX,.65,(0,200,255),2)
                 if cut:cv2.putText(canvas,'SCENE RESET',(15,50),cv2.FONT_HERSHEY_SIMPLEX,.65,(0,80,255),2)
                 writer.write(canvas)
                 if len(records) in {0,25,50}:cv2.imwrite(str(args.output/f'preview_{len(records):04d}.jpg'),canvas)
                 records.append({'timestamp_seconds':timestamp,'frame_index':idx,'scene_id':tracker.scene,
                                 'scene_cut':cut,'scene_cut_score':cut_score,'tracks':tracks,
-                                'missing_tracks':missing,'risk_status':'not_evaluated'})
+                                'missing_tracks':missing,'events':events,'transitions':transitions,'risk_status':'not_evaluated'})
             idx+=1
     finally:cap.release();writer.release()
     (args.output/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in records))
+    model_hash={key:hashlib.sha256(path.read_bytes()).hexdigest() for key,path in [('objects',args.objects_weights),('ppe',args.ppe_weights)]}
+    context={'camera_id':args.source.stem+'-ppe','video':args.source.name,'source_sha256':hashlib.sha256(args.source.read_bytes()).hexdigest(),'model_version':hashlib.sha256(json.dumps(model_hash,sort_keys=True).encode()).hexdigest(),'config_version':hashlib.sha256(json.dumps({'policy':policy,'sample_fps':args.sample_fps,'cut_threshold':args.scene_cut_threshold},sort_keys=True).encode()).hexdigest()}
+    export_events(records,args.output/'events_v1.jsonl',feature='ppe',context=context)
     counts={};spans={}
     for record in records:
         for track in record['tracks']:
@@ -76,7 +87,7 @@ def main():
              'scene_cut_threshold':args.scene_cut_threshold,'tracker':'ByteTrack; high .25 / low .1 / gap 1 second',
              'weights':{'objects':str(args.objects_weights.resolve()),'ppe':str(args.ppe_weights.resolve())},
              'accuracy':'Not measured; ID ground truth absent; track count is not headcount',
-             'limitations':'Automatic scene-cut heuristic can miss cuts; no temporal PPE confirmation, ROI or alerts'}
+             'model_hashes':model_hash,'policy':policy,'event_context':context,'limitations':'No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN'}
     (args.output/'summary.json').write_text(json.dumps(summary,indent=2));print(json.dumps(summary))
 
 
