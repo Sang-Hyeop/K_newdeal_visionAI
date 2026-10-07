@@ -1,0 +1,51 @@
+{
+  "status": "share_outside_git",
+  "purpose": "Team needs these weights to run demo scenarios; not stored in Git",
+  "branch": "fix/proximity-detection-audit",
+  "runbook": "docs/demo-scenario-runbook-2026-10-07.md",
+  "files": [
+    {
+      "path": "models/pilot_v16_related/person_forklift.pt",
+      "present": true,
+      "bytes": 5359045,
+      "sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125"
+    },
+    {
+      "path": "models/demo_object_adaptation_v1/best.pt",
+      "present": true,
+      "bytes": 5358789,
+      "sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16"
+    },
+    {
+      "path": "models/hoodie_auxiliary_v1/hoodie.pt",
+      "present": true,
+      "bytes": 5382661,
+      "sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371"
+    },
+    {
+      "path": "models/pretrained/yolo26n.pt",
+      "present": true,
+      "bytes": 5544453,
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "path": "models/pilot_v3_ppe_expansion/ppe.pt",
+      "present": true,
+      "bytes": 5383109,
+      "sha256": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09"
+    },
+    {
+      "path": "models/demo_ppe_interpolated_v4/ppe.pt",
+      "present": true,
+      "bytes": 5378999,
+      "sha256": "744353b3fe2520795580e92905a5b9d04e4dc6788b037231b9d5c464c92fcf1b"
+    },
+    {
+      "path": "models/demo_ppe_failure_context_v3/last.pt",
+      "present": true,
+      "bytes": 5382085,
+      "sha256": "9d6f0cd3de768d788a6ba042ed93e56b6448ef29cdb135220baed4a73000acbe"
+    }
+  ],
+  "missing": []
+}

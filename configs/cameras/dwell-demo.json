@@ -47,5 +47,8 @@
   "vehicle_missing_hold_seconds": 1.0,
   "access_enabled": true,
   "approach_margin_ratio": 0.005,
-  "policy_version": "vehicle_lane_conditional_v1"
+  "policy_version": "vehicle_lane_conditional_v1",
+  "roi_alpha_safe": 0.15,
+  "roi_alpha_alert": 0.2,
+  "vehicle_presence_scope": "same_yellow_line_vehicle_lane"
 }

@@ -1,0 +1,50 @@
+{
+  "training_status": "completed_4_epochs",
+  "models": "experimental supplements; baseline retained",
+  "weights_backup": [
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/best.pt",
+      "bytes": 5382085,
+      "sha256": "0a8f2857a4a6f9585167bfe92e6e08cf3fef66024ec45b0ee2950cde3d660ddf"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/last.pt",
+      "bytes": 5382085,
+      "sha256": "9d6f0cd3de768d788a6ba042ed93e56b6448ef29cdb135220baed4a73000acbe"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/results.csv",
+      "bytes": 668,
+      "sha256": "06c3d7e52b86ee4bb162121e6973aa71faffc8d841013ebb59809425bc8f30c9"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/args.yaml",
+      "bytes": 1850,
+      "sha256": "6ba7a49a4857531807388644cf953533afea01f0d9793c57506e9b0a44b49f44"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/dataset_snapshot.json",
+      "bytes": 85716,
+      "sha256": "48e9265453f3e8abf55bafdd26d152e751a1534e298b0d64f22475b8baa76601"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/test_metrics.json",
+      "bytes": 784,
+      "sha256": "94d68ad29b87d3534e34b6cf05c1f419a03ae5ebf9524a6d3eeff375215fef2e"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/interpolated_ppe.pt",
+      "bytes": 5378999,
+      "sha256": "744353b3fe2520795580e92905a5b9d04e4dc6788b037231b9d5c464c92fcf1b"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_failure_context_v3_final/interpolated_provenance.json",
+      "bytes": 580,
+      "sha256": "458aa22e25226f195554655fce3791afb06cab893f69679427973e6e1ab7568a"
+    }
+  ],
+  "selected_candidate": "equal interpolation + helmet-only last checkpoint + original baseline",
+  "reference_result": "52/52 exact reviewed heads, confidence0.5/IoU0.5",
+  "single_pt_general_goal_complete": false,
+  "independent_accuracy": false
+}

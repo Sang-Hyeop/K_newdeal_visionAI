@@ -1,0 +1,2940 @@
+[
+  {
+    "index": 0,
+    "frame_index": 156,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      464.11279296875,
+      204.1668701171875,
+      523.4555053710938,
+      360.59814453125
+    ],
+    "person_confidence": 0.7437820434570312,
+    "review_crop_xyxy": [
+      455,
+      188,
+      532,
+      360
+    ],
+    "image": "target_000.jpg",
+    "native_crop_resolution": [
+      77,
+      172
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        19.73125,
+        16.626666666666665,
+        41.628125,
+        51.026666666666664
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        82,
+        29,
+        173,
+        89
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 1,
+    "frame_index": 168,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      504.5042724609375,
+      202.16046142578125,
+      562.099609375,
+      358.0174560546875
+    ],
+    "person_confidence": 0.8504788279533386,
+    "review_crop_xyxy": [
+      495,
+      186,
+      570,
+      358
+    ],
+    "image": "target_001.jpg",
+    "native_crop_resolution": [
+      75,
+      172
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        15.0,
+        16.053333333333335,
+        36.328125,
+        55.61333333333334
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        64,
+        28,
+        155,
+        97
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 2,
+    "frame_index": 180,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      539.695556640625,
+      201.16114807128906,
+      617.5458984375,
+      360.2965087890625
+    ],
+    "person_confidence": 0.8545275330543518,
+    "review_crop_xyxy": [
+      528,
+      185,
+      629,
+      360
+    ],
+    "image": "target_002.jpg",
+    "native_crop_resolution": [
+      101,
+      175
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        20.0,
+        15.0,
+        47.0,
+        52.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        63.366336633663366,
+        25.714285714285715,
+        148.9108910891089,
+        89.14285714285714
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 3,
+    "frame_index": 180,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      450.3277893066406,
+      193.6959991455078,
+      505.9828186035156,
+      360.87969970703125
+    ],
+    "person_confidence": 0.7985316514968872,
+    "review_crop_xyxy": [
+      441,
+      176,
+      514,
+      360
+    ],
+    "image": "target_003.jpg",
+    "native_crop_resolution": [
+      73,
+      184
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        12.090625,
+        16.56,
+        44.028125,
+        66.24
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        53,
+        27,
+        193,
+        108
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 4,
+    "frame_index": 192,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      486.93231201171875,
+      193.79168701171875,
+      555.3257446289062,
+      366.14874267578125
+    ],
+    "person_confidence": 0.8518166542053223,
+    "review_crop_xyxy": [
+      476,
+      176,
+      565,
+      366
+    ],
+    "image": "target_004.jpg",
+    "native_crop_resolution": [
+      89,
+      190
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        17.24375,
+        17.1,
+        52.2875,
+        68.4
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        62,
+        27,
+        188,
+        108
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 5,
+    "frame_index": 192,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      445.55438232421875,
+      141.830322265625,
+      490.28912353515625,
+      287.9559020996094
+    ],
+    "person_confidence": 0.7998535633087158,
+    "review_crop_xyxy": [
+      438,
+      127,
+      496,
+      287
+    ],
+    "image": "target_005.jpg",
+    "native_crop_resolution": [
+      58,
+      160
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        13.95625,
+        17.6,
+        35.525,
+        53.333333333333336
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        77,
+        33,
+        196,
+        100
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 6,
+    "frame_index": 192,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      570.5072021484375,
+      196.90390014648438,
+      627.6041259765625,
+      361.8329162597656
+    ],
+    "person_confidence": 0.7335456609725952,
+    "review_crop_xyxy": [
+      561,
+      180,
+      636,
+      361
+    ],
+    "image": "target_006.jpg",
+    "native_crop_resolution": [
+      75,
+      181
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        21.328125,
+        18.703333333333333,
+        39.84375,
+        59.126666666666665
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        91,
+        31,
+        170,
+        98
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 8,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      589.035400390625,
+      200.23883056640625,
+      656.051025390625,
+      384.2164306640625
+    ],
+    "person_confidence": 0.8815842270851135,
+    "review_crop_xyxy": [
+      578,
+      181,
+      666,
+      384
+    ],
+    "image": "target_008.jpg",
+    "native_crop_resolution": [
+      88,
+      203
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        22.0,
+        17.593333333333334,
+        53.35,
+        73.08
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        80,
+        26,
+        194,
+        108
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 9,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      507.3329772949219,
+      199.75906372070312,
+      577.51708984375,
+      387.7922668457031
+    ],
+    "person_confidence": 0.8682416677474976,
+    "review_crop_xyxy": [
+      496,
+      180,
+      588,
+      387
+    ],
+    "image": "target_009.jpg",
+    "native_crop_resolution": [
+      92,
+      207
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        24.4375,
+        16.56,
+        54.625,
+        66.93
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        85,
+        24,
+        190,
+        97
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 10,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      448.47076416015625,
+      167.7838592529297,
+      499.21270751953125,
+      343.71099853515625
+    ],
+    "person_confidence": 0.6687999367713928,
+    "review_crop_xyxy": [
+      440,
+      150,
+      506,
+      343
+    ],
+    "image": "target_010.jpg",
+    "native_crop_resolution": [
+      66,
+      193
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        12.16875,
+        19.3,
+        40.21875,
+        63.69
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        59,
+        30,
+        195,
+        99
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 11,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      219.44078063964844,
+      587.919189453125,
+      422.10400390625,
+      720.0
+    ],
+    "person_confidence": 0.6335181593894958,
+    "review_crop_xyxy": [
+      189,
+      574,
+      452,
+      720
+    ],
+    "image": "target_011.jpg",
+    "native_crop_resolution": [
+      263,
+      146
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        32.875,
+        7.3,
+        128.2125,
+        80.3
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        40,
+        15,
+        156,
+        165
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 12,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      487.44073486328125,
+      143.52175903320312,
+      524.3265991210938,
+      245.75418090820312
+    ],
+    "person_confidence": 0.4573945701122284,
+    "review_crop_xyxy": [
+      481,
+      133,
+      529,
+      245
+    ],
+    "image": "target_012.jpg",
+    "native_crop_resolution": [
+      48,
+      112
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        11.1,
+        11.573333333333334,
+        31.2,
+        40.32
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        74,
+        31,
+        208,
+        108
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 13,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      486.885009765625,
+      143.70309448242188,
+      525.8826904296875,
+      331.69378662109375
+    ],
+    "person_confidence": 0.42946216464042664,
+    "review_crop_xyxy": [
+      481,
+      124,
+      531,
+      331
+    ],
+    "image": "target_013.jpg",
+    "native_crop_resolution": [
+      50,
+      207
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        14.0625,
+        15.87,
+        34.21875,
+        71.76
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        90,
+        23,
+        219,
+        104
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 14,
+    "frame_index": 204,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      449.49658203125,
+      161.08224487304688,
+      522.6552734375,
+      343.3457336425781
+    ],
+    "person_confidence": 0.4172132909297943,
+    "review_crop_xyxy": [
+      438,
+      142,
+      533,
+      343
+    ],
+    "image": "target_014.jpg",
+    "native_crop_resolution": [
+      95,
+      201
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        14.84375,
+        25.46,
+        43.640625,
+        64.99
+      ],
+      [
+        0,
+        56.109375,
+        0.0,
+        74.8125,
+        30.15
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        50,
+        38,
+        147,
+        97
+      ],
+      [
+        0,
+        189,
+        0,
+        252,
+        45
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 16,
+    "frame_index": 216,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      280.856201171875,
+      485.7130432128906,
+      454.3800048828125,
+      715.6788330078125
+    ],
+    "person_confidence": 0.8743023872375488,
+    "review_crop_xyxy": [
+      254,
+      462,
+      480,
+      715
+    ],
+    "image": "target_016.jpg",
+    "native_crop_resolution": [
+      226,
+      253
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        12.7125,
+        7.59,
+        99.58125,
+        97.82666666666667
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        18,
+        9,
+        141,
+        116
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 17,
+    "frame_index": 216,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      612.589111328125,
+      207.55502319335938,
+      681.49169921875,
+      410.4657287597656
+    ],
+    "person_confidence": 0.8658319115638733,
+    "review_crop_xyxy": [
+      602,
+      187,
+      691,
+      410
+    ],
+    "image": "target_017.jpg",
+    "native_crop_resolution": [
+      89,
+      223
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        26.421875,
+        17.84,
+        59.51875,
+        69.87333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        95,
+        24,
+        214,
+        94
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 18,
+    "frame_index": 216,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      526.83642578125,
+      203.948974609375,
+      603.3642578125,
+      403.40106201171875
+    ],
+    "person_confidence": 0.8569684624671936,
+    "review_crop_xyxy": [
+      515,
+      184,
+      614,
+      403
+    ],
+    "image": "target_018.jpg",
+    "native_crop_resolution": [
+      99,
+      219
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        20.41875,
+        16.79,
+        56.925,
+        73.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        66,
+        23,
+        184,
+        100
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 19,
+    "frame_index": 216,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      484.1731262207031,
+      163.57791137695312,
+      547.40625,
+      341.0682678222656
+    ],
+    "person_confidence": 0.7939139008522034,
+    "review_crop_xyxy": [
+      474,
+      145,
+      556,
+      341
+    ],
+    "image": "target_019.jpg",
+    "native_crop_resolution": [
+      82,
+      196
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        19.475,
+        18.946666666666665,
+        50.48125,
+        64.68
+      ],
+      [
+        0,
+        68.675,
+        62.06666666666667,
+        82.0,
+        115.64
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        76,
+        29,
+        197,
+        99
+      ],
+      [
+        0,
+        268,
+        95,
+        320,
+        177
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 20,
+    "frame_index": 216,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      443.201171875,
+      161.1866455078125,
+      504.1578369140625,
+      319.89813232421875
+    ],
+    "person_confidence": 0.7329112887382507,
+    "review_crop_xyxy": [
+      434,
+      145,
+      513,
+      319
+    ],
+    "image": "target_020.jpg",
+    "native_crop_resolution": [
+      79,
+      174
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        11.35625,
+        15.08,
+        38.759375,
+        53.36
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        46,
+        26,
+        157,
+        92
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 21,
+    "frame_index": 216,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      528.2110595703125,
+      141.63282775878906,
+      560.4893798828125,
+      244.6043243408203
+    ],
+    "person_confidence": 0.5366860628128052,
+    "review_crop_xyxy": [
+      523,
+      131,
+      565,
+      244
+    ],
+    "image": "target_021.jpg",
+    "native_crop_resolution": [
+      42,
+      113
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        8.53125,
+        9.416666666666666,
+        30.45,
+        41.43333333333333
+      ],
+      [
+        0,
+        18.9,
+        72.32,
+        42.0,
+        113.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        65,
+        25,
+        232,
+        110
+      ],
+      [
+        0,
+        144,
+        192,
+        320,
+        300
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 22,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      327.0228271484375,
+      413.8116455078125,
+      506.5374755859375,
+      715.7764892578125
+    ],
+    "person_confidence": 0.8908172845840454,
+    "review_crop_xyxy": [
+      300,
+      383,
+      533,
+      715
+    ],
+    "image": "target_022.jpg",
+    "native_crop_resolution": [
+      233,
+      332
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        25.484375,
+        26.56,
+        114.315625,
+        120.62666666666667
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        35,
+        24,
+        157,
+        109
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 23,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      534.537109375,
+      213.9993896484375,
+      614.327880859375,
+      429.90338134765625
+    ],
+    "person_confidence": 0.8574815392494202,
+    "review_crop_xyxy": [
+      522,
+      192,
+      626,
+      429
+    ],
+    "image": "target_023.jpg",
+    "native_crop_resolution": [
+      104,
+      237
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        23.075,
+        18.17,
+        66.95,
+        79.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        71,
+        23,
+        206,
+        100
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 24,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      622.259033203125,
+      214.93063354492188,
+      693.602783203125,
+      436.2475891113281
+    ],
+    "person_confidence": 0.8555067181587219,
+    "review_crop_xyxy": [
+      611,
+      192,
+      704,
+      436
+    ],
+    "image": "target_024.jpg",
+    "native_crop_resolution": [
+      93,
+      244
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        24.121875,
+        19.52,
+        63.065625,
+        78.89333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        83,
+        24,
+        217,
+        97
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 25,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      480.41412353515625,
+      155.90277099609375,
+      524.5973510742188,
+      319.24810791015625
+    ],
+    "person_confidence": 0.7978017926216125,
+    "review_crop_xyxy": [
+      473,
+      139,
+      531,
+      319
+    ],
+    "image": "target_025.jpg",
+    "native_crop_resolution": [
+      58,
+      180
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        7.06875,
+        14.4,
+        33.89375,
+        62.4
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        39,
+        24,
+        187,
+        104
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 26,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      518.444580078125,
+      163.6962432861328,
+      556.329345703125,
+      334.97491455078125
+    ],
+    "person_confidence": 0.6147158741950989,
+    "review_crop_xyxy": [
+      512,
+      146,
+      562,
+      334
+    ],
+    "image": "target_026.jpg",
+    "native_crop_resolution": [
+      50,
+      188
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        5.0,
+        13.16,
+        43.75,
+        65.17333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        32,
+        21,
+        280,
+        104
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 27,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      561.5654296875,
+      139.0361328125,
+      614.452880859375,
+      281.12860107421875
+    ],
+    "person_confidence": 0.430117130279541,
+    "review_crop_xyxy": [
+      553,
+      124,
+      622,
+      281
+    ],
+    "image": "target_027.jpg",
+    "native_crop_resolution": [
+      69,
+      157
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        18.328125,
+        14.653333333333334,
+        42.909375,
+        48.67
+      ],
+      [
+        0,
+        0.0,
+        91.06,
+        31.05,
+        152.81333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        85,
+        28,
+        199,
+        93
+      ],
+      [
+        0,
+        0,
+        174,
+        144,
+        292
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 29,
+    "frame_index": 228,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      520.71630859375,
+      163.93670654296875,
+      557.350830078125,
+      262.0862121582031
+    ],
+    "person_confidence": 0.27667567133903503,
+    "review_crop_xyxy": [
+      515,
+      154,
+      562,
+      262
+    ],
+    "image": "target_029.jpg",
+    "native_crop_resolution": [
+      47,
+      108
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        5.434375,
+        10.44,
+        35.103125,
+        41.76
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        37,
+        29,
+        239,
+        116
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 30,
+    "frame_index": 240,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      362.831787109375,
+      355.4161376953125,
+      502.9365234375,
+      707.2823486328125
+    ],
+    "person_confidence": 0.8793659806251526,
+    "review_crop_xyxy": [
+      341,
+      320,
+      523,
+      707
+    ],
+    "image": "target_030.jpg",
+    "native_crop_resolution": [
+      182,
+      387
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        17.0625,
+        21.93,
+        96.11875,
+        105.78
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        30,
+        17,
+        169,
+        82
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 31,
+    "frame_index": 240,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      524.6903076171875,
+      222.58981323242188,
+      610.8187255859375,
+      445.9038391113281
+    ],
+    "person_confidence": 0.8786309957504272,
+    "review_crop_xyxy": [
+      511,
+      200,
+      623,
+      445
+    ],
+    "image": "target_031.jpg",
+    "native_crop_resolution": [
+      112,
+      245
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        26.95,
+        16.333333333333332,
+        67.2,
+        69.41666666666667
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        77,
+        20,
+        192,
+        85
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 32,
+    "frame_index": 240,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      611.9818115234375,
+      224.37554931640625,
+      693.7921142578125,
+      455.3726806640625
+    ],
+    "person_confidence": 0.8644423484802246,
+    "review_crop_xyxy": [
+      599,
+      201,
+      706,
+      455
+    ],
+    "image": "target_032.jpg",
+    "native_crop_resolution": [
+      107,
+      254
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        26.415625,
+        19.473333333333333,
+        69.884375,
+        80.43333333333334
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        79,
+        23,
+        209,
+        95
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 33,
+    "frame_index": 240,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      599.6256103515625,
+      137.8310546875,
+      637.3199462890625,
+      277.29034423828125
+    ],
+    "person_confidence": 0.7192246913909912,
+    "review_crop_xyxy": [
+      593,
+      123,
+      642,
+      277
+    ],
+    "image": "target_033.jpg",
+    "native_crop_resolution": [
+      49,
+      154
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        13.321875,
+        11.806666666666667,
+        37.515625,
+        52.873333333333335
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        87,
+        23,
+        245,
+        103
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 34,
+    "frame_index": 240,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      506.9393615722656,
+      156.72323608398438,
+      551.8170166015625,
+      286.27532958984375
+    ],
+    "person_confidence": 0.677757203578949,
+    "review_crop_xyxy": [
+      500,
+      143,
+      558,
+      286
+    ],
+    "image": "target_034.jpg",
+    "native_crop_resolution": [
+      58,
+      143
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        12.6875,
+        12.393333333333333,
+        41.14375,
+        51.48
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        70,
+        26,
+        227,
+        108
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 35,
+    "frame_index": 240,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      547.1837158203125,
+      160.67694091796875,
+      592.6341552734375,
+      272.0388488769531
+    ],
+    "person_confidence": 0.5241590142250061,
+    "review_crop_xyxy": [
+      540,
+      149,
+      599,
+      272
+    ],
+    "image": "target_035.jpg",
+    "native_crop_resolution": [
+      59,
+      123
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        14.565625,
+        9.43,
+        44.61875,
+        43.87
+      ],
+      [
+        0,
+        3.134375,
+        70.52,
+        35.215625,
+        123.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        79,
+        23,
+        242,
+        107
+      ],
+      [
+        0,
+        17,
+        172,
+        191,
+        300
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 36,
+    "frame_index": 252,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      532.08349609375,
+      229.83154296875,
+      620.11083984375,
+      477.9552001953125
+    ],
+    "person_confidence": 0.8871119022369385,
+    "review_crop_xyxy": [
+      518,
+      205,
+      633,
+      477
+    ],
+    "image": "target_036.jpg",
+    "native_crop_resolution": [
+      115,
+      272
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        21.921875,
+        20.85333333333333,
+        70.796875,
+        93.38666666666667
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        61,
+        23,
+        197,
+        103
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 37,
+    "frame_index": 252,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      376.61517333984375,
+      318.6649169921875,
+      506.94769287109375,
+      666.5194702148438
+    ],
+    "person_confidence": 0.8650275468826294,
+    "review_crop_xyxy": [
+      357,
+      283,
+      526,
+      666
+    ],
+    "image": "target_037.jpg",
+    "native_crop_resolution": [
+      169,
+      383
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        6.865625,
+        37.02333333333333,
+        84.5,
+        111.07
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        13,
+        29,
+        160,
+        87
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 38,
+    "frame_index": 252,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      614.63916015625,
+      231.55419921875,
+      697.8076171875,
+      491.9486083984375
+    ],
+    "person_confidence": 0.8619768619537354,
+    "review_crop_xyxy": [
+      602,
+      205,
+      710,
+      491
+    ],
+    "image": "target_038.jpg",
+    "native_crop_resolution": [
+      108,
+      286
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        29.7,
+        23.833333333333332,
+        67.8375,
+        106.77333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        88,
+        25,
+        201,
+        112
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 39,
+    "frame_index": 252,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      426.37359619140625,
+      164.08920288085938,
+      504.73712158203125,
+      323.354248046875
+    ],
+    "person_confidence": 0.8460209369659424,
+    "review_crop_xyxy": [
+      414,
+      148,
+      516,
+      323
+    ],
+    "image": "target_039.jpg",
+    "native_crop_resolution": [
+      102,
+      175
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        16.575,
+        16.916666666666668,
+        44.625,
+        51.333333333333336
+      ],
+      [
+        0,
+        76.81875,
+        99.16666666666667,
+        102.0,
+        152.83333333333334
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        52,
+        29,
+        140,
+        88
+      ],
+      [
+        0,
+        241,
+        170,
+        320,
+        262
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 40,
+    "frame_index": 252,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      572.2491455078125,
+      155.62030029296875,
+      620.3089599609375,
+      311.9432678222656
+    ],
+    "person_confidence": 0.790554940700531,
+    "review_crop_xyxy": [
+      565,
+      139,
+      627,
+      311
+    ],
+    "image": "target_040.jpg",
+    "native_crop_resolution": [
+      62,
+      172
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        18.40625,
+        12.613333333333333,
+        46.1125,
+        54.46666666666667
+      ],
+      [
+        0,
+        0.0,
+        83.13333333333334,
+        24.99375,
+        153.08
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        95,
+        22,
+        238,
+        95
+      ],
+      [
+        0,
+        0,
+        145,
+        129,
+        267
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 41,
+    "frame_index": 252,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      527.69287109375,
+      154.74993896484375,
+      569.03515625,
+      282.9710388183594
+    ],
+    "person_confidence": 0.7333151698112488,
+    "review_crop_xyxy": [
+      521,
+      141,
+      575,
+      282
+    ],
+    "image": "target_041.jpg",
+    "native_crop_resolution": [
+      54,
+      141
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        15.525,
+        12.69,
+        39.31875,
+        45.59
+      ],
+      [
+        0,
+        31.725,
+        84.13,
+        54.0,
+        141.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        92,
+        27,
+        233,
+        97
+      ],
+      [
+        0,
+        188,
+        179,
+        320,
+        300
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 43,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      622.4095458984375,
+      234.91461181640625,
+      707.4752197265625,
+      498.72027587890625
+    ],
+    "person_confidence": 0.8602428436279297,
+    "review_crop_xyxy": [
+      609,
+      208,
+      720,
+      498
+    ],
+    "image": "target_043.jpg",
+    "native_crop_resolution": [
+      111,
+      290
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        29.83125,
+        29.0,
+        70.7625,
+        115.03333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        86,
+        30,
+        204,
+        119
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 44,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      377.6258544921875,
+      303.5616455078125,
+      524.1852416992188,
+      650.3106689453125
+    ],
+    "person_confidence": 0.8568419814109802,
+    "review_crop_xyxy": [
+      355,
+      268,
+      546,
+      650
+    ],
+    "image": "target_044.jpg",
+    "native_crop_resolution": [
+      191,
+      382
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        7.759375,
+        35.653333333333336,
+        94.30625,
+        127.33333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        13,
+        28,
+        158,
+        100
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 45,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      648.0301513671875,
+      143.169677734375,
+      702.7052001953125,
+      278.6910095214844
+    ],
+    "person_confidence": 0.8462988138198853,
+    "review_crop_xyxy": [
+      639,
+      129,
+      710,
+      278
+    ],
+    "image": "target_045.jpg",
+    "native_crop_resolution": [
+      71,
+      149
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        17.528125,
+        13.906666666666666,
+        39.49375,
+        48.17666666666667
+      ],
+      [
+        1,
+        10.20625,
+        103.30666666666667,
+        40.159375,
+        149.0
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        79,
+        28,
+        178,
+        97
+      ],
+      [
+        1,
+        46,
+        208,
+        181,
+        300
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 46,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      448.97674560546875,
+      160.25631713867188,
+      514.6832885742188,
+      330.7662048339844
+    ],
+    "person_confidence": 0.8297968506813049,
+    "review_crop_xyxy": [
+      439,
+      143,
+      524,
+      330
+    ],
+    "image": "target_046.jpg",
+    "native_crop_resolution": [
+      85,
+      187
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        21.515625,
+        15.583333333333334,
+        48.609375,
+        53.60666666666667
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        81,
+        25,
+        183,
+        86
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 47,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      584.2813720703125,
+      153.11782836914062,
+      647.5260009765625,
+      322.8742370605469
+    ],
+    "person_confidence": 0.8153405785560608,
+    "review_crop_xyxy": [
+      574,
+      136,
+      657,
+      322
+    ],
+    "image": "target_047.jpg",
+    "native_crop_resolution": [
+      83,
+      186
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        29.309375,
+        17.98,
+        54.209375,
+        57.66
+      ],
+      [
+        1,
+        67.696875,
+        88.04,
+        83.0,
+        141.36
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        113,
+        29,
+        209,
+        93
+      ],
+      [
+        1,
+        261,
+        142,
+        320,
+        228
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 48,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      486.210205078125,
+      232.2248077392578,
+      618.982177734375,
+      500.14691162109375
+    ],
+    "person_confidence": 0.7998579740524292,
+    "review_crop_xyxy": [
+      466,
+      205,
+      638,
+      500
+    ],
+    "image": "target_048.jpg",
+    "native_crop_resolution": [
+      172,
+      295
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        66.1125,
+        22.616666666666667,
+        116.1,
+        100.3
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        123,
+        23,
+        216,
+        102
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 49,
+    "frame_index": 264,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      536.5516967773438,
+      152.16287231445312,
+      586.0034790039062,
+      249.80197143554688
+    ],
+    "person_confidence": 0.6919292211532593,
+    "review_crop_xyxy": [
+      529,
+      142,
+      593,
+      249
+    ],
+    "image": "target_049.jpg",
+    "native_crop_resolution": [
+      64,
+      107
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        27.8,
+        12.126666666666667,
+        50.0,
+        49.93333333333333
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        139,
+        34,
+        250,
+        140
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 50,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      490.11883544921875,
+      229.328125,
+      609.2797241210938,
+      508.92034912109375
+    ],
+    "person_confidence": 0.8624546527862549,
+    "review_crop_xyxy": [
+      472,
+      201,
+      627,
+      508
+    ],
+    "image": "target_050.jpg",
+    "native_crop_resolution": [
+      155,
+      307
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        37.296875,
+        24.56,
+        96.390625,
+        111.54333333333334
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        77,
+        24,
+        199,
+        109
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 51,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      656.965087890625,
+      142.70135498046875,
+      721.379150390625,
+      322.98944091796875
+    ],
+    "person_confidence": 0.8578998446464539,
+    "review_crop_xyxy": [
+      647,
+      124,
+      731,
+      322
+    ],
+    "image": "target_051.jpg",
+    "native_crop_resolution": [
+      84,
+      198
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        21.2625,
+        18.48,
+        44.625,
+        54.78
+      ],
+      [
+        1,
+        0.0,
+        111.54,
+        16.8,
+        168.96
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        81,
+        28,
+        170,
+        83
+      ],
+      [
+        1,
+        0,
+        169,
+        64,
+        256
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 52,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      380.42169189453125,
+      297.166748046875,
+      521.2572631835938,
+      656.5595703125
+    ],
+    "person_confidence": 0.8536823391914368,
+    "review_crop_xyxy": [
+      359,
+      261,
+      542,
+      656
+    ],
+    "image": "target_052.jpg",
+    "native_crop_resolution": [
+      183,
+      395
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        16.584375,
+        38.18333333333333,
+        92.071875,
+        131.66666666666666
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        29,
+        29,
+        161,
+        100
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 53,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      469.11541748046875,
+      161.15753173828125,
+      519.4074096679688,
+      323.3756103515625
+    ],
+    "person_confidence": 0.8214854001998901,
+    "review_crop_xyxy": [
+      461,
+      144,
+      526,
+      323
+    ],
+    "image": "target_053.jpg",
+    "native_crop_resolution": [
+      65,
+      179
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        14.828125,
+        19.093333333333334,
+        42.25,
+        72.19666666666667
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        73,
+        32,
+        208,
+        121
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 54,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      598.134033203125,
+      152.50228881835938,
+      658.375244140625,
+      312.5212097167969
+    ],
+    "person_confidence": 0.7888434529304504,
+    "review_crop_xyxy": [
+      589,
+      136,
+      667,
+      312
+    ],
+    "image": "target_054.jpg",
+    "native_crop_resolution": [
+      78,
+      176
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        21.45,
+        16.426666666666666,
+        48.2625,
+        57.49333333333333
+      ],
+      [
+        1,
+        42.9,
+        99.73333333333333,
+        71.41875,
+        153.12
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        88,
+        28,
+        198,
+        98
+      ],
+      [
+        1,
+        176,
+        170,
+        293,
+        261
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 55,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      537.8533325195312,
+      153.60198974609375,
+      590.3406372070312,
+      292.11553955078125
+    ],
+    "person_confidence": 0.7585388422012329,
+    "review_crop_xyxy": [
+      529,
+      139,
+      598,
+      292
+    ],
+    "image": "target_055.jpg",
+    "native_crop_resolution": [
+      69,
+      153
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        0,
+        20.053125,
+        14.79,
+        45.928125,
+        49.98
+      ],
+      [
+        0,
+        0.0,
+        86.19,
+        30.61875,
+        145.86
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        0,
+        93,
+        29,
+        213,
+        98
+      ],
+      [
+        0,
+        0,
+        169,
+        142,
+        286
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  },
+  {
+    "index": 56,
+    "frame_index": 276,
+    "source": "5_PPE_Helmet.mp4",
+    "person_bbox_xyxy": [
+      608.3323974609375,
+      237.81275939941406,
+      704.1417236328125,
+      517.264404296875
+    ],
+    "person_confidence": 0.7541664242744446,
+    "review_crop_xyxy": [
+      593,
+      209,
+      718,
+      517
+    ],
+    "image": "target_056.jpg",
+    "native_crop_resolution": [
+      125,
+      308
+    ],
+    "status": "accepted",
+    "not_training_labels": false,
+    "review": "v3 native coordinate-grid QA: helmet crown and face included; neighbouring heads corrected; no vest labels.",
+    "boxes_xyxy": [
+      [
+        1,
+        32.03125,
+        26.69333333333333,
+        80.46875,
+        109.85333333333334
+      ]
+    ],
+    "reference_boxes_xyxy": [
+      [
+        1,
+        82,
+        26,
+        206,
+        107
+      ]
+    ],
+    "coordinate_reference": [
+      320,
+      300
+    ],
+    "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+    "split": "train",
+    "training_eligible": true,
+    "repeats": 2
+  }
+]

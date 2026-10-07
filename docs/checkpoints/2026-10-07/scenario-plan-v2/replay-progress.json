@@ -1,0 +1,168 @@
+{
+  "status": "all_seven_sampled_videos_complete",
+  "unit_tests": 108,
+  "completed": [
+    {
+      "video": 1,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video1/summary.json",
+      "summary_sha256": "d572495d7c3e01eeeb9c192528cf7381fb3bc6d50d3389e3e863ce1b4edda1bc",
+      "samples": 106,
+      "features": {
+        "proximity": {
+          "SAFE": 2,
+          "WARNING": 26,
+          "CRITICAL": 3,
+          "UNKNOWN": 75
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 58,
+          "CRITICAL": 0,
+          "UNKNOWN": 48
+        }
+      }
+    },
+    {
+      "video": 2,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video2/summary.json",
+      "summary_sha256": "8d919aef283522e8278cabc54ea0c5914ac3debc581385ff4d33b11a6ace058a",
+      "samples": 106,
+      "features": {
+        "proximity": {
+          "SAFE": 0,
+          "WARNING": 22,
+          "CRITICAL": 0,
+          "UNKNOWN": 84
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 40,
+          "CRITICAL": 0,
+          "UNKNOWN": 66
+        }
+      }
+    },
+    {
+      "video": 5,
+      "summary": "outputs/diagnostics/scenario_plan_v2_conservative_ppe/video5/summary.json",
+      "summary_sha256": "ef662f278b12b555d2e9599f662823015b370875d6c07e6641266092ac92347c",
+      "samples": 58,
+      "features": {
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 32,
+          "CRITICAL": 0,
+          "UNKNOWN": 26
+        }
+      }
+    },
+    {
+      "video": 6,
+      "summary": "outputs/diagnostics/scenario_plan_v2_conservative_ppe/video6/summary.json",
+      "summary_sha256": "002c2200e0a0476dff37240ff1bbbe4bb46181c0a0b287c6c2f8be0bde7f88b9",
+      "samples": 58,
+      "features": {
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 42,
+          "CRITICAL": 0,
+          "UNKNOWN": 16
+        }
+      }
+    },
+    {
+      "video": 7,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_long_consistent/video7/summary.json",
+      "summary_sha256": "d3c1a397e4fddd1e6f84967d8082fc59f48f336dc430ea60c686db5b0cc300fd",
+      "samples": 870,
+      "features": {
+        "zone_access": {
+          "SAFE": 108,
+          "WARNING": 150,
+          "CRITICAL": 89,
+          "UNKNOWN": 523
+        },
+        "zone_dwell": {
+          "SAFE": 108,
+          "WARNING": 150,
+          "CRITICAL": 89,
+          "UNKNOWN": 523
+        },
+        "proximity": {
+          "SAFE": 37,
+          "WARNING": 138,
+          "CRITICAL": 5,
+          "UNKNOWN": 690
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 441,
+          "CRITICAL": 0,
+          "UNKNOWN": 429
+        }
+      }
+    },
+    {
+      "video": 3,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video3/summary.json",
+      "summary_sha256": "6be51b2b550a37aaaca9e7958ee4c2c00b5420d8d625647ff63697ef7873a9a7",
+      "samples": 87,
+      "features": {
+        "forklift_proximity": {
+          "SAFE": 5,
+          "WARNING": 13,
+          "CRITICAL": 10,
+          "UNKNOWN": 59
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 39,
+          "CRITICAL": 0,
+          "UNKNOWN": 48
+        }
+      }
+    },
+    {
+      "video": 4,
+      "summary": "outputs/diagnostics/scenario_plan_v2_final_short/video4/summary.json",
+      "summary_sha256": "88ecb519d0d7fcb8b705276f396702b6f4061fab0225b55f79d9578d942a4fd1",
+      "samples": 92,
+      "features": {
+        "zone_access": {
+          "SAFE": 1,
+          "WARNING": 80,
+          "CRITICAL": 0,
+          "UNKNOWN": 11
+        },
+        "zone_dwell": {
+          "SAFE": 12,
+          "WARNING": 80,
+          "CRITICAL": 0,
+          "UNKNOWN": 0
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 90,
+          "CRITICAL": 0,
+          "UNKNOWN": 2
+        }
+      }
+    }
+  ],
+  "reverse_target_sample_counts": {
+    "WARNING": 8
+  },
+  "caution": "status counts not ground truth recall; base 1-7 runs without hood; hood opt-in verified separately",
+  "limitations": [
+    "video3 some vehicle boxes include both forklifts; image distance approximate",
+    "PPE heads can falsely match equipment; warnings are review candidates",
+    "hood auxiliary is experimental_not_promoted; activate with --hood-auxiliary on videos 5/6"
+  ],
+  "hood_auxiliary": {
+    "config": "configs/demo-hood-model.json",
+    "activation": "scripts/run_demo_scenarios.py --hood-auxiliary",
+    "verified_run": "outputs/diagnostics/scenario_plan_v2_hood_active",
+    "backup_index": "outputs/checkpoints/scenario_plan_v2_hood_active/sha256.json",
+    "checkpoint": "docs/checkpoints/2026-10-07/hoodie-auxiliary-v1/activation.json"
+  }
+}

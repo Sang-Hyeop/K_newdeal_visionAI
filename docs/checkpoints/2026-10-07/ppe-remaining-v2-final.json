@@ -1,0 +1,74 @@
+{
+  "status": "experimental_not_promoted_single_model",
+  "reason": "Fixed 9-image helmet TP regression 3 -> 0; must retain baseline evidence. Native neighbouring head label corrections are in v3.",
+  "training_epochs": 10,
+  "backup_files": [
+    {
+      "path": "outputs/checkpoints/ppe_remaining_v2_final/best.pt",
+      "bytes": 5382789,
+      "sha256": "00bc82d6392cb6f2fc00635954d6e8b4fe318871476ac4095e9accbc2f4c7f8f"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_remaining_v2_final/last.pt",
+      "bytes": 5382789,
+      "sha256": "3c450b1615c61131f23d9f85f1298567fd51d1dd6800944932b14cde45183552"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_remaining_v2_final/results.csv",
+      "bytes": 1387,
+      "sha256": "a60388bb59bf57b9e7402c63998b6c7e6021a9e940c3410324f7f3f4eaa3aacb"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_remaining_v2_final/args.yaml",
+      "bytes": 1821,
+      "sha256": "81ec4274c4f212fc4f8f7041ae93267d9dc900943e96588f2e79c7a0478acbfe"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_remaining_v2_final/dataset_snapshot.json",
+      "bytes": 75667,
+      "sha256": "eb92c648e99b8ea1a9b7f1ea9fe32d26cc696e375614a320954995a793401b85"
+    },
+    {
+      "path": "outputs/checkpoints/ppe_remaining_v2_final/test_metrics.json",
+      "bytes": 779,
+      "sha256": "7aa019975b93959b75290b634810e0b249a5836b4c5a67741ac94ae7ed41ead3"
+    }
+  ],
+  "crop_review_metrics": {
+    "best": {
+      "0": {
+        "TP": 27,
+        "FN": 16,
+        "FP": 0
+      },
+      "1": {
+        "TP": 17,
+        "FN": 4,
+        "FP": 0
+      }
+    },
+    "last": {
+      "0": {
+        "TP": 28,
+        "FN": 15,
+        "FP": 0
+      },
+      "1": {
+        "TP": 17,
+        "FN": 4,
+        "FP": 0
+      }
+    }
+  },
+  "exact_primary_head_metrics": {
+    "0": {
+      "TP": 18,
+      "FN": 17
+    },
+    "1": {
+      "TP": 17,
+      "FN": 1
+    }
+  },
+  "group_overlap": "ppe-remaining-v2-group-audit.json; no independent generalization claim"
+}

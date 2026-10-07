@@ -1,0 +1,7574 @@
+{
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_interpolated_v4/ppe.pt",
+  "helmet_specialist_weights": "outputs/training/ppe_failure_context_v3/weights/last.pt",
+  "object_imgsz": 1280,
+  "baseline_ppe_weights": "models/pilot_v3_ppe_expansion/ppe.pt",
+  "references": "data/training_review/ppe_remaining_v2/global_target_references_v3.json",
+  "confidence": 0.5,
+  "iou": 0.5,
+  "training_exposed": true,
+  "scope": "exact reviewed primary-head source frames, not exhaustive whole-video ground truth",
+  "metrics": {
+    "0": {
+      "TP": 34,
+      "FN": 0
+    },
+    "1": {
+      "TP": 18,
+      "FN": 0
+    }
+  },
+  "records": [
+    {
+      "frame_index": 156,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.31333377957344055,
+          "bbox_xyxy": [
+            468.080810546875,
+            201.5291748046875,
+            501.158935546875,
+            242.15869140625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6362113356590271,
+          "bbox_xyxy": [
+            470.9864501953125,
+            202.12811279296875,
+            500.2261047363281,
+            239.4525146484375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.5701943635940552,
+          "bbox_xyxy": [
+            855.5664367675781,
+            0.0,
+            957.3535461425781,
+            94.48355102539062
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            720,
+            0,
+            1040,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.26886045932769775,
+          "bbox_xyxy": [
+            266.81834411621094,
+            61.18902587890625,
+            375.2666931152344,
+            151.41217041015625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.31333377957344055,
+          "bbox_xyxy": [
+            468.080810546875,
+            201.5291748046875,
+            501.158935546875,
+            242.15869140625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6362113356590271,
+          "bbox_xyxy": [
+            470.9864501953125,
+            202.12811279296875,
+            500.2261047363281,
+            239.4525146484375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9417316317558289,
+          "bbox_xyxy": [
+            473.5538921356201,
+            202.85079669952393,
+            497.9656677246094,
+            242.9796905517578
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            474.73125,
+            204.62666666666667,
+            496.628125,
+            239.02666666666667
+          ],
+          "person_reference_bbox": [
+            464.11279296875,
+            204.1668701171875,
+            523.4555053710938,
+            360.59814453125
+          ],
+          "target_index": 0,
+          "detected": true,
+          "best_iou": 0.768925075870708
+        }
+      ],
+      "people": [
+        [
+          464.49041748046875,
+          204.349609375,
+          523.0734252929688,
+          360.46759033203125
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.26106321811676025,
+          "bbox_xyxy": [
+            758.1738891601562,
+            0.0,
+            800.0,
+            83.55419921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33301979303359985,
+          "bbox_xyxy": [
+            762.5587768554688,
+            0.0,
+            800.0,
+            80.56024169921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.373418927192688,
+          "bbox_xyxy": [
+            480.0,
+            400.0,
+            553.8384170532227,
+            536.2164001464844
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            400,
+            800,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 168,
+      "heads": [
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.3294878900051117,
+          "bbox_xyxy": [
+            500.5068054199219,
+            211.18472290039062,
+            562.785400390625,
+            345.2959289550781
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.41010791063308716,
+          "bbox_xyxy": [
+            588.2415771484375,
+            309.4603271484375,
+            625.2645263671875,
+            351.662353515625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.30818137526512146,
+          "bbox_xyxy": [
+            506.91619873046875,
+            198.95574951171875,
+            537.8024291992188,
+            245.1163330078125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6692848205566406,
+          "bbox_xyxy": [
+            508.48980712890625,
+            199.4730224609375,
+            535.5297241210938,
+            236.15365600585938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3510499894618988,
+          "bbox_xyxy": [
+            511.89856910705566,
+            198.09579467773438,
+            534.1455459594727,
+            226.40792846679688
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.30818137526512146,
+          "bbox_xyxy": [
+            506.91619873046875,
+            198.95574951171875,
+            537.8024291992188,
+            245.1163330078125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6692848205566406,
+          "bbox_xyxy": [
+            508.48980712890625,
+            199.4730224609375,
+            535.5297241210938,
+            236.15365600585938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3510499894618988,
+          "bbox_xyxy": [
+            511.89856910705566,
+            198.09579467773438,
+            534.1455459594727,
+            226.40792846679688
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8527193665504456,
+          "bbox_xyxy": [
+            509.160400390625,
+            200.49506282806396,
+            534.2000350952148,
+            240.31906509399414
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            510.0,
+            202.05333333333334,
+            531.328125,
+            241.61333333333334
+          ],
+          "person_reference_bbox": [
+            504.5042724609375,
+            202.16046142578125,
+            562.099609375,
+            358.0174560546875
+          ],
+          "target_index": 1,
+          "detected": true,
+          "best_iou": 0.7963993179292321
+        }
+      ],
+      "people": [
+        [
+          504.517578125,
+          202.01405334472656,
+          562.1318359375,
+          358.1729736328125
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.29166701436042786,
+          "bbox_xyxy": [
+            480.0,
+            400.0,
+            553.7812118530273,
+            537.0288238525391
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            400,
+            800,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 180,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.37851691246032715,
+          "bbox_xyxy": [
+            457.97515869140625,
+            192.88128662109375,
+            487.51025390625,
+            233.9010009765625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9088423848152161,
+          "bbox_xyxy": [
+            457.9031524658203,
+            192.3988800048828,
+            485.8437042236328,
+            238.0751495361328
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2828570604324341,
+          "bbox_xyxy": [
+            593.1144485473633,
+            304.34889221191406,
+            627.3616333007812,
+            337.2403259277344
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6177142858505249,
+          "bbox_xyxy": [
+            546.6999473571777,
+            200.0185775756836,
+            577.7961273193359,
+            242.54019927978516
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.37851691246032715,
+          "bbox_xyxy": [
+            457.97515869140625,
+            192.88128662109375,
+            487.51025390625,
+            233.9010009765625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9088423848152161,
+          "bbox_xyxy": [
+            457.9031524658203,
+            192.3988800048828,
+            485.8437042236328,
+            238.0751495361328
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7987974286079407,
+          "bbox_xyxy": [
+            456.52622413635254,
+            192.65946006774902,
+            485.35351943969727,
+            240.05352783203125
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8074600696563721,
+          "bbox_xyxy": [
+            457.3615016937256,
+            193.94450569152832,
+            483.5790100097656,
+            238.40629959106445
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            548.0,
+            200.0,
+            575.0,
+            237.0
+          ],
+          "person_reference_bbox": [
+            539.695556640625,
+            201.16114807128906,
+            617.5458984375,
+            360.2965087890625
+          ],
+          "target_index": 2,
+          "detected": true,
+          "best_iou": 0.75485893223423
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            453.090625,
+            192.56,
+            485.028125,
+            242.24
+          ],
+          "person_reference_bbox": [
+            450.3277893066406,
+            193.6959991455078,
+            505.9828186035156,
+            360.87969970703125
+          ],
+          "target_index": 3,
+          "detected": true,
+          "best_iou": 0.8431687229381195
+        }
+      ],
+      "people": [
+        [
+          539.6287841796875,
+          200.88555908203125,
+          617.424560546875,
+          360.22760009765625
+        ],
+        [
+          450.16888427734375,
+          193.55088806152344,
+          505.93280029296875,
+          361.1986083984375
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33946746587753296,
+          "bbox_xyxy": [
+            480.0,
+            400.0,
+            553.1961364746094,
+            535.4443664550781
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            400,
+            800,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 192,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9074105024337769,
+          "bbox_xyxy": [
+            497.0885009765625,
+            191.2281494140625,
+            525.5428466796875,
+            239.240966796875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4695129692554474,
+          "bbox_xyxy": [
+            456.2672119140625,
+            140.09686279296875,
+            476.26788330078125,
+            170.91033935546875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9074105024337769,
+          "bbox_xyxy": [
+            497.0885009765625,
+            191.2281494140625,
+            525.5428466796875,
+            239.240966796875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7871285080909729,
+          "bbox_xyxy": [
+            496.4206295013428,
+            189.67090702056885,
+            527.5071792602539,
+            242.5349884033203
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8313816785812378,
+          "bbox_xyxy": [
+            497.13078117370605,
+            192.1302433013916,
+            525.2870025634766,
+            240.1568603515625
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4695129692554474,
+          "bbox_xyxy": [
+            456.2672119140625,
+            140.09686279296875,
+            476.26788330078125,
+            170.91033935546875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6782650351524353,
+          "bbox_xyxy": [
+            453.9674081802368,
+            139.29178142547607,
+            478.11414337158203,
+            181.8182487487793
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8713448643684387,
+          "bbox_xyxy": [
+            454.75182914733887,
+            141.3906021118164,
+            476.53303146362305,
+            175.49591064453125
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8988932967185974,
+          "bbox_xyxy": [
+            582.4662570953369,
+            196.2316131591797,
+            609.1721458435059,
+            238.87590408325195
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            493.24375,
+            193.1,
+            528.2875,
+            244.4
+          ],
+          "person_reference_bbox": [
+            486.93231201171875,
+            193.79168701171875,
+            555.3257446289062,
+            366.14874267578125
+          ],
+          "target_index": 4,
+          "detected": true,
+          "best_iou": 0.8069781498888783
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            451.95625,
+            144.6,
+            473.525,
+            180.33333333333334
+          ],
+          "person_reference_bbox": [
+            445.55438232421875,
+            141.830322265625,
+            490.28912353515625,
+            287.9559020996094
+          ],
+          "target_index": 5,
+          "detected": true,
+          "best_iou": 0.6360535549047391
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            582.328125,
+            198.70333333333332,
+            600.84375,
+            239.12666666666667
+          ],
+          "person_reference_bbox": [
+            570.5072021484375,
+            196.90390014648438,
+            627.6041259765625,
+            361.8329162597656
+          ],
+          "target_index": 6,
+          "detected": true,
+          "best_iou": 0.6425079926935394
+        }
+      ],
+      "people": [
+        [
+          486.94012451171875,
+          193.55886840820312,
+          555.4015502929688,
+          365.7311096191406
+        ],
+        [
+          445.7100830078125,
+          141.780517578125,
+          490.2427978515625,
+          287.69317626953125
+        ],
+        [
+          570.1484375,
+          197.48712158203125,
+          627.662841796875,
+          361.678466796875
+        ],
+        [
+          413.3509521484375,
+          186.2703857421875,
+          459.123046875,
+          291.65899658203125
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.33737847208976746,
+          "bbox_xyxy": [
+            128.32553100585938,
+            240.3908920288086,
+            227.74642944335938,
+            348.4290313720703
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            0,
+            240,
+            320,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 204,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.415164589881897,
+          "bbox_xyxy": [
+            517.1595458984375,
+            197.96151733398438,
+            556.7413330078125,
+            249.47299194335938
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.41342949867248535,
+          "bbox_xyxy": [
+            599.40966796875,
+            223.87576293945312,
+            655.07080078125,
+            298.6857604980469
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2871285378932953,
+          "bbox_xyxy": [
+            599.3214111328125,
+            199.70745849609375,
+            630.8692626953125,
+            243.56829833984375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.857570230960846,
+          "bbox_xyxy": [
+            522.6456756591797,
+            197.56649780273438,
+            551.9309539794922,
+            249.22689819335938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7868415713310242,
+          "bbox_xyxy": [
+            601.3719482421875,
+            197.91934204101562,
+            632.0224304199219,
+            242.22402954101562
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7140752673149109,
+          "bbox_xyxy": [
+            493.8598937988281,
+            141.6621856689453,
+            514.7539978027344,
+            173.5599822998047
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3942367136478424,
+          "bbox_xyxy": [
+            455.6841125488281,
+            166.6959991455078,
+            480.9189147949219,
+            206.0335235595703
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33771759271621704,
+          "bbox_xyxy": [
+            605.0277328491211,
+            197.8437957763672,
+            628.1932067871094,
+            230.85963439941406
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2871285378932953,
+          "bbox_xyxy": [
+            599.3214111328125,
+            199.70745849609375,
+            630.8692626953125,
+            243.56829833984375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7868415713310242,
+          "bbox_xyxy": [
+            601.3719482421875,
+            197.91934204101562,
+            632.0224304199219,
+            242.22402954101562
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33771759271621704,
+          "bbox_xyxy": [
+            605.0277328491211,
+            197.8437957763672,
+            628.1932067871094,
+            230.85963439941406
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6234738230705261,
+          "bbox_xyxy": [
+            601.706563949585,
+            198.23243713378906,
+            629.556095123291,
+            231.51028060913086
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9088762402534485,
+          "bbox_xyxy": [
+            599.3233966827393,
+            197.96468544006348,
+            631.0677642822266,
+            246.97325134277344
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.44108253717422485,
+          "bbox_xyxy": [
+            601.7520008087158,
+            199.09882354736328,
+            629.2971801757812,
+            243.74187850952148
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.415164589881897,
+          "bbox_xyxy": [
+            517.1595458984375,
+            197.96151733398438,
+            556.7413330078125,
+            249.47299194335938
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.857570230960846,
+          "bbox_xyxy": [
+            522.6456756591797,
+            197.56649780273438,
+            551.9309539794922,
+            249.22689819335938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8408765196800232,
+          "bbox_xyxy": [
+            519.806770324707,
+            196.28735160827637,
+            552.4513473510742,
+            249.5593719482422
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9009050726890564,
+          "bbox_xyxy": [
+            521.0161323547363,
+            198.62531280517578,
+            549.7313270568848,
+            246.97482299804688
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3942367136478424,
+          "bbox_xyxy": [
+            455.6841125488281,
+            166.6959991455078,
+            480.9189147949219,
+            206.0335235595703
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5962009429931641,
+          "bbox_xyxy": [
+            449.5744171142578,
+            168.25569343566895,
+            486.1363754272461,
+            216.93080139160156
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7541301846504211,
+          "bbox_xyxy": [
+            453.32677364349365,
+            168.78888130187988,
+            482.1643753051758,
+            209.698974609375
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.5845625400543213,
+          "bbox_xyxy": [
+            229.53172302246094,
+            586.7797203063965,
+            326.5142059326172,
+            664.327033996582
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.27552729845046997,
+          "bbox_xyxy": [
+            223.923095703125,
+            585.7495021820068,
+            326.9513702392578,
+            696.5922088623047
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7140752673149109,
+          "bbox_xyxy": [
+            493.8598937988281,
+            141.6621856689453,
+            514.7539978027344,
+            173.5599822998047
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4914434850215912,
+          "bbox_xyxy": [
+            491.6408758163452,
+            141.07543182373047,
+            517.8875885009766,
+            186.35036849975586
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.726999819278717,
+          "bbox_xyxy": [
+            492.9940662384033,
+            142.38293266296387,
+            515.8914909362793,
+            178.62000274658203
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            600.0,
+            198.59333333333333,
+            631.35,
+            254.07999999999998
+          ],
+          "person_reference_bbox": [
+            589.035400390625,
+            200.23883056640625,
+            656.051025390625,
+            384.2164306640625
+          ],
+          "target_index": 8,
+          "detected": true,
+          "best_iou": 0.8386666492533026
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            520.4375,
+            196.56,
+            550.625,
+            246.93
+          ],
+          "person_reference_bbox": [
+            507.3329772949219,
+            199.75906372070312,
+            577.51708984375,
+            387.7922668457031
+          ],
+          "target_index": 9,
+          "detected": true,
+          "best_iou": 0.9114534162256871
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            452.16875,
+            169.3,
+            480.21875,
+            213.69
+          ],
+          "person_reference_bbox": [
+            448.47076416015625,
+            167.7838592529297,
+            499.21270751953125,
+            343.71099853515625
+          ],
+          "target_index": 10,
+          "detected": true,
+          "best_iou": 0.811673020034361
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            221.875,
+            581.3,
+            317.2125,
+            654.3
+          ],
+          "person_reference_bbox": [
+            219.44078063964844,
+            587.919189453125,
+            422.10400390625,
+            720.0
+          ],
+          "target_index": 11,
+          "detected": true,
+          "best_iou": 0.6916045777742726
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            492.1,
+            144.57333333333332,
+            512.2,
+            173.32
+          ],
+          "person_reference_bbox": [
+            487.44073486328125,
+            143.52175903320312,
+            524.3265991210938,
+            245.75418090820312
+          ],
+          "target_index": 12,
+          "detected": true,
+          "best_iou": 0.7352408470731192
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            495.0625,
+            139.87,
+            515.21875,
+            195.76
+          ],
+          "person_reference_bbox": [
+            486.885009765625,
+            143.70309448242188,
+            525.8826904296875,
+            331.69378662109375
+          ],
+          "target_index": 13,
+          "detected": true,
+          "best_iou": 0.5958270057389509
+        }
+      ],
+      "people": [
+        [
+          589.1919555664062,
+          200.3074951171875,
+          656.0719604492188,
+          384.33819580078125
+        ],
+        [
+          507.3012390136719,
+          199.73443603515625,
+          577.5400390625,
+          387.85894775390625
+        ],
+        [
+          448.4305419921875,
+          167.88818359375,
+          499.2147216796875,
+          343.81793212890625
+        ],
+        [
+          219.54058837890625,
+          587.7014770507812,
+          422.42718505859375,
+          720.0
+        ],
+        [
+          487.97998046875,
+          143.56008911132812,
+          524.0704345703125,
+          246.3516845703125
+        ],
+        [
+          487.06243896484375,
+          143.6649169921875,
+          525.8738403320312,
+          332.0787353515625
+        ],
+        [
+          449.36846923828125,
+          161.45620727539062,
+          522.5972290039062,
+          343.4379577636719
+        ],
+        [
+          692.0917358398438,
+          45.46807861328125,
+          726.1309204101562,
+          152.8953399658203
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4153653085231781,
+          "bbox_xyxy": [
+            519.7140808105469,
+            196.71572875976562,
+            557.7362365722656,
+            253.90084838867188
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.4932750463485718,
+          "bbox_xyxy": [
+            124.1461181640625,
+            241.53634643554688,
+            218.32662963867188,
+            342.8452453613281
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            0,
+            240,
+            320,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6108514070510864,
+          "bbox_xyxy": [
+            584.440559387207,
+            240.4976043701172,
+            658.6521606445312,
+            366.6647644042969
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 216,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33911606669425964,
+          "bbox_xyxy": [
+            628.3228149414062,
+            207.15145874023438,
+            660.0220336914062,
+            255.81106567382812
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.25865936279296875,
+          "bbox_xyxy": [
+            533.0147705078125,
+            201.56781005859375,
+            575.7625732421875,
+            259.46728515625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8489832282066345,
+          "bbox_xyxy": [
+            626.927978515625,
+            206.55523681640625,
+            660.491455078125,
+            257.2698669433594
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7399469017982483,
+          "bbox_xyxy": [
+            531.957763671875,
+            201.56561279296875,
+            575.15576171875,
+            260.86187744140625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.885079026222229,
+          "bbox_xyxy": [
+            626.8032989501953,
+            204.9765625,
+            664.9301605224609,
+            257.6099548339844
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8354946970939636,
+          "bbox_xyxy": [
+            538.9983940124512,
+            202.15829467773438,
+            572.4664764404297,
+            247.91586303710938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7983890175819397,
+          "bbox_xyxy": [
+            493.620906829834,
+            161.84413146972656,
+            518.898307800293,
+            197.1951446533203
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.654050886631012,
+          "bbox_xyxy": [
+            533.8675231933594,
+            140.19189453125,
+            556.8861236572266,
+            170.42327880859375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6391330361366272,
+          "bbox_xyxy": [
+            279.51763916015625,
+            479.8260040283203,
+            372.1661071777344,
+            578.1305999755859
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5826106071472168,
+          "bbox_xyxy": [
+            630.8555755615234,
+            203.8592529296875,
+            659.6022796630859,
+            243.9794921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.30805838108062744,
+          "bbox_xyxy": [
+            493.4920654296875,
+            161.2024383544922,
+            516.811882019043,
+            178.6582794189453
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.25530192255973816,
+          "bbox_xyxy": [
+            450.1141662597656,
+            159.3544921875,
+            472.7472839355469,
+            189.316650390625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33911606669425964,
+          "bbox_xyxy": [
+            628.3228149414062,
+            207.15145874023438,
+            660.0220336914062,
+            255.81106567382812
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8489832282066345,
+          "bbox_xyxy": [
+            626.927978515625,
+            206.55523681640625,
+            660.491455078125,
+            257.2698669433594
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.885079026222229,
+          "bbox_xyxy": [
+            626.8032989501953,
+            204.9765625,
+            664.9301605224609,
+            257.6099548339844
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5826106071472168,
+          "bbox_xyxy": [
+            630.8555755615234,
+            203.8592529296875,
+            659.6022796630859,
+            243.9794921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.493280291557312,
+          "bbox_xyxy": [
+            630.7180042266846,
+            206.09600448608398,
+            658.9570503234863,
+            242.50886154174805
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8412843942642212,
+          "bbox_xyxy": [
+            626.8057308197021,
+            205.42670249938965,
+            662.4200019836426,
+            259.2641372680664
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6391330361366272,
+          "bbox_xyxy": [
+            279.51763916015625,
+            479.8260040283203,
+            372.1661071777344,
+            578.1305999755859
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7496940493583679,
+          "bbox_xyxy": [
+            279.2497310638428,
+            481.55052757263184,
+            371.10784912109375,
+            575.7357330322266
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.250225692987442,
+          "bbox_xyxy": [
+            299.23763275146484,
+            479.16567611694336,
+            371.0260238647461,
+            556.1616134643555
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.25865936279296875,
+          "bbox_xyxy": [
+            533.0147705078125,
+            201.56781005859375,
+            575.7625732421875,
+            259.46728515625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7399469017982483,
+          "bbox_xyxy": [
+            531.957763671875,
+            201.56561279296875,
+            575.15576171875,
+            260.86187744140625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8354946970939636,
+          "bbox_xyxy": [
+            538.9983940124512,
+            202.15829467773438,
+            572.4664764404297,
+            247.91586303710938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6391040086746216,
+          "bbox_xyxy": [
+            538.5371227264404,
+            204.33449363708496,
+            574.9788932800293,
+            260.6154251098633
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5739042162895203,
+          "bbox_xyxy": [
+            538.7337093353271,
+            201.56256294250488,
+            571.6948928833008,
+            234.35674667358398
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5261708498001099,
+          "bbox_xyxy": [
+            540.1364078521729,
+            203.04889297485352,
+            573.1494140625,
+            247.8321418762207
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8670499920845032,
+          "bbox_xyxy": [
+            538.5965728759766,
+            200.76868057250977,
+            574.1664924621582,
+            260.53855895996094
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9379090666770935,
+          "bbox_xyxy": [
+            539.8976573944092,
+            202.81733322143555,
+            571.5172653198242,
+            257.7526550292969
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7983890175819397,
+          "bbox_xyxy": [
+            493.620906829834,
+            161.84413146972656,
+            518.898307800293,
+            197.1951446533203
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.30805838108062744,
+          "bbox_xyxy": [
+            493.4920654296875,
+            161.2024383544922,
+            516.811882019043,
+            178.6582794189453
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5732372403144836,
+          "bbox_xyxy": [
+            492.7040958404541,
+            161.27754974365234,
+            520.2472343444824,
+            207.10322952270508
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7988450527191162,
+          "bbox_xyxy": [
+            493.33261489868164,
+            163.46630096435547,
+            519.0582275390625,
+            200.19295120239258
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.25530192255973816,
+          "bbox_xyxy": [
+            450.1141662597656,
+            159.3544921875,
+            472.7472839355469,
+            189.316650390625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4566483795642853,
+          "bbox_xyxy": [
+            444.47108936309814,
+            160.2803249359131,
+            474.06243896484375,
+            201.94993591308594
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7166035771369934,
+          "bbox_xyxy": [
+            446.384464263916,
+            161.08049964904785,
+            472.4263801574707,
+            198.25934982299805
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.654050886631012,
+          "bbox_xyxy": [
+            533.8675231933594,
+            140.19189453125,
+            556.8861236572266,
+            170.42327880859375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3429233133792877,
+          "bbox_xyxy": [
+            531.2107648849487,
+            141.11000156402588,
+            558.7701873779297,
+            177.26394653320312
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5040944814682007,
+          "bbox_xyxy": [
+            531.9017295837402,
+            139.93032264709473,
+            555.223991394043,
+            172.46020126342773
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6536821126937866,
+          "bbox_xyxy": [
+            532.3564033508301,
+            141.2149305343628,
+            554.6129398345947,
+            171.8921356201172
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            266.7125,
+            469.59,
+            353.58125,
+            559.8266666666667
+          ],
+          "person_reference_bbox": [
+            280.856201171875,
+            485.7130432128906,
+            454.3800048828125,
+            715.6788330078125
+          ],
+          "target_index": 16,
+          "detected": true,
+          "best_iou": 0.5451989957378475
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            628.421875,
+            204.84,
+            661.51875,
+            256.87333333333333
+          ],
+          "person_reference_bbox": [
+            612.589111328125,
+            207.55502319335938,
+            681.49169921875,
+            410.4657287597656
+          ],
+          "target_index": 17,
+          "detected": true,
+          "best_iou": 0.8791426949213628
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            535.41875,
+            200.79,
+            571.925,
+            257.0
+          ],
+          "person_reference_bbox": [
+            526.83642578125,
+            203.948974609375,
+            603.3642578125,
+            403.40106201171875
+          ],
+          "target_index": 18,
+          "detected": true,
+          "best_iou": 0.8253311133807402
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            493.475,
+            163.94666666666666,
+            524.48125,
+            209.68
+          ],
+          "person_reference_bbox": [
+            484.1731262207031,
+            163.57791137695312,
+            547.40625,
+            341.0682678222656
+          ],
+          "target_index": 19,
+          "detected": true,
+          "best_iou": 0.7577348705003819
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            445.35625,
+            160.08,
+            472.759375,
+            198.36
+          ],
+          "person_reference_bbox": [
+            443.201171875,
+            161.1866455078125,
+            504.1578369140625,
+            319.89813232421875
+          ],
+          "target_index": 20,
+          "detected": true,
+          "best_iou": 0.9229897228675037
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            531.53125,
+            140.41666666666666,
+            553.45,
+            172.43333333333334
+          ],
+          "person_reference_bbox": [
+            528.2110595703125,
+            141.63282775878906,
+            560.4893798828125,
+            244.6043243408203
+          ],
+          "target_index": 21,
+          "detected": true,
+          "best_iou": 0.8953604914081709
+        }
+      ],
+      "people": [
+        [
+          612.5685424804688,
+          207.36322021484375,
+          681.4736938476562,
+          410.479736328125
+        ],
+        [
+          280.9432067871094,
+          485.120361328125,
+          454.4541931152344,
+          715.588623046875
+        ],
+        [
+          527.046630859375,
+          203.9691162109375,
+          603.3310546875,
+          403.56341552734375
+        ],
+        [
+          484.1387023925781,
+          163.62408447265625,
+          546.847900390625,
+          340.85345458984375
+        ],
+        [
+          443.15435791015625,
+          161.39266967773438,
+          504.73565673828125,
+          319.8184509277344
+        ],
+        [
+          528.130615234375,
+          141.42489624023438,
+          560.5966796875,
+          244.83953857421875
+        ],
+        [
+          344.73297119140625,
+          195.10836791992188,
+          412.84906005859375,
+          297.4364929199219
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.36547091603279114,
+          "bbox_xyxy": [
+            533.6839294433594,
+            139.698486328125,
+            557.1990051269531,
+            170.3544921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4102492332458496,
+          "bbox_xyxy": [
+            534.5392456054688,
+            140.72564697265625,
+            557.5597534179688,
+            174.54495239257812
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.26388317346572876,
+          "bbox_xyxy": [
+            539.7938842773438,
+            202.01327514648438,
+            560.0,
+            257.5577087402344
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.5558813214302063,
+          "bbox_xyxy": [
+            110.99697875976562,
+            240.35379028320312,
+            208.18862915039062,
+            339.47850036621094
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            0,
+            240,
+            320,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6878712773323059,
+          "bbox_xyxy": [
+            605.2748489379883,
+            240.0,
+            685.9401245117188,
+            371.6080322265625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 228,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7267913222312927,
+          "bbox_xyxy": [
+            638.041259765625,
+            215.36141967773438,
+            670.933349609375,
+            262.3476867675781
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5299235582351685,
+          "bbox_xyxy": [
+            548.0301513671875,
+            210.0000457763672,
+            590.9273681640625,
+            264.19708251953125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9847052097320557,
+          "bbox_xyxy": [
+            636.6798706054688,
+            214.763427734375,
+            670.8648071289062,
+            263.2890625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9279858469963074,
+          "bbox_xyxy": [
+            547.6791381835938,
+            210.02972412109375,
+            590.5618286132812,
+            264.2593994140625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6029702425003052,
+          "bbox_xyxy": [
+            329.1073913574219,
+            413.06414794921875,
+            400.6192932128906,
+            500.16912841796875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33188360929489136,
+          "bbox_xyxy": [
+            566.1968994140625,
+            136.8197479248047,
+            594.6170654296875,
+            170.9455108642578
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3100637197494507,
+          "bbox_xyxy": [
+            484.49615478515625,
+            156.62184143066406,
+            512.00732421875,
+            193.90126037597656
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9011242389678955,
+          "bbox_xyxy": [
+            323.07061767578125,
+            410.8714065551758,
+            406.0047302246094,
+            504.3958206176758
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8932682275772095,
+          "bbox_xyxy": [
+            550.8411254882812,
+            210.76370239257812,
+            584.66748046875,
+            270.5164794921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8897706270217896,
+          "bbox_xyxy": [
+            631.2079162597656,
+            212.05584716796875,
+            676.3921203613281,
+            272.56243896484375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7267143726348877,
+          "bbox_xyxy": [
+            571.7739868164062,
+            137.81307983398438,
+            592.5740661621094,
+            168.56277465820312
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6823519468307495,
+          "bbox_xyxy": [
+            526.57470703125,
+            162.518798828125,
+            555.456184387207,
+            201.9407958984375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6225218772888184,
+          "bbox_xyxy": [
+            489.11756324768066,
+            156.24295043945312,
+            510.5471477508545,
+            186.99258422851562
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.5583059787750244,
+          "bbox_xyxy": [
+            638.8659362792969,
+            213.82757568359375,
+            669.4346923828125,
+            253.5703125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.47093647718429565,
+          "bbox_xyxy": [
+            338.2779235839844,
+            333.30176544189453,
+            420.0109558105469,
+            428.9532470703125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.4141586720943451,
+          "bbox_xyxy": [
+            1050.9784393310547,
+            17.9852294921875,
+            1145.5189056396484,
+            135.64959716796875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            960,
+            0,
+            1280,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.29891544580459595,
+          "bbox_xyxy": [
+            750.5068969726562,
+            220.31314086914062,
+            775.8200073242188,
+            262.1204528808594
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6029702425003052,
+          "bbox_xyxy": [
+            329.1073913574219,
+            413.06414794921875,
+            400.6192932128906,
+            500.16912841796875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9011242389678955,
+          "bbox_xyxy": [
+            323.07061767578125,
+            410.8714065551758,
+            406.0047302246094,
+            504.3958206176758
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7403912544250488,
+          "bbox_xyxy": [
+            328.16552543640137,
+            410.93092155456543,
+            408.28226470947266,
+            500.84112548828125
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7267913222312927,
+          "bbox_xyxy": [
+            638.041259765625,
+            215.36141967773438,
+            670.933349609375,
+            262.3476867675781
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9847052097320557,
+          "bbox_xyxy": [
+            636.6798706054688,
+            214.763427734375,
+            670.8648071289062,
+            263.2890625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8897706270217896,
+          "bbox_xyxy": [
+            631.2079162597656,
+            212.05584716796875,
+            676.3921203613281,
+            272.56243896484375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.5583059787750244,
+          "bbox_xyxy": [
+            638.8659362792969,
+            213.82757568359375,
+            669.4346923828125,
+            253.5703125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.26007184386253357,
+          "bbox_xyxy": [
+            638.5806617736816,
+            213.00288581848145,
+            671.441707611084,
+            251.5769386291504
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9000861048698425,
+          "bbox_xyxy": [
+            633.920934677124,
+            213.05666732788086,
+            672.4236602783203,
+            270.3424987792969
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5299235582351685,
+          "bbox_xyxy": [
+            548.0301513671875,
+            210.0000457763672,
+            590.9273681640625,
+            264.19708251953125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9279858469963074,
+          "bbox_xyxy": [
+            547.6791381835938,
+            210.02972412109375,
+            590.5618286132812,
+            264.2593994140625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8932682275772095,
+          "bbox_xyxy": [
+            550.8411254882812,
+            210.76370239257812,
+            584.66748046875,
+            270.5164794921875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5160942673683167,
+          "bbox_xyxy": [
+            548.5191822052002,
+            211.22599029541016,
+            584.932861328125,
+            244.60121536254883
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8954290151596069,
+          "bbox_xyxy": [
+            548.96506690979,
+            208.95856094360352,
+            587.0854339599609,
+            271.88990783691406
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9314854741096497,
+          "bbox_xyxy": [
+            549.8844909667969,
+            212.63605499267578,
+            584.6739883422852,
+            270.3350296020508
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3100637197494507,
+          "bbox_xyxy": [
+            484.49615478515625,
+            156.62184143066406,
+            512.00732421875,
+            193.90126037597656
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6225218772888184,
+          "bbox_xyxy": [
+            489.11756324768066,
+            156.24295043945312,
+            510.5471477508545,
+            186.99258422851562
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5321115851402283,
+          "bbox_xyxy": [
+            486.14558601379395,
+            155.34451007843018,
+            512.5367889404297,
+            197.19517517089844
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.742719292640686,
+          "bbox_xyxy": [
+            487.36137866973877,
+            156.02170753479004,
+            510.45638275146484,
+            192.6833839416504
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6823519468307495,
+          "bbox_xyxy": [
+            526.57470703125,
+            162.518798828125,
+            555.456184387207,
+            201.9407958984375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5457556247711182,
+          "bbox_xyxy": [
+            522.4593324661255,
+            163.02175331115723,
+            558.5196342468262,
+            209.80934524536133
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8840571641921997,
+          "bbox_xyxy": [
+            524.063759803772,
+            163.19696426391602,
+            555.5398330688477,
+            205.46304321289062
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33188360929489136,
+          "bbox_xyxy": [
+            566.1968994140625,
+            136.8197479248047,
+            594.6170654296875,
+            170.9455108642578
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7267143726348877,
+          "bbox_xyxy": [
+            571.7739868164062,
+            137.81307983398438,
+            592.5740661621094,
+            168.56277465820312
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7096974849700928,
+          "bbox_xyxy": [
+            569.6380863189697,
+            136.5242519378662,
+            595.889232635498,
+            178.5274314880371
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9279319643974304,
+          "bbox_xyxy": [
+            570.6799716949463,
+            138.63186740875244,
+            593.9513740539551,
+            173.01760482788086
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.27963951230049133,
+          "bbox_xyxy": [
+            369.72187900543213,
+            188.0,
+            401.6077880859375,
+            221.15281677246094
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.2750565707683563,
+          "bbox_xyxy": [
+            359.0,
+            192.36204195022583,
+            376.42654609680176,
+            225.3708953857422
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            325.484375,
+            409.56,
+            414.315625,
+            503.62666666666667
+          ],
+          "person_reference_bbox": [
+            327.0228271484375,
+            413.8116455078125,
+            506.5374755859375,
+            715.7764892578125
+          ],
+          "target_index": 22,
+          "detected": true,
+          "best_iou": 0.8640575449702602
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            545.075,
+            210.17000000000002,
+            588.95,
+            271.0
+          ],
+          "person_reference_bbox": [
+            534.537109375,
+            213.9993896484375,
+            614.327880859375,
+            429.90338134765625
+          ],
+          "target_index": 23,
+          "detected": true,
+          "best_iou": 0.8435230081568518
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            635.121875,
+            211.52,
+            674.065625,
+            270.8933333333333
+          ],
+          "person_reference_bbox": [
+            622.259033203125,
+            214.93063354492188,
+            693.602783203125,
+            436.2475891113281
+          ],
+          "target_index": 24,
+          "detected": true,
+          "best_iou": 0.8974583890645537
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            480.06875,
+            153.4,
+            506.89375,
+            201.4
+          ],
+          "person_reference_bbox": [
+            480.41412353515625,
+            155.90277099609375,
+            524.5973510742188,
+            319.24810791015625
+          ],
+          "target_index": 25,
+          "detected": true,
+          "best_iou": 0.5698546039348152
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            517.0,
+            159.16,
+            555.75,
+            211.17333333333335
+          ],
+          "person_reference_bbox": [
+            518.444580078125,
+            163.6962432861328,
+            556.329345703125,
+            334.97491455078125
+          ],
+          "target_index": 26,
+          "detected": true,
+          "best_iou": 0.7261150101870144
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            571.328125,
+            138.65333333333334,
+            595.909375,
+            172.67000000000002
+          ],
+          "person_reference_bbox": [
+            561.5654296875,
+            139.0361328125,
+            614.452880859375,
+            281.12860107421875
+          ],
+          "target_index": 27,
+          "detected": true,
+          "best_iou": 0.8878167222258196
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            520.434375,
+            164.44,
+            550.103125,
+            195.76
+          ],
+          "person_reference_bbox": [
+            520.71630859375,
+            163.93670654296875,
+            557.350830078125,
+            262.0862121582031
+          ],
+          "target_index": 29,
+          "detected": true,
+          "best_iou": 0.564770705283071
+        }
+      ],
+      "people": [
+        [
+          326.66522216796875,
+          413.70648193359375,
+          506.47259521484375,
+          715.6629028320312
+        ],
+        [
+          622.2774047851562,
+          215.05874633789062,
+          693.5200805664062,
+          436.0876770019531
+        ],
+        [
+          534.37109375,
+          213.88589477539062,
+          614.490966796875,
+          429.4087829589844
+        ],
+        [
+          480.34088134765625,
+          156.26123046875,
+          524.337646484375,
+          318.83209228515625
+        ],
+        [
+          518.73486328125,
+          163.76040649414062,
+          556.247802734375,
+          334.6092224121094
+        ],
+        [
+          561.59814453125,
+          139.317138671875,
+          614.74365234375,
+          280.9472961425781
+        ],
+        [
+          367.5963134765625,
+          198.7618865966797,
+          422.5701904296875,
+          298.54412841796875
+        ],
+        [
+          520.8863525390625,
+          163.48519897460938,
+          556.6007080078125,
+          264.2549133300781
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.36361560225486755,
+          "bbox_xyxy": [
+            524.6569519042969,
+            161.6849365234375,
+            557.1263732910156,
+            189.7855224609375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3082072138786316,
+          "bbox_xyxy": [
+            523.5191345214844,
+            159.9986572265625,
+            560.0,
+            231.8199462890625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5304946303367615,
+          "bbox_xyxy": [
+            526.12109375,
+            162.21388244628906,
+            558.0252685546875,
+            203.1603546142578
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.42407092452049255,
+          "bbox_xyxy": [
+            99.6059799194336,
+            240.0,
+            198.53286743164062,
+            335.46104431152344
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            0,
+            240,
+            320,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7828596234321594,
+          "bbox_xyxy": [
+            618.5407409667969,
+            242.9684829711914,
+            699.0596618652344,
+            361.05284881591797
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 240,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7768219113349915,
+          "bbox_xyxy": [
+            541.7452392578125,
+            219.960205078125,
+            582.8377685546875,
+            275.65277099609375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9727579951286316,
+          "bbox_xyxy": [
+            540.195556640625,
+            219.20135498046875,
+            581.9755859375,
+            277.18939208984375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8300744891166687,
+          "bbox_xyxy": [
+            364.56036376953125,
+            354.0897521972656,
+            429.34613037109375,
+            425.8387756347656
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.784379243850708,
+          "bbox_xyxy": [
+            510.24639892578125,
+            156.93771362304688,
+            541.5945434570312,
+            196.37448120117188
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7408708333969116,
+          "bbox_xyxy": [
+            624.2680053710938,
+            221.4337615966797,
+            666.7714233398438,
+            273.75274658203125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5382170677185059,
+          "bbox_xyxy": [
+            551.12060546875,
+            157.05889892578125,
+            586.13134765625,
+            196.66021728515625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2812635004520416,
+          "bbox_xyxy": [
+            540.6800537109375,
+            218.77639770507812,
+            598.7957763671875,
+            284.0381164550781
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9549636840820312,
+          "bbox_xyxy": [
+            623.7910461425781,
+            220.23590087890625,
+            668.4572448730469,
+            281.244140625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9165163040161133,
+          "bbox_xyxy": [
+            542.5968818664551,
+            218.08071899414062,
+            576.9378814697266,
+            279.9417419433594
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8671900629997253,
+          "bbox_xyxy": [
+            555.9243621826172,
+            158.00613403320312,
+            584.615478515625,
+            195.80624389648438
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7219122648239136,
+          "bbox_xyxy": [
+            608.4400024414062,
+            137.02523803710938,
+            629.4202880859375,
+            167.78741455078125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.48361557722091675,
+          "bbox_xyxy": [
+            361.50242614746094,
+            350.08056640625,
+            436.10630798339844,
+            430.9068908691406
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.4088437855243683,
+          "bbox_xyxy": [
+            1104.206298828125,
+            0.0,
+            1205.0902099609375,
+            90.96730041503906
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            960,
+            0,
+            1280,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3924340307712555,
+          "bbox_xyxy": [
+            629.6800842285156,
+            219.59225463867188,
+            665.4082946777344,
+            264.500244140625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.37005627155303955,
+          "bbox_xyxy": [
+            553.2001724243164,
+            155.16415405273438,
+            588.5600357055664,
+            224.25765991210938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.26618796586990356,
+          "bbox_xyxy": [
+            356.4891052246094,
+            298.8657531738281,
+            465.7914733886719,
+            430.9005889892578
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8300744891166687,
+          "bbox_xyxy": [
+            364.56036376953125,
+            354.0897521972656,
+            429.34613037109375,
+            425.8387756347656
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.48361557722091675,
+          "bbox_xyxy": [
+            361.50242614746094,
+            350.08056640625,
+            436.10630798339844,
+            430.9068908691406
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.26618796586990356,
+          "bbox_xyxy": [
+            356.4891052246094,
+            298.8657531738281,
+            465.7914733886719,
+            430.9005889892578
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8553953170776367,
+          "bbox_xyxy": [
+            363.22097396850586,
+            351.1530132293701,
+            429.74581146240234,
+            437.8338165283203
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7768219113349915,
+          "bbox_xyxy": [
+            541.7452392578125,
+            219.960205078125,
+            582.8377685546875,
+            275.65277099609375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9727579951286316,
+          "bbox_xyxy": [
+            540.195556640625,
+            219.20135498046875,
+            581.9755859375,
+            277.18939208984375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2812635004520416,
+          "bbox_xyxy": [
+            540.6800537109375,
+            218.77639770507812,
+            598.7957763671875,
+            284.0381164550781
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9165163040161133,
+          "bbox_xyxy": [
+            542.5968818664551,
+            218.08071899414062,
+            576.9378814697266,
+            279.9417419433594
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.39753657579421997,
+          "bbox_xyxy": [
+            539.9105567932129,
+            216.99124908447266,
+            575.8547821044922,
+            254.18706130981445
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.80071622133255,
+          "bbox_xyxy": [
+            540.088357925415,
+            215.49625968933105,
+            579.3341979980469,
+            282.64686584472656
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9431198835372925,
+          "bbox_xyxy": [
+            541.0466365814209,
+            220.00410079956055,
+            576.890022277832,
+            280.80574798583984
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7408708333969116,
+          "bbox_xyxy": [
+            624.2680053710938,
+            221.4337615966797,
+            666.7714233398438,
+            273.75274658203125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9549636840820312,
+          "bbox_xyxy": [
+            623.7910461425781,
+            220.23590087890625,
+            668.4572448730469,
+            281.244140625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3924340307712555,
+          "bbox_xyxy": [
+            629.6800842285156,
+            219.59225463867188,
+            665.4082946777344,
+            264.500244140625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4643411934375763,
+          "bbox_xyxy": [
+            630.9725227355957,
+            220.56126976013184,
+            665.1745147705078,
+            263.9576759338379
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9454178810119629,
+          "bbox_xyxy": [
+            625.0531940460205,
+            220.88633346557617,
+            668.2322311401367,
+            282.0786590576172
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7219122648239136,
+          "bbox_xyxy": [
+            608.4400024414062,
+            137.02523803710938,
+            629.4202880859375,
+            167.78741455078125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7711040377616882,
+          "bbox_xyxy": [
+            605.9773178100586,
+            136.1095733642578,
+            630.1153831481934,
+            177.64125061035156
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8792245984077454,
+          "bbox_xyxy": [
+            607.178783416748,
+            139.17827224731445,
+            628.0677642822266,
+            170.82409286499023
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.784379243850708,
+          "bbox_xyxy": [
+            510.24639892578125,
+            156.93771362304688,
+            541.5945434570312,
+            196.37448120117188
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6474500894546509,
+          "bbox_xyxy": [
+            512.3070850372314,
+            157.02149105072021,
+            539.903076171875,
+            194.03902435302734
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6593670845031738,
+          "bbox_xyxy": [
+            513.4080467224121,
+            157.22272491455078,
+            537.2196044921875,
+            189.7523078918457
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5382170677185059,
+          "bbox_xyxy": [
+            551.12060546875,
+            157.05889892578125,
+            586.13134765625,
+            196.66021728515625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8671900629997253,
+          "bbox_xyxy": [
+            555.9243621826172,
+            158.00613403320312,
+            584.615478515625,
+            195.80624389648438
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.48576590418815613,
+          "bbox_xyxy": [
+            551.8729763031006,
+            158.7549695968628,
+            587.4117774963379,
+            202.96550750732422
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6148013472557068,
+          "bbox_xyxy": [
+            554.2877416610718,
+            159.58031272888184,
+            585.744758605957,
+            197.8326187133789
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8087413311004639,
+          "bbox_xyxy": [
+            553.4528303146362,
+            158.8560085296631,
+            582.9316864013672,
+            195.88184356689453
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            358.0625,
+            341.93,
+            437.11875,
+            425.78
+          ],
+          "person_reference_bbox": [
+            362.831787109375,
+            355.4161376953125,
+            502.9365234375,
+            707.2823486328125
+          ],
+          "target_index": 30,
+          "detected": true,
+          "best_iou": 0.6681090975113053
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            537.95,
+            216.33333333333334,
+            578.2,
+            269.4166666666667
+          ],
+          "person_reference_bbox": [
+            524.6903076171875,
+            222.58981323242188,
+            610.8187255859375,
+            445.9038391113281
+          ],
+          "target_index": 31,
+          "detected": true,
+          "best_iou": 0.735966410620185
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            625.415625,
+            220.47333333333333,
+            668.884375,
+            281.43333333333334
+          ],
+          "person_reference_bbox": [
+            611.9818115234375,
+            224.37554931640625,
+            693.7921142578125,
+            455.3726806640625
+          ],
+          "target_index": 32,
+          "detected": true,
+          "best_iou": 0.9602740867395281
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            606.321875,
+            134.80666666666667,
+            630.515625,
+            175.87333333333333
+          ],
+          "person_reference_bbox": [
+            599.6256103515625,
+            137.8310546875,
+            637.3199462890625,
+            277.29034423828125
+          ],
+          "target_index": 33,
+          "detected": true,
+          "best_iou": 0.9011246959644643
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            512.6875,
+            155.39333333333335,
+            541.14375,
+            194.48
+          ],
+          "person_reference_bbox": [
+            506.9393615722656,
+            156.72323608398438,
+            551.8170166015625,
+            286.27532958984375
+          ],
+          "target_index": 34,
+          "detected": true,
+          "best_iou": 0.8944472580136384
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            554.565625,
+            158.43,
+            584.61875,
+            192.87
+          ],
+          "person_reference_bbox": [
+            547.1837158203125,
+            160.67694091796875,
+            592.6341552734375,
+            272.0388488769531
+          ],
+          "target_index": 35,
+          "detected": true,
+          "best_iou": 0.8733352860811189
+        }
+      ],
+      "people": [
+        [
+          362.8514404296875,
+          355.7250671386719,
+          502.8963623046875,
+          707.252685546875
+        ],
+        [
+          524.53857421875,
+          222.64724731445312,
+          610.71142578125,
+          446.2360534667969
+        ],
+        [
+          612.0521240234375,
+          224.44552612304688,
+          693.8939208984375,
+          455.3993225097656
+        ],
+        [
+          599.594970703125,
+          137.76373291015625,
+          637.410400390625,
+          278.70465087890625
+        ],
+        [
+          506.953125,
+          157.03616333007812,
+          551.8614501953125,
+          286.26629638671875
+        ],
+        [
+          547.404541015625,
+          160.58682250976562,
+          592.76611328125,
+          272.2684326171875
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.4522300958633423,
+          "bbox_xyxy": [
+            91.6365966796875,
+            240.0,
+            187.03564453125,
+            339.9699249267578
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            0,
+            240,
+            320,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.38049033284187317,
+          "bbox_xyxy": [
+            625.4066772460938,
+            240.0,
+            666.8327026367188,
+            279.95433044433594
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.3736429810523987,
+          "bbox_xyxy": [
+            290.5371513366699,
+            402.85316467285156,
+            383.0595245361328,
+            531.350341796875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 252,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.27691638469696045,
+          "bbox_xyxy": [
+            398.443603515625,
+            410.74951171875,
+            461.5870361328125,
+            481.28955078125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8062803149223328,
+          "bbox_xyxy": [
+            545.3297119140625,
+            223.38958740234375,
+            597.8563232421875,
+            286.54241943359375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.2824581265449524,
+          "bbox_xyxy": [
+            373.5819091796875,
+            316.06298828125,
+            426.9205322265625,
+            378.770751953125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9878181219100952,
+          "bbox_xyxy": [
+            546.496337890625,
+            224.03114318847656,
+            598.513671875,
+            286.322509765625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7288142442703247,
+          "bbox_xyxy": [
+            633.2578125,
+            134.64602661132812,
+            663.191650390625,
+            170.99014282226562
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4026326537132263,
+          "bbox_xyxy": [
+            636.60302734375,
+            224.539794921875,
+            672.80712890625,
+            286.25445556640625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4003635346889496,
+          "bbox_xyxy": [
+            368.6531982421875,
+            316.81976318359375,
+            431.4542236328125,
+            383.24432373046875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2891780734062195,
+          "bbox_xyxy": [
+            542.6312255859375,
+            225.70071411132812,
+            590.1387939453125,
+            275.4895935058594
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9609938859939575,
+          "bbox_xyxy": [
+            630.4569244384766,
+            228.09112548828125,
+            676.1139984130859,
+            295.76214599609375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9281468391418457,
+          "bbox_xyxy": [
+            549.6682281494141,
+            227.37652587890625,
+            589.5766754150391,
+            293.4404296875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8749940991401672,
+          "bbox_xyxy": [
+            363.72705841064453,
+            315.2068786621094,
+            463.4915771484375,
+            396.4690246582031
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.86188805103302,
+          "bbox_xyxy": [
+            640.6150512695312,
+            137.77235412597656,
+            660.6022338867188,
+            158.46238708496094
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8406403660774231,
+          "bbox_xyxy": [
+            550.7982559204102,
+            224.11959838867188,
+            589.4563217163086,
+            260.7607116699219
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7346640229225159,
+          "bbox_xyxy": [
+            391.1124572753906,
+            403.19911193847656,
+            472.4595031738281,
+            493.05775451660156
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5984006524085999,
+          "bbox_xyxy": [
+            581.9555816650391,
+            153.32272338867188,
+            611.3480377197266,
+            187.29989624023438
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5194189548492432,
+          "bbox_xyxy": [
+            639.0139312744141,
+            135.76547241210938,
+            662.0815277099609,
+            175.73104858398438
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.299766480922699,
+          "bbox_xyxy": [
+            429.92518615722656,
+            161.14093017578125,
+            461.19544982910156,
+            206.79544067382812
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2832282483577728,
+          "bbox_xyxy": [
+            1022.0413398742676,
+            123.8692855834961,
+            1130.1436920166016,
+            272.2487487792969
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            960,
+            0,
+            1280,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.27402418851852417,
+          "bbox_xyxy": [
+            532.5881195068359,
+            152.07498168945312,
+            566.8230438232422,
+            186.48806762695312
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8062803149223328,
+          "bbox_xyxy": [
+            545.3297119140625,
+            223.38958740234375,
+            597.8563232421875,
+            286.54241943359375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9878181219100952,
+          "bbox_xyxy": [
+            546.496337890625,
+            224.03114318847656,
+            598.513671875,
+            286.322509765625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2891780734062195,
+          "bbox_xyxy": [
+            542.6312255859375,
+            225.70071411132812,
+            590.1387939453125,
+            275.4895935058594
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9281468391418457,
+          "bbox_xyxy": [
+            549.6682281494141,
+            227.37652587890625,
+            589.5766754150391,
+            293.4404296875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8406403660774231,
+          "bbox_xyxy": [
+            550.7982559204102,
+            224.11959838867188,
+            589.4563217163086,
+            260.7607116699219
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6251022219657898,
+          "bbox_xyxy": [
+            549.978931427002,
+            223.60809326171875,
+            589.9963760375977,
+            261.1460609436035
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5883743762969971,
+          "bbox_xyxy": [
+            547.34840965271,
+            222.5871868133545,
+            591.9294204711914,
+            279.5215072631836
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.26124101877212524,
+          "bbox_xyxy": [
+            552.3610801696777,
+            227.32635879516602,
+            589.8138427734375,
+            273.5649719238281
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7948601841926575,
+          "bbox_xyxy": [
+            549.1267776489258,
+            220.98434448242188,
+            592.6759262084961,
+            297.1751403808594
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9694139957427979,
+          "bbox_xyxy": [
+            550.2406806945801,
+            225.7244358062744,
+            590.1359786987305,
+            292.69124603271484
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.2824581265449524,
+          "bbox_xyxy": [
+            373.5819091796875,
+            316.06298828125,
+            426.9205322265625,
+            378.770751953125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4003635346889496,
+          "bbox_xyxy": [
+            368.6531982421875,
+            316.81976318359375,
+            431.4542236328125,
+            383.24432373046875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8749940991401672,
+          "bbox_xyxy": [
+            363.72705841064453,
+            315.2068786621094,
+            463.4915771484375,
+            396.4690246582031
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.7153606414794922,
+          "bbox_xyxy": [
+            365.02863216400146,
+            315.51386642456055,
+            444.2036590576172,
+            405.6598358154297
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4026326537132263,
+          "bbox_xyxy": [
+            636.60302734375,
+            224.539794921875,
+            672.80712890625,
+            286.25445556640625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9609938859939575,
+          "bbox_xyxy": [
+            630.4569244384766,
+            228.09112548828125,
+            676.1139984130859,
+            295.76214599609375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9646614193916321,
+          "bbox_xyxy": [
+            630.7471313476562,
+            228.31077003479004,
+            675.674430847168,
+            297.70423126220703
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.299766480922699,
+          "bbox_xyxy": [
+            429.92518615722656,
+            161.14093017578125,
+            461.19544982910156,
+            206.79544067382812
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6851942539215088,
+          "bbox_xyxy": [
+            428.4911184310913,
+            163.26915454864502,
+            458.8805274963379,
+            208.0153579711914
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4651724398136139,
+          "bbox_xyxy": [
+            432.4755802154541,
+            163.7046012878418,
+            457.47595596313477,
+            202.7657699584961
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3724331259727478,
+          "bbox_xyxy": [
+            427.17981147766113,
+            164.2147731781006,
+            456.53902435302734,
+            208.3885612487793
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5984006524085999,
+          "bbox_xyxy": [
+            581.9555816650391,
+            153.32272338867188,
+            611.3480377197266,
+            187.29989624023438
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7056169509887695,
+          "bbox_xyxy": [
+            580.3134918212891,
+            153.0398654937744,
+            611.1710548400879,
+            199.05552291870117
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9415661692619324,
+          "bbox_xyxy": [
+            580.813250541687,
+            155.9061737060547,
+            609.1863784790039,
+            194.96418380737305
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.27402418851852417,
+          "bbox_xyxy": [
+            532.5881195068359,
+            152.07498168945312,
+            566.8230438232422,
+            186.48806762695312
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.497475802898407,
+          "bbox_xyxy": [
+            533.7499294281006,
+            154.73535442352295,
+            564.0352020263672,
+            192.36929321289062
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7314854860305786,
+          "bbox_xyxy": [
+            535.4439992904663,
+            155.319917678833,
+            560.5715408325195,
+            190.88703155517578
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7288142442703247,
+          "bbox_xyxy": [
+            633.2578125,
+            134.64602661132812,
+            663.191650390625,
+            170.99014282226562
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.86188805103302,
+          "bbox_xyxy": [
+            640.6150512695312,
+            137.77235412597656,
+            660.6022338867188,
+            158.46238708496094
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5194189548492432,
+          "bbox_xyxy": [
+            639.0139312744141,
+            135.76547241210938,
+            662.0815277099609,
+            175.73104858398438
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6258621215820312,
+          "bbox_xyxy": [
+            638.5290184020996,
+            136.88644075393677,
+            662.9228858947754,
+            172.0452117919922
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7596616148948669,
+          "bbox_xyxy": [
+            639.6414985656738,
+            138.52753353118896,
+            660.7139778137207,
+            169.08766174316406
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            539.921875,
+            225.85333333333332,
+            588.796875,
+            298.38666666666666
+          ],
+          "person_reference_bbox": [
+            532.08349609375,
+            229.83154296875,
+            620.11083984375,
+            477.9552001953125
+          ],
+          "target_index": 36,
+          "detected": true,
+          "best_iou": 0.7187352348581129
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            363.865625,
+            320.0233333333333,
+            441.5,
+            394.07
+          ],
+          "person_reference_bbox": [
+            376.61517333984375,
+            318.6649169921875,
+            506.94769287109375,
+            666.5194702148438
+          ],
+          "target_index": 37,
+          "detected": true,
+          "best_iou": 0.7839008256836489
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            631.7,
+            228.83333333333334,
+            669.8375,
+            311.7733333333333
+          ],
+          "person_reference_bbox": [
+            614.63916015625,
+            231.55419921875,
+            697.8076171875,
+            491.9486083984375
+          ],
+          "target_index": 38,
+          "detected": true,
+          "best_iou": 0.718775281736862
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            430.575,
+            164.91666666666666,
+            458.625,
+            199.33333333333334
+          ],
+          "person_reference_bbox": [
+            426.37359619140625,
+            164.08920288085938,
+            504.73712158203125,
+            323.354248046875
+          ],
+          "target_index": 39,
+          "detected": true,
+          "best_iou": 0.7099425782224351
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            583.40625,
+            151.61333333333334,
+            611.1125,
+            193.46666666666667
+          ],
+          "person_reference_bbox": [
+            572.2491455078125,
+            155.62030029296875,
+            620.3089599609375,
+            311.9432678222656
+          ],
+          "target_index": 40,
+          "detected": true,
+          "best_iou": 0.7735941113099181
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            536.525,
+            153.69,
+            560.31875,
+            186.59
+          ],
+          "person_reference_bbox": [
+            527.69287109375,
+            154.74993896484375,
+            569.03515625,
+            282.9710388183594
+          ],
+          "target_index": 41,
+          "detected": true,
+          "best_iou": 0.7978935384329541
+        }
+      ],
+      "people": [
+        [
+          532.0751953125,
+          230.018310546875,
+          620.071533203125,
+          478.13775634765625
+        ],
+        [
+          375.61309814453125,
+          318.53350830078125,
+          506.68951416015625,
+          666.4183349609375
+        ],
+        [
+          614.6585083007812,
+          231.63597106933594,
+          697.7225952148438,
+          491.6007080078125
+        ],
+        [
+          426.53656005859375,
+          164.10614013671875,
+          505.31597900390625,
+          323.3246154785156
+        ],
+        [
+          572.541015625,
+          155.67767333984375,
+          620.303955078125,
+          312.860595703125
+        ],
+        [
+          527.7369384765625,
+          154.76901245117188,
+          569.1263427734375,
+          283.51727294921875
+        ],
+        [
+          628.27294921875,
+          139.68301391601562,
+          679.453857421875,
+          244.22299194335938
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.25296637415885925,
+          "bbox_xyxy": [
+            76.94454956054688,
+            240.0,
+            175.60513305664062,
+            331.74779510498047
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            0,
+            240,
+            320,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.6566547155380249,
+          "bbox_xyxy": [
+            636.2751159667969,
+            240.0,
+            674.281005859375,
+            281.93428802490234
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8371197581291199,
+          "bbox_xyxy": [
+            631.0037231445312,
+            240.0,
+            676.914794921875,
+            296.48120880126953
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4656796455383301,
+          "bbox_xyxy": [
+            550.6781311035156,
+            240.0,
+            589.6824493408203,
+            294.8307418823242
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.30779293179512024,
+          "bbox_xyxy": [
+            288.0568542480469,
+            400.0,
+            397.58665466308594,
+            529.2068634033203
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            400,
+            560,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 264,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.45864200592041016,
+          "bbox_xyxy": [
+            536.61474609375,
+            232.7752685546875,
+            578.72509765625,
+            287.621826171875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8773446679115295,
+          "bbox_xyxy": [
+            535.7457885742188,
+            229.794189453125,
+            581.6663208007812,
+            298.19232177734375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.25848785042762756,
+          "bbox_xyxy": [
+            377.5006103515625,
+            305.475341796875,
+            441.4619140625,
+            375.8643798828125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9949833154678345,
+          "bbox_xyxy": [
+            535.27099609375,
+            229.0526123046875,
+            581.442626953125,
+            300.01068115234375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7634987831115723,
+          "bbox_xyxy": [
+            602.0620727539062,
+            149.33334350585938,
+            633.3018188476562,
+            187.93472290039062
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6832485198974609,
+          "bbox_xyxy": [
+            374.3536376953125,
+            304.4400634765625,
+            442.2000732421875,
+            375.1588134765625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5763186812400818,
+          "bbox_xyxy": [
+            458.8199462890625,
+            157.738525390625,
+            490.7781982421875,
+            199.95730590820312
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3787776231765747,
+          "bbox_xyxy": [
+            544.214599609375,
+            148.177734375,
+            577.8671875,
+            189.563232421875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33745062351226807,
+          "bbox_xyxy": [
+            634.1796875,
+            232.61639404296875,
+            694.31884765625,
+            302.93316650390625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3336558938026428,
+          "bbox_xyxy": [
+            520.5156860351562,
+            227.79042053222656,
+            581.5452270507812,
+            305.3377685546875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3060985803604126,
+          "bbox_xyxy": [
+            532.8978271484375,
+            231.9961395263672,
+            574.1114501953125,
+            291.41070556640625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.971895158290863,
+          "bbox_xyxy": [
+            363.3517074584961,
+            301.8580322265625,
+            447.3393859863281,
+            384.3960723876953
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9698150157928467,
+          "bbox_xyxy": [
+            640.486572265625,
+            232.49893188476562,
+            689.1535034179688,
+            308.0403137207031
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8971869349479675,
+          "bbox_xyxy": [
+            605.6840057373047,
+            151.90716552734375,
+            629.5409393310547,
+            191.93099975585938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.807511031627655,
+          "bbox_xyxy": [
+            538.2844161987305,
+            233.9443359375,
+            579.4977645874023,
+            302.18804931640625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.765313982963562,
+          "bbox_xyxy": [
+            657.5479736328125,
+            141.1337127685547,
+            678.9989624023438,
+            181.7437286376953
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5916953086853027,
+          "bbox_xyxy": [
+            464.500732421875,
+            157.99034118652344,
+            486.7081298828125,
+            194.1651153564453
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3162280321121216,
+          "bbox_xyxy": [
+            656.9302673339844,
+            141.96536254882812,
+            680.8029479980469,
+            162.23654174804688
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33745062351226807,
+          "bbox_xyxy": [
+            634.1796875,
+            232.61639404296875,
+            694.31884765625,
+            302.93316650390625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9698150157928467,
+          "bbox_xyxy": [
+            640.486572265625,
+            232.49893188476562,
+            689.1535034179688,
+            308.0403137207031
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9481452703475952,
+          "bbox_xyxy": [
+            637.9028015136719,
+            232.7158489227295,
+            685.7434310913086,
+            307.75230407714844
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.25848785042762756,
+          "bbox_xyxy": [
+            377.5006103515625,
+            305.475341796875,
+            441.4619140625,
+            375.8643798828125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6832485198974609,
+          "bbox_xyxy": [
+            374.3536376953125,
+            304.4400634765625,
+            442.2000732421875,
+            375.1588134765625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.971895158290863,
+          "bbox_xyxy": [
+            363.3517074584961,
+            301.8580322265625,
+            447.3393859863281,
+            384.3960723876953
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8672311305999756,
+          "bbox_xyxy": [
+            364.5657958984375,
+            301.9698944091797,
+            448.14833068847656,
+            398.1520690917969
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.765313982963562,
+          "bbox_xyxy": [
+            657.5479736328125,
+            141.1337127685547,
+            678.9989624023438,
+            181.7437286376953
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3162280321121216,
+          "bbox_xyxy": [
+            656.9302673339844,
+            141.96536254882812,
+            680.8029479980469,
+            162.23654174804688
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6661173701286316,
+          "bbox_xyxy": [
+            647.3029565811157,
+            142.662127494812,
+            683.8393592834473,
+            188.20848846435547
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.2725679278373718,
+          "bbox_xyxy": [
+            653.2245903015137,
+            141.69463729858398,
+            681.9439659118652,
+            172.87009811401367
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7288718223571777,
+          "bbox_xyxy": [
+            654.3280658721924,
+            139.99891567230225,
+            681.3472518920898,
+            184.44178771972656
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9349749088287354,
+          "bbox_xyxy": [
+            655.5049152374268,
+            142.95416831970215,
+            679.0869903564453,
+            180.24436569213867
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5763186812400818,
+          "bbox_xyxy": [
+            458.8199462890625,
+            157.738525390625,
+            490.7781982421875,
+            199.95730590820312
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5916953086853027,
+          "bbox_xyxy": [
+            464.500732421875,
+            157.99034118652344,
+            486.7081298828125,
+            194.1651153564453
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6282230019569397,
+          "bbox_xyxy": [
+            462.6291046142578,
+            157.38312911987305,
+            489.1003608703613,
+            200.95225143432617
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7620545625686646,
+          "bbox_xyxy": [
+            462.84022521972656,
+            159.3631820678711,
+            487.9501533508301,
+            198.0015640258789
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7634987831115723,
+          "bbox_xyxy": [
+            602.0620727539062,
+            149.33334350585938,
+            633.3018188476562,
+            187.93472290039062
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8971869349479675,
+          "bbox_xyxy": [
+            605.6840057373047,
+            151.90716552734375,
+            629.5409393310547,
+            191.93099975585938
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5362226963043213,
+          "bbox_xyxy": [
+            598.0095729827881,
+            152.21087837219238,
+            631.7477760314941,
+            187.92953491210938
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.34217461943626404,
+          "bbox_xyxy": [
+            602.083366394043,
+            151.51487922668457,
+            630.3639755249023,
+            172.19144821166992
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7253727912902832,
+          "bbox_xyxy": [
+            603.2042808532715,
+            150.32291221618652,
+            631.7561378479004,
+            198.2302589416504
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8548677563667297,
+          "bbox_xyxy": [
+            604.179500579834,
+            152.8402614593506,
+            629.3359375,
+            193.56866836547852
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.31311914324760437,
+          "bbox_xyxy": [
+            551.2994937896729,
+            150.55422496795654,
+            579.5817070007324,
+            180.16416549682617
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6283813714981079,
+          "bbox_xyxy": [
+            552.8758029937744,
+            152.66180801391602,
+            579.7406578063965,
+            187.2531394958496
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8575611114501953,
+          "bbox_xyxy": [
+            552.2781581878662,
+            152.6655397415161,
+            577.904613494873,
+            189.8759651184082
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.45864200592041016,
+          "bbox_xyxy": [
+            536.61474609375,
+            232.7752685546875,
+            578.72509765625,
+            287.621826171875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8773446679115295,
+          "bbox_xyxy": [
+            535.7457885742188,
+            229.794189453125,
+            581.6663208007812,
+            298.19232177734375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9949833154678345,
+          "bbox_xyxy": [
+            535.27099609375,
+            229.0526123046875,
+            581.442626953125,
+            300.01068115234375
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3336558938026428,
+          "bbox_xyxy": [
+            520.5156860351562,
+            227.79042053222656,
+            581.5452270507812,
+            305.3377685546875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3060985803604126,
+          "bbox_xyxy": [
+            532.8978271484375,
+            231.9961395263672,
+            574.1114501953125,
+            291.41070556640625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.807511031627655,
+          "bbox_xyxy": [
+            538.2844161987305,
+            233.9443359375,
+            579.4977645874023,
+            302.18804931640625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.38059625029563904,
+          "bbox_xyxy": [
+            538.0944366455078,
+            230.45335006713867,
+            578.7940826416016,
+            290.94535064697266
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8260059356689453,
+          "bbox_xyxy": [
+            535.9998474121094,
+            226.60528564453125,
+            582.1363296508789,
+            306.2487106323242
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.919745922088623,
+          "bbox_xyxy": [
+            537.4980621337891,
+            230.73246574401855,
+            578.361930847168,
+            303.2787399291992
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            638.83125,
+            237.0,
+            679.7625,
+            323.0333333333333
+          ],
+          "person_reference_bbox": [
+            622.4095458984375,
+            234.91461181640625,
+            707.4752197265625,
+            498.72027587890625
+          ],
+          "target_index": 43,
+          "detected": true,
+          "best_iou": 0.6870224528191055
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            362.759375,
+            303.6533333333333,
+            449.30625,
+            395.3333333333333
+          ],
+          "person_reference_bbox": [
+            377.6258544921875,
+            303.5616455078125,
+            524.1852416992188,
+            650.3106689453125
+          ],
+          "target_index": 44,
+          "detected": true,
+          "best_iou": 0.9220214091718948
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            656.528125,
+            142.90666666666667,
+            678.49375,
+            177.17666666666668
+          ],
+          "person_reference_bbox": [
+            648.0301513671875,
+            143.169677734375,
+            702.7052001953125,
+            278.6910095214844
+          ],
+          "target_index": 45,
+          "detected": true,
+          "best_iou": 0.8538146090547275
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            460.515625,
+            158.58333333333334,
+            487.609375,
+            196.60666666666668
+          ],
+          "person_reference_bbox": [
+            448.97674560546875,
+            160.25631713867188,
+            514.6832885742188,
+            330.7662048339844
+          ],
+          "target_index": 46,
+          "detected": true,
+          "best_iou": 0.8558112803187791
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            603.309375,
+            153.98,
+            628.209375,
+            193.66
+          ],
+          "person_reference_bbox": [
+            584.2813720703125,
+            153.11782836914062,
+            647.5260009765625,
+            322.8742370605469
+          ],
+          "target_index": 47,
+          "detected": true,
+          "best_iou": 0.8963612143683232
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            532.1125,
+            227.61666666666667,
+            582.1,
+            305.3
+          ],
+          "person_reference_bbox": [
+            486.210205078125,
+            232.2248077392578,
+            618.982177734375,
+            500.14691162109375
+          ],
+          "target_index": 48,
+          "detected": true,
+          "best_iou": 0.9006057941132246
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            556.8,
+            154.12666666666667,
+            579.0,
+            191.93333333333334
+          ],
+          "person_reference_bbox": [
+            536.5516967773438,
+            152.16287231445312,
+            586.0034790039062,
+            249.80197143554688
+          ],
+          "target_index": 49,
+          "detected": true,
+          "best_iou": 0.7265717374105877
+        }
+      ],
+      "people": [
+        [
+          622.510498046875,
+          234.7754669189453,
+          707.467529296875,
+          498.68536376953125
+        ],
+        [
+          377.4776611328125,
+          303.0284423828125,
+          524.0067749023438,
+          650.173583984375
+        ],
+        [
+          648.142578125,
+          143.346923828125,
+          702.8624267578125,
+          278.8127136230469
+        ],
+        [
+          449.1624755859375,
+          159.91192626953125,
+          514.0327758789062,
+          330.787841796875
+        ],
+        [
+          583.9993896484375,
+          153.1798095703125,
+          647.5501708984375,
+          322.2506103515625
+        ],
+        [
+          536.8248291015625,
+          152.1295166015625,
+          586.05908203125,
+          249.8197021484375
+        ],
+        [
+          507.5310974121094,
+          232.17706298828125,
+          618.7877197265625,
+          504.95416259765625
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.25996100902557373,
+          "bbox_xyxy": [
+            539.4685668945312,
+            231.2659912109375,
+            560.0,
+            297.7371826171875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.49117305874824524,
+          "bbox_xyxy": [
+            644.9879760742188,
+            240.0,
+            689.5146484375,
+            287.92102432250977
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8368757367134094,
+          "bbox_xyxy": [
+            640.8809509277344,
+            240.0,
+            692.3019104003906,
+            304.1309509277344
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5392907857894897,
+          "bbox_xyxy": [
+            535.7452774047852,
+            240.0,
+            582.0848770141602,
+            306.3860168457031
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6789694428443909,
+          "bbox_xyxy": [
+            538.5439376831055,
+            240.0,
+            579.2522506713867,
+            303.39652252197266
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.3643483817577362,
+          "bbox_xyxy": [
+            598.6692047119141,
+            400.6309585571289,
+            698.8505401611328,
+            509.0169448852539
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            400,
+            800,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    },
+    {
+      "frame_index": 276,
+      "heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6019960045814514,
+          "bbox_xyxy": [
+            510.8907165527344,
+            230.19215393066406,
+            560.5184326171875,
+            296.2286376953125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9808469414710999,
+          "bbox_xyxy": [
+            510.05908203125,
+            229.84625244140625,
+            561.2481689453125,
+            298.432373046875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7849775552749634,
+          "bbox_xyxy": [
+            666.1382446289062,
+            140.92385864257812,
+            695.8836059570312,
+            180.68386840820312
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7488318681716919,
+          "bbox_xyxy": [
+            477.6859130859375,
+            163.88534545898438,
+            509.0550537109375,
+            202.13980102539062
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6275621056556702,
+          "bbox_xyxy": [
+            378.7490234375,
+            296.82867431640625,
+            441.390380859375,
+            367.59136962890625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.572550356388092,
+          "bbox_xyxy": [
+            625.7085571289062,
+            231.43447875976562,
+            675.2169799804688,
+            296.8995056152344
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.41749194264411926,
+          "bbox_xyxy": [
+            544.3040161132812,
+            150.17364501953125,
+            578.8952026367188,
+            191.47335815429688
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3549187183380127,
+          "bbox_xyxy": [
+            463.35968017578125,
+            379.902099609375,
+            522.8428344726562,
+            461.8690185546875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9560255408287048,
+          "bbox_xyxy": [
+            668.9921264648438,
+            141.01126098632812,
+            691.1539306640625,
+            181.16256713867188
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9343975186347961,
+          "bbox_xyxy": [
+            625.7010650634766,
+            233.30181884765625,
+            674.1553192138672,
+            313.4073486328125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9198803901672363,
+          "bbox_xyxy": [
+            372.6289978027344,
+            296.67344665527344,
+            448.1257019042969,
+            376.360595703125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8548634052276611,
+          "bbox_xyxy": [
+            615.1853942871094,
+            150.99697875976562,
+            637.3000793457031,
+            190.51101684570312
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.822653591632843,
+          "bbox_xyxy": [
+            513.5061264038086,
+            230.27308654785156,
+            559.2844009399414,
+            306.3319091796875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6232582330703735,
+          "bbox_xyxy": [
+            482.0250549316406,
+            159.43682861328125,
+            505.2589416503906,
+            193.64459228515625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5751591920852661,
+          "bbox_xyxy": [
+            615.2198181152344,
+            151.65570068359375,
+            636.7391052246094,
+            171.65374755859375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.3019196689128876,
+          "bbox_xyxy": [
+            512.6852645874023,
+            245.36116790771484,
+            559.6941909790039,
+            291.24259185791016
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6019960045814514,
+          "bbox_xyxy": [
+            510.8907165527344,
+            230.19215393066406,
+            560.5184326171875,
+            296.2286376953125
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9808469414710999,
+          "bbox_xyxy": [
+            510.05908203125,
+            229.84625244140625,
+            561.2481689453125,
+            298.432373046875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.822653591632843,
+          "bbox_xyxy": [
+            513.5061264038086,
+            230.27308654785156,
+            559.2844009399414,
+            306.3319091796875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.3019196689128876,
+          "bbox_xyxy": [
+            512.6852645874023,
+            245.36116790771484,
+            559.6941909790039,
+            291.24259185791016
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.36804839968681335,
+          "bbox_xyxy": [
+            517.823127746582,
+            233.07126998901367,
+            560.6885528564453,
+            288.9027633666992
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6342304348945618,
+          "bbox_xyxy": [
+            511.8234672546387,
+            226.99340057373047,
+            562.240364074707,
+            308.6144485473633
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8008772134780884,
+          "bbox_xyxy": [
+            512.3157501220703,
+            232.00707244873047,
+            559.8477020263672,
+            307.9704818725586
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7849775552749634,
+          "bbox_xyxy": [
+            666.1382446289062,
+            140.92385864257812,
+            695.8836059570312,
+            180.68386840820312
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9560255408287048,
+          "bbox_xyxy": [
+            668.9921264648438,
+            141.01126098632812,
+            691.1539306640625,
+            181.16256713867188
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.40402597188949585,
+          "bbox_xyxy": [
+            666.8865261077881,
+            141.20202445983887,
+            691.6700439453125,
+            161.36362838745117
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.37889692187309265,
+          "bbox_xyxy": [
+            661.611005783081,
+            141.4725513458252,
+            695.0309906005859,
+            181.4508934020996
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6760987043380737,
+          "bbox_xyxy": [
+            665.5711612701416,
+            140.64918327331543,
+            694.158821105957,
+            187.1851577758789
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8873353004455566,
+          "bbox_xyxy": [
+            666.9953842163086,
+            142.57009315490723,
+            692.0072898864746,
+            184.14013671875
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6275621056556702,
+          "bbox_xyxy": [
+            378.7490234375,
+            296.82867431640625,
+            441.390380859375,
+            367.59136962890625
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3549187183380127,
+          "bbox_xyxy": [
+            463.35968017578125,
+            379.902099609375,
+            522.8428344726562,
+            461.8690185546875
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9198803901672363,
+          "bbox_xyxy": [
+            372.6289978027344,
+            296.67344665527344,
+            448.1257019042969,
+            376.360595703125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.954177975654602,
+          "bbox_xyxy": [
+            373.5282573699951,
+            294.6155548095703,
+            448.5510940551758,
+            383.2997131347656
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.572550356388092,
+          "bbox_xyxy": [
+            625.7085571289062,
+            231.43447875976562,
+            675.2169799804688,
+            296.8995056152344
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.9343975186347961,
+          "bbox_xyxy": [
+            625.7010650634766,
+            233.30181884765625,
+            674.1553192138672,
+            313.4073486328125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.870594322681427,
+          "bbox_xyxy": [
+            627.4065322875977,
+            233.7553195953369,
+            674.6084747314453,
+            308.9853973388672
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7488318681716919,
+          "bbox_xyxy": [
+            477.6859130859375,
+            163.88534545898438,
+            509.0550537109375,
+            202.13980102539062
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6232582330703735,
+          "bbox_xyxy": [
+            482.0250549316406,
+            159.43682861328125,
+            505.2589416503906,
+            193.64459228515625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6557946801185608,
+          "bbox_xyxy": [
+            477.9092426300049,
+            159.8090000152588,
+            509.6719856262207,
+            205.74586486816406
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.718310534954071,
+          "bbox_xyxy": [
+            480.3622055053711,
+            161.14276123046875,
+            506.8445167541504,
+            200.62693405151367
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8548634052276611,
+          "bbox_xyxy": [
+            615.1853942871094,
+            150.99697875976562,
+            637.3000793457031,
+            190.51101684570312
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5751591920852661,
+          "bbox_xyxy": [
+            615.2198181152344,
+            151.65570068359375,
+            636.7391052246094,
+            171.65374755859375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3861086368560791,
+          "bbox_xyxy": [
+            606.6028213500977,
+            150.38143253326416,
+            640.7560997009277,
+            187.08716583251953
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7845035791397095,
+          "bbox_xyxy": [
+            612.2187786102295,
+            148.9485445022583,
+            639.9152679443359,
+            195.57172393798828
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.9266353845596313,
+          "bbox_xyxy": [
+            613.2678298950195,
+            151.82203674316406,
+            637.7182960510254,
+            191.96850967407227
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.41749194264411926,
+          "bbox_xyxy": [
+            544.3040161132812,
+            150.17364501953125,
+            578.8952026367188,
+            191.47335815429688
+          ],
+          "source": "full_frame"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.33352774381637573,
+          "bbox_xyxy": [
+            549.4417018890381,
+            151.5312910079956,
+            583.0494537353516,
+            186.3503646850586
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "baseline"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5332875847816467,
+          "bbox_xyxy": [
+            549.2350063323975,
+            153.3249397277832,
+            581.2324104309082,
+            194.87804794311523
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "demo_supplement"
+          ]
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.8643949627876282,
+          "bbox_xyxy": [
+            550.6704082489014,
+            154.41914176940918,
+            577.8983955383301,
+            191.80324172973633
+          ],
+          "source": "person_crop",
+          "model_sources": [
+            "helmet_specialist"
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            509.296875,
+            225.56,
+            568.390625,
+            312.54333333333335
+          ],
+          "person_reference_bbox": [
+            490.11883544921875,
+            229.328125,
+            609.2797241210938,
+            508.92034912109375
+          ],
+          "target_index": 50,
+          "detected": true,
+          "best_iou": 0.8005725238511309
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            668.2625,
+            142.48,
+            691.625,
+            178.78
+          ],
+          "person_reference_bbox": [
+            656.965087890625,
+            142.70135498046875,
+            721.379150390625,
+            322.98944091796875
+          ],
+          "target_index": 51,
+          "detected": true,
+          "best_iou": 0.8618644951027667
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            375.584375,
+            299.18333333333334,
+            451.071875,
+            392.66666666666663
+          ],
+          "person_reference_bbox": [
+            380.42169189453125,
+            297.166748046875,
+            521.2572631835938,
+            656.5595703125
+          ],
+          "target_index": 52,
+          "detected": true,
+          "best_iou": 0.8105282843174982
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            475.828125,
+            163.09333333333333,
+            503.25,
+            216.19666666666666
+          ],
+          "person_reference_bbox": [
+            469.11541748046875,
+            161.15753173828125,
+            519.4074096679688,
+            323.3756103515625
+          ],
+          "target_index": 53,
+          "detected": true,
+          "best_iou": 0.5892018798416061
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            610.45,
+            152.42666666666668,
+            637.2625,
+            193.49333333333334
+          ],
+          "person_reference_bbox": [
+            598.134033203125,
+            152.50228881835938,
+            658.375244140625,
+            312.5212097167969
+          ],
+          "target_index": 54,
+          "detected": true,
+          "best_iou": 0.8367475438486087
+        },
+        {
+          "class_id": 0,
+          "bbox_xyxy": [
+            549.053125,
+            153.79,
+            574.928125,
+            188.98
+          ],
+          "person_reference_bbox": [
+            537.8533325195312,
+            153.60198974609375,
+            590.3406372070312,
+            292.11553955078125
+          ],
+          "target_index": 55,
+          "detected": true,
+          "best_iou": 0.7690968492354241
+        },
+        {
+          "class_id": 1,
+          "bbox_xyxy": [
+            625.03125,
+            235.69333333333333,
+            673.46875,
+            318.85333333333335
+          ],
+          "person_reference_bbox": [
+            608.3323974609375,
+            237.81275939941406,
+            704.1417236328125,
+            517.264404296875
+          ],
+          "target_index": 56,
+          "detected": true,
+          "best_iou": 0.8844306386611688
+        }
+      ],
+      "people": [
+        [
+          490.1740417480469,
+          229.4097900390625,
+          609.21875,
+          508.701904296875
+        ],
+        [
+          657.062744140625,
+          142.86883544921875,
+          721.559814453125,
+          323.01007080078125
+        ],
+        [
+          380.4954833984375,
+          297.5245361328125,
+          521.204345703125,
+          656.380859375
+        ],
+        [
+          608.6784057617188,
+          237.842041015625,
+          702.3109741210938,
+          517.0177001953125
+        ],
+        [
+          469.20904541015625,
+          161.30636596679688,
+          519.4922485351562,
+          323.347900390625
+        ],
+        [
+          597.909912109375,
+          152.49505615234375,
+          658.5849609375,
+          314.6692199707031
+        ],
+        [
+          537.7998046875,
+          153.73562622070312,
+          590.796630859375,
+          292.7491760253906
+        ]
+      ],
+      "rejected_tile_heads": [
+        {
+          "class": "helmeted_head",
+          "confidence": 0.5229899883270264,
+          "bbox_xyxy": [
+            512.7535400390625,
+            228.4820556640625,
+            559.47607421875,
+            292.7349853515625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.48911112546920776,
+          "bbox_xyxy": [
+            511.67333984375,
+            226.2283477783203,
+            560.0,
+            313.77313232421875
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7335525751113892,
+          "bbox_xyxy": [
+            513.475341796875,
+            229.58462524414062,
+            559.20703125,
+            310.8136901855469
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            0,
+            560,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6100967526435852,
+          "bbox_xyxy": [
+            481.60334396362305,
+            159.71536254882812,
+            506.16573333740234,
+            190.70333862304688
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "baseline"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.4477764964103699,
+          "bbox_xyxy": [
+            480.0,
+            158.34197998046875,
+            507.06214714050293,
+            196.4681396484375
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.748752772808075,
+          "bbox_xyxy": [
+            482.08169746398926,
+            159.13232421875,
+            504.5822925567627,
+            193.17510986328125
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            0,
+            800,
+            320
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.5061945915222168,
+          "bbox_xyxy": [
+            510.38323974609375,
+            240.0,
+            560.0,
+            324.7989044189453
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.3317074775695801,
+          "bbox_xyxy": [
+            510.3969421386719,
+            240.0,
+            560.0,
+            313.10398864746094
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.7713583111763,
+          "bbox_xyxy": [
+            511.907470703125,
+            240.0,
+            559.7052612304688,
+            309.015625
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            240,
+            240,
+            560,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.8700278997421265,
+          "bbox_xyxy": [
+            626.8730773925781,
+            240.0,
+            673.6997985839844,
+            307.11488342285156
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "helmeted_head",
+          "confidence": 0.6012803316116333,
+          "bbox_xyxy": [
+            512.4266586303711,
+            240.0,
+            561.1255035400391,
+            308.6883316040039
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "helmet_specialist"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            240,
+            800,
+            560
+          ],
+          "reason": "internal_tile_boundary"
+        },
+        {
+          "class": "no_helmet_head",
+          "confidence": 0.2786322236061096,
+          "bbox_xyxy": [
+            601.2198028564453,
+            400.4552917480469,
+            697.2649078369141,
+            521.6673431396484
+          ],
+          "source": "overlapping_head_tile",
+          "model_sources": [
+            "demo_supplement"
+          ],
+          "tile_bbox_xyxy": [
+            480,
+            400,
+            800,
+            720
+          ],
+          "reason": "internal_tile_boundary"
+        }
+      ]
+    }
+  ]
+}

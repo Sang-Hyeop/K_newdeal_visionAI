@@ -14,8 +14,11 @@ def iou(a,b):
  iw=max(0,min(a[2],b[2])-max(a[0],b[0]));ih=max(0,min(a[3],b[3])-max(a[1],b[1]));inter=iw*ih
  return inter/((a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-inter+1e-9)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--task',choices=['ppe','logistics'],required=True);p.add_argument('--version',default='v2');p.add_argument('--data-path',type=Path);p.add_argument('--run-name');p.add_argument('--report-name',default='fixed_threshold_audit.json');p.add_argument('--split',choices=['val','test'],default='test');p.add_argument('--imgsz',type=int,default=640);p.add_argument('--confidence',type=float,default=.25);p.add_argument('--weights',type=Path);p.add_argument('--supplement-ppe-weights',type=Path);p.add_argument('--supplement-object-weights',type=Path);args=p.parse_args();task=args.task
+ p=argparse.ArgumentParser();p.add_argument('--task',choices=['ppe','logistics'],required=True);p.add_argument('--version',default='v2');p.add_argument('--data-path',type=Path);p.add_argument('--run-name');p.add_argument('--report-name',default='fixed_threshold_audit.json');p.add_argument('--split',choices=['val','test'],default='test');p.add_argument('--imgsz',type=int,default=640);p.add_argument('--confidence',type=float,default=.25);p.add_argument('--weights',type=Path);p.add_argument('--supplement-ppe-weights',type=Path)
+ p.add_argument('--ppe-preserve-union',action='store_true');p.add_argument('--helmet-specialist-weights',type=Path);p.add_argument('--supplement-object-weights',type=Path);args=p.parse_args();task=args.task
  if args.imgsz<=0 or args.imgsz%32 or not 0<args.confidence<1:raise ValueError('imgsz must be a positive multiple of32 and confidence between0 and1')
+ if args.helmet_specialist_weights and not args.ppe_preserve_union:raise ValueError('Helmet specialist requires preserved PPE union')
+ if args.ppe_preserve_union and not args.supplement_ppe_weights:raise ValueError('PPE union requires supplement weights')
  data=args.data_path or ROOT/'data/reviewed_pilot'/('logistics_v2' if task=='logistics' and args.version=='v2' else task)
  out=ROOT/'outputs/training'/(args.run_name or f'{task}_pilot_{args.version}')
  if Path(args.report_name).name!=args.report_name:raise ValueError('report-name must be a filename')
@@ -26,7 +29,7 @@ def main():
  model=YOLO(str(weight));torch.set_num_threads(4)
  if args.supplement_ppe_weights:
   if task!='ppe':raise ValueError('PPE supplement only applies to PPE')
-  model=PPERecallEnsemble(model,YOLO(str(args.supplement_ppe_weights)))
+  model=PPERecallEnsemble(model,YOLO(str(args.supplement_ppe_weights)),preserve_union=args.ppe_preserve_union,helmet_specialist=YOLO(str(args.helmet_specialist_weights))if args.helmet_specialist_weights else None)
  if args.supplement_object_weights:
   if task!='logistics' or args.supplement_ppe_weights:raise ValueError('Object ensemble only applies to logistics')
   model=ObjectRecallEnsemble(model,YOLO(str(args.supplement_object_weights)))
@@ -46,5 +49,5 @@ def main():
  for c in counts.values():
   c['precision']=c['TP']/(c['TP']+c['FP']) if c['TP']+c['FP'] else None
   c['recall']=c['TP']/(c['TP']+c['FN']) if c['TP']+c['FN'] else None
- report={'supplement_object_weights':str(args.supplement_object_weights.resolve()) if args.supplement_object_weights else None,'supplement_ppe_weights':str(args.supplement_ppe_weights.resolve()) if args.supplement_ppe_weights else None,'weights':str(weight.resolve()),'dataset':str(data.resolve()),'confidence_threshold':args.confidence,'imgsz':args.imgsz,'iou_threshold':.5,'split':args.split,'status':'small development diagnostic; not final independent evaluation','class_counts':counts,'images':per_image};report_path.write_text(json.dumps(report,indent=2));print(json.dumps(report['class_counts']))
+ report={'ppe_preserve_union':args.ppe_preserve_union,'helmet_specialist_weights':str(args.helmet_specialist_weights.resolve())if args.helmet_specialist_weights else None,'supplement_object_weights':str(args.supplement_object_weights.resolve()) if args.supplement_object_weights else None,'supplement_ppe_weights':str(args.supplement_ppe_weights.resolve()) if args.supplement_ppe_weights else None,'weights':str(weight.resolve()),'dataset':str(data.resolve()),'confidence_threshold':args.confidence,'imgsz':args.imgsz,'iou_threshold':.5,'split':args.split,'status':'small development diagnostic; not final independent evaluation','class_counts':counts,'images':per_image};report_path.write_text(json.dumps(report,indent=2));print(json.dumps(report['class_counts']))
 if __name__=='__main__':main()

@@ -1,0 +1,1858 @@
+[
+  {
+    "index": 0,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_001366.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_001366.json",
+    "source_sha256": "4001e180746cf444766c451d13d0dfde08aa0baf36e566f0366775e3770befa5",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-30_001",
+    "crop_xyxy": [
+      1630,
+      231,
+      1920,
+      484
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        105.72000000000048,
+        85.02000000000021,
+        211.37947019045896,
+        169.09778840396672
+      ]
+    ],
+    "image": "support_000.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 1,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000956.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000956.json",
+    "source_sha256": "50bda13bafcf7c472cf564f5bd58d282176c5d859955148fea8242eced049f86",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+    "crop_xyxy": [
+      925,
+      193,
+      1362,
+      714
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        146.2599999999993,
+        174.33000000000118,
+        292.0263596005436,
+        347.673778984431
+      ]
+    ],
+    "image": "support_001.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 2,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_001371.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_001371.json",
+    "source_sha256": "2b5d15bef798d8759b7a3d30e17dfc33dce288cd0348ffedceae22037515c448",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-25_001",
+    "crop_xyxy": [
+      780,
+      264,
+      1114,
+      636
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        111.82000000000221,
+        124.72000000000162,
+        223.27277848843858,
+        248.580535916455
+      ]
+    ],
+    "image": "support_002.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 3,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_000384.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_000384.json",
+    "source_sha256": "908f275b0dc05fa4e2477f18715ea71f908447c39a768ce51794681461abc5d4",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-35_001",
+    "crop_xyxy": [
+      1535,
+      95,
+      1869,
+      492
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        112.1099999999999,
+        132.86,
+        223.34502876512965,
+        265.1384274826347
+      ]
+    ],
+    "image": "support_003.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 4,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_000697.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_000697.json",
+    "source_sha256": "5f8d6a19406a3783928b48b0dac62bd72d7219ae74cd517bce3ee151530269e3",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-36_002",
+    "crop_xyxy": [
+      596,
+      288,
+      928,
+      653
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        111.26000000000033,
+        122.34999999999792,
+        221.7193334278004,
+        243.80774301579413
+      ]
+    ],
+    "image": "support_004.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 5,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_001192.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_001192.json",
+    "source_sha256": "883c529f7a40015b3a83f4f7bbe846ede33b6872b4d167c1c8acdcd10a997171",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-36_002",
+    "crop_xyxy": [
+      453,
+      302,
+      708,
+      619
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        85.26999999999998,
+        105.82,
+        170.37871979748263,
+        211.43218411233568
+      ]
+    ],
+    "image": "support_005.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 6,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_002843.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_002843.json",
+    "source_sha256": "4301e490ebe7ecfee0b5fb2bf661907f86a74a103b82f9ba8aa0dfab0f66d572",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-25_001",
+    "crop_xyxy": [
+      725,
+      152,
+      1092,
+      552
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        123.1486257475575,
+        133.86793139684,
+        245.43335777702578,
+        267.1339259315005
+      ]
+    ],
+    "image": "support_006.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 7,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_001226.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_001226.json",
+    "source_sha256": "5430839a70618b0534d82bccfef4243545842f21470ded5f512219f384007307",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-35_001",
+    "crop_xyxy": [
+      762,
+      0,
+      1141,
+      269
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        127.20323922734394,
+        46.5699999999999,
+        253.5632089550196,
+        158.04518964077863
+      ]
+    ],
+    "image": "support_007.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 8,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-16_001_001353.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-16_001_001353.json",
+    "source_sha256": "3f9cdd79fd735f726d97a377d243c1740b6ce1777c9938c0dcd4a97d61ab82f7",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-12-10-16_001",
+    "crop_xyxy": [
+      563,
+      72,
+      868,
+      393
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        102.31506172319985,
+        107.11617375412101,
+        204.01557352772352,
+        214.09982902900958
+      ]
+    ],
+    "image": "support_008.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 9,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_000492.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_000492.json",
+    "source_sha256": "4c6d6edd86bb03c316809a73e05cd9bb5edaae822480805a696535e62a04bba1",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-36_002",
+    "crop_xyxy": [
+      510,
+      262,
+      891,
+      723
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        127.58000000000004,
+        153.86,
+        254.5834192507773,
+        307.66285248465806
+      ]
+    ],
+    "image": "support_009.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 10,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_002574.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-25_001_002574.json",
+    "source_sha256": "532d3a549501e579368db984107fcc9fafb1b393a15a98922eeab00b676f190c",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-25_001",
+    "crop_xyxy": [
+      456,
+      226,
+      945,
+      672
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        163.28999999999996,
+        149.20999999999998,
+        326.489095420867,
+        297.7512042885671
+      ]
+    ],
+    "image": "support_010.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 11,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001098.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001098.json",
+    "source_sha256": "81fbeb8508d37ae26c4be477c9cfbe851f52b9846849628b8777e6dbb5799dde",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-40_001",
+    "crop_xyxy": [
+      844,
+      179,
+      1284,
+      699
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        147.25,
+        173.72000000000003,
+        293.97448694443074,
+        346.99805090354084
+      ]
+    ],
+    "image": "support_011.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 12,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000482.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000482.json",
+    "source_sha256": "e3a04de5e73f7f9787d30f9410b33609a02db53b312848141b6d016c58693b0a",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-30_001",
+    "crop_xyxy": [
+      1019,
+      255,
+      1349,
+      620
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        110.18065733412118,
+        121.89881109172228,
+        220.2022157434517,
+        243.46373076254798
+      ]
+    ],
+    "image": "support_012.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 13,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_003030.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_003030.json",
+    "source_sha256": "69be73fb2a9085814b923a64fbc28efff84ce9a5b753d453912a347c0b6d9166",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-35_001",
+    "crop_xyxy": [
+      932,
+      326,
+      1275,
+      619
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        115.21999999999525,
+        98.03999999999837,
+        229.5336738838207,
+        195.62971904155847
+      ]
+    ],
+    "image": "support_013.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 14,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_001515.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_001515.json",
+    "source_sha256": "ced74a7aef813d4200532d19a4ff81f74228704f6ba32dd03ca2720dcff31e1f",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-37_001",
+    "crop_xyxy": [
+      390,
+      249,
+      827,
+      709
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        145.9738631315057,
+        153.56848209398038,
+        291.8694682140841,
+        306.9941829227565
+      ]
+    ],
+    "image": "support_014.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 15,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_000993.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_000993.json",
+    "source_sha256": "4cfead97b9222310a0ba501ee35e599104858af6bb62692abae492df89fbc380",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-35_001",
+    "crop_xyxy": [
+      702,
+      223,
+      1220,
+      886
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        173.14,
+        221.89999999999998,
+        345.9133329433171,
+        442.8924811132291
+      ]
+    ],
+    "image": "support_015.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 16,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001169.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001169.json",
+    "source_sha256": "2512b9f657a2ac54ba5ba09b396db70b84abef2873d7acf4bf6131d84c4bfdb4",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-40_001",
+    "crop_xyxy": [
+      848,
+      180,
+      1283,
+      696
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        145.34000000000003,
+        172.74,
+        290.46675073579354,
+        344.80910470583854
+      ]
+    ],
+    "image": "support_016.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 17,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_000418.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_000418.json",
+    "source_sha256": "18f85887fe7e3300734d4b77831a8fd407f270811cc5f0ad98c2e86489ceddbf",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-35_001",
+    "crop_xyxy": [
+      1555,
+      78,
+      1920,
+      490
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        130.76,
+        137.89,
+        260.7788376543631,
+        275.1887381020788
+      ]
+    ],
+    "image": "support_017.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 18,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_001929.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_001929.json",
+    "source_sha256": "ed98fb9e062af1b485fb91e61f523d674ca67c3a61bc7fd6f0c62892b477eaf5",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-37_001",
+    "crop_xyxy": [
+      456,
+      0,
+      893,
+      440
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        145.90999999999997,
+        127.09,
+        291.62417945217544,
+        283.8286075028334
+      ]
+    ],
+    "image": "support_018.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 19,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_001074.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-35_001_001074.json",
+    "source_sha256": "24af99464360baab58b60a1eb732bb1866d44c4eb92219eb5de5bb135375cf58",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-35_001",
+    "crop_xyxy": [
+      891,
+      205,
+      1247,
+      575
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        119.15999999999951,
+        124.02999999999918,
+        237.955029777052,
+        247.2642404971237
+      ]
+    ],
+    "image": "support_019.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 20,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_000535.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_000535.json",
+    "source_sha256": "0a9c775e92c9544656e5a85a47be8baccf4bce65944d02db52b7061eaf2ed4b4",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-37_001",
+    "crop_xyxy": [
+      463,
+      277,
+      695,
+      597
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        77.86999999999989,
+        106.98000000000093,
+        155.26250211462752,
+        213.64396398608005
+      ]
+    ],
+    "image": "support_020.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 21,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_001089.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_001089.json",
+    "source_sha256": "52181ab057fe6679ad1e9b3660febfef509ad4dd5d43c3bac16c136ffc4c3ba2",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+    "crop_xyxy": [
+      975,
+      66,
+      1365,
+      529
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        130.31999999999834,
+        154.8799999999997,
+        260.4121912666574,
+        309.15132343877985
+      ]
+    ],
+    "image": "support_021.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 22,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_001682.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_001682.json",
+    "source_sha256": "f162cad219a7c0880cde607719899c4c51858a3fdd63b64143a54bc27a9ab555",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-12-10-20_001",
+    "crop_xyxy": [
+      939,
+      254,
+      1232,
+      626
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        98.4800000000007,
+        124.84999999999991,
+        196.01713103966972,
+        248.82067117879296
+      ]
+    ],
+    "image": "support_022.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 23,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001570.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-40_001_001570.json",
+    "source_sha256": "40382802a28ecdef8a8d28bb51d2e62109941905be03265a1e6d5178e23f22ee",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-40_001",
+    "crop_xyxy": [
+      609,
+      122,
+      1094,
+      774
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        162.33000000000106,
+        217.7100000000001,
+        323.8383393763602,
+        434.9108701957914
+      ]
+    ],
+    "image": "support_023.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 24,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_001320.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_001320.json",
+    "source_sha256": "bb64774f5c2ed61fa8be07d7b11123fe911e9fe4355b3350d2c65119a7f7646e",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-30_001",
+    "crop_xyxy": [
+      1487,
+      128,
+      1811,
+      464
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        108.63608405111859,
+        112.4826252241132,
+        216.71893658539489,
+        224.6008800628864
+      ]
+    ],
+    "image": "support_024.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 25,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000704.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000704.json",
+    "source_sha256": "5aeb20e7d4efa820b12ee0536fa1d7d6951f58fe1bffecac4fc06b87528ede88",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+    "crop_xyxy": [
+      898,
+      374,
+      1219,
+      534
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        107.34000000000015,
+        54.20999999999998,
+        214.47919861313358,
+        107.50575291970796
+      ]
+    ],
+    "image": "support_025.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 26,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_000507.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_000507.json",
+    "source_sha256": "2f77d89c6eea7c05e4614aee40efcc6b43d27535ccd36aabfcfa2d0c68ddcb5c",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+    "crop_xyxy": [
+      678,
+      151,
+      954,
+      349
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        92.64999999999918,
+        66.33000000000001,
+        184.67633704902244,
+        132.24155859588046
+      ]
+    ],
+    "image": "support_026.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 27,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_002346.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_002346.json",
+    "source_sha256": "66b893a31fbaba2f215570fb1347972320f1d4b395cd473044f6773a4b23003e",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+    "crop_xyxy": [
+      639,
+      222,
+      866,
+      343
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        76.00999999999999,
+        40.60000000000002,
+        151.55045022336844,
+        80.83979397258327
+      ]
+    ],
+    "image": "support_027.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 28,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_001159.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_001159.json",
+    "source_sha256": "328987ad3158ac08307ea8bb58877daf16f223ea3eef9e32c18925b119887ba4",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+    "crop_xyxy": [
+      785,
+      196,
+      1141,
+      581
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        119.26948441864135,
+        128.55895750216303,
+        237.64800746642504,
+        256.80235747059544
+      ]
+    ],
+    "image": "support_028.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 29,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-16_001_001499.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-16_001_001499.json",
+    "source_sha256": "14c50f3d79c4bee6e1c413740dfa8d0c26681f786b50957abd7600c64a763167",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-12-10-16_001",
+    "crop_xyxy": [
+      635,
+      56,
+      940,
+      397
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        102.08000000000027,
+        113.97999999999999,
+        203.6382436660956,
+        227.69400171691575
+      ]
+    ],
+    "image": "support_029.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 30,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_000102.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_000102.json",
+    "source_sha256": "f90d95c08f0d21473c23f159f58d41a55ee1c9f13230576397ca886ce3d766b4",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-12-10-20_001",
+    "crop_xyxy": [
+      844,
+      474,
+      1124,
+      785
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        93.95999999999981,
+        103.89000000000067,
+        187.3470967741946,
+        207.54751245643195
+      ]
+    ],
+    "image": "support_030.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 31,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_000151.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-12-10-20_001_000151.json",
+    "source_sha256": "1e1fa27f24f63f9cf5a9a2386fdd6b5a3a3998ce76528485e7567605c60abe0a",
+    "class_folder": "helmet_worn",
+    "group": "S63_DATA3_H1_L1_D2023-10-12-10-20_001",
+    "crop_xyxy": [
+      815,
+      491,
+      1080,
+      798
+    ],
+    "crop_boxes_xyxy": [
+      [
+        0,
+        89.26999999999998,
+        102.96000000000004,
+        177.6116454649556,
+        205.03960682344507
+      ]
+    ],
+    "image": "support_031.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 32,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_004232.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_004232.json",
+    "source_sha256": "bba6f370a84f9f1ab0c615da9454671d22b0dee0754c4dbbe7903d3ffef55310",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-40_045",
+    "crop_xyxy": [
+      625,
+      19,
+      1062,
+      509
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        146.38468551991593,
+        163.5975491972944,
+        291.8223011481283,
+        326.81677111581746
+      ]
+    ],
+    "image": "support_032.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 33,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_000841.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_000841.json",
+    "source_sha256": "5a80e4033ddcd78f7b1f508a232e0be98081c20837aa66aae77a852bc1280c77",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-20-03-16_001",
+    "crop_xyxy": [
+      1204,
+      490,
+      1438,
+      770
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        78.27970208575152,
+        94.03999999999985,
+        156.32531732737925,
+        187.09788200260573
+      ]
+    ],
+    "image": "support_033.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 34,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000744.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000744.json",
+    "source_sha256": "1c8994d288f6fa2a6f2af3f6fd8bfa22f62178f870ce89e579d81563657a5f93",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+    "crop_xyxy": [
+      1009,
+      531,
+      1193,
+      663
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        61.84999999999991,
+        44.5,
+        123.36176013114414,
+        88.64419702767736
+      ]
+    ],
+    "image": "support_034.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 35,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000968.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000968.json",
+    "source_sha256": "61b987349f5d3727c8b3e4df521bc3a94e3510100e239fd5b448180476c58288",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-31_001",
+    "crop_xyxy": [
+      629,
+      0,
+      971,
+      408
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        114.46000000000004,
+        114.53,
+        228.69930981178595,
+        261.4479695232525
+      ]
+    ],
+    "image": "support_035.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 36,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_002827.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_002827.json",
+    "source_sha256": "6bd9b2468fde2cf6fba61ebbe663d48ae285d7c719046ce1a0c191e4810dbb6b",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+    "crop_xyxy": [
+      824,
+      101,
+      1163,
+      483
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        113.2619284580569,
+        128.2699999999984,
+        226.1765784337165,
+        255.5814662131355
+      ]
+    ],
+    "image": "support_036.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 37,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_005003.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_005003.json",
+    "source_sha256": "5e43b03aba242e3a7aebb3d8f5196b6b2ea3247c91f52f04886def60a0606660",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-40_045",
+    "crop_xyxy": [
+      631,
+      0,
+      1185,
+      601
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        184.87999999999988,
+        196.42,
+        369.51427109974406,
+        398.86842284739953
+      ]
+    ],
+    "image": "support_037.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 38,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_004786.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-40_045_004786.json",
+    "source_sha256": "28d0f7b8a9338d578cb2adc502dfc2e3a82c376841a0f3ed9c76dbfb7c96a71e",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-40_045",
+    "crop_xyxy": [
+      591,
+      138,
+      1095,
+      686
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        168.33999999999935,
+        183.2599999999996,
+        336.28847020934006,
+        365.93462347257685
+      ]
+    ],
+    "image": "support_038.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 39,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_003088.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_003088.json",
+    "source_sha256": "5295a4544eb0efd22c6144ca629522707b444988463489c4186cbc4eefefe2cb",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-45_043",
+    "crop_xyxy": [
+      852,
+      0,
+      1295,
+      555
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        148.32000000000062,
+        176.5000000000002,
+        295.73283030997663,
+        365.93291867369464
+      ]
+    ],
+    "image": "support_039.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 40,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000650.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000650.json",
+    "source_sha256": "8fcad3c63700d0dded9dbfb77f4cb8ec9de817ac32ddc0cf22a5fd2a6438372c",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-23_001",
+    "crop_xyxy": [
+      855,
+      174,
+      1193,
+      574
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        113.32964756041565,
+        133.5452202384716,
+        225.89514474129737,
+        266.84472349877166
+      ]
+    ],
+    "image": "support_040.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 41,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_000215.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_000215.json",
+    "source_sha256": "a7108b3b7f80e4355647877f1f227ed5ef36e100fe600098577293d61d7d9d5c",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-20-03-16_001",
+    "crop_xyxy": [
+      698,
+      280,
+      945,
+      596
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        82.98000000000002,
+        105.67000000000002,
+        165.27330623556452,
+        211.18698082136575
+      ]
+    ],
+    "image": "support_041.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 42,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_001894.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_001894.json",
+    "source_sha256": "01defe29331e1edf6fa4ea33263b5f4d5e6c64466cf88ef5113bf2145843c449",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+    "crop_xyxy": [
+      781,
+      110,
+      1099,
+      459
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        106.68999999999926,
+        116.53000000000051,
+        212.4321516546937,
+        232.9477315366376
+      ]
+    ],
+    "image": "support_042.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 43,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_000224.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_000224.json",
+    "source_sha256": "6e1eefa1dea1d7e2071501aba1e95c1ea415644819deb8bee948b1d3ceb22622",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-45_043",
+    "crop_xyxy": [
+      561,
+      184,
+      1114,
+      728
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        184.55000000000223,
+        182.08000000000158,
+        369.0045292514925,
+        363.22945058976825
+      ]
+    ],
+    "image": "support_043.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 44,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_001575.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-45_043_001575.json",
+    "source_sha256": "0db86785658ac7421657ef4691a8ae75b3f1a26474d1023fcc261a8969356550",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-45_043",
+    "crop_xyxy": [
+      771,
+      0,
+      1233,
+      487
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        154.65903783746762,
+        125.88,
+        308.6163749303114,
+        306.7316951863369
+      ]
+    ],
+    "image": "support_044.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 45,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000445.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000445.json",
+    "source_sha256": "cc9eca56750611cd3e535bb259d48e6b66459b4997c167ab8375ef49f380efd5",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+    "crop_xyxy": [
+      1180,
+      460,
+      1338,
+      645
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        53.42380693464452,
+        62.24999999999966,
+        106.12716812609006,
+        123.6738134168287
+      ]
+    ],
+    "image": "support_045.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 46,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_001091.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_001091.json",
+    "source_sha256": "52ca986db26f4407a52ec50fbfcac972ae7700da12ae2de5d86512c192158a45",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-12-10-21_001",
+    "crop_xyxy": [
+      742,
+      474,
+      1019,
+      745
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        92.89000000000055,
+        91.0399999999969,
+        185.06811580290037,
+        181.1311780553325
+      ]
+    ],
+    "image": "support_046.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 47,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_002165.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_002165.json",
+    "source_sha256": "adcd94ef67db845204d0952c4574e362cd43f54557f26d620a35df381246e8b9",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+    "crop_xyxy": [
+      609,
+      15,
+      947,
+      345
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        113.20000000000152,
+        110.3800000000003,
+        225.87900192180518,
+        220.44593114821183
+      ]
+    ],
+    "image": "support_047.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 48,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000983.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000983.json",
+    "source_sha256": "21d5a9bf6145307e7e55517d9692bc3aa8e2e5ab0c8aa41f5e8b027c0f9f7306",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-31_001",
+    "crop_xyxy": [
+      507,
+      0,
+      903,
+      399
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        132.1579154692521,
+        74.6419046823257,
+        264.2092319537327,
+        237.0793233004173
+      ]
+    ],
+    "image": "support_048.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 49,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_001431.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_001431.json",
+    "source_sha256": "6021ca9163850a77bc956331a5cddec4d5df96ff846c2d2fc587b8e7dc000835",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-20-03-16_001",
+    "crop_xyxy": [
+      833,
+      209,
+      1087,
+      545
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        84.94161092490526,
+        112.90504770073812,
+        169.66793664917225,
+        224.881191698487
+      ]
+    ],
+    "image": "support_049.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 50,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001440.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001440.json",
+    "source_sha256": "68b116a96a5cf787e4b10e476e3146c6623cb44f5ec9bf6f386ba930fc7dfb72",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-35_002",
+    "crop_xyxy": [
+      539,
+      317,
+      872,
+      692
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        111.77008123337532,
+        125.46992450057598,
+        222.61902202994133,
+        250.46979390946967
+      ]
+    ],
+    "image": "support_050.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 51,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_000693.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_000693.json",
+    "source_sha256": "f420b717881693cfd50f8203be6055dccf111b8a11c800b0597286584911f845",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-35_002",
+    "crop_xyxy": [
+      588,
+      336,
+      839,
+      624
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        84.30613334371435,
+        96.34586494745332,
+        167.99730932219472,
+        192.41165809069582
+      ]
+    ],
+    "image": "support_051.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 52,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_000993.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_000993.json",
+    "source_sha256": "54b44a67086e98e9be52d98ef4d820784f9b78bb618fa4d00bfc58f24b654bc3",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-12-10-21_001",
+    "crop_xyxy": [
+      743,
+      475,
+      1021,
+      746
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        93.0700000000021,
+        90.91000000000224,
+        185.59762250135748,
+        181.342771826569
+      ]
+    ],
+    "image": "support_052.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 53,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001341.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001341.json",
+    "source_sha256": "fc9b94505fc96b30de6fbb0d00dd776f5a6516ba69be3cb8984eae0d873861d7",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-35_002",
+    "crop_xyxy": [
+      476,
+      351,
+      793,
+      707
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        106.3799568958143,
+        118.78284423172857,
+        212.02895717927368,
+        237.5210995036682
+      ]
+    ],
+    "image": "support_053.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 54,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000139.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000139.json",
+    "source_sha256": "12d66273439a0e3ef2d68665aba69d9300f16b326ad7cdfb1dca1b3aa94ca457",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+    "crop_xyxy": [
+      1312,
+      456,
+      1491,
+      636
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        60.34999999999991,
+        60.27999999999997,
+        119.79895237357618,
+        120.25974659119686
+      ]
+    ],
+    "image": "support_054.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 55,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_002251.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_002251.json",
+    "source_sha256": "a58921acb656f78377de16afaf2e3586b5b3daad685657aa623710743dbf330b",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-12-10-21_001",
+    "crop_xyxy": [
+      656,
+      273,
+      875,
+      505
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        73.75,
+        77.44999999999999,
+        146.63457074003304,
+        154.86224861933806
+      ]
+    ],
+    "image": "support_055.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 56,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000154.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-31_001_000154.json",
+    "source_sha256": "8fbbc0e3929af989b5c3359875ff564666d07eb5c38e73ac93b3d034687c9078",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-31_001",
+    "crop_xyxy": [
+      568,
+      297,
+      918,
+      705
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        117.16177902716731,
+        136.40659570214,
+        233.73250332490795,
+        272.4057740495041
+      ]
+    ],
+    "image": "support_056.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 57,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_001044.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_001044.json",
+    "source_sha256": "6e294654fabbd49c233e3af59e5905107547bdd7e038933a7e50dc92af72befe",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-30_001",
+    "crop_xyxy": [
+      971,
+      258,
+      1278,
+      593
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        103.15000000000055,
+        112.1499999999998,
+        205.5326753088459,
+        223.77804264068624
+      ]
+    ],
+    "image": "support_057.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 58,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000993.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000993.json",
+    "source_sha256": "628c0b9de8b86dd07bb21d89391f08ecaa317e5796545ce5f89a69d7828d9ff9",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-23_001",
+    "crop_xyxy": [
+      967,
+      318,
+      1273,
+      639
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        102.14682381562716,
+        107.26432220668062,
+        204.18351773266295,
+        214.48932259407422
+      ]
+    ],
+    "image": "support_058.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 59,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-49_021_000217.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-49_021_000217.json",
+    "source_sha256": "15f685100d54bfe6db961858120df16ddb59a8767619f7bbba0dde339ebf6338",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-49_021",
+    "crop_xyxy": [
+      740,
+      0,
+      1187,
+      468
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        149.41195429940296,
+        148.4699999999999,
+        298.6111848817284,
+        308.25889715990377
+      ]
+    ],
+    "image": "support_059.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 60,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000584.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-23_001_000584.json",
+    "source_sha256": "00fd3175f66b41d52a11e3439883adb03f50e2741c5c7a6292d9d9043fb252c8",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-23_001",
+    "crop_xyxy": [
+      765,
+      240,
+      1080,
+      617
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        105.35175426557225,
+        125.9279692712388,
+        210.5590799144934,
+        251.60028155323772
+      ]
+    ],
+    "image": "support_060.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 61,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_001224.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_001224.json",
+    "source_sha256": "1edc775c3806d17bf2b13af958fc40383adebe83978171de8ea787dbe6c70ebe",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-30_001",
+    "crop_xyxy": [
+      917,
+      329,
+      1280,
+      694
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        121.28999999999996,
+        122.2399999999991,
+        242.24183632130803,
+        243.80188147875356
+      ]
+    ],
+    "image": "support_061.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 62,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-36_046_001925.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-25-15-36_046_001925.json",
+    "source_sha256": "3e51a8f7dedb5d845f30c438e201a908c7f1456ccf0f69091cbd7da0f6b95662",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-10-25-15-36_046",
+    "crop_xyxy": [
+      808,
+      26,
+      1184,
+      500
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        125.70999999999947,
+        158.4099999999998,
+        251.1638452326522,
+        316.38891621889474
+      ]
+    ],
+    "image": "support_062.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  },
+  {
+    "index": 63,
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_000750.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-30_001_000750.json",
+    "source_sha256": "f6b54ca3f7d225d88acb5ec824162278a007cf3801b181674df44b5399dc92cd",
+    "class_folder": "helmet_missing",
+    "group": "S63_DATA3_H0_L1_D2023-09-14-10-30_001",
+    "crop_xyxy": [
+      1024,
+      141,
+      1377,
+      530
+    ],
+    "crop_boxes_xyxy": [
+      [
+        1,
+        117.8700000000008,
+        130.0700000000001,
+        235.64229936759284,
+        259.5482478677253
+      ]
+    ],
+    "image": "support_063.jpg",
+    "status": "accepted",
+    "not_training_labels": false,
+    "training_eligible": true,
+    "split": "train",
+    "review": "AI-Hub provided head labels; all64 candidate crop overlays visually inspected; class and XYXY mapping verified, masks not helmets"
+  }
+]

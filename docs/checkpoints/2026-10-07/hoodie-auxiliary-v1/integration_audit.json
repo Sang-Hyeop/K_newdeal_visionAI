@@ -1,0 +1,20 @@
+[
+  {
+    "video": 5,
+    "preserved_warning_events": 50,
+    "removed_warnings": [],
+    "hood_safe_vetoes": 2
+  },
+  {
+    "video": 6,
+    "preserved_warning_events": 111,
+    "removed_warnings": [],
+    "hood_safe_vetoes": 7,
+    "reviewed_hood_target_samples": 29,
+    "hood_evidence_samples": 29,
+    "hood_target_ppe": {
+      "UNKNOWN": 19,
+      "WARNING": 10
+    }
+  }
+]

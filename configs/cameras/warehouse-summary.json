@@ -1,0 +1,106 @@
+{
+  "camera_id": "warehouse-summary",
+  "source_name": "7_Logistics Warehouse.mp4",
+  "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+  "roi_id": "warehouse_lane_outside_safe_boxes",
+  "safe_seconds": 3,
+  "critical_seconds": 5,
+  "max_gap_seconds": 1,
+  "vehicle_missing_hold_seconds": 1,
+  "roi_alpha_safe": 0.15,
+  "roi_alpha_alert": 0.2,
+  "roi_review_status": "floor_geometry_manually_reviewed_demo_approximation",
+  "monitor_floor_normalized": [
+    [
+      0.09375,
+      0.041666666666666664
+    ],
+    [
+      0.35234375,
+      0.05138888888888889
+    ],
+    [
+      0.59296875,
+      0.5194444444444445
+    ],
+    [
+      1.0,
+      0.9013888888888889
+    ],
+    [
+      0.87734375,
+      1.0
+    ],
+    [
+      0.10546875,
+      1.0
+    ],
+    [
+      0.0484375,
+      0.5472222222222223
+    ]
+  ],
+  "safe_polygons_normalized": [
+    [
+      [
+        0.1421875,
+        0.19305555555555556
+      ],
+      [
+        0.41796875,
+        0.125
+      ],
+      [
+        0.490625,
+        0.4111111111111111
+      ],
+      [
+        0.25,
+        0.4486111111111111
+      ]
+    ],
+    [
+      [
+        0.0484375,
+        0.5527777777777778
+      ],
+      [
+        0.14375,
+        0.5625
+      ],
+      [
+        0.1984375,
+        0.7736111111111111
+      ],
+      [
+        0.0875,
+        0.8041666666666667
+      ]
+    ],
+    [
+      [
+        0.32265625,
+        0.5986111111111111
+      ],
+      [
+        0.5890625,
+        0.5180555555555556
+      ],
+      [
+        1.0,
+        0.8861111111111111
+      ],
+      [
+        0.8828125,
+        1.0
+      ],
+      [
+        0.48046875,
+        1.0
+      ]
+    ]
+  ],
+  "vehicle_presence_scope": "same_monitored_floor_lane_outside_safe_boxes",
+  "distance_mode": "image_plane",
+  "policy_version": "warehouse_lane_timed_3_5_v1"
+}

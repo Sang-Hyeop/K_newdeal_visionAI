@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/summary.json",
+      "bytes": 2078,
+      "sha256": "895c183eac92a1c2eb97b35a28d0689e9f9310fb4f5b66e1e5a27c544b07167e"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/preview.jpg",
+      "bytes": 262493,
+      "sha256": "85bc1b283432fa103bedfd82b78b5779441eb1baf7bd2e87ebc1305547c68913"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/audit.json",
+      "bytes": 101,
+      "sha256": "8553113edf2328a0935bf1db767852c65dca02a76245f638aed228631c852e6c"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/detections.jsonl",
+      "bytes": 1841225,
+      "sha256": "53d004037e396973014a34d2c9303308fc883e8391944ff4b3b011476ca6e170"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/observations_v1.jsonl",
+      "bytes": 1351372,
+      "sha256": "db4efc7fd6cc151074f0c46412ebb14b03508bd4b1abf3bb6918b21db45478e9"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/events_v1.jsonl",
+      "bytes": 487028,
+      "sha256": "b894d0d051101dd70402e7e23d888f5a7221a30af8063ea25d193aba17592f60"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video5/demo.mp4",
+      "bytes": 4106458,
+      "sha256": "d75fa8a65a22d040b99658edc8fd33957e0dd81e2b3047cea4b46943d8b78795"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/summary.json",
+      "bytes": 2087,
+      "sha256": "79ab937de4dc68d755214ab11fe4679e9bd5869018a8236ebad47fca768df136"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/preview.jpg",
+      "bytes": 444112,
+      "sha256": "79a4e7efd4ad9a51abc8475bef57d5932b6d2a8833bae192dc4ffdc2b8b4ee64"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/audit.json",
+      "bytes": 236,
+      "sha256": "cdba1c8521124314ce0a1369a780376db114ca70c7e4c542e5a569bf561f5baa"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/detections.jsonl",
+      "bytes": 2363106,
+      "sha256": "4ce1d9901299463dccdf0e1ff78f3f69838cde8b0e10599988172e888bc77483"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/observations_v1.jsonl",
+      "bytes": 1334102,
+      "sha256": "6faa661367c9cd291706f013e8ca630db02abc0332338a8fc3172c1f8c94b366"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/events_v1.jsonl",
+      "bytes": 508435,
+      "sha256": "664f3c0d557d8dd38360f63cf94565e6faf79663198f42f8a1701a6183c7e05b"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/video6/demo.mp4",
+      "bytes": 4713860,
+      "sha256": "5e5e2a3f3efdf1f6bd59188c6793896aba6e5766e984f30bcddaf2b89ac9d853"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/model/report.json",
+      "bytes": 920,
+      "sha256": "0d4b0fff7f9b152f5da2783823088ea2071b514c8e93b8cdfee568746eeb34d1"
+    },
+    {
+      "path": "outputs/checkpoints/hoodie_auxiliary_v1/model/hoodie.pt",
+      "bytes": 5382661,
+      "sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371"
+    }
+  ],
+  "source_archive": "/Users/sanghyeopkim/Downloads/Hoodie Detection.v1i.yolo26.zip"
+}

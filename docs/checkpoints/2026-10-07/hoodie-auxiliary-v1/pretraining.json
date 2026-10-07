@@ -1,0 +1,25 @@
+{
+  "status": "training_started_not_validated",
+  "source": "https://universe.roboflow.com/jaydips-workspace/hoodie-detection-sojdq/dataset/1",
+  "author": "Jaydips Workspace",
+  "license": "CC BY 4.0",
+  "archive_sha256": "a59e4afa9889ced49b92d973804f26a551495e4193688fef6e4dd0dd00f9ab55",
+  "original_images": 1635,
+  "exported_images": 3959,
+  "selected": {
+    "train": 512,
+    "val": 120,
+    "test": 100
+  },
+  "epochs": 8,
+  "initial": "models/pretrained/yolo26n.pt",
+  "box_scope": "whole hooded person; separate auxiliary model",
+  "normal_not_ppe_safe": true,
+  "sample_review": "outputs/diagnostics/hoodie_dataset_v1/label_contact.jpg",
+  "limitation": "development test; nearby source frames may cross original splits",
+  "polygon_boxes_converted": 435,
+  "clean_dataset": "data/reviewed_pilot/hoodie_roboflow_v1/dataset.yaml",
+  "first_attempt": "interrupted during first epoch because mixed polygon and box rows were being skipped",
+  "training_run": "outputs/training/hoodie_auxiliary_v1_clean",
+  "evaluation_script": "scripts/evaluate_hoodie_auxiliary.py"
+}

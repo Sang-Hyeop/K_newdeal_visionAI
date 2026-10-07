@@ -18,6 +18,18 @@ class TrackingTests(unittest.TestCase):
         recovered,_=tracker.update(.6,[person(104)],(400,400))
         self.assertEqual(recovered[0]['track_id'],first[0]['track_id'])
 
+    def test_optional_current_candidate_is_real_before_activation(self):
+        tracker=PersonTracker(5,expose_current_candidates=True)
+        tracker.update(0,[],(400,400))
+        seen,_=tracker.update(.2,[person()],(400,400))
+        self.assertEqual(len(seen),1)
+        self.assertTrue(seen[0]['current_detection_candidate'])
+        self.assertEqual(seen[0]['detected_bbox_xyxy'],person()['bbox_xyxy'])
+        self.assertEqual(seen[0]['observation_status'],'unconfirmed')
+        observed,missing=tracker.update(.4,[],(400,400))
+        self.assertFalse(observed)
+        self.assertTrue(missing)
+
     def test_scene_change_never_reuses_old_identity(self):
         tracker=PersonTracker(5)
         first,_=tracker.update(0,[person()],(400,400))

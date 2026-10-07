@@ -8,16 +8,17 @@ from ultralytics.trackers.byte_tracker import BYTETracker, STrack
 
 
 class PersonTracker:
-    def __init__(self, processed_fps, max_gap_seconds=1.0, target_class='person', namespace=''):
+    def __init__(self, processed_fps, max_gap_seconds=1.0, target_class='person', namespace='', expose_current_candidates=False, fuse_score=True):
         if processed_fps <= 0 or max_gap_seconds <= 0:
             raise ValueError('Positive FPS and gap required')
         self.gap = max_gap_seconds
         self.target_class=target_class;self.namespace=namespace
+        self.expose_current_candidates=expose_current_candidates
         self._counter=itertools.count(1)
         self.backend = BYTETracker(SimpleNamespace(track_high_thresh=.25,
             track_low_thresh=.1, new_track_thresh=.25,
             track_buffer=max(1, math.ceil(processed_fps*max_gap_seconds)),
-            match_thresh=.8, fuse_score=True))
+            match_thresh=.8, fuse_score=fuse_score))
         # Independent counters prevent one class's reset reusing another class's ID.
         self.backend.track_class=type('LocalSTrack',(STrack,),
             {'next_id':staticmethod(lambda:next(self._counter))})
@@ -49,14 +50,19 @@ class PersonTracker:
                 raise ValueError('Invalid detection dimensions')
             rows.append([*box,score,0])
         boxes=Boxes(np.asarray(rows,dtype=np.float32).reshape(-1,6),shape)
-        tracks=self.backend.update(boxes)
+        tracks=list(self.backend.update(boxes));candidate_ids=set()
+        if self.expose_current_candidates:
+            known={int(t[4]) for t in tracks}
+            for current in self.backend.tracked_stracks:
+                if not current.is_activated and current.frame_id==self.backend.frame_id and current.track_id not in known:
+                    tracks.append(current.result);candidate_ids.add(current.track_id)
         observed=[]
         for track in tracks:
             identity=f'{self.namespace}{self.scene}:{int(track[4])}'
             self.last_seen[identity]=timestamp
-            observed.append({'track_id':identity,'bbox_xyxy':track[:4].tolist(),
+            observed.append({'track_id':identity,'bbox_xyxy':list(map(float,track[:4])),
                              'detected_bbox_xyxy':rows[int(track[-1])][:4],
-                             'confidence':float(track[5]),'observation_status':'confirmed'})
+                             'confidence':float(track[5]),'observation_status':'unconfirmed' if int(track[4]) in candidate_ids else 'confirmed','current_detection_candidate':int(track[4]) in candidate_ids})
         observed_ids={row['track_id'] for row in observed}
         missing=[]
         for identity,last_seen in list(self.last_seen.items()):

@@ -1,0 +1,19 @@
+{
+  "status": "stopped_after_user_requested_checkpoint",
+  "tests_passed": 87,
+  "reverse_target_actual_frames": 36,
+  "reviewed_ppe_head_observations": 73,
+  "reviewed_ppe_misses": 0,
+  "continuous_ppe_sampled_head_observations": 39,
+  "continuous_ppe_misses": 0,
+  "mature_ppe_warning_observations": 35,
+  "mature_ppe_warning_gaps": 0,
+  "continuous_ground_truth": "interpolated between reviewed keyframes, approx4.8 FPS, training-exposed",
+  "source5_and6_integrated_runs_completed": true,
+  "object_multiscale_raw_union": "experimental_not_promoted; scaled80/80; old28/29; duplicated FP greatly increased",
+  "general_zero_misses_achieved": false,
+  "single_pt_goal_complete": false,
+  "new_pr_created": false,
+  "main_merged": false,
+  "remaining": "Occluded worker, generalization, single-model integration, all-video PPE and forklift-forklift event"
+}

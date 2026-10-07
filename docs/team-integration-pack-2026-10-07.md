@@ -17,9 +17,11 @@
 
 | 기능 | 판정 방식 | 담당 출력 |
 |---|---|---|
-| 사람–지게차 근접 | 고정 ROI **없음**, 화면 전체 검출·거리 | `event_type=proximity` |
+| 사람–지게차 근접 | 고정 ROI **없음**, 화면 전체 검출·거리 | `event_type=proximity` / `person_forklift_proximity` |
+| 지게차–지게차 근접 | 고정 ROI **없음**, 관측된 차량 쌍 화면상 거리 | `forklift_forklift_proximity` (3번) |
 | 구역/통로 | **별도 고정 ROI** | `zone_access` / `zone_dwell` (+ 차로 조건부 규칙) |
 | 안전모 | 사람 추적 + 머리 연결 + 시간 확인 | `event_type=ppe` |
+| 후드 보조 (5·6 옵션) | 전신 후드 후보 → SAFE 금지·UNKNOWN | PPE 이벤트에 `hood_evidence` (experimental) |
 | 상태 배너 | 기능별 최신 관측 집계 | `observations_v1.jsonl`의 `feature_status` |
 
 거리: **화면상 거리**만 사용. `distance_meters`는 항상 `null`.
@@ -118,10 +120,12 @@
 ## 7. 현재 한계 (화면에 같이 적을 것)
 
 - 기본 개발 검출기는 **v16**. 후진 가림 시연만 선택적 recall bundle (독립 현장 정확도 아님)
-- PPE 미착용 WARNING **아직 불안정(0건 구간 있음)** · 기본 PPE 모델 유지
+- PPE WARNING은 **검토 후보**이며 확정 위반 증명이 아님 · 후드 보조는 experimental
 - 구역 ROI는 **시연용 통로/작업 영역**, 법적 출입금지 확정 아님
+- 3번 지게차–지게차는 **화면상 거리** (`distance_meters=null`), 박스 합침 시 근사 한계
 - 모델 `.pt`는 Git에 없음 → 별도 전달
 - 결정 요약: `docs/demo-adaptation-decision-2026-10-07.md`
+- 1~7 통합 실행: `docs/demo-scenario-runbook-2026-10-07.md`
 
 ---
 
@@ -133,7 +137,21 @@ conda activate safety
 git switch fix/proximity-detection-audit
 git pull --ff-only
 
-# 근접 예시 (기본 v16)
+# 권장: 시연 1~7 통합 러너 (PPE 전 영상 ON)
+python scripts/run_demo_scenarios.py \
+  --videos 1 2 3 4 5 6 7 \
+  --output outputs/diagnostics/scenario_team_$(date +%H%M%S) \
+  --sample-fps 5
+
+# 5·6 후드 보조 (SAFE → UNKNOWN, WARNING 보존)
+python scripts/run_demo_scenarios.py \
+  --videos 5 6 \
+  --hood-auxiliary \
+  --output outputs/diagnostics/scenario_hood_$(date +%H%M%S) \
+  --sample-fps 5 \
+  --ppe-search person_context
+
+# 개별 근접 예시 (기본 v16)
 python scripts/run_proximity_video.py \
   --source data/videos/1_forklift_forward.mp4 \
   --weights models/pilot_v16_related/person_forklift.pt \
@@ -162,5 +180,6 @@ python scripts/run_zone_dwell_video.py \
 
 - `outputs/diagnostics/demo_object_recall_bundle_v1/forward/proximity.mp4`
 - `outputs/diagnostics/demo_object_recall_bundle_v1/reverse/proximity.mp4`
+- `outputs/diagnostics/scenario_plan_v2_hood_active/` (후드 활성 5·6)
 
 `--output`은 **없는 새 폴더**여야 합니다.

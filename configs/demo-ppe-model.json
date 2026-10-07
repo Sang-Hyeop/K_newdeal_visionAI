@@ -1,0 +1,84 @@
+{
+  "status": "selected_demo_recall_profile",
+  "purpose": "demo-only recall-first PPE; existing general object/PPE baselines preserved",
+  "source_exposure": "demo videos used in training; no unseen-site accuracy claim",
+  "weights": {
+    "objects": "models/pretrained/yolo26n.pt",
+    "ppe_baseline": "models/pilot_v3_ppe_expansion/ppe.pt",
+    "ppe_supplement": "models/demo_ppe_interpolated_v4/ppe.pt",
+    "helmet_specialist": "models/demo_ppe_failure_context_v3/last.pt"
+  },
+  "routing": {
+    "baseline": "both classes unchanged",
+    "supplement": "both classes preserved union",
+    "specialist": "helmeted_head only; bare-head channel excluded"
+  },
+  "object_imgsz": 1280,
+  "ppe_imgsz": 640,
+  "ppe_crop_height_fraction": 1,
+  "tiled_head_search": true,
+  "unassigned_head_events": true,
+  "policy": "configs/ppe-recall-review-policy.json",
+  "verified_reference_heads": {
+    "helmeted_head": {
+      "TP": 34,
+      "FN": 0
+    },
+    "no_helmet_head": {
+      "TP": 18,
+      "FN": 0
+    },
+    "confidence": 0.5,
+    "iou": 0.5,
+    "scope": "corrected primary visible heads in exact reviewed source5 frames, training-exposed"
+  },
+  "limitations": [
+    "Three PPE networks plus pretrained person model; one standalone pt goal is not complete",
+    "Not exhaustive every-frame ground truth",
+    "Faster playback uses saved detections; no live CPU FPS claim",
+    "Missing heads remain UNKNOWN; WARNING is a stable actual bare-head review candidate, not a verified violation.",
+    "Source6 hood/face ambiguity can produce WARNING review false positives; no verified violation claim"
+  ],
+  "sha256": {
+    "objects": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "ppe_baseline": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09",
+    "ppe_supplement": "744353b3fe2520795580e92905a5b9d04e4dc6788b037231b9d5c464c92fcf1b",
+    "helmet_specialist": "9d6f0cd3de768d788a6ba042ed93e56b6448ef29cdb135220baed4a73000acbe"
+  },
+  "verified_extra_helmet_references": {
+    "source5_first_half": {
+      "TP": 9,
+      "FN": 0
+    },
+    "source6": {
+      "TP": 12,
+      "FN": 0
+    }
+  },
+  "verified_reference_total": 73,
+  "ppe_candidate_tracks": true,
+  "weak_head_context_recheck": true,
+  "continuous_bare_head_diagnostic": {
+    "scope": "Interpolated between manually reviewed head keyframes, sampled ~4.8 FPS, adaptation diagnostic; not exhaustive manual every-frame GT",
+    "detection_confidence": 0.5,
+    "review_warning_candidate_confidence": 0.25,
+    "iou": 0.5,
+    "observations": 39,
+    "detected": 39,
+    "misses": 0,
+    "mature_alert_observations": 35,
+    "mature_warning": 35,
+    "mature_alert_gaps": [],
+    "false_safe": []
+  },
+  "tests_passed": 87,
+  "head_tracking": {
+    "score_fusion": false,
+    "anchor": "Original current head box before contextual recheck; no predicted gap boxes",
+    "minimum_actual_observations": 3
+  },
+  "integrated_source5_verified": true,
+  "integrated_source5_run": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video5_integrated",
+  "integrated_source6_verified": true,
+  "integrated_source6_run": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video6_integrated"
+}

@@ -1,0 +1,13 @@
+{
+  "policy_version": "ppe-recall-review-v4",
+  "minimum_consecutive_frames": 3,
+  "minimum_confirmed_seconds": 0.4,
+  "maximum_observation_gap_seconds": 0.45,
+  "minimum_head_confidence": 0.5,
+  "no_helmet_policy": "Sensitive WARNING review candidate at >=0.25 over 3 frames/0.4 seconds; helmet SAFE still requires >=0.5; never verified violation",
+  "missing_conflict_policy": "Missing remains UNKNOWN. Stable real bare-head evidence >=0.25 can emit review WARNING, including conflicts; classification stays unconfirmed.",
+  "conflicting_bare_head_policy": "warning_candidate",
+  "minimum_no_helmet_candidate_confidence": 0.25,
+  "confirmation_key": "Persistent observed bare-head evidence, including conflicts; no reset solely due to state label change",
+  "head_candidate_continuity": true
+}

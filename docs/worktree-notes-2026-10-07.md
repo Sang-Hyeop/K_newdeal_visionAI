@@ -12,20 +12,26 @@ Codex 학습/실험과 Cursor 문서 작업을 섞지 않기 위한 메모입니
 - `docs/team-branch-setup-2026-10-07.md`
 - `docs/worktree-notes-2026-10-07.md`
 - `docs/team-handoff-index-2026-10-07.md`
+- `docs/demo-feature-show-plan-2026-10-07.md` (시연 규칙 권위 + Codex 대조)
 - `docs/team-samples/2026-10-07/**` (JSONL 앞부분 샘플)
 
-## Git에 올리지 않는 것 (학습/실험 WIP)
+## Codex ↔ Cursor 시연 규칙 맞출 때
 
-아래는 Codex·로컬 실험 중일 수 있으므로 **문서 PR/커밋에 섞지 않음**.
+1. 시연 ON/OFF는 `docs/demo-feature-show-plan-2026-10-07.md` (§6 Codex 대조 포함)
+2. Codex가 돌린 증거는 `docs/checkpoints/2026-10-07/` + `docs/progress-2026-10-07.md`
+3. **시연 문서만** GitHub에 올릴 때 아래 Codex 구현/학습 WIP와 **절대 섞지 않음**
 
-- `scripts/audit_pilot_predictions.py` 등 수정 중 파일
-- `scripts/render_ppe_events.py`, `scripts/validate_tracked_ppe.py` 수정분
-- `src/ppe_person_crop.py` 수정분
-- `src/ppe_recall_ensemble.py`, `tests/test_ppe_recall_ensemble.py` (untracked)
-- `outputs/training/**` 학습 로그·가중치
-- `_local_archive/**` 대용량 백업 영상
+## Git에 올리지 않는 것 (Codex 구현·학습 WIP — 방해 금지)
 
-학습이 끝나고 채택할 코드만 따로 커밋합니다.
+Codex가 `demo-feature-show-plan` 기준으로 다시 맞추는 중이면 아래를 **커밋·삭제·리셋하지 말 것**.
+
+- `configs/demo-scenarios.json`, `configs/cameras/warehouse-summary.json`
+- `src/forklift_proximity.py`, `src/scenario_zone.py`, `src/scenario_render.py`
+- `src/lane_hazard.py`, `src/zone_dwell.py`, `src/event_contract.py` 수정분
+- `tests/test_scenario_plan.py`
+- PPE/객체 학습·진단 스크립트 수정분, `outputs/training/**`, `_local_archive/**`
+
+학습·시나리오 구현이 끝나고 채택할 코드만 **별도 커밋**합니다.
 
 ---
 
