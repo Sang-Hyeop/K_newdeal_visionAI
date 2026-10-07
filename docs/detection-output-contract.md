@@ -28,3 +28,19 @@
 - PPE: person과 head 연결, 상반된 head 클래스 충돌, 가림, 시간적 안정성 처리 후 이벤트를 만든다.
 
 위 이벤트 스키마는 팀 협업 초안이며 이번 시험에서 위험 감지 기능이 구현·검증됐다는 뜻은 아니다.
+
+## 실제 연결된 공통 출력 v1 (2026-10-07)
+
+근접 실행기와 구역 접근·체류 실행기는 이제 `events_v1.jsonl`(상태 전환 로그) 및 `observations_v1.jsonl`(현재 프레임 관측)을 출력한다. 예전 `events.jsonl`/`observations.jsonl`은 개별 기능 형식으로 함께 보존한다. PPE 공통 출력은 아직 연결하지 않았다.
+
+공통 이벤트의 구현 필드: schema_version=1.0, event_id, camera_id, video, source_sha256, timestamp_seconds, event_type, severity, observation_status, track_ids, evidence, model_version(가중치SHA256), config_version(설정SHA256), scope. event_id는 동일 입력·버전·내용의 재실행 시 동일하며 백엔드 중복 저장 방지에 사용할 수 있다.
+
+- event_type: proximity / zone_access / zone_dwell / status.
+- zone_access의 evidence.region은 outside / approach / inside / unknown이다. entry_observed/exit_observed로 실제 관측된 경계 통과를 구별한다. 영상만으로 접근 권한이나 무단 여부를 판단하지 않는다.
+- 근접 evidence: image_gap_pixels, normalized_image_gap, distance_unit, distance_meters=null, person/forklift ID와 지면 대리 박스. 고정 ROI는 사용하지 않는다.
+- 구역 evidence: roi_id, inside, observed_dwell_seconds 또는 signed_distance_pixels 등. 3초 이하/3초 초과~8초 미만/8초 이상이 SAFE/WARNING/CRITICAL이다.
+- observation_status=unconfirmed면 severity는 반드시 null이다. 대상이 없는 프레임도 SAFE를 생성하지 않는다.
+- 상태 배너는 최신 observations_v1의 해당 기능·대상 상태로 갱신한다. 전환 로그의 마지막 SAFE를 대상 누락 이후에도 유지하면 안 된다. 전체 현장 안전을 선언하지 않는다.
+- 구역 침범이 CRITICAL이고 체류가 SAFE인 경우 서로 다른 기능의 판정이다. 대시보드는 체류SAFE로 침범CRITICAL을 덮어쓰면 안 된다.
+
+팀 검사용 실제 영상 출력 위치: outputs/diagnostics/events_separated_v1/{forward,reverse,zone}. 현재 시연용 개발 출력이며 알림 개수는 정확도 지표가 아니다.

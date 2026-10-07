@@ -6,6 +6,7 @@ os.environ.setdefault('YOLO_CONFIG_DIR',str(ROOT/'outputs/runtime/yolo'))
 import cv2,numpy as np,torch
 from ultralytics import YOLO
 from src.tracked_zone import TrackedZone
+from src.event_contract import export_events
 
 
 def main():
@@ -81,6 +82,7 @@ def main():
     (args.output/'observations.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in records))
     transitions=[e for r in records for e in r['transitions']]
     (args.output/'events.jsonl').write_text(''.join(json.dumps(e)+'\n' for e in transitions))
+    export_events(records,args.output/'events_v1.jsonl',feature='zone',context={'camera_id':config['camera_id'],'video':args.source.name,'source_sha256':source_sha256,'model_version':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'config_version':hashlib.sha256(args.config.read_bytes()).hexdigest()})
     maxima={};critical=set();states={};access_states={};entries=[];exits=[]
     for r in records:
         for event in r['events']:

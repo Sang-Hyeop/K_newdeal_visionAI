@@ -49,7 +49,7 @@ class Proximity:
                 self.previous[key]={'timestamp':timestamp,'ratio':ratio,'severity':severity}
                 events.append({'event_type':'person_forklift_proximity','person_track_id':key[0],'forklift_track_id':key[1],
                     'timestamp_seconds':timestamp,'severity':severity,'observation_status':'unconfirmed' if reason else 'confirmed',
-                    'reason':reason or 'image_plane_proximity_rule','person_anchor_xy':list(point),'forklift_ground_proxy_xyxy':footprint,
+                    'reason':reason or 'image_plane_proximity_rule','person_bbox_xyxy':list(p),'forklift_bbox_xyxy':list(f),'person_anchor_xy':list(point),'forklift_ground_proxy_xyxy':footprint,
                     'nearest_vehicle_point_xy':list(nearest),'image_gap_pixels':distance,'normalized_image_gap':ratio,
                     'image_gap_closing_rate':trend,'orientation_status':'unknown','distance_meters':None,
                     'scope':'camera_image_plane_proximity_candidate'})

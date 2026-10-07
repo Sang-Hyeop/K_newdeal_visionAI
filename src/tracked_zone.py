@@ -39,11 +39,13 @@ class TrackedZone:
             track['anchor_status']='bbox_bottom_center_proxy' if usable else 'unconfirmed_bottom_clipped'
             if usable:rule_tracks.append({**track,'bbox_xyxy':detected_box})
             else:invalid_anchors.append(track['track_id'])
+        observed_boxes={t['track_id']:t['detected_bbox_xyxy'] for t in tracks}
         events=self.dwell.update(timestamp,rule_tracks) if self.roi_active else []
         if self.roi_active and self.access:events+=self.access.update(timestamp,rule_tracks)
         transitions=[]
         current_ids=set()
         for event in events:
+            if event['observation_status']=='confirmed' and event['track_id'] in observed_boxes:event['person_bbox_xyxy']=observed_boxes[event['track_id']]
             event.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],
                          scope='configured_demo_dwell_rule' if event['event_type']=='zone_dwell' else 'configured_demo_access_rule',roi_purpose=self.config['roi_purpose'])
             key=(event['event_type'],event['track_id']);current_ids.add(key)

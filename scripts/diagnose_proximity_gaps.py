@@ -12,7 +12,7 @@ def main():
  args.output.mkdir(parents=True);weights=args.weights;torch.set_num_threads(4);model=YOLO(str(weights));rows=[]
  for name,times,video,camera in [('forward',[9.38,10.01,10.43,11.05],'1_forklift_forward.mp4','forward-proximity.json'),('reverse',[12.4,12.8,13.2,13.8],'2_forklift_back.mp4','reverse-proximity.json')]:
   source=ROOT/'data/videos'/video;old=ROOT/'outputs/diagnostics/v15_final_validation'/name
-  saved=[json.loads(s) for s in (old/'observations.jsonl').read_text().splitlines()];cfg=json.loads((ROOT/'configs/cameras'/camera).read_text());cap=cv2.VideoCapture(str(source));w,h=int(cap.get(3)),int(cap.get(4));polygon=np.array([[x*w,y*h] for x,y in cfg['forklift_ground_roi_normalized']],np.float32)
+  saved=[json.loads(s) for s in (old/'observations.jsonl').read_text().splitlines()];cfg=json.loads((old/'summary.json').read_text())['config'];cap=cv2.VideoCapture(str(source));w,h=int(cap.get(3)),int(cap.get(4));polygon=np.array([[x*w,y*h] for x,y in cfg['forklift_ground_roi_normalized']],np.float32)
   assert hashlib.sha256(source.read_bytes()).hexdigest()==cfg['source_sha256']
   for target in times:
    record=min(saved,key=lambda s:abs(s['timestamp_seconds']-target));cap.set(cv2.CAP_PROP_POS_FRAMES,record['frame_index']);ok,frame=cap.read();assert ok
