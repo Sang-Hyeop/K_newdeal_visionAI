@@ -109,8 +109,10 @@ python scripts/run_demo_scenarios.py \
 - `distance_meters`는 보정 전 **null** (3번도 화면상)
 - 후드 보조는 **experimental_not_promoted**
 - 후드 full-frame만으로는 약하고, **사람 crop**이 필요
-- 3번: 두 지게차 박스가 합쳐지면 거리 근사가 거칠 수 있음
+- 3번: 합쳐진/중복 차량 박스는 거리를 UNKNOWN으로 내림 (완전 해결은 검출 품질 후속)
+- PPE–지게차 과겹침(≥80%)은 운전자/설비 오탐 후보로 UNKNOWN
 - PPE WARNING은 검토 후보이지 확정 위반 증명 아님
+- 공유할 pt 해시: `docs/checkpoints/2026-10-07/model-share-manifest.json`
 - main 미병합 시 반드시 `fix/proximity-detection-audit` 사용
 
 ---
