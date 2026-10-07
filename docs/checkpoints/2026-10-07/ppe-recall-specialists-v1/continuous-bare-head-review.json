@@ -1,0 +1,561 @@
+{
+  "scope": "Interpolated between manually reviewed head keyframes, sampled ~4.8 FPS, adaptation diagnostic; not exhaustive manual every-frame GT",
+  "detection_confidence": 0.5,
+  "review_warning_candidate_confidence": 0.25,
+  "iou": 0.5,
+  "observations": 39,
+  "detected": 39,
+  "misses": 0,
+  "mature_alert_observations": 35,
+  "mature_warning": 35,
+  "mature_alert_gaps": [],
+  "false_safe": [],
+  "records": [
+    {
+      "subject": "bare_man",
+      "frame_index": 160,
+      "bbox_xyxy": [
+        486.4875,
+        203.76888888888888,
+        508.1947916666667,
+        239.88888888888889
+      ],
+      "detected": true,
+      "mature": false,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 165,
+      "bbox_xyxy": [
+        501.1828125,
+        202.69666666666666,
+        522.653125,
+        240.96666666666667
+      ],
+      "detected": true,
+      "mature": false,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 170,
+      "bbox_xyxy": [
+        516.3333333333334,
+        201.7111111111111,
+        538.6067708333334,
+        240.84444444444446
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 175,
+      "bbox_xyxy": [
+        532.1666666666666,
+        200.85555555555555,
+        556.8033854166666,
+        238.92222222222222
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 180,
+      "bbox_xyxy": [
+        548.0,
+        200.0,
+        575.0,
+        237.0
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 185,
+      "bbox_xyxy": [
+        562.3033854166666,
+        199.4597222222222,
+        585.7682291666666,
+        237.88611111111112
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 190,
+      "bbox_xyxy": [
+        576.6067708333334,
+        198.91944444444442,
+        596.5364583333334,
+        238.7722222222222
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 195,
+      "bbox_xyxy": [
+        586.74609375,
+        198.67583333333332,
+        608.4703125,
+        242.865
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 200,
+      "bbox_xyxy": [
+        594.109375,
+        198.63,
+        621.18125,
+        249.09555555555553
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 205,
+      "bbox_xyxy": [
+        602.3684895833334,
+        199.11388888888888,
+        633.8640625,
+        254.31277777777777
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 210,
+      "bbox_xyxy": [
+        614.2109375,
+        201.71666666666667,
+        646.434375,
+        255.47666666666666
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 215,
+      "bbox_xyxy": [
+        626.0533854166666,
+        204.31944444444446,
+        659.0046874999999,
+        256.6405555555556
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 220,
+      "bbox_xyxy": [
+        630.6552083333333,
+        207.06666666666666,
+        665.7010416666666,
+        261.5466666666667
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 225,
+      "bbox_xyxy": [
+        633.4468750000001,
+        209.85000000000002,
+        670.92890625,
+        267.3883333333333
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 230,
+      "bbox_xyxy": [
+        633.5041666666667,
+        213.01222222222222,
+        673.2020833333333,
+        272.65
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 235,
+      "bbox_xyxy": [
+        629.4598958333333,
+        216.74277777777777,
+        671.0432291666666,
+        277.0416666666667
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 240,
+      "bbox_xyxy": [
+        625.415625,
+        220.47333333333333,
+        668.884375,
+        281.43333333333334
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 245,
+      "bbox_xyxy": [
+        628.0341145833333,
+        223.95666666666668,
+        669.2815104166666,
+        294.075
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 250,
+      "bbox_xyxy": [
+        630.6526041666667,
+        227.44,
+        669.6786458333333,
+        306.71666666666664
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 255,
+      "bbox_xyxy": [
+        633.4828125,
+        230.875,
+        672.31875,
+        314.5883333333333
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 260,
+      "bbox_xyxy": [
+        636.4541666666667,
+        234.27777777777777,
+        676.4541666666667,
+        319.28
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 265,
+      "bbox_xyxy": [
+        637.68125,
+        236.89111111111112,
+        679.2380208333334,
+        322.68499999999995
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 270,
+      "bbox_xyxy": [
+        631.93125,
+        236.34666666666666,
+        676.615625,
+        320.9433333333333
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_man",
+      "frame_index": 275,
+      "bbox_xyxy": [
+        626.18125,
+        235.8022222222222,
+        673.9932291666667,
+        319.2016666666667
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 205,
+      "bbox_xyxy": [
+        225.61145833333333,
+        571.9908333333333,
+        320.24322916666665,
+        646.4272222222222
+      ],
+      "detected": true,
+      "mature": false,
+      "warning": false,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 210,
+      "bbox_xyxy": [
+        244.29375,
+        525.4449999999999,
+        335.396875,
+        607.0633333333333
+      ],
+      "detected": true,
+      "mature": false,
+      "warning": false,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 215,
+      "bbox_xyxy": [
+        262.9760416666667,
+        478.89916666666664,
+        350.55052083333334,
+        567.6994444444445
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 220,
+      "bbox_xyxy": [
+        286.30312499999997,
+        449.58,
+        373.8260416666667,
+        541.0933333333334
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 225,
+      "bbox_xyxy": [
+        310.79140625,
+        424.5675,
+        399.13203125,
+        517.6766666666667
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 230,
+      "bbox_xyxy": [
+        330.9140625,
+        398.28833333333336,
+        418.11614583333335,
+        490.65222222222224
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 235,
+      "bbox_xyxy": [
+        344.48828125,
+        370.1091666666667,
+        427.61744791666666,
+        458.2161111111111
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 240,
+      "bbox_xyxy": [
+        358.0625,
+        341.93,
+        437.11875,
+        425.78
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 245,
+      "bbox_xyxy": [
+        360.48046875,
+        332.8022222222222,
+        438.94427083333335,
+        412.5675
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 250,
+      "bbox_xyxy": [
+        362.8984375,
+        323.6744444444444,
+        440.76979166666666,
+        399.355
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 255,
+      "bbox_xyxy": [
+        363.5890625,
+        315.93083333333334,
+        443.4515625,
+        394.3858333333333
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 260,
+      "bbox_xyxy": [
+        363.128125,
+        309.10999999999996,
+        446.70416666666665,
+        394.9122222222222
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 265,
+      "bbox_xyxy": [
+        363.828125,
+        303.2808333333333,
+        449.45338541666666,
+        395.1111111111111
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 270,
+      "bbox_xyxy": [
+        369.171875,
+        301.4183333333333,
+        450.1890625,
+        394.0
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    },
+    {
+      "subject": "bare_woman",
+      "frame_index": 275,
+      "bbox_xyxy": [
+        374.515625,
+        299.55583333333334,
+        450.9247395833333,
+        392.88888888888886
+      ],
+      "detected": true,
+      "mature": true,
+      "warning": true,
+      "false_safe": false
+    }
+  ]
+}

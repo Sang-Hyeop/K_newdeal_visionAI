@@ -1,0 +1,234 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/6_Helmet_forklift.mp4",
+  "sampled_frames": 58,
+  "processed_fps": 4.795204795204795,
+  "person_state_counts": {
+    "helmet_detected": 189,
+    "unknown": 47,
+    "no_helmet_candidate": 3,
+    "conflicting_evidence": 78
+  },
+  "track_spans": {
+    "0:1": {
+      "first": 0.0,
+      "last": 2.0854166666666667,
+      "observations": 11
+    },
+    "0:2": {
+      "first": 0.0,
+      "last": 1.25125,
+      "observations": 4
+    },
+    "0:3": {
+      "first": 0.0,
+      "last": 5.839166666666666,
+      "observations": 27
+    },
+    "0:4": {
+      "first": 0.0,
+      "last": 1.25125,
+      "observations": 6
+    },
+    "0:5": {
+      "first": 0.0,
+      "last": 3.7537499999999997,
+      "observations": 16
+    },
+    "0:6": {
+      "first": 0.4170833333333333,
+      "last": 0.4170833333333333,
+      "observations": 1
+    },
+    "0:7": {
+      "first": 0.625625,
+      "last": 5.839166666666666,
+      "observations": 26
+    },
+    "0:8": {
+      "first": 0.625625,
+      "last": 0.625625,
+      "observations": 1
+    },
+    "0:9": {
+      "first": 0.8341666666666666,
+      "last": 0.8341666666666666,
+      "observations": 1
+    },
+    "0:10": {
+      "first": 0.8341666666666666,
+      "last": 0.8341666666666666,
+      "observations": 1
+    },
+    "0:11": {
+      "first": 0.8341666666666666,
+      "last": 0.8341666666666666,
+      "observations": 1
+    },
+    "0:12": {
+      "first": 1.4597916666666666,
+      "last": 5.839166666666666,
+      "observations": 22
+    },
+    "0:13": {
+      "first": 1.4597916666666666,
+      "last": 5.839166666666666,
+      "observations": 22
+    },
+    "0:14": {
+      "first": 1.4597916666666666,
+      "last": 1.4597916666666666,
+      "observations": 1
+    },
+    "0:15": {
+      "first": 2.2939583333333333,
+      "last": 2.2939583333333333,
+      "observations": 1
+    },
+    "0:16": {
+      "first": 2.2939583333333333,
+      "last": 2.2939583333333333,
+      "observations": 1
+    },
+    "0:17": {
+      "first": 2.5025,
+      "last": 2.5025,
+      "observations": 1
+    },
+    "0:18": {
+      "first": 3.128125,
+      "last": 3.128125,
+      "observations": 1
+    },
+    "0:19": {
+      "first": 3.3366666666666664,
+      "last": 3.3366666666666664,
+      "observations": 1
+    },
+    "0:20": {
+      "first": 3.9622916666666663,
+      "last": 5.839166666666666,
+      "observations": 10
+    },
+    "0:21": {
+      "first": 3.9622916666666663,
+      "last": 3.9622916666666663,
+      "observations": 1
+    },
+    "0:22": {
+      "first": 4.170833333333333,
+      "last": 4.170833333333333,
+      "observations": 1
+    },
+    "1:1": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:2": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:3": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:4": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:5": {
+      "first": 6.047708333333333,
+      "last": 11.886875,
+      "observations": 29
+    },
+    "1:6": {
+      "first": 6.047708333333333,
+      "last": 8.133125,
+      "observations": 8
+    },
+    "1:7": {
+      "first": 6.673333333333333,
+      "last": 6.673333333333333,
+      "observations": 1
+    },
+    "1:8": {
+      "first": 7.090416666666666,
+      "last": 7.090416666666666,
+      "observations": 1
+    },
+    "1:9": {
+      "first": 10.218541666666665,
+      "last": 10.218541666666665,
+      "observations": 1
+    },
+    "1:10": {
+      "first": 10.635625,
+      "last": 11.261249999999999,
+      "observations": 4
+    }
+  },
+  "scene_resets_seconds": [
+    6.047708333333333
+  ],
+  "scene_cut_threshold": 0.18,
+  "tracker": "ByteTrack; high .25 / low .1 / gap 1 second",
+  "weights": {
+    "objects": "/Users/sanghyeopkim/Desktop/workspace/models/pretrained/yolo26n.pt",
+    "ppe": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt"
+  },
+  "accuracy": "Not measured; ID ground truth absent; track count is not headcount",
+  "supplement_object_weights": null,
+  "supplement_ppe_weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_interpolated_v4/ppe.pt",
+  "helmet_specialist_weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/ppe_failure_context_v3/weights/last.pt",
+  "ppe_head_assignment_version": "clipped_body_head_v2",
+  "tiled_head_search": true,
+  "unassigned_head_events": true,
+  "ppe_preserve_union": true,
+  "object_imgsz": 1280,
+  "ppe_crop_height_fraction": 1.0,
+  "ppe_inference_mode": "baseline_preserved_union_plus_helmet_specialist",
+  "model_hashes": {
+    "objects": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "ppe": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09",
+    "ppe_supplement": "744353b3fe2520795580e92905a5b9d04e4dc6788b037231b9d5c464c92fcf1b",
+    "helmet_specialist": "9d6f0cd3de768d788a6ba042ed93e56b6448ef29cdb135220baed4a73000acbe"
+  },
+  "policy": {
+    "policy_version": "ppe-recall-review-v4",
+    "minimum_consecutive_frames": 3,
+    "minimum_confirmed_seconds": 0.4,
+    "maximum_observation_gap_seconds": 0.45,
+    "minimum_head_confidence": 0.5,
+    "no_helmet_policy": "Sensitive WARNING review candidate at >=0.25 over 3 frames/0.4 seconds; helmet SAFE still requires >=0.5; never verified violation",
+    "missing_conflict_policy": "Missing remains UNKNOWN. Stable real bare-head evidence >=0.25 can emit review WARNING, including conflicts; classification stays unconfirmed.",
+    "conflicting_bare_head_policy": "warning_candidate",
+    "minimum_no_helmet_candidate_confidence": 0.25,
+    "confirmation_key": "Persistent observed bare-head evidence, including conflicts; no reset solely due to state label change",
+    "head_candidate_continuity": true
+  },
+  "event_context": {
+    "camera_id": "6_Helmet_forklift-ppe",
+    "video": "6_Helmet_forklift.mp4",
+    "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+    "model_version": "7ac66354f488e41721da6fd815c14de9007f2d6e33257565c5e6d6e762a25200",
+    "config_version": "0302513806579d9f62578405012dd9eace5218309fba34b27f362d114368aa65"
+  },
+  "limitations": "No ground-truth accuracy; hood ambiguity persists; no-helmet is a review candidate; missing people remain UNKNOWN",
+  "ppe_candidate_tracks": true,
+  "candidate_replay": {
+    "parent": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video6",
+    "real_new_candidate_observations": 21,
+    "no_predicted_missing_bodies": true
+  },
+  "weak_head_context_recheck": true,
+  "context_recheck_predictions": 158,
+  "events_require_rule_replay": false,
+  "rule_replay": {
+    "raw_predictions": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_recall_specialists_v1_video6_context/detections.jsonl",
+    "sha256": "a053cd0f6f8b7d6b639c84c707e3128b52ddb84602204484284cc1d842a85ecc",
+    "new_inference": false
+  }
+}

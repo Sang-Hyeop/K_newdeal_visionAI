@@ -1,0 +1,95 @@
+[
+  {
+    "role": "objects",
+    "original": "/Users/sanghyeopkim/Desktop/workspace/models/pretrained/yolo26n.pt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/objects.pt",
+    "bytes": 5544453,
+    "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+  },
+  {
+    "role": "ppe_baseline",
+    "original": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v3_ppe_expansion/ppe.pt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe_baseline.pt",
+    "bytes": 5383109,
+    "sha256": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09"
+  },
+  {
+    "role": "ppe_supplement",
+    "original": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_interpolated_v4/ppe.pt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe_supplement.pt",
+    "bytes": 5378999,
+    "sha256": "744353b3fe2520795580e92905a5b9d04e4dc6788b037231b9d5c464c92fcf1b"
+  },
+  {
+    "role": "helmet_specialist",
+    "original": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_failure_context_v3/last.pt",
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/helmet_specialist.pt",
+    "bytes": 5382085,
+    "sha256": "9d6f0cd3de768d788a6ba042ed93e56b6448ef29cdb135220baed4a73000acbe"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/summary.json",
+    "bytes": 7293,
+    "sha256": "2b63d8bca7b7970f6d2908bd9e08f85e3f4c08d63b175243383613653b102b74"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/detections.jsonl",
+    "bytes": 2288861,
+    "sha256": "fcdd5833c1bc95f05b66d45d2119346cc7dbad707cab628cbb21ed8e4889f914"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/observations_v1.jsonl",
+    "bytes": 1519421,
+    "sha256": "f18c6a2b57edef307561e1ab7453d5a2dff0f91469579f5898cc377b812595da"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/bare_sequence_review.json",
+    "bytes": 11767,
+    "sha256": "53238d2afa6ba44ec1115d39c0636ca87e2f0e76bca712dd7b948ee2e432d2c4"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/events_v1.jsonl",
+    "bytes": 412743,
+    "sha256": "4b80cb380fc2988924887e352b18fb47dbd86131e75780fc7015cfef8528ab0a"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe6/summary.json",
+    "bytes": 7035,
+    "sha256": "2515e5e18cc39c6bfe78af2d0837423f946d4f2223f9985003f512d459155880"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe6/detections.jsonl",
+    "bytes": 3405669,
+    "sha256": "a6164fc7da00718ecd1ba54c7f7ce91470a1a19d7570583c2dafa60518a1687b"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe6/observations_v1.jsonl",
+    "bytes": 1670067,
+    "sha256": "f4b295c373d1a43816d88d75973763ac37b8aa2ef54df9ed414412238345bd9e"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe6/events_v1.jsonl",
+    "bytes": 518508,
+    "sha256": "fc15596d1c30e36d32d5149ac29bdfba369639a7cf2a2e13b731e21efa1d3797"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/ppe_events_h264.mp4",
+    "bytes": 4064033,
+    "sha256": "e9c08f87e23f8ea962f481ca95369f8898244b39adb81ef5300ee197ac932c88"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe5/preview_50.jpg",
+    "bytes": 273560,
+    "sha256": "0b5892022d28c832fa9c1d80596b784e2f9ee8a3fc56c67afef6a3b96813a05a"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe6/ppe_events_h264.mp4",
+    "bytes": 4355892,
+    "sha256": "0ae0e6786decc7485ceb8d602878f5b437da5282e2242ee3038228ea24e66edd"
+  },
+  {
+    "backup": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/ppe_recall_specialists_v1_final/ppe6/preview_50.jpg",
+    "bytes": 482752,
+    "sha256": "bafca62d8d2c56ae96300ea3ff4a1f2fae101ce1561c22bd9d3749c70019fdad"
+  }
+]

@@ -1,0 +1,140 @@
+{
+  "24": [
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        486.6666666666667,
+        426.6666666666667,
+        544.0,
+        496.0
+      ],
+      "target_index": "v1_24_0",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        576.0,
+        358.6666666666667,
+        614.6666666666666,
+        422.6666666666667
+      ],
+      "target_index": "v1_24_1",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        660.0,
+        360.0,
+        708.0,
+        420.0
+      ],
+      "target_index": "v1_24_2",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        698.6666666666666,
+        441.3333333333333,
+        753.3333333333334,
+        509.3333333333333
+      ],
+      "target_index": "v1_24_3",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    }
+  ],
+  "120": [
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        529.3333333333334,
+        328.0,
+        574.6666666666666,
+        385.3333333333333
+      ],
+      "target_index": "v1_120_0",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        586.6666666666666,
+        293.3333333333333,
+        622.6666666666666,
+        346.6666666666667
+      ],
+      "target_index": "v1_120_1",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        662.6666666666666,
+        292.0,
+        709.3333333333334,
+        350.6666666666667
+      ],
+      "target_index": "v1_120_2",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        694.6666666666666,
+        338.6666666666667,
+        740.0,
+        398.6666666666667
+      ],
+      "target_index": "v1_120_3",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    }
+  ],
+  "216": [
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        496.0,
+        325.3333333333333,
+        553.3333333333334,
+        393.3333333333333
+      ],
+      "target_index": "v1_216_0",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        568.0,
+        281.3333333333333,
+        613.3333333333334,
+        349.3333333333333
+      ],
+      "target_index": "v1_216_1",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        668.0,
+        280.0,
+        718.6666666666666,
+        344.0
+      ],
+      "target_index": "v1_216_2",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        750.6666666666666,
+        305.3333333333333,
+        802.6666666666666,
+        372.0
+      ],
+      "target_index": "v1_216_3",
+      "reference_source": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e"
+    }
+  ]
+}

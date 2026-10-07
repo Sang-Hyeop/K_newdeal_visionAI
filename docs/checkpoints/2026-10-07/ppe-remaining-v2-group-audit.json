@@ -1,0 +1,15 @@
+{
+  "same_source_group_overlap": {
+    "val": [
+      "S63_DATA3_H0_L1_D2023-10-12-10-21_001",
+      "S63_DATA3_H1_L1_D2023-10-12-10-20_001"
+    ],
+    "test": [
+      "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+      "S63_DATA3_H0_L1_D2023-09-20-03-16_001"
+    ]
+  },
+  "holdout_bytes_preserved": true,
+  "independent_generalization_benchmark": false,
+  "interpretation": "Scene adaptation only. Same source group overlap exists in historical base and new official crops. Fixed metrics may be used for regression diagnostics, not unseen-site accuracy."
+}

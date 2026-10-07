@@ -25,7 +25,7 @@ def infer_tiled_heads(frame,model,conf=.25,imgsz=640):
             prediction=model.predict(frame[y:bottom,x:right],conf=conf,imgsz=imgsz,device='cpu',verbose=False)[0]
             for box in prediction.boxes:
                 a,b,c,d=box.xyxy[0].tolist()
-                item={'class':model.names[int(box.cls.item())],'confidence':float(box.conf.item()),'bbox_xyxy':[a+x,b+y,c+x,d+y],'source':'overlapping_head_tile','tile_bbox_xyxy':[x,y,right,bottom]}
+                item={'class':model.names[int(box.cls.item())],'confidence':float(box.conf.item()),'bbox_xyxy':[a+x,b+y,c+x,d+y],'source':'overlapping_head_tile','model_sources':getattr(box,'model_sources',['single_ppe_model']),'tile_bbox_xyxy':[x,y,right,bottom]}
                 cut=(x>0 and a<=3) or (y>0 and b<=3) or (right<w and c>=right-x-3) or (bottom<h and d>=bottom-y-3)
                 if cut:
                     rejected.append({**item,'reason':'internal_tile_boundary'})

@@ -1,0 +1,107 @@
+{
+  "24": [
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        476.0,
+        493.3333333333333,
+        533.3333333333334,
+        562.6666666666666
+      ],
+      "target_index": "v1_24_0",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        596.0,
+        568.0,
+        658.6666666666666,
+        650.6666666666666
+      ],
+      "target_index": "v1_24_1",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        349.3333333333333,
+        602.6666666666666,
+        424.0,
+        685.3333333333334
+      ],
+      "target_index": "v1_24_2",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    }
+  ],
+  "72": [
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        522.6666666666666,
+        356.0,
+        562.6666666666666,
+        413.3333333333333
+      ],
+      "target_index": "v1_72_0",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        586.6666666666666,
+        298.6666666666667,
+        621.3333333333334,
+        348.0
+      ],
+      "target_index": "v1_72_1",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        666.6666666666666,
+        301.3333333333333,
+        701.3333333333334,
+        348.0
+      ],
+      "target_index": "v1_72_2",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    }
+  ],
+  "120": [
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        346.6666666666667,
+        420.0,
+        389.3333333333333,
+        464.0
+      ],
+      "target_index": "v1_120_0",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        570.6666666666666,
+        260.0,
+        601.3333333333334,
+        300.0
+      ],
+      "target_index": "v1_120_1",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    },
+    {
+      "class_id": 0,
+      "bbox_xyxy": [
+        633.3333333333334,
+        246.66666666666666,
+        665.3333333333334,
+        288.0
+      ],
+      "target_index": "v1_120_2",
+      "reference_source": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+    }
+  ]
+}
