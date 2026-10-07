@@ -11,15 +11,15 @@ from src.ppe_tiled_inference import iou
 def detections(model,frame,size):
  result=model.predict(frame,imgsz=size,conf=.1,device='cpu',verbose=False)[0]
  return [{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in result.boxes if result.names[int(b.cls.item())]=='forklift']
-def dedup(ds):
+def dedup(ds,threshold=.5):
  kept=[]
  for d in sorted(ds,key=lambda r:-r['confidence']):
-  if not any(iou(d['bbox_xyxy'],k['bbox_xyxy'])>=.5 for k in kept):kept.append(d)
+  if not any(iou(d['bbox_xyxy'],k['bbox_xyxy'])>=threshold for k in kept):kept.append(d)
  return kept
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--tiles',action='store_true');p.add_argument('--mode',choices=['baseline','candidate'],required=True);p.add_argument('--videos',type=int,nargs='+',default=[2]);p.add_argument('--output',type=Path,required=True);p.add_argument('--baseline-cache',type=Path);p.add_argument('--weights',type=Path);p.add_argument('--imgsz',type=int,default=640);a=p.parse_args();torch.set_num_threads(2);a.output.mkdir(parents=True,exist_ok=False)
- manifest=json.loads((ROOT/'configs/demo-scenarios.json').read_text());obj=json.loads((ROOT/'configs/demo-object-model.json').read_text());paths=[obj['baseline_weights'],obj['supplement_weights']]if a.mode=='baseline'else [str(a.weights)if a.weights else 'models/safe_carrying_specialist_v1/best.pt'];models=[YOLO(str(ROOT/q))for q in paths]
+ p=argparse.ArgumentParser();p.add_argument('--tiles',action='store_true');p.add_argument('--mode',choices=['baseline','candidate'],required=True);p.add_argument('--videos',type=int,nargs='+',default=[2]);p.add_argument('--output',type=Path,required=True);p.add_argument('--baseline-cache',type=Path);p.add_argument('--weights',type=Path);p.add_argument('--additional-weights',type=Path,nargs='+',default=[]);p.add_argument('--extra-imgsz',type=int,nargs='+',default=[]);p.add_argument('--imgsz',type=int,default=640);a=p.parse_args();torch.set_num_threads(2);a.output.mkdir(parents=True,exist_ok=False)
+ manifest=json.loads((ROOT/'configs/demo-scenarios.json').read_text());obj=json.loads((ROOT/'configs/demo-object-model.json').read_text());paths=[obj['baseline_weights'],obj['supplement_weights']]if a.mode=='baseline'else [str(a.weights)if a.weights else 'models/safe_carrying_specialist_v1/best.pt',*[str(p)for p in a.additional_weights]];models=[YOLO(str(ROOT/q))for q in paths]
  hashes={q:hashlib.sha256((ROOT/q).read_bytes()).hexdigest()for q in paths}
  for n in a.videos:
   spec=next(s for s in manifest['scenarios']if s['video_number']==n);source=ROOT/'data/videos'/spec['source_name'];assert hashlib.sha256(source.read_bytes()).hexdigest()==spec['source_sha256'];cap=cv2.VideoCapture(str(source));fps=cap.get(5);w,h=int(cap.get(3)),int(cap.get(4));expected=int(cap.get(7));old=None
@@ -30,12 +30,12 @@ def main():
    while True:
     ok,frame=cap.read()
     if not ok:break
-    ds=[d for m in models for d in detections(m,frame,a.imgsz)];tile_rejected=[]
+    ds=[d for m in models for size in dict.fromkeys([a.imgsz,*a.extra_imgsz])for d in detections(m,frame,size)];tile_rejected=[]
     if a.tiles:
      from src.forklift_tiled_inference import infer_tiled_forklifts
      for m in models:
       accepted,rejected=infer_tiled_forklifts(frame,m);ds+=accepted;tile_rejected+=rejected
-    ds=dedup(ds);observed+=any(d['confidence']>=.25 for d in ds);row={'frame_index':idx,'timestamp_seconds':idx/fps,'detections':ds,'tiled_rejected':tile_rejected}
+    ds=dedup(ds,.85 if a.mode=='candidate'else .5);observed+=any(d['confidence']>=.25 for d in ds);row={'frame_index':idx,'timestamp_seconds':idx/fps,'detections':ds,'tiled_rejected':tile_rejected}
     if old is not None:
      from src.forklift_specialist_ensemble import supplement_forklift_records
      row['fused_detections']=supplement_forklift_records(old[idx]['detections'],ds)
@@ -49,5 +49,5 @@ def main():
     cv2.putText(shown,f'FRAME {idx} / REAL INFERENCE / no interpolation',(15,h-20),cv2.FONT_HERSHEY_SIMPLEX,.7,(255,255,255),2);writer.write(shown);idx+=1
     if idx%100==0:print(n,idx,expected,flush=True)
   writer.release();cap.release();assert idx==expected
-  meta={'source':str(source),'source_sha256':spec['source_sha256'],'fps':fps,'frames':idx,'weights_sha256':hashes,'confidence_inference':.1,'confidence_display':.25,'imgsz':a.imgsz,'native_scale_tiles':a.tiles,'any_forklift_prediction_frames_at025':observed,'status':'diagnostic, prediction presence is not ground-truth recall; orange=old, green=new; forklift-only specialist is not a person/PPE model'};(a.output/f'video{n}-metadata.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta),flush=True)
+  meta={'source':str(source),'source_sha256':spec['source_sha256'],'fps':fps,'frames':idx,'weights_sha256':hashes,'confidence_inference':.1,'confidence_display':.25,'imgsz':a.imgsz,'extra_imgsz':a.extra_imgsz,'native_scale_tiles':a.tiles,'any_forklift_prediction_frames_at025':observed,'status':'diagnostic, prediction presence is not ground-truth recall; orange=old, green=new; forklift-only specialist is not a person/PPE model'};(a.output/f'video{n}-metadata.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta),flush=True)
 if __name__=='__main__':main()

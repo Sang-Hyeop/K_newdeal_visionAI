@@ -26,3 +26,16 @@ class CachedSpecialistRoutingTests(unittest.TestCase):
         self.assertEqual(result[-1]['model_source'],'factory_forklift_specialist')
     def test_observed_person_cannot_be_mislabeled_as_forklift(self):
         with self.assertRaises(ValueError):supplement_forklift_records([],[{'class':'person','confidence':.9,'bbox_xyxy':[10,10,50,80]}])
+
+class LocalizationAlternativeTests(unittest.TestCase):
+    def test_confirmed_coarse_box_does_not_discard_distinct_current_extent(self):
+        old=[{'class':'forklift','confidence':.8,'bbox_xyxy':[0,0,100,100]}]
+        observed=[{'class':'forklift','confidence':.7,'bbox_xyxy':[20,0,100,100]}]
+        result=supplement_forklift_records(old,observed)
+        self.assertEqual(len(result),2)
+        self.assertEqual(result[0],old[0])
+        self.assertEqual(result[1]['bbox_xyxy'],observed[0]['bbox_xyxy'])
+    def test_near_identical_confirmed_extent_remains_single(self):
+        old=[{'class':'forklift','confidence':.8,'bbox_xyxy':[0,0,100,100]}]
+        observed=[{'class':'forklift','confidence':.7,'bbox_xyxy':[2,0,100,100]}]
+        self.assertEqual(len(supplement_forklift_records(old,observed)),1)

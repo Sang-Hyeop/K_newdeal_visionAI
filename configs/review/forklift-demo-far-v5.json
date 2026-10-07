@@ -1,0 +1,118 @@
+{
+  "frames": [
+    {
+      "image": "demo2_f000380.jpg",
+      "frame_index": 380,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        33,
+        0,
+        69,
+        63
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    },
+    {
+      "image": "demo2_f000408.jpg",
+      "frame_index": 408,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        37,
+        0,
+        77,
+        58
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    },
+    {
+      "image": "demo2_f000435.jpg",
+      "frame_index": 435,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        32,
+        0,
+        82,
+        49
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    },
+    {
+      "image": "demo2_f000462.jpg",
+      "frame_index": 462,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        38,
+        0,
+        94,
+        44
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    },
+    {
+      "image": "demo2_f000488.jpg",
+      "frame_index": 488,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        43,
+        0,
+        106,
+        41
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    },
+    {
+      "image": "demo2_f000512.jpg",
+      "frame_index": 512,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        49,
+        0,
+        107,
+        41
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    },
+    {
+      "image": "demo2_f000522.jpg",
+      "frame_index": 522,
+      "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": true,
+      "source_group": "demo2_training_exposed",
+      "bbox_xyxy_400": [
+        48,
+        0,
+        110,
+        43
+      ],
+      "label_scope": "loaded vehicle envelope including visible cab and carried load; do not include walking person"
+    }
+  ],
+  "coordinate_reference": [
+    400,
+    225
+  ],
+  "user_authorization": "prior explicit demo-adaptation permission plus current zero-miss request",
+  "evaluation_frames_excluded": true,
+  "limits": [
+    "Training-exposed demo and adjacent frames; no independent performance claim"
+  ]
+}
