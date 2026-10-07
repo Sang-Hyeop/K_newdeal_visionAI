@@ -1,0 +1,24 @@
+{
+  "status": "hood_auxiliary_opt_in_activated_in_main_runner",
+  "flag": "--hood-auxiliary",
+  "reuse_flag": "--reuse-hood-run",
+  "config": "configs/demo-hood-model.json",
+  "runner": "scripts/run_demo_scenarios.py",
+  "demo_videos": [5, 6],
+  "policy": {
+    "veto_safe_to_unknown": true,
+    "preserve_existing_warnings": true,
+    "normal_is_not_ppe_safe": true,
+    "requires_person_context_crop": true
+  },
+  "verification_run": "outputs/diagnostics/scenario_plan_v2_hood_active",
+  "backup_index": "outputs/checkpoints/scenario_plan_v2_hood_active/sha256.json",
+  "backup_index_sha256": "706df4b65bc93ebbe48fde8f238e4ca275df561de48f225109e6ebb0cef798ca",
+  "results": {
+    "video5": {"hood_safe_vetoes": 2, "hood_samples": 123, "ppe": {"SAFE": 0, "WARNING": 32, "UNKNOWN": 26}},
+    "video6": {"hood_safe_vetoes": 7, "hood_samples": 82, "ppe": {"SAFE": 0, "WARNING": 42, "UNKNOWN": 16}}
+  },
+  "unit_tests": 109,
+  "promoted": false,
+  "main_merged": false
+}

@@ -1,5 +1,6 @@
 import unittest
-from src.hoodie_guard import apply_hood_guard
+import numpy as np
+from src.hoodie_guard import apply_hood_guard,person_context_crops
 
 class HoodGuardTests(unittest.TestCase):
     def event(self,state='SAFE'):
@@ -18,3 +19,6 @@ class HoodGuardTests(unittest.TestCase):
             self.assertEqual(apply_hood_guard([self.event()],[d])[0]['severity'],'SAFE')
     def test_invalid_threshold(self):
         with self.assertRaises(ValueError):apply_hood_guard([],[],minimum_confidence=float('nan'))
+    def test_person_context_includes_full_frame_and_crop(self):
+        frame=np.zeros((400,400,3),dtype=np.uint8);crops=person_context_crops(frame,[[50,50,150,250]])
+        self.assertEqual(len(crops),2);self.assertEqual(crops[0][1:],(0,0));self.assertGreater(crops[1][0].shape[0],0)

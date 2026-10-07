@@ -6,7 +6,7 @@ os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'outputs/runtime/matplotlib'))
 os.environ.setdefault('XDG_CACHE_HOME',str(ROOT/'outputs/runtime/cache'))
 import torch,cv2
 from ultralytics import YOLO
-from src.hoodie_guard import apply_hood_guard
+from src.hoodie_guard import apply_hood_guard,predict_hood_detections
 from src.scenario_render import render
 from src.feature_status import feature_status
 from src.event_contract import export_events
@@ -21,15 +21,10 @@ def main():
  for row in map(json.loads,(cache/'detections.jsonl').read_text().splitlines()):
   cap.set(1,row['frame_index']);ok,frame=cap.read()
   if not ok:raise RuntimeError('Frame read failed')
-  predictions=[];inputs=[(frame,0,0)]
-  for track in row['ppe_tracks']:
-   x,y,a,b=track['bbox_xyxy'];pad=.25*max(a-x,b-y);left=max(0,int(x-pad));top=max(0,int(y-pad));right=min(w,int(a+pad));bottom=min(h,int(b+pad))
-   if right>left and bottom>top:inputs.append((frame[top:bottom,left:right],left,top))
   if saved:predictions=saved[row['frame_index']]
-  for image,left,top in ([]if saved else inputs):
-   result=model.predict(image,imgsz=640,conf=.25,verbose=False)[0]
-   for box in result.boxes:
-    x,y,a,b=box.xyxy[0].tolist();predictions.append({'class_id':int(box.cls.item()),'confidence':float(box.conf.item()),'bbox_xyxy':[x+left,y+top,a+left,b+top]})
+  else:
+   person_boxes=[tr.get('detected_bbox_xyxy')or tr.get('bbox_xyxy')for tr in row['ppe_tracks']]
+   predictions=predict_hood_detections(model,frame,person_boxes,confidence=.25)
   events=apply_hood_guard(row['feature_events']['ppe'],predictions,minimum_confidence=.25);groups={**row['feature_events'],'ppe':events};row.update(feature_events=groups,features={k:feature_status(v)for k,v in groups.items()},hood_detections=predictions,hood_auxiliary_status='experimental');records.append(row);transitions=[]
   for event in events:
    key=event.get('track_id');state=(event.get('severity'),event.get('observation_status'),event.get('reason'),bool(event.get('hood_evidence')))

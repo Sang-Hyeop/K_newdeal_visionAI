@@ -152,11 +152,17 @@
   "reverse_target_sample_counts": {
     "WARNING": 8
   },
-  "caution": "status counts not ground truth recall; hood helper not activated",
+  "caution": "status counts not ground truth recall; base 1-7 runs without hood; hood opt-in verified separately",
   "limitations": [
     "video3 some vehicle boxes include both forklifts; image distance approximate",
     "PPE heads can falsely match equipment; warnings are review candidates",
-    "hood guard prepared but not activated"
+    "hood auxiliary is experimental_not_promoted; activate with --hood-auxiliary on videos 5/6"
   ],
-  "hood_auxiliary": "configs/demo-hood-model.json; separate5_6reviewoutputs"
+  "hood_auxiliary": {
+    "config": "configs/demo-hood-model.json",
+    "activation": "scripts/run_demo_scenarios.py --hood-auxiliary",
+    "verified_run": "outputs/diagnostics/scenario_plan_v2_hood_active",
+    "backup_index": "outputs/checkpoints/scenario_plan_v2_hood_active/sha256.json",
+    "checkpoint": "docs/checkpoints/2026-10-07/hoodie-auxiliary-v1/activation.json"
+  }
 }
