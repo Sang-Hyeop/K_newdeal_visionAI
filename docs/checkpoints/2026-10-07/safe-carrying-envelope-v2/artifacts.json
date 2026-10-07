@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/models/safe_carrying_envelope_v2/last.pt",
+    "bytes": 5357189,
+    "sha256": "c01475eff49d865d3649447b93c470510fd14a5162bbb920da7d1f82652d4b70"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/models/safe_carrying_envelope_v2/best.pt",
+    "bytes": 5357189,
+    "sha256": "9d0055e0bd137b7f88d30f013cd4786f0164840974b5fd53b883b879d26aca8b"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/safe_carrying_envelope_v2_native2/video2_h264.mp4",
+    "bytes": 18205196,
+    "sha256": "360e28ea540f29041d7ce257bf5c83f301fd09b772c61f7d5c24e0e68d56885a"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/safe_carrying_envelope_v2_native3/video3_h264.mp4",
+    "bytes": 6951751,
+    "sha256": "27827ac899d1213a6663bbf19dd2bdb6253c0c3c4b730219afc966c06a6d6c09"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/safe_carrying_envelope_v2_integrated/video2/demo_h264.mp4",
+    "bytes": 10874010,
+    "sha256": "019fadc5ee8f8abca94e80f640b7218bb29222488bf874691cd687a94adcef02"
+  }
+]

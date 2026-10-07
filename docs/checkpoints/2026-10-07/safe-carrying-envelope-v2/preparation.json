@@ -80,11 +80,12 @@
     "Original held groups retained; no new-site generalization claim",
     "Do not replace person or PPE detectors with single-class specialist"
   ],
-  "status": "correction_training_started_not_promoted",
+  "status": "training_complete_experimental_supplement_only",
   "epochs": 2,
   "learning_rate": 0.0002,
   "freeze": 6,
   "initial_weights": "models/demo_object_adaptation_v1/best.pt",
   "initial_sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
-  "qa": "107 positive annotation overlays visually inspected; 33 ambiguous samples held, not negative"
+  "qa": "107 positive annotation overlays visually inspected; 33 ambiguous samples held, not negative",
+  "best_weights_sha256": "9d0055e0bd137b7f88d30f013cd4786f0164840974b5fd53b883b879d26aca8b"
 }

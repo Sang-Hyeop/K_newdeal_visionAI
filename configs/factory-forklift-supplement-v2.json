@@ -1,0 +1,23 @@
+{
+  "status": "experimental_supplement_only_not_default",
+  "weights": "models/safe_carrying_envelope_v2/best.pt",
+  "weights_sha256": "9d0055e0bd137b7f88d30f013cd4786f0164840974b5fd53b883b879d26aca8b",
+  "names": {
+    "0": "forklift"
+  },
+  "camera_scope": [
+    2,
+    3
+  ],
+  "merge_policy": "preserve_confirmed_prior_at025; supplement_with_actual_current_inference",
+  "reviewed_forklift_frames": 107,
+  "data_path": "data/reviewed_pilot/safe_carrying_envelope_v2",
+  "evaluation_report": "docs/checkpoints/2026-10-07/safe-carrying-envelope-v2/fixed-evaluation.json",
+  "limits": [
+    "Not a standalone person or PPE detector",
+    "No claim of zero misses",
+    "Same factory scene development data; not unseen-camera benchmark",
+    "Some whole-loaded-vehicle boxes include carried cargo; distance rule calibration must be reviewed",
+    "Model files are local ignored artifacts; GitHub contains code/config/metrics only"
+  ]
+}
