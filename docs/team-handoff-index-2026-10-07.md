@@ -17,6 +17,8 @@
 | [worktree-notes-2026-10-07.md](worktree-notes-2026-10-07.md) | AI 담당 | 학습 WIP와 문서 커밋 분리 |
 | [progress-2026-10-07.md](progress-2026-10-07.md) | AI·전원 | 당일 완료·한계·체크포인트 |
 | [checkpoints/2026-10-07/](checkpoints/2026-10-07/) | AI | 학습·시연 검증 기록·해시 |
+| [checkpoints/2026-10-07/model-share-manifest.json](checkpoints/2026-10-07/model-share-manifest.json) | 전원 | Git 제외 `.pt` 경로·SHA-256 |
+| [pr-draft-2026-10-07.md](pr-draft-2026-10-07.md) | 저장소 소유자 | main PR 클릭 링크 |
 
 브랜치: `fix/proximity-detection-audit`  
 main 병합: **아직 아님** (이 브랜치로 pull)

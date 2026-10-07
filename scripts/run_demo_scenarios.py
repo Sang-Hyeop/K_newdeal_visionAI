@@ -17,6 +17,7 @@ from src.tracked_zone import TrackedZone
 from src.scenario_zone import ScenarioZone,mark_uncertain_lane_events
 from src.forklift_proximity import ForkliftProximity
 from src.hoodie_guard import apply_hood_guard,predict_hood_detections
+from src.ppe_vehicle_guard import apply_ppe_vehicle_guard
 from src.scenario_render import render
 from src.feature_status import feature_status
 from src.event_contract import export_events
@@ -77,6 +78,8 @@ def main():
      for i,(track,obs)in enumerate(zip(ppe_tracks,observations)):
       selected=[q for q in proposals if head_owner(q['bbox_xyxy'],boxes,h)==i];classes={q['class']for q in selected};obs.update(head_candidates=selected,state='helmet_detected'if classes=={'helmeted_head'}else'no_helmet_candidate'if classes=={'no_helmet_head'}else'conflicting_evidence'if len(classes)>1 else'unknown');track['ppe']=obs
      ppe_events,_=prule.update(t,ppe_tracks,missing,cut);extra,_=hrule.update(t,proposals,boxes,(h,w),cut,body_events=ppe_events);ppe_events+=extra
+    vehicle_boxes=[d['bbox_xyxy'] for d in detections if d.get('class')=='forklift']
+    ppe_events=apply_ppe_vehicle_guard(ppe_events,vehicle_boxes)
     hood_detections=[]
     if use_hood:
      if hood_saved:hood_detections=hood_saved[idx]
