@@ -1,0 +1,145 @@
+{
+  "tests_passed": 122,
+  "videos": [
+    {
+      "video": 1,
+      "samples": 106,
+      "features": {
+        "proximity": {
+          "SAFE": 2,
+          "WARNING": 26,
+          "CRITICAL": 3,
+          "UNKNOWN": 75
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 58,
+          "CRITICAL": 0,
+          "UNKNOWN": 48
+        }
+      },
+      "overlap_warning_public_records": 12
+    },
+    {
+      "video": 2,
+      "samples": 106,
+      "features": {
+        "proximity": {
+          "SAFE": 0,
+          "WARNING": 22,
+          "CRITICAL": 0,
+          "UNKNOWN": 84
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 40,
+          "CRITICAL": 0,
+          "UNKNOWN": 66
+        }
+      },
+      "overlap_warning_public_records": 0
+    },
+    {
+      "video": 3,
+      "samples": 87,
+      "features": {
+        "forklift_proximity": {
+          "SAFE": 5,
+          "WARNING": 12,
+          "CRITICAL": 2,
+          "UNKNOWN": 68
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 39,
+          "CRITICAL": 0,
+          "UNKNOWN": 48
+        }
+      },
+      "overlap_warning_public_records": 19
+    },
+    {
+      "video": 4,
+      "samples": 92,
+      "features": {
+        "zone_access": {
+          "SAFE": 12,
+          "WARNING": 0,
+          "CRITICAL": 0,
+          "UNKNOWN": 80
+        },
+        "zone_dwell": {
+          "SAFE": 28,
+          "WARNING": 64,
+          "CRITICAL": 0,
+          "UNKNOWN": 0
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 90,
+          "CRITICAL": 0,
+          "UNKNOWN": 2
+        }
+      },
+      "overlap_warning_public_records": 1
+    },
+    {
+      "video": 5,
+      "samples": 58,
+      "features": {
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 32,
+          "CRITICAL": 0,
+          "UNKNOWN": 26
+        }
+      },
+      "overlap_warning_public_records": 17
+    },
+    {
+      "video": 6,
+      "samples": 58,
+      "features": {
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 42,
+          "CRITICAL": 0,
+          "UNKNOWN": 16
+        }
+      },
+      "overlap_warning_public_records": 11
+    },
+    {
+      "video": 7,
+      "samples": 870,
+      "features": {
+        "zone_access": {
+          "SAFE": 108,
+          "WARNING": 150,
+          "CRITICAL": 89,
+          "UNKNOWN": 523
+        },
+        "zone_dwell": {
+          "SAFE": 108,
+          "WARNING": 150,
+          "CRITICAL": 89,
+          "UNKNOWN": 523
+        },
+        "proximity": {
+          "SAFE": 37,
+          "WARNING": 138,
+          "CRITICAL": 5,
+          "UNKNOWN": 690
+        },
+        "ppe": {
+          "SAFE": 0,
+          "WARNING": 441,
+          "CRITICAL": 0,
+          "UNKNOWN": 429
+        }
+      },
+      "overlap_warning_public_records": 127
+    }
+  ],
+  "scope": "Recorded real model predictions replayed with current policy; not new accuracy or zero-miss evidence."
+}

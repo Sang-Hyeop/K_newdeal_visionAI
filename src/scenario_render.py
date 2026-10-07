@@ -31,6 +31,7 @@ def render(frame,groups,zone=None):
     a,y,c,d=map(int,b);cv2.rectangle(frame,(a,y),(c,d),color,2)
     label=e['severity']or'UNKNOWN'
     if feature=='ppe':label='HELMET'if e['ppe_state']=='helmet_detected'and e['severity']=='SAFE'else'NO HELMET? REVIEW'if e['severity']=='WARNING'else'PPE UNKNOWN'
+    if feature=='ppe'and e.get('vehicle_overlap_review_required')and e['severity']=='WARNING':label='PPE REVIEW: VEHICLE OVERLAP'
     if feature=='ppe'and e.get('hood_evidence'):label='PPE REVIEW: HOOD'if e['severity']=='WARNING'else'PPE UNKNOWN: HOOD'
     if 'observed_dwell_seconds'in e:label+=f" {e['observed_dwell_seconds']:.1f}s"
     cv2.putText(frame,label,(a,max(105,y-5)),0,.48,color,1)

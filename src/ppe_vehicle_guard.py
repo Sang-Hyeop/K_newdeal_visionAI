@@ -19,6 +19,10 @@ def apply_ppe_vehicle_guard(events,vehicle_boxes,minimum_overlap=.8):
                 event.update(severity=None,observation_status='unconfirmed',classification_status='unconfirmed',ppe_state='unknown',reason='possible_operator_or_equipment_person_box')
             else:
                 event.setdefault('reason',event.get('reason') or 'possible_operator_or_equipment_person_box')
-                event.update(observation_status='unconfirmed',classification_status='unconfirmed')
+                # Preserve observed review warnings through the public event contract.
+                # Overlap makes classification uncertain, not the original observation.
+                if event.get('severity') != 'WARNING':
+                    event['observation_status']='unconfirmed'
+                event['classification_status']='unconfirmed'
         result.append(event)
     return result
