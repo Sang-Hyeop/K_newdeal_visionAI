@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/forklift_multiscale_geometric_v3_checked/video2/demo_h264.mp4",
+    "sha256": "c8997ac2a16f10ca7f3fe33d0efffb7c2c57839be58f5572f1aa16a92f02b9d7",
+    "bytes": 10917579,
+    "frames": 106,
+    "fps": 5.0,
+    "recovery_copy": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/forklift_postprocess_v3/video2.mp4"
+  },
+  {
+    "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/forklift_multiscale_geometric_v3_checked/video3/demo_h264.mp4",
+    "sha256": "495e5ff9b7242e83f4c2dde5b2992e1803071135e38b2ca3c320c530216ef051",
+    "bytes": 5150748,
+    "frames": 87,
+    "fps": 4.795,
+    "recovery_copy": "/Users/sanghyeopkim/Desktop/workspace/outputs/checkpoints/forklift_postprocess_v3/video3.mp4"
+  }
+]

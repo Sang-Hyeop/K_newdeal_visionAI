@@ -1,0 +1,433 @@
+{
+  "comparisons": {
+    "safe_carrying_envelope_v2_integrated": {
+      "2": {
+        "True": {
+          "observed_track_samples": 100,
+          "all_scene_track_ids": 4,
+          "manual_envelope_anchor_matches": 18,
+          "matched_anchor_track_ids": 2,
+          "anchors": [
+            {
+              "frame": 0,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 25,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 50,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 75,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 100,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 125,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 150,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 175,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 200,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 225,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 250,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 275,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 300,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 325,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 350,
+              "track_id": null
+            },
+            {
+              "frame": 375,
+              "track_id": null
+            },
+            {
+              "frame": 400,
+              "track_id": null
+            },
+            {
+              "frame": 425,
+              "track_id": "F0:5"
+            },
+            {
+              "frame": 450,
+              "track_id": "F0:5"
+            },
+            {
+              "frame": 475,
+              "track_id": "F0:5"
+            },
+            {
+              "frame": 500,
+              "track_id": "F0:5"
+            },
+            {
+              "frame": 525,
+              "track_id": null
+            }
+          ]
+        },
+        "False": {
+          "observed_track_samples": 106,
+          "all_scene_track_ids": 4,
+          "manual_envelope_anchor_matches": 18,
+          "matched_anchor_track_ids": 1,
+          "anchors": [
+            {
+              "frame": 0,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 25,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 50,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 75,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 100,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 125,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 150,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 175,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 200,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 225,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 250,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 275,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 300,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 325,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 350,
+              "track_id": null
+            },
+            {
+              "frame": 375,
+              "track_id": null
+            },
+            {
+              "frame": 400,
+              "track_id": null
+            },
+            {
+              "frame": 425,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 450,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 475,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 500,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 525,
+              "track_id": null
+            }
+          ]
+        }
+      },
+      "3": {
+        "True": {
+          "observed_track_samples": 72,
+          "all_scene_track_ids": 11,
+          "manual_envelope_anchor_matches": 0,
+          "matched_anchor_track_ids": 0,
+          "anchors": []
+        },
+        "False": {
+          "observed_track_samples": 74,
+          "all_scene_track_ids": 10,
+          "manual_envelope_anchor_matches": 0,
+          "matched_anchor_track_ids": 0,
+          "anchors": []
+        }
+      }
+    },
+    "forklift_multiscale_review_v3": {
+      "2": {
+        "True": {
+          "observed_track_samples": 105,
+          "all_scene_track_ids": 7,
+          "manual_envelope_anchor_matches": 18,
+          "matched_anchor_track_ids": 2,
+          "anchors": [
+            {
+              "frame": 0,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 25,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 50,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 75,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 100,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 125,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 150,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 175,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 200,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 225,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 250,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 275,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 300,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 325,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 350,
+              "track_id": null
+            },
+            {
+              "frame": 375,
+              "track_id": null
+            },
+            {
+              "frame": 400,
+              "track_id": null
+            },
+            {
+              "frame": 425,
+              "track_id": "F0:10"
+            },
+            {
+              "frame": 450,
+              "track_id": "F0:10"
+            },
+            {
+              "frame": 475,
+              "track_id": "F0:10"
+            },
+            {
+              "frame": 500,
+              "track_id": "F0:10"
+            },
+            {
+              "frame": 525,
+              "track_id": null
+            }
+          ]
+        },
+        "False": {
+          "observed_track_samples": 106,
+          "all_scene_track_ids": 7,
+          "manual_envelope_anchor_matches": 18,
+          "matched_anchor_track_ids": 1,
+          "anchors": [
+            {
+              "frame": 0,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 25,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 50,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 75,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 100,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 125,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 150,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 175,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 200,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 225,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 250,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 275,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 300,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 325,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 350,
+              "track_id": null
+            },
+            {
+              "frame": 375,
+              "track_id": null
+            },
+            {
+              "frame": 400,
+              "track_id": null
+            },
+            {
+              "frame": 425,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 450,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 475,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 500,
+              "track_id": "F0:2"
+            },
+            {
+              "frame": 525,
+              "track_id": null
+            }
+          ]
+        }
+      },
+      "3": {
+        "True": {
+          "observed_track_samples": 82,
+          "all_scene_track_ids": 15,
+          "manual_envelope_anchor_matches": 0,
+          "matched_anchor_track_ids": 0,
+          "anchors": []
+        },
+        "False": {
+          "observed_track_samples": 83,
+          "all_scene_track_ids": 14,
+          "manual_envelope_anchor_matches": 0,
+          "matched_anchor_track_ids": 0,
+          "anchors": []
+        }
+      }
+    }
+  },
+  "limits": [
+    "Track count includes false positives; fewer IDs alone does not prove better tracking",
+    "Coarse envelope references only, no manually labelled identity ground truth",
+    "No interpolated boxes are emitted for lost detections"
+  ]
+}
