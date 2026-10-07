@@ -1,0 +1,817 @@
+[
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 310,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        210,
+        87,
+        432,
+        354
+      ],
+      [
+        0,
+        473,
+        134,
+        519,
+        300
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 315,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        207,
+        87,
+        420,
+        354
+      ],
+      [
+        0,
+        468,
+        135,
+        516,
+        299
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 320,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        197,
+        88,
+        395,
+        356
+      ],
+      [
+        0,
+        460,
+        137,
+        511,
+        296
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 325,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        190,
+        90,
+        378,
+        349
+      ],
+      [
+        0,
+        452,
+        136,
+        505,
+        301
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 330,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        181,
+        91,
+        364,
+        342
+      ],
+      [
+        0,
+        444,
+        137,
+        496,
+        302
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 335,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        176,
+        92,
+        354,
+        336
+      ],
+      [
+        0,
+        435,
+        136,
+        488,
+        299
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 340,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        168,
+        94,
+        346,
+        328
+      ],
+      [
+        0,
+        428,
+        139,
+        487,
+        305
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 345,
+    "coordinate_reference": [
+      1920,
+      1080
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        163,
+        94,
+        338,
+        321
+      ],
+      [
+        0,
+        425,
+        140,
+        483,
+        306
+      ],
+      [
+        0,
+        1550,
+        406,
+        1664,
+        590
+      ]
+    ],
+    "review": "reviewed actual vehicle body excluding outer cargo; standing worker and seated worker; only visible unambiguous bodies",
+    "repeats": 4,
+    "context_crop_xyxy": [
+      70,
+      0,
+      650,
+      400
+    ],
+    "crop_repeats": 2,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 200,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        243,
+        53,
+        382,
+        238
+      ],
+      [
+        0,
+        186,
+        58,
+        222,
+        142
+      ],
+      [
+        0,
+        284,
+        99,
+        326,
+        164
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 250,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        161,
+        45,
+        289,
+        194
+      ],
+      [
+        0,
+        199,
+        77,
+        224,
+        139
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 275,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        131,
+        40,
+        247,
+        182
+      ],
+      [
+        0,
+        160,
+        74,
+        187,
+        131
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 300,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        110,
+        38,
+        221,
+        177
+      ],
+      [
+        0,
+        245,
+        66,
+        268,
+        146
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 350,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        80,
+        35,
+        165,
+        153
+      ],
+      [
+        0,
+        208,
+        62,
+        240,
+        145
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 375,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        75,
+        33,
+        140,
+        139
+      ],
+      [
+        0,
+        189,
+        62,
+        221,
+        142
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "2_forklift_back.mp4",
+    "frame_index": 400,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        1,
+        63,
+        30,
+        126,
+        130
+      ],
+      [
+        0,
+        177,
+        57,
+        211,
+        142
+      ],
+      [
+        0,
+        774,
+        202,
+        834,
+        295
+      ]
+    ],
+    "review": "manual visible vehicle and visible people; fully occluded person not invented",
+    "repeats": 4,
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "4_hazard_zone_dwell.mp4",
+    "frame_index": 50,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        291,
+        360,
+        426,
+        500
+      ],
+      [
+        0,
+        668,
+        0,
+        690,
+        48
+      ],
+      [
+        0,
+        835,
+        392,
+        960,
+        540
+      ],
+      [
+        0,
+        88,
+        60,
+        118,
+        107
+      ],
+      [
+        0,
+        129,
+        34,
+        158,
+        109
+      ]
+    ],
+    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "repeats": 4,
+    "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "4_hazard_zone_dwell.mp4",
+    "frame_index": 125,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        291,
+        360,
+        426,
+        500
+      ],
+      [
+        0,
+        677,
+        15,
+        704,
+        83
+      ],
+      [
+        0,
+        817,
+        176,
+        893,
+        337
+      ],
+      [
+        0,
+        88,
+        60,
+        118,
+        108
+      ],
+      [
+        0,
+        129,
+        34,
+        158,
+        109
+      ]
+    ],
+    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "repeats": 4,
+    "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "4_hazard_zone_dwell.mp4",
+    "frame_index": 250,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        291,
+        360,
+        426,
+        500
+      ],
+      [
+        0,
+        653,
+        72,
+        693,
+        179
+      ],
+      [
+        0,
+        88,
+        60,
+        119,
+        109
+      ],
+      [
+        0,
+        129,
+        34,
+        158,
+        109
+      ]
+    ],
+    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "repeats": 4,
+    "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  },
+  {
+    "source": "4_hazard_zone_dwell.mp4",
+    "frame_index": 375,
+    "coordinate_reference": [
+      960,
+      540
+    ],
+    "boxes_xyxy": [
+      [
+        0,
+        291,
+        360,
+        426,
+        500
+      ],
+      [
+        0,
+        495,
+        290,
+        601,
+        529
+      ],
+      [
+        0,
+        697,
+        0,
+        719,
+        28
+      ],
+      [
+        0,
+        88,
+        51,
+        123,
+        109
+      ],
+      [
+        0,
+        129,
+        27,
+        158,
+        105
+      ]
+    ],
+    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "repeats": 4,
+    "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "training_eligible": true,
+    "split": "train",
+    "demo_adaptation": true
+  }
+]

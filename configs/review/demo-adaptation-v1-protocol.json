@@ -1,0 +1,155 @@
+{
+  "version": "demo-adaptation-v1",
+  "user_authorization": "2026-10-07 explicit permission to use demo video for training; supersedes exclusion only for listed scenes",
+  "initial_weights": "models/pilot_v16_related/person_forklift.pt",
+  "run_name": "logistics_demo_adaptation_v1",
+  "epochs": 8,
+  "imgsz": 640,
+  "batch": 4,
+  "freeze": 0,
+  "learning_rate": 0.001,
+  "warmup_bias_lr": 0,
+  "selection": "Evaluate best and last once; prefer complete target tracking with no fixed-test FN regression. Target is training-exposed demo adaptation, not independent evaluation.",
+  "tracking_new_threshold": 0.25,
+  "detector_confidence": 0.1,
+  "target_frames": [
+    {
+      "frame_index": 310,
+      "timestamp_seconds": 12.4,
+      "forklift_xyxy": [
+        210,
+        87,
+        432,
+        354
+      ],
+      "worker_xyxy": [
+        473,
+        134,
+        519,
+        300
+      ]
+    },
+    {
+      "frame_index": 315,
+      "timestamp_seconds": 12.6,
+      "forklift_xyxy": [
+        207,
+        87,
+        420,
+        354
+      ],
+      "worker_xyxy": [
+        468,
+        135,
+        516,
+        299
+      ]
+    },
+    {
+      "frame_index": 320,
+      "timestamp_seconds": 12.8,
+      "forklift_xyxy": [
+        197,
+        88,
+        395,
+        356
+      ],
+      "worker_xyxy": [
+        460,
+        137,
+        511,
+        296
+      ]
+    },
+    {
+      "frame_index": 325,
+      "timestamp_seconds": 13.0,
+      "forklift_xyxy": [
+        190,
+        90,
+        378,
+        349
+      ],
+      "worker_xyxy": [
+        452,
+        136,
+        505,
+        301
+      ]
+    },
+    {
+      "frame_index": 330,
+      "timestamp_seconds": 13.2,
+      "forklift_xyxy": [
+        181,
+        91,
+        364,
+        342
+      ],
+      "worker_xyxy": [
+        444,
+        137,
+        496,
+        302
+      ]
+    },
+    {
+      "frame_index": 335,
+      "timestamp_seconds": 13.4,
+      "forklift_xyxy": [
+        176,
+        92,
+        354,
+        336
+      ],
+      "worker_xyxy": [
+        435,
+        136,
+        488,
+        299
+      ]
+    },
+    {
+      "frame_index": 340,
+      "timestamp_seconds": 13.6,
+      "forklift_xyxy": [
+        168,
+        94,
+        346,
+        328
+      ],
+      "worker_xyxy": [
+        428,
+        139,
+        487,
+        305
+      ]
+    },
+    {
+      "frame_index": 345,
+      "timestamp_seconds": 13.8,
+      "forklift_xyxy": [
+        163,
+        94,
+        338,
+        321
+      ],
+      "worker_xyxy": [
+        425,
+        140,
+        483,
+        306
+      ]
+    }
+  ],
+  "target_source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+  "require_all_target_vehicle_and_worker_tracks": true,
+  "unchanged_old_val_test": true,
+  "augmentation": "full scenes + reviewed target context crops, no gray canvas; repeated samples are weighting not independent examples",
+  "limits": [
+    "demo evaluation leakage explicitly acknowledged",
+    "zero misses outside evaluated frames cannot be promised",
+    "fully occluded bodies not invented",
+    "PPE is a separate model and not fixed by this object experiment"
+  ]
+}

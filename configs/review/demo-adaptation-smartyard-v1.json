@@ -1,0 +1,201 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-06-14-25_028_000001.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-06-14-25_028_000001.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-06-14-25_028",
+    "boxes_xyxy": [
+      [
+        1,
+        364.7399999999978,
+        50.0899999999998,
+        1440.341174818924,
+        774.3609274192515
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_0.jpg",
+    "source_image_sha256": "708f377043f4d0cf524bc95ce2381a56ba92381c844074936955c9df4a2390da",
+    "label_source_sha256": "1c0fc640ff99fd1002e233bd492ded81d9e9a77b8c70136396ecf14ad7abe4b7"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-06-14-27_006_000001.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-06-14-27_006_000001.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-06-14-27_006",
+    "boxes_xyxy": [
+      [
+        1,
+        96.3957973134726,
+        116.1856629870993,
+        1531.863279691448,
+        1075.2919271179674
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_1.jpg",
+    "source_image_sha256": "f234a2bb48becb8489b2e44529699ee0987dd45ad209d9499a21e67017002bc9",
+    "label_source_sha256": "45782dc1e581be01955758434195d4caf8cde15e51ebd09cbe58aab153b29313"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-06-14-30_000_000001.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-06-14-30_000_000001.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-06-14-30_000",
+    "boxes_xyxy": [
+      [
+        1,
+        288,
+        360,
+        861,
+        777
+      ],
+      [
+        0,
+        1671,
+        528,
+        1800,
+        813
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_2.jpg",
+    "source_image_sha256": "dd8de671d0f4c5d86f35d53df424532cdb771e67308a8da1b4865c3782eebe8a",
+    "label_source_sha256": "c256097d76255e5b626c87535ff727d2d4c872d90e29e97a6d762a60f978f221"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-07-09-52_036_000007.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-07-09-52_036_000007.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-07-09-52_036",
+    "boxes_xyxy": [
+      [
+        1,
+        662.7599999999984,
+        415.3200000000015,
+        1396.7026903321666,
+        824.5384929129018
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_3.jpg",
+    "source_image_sha256": "e8448efc56f16543ca3511ad0328bd77aef19de1957356dbcdad3e451aaa41db",
+    "label_source_sha256": "3dffc3da9e047bb004223fb411ffc182c31fa95d1fafb0ad9597125c6de5dd4e"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-07-09-53_035_000002.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-07-09-53_035_000002.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-07-09-53_035",
+    "boxes_xyxy": [
+      [
+        1,
+        164.2146871718853,
+        136.5143040875842,
+        1415.5992102587381,
+        851.6235392551741
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_4.jpg",
+    "source_image_sha256": "51e55038529c750d13bf598f68b6d54d969cb3568419e48b0c91adc7831c9496",
+    "label_source_sha256": "ebee45f25e97043e69ee8f89b01294ed89b293ec5ab8576fc0bb2ee8aa143b29"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-07-11-19_041_000002.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-07-11-19_041_000002.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-07-11-19_041",
+    "boxes_xyxy": [
+      [
+        1,
+        719.6454820579334,
+        595.4271611515255,
+        1220.4381034731223,
+        864.7128084905183
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_5.jpg",
+    "source_image_sha256": "513b7f9bac82bf2cb4dd117da5385911679cc1f5c5fcea39b71b29a57dbd7976",
+    "label_source_sha256": "510cd7c2f77e24425f3bec958dae45b672c747701b1ff1610071e69cf7d4ad09"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-07-13-18_003_000001.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-07-13-18_003_000001.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-07-13-18_003",
+    "boxes_xyxy": [
+      [
+        1,
+        828,
+        498,
+        1419,
+        807
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_6.jpg",
+    "source_image_sha256": "34fcf93969564e3d370153f8aa7dd551ff43e2ee87fdeb5a377b28231a8199ac",
+    "label_source_sha256": "129a031ea891679a8ff63c36c8b2b2064934833493997da757647a92677e3ecf"
+  },
+  {
+    "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/source/forklift/S63_DATA1_F1_L1_D2023-09-07-13-18_053_000001.jpg",
+    "label_source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/forklift/S63_DATA1_F1_L1_D2023-09-07-13-18_053_000001.json",
+    "group": "S63_DATA1_F1_L1_D2023-09-07-13-18_053",
+    "boxes_xyxy": [
+      [
+        1,
+        951.8228233792436,
+        534.8914357155833,
+        1380.0442632738352,
+        903.9236140862831
+      ]
+    ],
+    "resolution": [
+      1920,
+      1080
+    ],
+    "training_eligible": true,
+    "split": "train",
+    "review": "all eight contact-sheet reviewed; S2 missing ground worker added and cargo-inclusive vehicle box corrected; S6 cargo excluded; visible unambiguous bodies only",
+    "image": "smartyard_demo_support_7.jpg",
+    "source_image_sha256": "1d3ef95e104db4c92bf2c09f801954c49920929f2f918ab1280be2379f1b32f7",
+    "label_source_sha256": "3eee414da508b78fe0ac59731ea4906b54875fe297ca4dea88401e6faaed6c70"
+  }
+]
