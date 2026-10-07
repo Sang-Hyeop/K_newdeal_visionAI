@@ -12,6 +12,7 @@ def overlap(a,b):
 def main():
     p=argparse.ArgumentParser()
     for name in ['baseline','candidate','review','output']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--candidate-training-exposed',action='store_true')
     args=p.parse_args()
     if args.output.exists():raise ValueError('New output required')
     spec=json.loads(args.review.read_text());summaries=[json.loads((d/'summary.json').read_text()) for d in [args.baseline,args.candidate]]
@@ -27,7 +28,7 @@ def main():
                 matches=[t['track_id'] for t in after['tracks'] if overlap(target['detected_bbox_xyxy'],t['detected_bbox_xyxy'])>=spec['matching_iou']]
                 checks.append({'timestamp_seconds':before['timestamp_seconds'],'candidate_matching_track_ids':matches})
         metrics[identity]={'review_label':label,'baseline_observations':len(checks),'candidate_overlap_matches':sum(bool(c['candidate_matching_track_ids']) for c in checks),'checks':checks}
-    report={'review':spec,'summaries':summaries,'metrics':metrics,'production_promoted':False,'training_performed':False,'limitation':'Selected-track overlap audit, not independent accuracy benchmark; additional videos not evaluated for this candidate.'}
+    report={'review':spec,'summaries':summaries,'metrics':metrics,'production_promoted':False,'training_performed':args.candidate_training_exposed,'demo_training_exposed':args.candidate_training_exposed,'limitation':'Selected-track overlap audit, not independent accuracy benchmark; additional videos not evaluated for this candidate.'}
     args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print({key:{k:v for k,v in value.items() if k!='checks'} for key,value in metrics.items()})
 

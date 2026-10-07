@@ -13,6 +13,7 @@ from src.detection_sources import route_detections, model_version
 def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','weights','config']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--demo-adapted',action='store_true',help='Label training-exposed demo diagnostics')
     p.add_argument('--person-weights',type=Path,help='Experimental separate person source; default unchanged')
     p.add_argument('--sample-fps',type=float,default=5)
     p.add_argument('--imgsz',type=int,default=1280)
@@ -63,7 +64,7 @@ def main():
                 records.append(r);canvas=frame.copy();polygon=np.array(pipeline.polygon,dtype=np.int32)
                 cv2.polylines(canvas,[polygon],True,(255,190,0) if r['roi_active'] else (120,120,120),3)
                 if approach_contours and r['roi_active']:cv2.drawContours(canvas,approach_contours,-1,(0,190,255),2)
-                cv2.putText(canvas,'VEHICLE LANE / CONDITIONAL PEDESTRIAN WARNING' if pipeline.lane else 'DEMO ROI / ACCESS + DWELL / NOT SITE VIOLATION',(15,30),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)
+                cv2.putText(canvas,('DEMO-ADAPTED / VEHICLE LANE / CONDITIONAL WARNING' if args.demo_adapted else 'VEHICLE LANE / CONDITIONAL PEDESTRIAN WARNING') if pipeline.lane else 'DEMO ROI / ACCESS + DWELL / NOT SITE VIOLATION',(15,30),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)
                 cv2.putText(canvas,f"t={idx/fps:.2f}s  {'ROI ACTIVE' if r['roi_active'] else 'ROI RECONFIGURATION REQUIRED'}",(15,60),cv2.FONT_HERSHEY_SIMPLEX,.7,(0,190,255),2)
                 events={e['track_id']:e for e in r['events'] if e['event_type']=='zone_dwell'}
                 access={e['track_id']:e for e in r['events'] if e['event_type']=='zone_access'}
@@ -112,7 +113,7 @@ def main():
     summary={'source':str(args.source.resolve()),'source_sha256':source_sha256,
              'weights':str(args.weights.resolve()),'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),
              'person_weights':str(args.person_weights.resolve()) if args.person_weights else None,'person_weights_sha256':person_hash,'model_version':effective_version,
-             'person_source_status':'experimental_not_promoted' if person_model else 'selected_v16','config':config,'frames_sampled':len(records),'processed_fps':fps/stride,'imgsz':args.imgsz,
+             'demo_training_exposed':args.demo_adapted,'person_source_status':'experimental_not_promoted' if person_model else 'demo_adapted_candidate' if args.demo_adapted else 'configured_object_model','config':config,'frames_sampled':len(records),'processed_fps':fps/stride,'imgsz':args.imgsz,
              'transition_events':len(transitions),'state_observation_counts':states,
              'max_observed_dwell_by_track':maxima,'critical_track_ids':sorted(critical),
              'access_state_observation_counts':access_states,'observed_entries':entries,'observed_exits':exits,

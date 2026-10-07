@@ -9,6 +9,9 @@
 ```sh
 conda activate safety
 python scripts/run_proximity_video.py --source data/videos/1_forklift_forward.mp4 --weights models/pilot_v16_related/person_forklift.pt --config configs/cameras/forward-proximity.json --output outputs/demo/new_forward
+
+# 후진 시연용(선택): v16 유지 + demo adaptation supplement. 독립 현장 정확도 아님.
+python scripts/run_proximity_video.py --source data/videos/2_forklift_back.mp4 --weights models/pilot_v16_related/person_forklift.pt --supplement-object-weights models/demo_object_adaptation_v1/best.pt --demo-adapted --config configs/cameras/reverse-proximity.json --output outputs/demo/new_reverse_bundle
 python scripts/run_zone_dwell_video.py --source data/videos/4_hazard_zone_dwell.mp4 --weights models/pilot_v16_related/person_forklift.pt --config configs/cameras/zone-access-demo.json --output outputs/demo/new_zone --imgsz 1280
 ```
 

@@ -8,17 +8,20 @@ def match(items,box,key='bbox_xyxy'):
     return max([(iou(t[key],box),t) for t in items],key=lambda p:p[0],default=(0,None))
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--weights',type=Path,required=True);p.add_argument('--output',type=Path,required=True);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--weights',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--baseline-weights',type=Path);args=p.parse_args()
     if args.output.exists():raise ValueError('New output required')
     args.output.mkdir(parents=True);protocol=json.loads((ROOT/'configs/review/demo-adaptation-v1-protocol.json').read_text())
     with (args.output/'evaluation.log').open('w') as log:
         for camera,video in [('reverse','2_forklift_back.mp4'),('forward','1_forklift_forward.mp4')]:
-            command=[sys.executable,'scripts/run_proximity_video.py','--source','data/videos/'+video,'--output',str(args.output/camera),'--weights',str(args.weights),'--config',f'configs/cameras/{camera}-proximity.json','--demo-adapted']
+            command=[sys.executable,'scripts/run_proximity_video.py','--source','data/videos/'+video,'--output',str(args.output/camera),'--weights',str(args.baseline_weights or args.weights),'--config',f'configs/cameras/{camera}-proximity.json','--demo-adapted']
+            if args.baseline_weights:command.extend(['--supplement-object-weights',str(args.weights)])
             subprocess.run(command,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
         fixed={}
         for label,data in [('scaled','logistics_scaled_filtered_v1'),('old','logistics_v6_corrected_forklift')]:
             run=args.output.name+'_'+label
-            subprocess.run([sys.executable,'scripts/audit_pilot_predictions.py','--task','logistics','--data-path','data/reviewed_pilot/'+data,'--weights',str(args.weights),'--run-name',run,'--report-name','demo_adaptation_fixed.json'],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
+            command=[sys.executable,'scripts/audit_pilot_predictions.py','--task','logistics','--data-path','data/reviewed_pilot/'+data,'--weights',str(args.baseline_weights or args.weights),'--run-name',run,'--report-name','demo_adaptation_fixed.json']
+            if args.baseline_weights:command.extend(['--supplement-object-weights',str(args.weights)])
+            subprocess.run(command,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
             fixed[label]=json.loads((ROOT/'outputs/training'/run/'demo_adaptation_fixed.json').read_text())['class_counts']
     summary=json.loads((args.output/'reverse/summary.json').read_text());assert summary['source_sha256']==protocol['target_source_sha256']
     obs={r['frame_index']:r for r in map(json.loads,(args.output/'reverse/observations.jsonl').read_text().splitlines())};target=[]
@@ -29,7 +32,7 @@ def main():
     baseline=json.loads((ROOT/'outputs/diagnostics/targeted_failure_v17/final_gate.json').read_text())['before'];checks={'vehicle_detected_8_of_8':all(t['vehicle_detected'] for t in target),'vehicle_tracked_8_of_8':all(t['vehicle_tracked'] for t in target),'worker_tracked_8_of_8':all(t['worker_tracked'] for t in target),'same_real_vehicle_id':all(t['vehicle_tracked'] for t in target) and len({t['vehicle_track_id'] for t in target})==1}
     for split in fixed:
         for cls in ['person','forklift']:checks[f'{split}_{cls}_misses_not_worse']=fixed[split][cls]['FN']<=baseline['fixed_tests'][split][cls]['FN']
-    report={'weights':str(args.weights.resolve()),'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'checks':checks,'demo_target_pass':all(checks[k] for k in ['vehicle_detected_8_of_8','vehicle_tracked_8_of_8','worker_tracked_8_of_8','same_real_vehicle_id']),'all_checks_pass':all(checks.values()),'target':target,'fixed_tests':fixed,'baseline_fixed_tests':baseline['fixed_tests'],'demo_target_training_exposed':True,'independent_site_accuracy_claim':False,'model_promoted':False,'proximity_thresholds_changed':False}
+    report={'baseline_weights':str(args.baseline_weights.resolve()) if args.baseline_weights else None,'baseline_sha256':hashlib.sha256(args.baseline_weights.read_bytes()).hexdigest() if args.baseline_weights else None,'weights':str(args.weights.resolve()),'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'checks':checks,'demo_target_pass':all(checks[k] for k in ['vehicle_detected_8_of_8','vehicle_tracked_8_of_8','worker_tracked_8_of_8','same_real_vehicle_id']),'all_checks_pass':all(checks.values()),'target':target,'fixed_tests':fixed,'baseline_fixed_tests':baseline['fixed_tests'],'demo_target_training_exposed':True,'independent_site_accuracy_claim':False,'model_promoted':False,'proximity_thresholds_changed':False}
     (args.output/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'checks':checks,'demo_target_pass':report['demo_target_pass']}))
 
 if __name__=='__main__':main()

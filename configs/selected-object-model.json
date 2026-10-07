@@ -19,7 +19,9 @@
   "freeze_layers": 10,
   "learning_rate": 0.0003,
   "ppe_unchanged": true,
-  "proximity_status": "not_ready_for_final_demo; loaded frontal occlusion misses persist",
-  "selection_basis": "manual review: unchanged40/11 image tests improved, sampled video reviewed, overlap uncertainty guard corrected",
-  "limitations": "Same-camera adaptation; development benchmarks and sampled video review; no independent final site accuracy, calibrated meters or front/rear claim"
+  "ppe_weights": "models/pilot_v3_ppe_expansion/ppe.pt",
+  "proximity_status": "demo_reverse_occlusion_improved_via_optional_bundle; default remains v16",
+  "demo_proximity_bundle_config": "configs/selected-demo-object-bundle.json",
+  "selection_basis": "Keep v16 as default. Optional demo recall bundle passed reverse 8/8 and fixed-set miss gates without replacing baseline boxes.",
+  "limitations": "Demo adaptation trained on demo frames; not independent site accuracy. Meters unsupported. PPE no-helmet quality still incomplete."
 }

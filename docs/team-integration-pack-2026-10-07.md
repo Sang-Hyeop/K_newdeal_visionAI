@@ -117,11 +117,11 @@
 
 ## 7. 현재 한계 (화면에 같이 적을 것)
 
-- 후진 적재 가림 지게차 **미탐** 잔존
-- PPE 미착용 WARNING **아직 불안정(0건 구간 있음)**
+- 기본 개발 검출기는 **v16**. 후진 가림 시연만 선택적 recall bundle (독립 현장 정확도 아님)
+- PPE 미착용 WARNING **아직 불안정(0건 구간 있음)** · 기본 PPE 모델 유지
 - 구역 ROI는 **시연용 통로/작업 영역**, 법적 출입금지 확정 아님
 - 모델 `.pt`는 Git에 없음 → 별도 전달
-- 시연 보완 학습이 진행 중이면, 결과는 **시연 적응 모델**로만 기록 (독립 현장 성능 아님)
+- 결정 요약: `docs/demo-adaptation-decision-2026-10-07.md`
 
 ---
 
@@ -133,12 +133,21 @@ conda activate safety
 git switch fix/proximity-detection-audit
 git pull --ff-only
 
-# 근접 예시
+# 근접 예시 (기본 v16)
 python scripts/run_proximity_video.py \
   --source data/videos/1_forklift_forward.mp4 \
   --weights models/pilot_v16_related/person_forklift.pt \
   --config configs/cameras/forward-proximity.json \
   --output outputs/demo/team_forward_$(date +%H%M%S)
+
+# 후진 시연용 recall bundle (v16 유지 + demo supplement)
+python scripts/run_proximity_video.py \
+  --source data/videos/2_forklift_back.mp4 \
+  --weights models/pilot_v16_related/person_forklift.pt \
+  --supplement-object-weights models/demo_object_adaptation_v1/best.pt \
+  --demo-adapted \
+  --config configs/cameras/reverse-proximity.json \
+  --output outputs/demo/team_reverse_bundle_$(date +%H%M%S)
 
 # 구역/통로 예시
 python scripts/run_zone_dwell_video.py \
@@ -148,5 +157,10 @@ python scripts/run_zone_dwell_video.py \
   --output outputs/demo/team_zone_$(date +%H%M%S) \
   --imgsz 1280
 ```
+
+이미 만든 샘플 영상:
+
+- `outputs/diagnostics/demo_object_recall_bundle_v1/forward/proximity.mp4`
+- `outputs/diagnostics/demo_object_recall_bundle_v1/reverse/proximity.mp4`
 
 `--output`은 **없는 새 폴더**여야 합니다.

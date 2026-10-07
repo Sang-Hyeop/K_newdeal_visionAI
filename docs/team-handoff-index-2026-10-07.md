@@ -9,6 +9,7 @@
 | [team-branch-setup-2026-10-07.md](team-branch-setup-2026-10-07.md) | 전원 | 브랜치 pull, 영상 7개, pt 별도 |
 | [roi-wording-2026-10-07.md](roi-wording-2026-10-07.md) | 전원·UI 문구 | ROI/근접/SAFE 말투 통일 |
 | [pr-draft-2026-10-07.md](pr-draft-2026-10-07.md) | 저장소 소유자 | PR 제목/본문 복붙용 (나중에 생성) |
+| [demo-adaptation-decision-2026-10-07.md](demo-adaptation-decision-2026-10-07.md) | AI·전원 | v16 유지 + 시연 recall bundle 결정 |
 | [detection-output-contract.md](detection-output-contract.md) | 스키마 상세 | 계약 원문 |
 | [event-module-v1.md](event-module-v1.md) | 실행 방법 | 근접/구역 실행 예시 |
 | [worktree-notes-2026-10-07.md](worktree-notes-2026-10-07.md) | AI 담당 | 학습 WIP와 문서 커밋 분리 |

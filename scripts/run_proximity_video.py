@@ -7,11 +7,13 @@ import cv2,numpy as np,torch
 from ultralytics import YOLO
 from src.tracked_proximity import TrackedProximity
 from src.event_contract import export_events
+from src.object_recall_ensemble import ObjectRecallEnsemble,object_bundle_version
 
 
 def main():
     p=argparse.ArgumentParser()
     for name in ['source','output','weights','config']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--supplement-object-weights',type=Path)
     p.add_argument('--demo-adapted',action='store_true',help='Label training-exposed demo adaptation honestly')
     p.add_argument('--sample-fps',type=float,default=5)
     args=p.parse_args()
@@ -22,6 +24,9 @@ def main():
     if not cap.isOpened() or fps<=0:raise ValueError('Unreadable source')
     torch.set_num_threads(4);model=YOLO(str(args.weights))
     if model.names!={0:'person',1:'forklift'}:raise ValueError('Requires own two-class detector; truck is not forklift')
+    supplement_hash=hashlib.sha256(args.supplement_object_weights.read_bytes()).hexdigest() if args.supplement_object_weights else None
+    effective_version=object_bundle_version(hashlib.sha256(args.weights.read_bytes()).hexdigest(),supplement_hash)
+    if args.supplement_object_weights:model=ObjectRecallEnsemble(model,YOLO(str(args.supplement_object_weights)))
     stride=max(1,round(fps/args.sample_fps));processed_fps=fps/stride
     pipeline=TrackedProximity(cfg,processed_fps)
     args.output.mkdir(parents=True)
@@ -38,7 +43,7 @@ def main():
                 cut=previous_image is not None and float(np.abs(thumbnail-previous_image).mean())>.18
                 previous_image=thumbnail
                 prediction=model.predict(frame,conf=.1,imgsz=640,device='cpu',verbose=False)[0]
-                detections=[{'class':prediction.names[int(box.cls.item())],'bbox_xyxy':box.xyxy[0].tolist(),'confidence':float(box.conf.item())} for box in prediction.boxes]
+                detections=[{'class':prediction.names[int(box.cls.item())],'bbox_xyxy':box.xyxy[0].tolist(),'confidence':float(box.conf.item()),'detection_source':getattr(box,'detection_source','single_object_model')} for box in prediction.boxes]
                 timestamp=idx/fps
                 record=pipeline.update(timestamp,detections,(h,w),cut);record['frame_index']=idx;record['detections']=detections
                 pt=record['people'];ft=record['forklifts'];events=record['events']
@@ -65,9 +70,9 @@ def main():
     for record in records:
         for event in record['events']:
             state=event['severity'] or 'UNKNOWN';counts[state]=counts.get(state,0)+1
-    common=export_events(records,args.output/'events_v1.jsonl',feature='proximity',context={'camera_id':cfg['camera_id'],'video':args.source.name,'source_sha256':sha,'model_version':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'config_version':hashlib.sha256(args.config.read_bytes()).hexdigest()})
+    common=export_events(records,args.output/'events_v1.jsonl',feature='proximity',context={'camera_id':cfg['camera_id'],'video':args.source.name,'source_sha256':sha,'model_version':effective_version,'config_version':hashlib.sha256(args.config.read_bytes()).hexdigest()})
     summary={'source':str(args.source.resolve()),'source_sha256':sha,'weights':str(args.weights.resolve()),
-        'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'config':cfg,'imgsz':640,
+        'weights_sha256':hashlib.sha256(args.weights.read_bytes()).hexdigest(),'supplement_object_weights':str(args.supplement_object_weights.resolve()) if args.supplement_object_weights else None,'supplement_sha256':supplement_hash,'model_version':effective_version,'config':cfg,'imgsz':640,
         'frames_sampled':len(records),'processed_fps':processed_fps,'pair_state_observation_counts':counts,
         'frames_without_confirmed_pair':sum(r['pair_observation_status']=='unconfirmed' for r in records),
         'zone_roi_used':False,'detection_scope':'full_frame','common_events':len(common),
