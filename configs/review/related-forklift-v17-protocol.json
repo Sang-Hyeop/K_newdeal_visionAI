@@ -1,0 +1,167 @@
+{
+  "version": "v17-single-targeted-run",
+  "epochs": 6,
+  "initial_weights": "models/pilot_v16_related/person_forklift.pt",
+  "imgsz": 640,
+  "detection_confidence": 0.1,
+  "tracking_new_threshold": 0.25,
+  "matching_iou": 0.5,
+  "target_source": "data/videos/2_forklift_back.mp4",
+  "target_source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+  "target_frames": [
+    {
+      "frame_index": 310,
+      "timestamp_seconds": 12.4,
+      "forklift_xyxy": [
+        210,
+        87,
+        432,
+        354
+      ],
+      "worker_xyxy": [
+        473,
+        134,
+        519,
+        300
+      ]
+    },
+    {
+      "frame_index": 315,
+      "timestamp_seconds": 12.6,
+      "forklift_xyxy": [
+        207,
+        87,
+        420,
+        354
+      ],
+      "worker_xyxy": [
+        468,
+        135,
+        516,
+        299
+      ]
+    },
+    {
+      "frame_index": 320,
+      "timestamp_seconds": 12.8,
+      "forklift_xyxy": [
+        197,
+        88,
+        395,
+        356
+      ],
+      "worker_xyxy": [
+        460,
+        137,
+        511,
+        296
+      ]
+    },
+    {
+      "frame_index": 325,
+      "timestamp_seconds": 13.0,
+      "forklift_xyxy": [
+        190,
+        90,
+        378,
+        349
+      ],
+      "worker_xyxy": [
+        452,
+        136,
+        505,
+        301
+      ]
+    },
+    {
+      "frame_index": 330,
+      "timestamp_seconds": 13.2,
+      "forklift_xyxy": [
+        181,
+        91,
+        364,
+        342
+      ],
+      "worker_xyxy": [
+        444,
+        137,
+        496,
+        302
+      ]
+    },
+    {
+      "frame_index": 335,
+      "timestamp_seconds": 13.4,
+      "forklift_xyxy": [
+        176,
+        92,
+        354,
+        336
+      ],
+      "worker_xyxy": [
+        435,
+        136,
+        488,
+        299
+      ]
+    },
+    {
+      "frame_index": 340,
+      "timestamp_seconds": 13.6,
+      "forklift_xyxy": [
+        168,
+        94,
+        346,
+        328
+      ],
+      "worker_xyxy": [
+        428,
+        139,
+        487,
+        305
+      ]
+    },
+    {
+      "frame_index": 345,
+      "timestamp_seconds": 13.8,
+      "forklift_xyxy": [
+        163,
+        94,
+        338,
+        321
+      ],
+      "worker_xyxy": [
+        425,
+        140,
+        483,
+        306
+      ]
+    }
+  ],
+  "pass_conditions": [
+    "actual forklift detected IoU>=0.5 on all 8 target frames at confidence>=0.1",
+    "actual forklift matched to observations on all 8 frames, same track ID, with current tracker settings",
+    "existing scaled40 and old11 person/forklift FN must not increase relative to v16",
+    "six reserved vehicle-only frames must have no more misses than v16 at confidence0.1 IoU0.5",
+    "actual target worker must be tracked; any proximity alerts must refer to the matched real worker and vehicle, not crates"
+  ],
+  "failure_action": "stop repeated supplemental training; do not promote; preserve selected v16",
+  "data_transform": "reviewed context pasted at original pixel position/scale on neutral gray canvas; outside is masked; 3 repeats of 15 unique positive frames and 6 negative contexts from 3 frames; old466 retained",
+  "held_source_groups": [
+    "3_tr1",
+    "3_tr41",
+    "3_tr8",
+    "3_tr7",
+    "3_tr17",
+    "3_tr9",
+    "7_tr16",
+    "7_tr18"
+  ],
+  "limits": [
+    "same-camera adaptation; different filenames do not prove separate recording events",
+    "vehicle-only holdout labels cannot support whole-scene precision",
+    "image-plane distance rule is not ground-truth 3D collision",
+    "unknown must not be reported safe",
+    "best checkpoint selected by existing validation set, not target interval"
+  ]
+}

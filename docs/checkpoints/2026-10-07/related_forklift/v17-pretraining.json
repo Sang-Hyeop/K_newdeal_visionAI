@@ -1,0 +1,32 @@
+{
+  "status": "reviewed_before_single_training",
+  "protocol": "configs/review/related-forklift-v17-protocol.json",
+  "train_images": 517,
+  "new_positive_unique_frames": 15,
+  "negative_contexts": 6,
+  "heldout_cases": 6,
+  "epochs": 6,
+  "backup": [
+    {
+      "path": "outputs/checkpoints/v17_pretraining/build_report.json",
+      "sha256": "8c511fba808b62c0ef76e80b6d2e9a4748e02283f60e4c9dca582acc01bef3a4"
+    },
+    {
+      "path": "outputs/checkpoints/v17_pretraining/related-forklift-v17.json",
+      "sha256": "afc3eaa3f57652ff8fcf6cb7a1f9a8da6d59d6ddbb7d210243d059f52d25a4f7"
+    },
+    {
+      "path": "outputs/checkpoints/v17_pretraining/related-forklift-v17-protocol.json",
+      "sha256": "4bd2ecd8400ae2cbe933ebecd9a78afa07ca8f9fa63f356ee3e41b05fec3714a"
+    },
+    {
+      "path": "outputs/checkpoints/v17_pretraining/manifest.json",
+      "sha256": "bfd89770e785c2b336423f1b9a2bc3a2bfbe6cd845435e14ff6a50cb6f87d183"
+    },
+    {
+      "path": "outputs/checkpoints/v17_pretraining/related-forklift-v17-holdout.json",
+      "sha256": "5e79a7312f3edb02de1e48460298eb6ecb0b1c75d8c54f70214e8f218061f2d4"
+    }
+  ],
+  "v16_preserved": true
+}
