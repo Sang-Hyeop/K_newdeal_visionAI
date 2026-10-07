@@ -1,0 +1,19 @@
+{
+  "policy_version": "video1-nvidia-adaptation-v1",
+  "person_source": "coco_person_1280",
+  "vehicle_sources": [
+    "nvidia_adaptation_640",
+    "nvidia_adaptation_1280"
+  ],
+  "maximum_vehicle_frame_area": 0.35,
+  "ppe_requires_observed_person": true,
+  "renderer": "object_first",
+  "status": "camera_specific_review_not_generalized",
+  "limitation": "Oversized vehicles are retained in diagnostic review proposals, not confirmed as objects. A real vehicle occupying >35% of this image would also require review; do not use this threshold unchanged on a new camera.",
+  "vehicle_part_containment_threshold": 0.6,
+  "vehicle_weights": "models/nvidia_object_adaptation_v1/best.pt",
+  "vehicle_prediction_keys": [
+    "supplement",
+    "supplement_highres"
+  ]
+}

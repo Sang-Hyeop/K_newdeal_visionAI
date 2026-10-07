@@ -1,0 +1,36 @@
+{
+  "status": "8 epochs completed; video1-only adaptation selected; other cameras unchanged",
+  "source_videos_checked": 52,
+  "sampled_candidates": 208,
+  "manually_labelled_full_frames": 24,
+  "context_crops": 33,
+  "background_crops": 20,
+  "dataset_splits": {
+    "train": 201,
+    "val": 84,
+    "test": 42
+  },
+  "comparison_scope": "20 manually reviewed main-forklift reference frames from video1; confidence >=0.25, IoU>=0.5; two resolutions640/1280, no oversized-box filter for evaluation",
+  "previous_matched": 12,
+  "candidate_matched": 20,
+  "candidate_misses": [],
+  "model_sha256": {
+    "models/nvidia_object_adaptation_v1/last.pt": "29a7549ae4513fc2a62294d3f4d3f225d31cd47d254097b0aa2968ad8cae9f0d",
+    "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
+  },
+  "unit_tests_passed": 127,
+  "limits": [
+    "Same warehouse camera; not independent field generalization",
+    "Not all52 videos labelled or trained",
+    "20/20 references does not prove all-frame zero misses",
+    "Generated demo evaluated/rendered at4.795fps; no invented detections between samples",
+    "Vehicle box fragmentation and PPE UNKNOWN remain",
+    "Meters not calibrated"
+  ],
+  "output": "outputs/diagnostics/video1_nvidia_adaptation_v1/video1/demo_h264.mp4",
+  "mixed_test_forklift_recall": {
+    "previous": 0.8604651162790697,
+    "candidate": 0.7906976744186046
+  },
+  "decision": "camera1 only; general model not replaced because mixed test recall regressed"
+}

@@ -1,0 +1,2697 @@
+{
+  "coordinate_reference": [
+    400,
+    225
+  ],
+  "class_names": {
+    "0": "forklift"
+  },
+  "scope": "manual body-only box review, no pseudo labels",
+  "frames": [
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr1.mp4",
+      "source_sha256": "9847393983a6741a1a897260e299f08a269a92d3865a81e897d18c2dc52d0b0d",
+      "source_index": 0,
+      "source_group": "3_tr1",
+      "image": "3_tr1_f000081.jpg",
+      "frame_index": 81,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        307,
+        87,
+        365,
+        186
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr1.mp4",
+      "source_sha256": "9847393983a6741a1a897260e299f08a269a92d3865a81e897d18c2dc52d0b0d",
+      "source_index": 0,
+      "source_group": "3_tr1",
+      "image": "3_tr1_f000210.jpg",
+      "frame_index": 210,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        278,
+        83,
+        360,
+        177
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr10.mp4",
+      "source_sha256": "7b795c96972bc6eed92519cb7b7aa0898f9135b81617784bf877a94c96f393bc",
+      "source_index": 1,
+      "source_group": "3_tr10",
+      "image": "3_tr10_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        273,
+        79,
+        341,
+        176
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr10.mp4",
+      "source_sha256": "7b795c96972bc6eed92519cb7b7aa0898f9135b81617784bf877a94c96f393bc",
+      "source_index": 1,
+      "source_group": "3_tr10",
+      "image": "3_tr10_f000162.jpg",
+      "frame_index": 162,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_cargo_only_or_wrong_initial_box; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr11.mp4",
+      "source_sha256": "6b02ef1fad91f59529735d7ee536c3a28782d9c687c81beb80024c9074e5a641",
+      "source_index": 2,
+      "source_group": "3_tr11",
+      "image": "3_tr11_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr11.mp4",
+      "source_sha256": "6b02ef1fad91f59529735d7ee536c3a28782d9c687c81beb80024c9074e5a641",
+      "source_index": 2,
+      "source_group": "3_tr11",
+      "image": "3_tr11_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        47,
+        2,
+        71,
+        42
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr12.mp4",
+      "source_sha256": "23925896131a11032c8dba17c6abde5e341843960a64b3a5113540284b1a3354",
+      "source_index": 3,
+      "source_group": "3_tr12",
+      "image": "3_tr12_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr12.mp4",
+      "source_sha256": "23925896131a11032c8dba17c6abde5e341843960a64b3a5113540284b1a3354",
+      "source_index": 3,
+      "source_group": "3_tr12",
+      "image": "3_tr12_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        39,
+        5,
+        80,
+        65
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr13.mp4",
+      "source_sha256": "a28d1a2156fe65283696c54dce16ebf0ea22f631b8a82011cbefbd2f05ef61da",
+      "source_index": 4,
+      "source_group": "3_tr13",
+      "image": "3_tr13_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr13.mp4",
+      "source_sha256": "a28d1a2156fe65283696c54dce16ebf0ea22f631b8a82011cbefbd2f05ef61da",
+      "source_index": 4,
+      "source_group": "3_tr13",
+      "image": "3_tr13_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr14.mp4",
+      "source_sha256": "0865376cd100cb3cdfbc4c25816f57222b020fba6ca085d19b7559a7a8745b7b",
+      "source_index": 5,
+      "source_group": "3_tr14",
+      "image": "3_tr14_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr14.mp4",
+      "source_sha256": "0865376cd100cb3cdfbc4c25816f57222b020fba6ca085d19b7559a7a8745b7b",
+      "source_index": 5,
+      "source_group": "3_tr14",
+      "image": "3_tr14_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        35,
+        2,
+        53,
+        48
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr15.mp4",
+      "source_sha256": "f8068e102a1f929a94c35892d67b0bf3eb9aa01b8127fea8dff0ff270d09b4e0",
+      "source_index": 6,
+      "source_group": "3_tr15",
+      "image": "3_tr15_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr15.mp4",
+      "source_sha256": "f8068e102a1f929a94c35892d67b0bf3eb9aa01b8127fea8dff0ff270d09b4e0",
+      "source_index": 6,
+      "source_group": "3_tr15",
+      "image": "3_tr15_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        170,
+        58,
+        214,
+        121
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr16.mp4",
+      "source_sha256": "12a798c0b94510a34710446916f5955cc5dd9f4b1e057c23eade6869cbfc55ae",
+      "source_index": 7,
+      "source_group": "3_tr16",
+      "image": "3_tr16_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr16.mp4",
+      "source_sha256": "12a798c0b94510a34710446916f5955cc5dd9f4b1e057c23eade6869cbfc55ae",
+      "source_index": 7,
+      "source_group": "3_tr16",
+      "image": "3_tr16_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        23,
+        5,
+        60,
+        62
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr17.mp4",
+      "source_sha256": "4f19c583011b673481877b556476146ca9c1fca3126ba035db5f0d52c0935320",
+      "source_index": 8,
+      "source_group": "3_tr17",
+      "image": "3_tr17_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr17.mp4",
+      "source_sha256": "4f19c583011b673481877b556476146ca9c1fca3126ba035db5f0d52c0935320",
+      "source_index": 8,
+      "source_group": "3_tr17",
+      "image": "3_tr17_f000161.jpg",
+      "frame_index": 161,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        22,
+        8,
+        62,
+        69
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+      "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+      "source_index": 9,
+      "source_group": "3_tr18",
+      "image": "3_tr18_f000056.jpg",
+      "frame_index": 56,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        46,
+        22,
+        78,
+        69
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr18.mp4",
+      "source_sha256": "713688e89e80b339e3070aac2b0d01c61c73f8cb57dbd7bd9f9a2640b1aa7f60",
+      "source_index": 9,
+      "source_group": "3_tr18",
+      "image": "3_tr18_f000145.jpg",
+      "frame_index": 145,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        104,
+        38,
+        166,
+        114
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr19.mp4",
+      "source_sha256": "fcfeaafbc86acce9a7374d6b774df75c39a9a4abc02e5ff3871753ffa13e498c",
+      "source_index": 10,
+      "source_group": "3_tr19",
+      "image": "3_tr19_f000056.jpg",
+      "frame_index": 56,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr19.mp4",
+      "source_sha256": "fcfeaafbc86acce9a7374d6b774df75c39a9a4abc02e5ff3871753ffa13e498c",
+      "source_index": 10,
+      "source_group": "3_tr19",
+      "image": "3_tr19_f000145.jpg",
+      "frame_index": 145,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr2.mp4",
+      "source_sha256": "93fbd4851e4ec8b25467f899f9f4f4c7caf8ac6f0f7e95b9d08ce26ef03c4337",
+      "source_index": 11,
+      "source_group": "3_tr2",
+      "image": "3_tr2_f000074.jpg",
+      "frame_index": 74,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        74,
+        8,
+        149,
+        95
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr2.mp4",
+      "source_sha256": "93fbd4851e4ec8b25467f899f9f4f4c7caf8ac6f0f7e95b9d08ce26ef03c4337",
+      "source_index": 11,
+      "source_group": "3_tr2",
+      "image": "3_tr2_f000194.jpg",
+      "frame_index": 194,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        239,
+        77,
+        334,
+        179
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
+      "source_sha256": "666c64d82d8b85699dd4982da3ab8b338d5fdf9d4d1d0f47bb28d1ad2b0de692",
+      "source_index": 12,
+      "source_group": "3_tr20",
+      "image": "3_tr20_f000050.jpg",
+      "frame_index": 50,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        101,
+        37,
+        165,
+        111
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr20.mp4",
+      "source_sha256": "666c64d82d8b85699dd4982da3ab8b338d5fdf9d4d1d0f47bb28d1ad2b0de692",
+      "source_index": 12,
+      "source_group": "3_tr20",
+      "image": "3_tr20_f000130.jpg",
+      "frame_index": 130,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        193,
+        43,
+        290,
+        176
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr21.mp4",
+      "source_sha256": "bd06d9f21da14073aa85f94819fc51090193ac744ed59f10fbc17b93ddd697b5",
+      "source_index": 13,
+      "source_group": "3_tr21",
+      "image": "3_tr21_f000049.jpg",
+      "frame_index": 49,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr21.mp4",
+      "source_sha256": "bd06d9f21da14073aa85f94819fc51090193ac744ed59f10fbc17b93ddd697b5",
+      "source_index": 13,
+      "source_group": "3_tr21",
+      "image": "3_tr21_f000129.jpg",
+      "frame_index": 129,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        301,
+        82,
+        373,
+        177
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
+      "source_sha256": "bd6c10654363213cf226784e4c77a12a09e6834e274c022f52447089e485c629",
+      "source_index": 14,
+      "source_group": "3_tr22",
+      "image": "3_tr22_f000043.jpg",
+      "frame_index": 43,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        168,
+        42,
+        260,
+        149
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr22.mp4",
+      "source_sha256": "bd6c10654363213cf226784e4c77a12a09e6834e274c022f52447089e485c629",
+      "source_index": 14,
+      "source_group": "3_tr22",
+      "image": "3_tr22_f000113.jpg",
+      "frame_index": 113,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        287,
+        69,
+        360,
+        179
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr23.mp4",
+      "source_sha256": "02afdc719b9cb39edbcde3233cdd01587a4458f4462792fe7a79861d39c3abcc",
+      "source_index": 15,
+      "source_group": "3_tr23",
+      "image": "3_tr23_f000043.jpg",
+      "frame_index": 43,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr23.mp4",
+      "source_sha256": "02afdc719b9cb39edbcde3233cdd01587a4458f4462792fe7a79861d39c3abcc",
+      "source_index": 15,
+      "source_group": "3_tr23",
+      "image": "3_tr23_f000113.jpg",
+      "frame_index": 113,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        316,
+        83,
+        379,
+        177
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr24.mp4",
+      "source_sha256": "4ca9a2b10211db5d40f93fafc7bfac25bc5cd3171f047c798e1567bb0a9d82f3",
+      "source_index": 16,
+      "source_group": "3_tr24",
+      "image": "3_tr24_f000037.jpg",
+      "frame_index": 37,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr24.mp4",
+      "source_sha256": "4ca9a2b10211db5d40f93fafc7bfac25bc5cd3171f047c798e1567bb0a9d82f3",
+      "source_index": 16,
+      "source_group": "3_tr24",
+      "image": "3_tr24_f000096.jpg",
+      "frame_index": 96,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr25.mp4",
+      "source_sha256": "5ed837ed236df6f7ecf6c4d4a4d5b1fc307e927804f2e29d7feb0314b4ed3965",
+      "source_index": 17,
+      "source_group": "3_tr25",
+      "image": "3_tr25_f000037.jpg",
+      "frame_index": 37,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr25.mp4",
+      "source_sha256": "5ed837ed236df6f7ecf6c4d4a4d5b1fc307e927804f2e29d7feb0314b4ed3965",
+      "source_index": 17,
+      "source_group": "3_tr25",
+      "image": "3_tr25_f000096.jpg",
+      "frame_index": 96,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        53,
+        32,
+        75,
+        65
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
+      "source_sha256": "87938a21c72674bb5732a85399207d1b12ccb0bc72b4da6fd070542b6259e17d",
+      "source_index": 18,
+      "source_group": "3_tr26",
+      "image": "3_tr26_f000037.jpg",
+      "frame_index": 37,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        196,
+        81,
+        280,
+        193
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr26.mp4",
+      "source_sha256": "87938a21c72674bb5732a85399207d1b12ccb0bc72b4da6fd070542b6259e17d",
+      "source_index": 18,
+      "source_group": "3_tr26",
+      "image": "3_tr26_f000096.jpg",
+      "frame_index": 96,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        124,
+        49,
+        202,
+        136
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr27.mp4",
+      "source_sha256": "603f5debdefa14a184812e3256a3c24a62924048edf0d9bdfc906b1019815840",
+      "source_index": 19,
+      "source_group": "3_tr27",
+      "image": "3_tr27_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr27.mp4",
+      "source_sha256": "603f5debdefa14a184812e3256a3c24a62924048edf0d9bdfc906b1019815840",
+      "source_index": 19,
+      "source_group": "3_tr27",
+      "image": "3_tr27_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr28.mp4",
+      "source_sha256": "44ada746ddd0704610f44b61171045be329059eb86bcba4b3dd9b693d669ac13",
+      "source_index": 20,
+      "source_group": "3_tr28",
+      "image": "3_tr28_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr28.mp4",
+      "source_sha256": "44ada746ddd0704610f44b61171045be329059eb86bcba4b3dd9b693d669ac13",
+      "source_index": 20,
+      "source_group": "3_tr28",
+      "image": "3_tr28_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr29.mp4",
+      "source_sha256": "74f9bd4518daac7ed9eebfa24aad255f807460056c62ddae952b6922ef254900",
+      "source_index": 21,
+      "source_group": "3_tr29",
+      "image": "3_tr29_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        109,
+        25,
+        150,
+        79
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr29.mp4",
+      "source_sha256": "74f9bd4518daac7ed9eebfa24aad255f807460056c62ddae952b6922ef254900",
+      "source_index": 21,
+      "source_group": "3_tr29",
+      "image": "3_tr29_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        147,
+        34,
+        197,
+        98
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr3.mp4",
+      "source_sha256": "f1da0d2b9672008146ec656f4d6fd68bf8bdbcc064e8a1058d66618982f37416",
+      "source_index": 22,
+      "source_group": "3_tr3",
+      "image": "3_tr3_f000068.jpg",
+      "frame_index": 68,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        0,
+        3,
+        31,
+        46
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr3.mp4",
+      "source_sha256": "f1da0d2b9672008146ec656f4d6fd68bf8bdbcc064e8a1058d66618982f37416",
+      "source_index": 22,
+      "source_group": "3_tr3",
+      "image": "3_tr3_f000178.jpg",
+      "frame_index": 178,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        29,
+        0,
+        51,
+        43
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
+      "source_sha256": "1a08e951af7bc7db26ec57b913a826b6bbc3f5e6f463d1d52ff3cca2dfe4e866",
+      "source_index": 23,
+      "source_group": "3_tr30",
+      "image": "3_tr30_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        203,
+        52,
+        293,
+        147
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr30.mp4",
+      "source_sha256": "1a08e951af7bc7db26ec57b913a826b6bbc3f5e6f463d1d52ff3cca2dfe4e866",
+      "source_index": 23,
+      "source_group": "3_tr30",
+      "image": "3_tr30_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        277,
+        61,
+        347,
+        157
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+      "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+      "source_index": 24,
+      "source_group": "3_tr31",
+      "image": "3_tr31_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        34,
+        10,
+        63,
+        58
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr31.mp4",
+      "source_sha256": "d05072867cffb8660ca2a3c401505e0355362818cbd6b9b417cf27af85ec47f3",
+      "source_index": 24,
+      "source_group": "3_tr31",
+      "image": "3_tr31_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        40,
+        3,
+        73,
+        60
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr32.mp4",
+      "source_sha256": "bb6c5dc11abe221ae3efb3204d96c6336750026a5371f7eded8b651d60b13a54",
+      "source_index": 25,
+      "source_group": "3_tr32",
+      "image": "3_tr32_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr32.mp4",
+      "source_sha256": "bb6c5dc11abe221ae3efb3204d96c6336750026a5371f7eded8b651d60b13a54",
+      "source_index": 25,
+      "source_group": "3_tr32",
+      "image": "3_tr32_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr33.mp4",
+      "source_sha256": "5ff9dee5a340577a32704f27ee4ce11ad5b3f320909d355051fbb230a4ce414c",
+      "source_index": 26,
+      "source_group": "3_tr33",
+      "image": "3_tr33_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr33.mp4",
+      "source_sha256": "5ff9dee5a340577a32704f27ee4ce11ad5b3f320909d355051fbb230a4ce414c",
+      "source_index": 26,
+      "source_group": "3_tr33",
+      "image": "3_tr33_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr34.mp4",
+      "source_sha256": "e1bf5ca774e1602353aca10b52abfe2ad08862b8bf7cf3bfe9bdb37d4bbea673",
+      "source_index": 27,
+      "source_group": "3_tr34",
+      "image": "3_tr34_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr34.mp4",
+      "source_sha256": "e1bf5ca774e1602353aca10b52abfe2ad08862b8bf7cf3bfe9bdb37d4bbea673",
+      "source_index": 27,
+      "source_group": "3_tr34",
+      "image": "3_tr34_f000080.jpg",
+      "frame_index": 80,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        190,
+        49,
+        243,
+        116
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr35.mp4",
+      "source_sha256": "5d19425ab3400047dab56a888d5e6962a5c8506b997e95b56ff687c4dc292656",
+      "source_index": 28,
+      "source_group": "3_tr35",
+      "image": "3_tr35_f000027.jpg",
+      "frame_index": 27,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        308,
+        90,
+        374,
+        202
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr35.mp4",
+      "source_sha256": "5d19425ab3400047dab56a888d5e6962a5c8506b997e95b56ff687c4dc292656",
+      "source_index": 28,
+      "source_group": "3_tr35",
+      "image": "3_tr35_f000070.jpg",
+      "frame_index": 70,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        280,
+        79,
+        355,
+        190
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
+      "source_sha256": "5f98bdeb1ab1609bcd46af3b5ec176d8ad4c9a487e0849afe72848e7bb25d8fd",
+      "source_index": 29,
+      "source_group": "3_tr36",
+      "image": "3_tr36_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        257,
+        73,
+        355,
+        175
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr36.mp4",
+      "source_sha256": "5f98bdeb1ab1609bcd46af3b5ec176d8ad4c9a487e0849afe72848e7bb25d8fd",
+      "source_index": 29,
+      "source_group": "3_tr36",
+      "image": "3_tr36_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        238,
+        62,
+        306,
+        148
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr37.mp4",
+      "source_sha256": "c33a5103766ac79f6a3223b5d785af0ea611565dbe3a902268e36f8145235f89",
+      "source_index": 30,
+      "source_group": "3_tr37",
+      "image": "3_tr37_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr37.mp4",
+      "source_sha256": "c33a5103766ac79f6a3223b5d785af0ea611565dbe3a902268e36f8145235f89",
+      "source_index": 30,
+      "source_group": "3_tr37",
+      "image": "3_tr37_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
+      "source_sha256": "846ebd111b4bfb69cf692c489023e40ddfe2e3b4e9fa100e6802beff9b16140a",
+      "source_index": 31,
+      "source_group": "3_tr38",
+      "image": "3_tr38_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        153,
+        42,
+        199,
+        117
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr38.mp4",
+      "source_sha256": "846ebd111b4bfb69cf692c489023e40ddfe2e3b4e9fa100e6802beff9b16140a",
+      "source_index": 31,
+      "source_group": "3_tr38",
+      "image": "3_tr38_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        111,
+        35,
+        159,
+        94
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr39.mp4",
+      "source_sha256": "0ac96bee40ac4a02959a5ed84a5c8a63d4366f789468519595ce92a88d1c9c34",
+      "source_index": 32,
+      "source_group": "3_tr39",
+      "image": "3_tr39_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        311,
+        85,
+        367,
+        190
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr39.mp4",
+      "source_sha256": "0ac96bee40ac4a02959a5ed84a5c8a63d4366f789468519595ce92a88d1c9c34",
+      "source_index": 32,
+      "source_group": "3_tr39",
+      "image": "3_tr39_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        279,
+        83,
+        361,
+        176
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+      "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+      "source_index": 33,
+      "source_group": "3_tr4",
+      "image": "3_tr4_f000068.jpg",
+      "frame_index": 68,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        19,
+        7,
+        56,
+        61
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr4.mp4",
+      "source_sha256": "823be3e8a03eb7b9e63fd1bdc1359c8c1aa041555143ecea0aabde35daef0d7d",
+      "source_index": 33,
+      "source_group": "3_tr4",
+      "image": "3_tr4_f000178.jpg",
+      "frame_index": 178,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        96,
+        32,
+        133,
+        80
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+      "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+      "source_index": 34,
+      "source_group": "3_tr40",
+      "image": "3_tr40_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        56,
+        3,
+        85,
+        45
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr40.mp4",
+      "source_sha256": "02a32abaa6ab7aa6a1c62c4123295af05b56df65a4aa529a5d79a38ca8ed1ba3",
+      "source_index": 34,
+      "source_group": "3_tr40",
+      "image": "3_tr40_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        58,
+        0,
+        88,
+        36
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr41.mp4",
+      "source_sha256": "752333bb747152ca694e59c3d3ba91ae39bb97e49e1b65950c91249c7b563a43",
+      "source_index": 35,
+      "source_group": "3_tr41",
+      "image": "3_tr41_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr41.mp4",
+      "source_sha256": "752333bb747152ca694e59c3d3ba91ae39bb97e49e1b65950c91249c7b563a43",
+      "source_index": 35,
+      "source_group": "3_tr41",
+      "image": "3_tr41_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr42.mp4",
+      "source_sha256": "c8e61b5634536a5f498c5c9a9246bf6ebc1e4bda37bfd79564b4e45766d061f2",
+      "source_index": 36,
+      "source_group": "3_tr42",
+      "image": "3_tr42_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        83,
+        21,
+        135,
+        94
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr42.mp4",
+      "source_sha256": "c8e61b5634536a5f498c5c9a9246bf6ebc1e4bda37bfd79564b4e45766d061f2",
+      "source_index": 36,
+      "source_group": "3_tr42",
+      "image": "3_tr42_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        72,
+        16,
+        111,
+        73
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr43.mp4",
+      "source_sha256": "e4edf2affe7fc44069aaf4a4a27ba963e73beafb5abb912a8afd036cc1bdc256",
+      "source_index": 37,
+      "source_group": "3_tr43",
+      "image": "3_tr43_f000018.jpg",
+      "frame_index": 18,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        40,
+        7,
+        83,
+        65
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr43.mp4",
+      "source_sha256": "e4edf2affe7fc44069aaf4a4a27ba963e73beafb5abb912a8afd036cc1bdc256",
+      "source_index": 37,
+      "source_group": "3_tr43",
+      "image": "3_tr43_f000048.jpg",
+      "frame_index": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        58,
+        5,
+        100,
+        64
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr44.mp4",
+      "source_sha256": "889277f1f38849dbf9ed52aa65e230c032afa5395fa35285c6824f2ee9897a3f",
+      "source_index": 38,
+      "source_group": "3_tr44",
+      "image": "3_tr44_f000018.jpg",
+      "frame_index": 18,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr44.mp4",
+      "source_sha256": "889277f1f38849dbf9ed52aa65e230c032afa5395fa35285c6824f2ee9897a3f",
+      "source_index": 38,
+      "source_group": "3_tr44",
+      "image": "3_tr44_f000048.jpg",
+      "frame_index": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
+      "source_sha256": "2020127242e62532028e5f2a4947d0611c97dd0b7f68b5c52e8fe813b07e0dbf",
+      "source_index": 39,
+      "source_group": "3_tr45",
+      "image": "3_tr45_f000018.jpg",
+      "frame_index": 18,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        145,
+        45,
+        191,
+        112
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr45.mp4",
+      "source_sha256": "2020127242e62532028e5f2a4947d0611c97dd0b7f68b5c52e8fe813b07e0dbf",
+      "source_index": 39,
+      "source_group": "3_tr45",
+      "image": "3_tr45_f000048.jpg",
+      "frame_index": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        119,
+        32,
+        167,
+        99
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr46.mp4",
+      "source_sha256": "04f08654a205f07ff0edf4f99c82bf6f5f09df098398b37891b35fe1192c1f9b",
+      "source_index": 40,
+      "source_group": "3_tr46",
+      "image": "3_tr46_f000018.jpg",
+      "frame_index": 18,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        270,
+        82,
+        348,
+        178
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr46.mp4",
+      "source_sha256": "04f08654a205f07ff0edf4f99c82bf6f5f09df098398b37891b35fe1192c1f9b",
+      "source_index": 40,
+      "source_group": "3_tr46",
+      "image": "3_tr46_f000048.jpg",
+      "frame_index": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        253,
+        76,
+        321,
+        167
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
+      "source_sha256": "22ff762fc6e4a01bef321b3403d63bd342c5e9adae054f2a98c1bed97761b8c0",
+      "source_index": 41,
+      "source_group": "3_tr47",
+      "image": "3_tr47_f000018.jpg",
+      "frame_index": 18,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        160,
+        55,
+        214,
+        130
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr47.mp4",
+      "source_sha256": "22ff762fc6e4a01bef321b3403d63bd342c5e9adae054f2a98c1bed97761b8c0",
+      "source_index": 41,
+      "source_group": "3_tr47",
+      "image": "3_tr47_f000048.jpg",
+      "frame_index": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        119,
+        43,
+        178,
+        121
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr48.mp4",
+      "source_sha256": "9dac64de68214c8feb9e5a2c8bcbf0d09ceac9fdc8061acdacf5ef6963ee92e7",
+      "source_index": 42,
+      "source_group": "3_tr48",
+      "image": "3_tr48_f000018.jpg",
+      "frame_index": 18,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr48.mp4",
+      "source_sha256": "9dac64de68214c8feb9e5a2c8bcbf0d09ceac9fdc8061acdacf5ef6963ee92e7",
+      "source_index": 42,
+      "source_group": "3_tr48",
+      "image": "3_tr48_f000048.jpg",
+      "frame_index": 48,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr5.mp4",
+      "source_sha256": "6d92e2b7289950554a3dcda096b97d46b46ecccca0bc7fb62a7261df3bc4b2f9",
+      "source_index": 43,
+      "source_group": "3_tr5",
+      "image": "3_tr5_f000068.jpg",
+      "frame_index": 68,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr5.mp4",
+      "source_sha256": "6d92e2b7289950554a3dcda096b97d46b46ecccca0bc7fb62a7261df3bc4b2f9",
+      "source_index": 43,
+      "source_group": "3_tr5",
+      "image": "3_tr5_f000178.jpg",
+      "frame_index": 178,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
+      "source_sha256": "cb37dab2a913aa3fa1a8c002ddeda85a6558c35176c6223bbe355ba79034d84b",
+      "source_index": 44,
+      "source_group": "3_tr6",
+      "image": "3_tr6_f000068.jpg",
+      "frame_index": 68,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        96,
+        44,
+        145,
+        104
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr6.mp4",
+      "source_sha256": "cb37dab2a913aa3fa1a8c002ddeda85a6558c35176c6223bbe355ba79034d84b",
+      "source_index": 44,
+      "source_group": "3_tr6",
+      "image": "3_tr6_f000178.jpg",
+      "frame_index": 178,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        201,
+        65,
+        286,
+        153
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr7.mp4",
+      "source_sha256": "0d1f16d13649be106b185f2876d27a91d0f32c20e12addea4925c5f4e07f1984",
+      "source_index": 45,
+      "source_group": "3_tr7",
+      "image": "3_tr7_f000068.jpg",
+      "frame_index": 68,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_cargo_only_or_wrong_initial_box; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr7.mp4",
+      "source_sha256": "0d1f16d13649be106b185f2876d27a91d0f32c20e12addea4925c5f4e07f1984",
+      "source_index": 45,
+      "source_group": "3_tr7",
+      "image": "3_tr7_f000178.jpg",
+      "frame_index": 178,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        116,
+        32,
+        166,
+        96
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr8.mp4",
+      "source_sha256": "7345f5cbd0baf636170cdf4094efd2782a6ea7c035f0a05f090b16aff4e88f62",
+      "source_index": 46,
+      "source_group": "3_tr8",
+      "image": "3_tr8_f000068.jpg",
+      "frame_index": 68,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr8.mp4",
+      "source_sha256": "7345f5cbd0baf636170cdf4094efd2782a6ea7c035f0a05f090b16aff4e88f62",
+      "source_index": 46,
+      "source_group": "3_tr8",
+      "image": "3_tr8_f000178.jpg",
+      "frame_index": 178,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr9.mp4",
+      "source_sha256": "f395c5de1c62f55fb23c6c564d3ffb249aad5ffca9dc3a2dbff9a31c0b6ba789",
+      "source_index": 47,
+      "source_group": "3_tr9",
+      "image": "3_tr9_f000062.jpg",
+      "frame_index": 62,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/3_carrying_overload_with_forklift/3_tr9.mp4",
+      "source_sha256": "f395c5de1c62f55fb23c6c564d3ffb249aad5ffca9dc3a2dbff9a31c0b6ba789",
+      "source_index": 47,
+      "source_group": "3_tr9",
+      "image": "3_tr9_f000162.jpg",
+      "frame_index": 162,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr1.mp4",
+      "source_sha256": "86f301485074d22fd1df5024ec53d1f293d40b2bcdc374fbeb20fbe38e468cb8",
+      "source_index": 48,
+      "source_group": "7_tr1",
+      "image": "7_tr1_f000063.jpg",
+      "frame_index": 63,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr1.mp4",
+      "source_sha256": "86f301485074d22fd1df5024ec53d1f293d40b2bcdc374fbeb20fbe38e468cb8",
+      "source_index": 48,
+      "source_group": "7_tr1",
+      "image": "7_tr1_f000164.jpg",
+      "frame_index": 164,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr10.mp4",
+      "source_sha256": "a87fa8e3c8a04f4836b63ae7bda4752f63aef373573e6109530b44627f01fa0a",
+      "source_index": 49,
+      "source_group": "7_tr10",
+      "image": "7_tr10_f000031.jpg",
+      "frame_index": 31,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        87,
+        33,
+        125,
+        86
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr10.mp4",
+      "source_sha256": "a87fa8e3c8a04f4836b63ae7bda4752f63aef373573e6109530b44627f01fa0a",
+      "source_index": 49,
+      "source_group": "7_tr10",
+      "image": "7_tr10_f000081.jpg",
+      "frame_index": 81,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        67,
+        20,
+        98,
+        69
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr11.mp4",
+      "source_sha256": "e4961cbf455781e9ef17bde187c2a737f17a9686879db21f11cb2a5d027bd7e4",
+      "source_index": 50,
+      "source_group": "7_tr11",
+      "image": "7_tr11_f000025.jpg",
+      "frame_index": 25,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        65,
+        10,
+        97,
+        66
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr11.mp4",
+      "source_sha256": "e4961cbf455781e9ef17bde187c2a737f17a9686879db21f11cb2a5d027bd7e4",
+      "source_index": 50,
+      "source_group": "7_tr11",
+      "image": "7_tr11_f000065.jpg",
+      "frame_index": 65,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        80,
+        21,
+        125,
+        86
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr12.mp4",
+      "source_sha256": "4345d2c6368d720ffbf2419756117d28e63e6736c3ac8798d36cca1ea69df9dd",
+      "source_index": 51,
+      "source_group": "7_tr12",
+      "image": "7_tr12_f000024.jpg",
+      "frame_index": 24,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        132,
+        52,
+        206,
+        145
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr12.mp4",
+      "source_sha256": "4345d2c6368d720ffbf2419756117d28e63e6736c3ac8798d36cca1ea69df9dd",
+      "source_index": 51,
+      "source_group": "7_tr12",
+      "image": "7_tr12_f000064.jpg",
+      "frame_index": 64,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        175,
+        64,
+        257,
+        183
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr13.mp4",
+      "source_sha256": "7afbb5e349cd01226055d50bee4353ca8edf1cc386728bd886d441b2daf2d757",
+      "source_index": 52,
+      "source_group": "7_tr13",
+      "image": "7_tr13_f000025.jpg",
+      "frame_index": 25,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        239,
+        82,
+        329,
+        187
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr13.mp4",
+      "source_sha256": "7afbb5e349cd01226055d50bee4353ca8edf1cc386728bd886d441b2daf2d757",
+      "source_index": 52,
+      "source_group": "7_tr13",
+      "image": "7_tr13_f000065.jpg",
+      "frame_index": 65,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        249,
+        62,
+        304,
+        177
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr14.mp4",
+      "source_sha256": "3f7d8f45a980c50228a04536c07d9a9c059286d796c95456c26010f00cb9ff3d",
+      "source_index": 53,
+      "source_group": "7_tr14",
+      "image": "7_tr14_f000023.jpg",
+      "frame_index": 23,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        212,
+        70,
+        291,
+        183
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr14.mp4",
+      "source_sha256": "3f7d8f45a980c50228a04536c07d9a9c059286d796c95456c26010f00cb9ff3d",
+      "source_index": 53,
+      "source_group": "7_tr14",
+      "image": "7_tr14_f000061.jpg",
+      "frame_index": 61,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        189,
+        70,
+        256,
+        187
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr15.mp4",
+      "source_sha256": "c686dd4787b819a6ee259efd1722112e6509b4e1270cb7563e8587e15f62fdb3",
+      "source_index": 54,
+      "source_group": "7_tr15",
+      "image": "7_tr15_f000012.jpg",
+      "frame_index": 12,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        275,
+        81,
+        364,
+        187
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr15.mp4",
+      "source_sha256": "c686dd4787b819a6ee259efd1722112e6509b4e1270cb7563e8587e15f62fdb3",
+      "source_index": 54,
+      "source_group": "7_tr15",
+      "image": "7_tr15_f000033.jpg",
+      "frame_index": 33,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        263,
+        78,
+        329,
+        167
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+      "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+      "source_index": 55,
+      "source_group": "7_tr16",
+      "image": "7_tr16_f000012.jpg",
+      "frame_index": 12,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        220,
+        65,
+        277,
+        143
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+      "source_sha256": "e44d99b72d6cd89d7999ba7cc4ccb44286b6c03238cb70ab3d91bac387d6332d",
+      "source_index": 55,
+      "source_group": "7_tr16",
+      "image": "7_tr16_f000033.jpg",
+      "frame_index": 33,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        221,
+        67,
+        278,
+        137
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr17.mp4",
+      "source_sha256": "888f4c70c79ab271da5f797b49c08e74e768edd289f791217130745aa59f55b4",
+      "source_index": 56,
+      "source_group": "7_tr17",
+      "image": "7_tr17_f000075.jpg",
+      "frame_index": 75,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr17.mp4",
+      "source_sha256": "888f4c70c79ab271da5f797b49c08e74e768edd289f791217130745aa59f55b4",
+      "source_index": 56,
+      "source_group": "7_tr17",
+      "image": "7_tr17_f000196.jpg",
+      "frame_index": 196,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        43,
+        6,
+        77,
+        35
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+      "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+      "source_index": 57,
+      "source_group": "7_tr18",
+      "image": "7_tr18_f000075.jpg",
+      "frame_index": 75,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        133,
+        56,
+        188,
+        127
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+      "source_sha256": "e5c98b118b9a137e9b00ba6c781c818212c3c0457d87a049ea0d25f37a3952d5",
+      "source_index": 57,
+      "source_group": "7_tr18",
+      "image": "7_tr18_f000195.jpg",
+      "frame_index": 195,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        34,
+        1,
+        49,
+        43
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr19.mp4",
+      "source_sha256": "5e09d09102e9c5706c238378a12008fc41a8631103cde9fccfbd8f91879dcad6",
+      "source_index": 58,
+      "source_group": "7_tr19",
+      "image": "7_tr19_f000074.jpg",
+      "frame_index": 74,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        85,
+        21,
+        123,
+        67
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr19.mp4",
+      "source_sha256": "5e09d09102e9c5706c238378a12008fc41a8631103cde9fccfbd8f91879dcad6",
+      "source_index": 58,
+      "source_group": "7_tr19",
+      "image": "7_tr19_f000194.jpg",
+      "frame_index": 194,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+      "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+      "source_index": 59,
+      "source_group": "7_tr2",
+      "image": "7_tr2_f000056.jpg",
+      "frame_index": 56,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        86,
+        18,
+        137,
+        101
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr2.mp4",
+      "source_sha256": "dc2c270536353ee21882458b744ceb34636f545ec474e4a917e0d1c1624c072a",
+      "source_index": 59,
+      "source_group": "7_tr2",
+      "image": "7_tr2_f000147.jpg",
+      "frame_index": 147,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        230,
+        65,
+        320,
+        164
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+      "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+      "source_index": 60,
+      "source_group": "7_tr20",
+      "image": "7_tr20_f000070.jpg",
+      "frame_index": 70,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        47,
+        0,
+        90,
+        40
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr20.mp4",
+      "source_sha256": "1d316885633792cb98ad0a575ef76c66de37d9b6d210bb077faab80c134d3f9f",
+      "source_index": 60,
+      "source_group": "7_tr20",
+      "image": "7_tr20_f000182.jpg",
+      "frame_index": 182,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        35,
+        8,
+        58,
+        56
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr21.mp4",
+      "source_sha256": "47d81a3921fd446d7c09592b0368d1f5c1f644bd7c73634ef77dd42c37d58257",
+      "source_index": 61,
+      "source_group": "7_tr21",
+      "image": "7_tr21_f000069.jpg",
+      "frame_index": 69,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        64,
+        9,
+        106,
+        84
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr21.mp4",
+      "source_sha256": "47d81a3921fd446d7c09592b0368d1f5c1f644bd7c73634ef77dd42c37d58257",
+      "source_index": 61,
+      "source_group": "7_tr21",
+      "image": "7_tr21_f000180.jpg",
+      "frame_index": 180,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        106,
+        14,
+        175,
+        99
+      ],
+      "training_eligible": true,
+      "review_status": "full_resolution/body_overlay_corrected",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr22.mp4",
+      "source_sha256": "314a3c0430703aadeb448674682f4ee73b6cc8b974067dff38fccf2eee78bb3f",
+      "source_index": 62,
+      "source_group": "7_tr22",
+      "image": "7_tr22_f000067.jpg",
+      "frame_index": 67,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr22.mp4",
+      "source_sha256": "314a3c0430703aadeb448674682f4ee73b6cc8b974067dff38fccf2eee78bb3f",
+      "source_index": 62,
+      "source_group": "7_tr22",
+      "image": "7_tr22_f000176.jpg",
+      "frame_index": 176,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        47,
+        0,
+        86,
+        45
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr3.mp4",
+      "source_sha256": "4399e69036efcfa9fc8b65dff0cb1ebc06485d17f9a0a230928530609a0f1778",
+      "source_index": 63,
+      "source_group": "7_tr3",
+      "image": "7_tr3_f000056.jpg",
+      "frame_index": 56,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        167,
+        36,
+        219,
+        106
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr3.mp4",
+      "source_sha256": "4399e69036efcfa9fc8b65dff0cb1ebc06485d17f9a0a230928530609a0f1778",
+      "source_index": 63,
+      "source_group": "7_tr3",
+      "image": "7_tr3_f000146.jpg",
+      "frame_index": 146,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        89,
+        30,
+        138,
+        87
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr4.mp4",
+      "source_sha256": "47deef759545ae785cf9e9c028f89b91bc665abf095c512e9a369ba51cf54696",
+      "source_index": 64,
+      "source_group": "7_tr4",
+      "image": "7_tr4_f000050.jpg",
+      "frame_index": 50,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        43,
+        24,
+        98,
+        83
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr4.mp4",
+      "source_sha256": "47deef759545ae785cf9e9c028f89b91bc665abf095c512e9a369ba51cf54696",
+      "source_index": 64,
+      "source_group": "7_tr4",
+      "image": "7_tr4_f000131.jpg",
+      "frame_index": 131,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        137,
+        53,
+        208,
+        129
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr5.mp4",
+      "source_sha256": "a0e7b25c2d584c818215e4190373f275c0159c165f57cab9636fda6245516990",
+      "source_index": 65,
+      "source_group": "7_tr5",
+      "image": "7_tr5_f000044.jpg",
+      "frame_index": 44,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr5.mp4",
+      "source_sha256": "a0e7b25c2d584c818215e4190373f275c0159c165f57cab9636fda6245516990",
+      "source_index": 65,
+      "source_group": "7_tr5",
+      "image": "7_tr5_f000114.jpg",
+      "frame_index": 114,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr6.mp4",
+      "source_sha256": "c3c42ab0447e618f126743380ef67cb2dbc8a5a8a563f4a58c911c4d2333d055",
+      "source_index": 66,
+      "source_group": "7_tr6",
+      "image": "7_tr6_f000044.jpg",
+      "frame_index": 44,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        35,
+        14,
+        66,
+        63
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr6.mp4",
+      "source_sha256": "c3c42ab0447e618f126743380ef67cb2dbc8a5a8a563f4a58c911c4d2333d055",
+      "source_index": 66,
+      "source_group": "7_tr6",
+      "image": "7_tr6_f000114.jpg",
+      "frame_index": 114,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        64,
+        21,
+        112,
+        84
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr7.mp4",
+      "source_sha256": "73047267384eb7d8a23a5c8f7597600dc645621d18f8e60a9aa4d634bf6dfd33",
+      "source_index": 67,
+      "source_group": "7_tr7",
+      "image": "7_tr7_f000043.jpg",
+      "frame_index": 43,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr7.mp4",
+      "source_sha256": "73047267384eb7d8a23a5c8f7597600dc645621d18f8e60a9aa4d634bf6dfd33",
+      "source_index": 67,
+      "source_group": "7_tr7",
+      "image": "7_tr7_f000112.jpg",
+      "frame_index": 112,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr8.mp4",
+      "source_sha256": "71ddcb9be69afb38aaf592012502582dd74b6ba6e13219b13b063d8690946f6f",
+      "source_index": 68,
+      "source_group": "7_tr8",
+      "image": "7_tr8_f000038.jpg",
+      "frame_index": 38,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        62,
+        22,
+        110,
+        84
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr8.mp4",
+      "source_sha256": "71ddcb9be69afb38aaf592012502582dd74b6ba6e13219b13b063d8690946f6f",
+      "source_index": 68,
+      "source_group": "7_tr8",
+      "image": "7_tr8_f000098.jpg",
+      "frame_index": 98,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": [
+        46,
+        16,
+        83,
+        70
+      ],
+      "training_eligible": true,
+      "review_status": "visible_vehicle_body_cab_mast_box; cargo_extents_not_automatically_labelled",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr9.mp4",
+      "source_sha256": "f10c52fe41ede3ee5cc717ec5bab9acb227bfa895e881937fdef7ab6c2d8e657",
+      "source_index": 69,
+      "source_group": "7_tr9",
+      "image": "7_tr9_f000037.jpg",
+      "frame_index": 37,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    },
+    {
+      "source": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr9.mp4",
+      "source_sha256": "f10c52fe41ede3ee5cc717ec5bab9acb227bfa895e881937fdef7ab6c2d8e657",
+      "source_index": 69,
+      "source_group": "7_tr9",
+      "image": "7_tr9_f000097.jpg",
+      "frame_index": 97,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "box_xyxy_400": null,
+      "training_eligible": false,
+      "review_status": "held_vehicle_body_not_clear_from_review; not_negative",
+      "task": "forklift-only; humans are outside model taxonomy"
+    }
+  ]
+}

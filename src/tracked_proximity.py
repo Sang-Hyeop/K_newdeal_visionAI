@@ -9,8 +9,8 @@ class TrackedProximity:
         if config.get('detection_scope')!='full_frame' or 'forklift_ground_roi_normalized' in config:
             raise ValueError('Proximity requires full_frame configuration without a zone ROI')
         self.config=config
-        self.people=PersonTracker(processed_fps,config['max_gap_seconds'],namespace='P')
-        self.forklifts=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F')
+        self.people=PersonTracker(processed_fps,config['max_gap_seconds'],namespace='P',fuse_score=config.get('tracker_fuse_score',True))
+        self.forklifts=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F',fuse_score=config.get('forklift_tracker_fuse_score',config.get('tracker_fuse_score',True)))
         self.rule=Proximity(config['warning_ratio'],config['critical_ratio'],config['hysteresis_ratio'],config['max_gap_seconds'])
         self.previous={}
 

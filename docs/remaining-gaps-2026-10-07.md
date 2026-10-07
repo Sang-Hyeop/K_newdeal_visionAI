@@ -17,15 +17,17 @@
 | 후드 메인 미활성 | `run_demo_scenarios.py --hood-auxiliary` |
 | 3번 “미구현” 문서 | 시연계획 갱신 · `forklift_forklift_proximity` |
 | 합쳐진 지게차 박스 거리 | UNKNOWN (`merged_or_duplicate_vehicle_boxes`) |
-| PPE–지게차 과겹침 | UNKNOWN (`possible_operator_or_equipment_person_box`) |
+| PPE–지게차 과겹침 | SAFE는 UNKNOWN, WARNING은 검토 후보 유지 + 겹침 불확실성 표시 |
 | 팀 실행 안내 | `docs/demo-scenario-runbook-2026-10-07.md` |
 | pt 해시 목록 | `docs/checkpoints/2026-10-07/model-share-manifest.json` |
 | pt 묶음 스크립트 | `scripts/pack_demo_models.py` |
+| 4번 즉시WARNING/즉시CRITICAL | `lane_policy=timed` + critical 5s (시연계획과 동일) |
+| zone 이벤트 ROI 좌표 | `roi_polygon_normalized`·알파 필드 (보드가 직접 fill) |
 
 품질 가드 샘플 효과(캐시 재계산, 정확도 주장 아님):
 
 - video3 검출 지게차 쌍 79개 중 **30개**가 합침/중복으로 판정 불가(unreliable)
-- video7 PPE에서 지게차 과겹침으로 **WARNING 93건** → UNKNOWN 후보
+- 이전 가드는 video7 PPE WARNING 93건을 UNKNOWN으로 변경했다. 실제 보행 작업자도 포함됨을 표본 육안 확인해 WARNING 검토 후보를 보존하도록 수정했다. 겹침은 classification_status=unconfirmed 및 vehicle_overlap_review_required로 전달한다.
 
 ---
 
@@ -47,7 +49,8 @@
 | PPE 미착용 미탐/오탐 | 머리 연결·임계는 유지. 새 검수 프레임 없으면 재학습 반복하지 않음 | experimental PPE 유지 |
 | 후드+WARNING 공존 | 정책: WARNING 보존(후드 FP가 실제 위험 지우지 않게). 후드 트랙만 UNKNOWN 강제하려면 별도 승인 | 정책 선택지 |
 | 3번 박스 합침 근본 | 검출/NMS·추적 품질. 후처리는 이미 UNKNOWN 가드 | 학습/추적 후속 |
-| 4번 실영상 유차량 CRITICAL | 해당 구간 샘플로 재실행·육안 확인 | 검증 작업 |
+| 4번 실영상 유차량 CRITICAL | short 클립 forklift 0건. 유차량 구간 있는 소스/구간으로 재실행 | 검증 작업 |
+| 관제보드 ROI 미표시 | 보드가 `roi_polygon_normalized` / camera_config 다각형을 직접 fill | 대시보드 담당 |
 
 ### C. 의도적 보류
 
@@ -62,10 +65,12 @@
 
 ## 3. 바로 다음 실행 순서 (추천)
 
-1. `conda activate safety && python scripts/pack_demo_models.py`
-2. 생성된 `outputs/checkpoints/demo_models_share_*.zip` 팀 공유
-3. `docs/pr-draft-2026-10-07.md`에서 PR 생성
-4. (선택) 설비 오탐·4번 유차량 구간만 육안 검수 리스트 작성
+1. ~~모델 zip·브랜치 팀 공유~~ (완료)
+2. ~~4번 timed 무차량 WARNING 재실행~~ (`outputs/diagnostics/scenario_plan_v2_video4_timed/`, 해시 `outputs/checkpoints/scenario_plan_v2_video4_timed/sha256.json`)
+3. 관제보드: `evidence.roi_polygon_normalized` fill 연동 (대시보드 담당)
+4. 4번 **유차량** 구간 확보 후 CRITICAL 육안 확인
+5. `docs/pr-draft-2026-10-07.md`로 PR 생성·리뷰
+6. (선택) 설비 오탐 hard-negative 소량 검수
 
 자동 검사:
 

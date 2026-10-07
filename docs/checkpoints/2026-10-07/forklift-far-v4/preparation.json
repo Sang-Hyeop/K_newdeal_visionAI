@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "train": 495,
+    "val": 88,
+    "test": 50
+  },
+  "new_full_frames": 18,
+  "new_context_crops": 54,
+  "evaluation_unchanged": true,
+  "limits": [
+    "Same factory camera development specialization",
+    "Focused replay subset; previous bundle must be preserved for other scenes",
+    "No synthetic boxes or held reference frames used for training"
+  ],
+  "status": "training_started_zero_misses_not_achieved",
+  "epochs": 3,
+  "lr0": 0.0001,
+  "freeze": 12,
+  "initial_weights": "models/safe_carrying_envelope_v2/best.pt",
+  "initial_weights_sha256": "9d0055e0bd137b7f88d30f013cd4786f0164840974b5fd53b883b879d26aca8b",
+  "evaluation_bytewise_unchanged": true,
+  "source_hashes_verified": true
+}

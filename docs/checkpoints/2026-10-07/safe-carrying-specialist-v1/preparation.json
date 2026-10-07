@@ -1,0 +1,89 @@
+{
+  "counts": {
+    "train": 701,
+    "val": 86,
+    "test": 48
+  },
+  "new_reviewed_full_frames": 89,
+  "source_groups_by_split": {
+    "train": [
+      "3_tr10",
+      "3_tr11",
+      "3_tr12",
+      "3_tr14",
+      "3_tr15",
+      "3_tr16",
+      "3_tr18",
+      "3_tr2",
+      "3_tr20",
+      "3_tr21",
+      "3_tr22",
+      "3_tr23",
+      "3_tr25",
+      "3_tr26",
+      "3_tr29",
+      "3_tr3",
+      "3_tr30",
+      "3_tr31",
+      "3_tr34",
+      "3_tr35",
+      "3_tr36",
+      "3_tr38",
+      "3_tr39",
+      "3_tr4",
+      "3_tr40",
+      "3_tr42",
+      "3_tr43",
+      "3_tr45",
+      "3_tr46",
+      "3_tr47",
+      "3_tr6",
+      "7_tr10",
+      "7_tr11",
+      "7_tr12",
+      "7_tr13",
+      "7_tr14",
+      "7_tr15",
+      "7_tr17",
+      "7_tr19",
+      "7_tr2",
+      "7_tr20",
+      "7_tr21",
+      "7_tr22",
+      "7_tr3",
+      "7_tr4",
+      "7_tr6",
+      "7_tr8"
+    ],
+    "val": [
+      "3_tr17",
+      "3_tr7"
+    ],
+    "test": [
+      "3_tr1",
+      "7_tr16",
+      "7_tr18"
+    ]
+  },
+  "taxonomy": [
+    "forklift"
+  ],
+  "limits": [
+    "New review is body-focused; does not assert hidden full vehicle extents",
+    "Same factory camera, clips may overlap recording events",
+    "Original held groups retained; no new-site generalization claim",
+    "Do not replace person or PPE detectors with single-class specialist"
+  ],
+  "status": "training_started_not_promoted",
+  "epochs": 8,
+  "freeze": 0,
+  "initial_weights": "models/pilot_v16_related/person_forklift.pt",
+  "initial_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "candidate_frames": 140,
+  "reviewed_body_positive_frames": 89,
+  "held_ambiguous_frames": 51,
+  "new_taxonomy": [
+    "forklift"
+  ],
+  "person_ppe_detectors": "unchanged"
+}

@@ -3,8 +3,8 @@ import math,itertools
 
 def _area(box):return max(0,box[2]-box[0])*max(0,box[3]-box[1])
 def _intersection(a,b):return max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]))
-def unreliable_vehicle_pair(p,q,iou_threshold=.5,containment_threshold=.8):
- """Merged/duplicate boxes make image-plane gaps untrustworthy."""
+def unreliable_vehicle_pair(p,q,iou_threshold=.5,containment_threshold=.65):
+ """Heavy overlap may be duplicate extents or colliding vehicles; keep the pair unconfirmed."""
  inter=_intersection(p,q);union=_area(p)+_area(q)-inter
  if union<=0:return True
  if inter/union>=iou_threshold:return True

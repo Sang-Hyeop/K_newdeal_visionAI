@@ -1,0 +1,23 @@
+{
+  "scope": "manual ground truth quality correction; original files retained; no training use",
+  "images": {
+    "safe_3_tr9_f000162.jpg": {
+      "image_sha256": "3243edf30ec24b878baa6201e64f597a3ef708967eaaa75399b65bfa6c1dc8b8",
+      "original_label_sha256": "da8f0a84b0375e85d75721d11161732d2917b9d6110aa239ec8a68894d4cec56",
+      "original_reference_xyxy": [
+        196.8,
+        14.400072,
+        513.6,
+        408.000024
+      ],
+      "reviewed_reference_xyxy": [
+        173,
+        37,
+        386,
+        316
+      ],
+      "reason": "original coarse box includes substantial empty ground and right-side background; raw native image reviewed for visible chassis/load outline",
+      "model_improvement_claim": false
+    }
+  }
+}

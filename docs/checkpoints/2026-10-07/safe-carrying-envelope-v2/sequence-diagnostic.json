@@ -1,0 +1,426 @@
+{
+  "old": {
+    "manual_anchor_count": 22,
+    "manual_anchor_matches": 10,
+    "manual_anchor_misses": [
+      0,
+      25,
+      50,
+      75,
+      350,
+      375,
+      400,
+      425,
+      450,
+      475,
+      500,
+      525
+    ],
+    "interpolated_diagnostic_frames": 526,
+    "interpolated_diagnostic_matches": 218,
+    "interpolated_longest_unmatched_frames": 189,
+    "interpolated_unmatched_spans": [
+      {
+        "start_frame": 0,
+        "end_frame": 97,
+        "frames": 98
+      },
+      {
+        "start_frame": 99,
+        "end_frame": 99,
+        "frames": 1
+      },
+      {
+        "start_frame": 257,
+        "end_frame": 258,
+        "frames": 2
+      },
+      {
+        "start_frame": 270,
+        "end_frame": 272,
+        "frames": 3
+      },
+      {
+        "start_frame": 278,
+        "end_frame": 278,
+        "frames": 1
+      },
+      {
+        "start_frame": 280,
+        "end_frame": 280,
+        "frames": 1
+      },
+      {
+        "start_frame": 287,
+        "end_frame": 287,
+        "frames": 1
+      },
+      {
+        "start_frame": 295,
+        "end_frame": 295,
+        "frames": 1
+      },
+      {
+        "start_frame": 312,
+        "end_frame": 313,
+        "frames": 2
+      },
+      {
+        "start_frame": 322,
+        "end_frame": 322,
+        "frames": 1
+      },
+      {
+        "start_frame": 328,
+        "end_frame": 335,
+        "frames": 8
+      },
+      {
+        "start_frame": 337,
+        "end_frame": 525,
+        "frames": 189
+      }
+    ],
+    "limits": "Whole-vehicle/cargo envelope match; body-only detections may fail IoU. Intermediate boxes are interpolation diagnostics, not manual ground truth.",
+    "anchors": [
+      {
+        "frame_index": 0,
+        "timestamp_seconds": 0.0,
+        "matched": false,
+        "confidence": 0.18851080536842346
+      },
+      {
+        "frame_index": 25,
+        "timestamp_seconds": 1.0,
+        "matched": false,
+        "confidence": 0.12838035821914673
+      },
+      {
+        "frame_index": 50,
+        "timestamp_seconds": 2.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 75,
+        "timestamp_seconds": 3.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 100,
+        "timestamp_seconds": 4.0,
+        "matched": true,
+        "confidence": 0.701693594455719
+      },
+      {
+        "frame_index": 125,
+        "timestamp_seconds": 5.0,
+        "matched": true,
+        "confidence": 0.8714748620986938
+      },
+      {
+        "frame_index": 150,
+        "timestamp_seconds": 6.0,
+        "matched": true,
+        "confidence": 0.7204455733299255
+      },
+      {
+        "frame_index": 175,
+        "timestamp_seconds": 7.0,
+        "matched": true,
+        "confidence": 0.9474765658378601
+      },
+      {
+        "frame_index": 200,
+        "timestamp_seconds": 8.0,
+        "matched": true,
+        "confidence": 0.8303385972976685
+      },
+      {
+        "frame_index": 225,
+        "timestamp_seconds": 9.0,
+        "matched": true,
+        "confidence": 0.8339992761611938
+      },
+      {
+        "frame_index": 250,
+        "timestamp_seconds": 10.0,
+        "matched": true,
+        "confidence": 0.7926894426345825
+      },
+      {
+        "frame_index": 275,
+        "timestamp_seconds": 11.0,
+        "matched": true,
+        "confidence": 0.8630043864250183
+      },
+      {
+        "frame_index": 300,
+        "timestamp_seconds": 12.0,
+        "matched": true,
+        "confidence": 0.9164756536483765
+      },
+      {
+        "frame_index": 325,
+        "timestamp_seconds": 13.0,
+        "matched": true,
+        "confidence": 0.34705841541290283
+      },
+      {
+        "frame_index": 350,
+        "timestamp_seconds": 14.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 375,
+        "timestamp_seconds": 15.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 400,
+        "timestamp_seconds": 16.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 425,
+        "timestamp_seconds": 17.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 450,
+        "timestamp_seconds": 18.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 475,
+        "timestamp_seconds": 19.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 500,
+        "timestamp_seconds": 20.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 525,
+        "timestamp_seconds": 21.0,
+        "matched": false,
+        "confidence": 0
+      }
+    ]
+  },
+  "new": {
+    "manual_anchor_count": 22,
+    "manual_anchor_matches": 17,
+    "manual_anchor_misses": [
+      425,
+      450,
+      475,
+      500,
+      525
+    ],
+    "interpolated_diagnostic_frames": 526,
+    "interpolated_diagnostic_matches": 378,
+    "interpolated_longest_unmatched_frames": 120,
+    "interpolated_unmatched_spans": [
+      {
+        "start_frame": 53,
+        "end_frame": 53,
+        "frames": 1
+      },
+      {
+        "start_frame": 257,
+        "end_frame": 258,
+        "frames": 2
+      },
+      {
+        "start_frame": 270,
+        "end_frame": 272,
+        "frames": 3
+      },
+      {
+        "start_frame": 278,
+        "end_frame": 278,
+        "frames": 1
+      },
+      {
+        "start_frame": 280,
+        "end_frame": 280,
+        "frames": 1
+      },
+      {
+        "start_frame": 287,
+        "end_frame": 287,
+        "frames": 1
+      },
+      {
+        "start_frame": 322,
+        "end_frame": 322,
+        "frames": 1
+      },
+      {
+        "start_frame": 328,
+        "end_frame": 329,
+        "frames": 2
+      },
+      {
+        "start_frame": 333,
+        "end_frame": 335,
+        "frames": 3
+      },
+      {
+        "start_frame": 337,
+        "end_frame": 349,
+        "frames": 13
+      },
+      {
+        "start_frame": 406,
+        "end_frame": 525,
+        "frames": 120
+      }
+    ],
+    "limits": "Whole-vehicle/cargo envelope match; body-only detections may fail IoU. Intermediate boxes are interpolation diagnostics, not manual ground truth.",
+    "anchors": [
+      {
+        "frame_index": 0,
+        "timestamp_seconds": 0.0,
+        "matched": true,
+        "confidence": 0.6219680309295654
+      },
+      {
+        "frame_index": 25,
+        "timestamp_seconds": 1.0,
+        "matched": true,
+        "confidence": 0.6215535998344421
+      },
+      {
+        "frame_index": 50,
+        "timestamp_seconds": 2.0,
+        "matched": true,
+        "confidence": 0.7168558835983276
+      },
+      {
+        "frame_index": 75,
+        "timestamp_seconds": 3.0,
+        "matched": true,
+        "confidence": 0.5893149375915527
+      },
+      {
+        "frame_index": 100,
+        "timestamp_seconds": 4.0,
+        "matched": true,
+        "confidence": 0.701693594455719
+      },
+      {
+        "frame_index": 125,
+        "timestamp_seconds": 5.0,
+        "matched": true,
+        "confidence": 0.8714748620986938
+      },
+      {
+        "frame_index": 150,
+        "timestamp_seconds": 6.0,
+        "matched": true,
+        "confidence": 0.7204455733299255
+      },
+      {
+        "frame_index": 175,
+        "timestamp_seconds": 7.0,
+        "matched": true,
+        "confidence": 0.9474765658378601
+      },
+      {
+        "frame_index": 200,
+        "timestamp_seconds": 8.0,
+        "matched": true,
+        "confidence": 0.8303385972976685
+      },
+      {
+        "frame_index": 225,
+        "timestamp_seconds": 9.0,
+        "matched": true,
+        "confidence": 0.8339992761611938
+      },
+      {
+        "frame_index": 250,
+        "timestamp_seconds": 10.0,
+        "matched": true,
+        "confidence": 0.7926894426345825
+      },
+      {
+        "frame_index": 275,
+        "timestamp_seconds": 11.0,
+        "matched": true,
+        "confidence": 0.8630043864250183
+      },
+      {
+        "frame_index": 300,
+        "timestamp_seconds": 12.0,
+        "matched": true,
+        "confidence": 0.9164756536483765
+      },
+      {
+        "frame_index": 325,
+        "timestamp_seconds": 13.0,
+        "matched": true,
+        "confidence": 0.34705841541290283
+      },
+      {
+        "frame_index": 350,
+        "timestamp_seconds": 14.0,
+        "matched": true,
+        "confidence": 0.4708828330039978
+      },
+      {
+        "frame_index": 375,
+        "timestamp_seconds": 15.0,
+        "matched": true,
+        "confidence": 0.615674614906311
+      },
+      {
+        "frame_index": 400,
+        "timestamp_seconds": 16.0,
+        "matched": true,
+        "confidence": 0.5332790017127991
+      },
+      {
+        "frame_index": 425,
+        "timestamp_seconds": 17.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 450,
+        "timestamp_seconds": 18.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 475,
+        "timestamp_seconds": 19.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 500,
+        "timestamp_seconds": 20.0,
+        "matched": false,
+        "confidence": 0
+      },
+      {
+        "frame_index": 525,
+        "timestamp_seconds": 21.0,
+        "matched": false,
+        "confidence": 0
+      }
+    ]
+  }
+}

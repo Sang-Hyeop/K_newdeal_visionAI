@@ -1,0 +1,103 @@
+{
+  "status": "experimental_not_promoted",
+  "initial_sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371",
+  "counts": {
+    "train": 256,
+    "val": 148,
+    "test_context": 48,
+    "test_full": 91
+  },
+  "manifest_sha256": "0c5e84245ebfdee2e01ce3fef1f517e6eb89f32f0cd1ccf1bd1de14572692253",
+  "no_demo_training": true,
+  "weights_sha256": "eb87d887a6e249e010e397408ec7bf44aa44e7c39dc71533a6ab683216d1d51a",
+  "baseline_original_clean_test": {
+    "overall": {
+      "metrics/precision(B)": 0.61352478355458,
+      "metrics/recall(B)": 0.6241444128885716,
+      "metrics/mAP50(B)": 0.6356574676887776,
+      "metrics/mAP50-95(B)": 0.4286066788549515,
+      "fitness": 0.4286066788549515
+    },
+    "per_class": {
+      "hooded_person": {
+        "precision": 0.5571619165467314,
+        "recall": 0.5306122448979592,
+        "mAP50": 0.5799389496636108
+      },
+      "normal_person": {
+        "precision": 0.6698876505624285,
+        "recall": 0.7176765808791841,
+        "mAP50": 0.6913759857139445
+      }
+    }
+  },
+  "baseline_context_test": {
+    "overall": {
+      "metrics/precision(B)": 0.6664215909692783,
+      "metrics/recall(B)": 0.4383838383838384,
+      "metrics/mAP50(B)": 0.5230514697617734,
+      "metrics/mAP50-95(B)": 0.3289450364078298,
+      "fitness": 0.3289450364078298
+    },
+    "per_class": {
+      "hooded_person": {
+        "precision": 0.7263711020139151,
+        "recall": 0.45454545454545453,
+        "mAP50": 0.5997918488591051
+      },
+      "normal_person": {
+        "precision": 0.6064720799246416,
+        "recall": 0.4222222222222222,
+        "mAP50": 0.44631109066444186
+      }
+    }
+  },
+  "candidate_context_test": {
+    "overall": {
+      "metrics/precision(B)": 0.6517567929295749,
+      "metrics/recall(B)": 0.4808080808080808,
+      "metrics/mAP50(B)": 0.5620205403533158,
+      "metrics/mAP50-95(B)": 0.3101103585958031,
+      "fitness": 0.3101103585958031
+    },
+    "per_class": {
+      "hooded_person": {
+        "precision": 0.638044220999645,
+        "recall": 0.6060606060606061,
+        "mAP50": 0.607585431370444
+      },
+      "normal_person": {
+        "precision": 0.6654693648595047,
+        "recall": 0.35555555555555557,
+        "mAP50": 0.5164556493361877
+      }
+    }
+  },
+  "candidate_original_test": {
+    "overall": {
+      "metrics/precision(B)": 0.5888244512076093,
+      "metrics/recall(B)": 0.606769537083126,
+      "metrics/mAP50(B)": 0.5862676151537438,
+      "metrics/mAP50-95(B)": 0.39162131529940236,
+      "fitness": 0.39162131529940236
+    },
+    "per_class": {
+      "hooded_person": {
+        "precision": 0.5734987336271947,
+        "recall": 0.5306122448979592,
+        "mAP50": 0.5638807200272559
+      },
+      "normal_person": {
+        "precision": 0.604150168788024,
+        "recall": 0.6829268292682927,
+        "mAP50": 0.6086545102802318
+      }
+    }
+  },
+  "epochs": 4,
+  "limitations": [
+    "development crop test; nearby original frames can overlap splits",
+    "demo-video source6 inference test still required",
+    "normal_person never means PPE safe"
+  ]
+}

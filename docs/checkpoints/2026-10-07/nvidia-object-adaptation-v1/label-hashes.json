@@ -1,0 +1,1310 @@
+[
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_UA-10_004_0250.txt",
+    "sha256": "42e35e3273ee3eb30dc8f8a47831f30589b1d2374e3c636f3d2cebdc959f493a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211125_B04_K_UC-16_007_0385.txt",
+    "sha256": "dfb5ac78f65c72d3e3d83ef6feba9e3848d12fff61b7452edb7d05f144dba592"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_018_0014.txt",
+    "sha256": "08e923363f5ff441e6023806aff23f774cede5230acb4e0d63d7d91ae4fd69b4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000094.txt",
+    "sha256": "036a838625cf91975d4e086cffd0a5cacb928af541dbca9d8cc3cdebbd91c969"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210730_B01_H_WS-24_001_0019.txt",
+    "sha256": "f24084451bac28235edd15f052e3ba3516187e828d9da072adcb77b1149fd637"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_UA-12_004_0049.txt",
+    "sha256": "ca5e8ff44edb521fd9a069c4afd7e89b89f409c88a0429f2335c67eb40ca36ec"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_WS-22_003_0050.txt",
+    "sha256": "e963740b96a870aba5cbad15bdd0bde1dafbea029528bd85ab1ea054a35cbf9d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_002_0033.txt",
+    "sha256": "9d9978c7210a57336d4ba2e32c44d6e30ae6423d15e9d1cced58306891a9a87c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000047.txt",
+    "sha256": "af3e1d6a934fa2bb7762480a2c5159baa030ba2efa218a54e570c6393a6b1558"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_001_0363.txt",
+    "sha256": "c96a11cb4f5dc115a5b90a814be1e04c2ab2f327333c069b1724bca1b84bc379"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00284_f000094_vehicle_context0.txt",
+    "sha256": "2ab0687c6c3c194bc61b7b6c344d96d7923f072b613cbd1568faa59526f758d8"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_UA-10_001_0073.txt",
+    "sha256": "9c2a6d32fa8898c690a7f597fd6188652669e7834161b029b8b05d548c914010"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000047_vehicle_context0.txt",
+    "sha256": "31a0ba5e1dfaa204eefbb46fc85b14ee47a72745febd0e2e6e178dc53cde5bb2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00284_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210730_B01_H_WS-24_002_0061.txt",
+    "sha256": "6f739a5d2e752f950a5bb50e247abe0baeeecb10089959385f077008bd7f9e2a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_011_0053.txt",
+    "sha256": "c1ee1c7f4a7c547b007ff96c4d5482d83792778634a12cd5716f7a75865a0984"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000047.txt",
+    "sha256": "7139776c30ab48dd92a246b066be6a5a1c3009c74543a7045898e2c5eed4de99"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211021_G09_H_UA-12_001_0248.txt",
+    "sha256": "7535b4c79d2fa30681e606def8eb115641b8ea119427931fc3d9e8d99e3eadca"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00284_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-22_010_0106.txt",
+    "sha256": "7ed46e90aa80e77d0161b28583aba936961e128eb999caddcebb7e97bccb45a0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_UC-22_005_0020.txt",
+    "sha256": "d2bc9e5b1b30420254181563152facc67b51da11d801d1b5d1a2760fbbcd0d28"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-08_007_0748.txt",
+    "sha256": "d6fe3d9399db0923a6ca11cfadeada7f4c63892106256cf5b326aefd7515bed6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_UC-22_001_0238.txt",
+    "sha256": "0c4222eb2acaff60601bb33a25bdbdb902c51d5f10f1ac2effd5422d3c7983f3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_019_0199.txt",
+    "sha256": "4f7f556e02ca76952a0c131a32a12f5b156e8e12e504eac3d9403e1adbd4a90a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_015_0060.txt",
+    "sha256": "ec345d6f5c476d73847d604180ae085a299cb77fe803158aa8a801dd75e24877"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000094.txt",
+    "sha256": "d4786890099d4f13ac22cce3f7b3568636805752521fd0ed863c44ba5575bd24"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211110_F02_H_UA-10_004_0430.txt",
+    "sha256": "a1a486e67f37196c445ff5a6054caa528b7e5476308bb0d822008dbede1d769e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00284_f000047_vehicle_context0.txt",
+    "sha256": "484ebcaf7c90909a31fc67d2341175d2d28bb5e0e80afa1769aa912a0a0ddb73"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210730_B01_H_WS-24_002_0105.txt",
+    "sha256": "25e823fa3a5d3b3cf76f7ed5bb5afe1c0ae43f1d982ada6aaf48301d8a0f4645"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210916_G03_H_WS-23_002_0034.txt",
+    "sha256": "e490a32867597d312dd84a5b402956c592c8070d0b25ffdc1f0b5e81f1b9e9d5"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-08_008_0344.txt",
+    "sha256": "bccfcfc12db5277e40783130ea2b41237f1702cfbbba0c5963a12d3ece3961cc"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_007_0060.txt",
+    "sha256": "fa33f245d67636be7d5a34e86b9fe54feb2a6080400c321a56c7a6b6591c6a8e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211209_B06_H_UA-10_003_0032.txt",
+    "sha256": "7f8787d3424f10ea4dce8806a050ce9c430c8446b413f9c3ccca403de0f18d58"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000094.txt",
+    "sha256": "503014db60c96daab890a25209fc5d18a1f7fe8d2837258238b21a4bf71b364a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211125_B04_K_UC-16_007_0223.txt",
+    "sha256": "2d44f755c2c8745be5e1e9ee961c9b187b79f4186e222ad75c11207774402f42"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000094_vehicle_context1.txt",
+    "sha256": "30bd0524ea4aa5add43fbca0e1612678e79f0b37640daaf92a4c67402b806d07"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210916_G03_H_WS-19_002_0097.txt",
+    "sha256": "1af8d4d196fcfe3645375ab9fe97f32f66093c9668cecc7b22d8aafc6669210e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_UA-12_001_0047.txt",
+    "sha256": "bb653c7de80b142181bcc1e029e9bda7b4db0b778d21bdfcf91eb53cd20efd33"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000094_vehicle_context0.txt",
+    "sha256": "9262f05d16bad558d55e639fa05e6da3032decd0371da46a393124320402d243"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-22_003_0124.txt",
+    "sha256": "39fb3b2b0e5a19a51ed78a3e3d9833050f3beedbde77db086146579af4cb47a6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211021_G09_H_UA-14_001_0301.txt",
+    "sha256": "e42ff703a3b912500f2685d8ae4b9b7616e479c14b0826973bf9ae050f5ac912"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211127_G16_H_UA-14_007_0200.txt",
+    "sha256": "cfdfaf4148034a04396e1c8b0f02559e607875cd81ab43aec52aece202797060"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211021_G09_H_UA-14_001_0063.txt",
+    "sha256": "c744e09a84b35a288f24e6ace9e1ae3eb9ec85b8fbb13ff7047a2b4ed6e36a2c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000047.txt",
+    "sha256": "5ce2c1b26e4ba2a47265219192778412c5a1a8e19caf5d0ce2a9392074dc087f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211110_F02_H_UA-10_002_0053.txt",
+    "sha256": "d95cf7badd996898eb7281a09ccfbfe913bd05c5747e7fe8f32a971d63fdffaa"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000094_vehicle_context0.txt",
+    "sha256": "5f63fc0deaf24be03cd2074fcd758fc1b7d5e852315e9a745c7442e14999f572"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/related_C41.txt",
+    "sha256": "bf29c9bab6838a42ad36ed2d5748222774a6c339fef4bbc6deac49be37372827"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_001_0285.txt",
+    "sha256": "215f9897c98316da520c7ee1f1d62c5bc75e143f27484ba5a0b9317087b34e58"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00267_f000094.txt",
+    "sha256": "b1a5c31acb796e94ece799cee685b8be0154749411512d09873cb69a247dbad5"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-22_003_0206.txt",
+    "sha256": "661c70682e79f08de3e5cd3f89c6eb42f4cdbc8e2e11dbe8b9418f6cb6db52b4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-22_007_0028.txt",
+    "sha256": "74da6b6ab4f7b93460c6094276f5571962092aae894d12d3a93d9801ff6c08de"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211127_G16_H_UA-14_008_0086.txt",
+    "sha256": "56cc0d943552a84e38b8cd338c76154e35d4e0191adb3bf0570901c504566fef"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_001_0482.txt",
+    "sha256": "e8bd85afcceed4ef261ca1685ebe80192a866694e92fa5223cc1674123fa0628"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000094_vehicle_context1.txt",
+    "sha256": "50ddf9cadd4ca679588d7f08c254893c9733a7a109f28b9ebfd7d4475e485187"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_003_0124.txt",
+    "sha256": "5be910606e64ff478c63cc5280d40f6131f87776b4ed448d7fbd0d4bc66c1a96"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210806_B02_H_WS-24_001_0041.txt",
+    "sha256": "2570846178a0cb578552f02dd9330d63d636c0f11274e9def7712a6b37500131"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210806_B02_H_WS-24_001_0069.txt",
+    "sha256": "d27a2557d015bff7af39c66422bb2f32d9e030f9a114cb5ba3e0f82ecc410b76"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_WS-24_004_0088.txt",
+    "sha256": "b8f9e50220595b06bc923576d69b06026470a1e99bf01130a063c020a6fb6396"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_WS-23_001_0189.txt",
+    "sha256": "3e922820be3844daed08b38ca4727d29ba89744285d6c01cb35d13e7c7d1c9e1"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_004_0208.txt",
+    "sha256": "f0164a0d588ede83be508b7c5b4f16ae120643bd20bff2fa919358330c76c65b"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00267_f000047_vehicle_context0.txt",
+    "sha256": "e62a59d529e0e17514301b1386b3cca29cb9ed143bc23e909176efbb41a910c2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-22_007_0163.txt",
+    "sha256": "00efec3ccae45dac00176068142fcd79cbb1921e4e76859064d367dc263e786f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_005_0058.txt",
+    "sha256": "dffd06cb77368fde4a35130cad417fd4679a95f78d32ef986df4ce420cfeef0d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210806_B02_H_WS-24_003_0013.txt",
+    "sha256": "80cbd23f66d5db36457fba1e1666402d92e7c200fef837f0faed959fb34f9886"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_015_0173.txt",
+    "sha256": "3cf9afe2ff3a5e3054df05700add29ce2cfef380f5b448530c77234e09d7e5b8"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/related_C53.txt",
+    "sha256": "b6309c32e519dbcbd75907deadc768a5c09c0e1d70b2e58482e5824b5a2efa9c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210916_G03_H_WS-23_004_0027.txt",
+    "sha256": "530eb11d7b45a5ae98de1f12c251074c5954f9b6a6a18ceab6d96e775d45baf6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211021_G09_H_UA-14_001_0176.txt",
+    "sha256": "f184d4d6078e8d5bd64ecb01df51a223731ed1d2400fe155f8b2d2c87da6264a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_004_0262.txt",
+    "sha256": "80bfe766ac495bc9b937bf7c1353f028637f9c02b5a83fddba0d717b241c70fc"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000047_vehicle_context1.txt",
+    "sha256": "c6b0ef63efb00d10348719f5b8d6bf4be6cb08b48bbfd59feb890f78945d5cfa"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00288_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00288_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00271_f000047_vehicle_context0.txt",
+    "sha256": "55029ff2ec26f4af12a4eaf84a2f86e8bb48af279ce0e58fc5b0509407531401"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_UA-13_003_0182.txt",
+    "sha256": "71cc45badc87f150c8b51615a10d9d0f2e80c60a63f4196adfdd6e6b8be958e1"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00267_f000094_vehicle_context0.txt",
+    "sha256": "bdcc023c706342be5e0c8673e621b3f2a73e0347144cfbbd4b049f89cbf99bf9"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210806_B02_H_UA-11_002_0107.txt",
+    "sha256": "95730769a33d5d9a032cdd0ed57d592049db77783bb69e12fd969dd52771349a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211102_F01_H_UA-12_004_0045.txt",
+    "sha256": "7c7413c36f0886f4b1b87ba90a8c94021f5f45dcb6d59076d5d2e49747faa101"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00267_f000047.txt",
+    "sha256": "5f4f8d5130c7d3faa4c5ff1ff19eddd6f483cbcce8a7fe468c18fbe09c43f818"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_WS-24_001_0435.txt",
+    "sha256": "bd7c2a09bf4c036608dad30831652118b3e1ab72c7e67c2271cf2be7d1dd48bf"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211027_G10_K_UA-16_002_0442.txt",
+    "sha256": "9c4635b4eba99a1bf820ed4efb1eef1c51a6aae197d270c5bd1598b46162fe9e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211021_G09_H_UA-14_002_0260.txt",
+    "sha256": "4681a1050cf0afc76ccecbf4a46a8b918d956a66f409155f7b5c433a9b782fd9"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000094_vehicle_context2.txt",
+    "sha256": "e12c9288576f157706cc2781be028f8d6283231d78ed38cee5cd747be28f3284"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_004_0084.txt",
+    "sha256": "a2aff14ed0d843910af4e6e9341a61ee50252ed5cae7733221cd7f9f03a8cab2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_WS-19_001_0062.txt",
+    "sha256": "39a850db331740b9df54a90c615021628704bb1e21f50cf36eaf0823ad60aef3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00263_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_UA-10_001_0322.txt",
+    "sha256": "b674e35324c375fc7156ee3c59027a789f122636dc4f6314ba86a457393246b4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_001_0036.txt",
+    "sha256": "7aa8409ddd0a776a03ff566a9fc9754ac29e94342b27354a9b80154734ffa246"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00263_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_007_0191.txt",
+    "sha256": "022702084271bfae9d19ca46a887a54383548732e5ab55a78e309a32a8d88542"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210916_G03_H_UA-10_003_0010.txt",
+    "sha256": "86ea2e4d8759b84f65fb5a6b11e4c41258ab200c0c6589c75ffc7122d2635d52"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00284_f000094.txt",
+    "sha256": "05eb0bf1d0a56e1451532c485a5710f1b1e9d3503ec9051760fa1dd005ce137d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_004_0442.txt",
+    "sha256": "3a5811e0301c5a50470edd2aed44e84e1c88682da67155d9aaa6223326167c96"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_WS-24_002_0052.txt",
+    "sha256": "df45ef7695dd067faf75bd88c929a0286944e87815753c577d0b529a7589b9d5"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211110_F02_H_WS-23_001_0541.txt",
+    "sha256": "031ecbb7ff2aab72565a02ff656b67c0d8060f3cc40f677894e996d4ceb80c77"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000047_vehicle_context0.txt",
+    "sha256": "98ad2b902bf18933ad3f9644146b7858e0b916281c05746d29cc433c9f1fe655"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000094_vehicle_context1.txt",
+    "sha256": "a3f291a7cb2d5aa5494e0989cdbeddcbebe86d61e8b98550d596c864c19ba39a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_WS-23_004_0029.txt",
+    "sha256": "c3718b6981e4df9383409a8bf453f49b2aca0e2ef96fe0970b9b543a05977bb6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_WS-24_002_0291.txt",
+    "sha256": "774dc33f53e706392b180160a7bd1d69fa1e4a8d20d2d53d32e0f50acbac7abd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211021_G09_K_UA-16_003_0780.txt",
+    "sha256": "70b0b88f5541caa68a970980d200f90e8156967eff0014529545951aa0a9a381"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00288_f000047.txt",
+    "sha256": "1568888c4f35a171caa983522ded9577057dea61b0043591579d058425d0ae88"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211207_G17_K_UC-16_001_0388.txt",
+    "sha256": "fe9ff027bf989d3b344563e6ecc1538255e070878ec74938dd8231d6b7662948"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210806_B02_H_UA-11_004_0018.txt",
+    "sha256": "407c72d3d62cd3cdc2fc06b97a063effcbe98f4a944d134b23775b04a48b5593"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-22_010_0178.txt",
+    "sha256": "f3b55d285423c1463102e91edbd410c15f610f9d00537cb92370dcd6515785c3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000094_vehicle_context0.txt",
+    "sha256": "51759ac5373d853c3235ca87c94a6d01d4cb912043c9c9216754bc6ae421663f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000047_vehicle_context1.txt",
+    "sha256": "847ccfb878515125c4c01daf918c1479732932ad9d62698eafe7a8afaf354d88"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000047.txt",
+    "sha256": "0aa4a3df9c4b3d65d5387979c8d53af1217063577d052931a42cc3e211912947"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211029_G12_H_UA-12_005_0037.txt",
+    "sha256": "275322a53dcabe7d44be6871b3f99b008a6b5b87fcf510194f70644f4ffb8719"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000094.txt",
+    "sha256": "9619e7463af852795c3a54a7434367cdeb73d94966a37bdeb85bf909df129ae4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00267_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-08_008_0111.txt",
+    "sha256": "9fac15729bd2a00cd51d4dbd468cae075e4ee4182735995f03e440d89040760d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210916_G03_H_UC-08_004_0154.txt",
+    "sha256": "5c19390a6beb3e89499de5dc21aa65badf21a5e2ecd295a52ced9e61a4d0d353"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211027_G10_K_UA-16_003_0677.txt",
+    "sha256": "36fb90b28d961dd1d6ad059988fe3abdc1120134cba8f2c3d3067d51b6c33a9c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_003_0375.txt",
+    "sha256": "3f022f8a0f528729eaa01fb6a4a5278da976e7f7391e8f64e0ce084a27eeddff"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-08_007_0130.txt",
+    "sha256": "5a184e3184829a2683fd533ac283f84764b84c18b9829e4eeb8cf28c4b739c19"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000047_background1.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_008_0203.txt",
+    "sha256": "a5d99f42101a4a5b7ac0f27e34fafdd24d6cbccfc14febd4c79eb7104bc64ddc"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00288_f000094.txt",
+    "sha256": "3dc9ea5579380f430df6a95d922028df428c81b138ecbb2e0988889c297f5982"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_WS-33_002_0138.txt",
+    "sha256": "933d7762b1cd29244302625b4fb85daf4995d6a6243c61217f7483536b22485b"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00267_f000047_background0.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211102_F01_H_UA-12_001_0441.txt",
+    "sha256": "7df9c85ef9ab4bd48bde4dab9ef28f5a4987cb411ebf058bb430ad8c2f3fc764"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_001_0185.txt",
+    "sha256": "5ad0dd304116383a80264b4c799d59a286f4fa2d6eeabfcb179a77a9890c7144"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00284_f000047.txt",
+    "sha256": "2ec1abf2f6ad6917c9f908f765db2fb8e498eccb72e111f00c591dfe913a13ba"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211110_F02_K_UA-16_004_0159.txt",
+    "sha256": "7132a46a2b44b1c406874e933c52c5357346a596f43a3704a59635f2534efc68"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211021_G09_K_UA-16_001_0886.txt",
+    "sha256": "b2384a5269bb78f327fe5451180eeaa36155c548ce2475caace061204c73e430"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_004_0059.txt",
+    "sha256": "4e725cdf1a5a77f3b5bb4723c6fe00dadbf44567e369f9953aada1ec1eb7a027"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000047_vehicle_context0.txt",
+    "sha256": "65376d55ac9966ba6419e392fcb24db6e4784da30cba5370b5daf2b5069358c8"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000094_vehicle_context1.txt",
+    "sha256": "dfe3ff949607251e99b51d65cda9a5b87ca8bd249f4dbc294ceb248052052a30"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-22_009_0011.txt",
+    "sha256": "9b2f827da30068daa60bb24cd6dcdc19bd40c8b1cca492f436c0a10580f310e2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00280_f000094_vehicle_context0.txt",
+    "sha256": "1b0e0364f3126b7b2b74bfbfee34d79c44f565e1f952dd4df0024e8ee1d71d21"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_008_0186.txt",
+    "sha256": "6618df3b7501188b229626d759df5855b52ad6cda046404558c4ccd049ca1233"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210826_G01_H_UA-12_003_0083.txt",
+    "sha256": "05dc8d7f9873bded2144f98eb0a9eea2da08dbcc118a05b06ce8c1891efd76e2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211127_G16_H_UA-14_002_0062.txt",
+    "sha256": "0e550745d2912f6b96dfe93ccb07eec331e554ad3125eafe5639014611fd6ee4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000047_vehicle_context1.txt",
+    "sha256": "0fa146fbfcb27a543df39025a345144c12ee0cce67faf958c050aedff2845fb9"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_018_0052.txt",
+    "sha256": "1bf333dbad5b8e8aa09e287605866cddfd4fb209a02f79b1f32f882f47038d05"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_UA-10_004_0091.txt",
+    "sha256": "702a6973e428725be1a709532cc34854bae2f24ab19f52227b7fefe82d72f0f1"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-16_003_0586.txt",
+    "sha256": "ac2989ddfddb1544bbfce977220da0258c3e524d78e27e85708cea5f95f040d3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_WS-23_002_0088.txt",
+    "sha256": "4a4f38936ba4a5813a56f402841dbaaef62bbded82c7abb62c7ba8cdb23d1939"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211110_F02_K_UA-16_001_0684.txt",
+    "sha256": "f66c8278fb2efcbab35cbea62cf38e9056cd9b94483f81b97347a1d0bc22ae3e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_006_0249.txt",
+    "sha256": "d4d244c5a11554d832a4334955bb4c3fc9d7c0501af446135f7df747a5aafdb2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UA-11_004_0033.txt",
+    "sha256": "f0d4238952e2ac746ab929ac3d3a78d8c90106035a288934ab0297d41104a2f9"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000047.txt",
+    "sha256": "0c421ec32a4a1298c73a5183bf88a6be476d1f2cf2c4f9451700506e0187d2ed"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_006_0077.txt",
+    "sha256": "9ee65ebdb7a9b9e9735b59552ecc1b440aba89616fb23162a493f2b41e653f28"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211223_B09_H_UC-22_003_0445.txt",
+    "sha256": "a676fc57e675a0073dbed522faf44d7228ca1ffc12fcbf9e77c952c09e1bab47"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000047_vehicle_context1.txt",
+    "sha256": "a12a8220327c60d2863a5cf521ae44cb172bb54fcff894fd23841a89c10c5a98"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-22_002_0047.txt",
+    "sha256": "4ce9da679499a68ad7aaec7a5e52d32389ec42427fcabdc5d6443509ad847a3c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00263_f000094_vehicle_context0.txt",
+    "sha256": "ba548a17ec24e4fab42c3bd5e38df0e33d386a33087a6f2a3662d70accdddd60"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_UA-12_002_0031.txt",
+    "sha256": "fa4ff6fdc5bcb64cba48057ec2f9ea0d73c7b27635444997267ff506e939f5a0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000094_vehicle_context1.txt",
+    "sha256": "4b57def6543bf88bb4b5ce0e7f73e9703f9f65c7f516520dc6960f49e0e6b579"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000094_vehicle_context0.txt",
+    "sha256": "57df65a6a2314b77bcfa04216645039b732cc9bc1bde76e44ee4961aaadf7e56"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211007_G07_H_UA-12_001_0261.txt",
+    "sha256": "edefbb557596a43b3a84243797630dc65885b36927533e81286e565cff091ce0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000047_vehicle_context0.txt",
+    "sha256": "b52ed0960aabe982742111cf086be1840fbe8ebe55feecae371cd86de7d61c34"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211126_G15_H_UA-11_002_0274.txt",
+    "sha256": "e5a3a2f54536a8bca8842f589d82b95d0755cac49e3f0f5f3804a99567bfa5fe"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00263_f000094.txt",
+    "sha256": "3c81505372131072594715e5f0142f3de0fd68c1a31f21e4ca429f49b1c566dd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000047.txt",
+    "sha256": "d4f97150cb659e74a2027ad3a37d63cb308dd878c283eba042fee9941af070c0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_WS-24_001_0260.txt",
+    "sha256": "724ee825e1216295316f357ccd028cadde99f6c046dc40eabe225422bd33de62"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_UA-11_004_0379.txt",
+    "sha256": "078d3f28808a36e111c7ce7a859e6271ff33e2d5ab2c1a98b3d7aa2bdf8e31dd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210806_B02_H_WS-24_003_0046.txt",
+    "sha256": "0980330bfdd647535dbaafe4e1875a03c5069f68a9f6e7cb10c3a6cf037f2578"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211209_B06_H_UA-10_004_0066.txt",
+    "sha256": "2a18eb6fcb4a3d080769ac0423b72657c94e43bd30f429ef0fbb35a1912af19b"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211021_G09_K_UA-16_003_0132.txt",
+    "sha256": "26f3bb8a119f80b8a7b748109b2c6e4a177038c0af233282c3053d5aeed1ba59"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_003_0212.txt",
+    "sha256": "63ebb10d562ef0568b9a485c0e7b4d384ef397b9c17add821e72fca365fea5d1"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00288_f000094_vehicle_context0.txt",
+    "sha256": "e95cbf229ec0ce15e317409acb1e27d99dfbb8304ee0139a05569488592a295d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000047_vehicle_context2.txt",
+    "sha256": "71f7e6d8abeb48abed2614a926d7083d52f1861298bd79c60155d1c0db9cef4f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_WS-33_001_0078.txt",
+    "sha256": "d979972f825dc23ea370bd69bebb3f09b8c9ef3f9781baa24213d44667d41f1c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210826_G01_H_UA-11_003_0038.txt",
+    "sha256": "00f04f742072d7baa1c3c632ab294708a06af807d1cfd2153cc0eab64cb94598"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-08_003_0362.txt",
+    "sha256": "28e9f32adec2df71dcf62355876141f67b3b4f33a6787268b95c8e189ea7875f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_WS-24_003_0393.txt",
+    "sha256": "6b4ed47f901013a6dcc0c737d605460074d1eb68f83be95a5341d3bfe5de0eb0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211127_G16_H_UA-14_004_0102.txt",
+    "sha256": "520ac92393406049cb4b5db15d072bf2514e3686cc423e52cc79a6d588514447"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000047_vehicle_context0.txt",
+    "sha256": "b68e66bc1b8ed4e83b3196e401f6415f0483c6564d0c33e98a32fbeb58e94d84"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000094_vehicle_context0.txt",
+    "sha256": "96aed048ffe66c6bf9f501c1b7f4f88d88bf26e82ef6a8144577ead1f840d7c7"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00285_f000094_vehicle_context1.txt",
+    "sha256": "36a65003e13d50b39418110bd02cc3efa5ab274620297b472e38f59af557b2b7"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211127_G16_H_UA-14_007_0356.txt",
+    "sha256": "ce72958f30133cce7b5c34196415f4215449ff914f5c720e1987a906235b7f8f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211027_G10_H_UA-10_003_0077.txt",
+    "sha256": "47a392911002e22c790dca05474006a1f8ff09d9966898a1e19041b96533d3e3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211021_G09_K_UA-16_003_0446.txt",
+    "sha256": "3ba76589be7c034ae171983a20015fc0c42593b8575436a45ce5dcfe813d1d56"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00247_f000047_vehicle_context1.txt",
+    "sha256": "88aa473c80d3ea113c1be2a82175675603f1c1da5aa7a410e4f192e5816bf050"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210916_G03_H_UA-10_004_0010.txt",
+    "sha256": "22a0a61653709b34ef18f5c9ca173a7db972344d734a16df5370460a4cea22f3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00263_f000047_vehicle_context0.txt",
+    "sha256": "4491664d09505a42650c507a81824bfbb2ebb6fcd93d5883e5bb23452feab8a9"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211027_G10_K_UA-16_001_0446.txt",
+    "sha256": "c274cc909a42e55d59702cd525cc3b10c61f6f15733d30264efd6898da73287f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210924_G05_H_UA-14_002_0189.txt",
+    "sha256": "2403ebc48765bf049151d66d4b61f0804287eba2d5ec31bc1da31e40755fe23d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00287_f000094.txt",
+    "sha256": "3a50a4d2088abc2f640afc32607e53b0493c9731c198787b07b933a6e95cb3df"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211105_B03_H_UA-10_004_0018.txt",
+    "sha256": "9f04ecdd31bab04be4e3c2f84e0473df632de6a10a3b61e42145220f1eb86145"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211207_G17_H_UC-08_011_0038.txt",
+    "sha256": "9a1f546171fbf283353bf9eebf693688a2326f8a81a86405b59a1b6374814093"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211127_G16_K_UC-15_005_0196.txt",
+    "sha256": "8b7c1af9016c44fcb25ab834754fb45a5831500eaace6b1be4f309b00859cf33"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00263_f000047.txt",
+    "sha256": "c7e729b79b4800457aba6f6cf2d8b046ea443d27bf91309f395459b5c6219ea4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211209_B06_K_UC-15_008_0060.txt",
+    "sha256": "120ddf96225ef52408fc167866ece286692770cde95b8bb20813e507782b433f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-210826_G01_H_WS-21_003_0042.txt",
+    "sha256": "a81951a279ee176f27c49319dd6ff3c6870a487f49271ea75a887a092dcf6f93"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211027_G10_K_UA-16_001_0094.txt",
+    "sha256": "fe3c41fac6397539a6b9debb4587aa4d0bd4ed5468727355adfe40c9ca245041"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source04_L-211027_G10_K_UA-16_001_0731.txt",
+    "sha256": "ad5233320aec13e76eeb0c827f0b582d5a967df3c7e5c62d74f5663014de3b52"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00266_f000094.txt",
+    "sha256": "6ee4c11374ba4e3d89a3f546160b9e2dacc3dd712022d25cea1144419eb31843"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/video_00288_f000047_vehicle_context0.txt",
+    "sha256": "15b11d07d5083c51ab1c34b90cde889dbdeffce37903c6d75d57c842ab1ad8bf"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/train/labels/source07_L-211215_B07_H_UC-08_008_0602.txt",
+    "sha256": "913c2b739449e7d57debdf53ff4badda621b2dbbc6de2c8fb57c0b5662c05d80"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-11_005_0227.txt",
+    "sha256": "5c3b82f6662c5ba608a6d90d5df9d9718b1bb2a97f58814d16dc658170ed2371"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_002_0764.txt",
+    "sha256": "d473d1c287b9327a0ec2b06bad5c8bba31f2bb5ad0b6b92ebe28d95c5b831cd7"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-11_004_0004.txt",
+    "sha256": "924ebb2816f9aadff0f9c0ee4b0ccbbc74a573c7b37d55c1da6d6bae51047795"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-11_004_0010.txt",
+    "sha256": "322b60578b7b548879507ebd7741fffaf84e21d61081c5d6e77796c4a2edfd0b"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_002_0176.txt",
+    "sha256": "ec4c8c4012e54479da070c45599ff738ef27fce9283e60fee0f5d287a7da8314"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_003_0202.txt",
+    "sha256": "0b20bfa9c5b54e42d61490acb99d9833ea607c597b5dfb27398f464b4255557c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-16_003_0377.txt",
+    "sha256": "a4c6f6d599583a55150de120412850a5767e3cd1903c263031928c709c0ff24a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-22_001_0069.txt",
+    "sha256": "271e03cf28de900e3b0b38d1246c9df01d29e33fc7ef315ff5bc121d37cc6c1f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_WS-33_001_0037.txt",
+    "sha256": "9ed38f3d7a73fe0cfcb4544d40558fedfbbd7395e0759f933b39e2db6344e772"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_002_1441.txt",
+    "sha256": "d540198147f061c2ed42c3416086f738634b7fd336fed7db781823601d8ebba6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-11_003_0052.txt",
+    "sha256": "a529e26d8ff51a0f3600ae1109a08e1385a0ba57ecda8e0240cd5363b983fa08"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_WS-33_002_0247.txt",
+    "sha256": "ee7b98db2f68f5204096471437db36f893cd06d2c2f76c437f61d95959c60ad6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UC-22_003_0095.txt",
+    "sha256": "8959e6f816c7908689c9c6d843badb1a38edf247ecf5bf5f93f8bbadda4c5ba4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-11_004_0016.txt",
+    "sha256": "d7ca4413b6f065fe8342a461e7d5710b21c8e09f876aa3e19e7643953ef7789b"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UC-22_004_0219.txt",
+    "sha256": "fd6983f5856b589913ae3514f193c9eba64142b41a62fee85ab1ca552eac3d63"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_003_1481.txt",
+    "sha256": "e3632762b02ef788d75658ae7719841d409c1714e53653a26cdcdefacc9abc88"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-13_004_0033.txt",
+    "sha256": "ef0cc757dd9554e2b1674246a643d336403f2b9e7e9e44dbf6020f694ed0dbbf"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_WS-33_002_0113.txt",
+    "sha256": "31402cac5e032b89535ace6ca044f6bc0b8eabf8eecddbec4e00adcbf1296779"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-11_001_0023.txt",
+    "sha256": "c908089c931aee9636039602fc3311ac2f5b17ebb99fb10e4bc7253e2495b040"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-11_005_0380.txt",
+    "sha256": "3d2f4cab84e1b45eac975f9f3d7b8138617e405216a4f46755fa66ad32c6a541"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-16_003_0114.txt",
+    "sha256": "d35e0bf2da5c6d5de703f8e7709e04e85c81fff8bce25b64b670c6d0dc9575ae"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/video_00286_f000094.txt",
+    "sha256": "f683009c64fcd37bab9a120067d3fcdfc6784f87d2f0921463671158dd805198"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-15_007_0088.txt",
+    "sha256": "12d68012160e4176fb0c328d9f52210e4b668ee8ebe9b30d0848a86e762ac3c0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-25_001_0019.txt",
+    "sha256": "f43f61d9cf2e996a65eec88cb9a649b004d48075a8684ea0f498537e81e0fdb6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UC-22_003_0033.txt",
+    "sha256": "46e1dec42bd691803362d9059da4d7805df3e0335a2ef405d63a5a475a3bcc66"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-22_001_0019.txt",
+    "sha256": "2fe2b454598cceb253fabaad5f73c5f4a2794831b1381513dc3b6318547c3cc2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_WS-21_004_0367.txt",
+    "sha256": "4f020ba814e22e6100b6799af16f119c8c27eb2f71b75441ec2f2684fc17e354"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-16_002_0117.txt",
+    "sha256": "2a086cdbb687fbf353538db65258882d54451619673585e2a9d8fa432d614f03"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_001_0305.txt",
+    "sha256": "901e97b4c279b99e96272d08b7ed2ecf5755a1006af1d33c3694aa218ba2bb73"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_WS-33_002_0201.txt",
+    "sha256": "adbabbc9a0c23f2b697a2856c1ca3f7102dbd248d12fdf928f7ec3d8f1fb1a85"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UA-16_004_0413.txt",
+    "sha256": "6ae53ac3a7fe9043d399478044a7e4bc3f352828019aa1d491c9605f42d0f4e4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UC-22_004_0327.txt",
+    "sha256": "a76996f3b8228a0d4fa459e6044aa9fca5c89c4aeeb55380987b2164a9b553de"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-11_003_0178.txt",
+    "sha256": "98d36d8658b25166f61aa3f54a19873a26c7166859975579fe2c85eaeebadbb2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-13_001_0052.txt",
+    "sha256": "a4ccec5a63ee78dcae7de59ce0cd0f0ac65f1b0a7cc55aa6ce05587004d2eed6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_WS-33_002_0187.txt",
+    "sha256": "45f065f335ece9612b1e909ba9c121b8c5b61733e5e4c3ee46b772c77a9f18b6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/video_00286_f000047.txt",
+    "sha256": "59d92c6048f24609d0a2b7159559308a7057b8812d32adaf2e471deeda6fd935"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-16_002_0676.txt",
+    "sha256": "2865c3d30eb17b9c8e271cc63db3dcd9dc6f528263858176f9147e417383b5b3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_003_0214.txt",
+    "sha256": "324e6a459938f6d8e4580e8f649b8e39426849d99cd03f74c6b63a08e712efe8"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-11_005_0067.txt",
+    "sha256": "125a451e2afb6e5ef8bfdb17f766365a12d592efd035931635f82b8da2bb21b6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_004_0339.txt",
+    "sha256": "21eec572b727e99b64ea010677370b5bc635c9f6836b42068dfd56c1676bf442"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_003_0360.txt",
+    "sha256": "6bed8a0c7e9b4ab61f572686ce83a2e6f2557bd733be415f2bcd36574ce8cffa"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_WS-21_004_0218.txt",
+    "sha256": "4c851901e9d60fdd676158f183eb066f1a7e574e3602407e02253ed3df364eda"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_001_0050.txt",
+    "sha256": "cff70ec8d6af5c22a4b7899cf7ba0c3c75bacd561f03890da4bddfcc7ee69f0e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_001_0173.txt",
+    "sha256": "bd9b8575204d1e4c1edc37ea5d24ad470fcc8265fc5a1e6a64e38ffed056d115"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-13_001_0088.txt",
+    "sha256": "81d765c01eb1adfe39bddb6bc1f1d37c158129678fb9473d24fb7be26335c0e5"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_WS-33_002_0035.txt",
+    "sha256": "100cb8c6012a112f57c18793019c6c433dda04b47924e0ddb70dab8c5cce7c14"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_004_0064.txt",
+    "sha256": "3cbcb629b8df46d0ceb5860b59dca94f19e5cb49265d8455ed15e81b7bdb6971"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-21_003_0061.txt",
+    "sha256": "392f102ae752be71327b587bf03f4d81101c08190b40a8a49f923f3a4f38045c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UC-08_002_0060.txt",
+    "sha256": "3c0b4ffc9e9cfccd67529773cadf9d118f7e20ef6903a297ec0bdd524b7360a0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UC-22_001_0122.txt",
+    "sha256": "bbcb632f120777c146a0d79d099d8a639f5e0516c69307ab6ec26fcdceee275b"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_001_1326.txt",
+    "sha256": "917f126350542729b8efce3c84c4949468ad744801008e47de58908344417fd2"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-22_002_0083.txt",
+    "sha256": "64ca5d47655427fe95911bf8ee18fdb008d328d62734f3d1e4cb129fa672841f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UC-08_002_0263.txt",
+    "sha256": "998d09b1cd07e640d1319a91cb0e39515581dd7e92a7dd34c843018c246eef42"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-13_004_0106.txt",
+    "sha256": "20feb2b1eb1a77dc25882efb4e1eb48f757f0c0b7800c4881acfb6f74df84460"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_WS-21_002_0079.txt",
+    "sha256": "00cb6e0c2cb9b9bee0112a75cecf74a819628dff7a710b6e38fd57ff17395f8e"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UC-22_001_0247.txt",
+    "sha256": "574263af720756e5f5759acfd926095795ad59520a2e7ea67b71cb5feff8009a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_WS-21_002_0251.txt",
+    "sha256": "248d927ea6591d4c326a07fa78372dd75ed87fa321264adf39fea60f965d318d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_WS-33_001_0116.txt",
+    "sha256": "ff3e5ba67ed3f747ce76f79052483a27cda1f5dc780781444fb57dea97952a11"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_001_0764.txt",
+    "sha256": "9a84c315ff2dbeaafd642753df57eb12bc55d37b0866836691d5130346d517e1"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-11_003_0303.txt",
+    "sha256": "52eabf31f01a12a75104989cd6064f61f266a1e63d404feb7610c901872f4458"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-11_001_0012.txt",
+    "sha256": "5c8061c6b89a94428a96ca356a4beb08c982d83cbea9f2c4db353781a6c5587f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-25_001_0112.txt",
+    "sha256": "cf25a52a92f53df7fdae3175f22a7e41c24a596cd84e62948303a994de57a03c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_UA-13_001_0016.txt",
+    "sha256": "05937bd31e61f188c954cbfecdb9056c6c674fd04a15f0251dc8e5b01ebf81a4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-25_001_0065.txt",
+    "sha256": "196879c00490a8a1cf9683f18b524c69bd04dca476168af23be60eb7128b889c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-15_007_0157.txt",
+    "sha256": "80dfe654e822847564e652067c2105a305e717fc8a5153f7c17d34e6d98516ac"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-16_003_0633.txt",
+    "sha256": "ba6ea8bba6dd62bda4245ccf5783024bf467e445b8ed4c2cc3c3eaa4312ad713"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_004_0198.txt",
+    "sha256": "45ebcad6cdc39d3c71290d80ff957217d005613688f43fa064f47dae15ab8629"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-16_002_0394.txt",
+    "sha256": "5d69d9d6c0bf7a9170797fdd5cbf99db4279323c735f4cd3a918fefb5808f959"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UC-15_003_0790.txt",
+    "sha256": "7c42b1cc61faef1b2244c92639d5910e7b42a5e7609944971c625cf6dc3580fd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-11_001_0004.txt",
+    "sha256": "204a9f5ba6151ea46bdd45088aa8ea63a88249e215e77ebbfa2c0888c201ab14"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-21_001_0083.txt",
+    "sha256": "f94973e54a7cfced21bd66390bb0d48f93783dc648202181f8e0ebf91a66e573"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-21_003_0013.txt",
+    "sha256": "6cc847a3b0f9e423e3defce6087bd7d3e2d24e452c25953608ac0be5ecf08c13"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_WS-33_002_0307.txt",
+    "sha256": "883b87f1c263385ceb0f4a8b54e3d215bd6eb62a4c2e91117e87685a865bd14c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_WS-33_001_0189.txt",
+    "sha256": "5909c29259f1f3dd4c908d3ef783ad80eb22c86bac39c325ca5903b58b583b83"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211211_G18_K_UC-15_007_0027.txt",
+    "sha256": "5275380b71e83db4b777248098dcaf9b85fa904c81a0d1de31b6e866c4af7538"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_WS-21_002_0422.txt",
+    "sha256": "dc210b8dbcddf1729b9d09cf90abfa5a6d6a212cc3a48730e0116c42746c5b1a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UA-16_004_0083.txt",
+    "sha256": "7b814729045276f54f87babba448574b126f9f7b5b82dcdf8e87fb58067a2903"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UA-13_004_0172.txt",
+    "sha256": "bbb2a816f3b6ea45688d5246229e9eee0b8c54ddbb12158327fdf6bd6f895577"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source04_L-211103_G13_K_UA-16_004_0254.txt",
+    "sha256": "ff4f42eb33e2cdc9cde0a844030845a9f247b635ccdabe4893a443a26dc6de67"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_003_0064.txt",
+    "sha256": "872a1b1889612f53ccc4eec49b66f6080a2a8cee5a2bf662e5d4d3d3d6319a41"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211211_G18_H_WS-21_004_0069.txt",
+    "sha256": "073f9679430d80b25924c983b1e0281fcd4cc4218a0ed8883541949dd35f4a17"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_WS-22_001_0116.txt",
+    "sha256": "e0af462e8579664dd0cc68bba7cff55f26eed17104c8c109171792ea02eed9fa"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-211103_G13_H_UA-12_001_0181.txt",
+    "sha256": "f493a223871ef28291c30d14cd7105b10a316ac2c08352a2818eda2d7ad83243"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/val/labels/source07_L-210917_G04_H_UC-08_002_0158.txt",
+    "sha256": "b348b36af795802c02b155328609e8f09f3f19f66c4d38c47be804d545ac1d3a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-24_003_0019.txt",
+    "sha256": "e4fdfcd7c8b8a9f2d4411cbd85ee266e7045ebb568a7b56aada4fc73800513dd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UA-11_001_0040.txt",
+    "sha256": "05976c4b08abdd1b92f97285ed7a0d1963b4baa8336e12bf83e132422b17be5d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UA-11_004_0018.txt",
+    "sha256": "caed9a180cb2ccbadf6025dd130e9c89f43102f123f2ebbc1a3ca213aff88b7c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UC-22_004_0110.txt",
+    "sha256": "f49ad7a6b2a7075037fbb604749918a9dcd9611ec8d2830df0f23176515dadfd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UA-11_001_0241.txt",
+    "sha256": "f5c35a798686c9bb9334240dde6eeb56304e00171052108a8c455d24fa655ed7"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211013_G08_H_UA-14_003_0225.txt",
+    "sha256": "6c09734f8e51de325f001fff468ee4d07e45a0bff466fbbb8c7f1416a68ba7fd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_003_0150.txt",
+    "sha256": "98738ec085e77ff1b39e8ed4b750c731cb4d45a558ddc02b39097a5c61715321"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_004_0109.txt",
+    "sha256": "96ccae1b847adcfe0b4daa10ad845ddf9c6f631b0a24d3dfba74d69ef5c1dc8c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_003_0057.txt",
+    "sha256": "0aeaad70e25763fc25d3151b0057ef6bdce9a19617a7c386f403859a5f723d5d"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_001_0038.txt",
+    "sha256": "040fc501b0f621ddd3f59533317e35774441dd53e8b1eb332e3e60c735fdbfff"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UC-22_002_0049.txt",
+    "sha256": "62ee491a21a62126d9d35c6dbfda880aa13563f8d933daa030af8c4e08205ad5"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_001_0076.txt",
+    "sha256": "f4a1a85eb8d4da08747f6e9beae49d461f0f0ec9ee73ba0083fc1cfc3e5aaee4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-21_002_0060.txt",
+    "sha256": "89f4cba03c518725d7b680b54626e232fedf2e9bfb21081852c3aa4cf76e16bb"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/video_00293_f000094.txt",
+    "sha256": "66f4b52270edbbba8b13a0a6d43506ccf30d5defbb565a06606f278ef6b51a01"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UC-22_004_0188.txt",
+    "sha256": "80391156531aa054e5f2d307d7a33f4a0a07a42a4aebd1eb9088a3cfbc261eac"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/video_00293_f000047.txt",
+    "sha256": "15058aac410fbb81c694acaac0f1230359c07aa5ebe72a46e0dd4b8aea435af7"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_004_0037.txt",
+    "sha256": "0909046274d76ea680f38934c52151215e9e53ddac0f2bc890056dc9f4111cbb"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UC-22_004_0029.txt",
+    "sha256": "dcda8ade76b9ca1db0d4f086b2541229ce34b59f9f146cd3d218ed89ef608386"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UA-11_002_0018.txt",
+    "sha256": "07015272bfdc00cc4587b84d4a29cb89246fab813aeabef408b03d58736fb718"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-24_003_0057.txt",
+    "sha256": "c13f0325363c1f9a637562b2d37857ff0a576911b1a9e6657a18267927984246"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_004_0125.txt",
+    "sha256": "9def5135997956509209b82749ed67b13bb4e19dc5612e9519dd6384f6b4ccf0"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-24_003_0098.txt",
+    "sha256": "436f15d5576d02f90987fe8f2649f5f7d52ac5c069baece0148f8fa6764697db"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_004_0170.txt",
+    "sha256": "83d506796c8c4be71497a0f63a11bb19ffa775cab5123ad083e3e25057d01d54"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-21_002_0041.txt",
+    "sha256": "b77a99de7cda1df30f42c197c6462ce8d4a42e624e5021ee5a5685fe8796a1ce"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UC-22_002_0269.txt",
+    "sha256": "ab6571d3869e1bac0c6bdb41064ec8fc624623b09da9b228881e0aff6054fca6"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_001_0054.txt",
+    "sha256": "4b8c88321ac92b6b2d9bbf3dfe50da364660608b14becdf672b1920055285815"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_001_0145.txt",
+    "sha256": "e925ce5c9d5084542eb89727eb9bf152ba44b863005415fac220b965d6546565"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_003_0089.txt",
+    "sha256": "8ea5baeba7cb6a4f28a2d3c4a7b3faf8b076b3c75c982af9ceba5ff0275ad632"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UA-11_004_0103.txt",
+    "sha256": "f69d29887ae33a3a14548d4558ee4af086c3ca111b91369a0503d88ed81afe2a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UA-11_004_0060.txt",
+    "sha256": "1d1dff7444e0d808e84324760fb7bae2b6e57af118fbdf791d18e4e2c58a5bbe"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-21_004_0020.txt",
+    "sha256": "f9d03a975e20a92b8c02cb3b363629422d1dea3596daffb5d65707764e7b493a"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_003_0014.txt",
+    "sha256": "825e99963d8a122999971e54b7467711f1214ba0942c607a64f67f9323cdc659"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_004_0017.txt",
+    "sha256": "10dbb18575fec95ef5210b49adf9a32b333aa76785d79bfb58d51e72d2fabfdb"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UA-11_002_0102.txt",
+    "sha256": "6344dfb33a8ffd1740b52ec611d86323899a90022e12d1f24d184a7cfeb2d4f4"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UA-11_002_0060.txt",
+    "sha256": "68a9e8fe5667f38335a5352251bcb9153b6444b3a028e7febbef4aa3159994a5"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-22_001_0084.txt",
+    "sha256": "33e56e8435ddcd7059823ce2d2d82853c9e1849da7cc9a4a9426909e0446a33f"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-21_004_0045.txt",
+    "sha256": "2ea2f90e6b7130c75161a68201c158e2101cc832ec4fe8e4aa27ef0426d61a34"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UC-22_002_0155.txt",
+    "sha256": "262e8be600ffebc33de0cac430fbc63cbdb69fc1f5ef4403a9498ec12c495af3"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-21_002_0021.txt",
+    "sha256": "9d37845b4155c73c97294312b8836b52bb6812a22b67624c176a93fe3e7299dd"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_WS-21_004_0069.txt",
+    "sha256": "5458c4c9f276a9d6e1fede61a000eba9771b98e40e488a9014b2f124a2d0e33c"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-210929_G06_H_UC-22_003_0088.txt",
+    "sha256": "f30d011bfb4e42c96c7c233ac2ce584cbd2f5ca1e8b1e6a6da3836ca87a93e76"
+  },
+  {
+    "path": "data/reviewed_pilot/nvidia_object_adaptation_v1/test/labels/source07_L-211218_B08_H_UA-11_001_0139.txt",
+    "sha256": "86d89b88e1164c4ba3f97e50f1d27ada4555c9444916fe74018d5db6b0c003c9"
+  }
+]

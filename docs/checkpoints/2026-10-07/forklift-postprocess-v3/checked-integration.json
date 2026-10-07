@@ -1,0 +1,43 @@
+{
+  "2": {
+    "samples": 106,
+    "processed_fps": 5.0,
+    "features": {
+      "proximity": {
+        "SAFE": 0,
+        "WARNING": 36,
+        "CRITICAL": 8,
+        "UNKNOWN": 62
+      },
+      "ppe": {
+        "SAFE": 0,
+        "WARNING": 40,
+        "CRITICAL": 0,
+        "UNKNOWN": 66
+      }
+    },
+    "ppe_preserved": true,
+    "forklift_proposal_samples025": 101
+  },
+  "3": {
+    "samples": 87,
+    "processed_fps": 4.795204795204795,
+    "features": {
+      "forklift_proximity": {
+        "SAFE": 1,
+        "WARNING": 16,
+        "CRITICAL": 4,
+        "UNKNOWN": 66
+      },
+      "ppe": {
+        "SAFE": 0,
+        "WARNING": 39,
+        "CRITICAL": 0,
+        "UNKNOWN": 48
+      }
+    },
+    "ppe_preserved": true,
+    "forklift_proposal_samples025": 77,
+    "duplicate_extent_295_unknown_verified": true
+  }
+}

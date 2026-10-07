@@ -1,0 +1,47 @@
+[
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/source_conflict_candidates.json",
+    "bytes": 12097,
+    "sha256": "e25ea65b03d8df8e297f6a904a3db2ba7d93034dfbcdf3c462066d2ea672b34a"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/video6/frame_200.jpg",
+    "bytes": 507585,
+    "sha256": "b657e94bb975d87f33efca389ff6332f6dfa301ea5633991f0259d427755c54e"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/video6/report.json",
+    "bytes": 752,
+    "sha256": "1753b00ba0a929e6b77377cfdb6b2a7d18d16a8b6468cb44b832fea9f05eb001"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/video6/frame_270.jpg",
+    "bytes": 502112,
+    "sha256": "46250a3a70e46acd7d18b381a53a5c9bfab9826a134374d76725003980d62a36"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/video6/detections.jsonl",
+    "bytes": 191897,
+    "sha256": "6e8c66f907fea25442daa8ee97baca80d79bad146cca9a34cd919999c8d2085c"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/video6/frame_255.jpg",
+    "bytes": 503717,
+    "sha256": "65e0df4e00ca680e7921351cecaeaccc8a2c5600fab2051d14335df4acc7a0a3"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/video6/frame_150.jpg",
+    "bytes": 500136,
+    "sha256": "06e96778387e6a908c76f67602b83371f621ce1fbc91f24ca2aabbb707082b61"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/model/report.json",
+    "bytes": 3082,
+    "sha256": "18558088cd3470644e7134685addad77bc9d83e3de33811b9a1adf6f250af768"
+  },
+  {
+    "path": "outputs/checkpoints/hoodie_context_v2/model/hoodie.pt",
+    "bytes": 5355717,
+    "sha256": "eb87d887a6e249e010e397408ec7bf44aa44e7c39dc71533a6ab683216d1d51a"
+  }
+]

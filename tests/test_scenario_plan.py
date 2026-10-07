@@ -12,8 +12,13 @@ class ScenarioTests(unittest.TestCase):
   rule=LaneHazard(P,policy='timed');a=e(2.999);rule.update(0,[a],[],(300,300));self.assertEqual(a['severity'],'SAFE');b=e(3);rule.update(.2,[b],[],(300,300));self.assertEqual(b['severity'],'WARNING');c=e(20);rule.update(.4,[c],[],(300,300));self.assertEqual(c['severity'],'WARNING')
  def test_v7_vehicle_exact_five_seconds(self):
   rule=LaneHazard(P,policy='timed');a=e();rule.update(0,[a],[V],(300,300));self.assertEqual(a['severity'],'WARNING');b=e(4.999);rule.update(.2,[b],[V],(300,300));self.assertEqual(b['severity'],'WARNING');c=e(5);rule.update(.4,[c],[V],(300,300));self.assertEqual(c['severity'],'CRITICAL')
- def test_v4_vehicle_immediately_critical(self):
-  a=e();LaneHazard(P).update(0,[a],[V],(300,300));self.assertEqual(a['severity'],'CRITICAL')
+ def test_v4_matches_timed_vehicle_rule(self):
+  # Video 4 now uses the same timed lane policy as video 7 (demo show plan).
+  rule=LaneHazard(P,policy='timed',safe_seconds=3,critical_seconds=5)
+  a=e();rule.update(0,[a],[V],(300,300));self.assertEqual(a['severity'],'WARNING')
+  b=e(5);rule.update(.2,[b],[V],(300,300));self.assertEqual(b['severity'],'CRITICAL')
+ def test_legacy_immediate_lane_still_available(self):
+  a=e();LaneHazard(P,policy='immediate').update(0,[a],[V],(300,300));self.assertEqual(a['severity'],'CRITICAL')
  def test_vehicle_outside_lane_does_not_escalate(self):
   a=e();LaneHazard(P,contains=lambda point:point[0]>150,policy='timed').update(0,[a],[V],(300,300));self.assertEqual(a['severity'],'SAFE')
  def test_lost_vehicle_becomes_unknown(self):

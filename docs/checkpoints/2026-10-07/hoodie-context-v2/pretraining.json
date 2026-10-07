@@ -1,0 +1,12 @@
+{
+  "status": "prepared_for_single_context_experiment",
+  "initial_sha256": "5200f594115b078c47a118532de2ac0e046cd5deb59cbfc6b11b661dfdfdb371",
+  "counts": {
+    "train": 256,
+    "val": 148,
+    "test_context": 48,
+    "test_full": 91
+  },
+  "manifest_sha256": "0c5e84245ebfdee2e01ce3fef1f517e6eb89f32f0cd1ccf1bd1de14572692253",
+  "no_demo_training": true
+}

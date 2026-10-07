@@ -1,0 +1,24 @@
+{
+  "status": "clean_dataset_validated_before_promotion",
+  "baseline_original_source": "data/reviewed_pilot/hoodie_roboflow_v1",
+  "suspected_conflict_images_by_split": {
+    "train": 67,
+    "val": 20,
+    "test": 9
+  },
+  "conflict_detection": "different classes with box IoU >=0.8; ambiguous images excluded, not auto relabelled",
+  "visually_verified_example": "train crop_0_0009 from original chunk5_01423 has Hoodie and Normal on same person",
+  "aborted_run": "outputs/training/hoodie_context_v2; interrupted first epoch; not promoted",
+  "clean_run": "outputs/training/hoodie_context_v2_clean",
+  "clean_label_files": 543,
+  "invalid_or_cross_class_overlapping_labels": 0,
+  "counts": {
+    "train": 256,
+    "val": 148,
+    "test_full": 91,
+    "test_context": 48
+  },
+  "source_files_preserved": true,
+  "demo_video_training": false,
+  "limitation": "automatic conflict candidates are not all manually relabelled; original nearby videos still may overlap splits"
+}

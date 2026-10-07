@@ -1,0 +1,237 @@
+{
+  "scope": "manually reviewed main forklift only; background vehicles are not labelled; same camera adaptation, not independent generalization",
+  "frames": [
+    {
+      "frame_index": 0,
+      "timestamp_seconds": 0.0,
+      "image": "demo1_ref_f000000.jpg",
+      "main_vehicle_bbox": [
+        638,
+        20,
+        726,
+        214
+      ]
+    },
+    {
+      "frame_index": 25,
+      "timestamp_seconds": 1.0427083333333333,
+      "image": "demo1_ref_f000025.jpg",
+      "main_vehicle_bbox": [
+        636,
+        38,
+        722,
+        244
+      ]
+    },
+    {
+      "frame_index": 50,
+      "timestamp_seconds": 2.0854166666666667,
+      "image": "demo1_ref_f000050.jpg",
+      "main_vehicle_bbox": [
+        612,
+        88,
+        716,
+        324
+      ]
+    },
+    {
+      "frame_index": 75,
+      "timestamp_seconds": 3.128125,
+      "image": "demo1_ref_f000075.jpg",
+      "main_vehicle_bbox": [
+        582,
+        84,
+        820,
+        368
+      ]
+    },
+    {
+      "frame_index": 100,
+      "timestamp_seconds": 4.170833333333333,
+      "image": "demo1_ref_f000100.jpg",
+      "main_vehicle_bbox": [
+        628,
+        60,
+        852,
+        378
+      ]
+    },
+    {
+      "frame_index": 125,
+      "timestamp_seconds": 5.213541666666666,
+      "image": "demo1_ref_f000125.jpg",
+      "main_vehicle_bbox": [
+        782,
+        222,
+        850,
+        376
+      ]
+    },
+    {
+      "frame_index": 150,
+      "timestamp_seconds": 6.25625,
+      "image": "demo1_ref_f000150.jpg",
+      "main_vehicle_bbox": [
+        654,
+        14,
+        724,
+        210
+      ]
+    },
+    {
+      "frame_index": 175,
+      "timestamp_seconds": 7.298958333333333,
+      "image": "demo1_ref_f000175.jpg",
+      "main_vehicle_bbox": [
+        644,
+        62,
+        724,
+        254
+      ]
+    },
+    {
+      "frame_index": 200,
+      "timestamp_seconds": 8.341666666666667,
+      "image": "demo1_ref_f000200.jpg",
+      "main_vehicle_bbox": [
+        616,
+        88,
+        708,
+        328
+      ]
+    },
+    {
+      "frame_index": 225,
+      "timestamp_seconds": 9.384374999999999,
+      "image": "demo1_ref_f000225.jpg",
+      "main_vehicle_bbox": [
+        596,
+        112,
+        710,
+        362
+      ]
+    },
+    {
+      "frame_index": 250,
+      "timestamp_seconds": 10.427083333333332,
+      "image": "demo1_ref_f000250.jpg",
+      "main_vehicle_bbox": [
+        520,
+        128,
+        716,
+        562
+      ]
+    },
+    {
+      "frame_index": 275,
+      "timestamp_seconds": 11.469791666666666,
+      "image": "demo1_ref_f000275.jpg",
+      "main_vehicle_bbox": [
+        548,
+        140,
+        752,
+        550
+      ]
+    },
+    {
+      "frame_index": 300,
+      "timestamp_seconds": 12.5125,
+      "image": "demo1_ref_f000300.jpg",
+      "main_vehicle_bbox": [
+        666,
+        16,
+        722,
+        140
+      ]
+    },
+    {
+      "frame_index": 325,
+      "timestamp_seconds": 13.555208333333333,
+      "image": "demo1_ref_f000325.jpg",
+      "main_vehicle_bbox": [
+        648,
+        30,
+        718,
+        194
+      ]
+    },
+    {
+      "frame_index": 350,
+      "timestamp_seconds": 14.597916666666666,
+      "image": "demo1_ref_f000350.jpg",
+      "main_vehicle_bbox": [
+        596,
+        108,
+        710,
+        380
+      ]
+    },
+    {
+      "frame_index": 375,
+      "timestamp_seconds": 15.640624999999998,
+      "image": "demo1_ref_f000375.jpg",
+      "main_vehicle_bbox": [
+        360,
+        170,
+        740,
+        540
+      ]
+    },
+    {
+      "frame_index": 400,
+      "timestamp_seconds": 16.683333333333334,
+      "image": "demo1_ref_f000400.jpg",
+      "main_vehicle_bbox": [
+        656,
+        0,
+        734,
+        176
+      ]
+    },
+    {
+      "frame_index": 425,
+      "timestamp_seconds": 17.726041666666667,
+      "image": "demo1_ref_f000425.jpg",
+      "main_vehicle_bbox": [
+        462,
+        54,
+        674,
+        366
+      ]
+    },
+    {
+      "frame_index": 450,
+      "timestamp_seconds": 18.768749999999997,
+      "image": "demo1_ref_f000450.jpg",
+      "main_vehicle_bbox": [
+        446,
+        60,
+        658,
+        394
+      ]
+    },
+    {
+      "frame_index": 475,
+      "timestamp_seconds": 19.81145833333333,
+      "image": "demo1_ref_f000475.jpg",
+      "main_vehicle_bbox": [
+        396,
+        126,
+        622,
+        366
+      ]
+    },
+    {
+      "frame_index": 500,
+      "timestamp_seconds": 20.854166666666664,
+      "image": "demo1_ref_f000500.jpg",
+      "main_vehicle_bbox": null
+    },
+    {
+      "frame_index": 525,
+      "timestamp_seconds": 21.896874999999998,
+      "image": "demo1_ref_f000525.jpg",
+      "main_vehicle_bbox": null
+    }
+  ]
+}

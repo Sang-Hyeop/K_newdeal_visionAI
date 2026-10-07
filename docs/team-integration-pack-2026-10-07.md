@@ -77,10 +77,11 @@
 규칙:
 
 1. `observation_status=unconfirmed`이면 `severity`는 **반드시 null**
-2. 대상이 없다고 **SAFE를 만들지 않음**
-3. 기능이 다르면 상태를 서로 덮어쓰지 않음  
+2. PPE `WARNING`은 검토 후보이다. 차량 과겹침 시 기존 관측 상태는 유지하고 `evidence.classification_status=unconfirmed`, `vehicle_overlap_review_required=true`를 함께 표시한다. 관측된 경고 후보와 확정 미착용은 다르다.
+3. 대상이 없다고 **SAFE를 만들지 않음**
+4. 기능이 다르면 상태를 서로 덮어쓰지 않음
    (예: 침범 CRITICAL을 체류 SAFE가 지우면 안 됨)
-4. `feature_status` 배너: CRITICAL > WARNING 유지, 미확인 섞이면 SAFE로 올리지 않음
+5. `feature_status` 배너: CRITICAL > WARNING 유지, 미확인 섞이면 SAFE로 올리지 않음
 
 ---
 
@@ -114,6 +115,11 @@
 - [ ] 미터(m) 단위 표시하지 않음 (null)
 - [ ] ROI/구역 문구는 `docs/roi-wording-2026-10-07.md` 따름
 - [ ] PPE 미착용 WARNING이 0개여도 파이프라인 연결은 완료로 표시 가능 (검출 품질은 별도)
+- [ ] **고정 ROI 오버레이**: 시연 영상(`demo.mp4`)에는 감지 쪽이 칠하지만, 관제보드는 이벤트/설정의 다각형을 **직접 그려야** 함
+  - 4번: `summary.json`의 `camera_config.polygon_normalized` **또는** zone 이벤트 `evidence.roi_polygon_normalized`
+  - 7번: `camera_config.monitor_floor_normalized` + `safe_polygons_normalized` **또는** `evidence` 동명 필드
+  - 알파: `evidence.roi_alpha_safe`(≈0.15) / `evidence.roi_alpha_alert`(≈0.2) 또는 summary camera_config
+  - SAFE=초록·WARNING=주황·CRITICAL=빨강 (시연 mp4에 이미 칠해져 있어도 보드는 별도 렌더 필요)
 
 ---
 
@@ -183,3 +189,9 @@ python scripts/run_zone_dwell_video.py \
 - `outputs/diagnostics/scenario_plan_v2_hood_active/` (후드 활성 5·6)
 
 `--output`은 **없는 새 폴더**여야 합니다.
+
+## 최신 연동 확인
+
+122개 자동 테스트 통과. 7개 영상 총 1,377개 샘플을 실제 추론 캐시에서 재계산했다. 종합 영상에서 차량 겹침 WARNING 검토 후보 93개가 공통 observations_v1에도 유지됨을 확인했다. 이전 dd3e22d 수정은 내부 경고만 유지하고 공통 변환에서 지워지는 문제가 있었으며 이번 수정으로 보완했다. 검토 후보 수는 정확도/확정 위반 수가 아니다.
+
+최신 출력: `scenario_ppe_contract_short`(1~4), `scenario_ppe_contract_hood`(5~6), `scenario_ppe_contract_verified`(7), 모두 outputs/diagnostics 아래. 후드 v2는 미채택이며 v1을 유지한다.

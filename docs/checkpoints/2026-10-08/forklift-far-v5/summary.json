@@ -1,0 +1,91 @@
+{
+  "preparation": {
+    "counts": {
+      "train": 253,
+      "val": 88,
+      "test": 50
+    },
+    "new_full_frames": 7,
+    "new_context_crops": 21,
+    "evaluation_unchanged": true,
+    "limits": [
+      "Same factory camera development specialization",
+      "Focused replay subset; previous bundle must be preserved for other scenes",
+      "No synthetic boxes or evaluation anchor frames used; adjacent demo frames are training-exposed"
+    ]
+  },
+  "training": {
+    "epochs": 3,
+    "learning_rate": 0.0001,
+    "freeze": 12,
+    "initial_weights": "models/safe_carrying_envelope_v2/best.pt",
+    "initial_sha256": "9d0055e0bd137b7f88d30f013cd4786f0164840974b5fd53b883b879d26aca8b",
+    "results_csv": "epoch,time,train/box_loss,train/cls_loss,train/l1_loss,metrics/precision(B),metrics/recall(B),metrics/mAP50(B),metrics/mAP50-95(B),val/box_loss,val/cls_loss,val/l1_loss,lr/pg0,lr/pg1,lr/pg2\n1,84.0719,1.97079,1.36741,0.04309,0.89582,0.85996,0.91229,0.512,1.56689,0.97323,0.02995,0.000196875,0.000196875,0.0002\n2,168.56,1.98798,1.36834,0.04215,0.88123,0.85,0.90713,0.49722,1.57324,0.94187,0.02996,0.000134,0.000134,0.000134\n3,259.693,1.9423,1.31525,0.04277,0.86545,0.85,0.90556,0.48824,1.56651,0.95709,0.02977,6.8e-05,6.8e-05,6.8e-05\n"
+  },
+  "evaluation": {
+    "test50": {
+      "prior": {
+        "0.1": {
+          "TP": 45,
+          "FP": 29,
+          "FN": 6
+        },
+        "0.25": {
+          "TP": 44,
+          "FP": 10,
+          "FN": 7
+        }
+      },
+      "candidate": {
+        "0.1": {
+          "TP": 51,
+          "FP": 290,
+          "FN": 0
+        },
+        "0.25": {
+          "TP": 51,
+          "FP": 184,
+          "FN": 0
+        }
+      }
+    },
+    "reverse22": {
+      "prior": {
+        "0.1": {
+          "TP": 9,
+          "FP": 32,
+          "FN": 13
+        },
+        "0.25": {
+          "TP": 9,
+          "FP": 13,
+          "FN": 13
+        }
+      },
+      "candidate": {
+        "0.1": {
+          "TP": 22,
+          "FP": 151,
+          "FN": 0
+        },
+        "0.25": {
+          "TP": 21,
+          "FP": 86,
+          "FN": 1
+        }
+      }
+    }
+  },
+  "evaluation_status": "development_candidate_not_independent; not full-frame zero proof",
+  "evaluation_frames": 72,
+  "evaluation_protocol": "original v4 review references unchanged, except safe_3_tr9 confidence evaluation label corrected after separate manual inspection; exact evaluation image is excluded from training",
+  "model_sha256": {
+    "last.pt": "c696a21702878014066ae87e821d5301f90ee248f58cdebff5d7935a0c6f7e1f",
+    "best.pt": "0924c289f312760684c82f2e1a4ea585603ffead70e7c6dc91cdcc7684dfe41b"
+  },
+  "limits": [
+    "Same-scene demo training exposure and nearby frames; not independent test",
+    "No full-native-frame zero miss claim",
+    "Candidate has high false positives; not promoted as default"
+  ]
+}
