@@ -1,0 +1,8 @@
+{
+  "samples": 870,
+  "warning_review_events_restored": 93,
+  "other_feature_events_unchanged": true,
+  "tests_passed": 120,
+  "limitation": "Review candidates, not confirmed bare heads or zero-miss proof. Eight evenly spaced affected frames visually reviewed.",
+  "selected_hood_model": "v1 unchanged"
+}

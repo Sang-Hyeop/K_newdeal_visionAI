@@ -17,7 +17,7 @@
 | 후드 메인 미활성 | `run_demo_scenarios.py --hood-auxiliary` |
 | 3번 “미구현” 문서 | 시연계획 갱신 · `forklift_forklift_proximity` |
 | 합쳐진 지게차 박스 거리 | UNKNOWN (`merged_or_duplicate_vehicle_boxes`) |
-| PPE–지게차 과겹침 | UNKNOWN (`possible_operator_or_equipment_person_box`) |
+| PPE–지게차 과겹침 | SAFE는 UNKNOWN, WARNING은 검토 후보 유지 + 겹침 불확실성 표시 |
 | 팀 실행 안내 | `docs/demo-scenario-runbook-2026-10-07.md` |
 | pt 해시 목록 | `docs/checkpoints/2026-10-07/model-share-manifest.json` |
 | pt 묶음 스크립트 | `scripts/pack_demo_models.py` |
@@ -27,7 +27,7 @@
 품질 가드 샘플 효과(캐시 재계산, 정확도 주장 아님):
 
 - video3 검출 지게차 쌍 79개 중 **30개**가 합침/중복으로 판정 불가(unreliable)
-- video7 PPE에서 지게차 과겹침으로 **WARNING 93건** → UNKNOWN 후보
+- 이전 가드는 video7 PPE WARNING 93건을 UNKNOWN으로 변경했다. 실제 보행 작업자도 포함됨을 표본 육안 확인해 WARNING 검토 후보를 보존하도록 수정했다. 겹침은 classification_status=unconfirmed 및 vehicle_overlap_review_required로 전달한다.
 
 ---
 
