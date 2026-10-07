@@ -49,7 +49,7 @@
 | PPE 미착용 미탐/오탐 | 머리 연결·임계는 유지. 새 검수 프레임 없으면 재학습 반복하지 않음 | experimental PPE 유지 |
 | 후드+WARNING 공존 | 정책: WARNING 보존(후드 FP가 실제 위험 지우지 않게). 후드 트랙만 UNKNOWN 강제하려면 별도 승인 | 정책 선택지 |
 | 3번 박스 합침 근본 | 검출/NMS·추적 품질. 후처리는 이미 UNKNOWN 가드 | 학습/추적 후속 |
-| 4번 실영상 유차량 CRITICAL | 해당 구간 샘플로 재실행·육안 확인 | 검증 작업 |
+| 4번 실영상 유차량 CRITICAL | short 클립 forklift 0건. 유차량 구간 있는 소스/구간으로 재실행 | 검증 작업 |
 | 관제보드 ROI 미표시 | 보드가 `roi_polygon_normalized` / camera_config 다각형을 직접 fill | 대시보드 담당 |
 
 ### C. 의도적 보류
@@ -66,10 +66,11 @@
 ## 3. 바로 다음 실행 순서 (추천)
 
 1. ~~모델 zip·브랜치 팀 공유~~ (완료)
-2. 4번 실영상 재실행으로 timed(무차량 3s / 유차량 5s CRITICAL) 육안 확인
-3. 관제보드: 이벤트 `roi_polygon_normalized` fill 연동 (대시보드 담당)
-4. `docs/pr-draft-2026-10-07.md`로 PR 생성·리뷰
-5. (선택) 설비 오탐 hard-negative 소량 검수
+2. ~~4번 timed 무차량 WARNING 재실행~~ (`outputs/diagnostics/scenario_plan_v2_video4_timed/`, 해시 `outputs/checkpoints/scenario_plan_v2_video4_timed/sha256.json`)
+3. 관제보드: `evidence.roi_polygon_normalized` fill 연동 (대시보드 담당)
+4. 4번 **유차량** 구간 확보 후 CRITICAL 육안 확인
+5. `docs/pr-draft-2026-10-07.md`로 PR 생성·리뷰
+6. (선택) 설비 오탐 hard-negative 소량 검수
 
 자동 검사:
 

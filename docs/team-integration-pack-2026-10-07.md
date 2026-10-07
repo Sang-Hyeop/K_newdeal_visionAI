@@ -115,9 +115,10 @@
 - [ ] ROI/구역 문구는 `docs/roi-wording-2026-10-07.md` 따름
 - [ ] PPE 미착용 WARNING이 0개여도 파이프라인 연결은 완료로 표시 가능 (검출 품질은 별도)
 - [ ] **고정 ROI 오버레이**: 시연 영상(`demo.mp4`)에는 감지 쪽이 칠하지만, 관제보드는 이벤트/설정의 다각형을 **직접 그려야** 함
-  - 4번: `summary.json`의 `camera_config.polygon_normalized` 또는 zone 이벤트의 `roi_polygon_normalized`
-  - 7번: `monitor_floor_normalized` + `safe_polygons_normalized`
-  - 알파: `roi_alpha_safe`(≈0.15) / `roi_alpha_alert`(≈0.2), SAFE=초록·WARNING=주황·CRITICAL=빨강
+  - 4번: `summary.json`의 `camera_config.polygon_normalized` **또는** zone 이벤트 `evidence.roi_polygon_normalized`
+  - 7번: `camera_config.monitor_floor_normalized` + `safe_polygons_normalized` **또는** `evidence` 동명 필드
+  - 알파: `evidence.roi_alpha_safe`(≈0.15) / `evidence.roi_alpha_alert`(≈0.2) 또는 summary camera_config
+  - SAFE=초록·WARNING=주황·CRITICAL=빨강 (시연 mp4에 이미 칠해져 있어도 보드는 별도 렌더 필요)
 
 ---
 
