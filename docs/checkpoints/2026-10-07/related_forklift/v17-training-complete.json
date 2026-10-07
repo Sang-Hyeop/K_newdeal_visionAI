@@ -1,0 +1,40 @@
+{
+  "status": "completed6_pending_gate",
+  "epoch_count": 6,
+  "best_validation_epoch": 1,
+  "best_validation_map50_95": 0.71161,
+  "training_runs": 1,
+  "model_promoted": false,
+  "backup": [
+    {
+      "path": "outputs/checkpoints/v17_completed6/dataset_snapshot.json",
+      "bytes": 176190,
+      "sha256": "9aacf911a7a90a17ac5e2e2733b45f4c28e0557a12905d2de8739ead60a870ce"
+    },
+    {
+      "path": "outputs/checkpoints/v17_completed6/last.pt",
+      "bytes": 5358533,
+      "sha256": "3bb6e22c4c715348e84833bc36dc5f58cf0f1eb096804aadeeb4885d5dcecab5"
+    },
+    {
+      "path": "outputs/checkpoints/v17_completed6/args.yaml",
+      "bytes": 1859,
+      "sha256": "e14c08710d0f0a8206ef31df451fbc5af23db7c05b4c37be513f407f8faf7c4b"
+    },
+    {
+      "path": "outputs/checkpoints/v17_completed6/best.pt",
+      "bytes": 5358533,
+      "sha256": "1920c78562b48c64852d7a142fe9e765197b57ede90c163f0853f2895b11437e"
+    },
+    {
+      "path": "outputs/checkpoints/v17_completed6/test_metrics.json",
+      "bytes": 773,
+      "sha256": "81b8f2c6027391c289dc22c423d18b1d62a1efeab77b7beb77c776922c0636c5"
+    },
+    {
+      "path": "outputs/checkpoints/v17_completed6/results.csv",
+      "bytes": 898,
+      "sha256": "e6db343c193c4452fb7fb9b7354f39ba83a1537a8c2e49a9bdc82bf45fb1784e"
+    }
+  ]
+}
