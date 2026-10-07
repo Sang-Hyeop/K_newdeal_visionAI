@@ -1,0 +1,22 @@
+{
+  "evaluates_original_frames": true,
+  "predefined_target_frames": 8,
+  "reserved_source_clips": [
+    "7_tr16",
+    "7_tr18"
+  ],
+  "fixed_tests": [
+    40,
+    11
+  ],
+  "v16_baseline": {
+    "target_detection": 1,
+    "target_tracking": 0,
+    "target_worker_tracking": 7,
+    "reserved_detection": 2
+  },
+  "evaluation_scripts_sha256": {
+    "scripts/evaluate_targeted_forklift.py": "8e44f9432fe0bd292d61035dc6c7ae27a10028d8bc1796702c677a1d318cbb8f",
+    "scripts/assess_targeted_forklift_gate.py": "f63dc727008fba3bd91f41ac17cdb1863f45d11954452a4d81b44c21990a528f"
+  }
+}

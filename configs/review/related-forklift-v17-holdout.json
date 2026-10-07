@@ -25,7 +25,8 @@
       696,
       540
     ],
-    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4"
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_frame_image_sha256": "0740f4f2fdcf892955e329a2fcc9618d9af1d317f999bf25a7bd23679b3fdbee"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
@@ -53,7 +54,8 @@
       690,
       537
     ],
-    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4"
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_frame_image_sha256": "80e35d9d7b3b39480f9341db3ffc484d315236b83bc17ef82a2d822e2ad03f9d"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
@@ -81,7 +83,8 @@
       683,
       518
     ],
-    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4"
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr16.mp4",
+    "source_frame_image_sha256": "a634544593697f8882f175ff6ba195457155d92fbd85cf5b712f25c1d2e77d27"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
@@ -109,7 +112,8 @@
       746,
       399
     ],
-    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4"
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_frame_image_sha256": "fb7fcd38d0286dbe54f53570c732b50a7b89b7d2aa15067c0a3788f15c12cf12"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
@@ -137,7 +141,8 @@
       279,
       199
     ],
-    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4"
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_frame_image_sha256": "b8883ab14bc8be114203d4010378637811c104743b13b7e3cc34995c12e07dfa"
   },
   {
     "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
@@ -165,6 +170,7 @@
       135,
       119
     ],
-    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4"
+    "inventory_source_path": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/safe_unsafe_behaviours/Video Dataset for Safe and Unsafe Behaviours/Safe and Unsafe Behaviours Dataset/train/7_safe_carrying/7_tr18.mp4",
+    "source_frame_image_sha256": "3d43843938ee3f5ead39cda2bbd4dfd01aa986e53839e56eb72efd69663f2b69"
   }
 ]

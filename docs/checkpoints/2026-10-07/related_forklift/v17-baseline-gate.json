@@ -1,0 +1,188 @@
+{
+  "name": "v16_fixed_gate",
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/models/pilot_v16_related/person_forklift.pt",
+  "weights_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+  "target": [
+    {
+      "frame_index": 310,
+      "timestamp_seconds": 12.4,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0,
+      "forklift_confidence": null,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": false,
+      "worker_track_id": null,
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 315,
+      "timestamp_seconds": 12.6,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0,
+      "forklift_confidence": null,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 320,
+      "timestamp_seconds": 12.8,
+      "forklift_detected": true,
+      "forklift_detection_iou": 0.6811894892250805,
+      "forklift_confidence": 0.10690005123615265,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 325,
+      "timestamp_seconds": 13.0,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0,
+      "forklift_confidence": null,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 330,
+      "timestamp_seconds": 13.2,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0.08683484541366661,
+      "forklift_confidence": 0.1135636419057846,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 335,
+      "timestamp_seconds": 13.4,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0,
+      "forklift_confidence": null,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 340,
+      "timestamp_seconds": 13.6,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0,
+      "forklift_confidence": null,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    },
+    {
+      "frame_index": 345,
+      "timestamp_seconds": 13.8,
+      "forklift_detected": false,
+      "forklift_detection_iou": 0,
+      "forklift_confidence": null,
+      "forklift_tracked": false,
+      "forklift_track_id": null,
+      "actual_worker_tracked": true,
+      "worker_track_id": "P0:13",
+      "matched_actual_pair_events": []
+    }
+  ],
+  "target_detected": 1,
+  "target_tracked": 0,
+  "target_worker_tracked": 7,
+  "target_same_vehicle_id": false,
+  "reserved": [
+    {
+      "candidate_id": 157,
+      "source_group": "7_tr16",
+      "target_detected": false,
+      "iou": 0.0,
+      "confidence": 0.1569616049528122
+    },
+    {
+      "candidate_id": 158,
+      "source_group": "7_tr16",
+      "target_detected": false,
+      "iou": 0.0,
+      "confidence": 0.13933627307415009
+    },
+    {
+      "candidate_id": 159,
+      "source_group": "7_tr16",
+      "target_detected": false,
+      "iou": 0.0,
+      "confidence": 0.13520914316177368
+    },
+    {
+      "candidate_id": 163,
+      "source_group": "7_tr18",
+      "target_detected": true,
+      "iou": 0.7101378290935285,
+      "confidence": 0.10779504477977753
+    },
+    {
+      "candidate_id": 164,
+      "source_group": "7_tr18",
+      "target_detected": true,
+      "iou": 0.9165607738128501,
+      "confidence": 0.6922249794006348
+    },
+    {
+      "candidate_id": 165,
+      "source_group": "7_tr18",
+      "target_detected": false,
+      "iou": 0.24164026711941405,
+      "confidence": 0.20430871844291687
+    }
+  ],
+  "reserved_detected": 2,
+  "fixed_tests": {
+    "scaled": {
+      "person": {
+        "TP": 36,
+        "FP": 9,
+        "FN": 4,
+        "precision": 0.8,
+        "recall": 0.9
+      },
+      "forklift": {
+        "TP": 38,
+        "FP": 7,
+        "FN": 2,
+        "precision": 0.8444444444444444,
+        "recall": 0.95
+      }
+    },
+    "old": {
+      "person": {
+        "TP": 13,
+        "FP": 1,
+        "FN": 5,
+        "precision": 0.9285714285714286,
+        "recall": 0.7222222222222222
+      },
+      "forklift": {
+        "TP": 11,
+        "FP": 1,
+        "FN": 0,
+        "precision": 0.9166666666666666,
+        "recall": 1.0
+      }
+    }
+  },
+  "model_promoted": false,
+  "limit": "same-camera development gate; reserved labels score target vehicle recall only"
+}
