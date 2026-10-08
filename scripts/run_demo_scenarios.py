@@ -18,7 +18,7 @@ from src.scenario_zone import ScenarioZone,mark_uncertain_lane_events
 from src.forklift_proximity import ForkliftProximity
 from src.hoodie_guard import apply_hood_guard,predict_hood_detections
 from src.ppe_vehicle_guard import apply_ppe_vehicle_guard
-from src.scenario_render import render
+from src.scenario_render import exclude_driver_overlap_pairs, render
 from src.feature_status import feature_status
 from src.detection_review_profile import predict_review_objects,select_review_objects
 from src.event_contract import export_events
@@ -101,6 +101,7 @@ def main():
      for kind in['zone_access','zone_dwell']:groups[kind]=[e for e in zrow['events']if e['event_type']==kind]
     if prox:
      proximity=prox.update(t,detections,(h,w),cut);events=proximity['events']
+     if n==1:events=exclude_driver_overlap_pairs(events,pcfg.get('driver_overlap_exclusion_ratio',.8))
      if n==7:
       inside_boxes=[e['person_bbox_xyxy']for e in zrow['events']if e['event_type']=='zone_dwell'and e['inside']is True and e.get('person_bbox_xyxy')];present=bool(zrow['vehicle_lane_state']and zrow['vehicle_lane_state']['state']=='observed_in_lane')
       from src.ppe_tiled_inference import iou
@@ -140,9 +141,9 @@ def main():
       identity=tuple(e.get('forklift_track_ids',[]))or tuple(str(e.get(k,''))for k in['track_id','person_track_id','forklift_track_id']);key=(e['event_type'],identity);state=(e.get('severity'),e.get('observation_status'),e.get('ppe_state'),e.get('inside'),e.get('reason'),e.get('risk_reason'),bool(e.get('hood_evidence')));now[key]=state
       if old.get(key)!=state:transitions.append(e)
      laststate[feature]=now;feature_rows.setdefault(feature,[]).append({'frame_index':idx,'timestamp_seconds':t,'events':events,'transitions':transitions,'scene_id':zrow['scene_id']if zrow else pt.scene,'roi_active':zrow['roi_active']if zrow else True})
-    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None)
+    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None,proximity_warning_ratio=pcfg.get('warning_ratio',1.6))
     if review:
-     cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} person-height gap",(12,125),0,.48,(230,230,230),1)
+     cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} person-height gap",(12,h-34),0,.42,(230,230,230),1)
     if use_hood:
      for event in ppe_events:
       if event.get('hood_evidence'):

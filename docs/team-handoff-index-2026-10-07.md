@@ -21,7 +21,7 @@
 | [pr-draft-2026-10-07.md](pr-draft-2026-10-07.md) | 저장소 소유자 | main PR 클릭 링크 |
 | [remaining-gaps-2026-10-07.md](remaining-gaps-2026-10-07.md) | AI·전원 | 남은 갭·해결 방안·보류 사유 |
 
-브랜치: `fix/proximity-detection-audit`  
+브랜치: `feat/hood-context-training-v2`  
 main 병합: **아직 아님** (이 브랜치로 pull)  
 
 모델 zip 생성: `python scripts/pack_demo_models.py` → `outputs/checkpoints/demo_models_share_*.zip`

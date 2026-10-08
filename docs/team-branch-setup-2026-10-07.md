@@ -1,8 +1,9 @@
 # 팀원용: 브랜치·시연 영상 받는 방법 (2026-10-07)
 
 저장소: https://github.com/Sang-Hyeop/K_newdeal_visionAI  
-작업 브랜치: `fix/proximity-detection-audit`  
-( main 병합 전이면 **이 브랜치**를 받아야 최신 코드·영상이 보입니다.)
+작업 브랜치: `feat/hood-context-training-v2`  
+( main 병합 전이면 **이 브랜치**를 받아야 최신 코드·영상이 보입니다.  
+예전 `fix/proximity-detection-audit`는 원격에서 제거됐고 이 브랜치에 이어서 반영됨.)
 
 ---
 
@@ -11,7 +12,7 @@
 ```bash
 git clone https://github.com/Sang-Hyeop/K_newdeal_visionAI.git
 cd K_newdeal_visionAI
-git switch fix/proximity-detection-audit
+git switch feat/hood-context-training-v2
 conda activate safety
 python -m pip install -r requirements.txt
 ```
@@ -26,8 +27,8 @@ python -m pip install -r requirements.txt
 cd <저장소경로>
 git status          # 로컬 수정 있으면 먼저 커밋 또는 stash
 git fetch origin
-git switch fix/proximity-detection-audit
-git pull --ff-only origin fix/proximity-detection-audit
+git switch feat/hood-context-training-v2
+git pull --ff-only origin feat/hood-context-training-v2
 ```
 
 영상 확인:
@@ -68,7 +69,7 @@ git pull --ff-only origin main
 
 | 증상 | 확인 |
 |---|---|
-| 영상이 없다 | 브랜치가 `fix/proximity-detection-audit`인지, `git pull` 했는지 |
+| 영상이 없다 | 브랜치가 `feat/hood-context-training-v2`인지, `git pull` 했는지 |
 | 코드가 예전이다 | `git log -1 --oneline` 이 팀 공유 커밋과 같은지 |
 | 모델 경로 오류 | `.pt` 별도 전달 여부 |
 | 큰 7번 영상만 없다/다르다 | `configs/demo-videos.json`의 sha256과 로컬 파일 비교 |

@@ -4,7 +4,7 @@
 시연에서 무엇 켤지: `docs/demo-feature-show-plan-2026-10-07.md`  
 팀 JSONL 연동: `docs/team-integration-pack-2026-10-07.md`
 
-브랜치: `fix/proximity-detection-audit`  
+브랜치: `feat/hood-context-training-v2`  
 환경: `conda activate safety`
 
 ---
@@ -42,7 +42,7 @@ python scripts/pack_demo_models.py
 ```bash
 cd ~/Desktop/workspace   # 또는 clone 경로
 conda activate safety
-git switch fix/proximity-detection-audit
+git switch feat/hood-context-training-v2
 
 python scripts/run_demo_scenarios.py \
   --videos 1 2 3 4 5 6 7 \
@@ -123,7 +123,7 @@ python scripts/run_demo_scenarios.py \
 - PPE–지게차 과겹침(≥80%)은 운전자/설비 오탐 후보로 UNKNOWN
 - PPE WARNING은 검토 후보이지 확정 위반 증명 아님
 - 공유할 pt 해시: `docs/checkpoints/2026-10-07/model-share-manifest.json`
-- main 미병합 시 반드시 `fix/proximity-detection-audit` 사용
+- main 미병합 시 반드시 `feat/hood-context-training-v2` 사용
 
 ---
 
