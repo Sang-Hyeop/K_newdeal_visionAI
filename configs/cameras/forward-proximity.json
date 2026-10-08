@@ -14,5 +14,6 @@
   "zone_roi_used": false,
   "policy_version": "proximity-forward-reviewed-v3",
   "object_review_profile": "configs/video1-object-review.json",
-  "tracker_fuse_score": false
+  "tracker_fuse_score": false,
+  "driver_overlap_exclusion_ratio": 0.8
 }
