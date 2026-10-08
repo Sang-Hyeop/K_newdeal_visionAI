@@ -140,7 +140,7 @@
 ```bash
 cd ~/Desktop/workspace   # 또는 clone한 경로
 conda activate safety
-git switch fix/proximity-detection-audit
+git switch feat/hood-context-training-v2
 git pull --ff-only
 
 # 권장: 시연 1~7 통합 러너 (PPE 전 영상 ON)
