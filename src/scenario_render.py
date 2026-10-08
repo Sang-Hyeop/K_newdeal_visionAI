@@ -45,6 +45,16 @@ def render(frame,groups,zone=None,detections=None):
  return frame
 
 
+def select_proximity_display_event(events):
+ """Return the closest pair even when its proximity remains ambiguous.
+
+ A confirmed SAFE relation to a distant vehicle must not hide a closer pair
+ whose proximity could not be classified. Such a pair is rendered UNKNOWN.
+ """
+ pairs=[e for e in events if e.get('person_anchor_xy') and e.get('nearest_vehicle_point_xy') and e.get('normalized_image_gap') is not None]
+ return min(pairs,key=lambda e:e['normalized_image_gap']) if pairs else None
+
+
 def draw_review_objects(frame,detections,groups):
  """Draw each observed object once; unassociated head proposals stay in diagnostics."""
  for d in detections:
@@ -60,9 +70,11 @@ def draw_review_objects(frame,detections,groups):
   h=max(candidates,key=lambda h:h['confidence']);a,y,c,b=map(int,h['bbox_xyxy']);color=COLORS[e['severity']]
   label='HELMET'if e['severity']=='SAFE'else'NO HELMET? REVIEW'if e['severity']=='WARNING'else'HELMET? UNCONFIRMED'
   cv2.rectangle(frame,(a,y),(c,b),color,2);cv2.putText(frame,label,(a,max(120,y-5)),0,.43,color,1)
- pairs=[e for e in groups.get('proximity',[])if e.get('observation_status')=='confirmed'and e.get('person_anchor_xy')]
- if pairs:
-  e=min(pairs,key=lambda e:e['normalized_image_gap']);a=tuple(map(int,e['person_anchor_xy']));b=tuple(map(int,e['nearest_vehicle_point_xy']));color=COLORS[e['severity']]
-  cv2.line(frame,a,b,color,2);cv2.circle(frame,a,4,color,-1);cv2.circle(frame,b,4,color,-1)
+ e=select_proximity_display_event(groups.get('proximity',[]))
+ if e:
+  confirmed=e.get('observation_status')=='confirmed' and e.get('severity') in {'SAFE','WARNING','CRITICAL'}
+  state=e['severity'] if confirmed else 'UNKNOWN / CHECK';color=COLORS[state if confirmed else 'WARNING']
+  a=tuple(map(int,e['person_anchor_xy']));b=tuple(map(int,e['nearest_vehicle_point_xy']))
+  cv2.line(frame,a,b,color,3);cv2.circle(frame,a,5,color,-1);cv2.circle(frame,b,5,color,-1)
   cv2.rectangle(frame,(5,73),(min(frame.shape[1]-5,770),101),(20,20,20),-1)
-  cv2.putText(frame,f"GAP {e['image_gap_pixels']:.0f}px / PERSON HEIGHT = {e['normalized_image_gap']:.2f} | {e['severity']}",(12,93),0,.5,color,1)
+  cv2.putText(frame,f"GAP {e['image_gap_pixels']:.0f}px / PERSON HEIGHT = {e['normalized_image_gap']:.2f} | {state}",(12,93),0,.5,color,1)
