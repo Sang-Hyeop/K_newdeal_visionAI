@@ -22,13 +22,13 @@ def sha(path: Path) -> str:
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--dataset', type=Path, default=ROOT / 'data/reviewed_pilot/ppe_color_expansion_v2')
-    p.add_argument('--output', type=Path, default=ROOT / 'outputs/training/ppe_color_expansion_v2/test_comparison.json')
+    p.add_argument('--dataset', type=Path, default=ROOT / 'data/reviewed_pilot/ppe_color_expansion_v3')
+    p.add_argument('--output', type=Path, default=ROOT / 'outputs/training/ppe_color_expansion_v3/test_comparison.json')
     p.add_argument('--weights', nargs=2, type=Path, default=[
         ROOT / 'outputs/training/ppe_failure_context_v3/weights/best.pt',
-        ROOT / 'outputs/training/ppe_color_expansion_v2/weights/best.pt',
+        ROOT / 'outputs/training/ppe_color_expansion_v3/weights/best.pt',
     ])
-    p.add_argument('--names', nargs=2, default=['baseline_ppe_failure_context_v3', 'candidate_ppe_color_expansion_v2'])
+    p.add_argument('--names', nargs=2, default=['baseline_ppe_failure_context_v3', 'candidate_ppe_color_expansion_v3'])
     args = p.parse_args()
     if len(args.weights) != 2 or len(args.names) != 2:
         raise ValueError('Exactly two comparable model weights and names are required')
