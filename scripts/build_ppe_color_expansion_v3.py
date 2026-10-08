@@ -11,7 +11,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'data/reviewed_pilot/ppe_remaining_v2'
-OUT = ROOT / 'data/reviewed_pilot/ppe_color_expansion_v2'
+OUT = ROOT / 'data/reviewed_pilot/ppe_color_expansion_v3'
 AIHUB_REVIEW = ROOT / 'data/training_review/ppe_color_expansion_v2'
 ROBOFLOW_REVIEW = ROOT / 'data/training_review/ppe_color_expansion_v3'
 
@@ -114,6 +114,7 @@ def main():
     # project pilot mapping; validation/test records are prohibited here.
     candidates = json.loads((ROBOFLOW_REVIEW / 'candidates.json').read_text())
     excluded_roboflow_holdout_groups = []
+    excluded_roboflow_class_scope = []
     for r in candidates:
         if r['id'] not in ROBOFLOW_IDS:
             continue
@@ -121,6 +122,12 @@ def main():
             raise ValueError(f'non-train source was selected: {r["id"]} {r["split"]}')
         if r['visual_group'] in blocked_visual_groups:
             excluded_roboflow_holdout_groups.append(r['id'])
+            continue
+        # The source class "No Helmet" contains person-sized boxes in this
+        # review pool, which do not match our no_helmet_head class. Keep only
+        # verified helmeted-head-only images; bare-head samples come from AIHub.
+        if set(r['classes']) != {0}:
+            excluded_roboflow_class_scope.append(r['id'])
             continue
         src = Path(r['source'])
         image = cv2.imread(str(src))
@@ -132,7 +139,7 @@ def main():
             'source_id': r['id'], 'source_group': r['visual_group'],
             'source_image': str(src), 'source_label': r['label_source'],
             'source_image_sha256': sha(src), 'source_label_sha256': sha(Path(r['label_source'])),
-            'manual_review': 'original-resolution visual review; candidate labels retained',
+            'manual_review': 'original-resolution visual review; only helmeted-head boxes retained',
             'visible_hardhat_colors': ROBOFLOW_IDS[r['id']]['helmet_colors'],
             'review_note': ROBOFLOW_IDS[r['id']]['note'],
             'status': 'training_eligible_after_visual_review'
@@ -198,6 +205,7 @@ def main():
                    for s in ('train', 'val', 'test')},
         'training_eligible_count': sum(bool(r.get('training_eligible')) for r in rows),
         'excluded_roboflow_holdout_visual_groups': excluded_roboflow_holdout_groups,
+        'excluded_roboflow_incompatible_class_scope': excluded_roboflow_class_scope,
         'blocked_aihub_holdout_dates': sorted(blocked_aihub_dates),
         'old_holdouts_byte_identical': True,
         'holdout_files_sha256': holdout_hashes,
