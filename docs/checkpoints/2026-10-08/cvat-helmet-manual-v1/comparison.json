@@ -1,0 +1,101 @@
+{
+  "scope": "development comparison, source-video disjoint within new manual set; historical exposure not excluded, not independent site generalization",
+  "models": {
+    "baseline": {
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/models/demo_ppe_failure_context_v3/best.pt",
+      "sha256": "0a8f2857a4a6f9585167bfe92e6e08cf3fef66024ec45b0ee2950cde3d660ddf",
+      "evaluations": {
+        "manual_holdout": {
+          "overall": {
+            "metrics/precision(B)": 0.9705619213633598,
+            "metrics/recall(B)": 0.1,
+            "metrics/mAP50(B)": 0.12443153851048587,
+            "metrics/mAP50-95(B)": 0.07709034507497746,
+            "fitness": 0.07709034507497746
+          },
+          "per_class": {
+            "helmeted_head": {
+              "precision": 0.9411238427267196,
+              "recall": 0.2,
+              "map50": 0.22358851674641148
+            },
+            "no_helmet_head": {
+              "precision": 1.0,
+              "recall": 0.0,
+              "map50": 0.025274560274560272
+            }
+          }
+        },
+        "legacy_regression": {
+          "overall": {
+            "metrics/precision(B)": 0.6650708721608074,
+            "metrics/recall(B)": 0.7546685674455552,
+            "metrics/mAP50(B)": 0.7796864899806073,
+            "metrics/mAP50-95(B)": 0.3770102497784903,
+            "fitness": 0.3770102497784903
+          },
+          "per_class": {
+            "helmeted_head": {
+              "precision": 0.8321786648079258,
+              "recall": 0.7093371348911104,
+              "map50": 0.7912637362637359
+            },
+            "no_helmet_head": {
+              "precision": 0.49796307951368896,
+              "recall": 0.8,
+              "map50": 0.7681092436974788
+            }
+          }
+        }
+      }
+    },
+    "candidate": {
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/cvat_helmet_manual_v1/fit/weights/best.pt",
+      "sha256": "59e81e9950a8068b5846811c033d6852b0682bc60e887fcbc5218c1f068b8427",
+      "evaluations": {
+        "manual_holdout": {
+          "overall": {
+            "metrics/precision(B)": 0.9575990050583536,
+            "metrics/recall(B)": 0.3544239795686692,
+            "metrics/mAP50(B)": 0.45545931251288396,
+            "metrics/mAP50-95(B)": 0.18589314103401205,
+            "fitness": 0.18589314103401205
+          },
+          "per_class": {
+            "helmeted_head": {
+              "precision": 1.0,
+              "recall": 0.2921812924706718,
+              "map50": 0.36683080808080804
+            },
+            "no_helmet_head": {
+              "precision": 0.9151980101167071,
+              "recall": 0.4166666666666667,
+              "map50": 0.5440878169449599
+            }
+          }
+        },
+        "legacy_regression": {
+          "overall": {
+            "metrics/precision(B)": 0.9730676658917258,
+            "metrics/recall(B)": 0.7336982679910286,
+            "metrics/mAP50(B)": 0.8934751773049645,
+            "metrics/mAP50-95(B)": 0.40577010180742573,
+            "fitness": 0.40577010180742573
+          },
+          "per_class": {
+            "helmeted_head": {
+              "precision": 0.9461353317834515,
+              "recall": 0.5714285714285714,
+              "map50": 0.7919503546099289
+            },
+            "no_helmet_head": {
+              "precision": 1.0,
+              "recall": 0.8959679645534857,
+              "map50": 0.995
+            }
+          }
+        }
+      }
+    }
+  }
+}
