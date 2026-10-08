@@ -1,0 +1,8 @@
+---
+description: 팀 프로젝트 평가 체크리스트를 항상 상기
+alwaysApply: true
+---
+
+의미 있는 학습·시연·기능 연결·문서·인계·성능 주장 전에 `docs/evaluation-checklist.md`의 8개 평가 항목을 읽고 해당 작업이 어떤 항목에 기여하는지 확인한다.
+시연 전용 점수만으로 현장 일반화·평가 완료를 주장하지 않는다.
+평가 항목이 바뀌면 `docs/evaluation-checklist.md`를 갱신한다.
