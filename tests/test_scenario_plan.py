@@ -32,9 +32,9 @@ class ScenarioTests(unittest.TestCase):
  def test_vehicle_pair_contract(self):
   row=normalize_event({'event_type':'forklift_forklift_proximity','forklift_track_ids':['a','b'],'timestamp_seconds':0,'severity':'WARNING','observation_status':'confirmed'},camera_id='c',video='v',source_sha256='s',model_version='m',config_version='cfg');self.assertEqual(row['track_ids'],['a','b'])
  def test_roi_alpha_and_hole(self):
-  image=np.full((300,300,3),100,np.uint8);hole=[[100,100],[150,100],[150,150],[100,150]];roi_overlay(image,P,[hole],'WARNING');self.assertEqual(image[50,50].tolist(),[80,108,131]);self.assertEqual(image[120,120].tolist(),[85,112,85])
+  image=np.full((300,300,3),100,np.uint8);hole=[[100,100],[150,100],[150,150],[100,150]];roi_overlay(image,P,[hole],'WARNING');self.assertEqual(image[50,50].tolist(),[80,108,131]);self.assertEqual(image[120,120].tolist(),[100,100,100])
  def test_unknown_roi_is_not_green_fill(self):
-  image=np.full((300,300,3),100,np.uint8);roi_overlay(image,P,[],None);self.assertEqual(image[50,50].tolist(),[100,100,100])
+  image=np.full((300,300,3),100,np.uint8);roi_overlay(image,P,[],None);self.assertEqual(image[50,50].tolist(),[108,108,108])
  def config(self):return {'camera_id':'c','roi_id':'z','max_gap_seconds':1,'safe_seconds':3,'critical_seconds':5,'vehicle_missing_hold_seconds':1,'monitor_floor_normalized':[[.1,.1],[.9,.1],[.9,.9],[.1,.9]],'safe_polygons_normalized':[[[.4,.4],[.6,.4],[.6,.6],[.4,.6]]]}
  def test_safe_zone_is_not_vehicle_lane(self):
   rule=ScenarioZone(self.config(),(500,500),5);r=rule.update(0,[{'class':'person','confidence':.9,'bbox_xyxy':[230,200,270,250]}],(500,500));self.assertFalse(r['events'][0]['inside']);self.assertEqual(r['events'][0]['severity'],'SAFE')
