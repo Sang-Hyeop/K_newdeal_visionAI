@@ -1,0 +1,25 @@
+{
+  "status": "selected_final_ppe",
+  "weights": "models/ppe_final/ppe_helmet_v6_960.pt",
+  "sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+  "imgsz": 960,
+  "confidence_by_class": {
+    "0": 0.15,
+    "1": 0.15
+  },
+  "classes": {
+    "0": "helmeted_head",
+    "1": "no_helmet_head"
+  },
+  "duplicate_filter": {
+    "cover": 0.8,
+    "overlap": 0.7
+  },
+  "training_items": 510,
+  "hood_policy": "hood-only is no_helmet_head per user policy",
+  "limitations": [
+    "Small repeatedly used development evaluation; no independent-site generalization claim",
+    "Temporal pending and person rejection experiments not promoted"
+  ],
+  "integration": "Standalone final detector provided; historical ensemble demo runner remains unchanged"
+}
