@@ -18,7 +18,7 @@ class ScenarioZone:
    return result
   self.polygon=polygon(config['monitor_floor_normalized']);self.safe_polygons=[polygon(p)for p in config['safe_polygons_normalized']]
   self.contains=lambda point:cv2.pointPolygonTest(self.polygon,point,False)>=0 and not any(cv2.pointPolygonTest(p,point,False)>=0 for p in self.safe_polygons)
-  self.people=PersonTracker(fps,config['max_gap_seconds'],namespace='ZP');self.vehicles=PersonTracker(fps,config['max_gap_seconds'],target_class='forklift',namespace='ZF');self.dwell=ZoneDwell(self.polygon,config['safe_seconds'],config['critical_seconds'],config['max_gap_seconds'],contains=self.contains);self.lane=LaneHazard(self.polygon,config['vehicle_missing_hold_seconds'],contains=self.contains,policy='timed',safe_seconds=config['safe_seconds'],critical_seconds=config['critical_seconds']);self.previous={};self.roi_active=True
+  self.people=PersonTracker(fps,config['max_gap_seconds'],namespace='ZP');self.vehicles=PersonTracker(fps,config['max_gap_seconds'],target_class='forklift',namespace='ZF');self.dwell=ZoneDwell(self.polygon,config['safe_seconds'],config['critical_seconds'],config['max_gap_seconds'],contains=self.contains);self.lane=LaneHazard(self.polygon,config['vehicle_missing_hold_seconds'],contains=self.contains,policy='timed',safe_seconds=config['safe_seconds'],critical_seconds=config.get('vehicle_critical_seconds',config['critical_seconds']));self.previous={};self.roi_active=True
  def update(self,timestamp,detections,shape,scene_cut=False):
   scene=self.people.scene;people,missing=self.people.update(timestamp,detections,shape,scene_cut);vehicles,vm=self.vehicles.update(timestamp,detections,shape,scene_cut)
   if self.people.scene!=scene:self.dwell.reset();self.previous.clear()

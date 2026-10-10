@@ -102,5 +102,6 @@
   ],
   "vehicle_presence_scope": "same_monitored_floor_lane_outside_safe_boxes",
   "distance_mode": "image_plane",
-  "policy_version": "warehouse_lane_timed_3_5_v1"
+  "policy_version": "user_vehicle_lane_3_seconds_v3",
+  "vehicle_critical_seconds": 3
 }

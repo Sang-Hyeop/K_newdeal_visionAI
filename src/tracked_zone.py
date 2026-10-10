@@ -21,7 +21,7 @@ class TrackedZone:
             self.access=ZoneAccess(self.polygon,min(w,h)*ratio,config['max_gap_seconds'])
         self.forklift_tracker=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F') if config.get('vehicle_conditioned',False) else None
         # Demo rule (videos 4/7): no vehicle <safe SAFE / >=safe WARNING; with vehicle immediate WARNING / >=critical CRITICAL.
-        self.lane=LaneHazard(self.polygon,config.get('vehicle_missing_hold_seconds',1.0),policy=config.get('lane_policy','timed'),safe_seconds=config['safe_seconds'],critical_seconds=config['critical_seconds']) if self.forklift_tracker else None
+        self.lane=LaneHazard(self.polygon,config.get('vehicle_missing_hold_seconds',1.0),policy=config.get('lane_policy','timed'),safe_seconds=config['safe_seconds'],critical_seconds=config.get('vehicle_critical_seconds',config['critical_seconds'])) if self.forklift_tracker else None
         self.config=config
         self.previous={}
         self.roi_active=True

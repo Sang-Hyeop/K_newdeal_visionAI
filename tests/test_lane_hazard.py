@@ -38,3 +38,23 @@ class LaneTests(unittest.TestCase):
  def test_clipped_vehicle_unknown(self):
   r=LaneHazard(P);e=event();r.update(0,[e],[{'track_id':'f','bbox_xyxy':[200,200,250,500]}],(500,500));self.assertIsNone(e['severity'])
 if __name__=='__main__':unittest.main()
+
+class UserThreeSecondLaneTests(unittest.TestCase):
+ def test_multiple_people_vehicle_and_no_vehicle_boundary(self):
+  for has_vehicle in [False,True]:
+   rule=LaneHazard(P,policy='timed',safe_seconds=3,critical_seconds=3)
+   for timestamp in [0,2.99,3,3.01]:
+    events=[]
+    for key in ['p1','p2']:
+     e=event(kind='zone_dwell');e.update(track_id=key,observed_dwell_seconds=timestamp);events.append(e)
+    rule.update(timestamp,events,[fork()] if has_vehicle else [],(500,500))
+    expected=('WARNING' if timestamp<3 else 'CRITICAL') if has_vehicle else ('SAFE' if timestamp<3 else 'WARNING')
+    self.assertEqual([e['severity'] for e in events],[expected,expected])
+ def test_configured_camera_routes_use_user_vehicle_threshold(self):
+  import json
+  from pathlib import Path
+  from src.scenario_zone import ScenarioZone
+  root=Path(__file__).resolve().parents[1]
+  for name,cls in [('dwell-demo.json',TrackedZone),('warehouse-summary.json',ScenarioZone)]:
+   cfg=json.loads((root/'configs/cameras'/name).read_text());pipe=cls(cfg,(720,1280),5)
+   self.assertEqual(pipe.lane.safe,3);self.assertEqual(pipe.lane.critical,3)

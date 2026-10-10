@@ -8,7 +8,7 @@ class LaneHazard:
         self.polygon=np.asarray(polygon,dtype=np.float32)
         if not math.isfinite(hold_seconds) or hold_seconds<=0:raise ValueError('Positive hold required')
         self.hold=hold_seconds;self.vehicles={};self.last=None;self.contains=contains;self.policy=policy;self.safe=safe_seconds;self.critical=critical_seconds
-        if policy not in {"immediate","timed"} or not 0<=safe_seconds<critical_seconds:raise ValueError("Invalid lane policy")
+        if policy not in {"immediate","timed"} or not 0<=safe_seconds<=critical_seconds:raise ValueError("Invalid lane policy")
     def reset(self):self.vehicles.clear();self.last=None
     def update(self,timestamp,events,forklifts,shape):
         if not math.isfinite(timestamp) or timestamp<0 or self.last is not None and timestamp<=self.last:raise ValueError('Increasing timestamps required')
