@@ -1,0 +1,10 @@
+{
+  "stage": "completed",
+  "updated_at": "2026-10-12 22:35:05",
+  "training_images": 690,
+  "validation_images": 99,
+  "test_images": 61,
+  "epochs": 6,
+  "candidate_weights": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/forklift_real_context_v2/weights/best.pt",
+  "promoted": false
+}

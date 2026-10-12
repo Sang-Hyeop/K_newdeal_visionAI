@@ -1,0 +1,5 @@
+path: .
+train: train.txt
+names:
+  0: helmeted_head
+  1: no_helmet_head

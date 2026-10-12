@@ -1,0 +1,16 @@
+[
+  {
+    "video": 4,
+    "seconds": 10,
+    "heads": 4,
+    "rejected_additions": 1,
+    "matches_cached_evaluation": true
+  },
+  {
+    "video": 7,
+    "seconds": 91,
+    "heads": 2,
+    "rejected_additions": 2,
+    "matches_cached_evaluation": true
+  }
+]

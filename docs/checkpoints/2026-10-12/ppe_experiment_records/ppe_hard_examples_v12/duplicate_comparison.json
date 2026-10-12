@@ -1,0 +1,598 @@
+{
+  "policy": "Same-class confidence-ordered suppression; IoU threshold and containment coverage selected on legacy validation with no increased FN. Conservative, experimental, not deployed.",
+  "selected": {
+    "cover": 0.8,
+    "overlap": 0.7,
+    "validation": {
+      "classes": {
+        "0": {
+          "TP": 7,
+          "FP": 1,
+          "FN": 1,
+          "f1": 0.875
+        },
+        "1": {
+          "TP": 17,
+          "FP": 4,
+          "FN": 2,
+          "f1": 0.85
+        }
+      },
+      "macro_f1": 0.8625,
+      "total": {
+        "TP": 24,
+        "FP": 5,
+        "FN": 3
+      }
+    }
+  },
+  "grid": [
+    {
+      "cover": 0.8,
+      "overlap": 0.7,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.8,
+      "overlap": 0.8,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.8,
+      "overlap": 0.9,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.8,
+      "overlap": 1.01,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.9,
+      "overlap": 0.7,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.9,
+      "overlap": 0.8,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.9,
+      "overlap": 0.9,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.9,
+      "overlap": 1.01,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.95,
+      "overlap": 0.7,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.95,
+      "overlap": 0.8,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.95,
+      "overlap": 0.9,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 0.95,
+      "overlap": 1.01,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 1.01,
+      "overlap": 0.7,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 1.01,
+      "overlap": 0.8,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 1.01,
+      "overlap": 0.9,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    },
+    {
+      "cover": 1.01,
+      "overlap": 1.01,
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 17,
+            "FP": 4,
+            "FN": 2,
+            "f1": 0.85
+          }
+        },
+        "macro_f1": 0.8625,
+        "total": {
+          "TP": 24,
+          "FP": 5,
+          "FN": 3
+        }
+      }
+    }
+  ],
+  "baseline_validation": {
+    "classes": {
+      "0": {
+        "TP": 7,
+        "FP": 1,
+        "FN": 1,
+        "f1": 0.875
+      },
+      "1": {
+        "TP": 17,
+        "FP": 4,
+        "FN": 2,
+        "f1": 0.85
+      }
+    },
+    "macro_f1": 0.8625,
+    "total": {
+      "TP": 24,
+      "FP": 5,
+      "FN": 3
+    }
+  },
+  "baseline_test": {
+    "classes": {
+      "0": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 3,
+        "f1": 0.7272727272727273
+      },
+      "1": {
+        "TP": 5,
+        "FP": 2,
+        "FN": 0,
+        "f1": 0.8333333333333334
+      }
+    },
+    "macro_f1": 0.7803030303030303,
+    "total": {
+      "TP": 9,
+      "FP": 2,
+      "FN": 3
+    }
+  },
+  "deduplicated_test": {
+    "classes": {
+      "0": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 3,
+        "f1": 0.7272727272727273
+      },
+      "1": {
+        "TP": 5,
+        "FP": 2,
+        "FN": 0,
+        "f1": 0.8333333333333334
+      }
+    },
+    "macro_f1": 0.7803030303030303,
+    "total": {
+      "TP": 9,
+      "FP": 2,
+      "FN": 3
+    }
+  },
+  "baseline_sequence": {
+    "classes": {
+      "0": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "f1": 0.8
+      },
+      "1": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 1,
+        "f1": 0.5714285714285714
+      }
+    },
+    "macro_f1": 0.6857142857142857,
+    "total": {
+      "TP": 6,
+      "FP": 2,
+      "FN": 3
+    }
+  },
+  "deduplicated_sequence": {
+    "classes": {
+      "0": {
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "f1": 0.8
+      },
+      "1": {
+        "TP": 2,
+        "FP": 2,
+        "FN": 1,
+        "f1": 0.5714285714285714
+      }
+    },
+    "macro_f1": 0.6857142857142857,
+    "total": {
+      "TP": 6,
+      "FP": 2,
+      "FN": 3
+    }
+  },
+  "demo5_baseline": {
+    "classes": {
+      "0": {
+        "TP": 12,
+        "FP": 4,
+        "FN": 0
+      },
+      "1": {
+        "TP": 7,
+        "FP": 0,
+        "FN": 0
+      }
+    },
+    "total": {
+      "TP": 19,
+      "FP": 4,
+      "FN": 0
+    },
+    "ignored_predictions": 0
+  },
+  "demo5_deduplicated": {
+    "classes": {
+      "0": {
+        "TP": 12,
+        "FP": 1,
+        "FN": 0
+      },
+      "1": {
+        "TP": 7,
+        "FP": 0,
+        "FN": 0
+      }
+    },
+    "total": {
+      "TP": 19,
+      "FP": 1,
+      "FN": 0
+    },
+    "ignored_predictions": 0
+  },
+  "scope": "Small legacy sets and reused shared-site sequence set; demo5 assistant approximate reference is not independent benchmark. No deployment change."
+}

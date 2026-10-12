@@ -1,0 +1,92 @@
+{
+  "scope": "9 fresh frames from 3 source sequences unused by recorded PPE training; shared AIHub site/day remains, not independent-site generalization. Source GT is head-level, original head annotations visually reviewed.",
+  "source_sequences": 3,
+  "frames": 9,
+  "models": {
+    "v11": {
+      "weight_sha256": "24644dc92a7455cb173985226d20d975a02d7d88fcce2ab2aefaab277cab3f5c",
+      "methods": {
+        "full960": {
+          "classes": {
+            "0": {
+              "TP": 3,
+              "FP": 2,
+              "FN": 3
+            },
+            "1": {
+              "TP": 1,
+              "FP": 1,
+              "FN": 2
+            }
+          },
+          "macro_f1": 0.4727272727272727,
+          "total": {
+            "TP": 4,
+            "FP": 3,
+            "FN": 5
+          }
+        },
+        "multiscale": {
+          "classes": {
+            "0": {
+              "TP": 2,
+              "FP": 1,
+              "FN": 4
+            },
+            "1": {
+              "TP": 2,
+              "FP": 2,
+              "FN": 1
+            }
+          },
+          "macro_f1": 0.5079365079365079,
+          "total": {
+            "TP": 4,
+            "FP": 3,
+            "FN": 5
+          }
+        },
+        "guarded": {
+          "classes": {
+            "0": {
+              "TP": 2,
+              "FP": 0,
+              "FN": 4
+            },
+            "1": {
+              "TP": 2,
+              "FP": 1,
+              "FN": 1
+            }
+          },
+          "macro_f1": 0.5833333333333333,
+          "total": {
+            "TP": 4,
+            "FP": 1,
+            "FN": 5
+          }
+        },
+        "calibrated": {
+          "classes": {
+            "0": {
+              "TP": 2,
+              "FP": 0,
+              "FN": 4
+            },
+            "1": {
+              "TP": 1,
+              "FP": 0,
+              "FN": 2
+            }
+          },
+          "macro_f1": 0.5,
+          "total": {
+            "TP": 3,
+            "FP": 0,
+            "FN": 6
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,619 @@
+{
+  "records": [
+    {
+      "name": "real_00_S63_DATA3_H1_L1_D2023-09-14-10-30_001_000098.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000098.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-30_001_000098.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-09-14-10-30_001",
+      "source_sha256": "6fa2b63b857ae275c3e57cb60721f0e0a23428af92f287b5ab597f092366bd36",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            1725.4099999999996,
+            439.0399999999997,
+            1774.2815439336596,
+            479.52502210857625
+          ]
+        },
+        {
+          "class": 0,
+          "box": [
+            938.0599999999993,
+            422.5500000000006,
+            1057.5462127854628,
+            571.5820670305774
+          ]
+        },
+        {
+          "class": 0,
+          "box": [
+            1393.9599507655194,
+            437.9565013615895,
+            1434.6690966838844,
+            488.61334620522194
+          ]
+        },
+        {
+          "class": 0,
+          "box": [
+            1515.3595391082713,
+            283.7319173830605,
+            1553.505372297997,
+            309.255967532068
+          ]
+        }
+      ],
+      "head_height_at_960": 12.762025074503754,
+      "status": "reserved_not_trained",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "At least one supplied annotation may describe equipment or a held helmet rather than a worn helmet head; whole new candidate reserved, original510 unchanged."
+    },
+    {
+      "name": "real_01_S63_DATA3_H1_L1_D2023-09-14-10-23_001_001691.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_001691.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_001691.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+      "source_sha256": "2c4b02a14da6c41083f023c060b87ea6c02cf13a287e4e31dc100a396abb201c",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            778.4400000000012,
+            295.3800000000006,
+            838.3110693654402,
+            321.10894652099785
+          ]
+        }
+      ],
+      "head_height_at_960": 12.864473260498613,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_02_S63_DATA3_H1_L1_D2023-09-14-10-23_001_000887.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_000887.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_000887.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+      "source_sha256": "827103e809f41d197632d8b3df64af2f4bcb828fd062bd9432be717989abecee",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            830.1760237168799,
+            140.7134733098444,
+            942.5841516892101,
+            259.91549912665624
+          ]
+        },
+        {
+          "class": 0,
+          "box": [
+            1027.1771028539288,
+            416.0494035262282,
+            1056.1349910234387,
+            442.5251869954946
+          ]
+        }
+      ],
+      "head_height_at_960": 13.237891734633195,
+      "status": "reserved_not_trained",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "At least one supplied annotation may describe equipment or a held helmet rather than a worn helmet head; whole new candidate reserved, original510 unchanged."
+    },
+    {
+      "name": "real_03_S63_DATA3_H1_L1_D2023-09-14-10-23_001_002125.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_002125.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-23_001_002125.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-09-14-10-23_001",
+      "source_sha256": "badccbfad0398d1fcde55b80c832101addc04edf15b769c85a4726b08dbf52a0",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            861.6799999999972,
+            262.34,
+            931.8754310156535,
+            291.0383195273046
+          ]
+        }
+      ],
+      "head_height_at_960": 14.349159763652324,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_04_S63_DATA3_H1_L1_D2023-10-25-13-30_001_000262.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000262.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_000262.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+      "source_sha256": "f1137062a068cc1400b1c93045aff8dcf6daf17296ce13ef3906170ab385ed5d",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            1085.8288250958053,
+            128.2440379595738,
+            1173.7605362326808,
+            158.53631725729687
+          ]
+        }
+      ],
+      "head_height_at_960": 15.146139648861533,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_05_S63_DATA3_H1_L1_D2023-10-25-13-30_001_002845.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_002845.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_002845.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+      "source_sha256": "84055432c4c3591ea872795de20bb7315cfeb85dde938e96f688ba7c37f96e39",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            1121.7599999999966,
+            190.4099999999995,
+            1211.1760530305269,
+            222.7607533015328
+          ]
+        }
+      ],
+      "head_height_at_960": 16.175376650766637,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_06_S63_DATA3_H1_L1_D2023-10-25-13-30_001_003099.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_003099.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-30_001_003099.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-10-25-13-30_001",
+      "source_sha256": "f289c3a3ee54f427d465ad905d43ab6351c84ca81cba7602a4de3cd0c9373a0b",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            1115.21,
+            120.3662172276849,
+            1203.4375711159737,
+            153.76838074398233
+          ]
+        }
+      ],
+      "head_height_at_960": 16.701081758148717,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_07_S63_DATA3_H1_L1_D2023-10-25-13-35_001_003364.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_003364.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_003364.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-10-25-13-35_001",
+      "source_sha256": "19e8684190d58335a432607ab1aa5d4600181dc2b6a0d7fa8ec0bdab643eba51",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            1016.1590065162306,
+            416.3899999999995,
+            1126.443695693346,
+            468.20990759039097
+          ]
+        }
+      ],
+      "head_height_at_960": 25.909953795195747,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_08_S63_DATA3_H1_L1_D2023-09-14-10-36_002_001244.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_001244.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-36_002_001244.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-09-14-10-36_002",
+      "source_sha256": "eb4220acaa5a2eecbe40aa69a17bfc73eae87e6203fa5512479540f62e9c8f72",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            599.05,
+            286.23,
+            700.4792839631953,
+            340.1483082807923
+          ]
+        }
+      ],
+      "head_height_at_960": 26.95915414039615,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_09_S63_DATA3_H1_L1_D2023-10-25-13-35_001_001203.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_001203.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-25-13-35_001_001203.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-10-25-13-35_001",
+      "source_sha256": "5f243710e27965d9973c468ce0d189244b3eb5b87127910eb134c522dbc84690",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            918.8873906263512,
+            164.1300000000002,
+            1024.1627052624494,
+            220.47581312208098
+          ]
+        }
+      ],
+      "head_height_at_960": 28.172906561040392,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_10_S63_DATA3_H1_L1_D2023-10-13-10-20_001_000510.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-10-13-10-20_001_000510.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-10-13-10-20_001_000510.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-10-13-10-20_001",
+      "source_sha256": "6d897dae919a6459f4241c246548324ba6fd5000cedb62d3546151de65695412",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            707.1795697681155,
+            549.8994624968961,
+            812.839039958574,
+            613.8767563736875
+          ]
+        }
+      ],
+      "head_height_at_960": 31.988646938395675,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_11_S63_DATA3_H1_L1_D2023-09-14-10-37_001_000304.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_000304.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_worn/S63_DATA3_H1_L1_D2023-09-14-10-37_001_000304.json",
+      "source_sequence": "S63_DATA3_H1_L1_D2023-09-14-10-37_001",
+      "source_sha256": "8f473c5744f607e270bab095468446be184f8bd3a55c63c61ac193ceed2f91ed",
+      "gt": [
+        {
+          "class": 0,
+          "box": [
+            582.7600000000003,
+            242.9700000000001,
+            676.8602613604575,
+            311.458026614561
+          ]
+        }
+      ],
+      "head_height_at_960": 34.24401330728044,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_12_S63_DATA3_H0_L1_D2023-09-14-10-33_001_003411.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_003411.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_003411.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+      "source_sha256": "b9c12e26db6938f4346cad112bdd9095e99562557544c16b05f74a70508bf140",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            778.94,
+            259.61,
+            846.5832520461654,
+            287.821654306842
+          ]
+        }
+      ],
+      "head_height_at_960": 14.10582715342099,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_13_S63_DATA3_H0_L1_D2023-09-14-10-33_001_003070.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_003070.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_003070.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+      "source_sha256": "0ca026661c63156f1666c0f4c2f6aca5a4169dc10dad4e033735a1e12a1275e9",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            742.2699999999992,
+            297.54,
+            817.0457281432382,
+            327.7760339845514
+          ]
+        }
+      ],
+      "head_height_at_960": 15.118016992275699,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_14_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000280.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000280.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000280.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+      "source_sha256": "82e76c28546304c77984e332fbdd81feb66d49a97c41e58a22483de199985ec3",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            1362.6126741901714,
+            553.4899999999994,
+            1399.5633668716712,
+            586.7022130137073
+          ]
+        }
+      ],
+      "head_height_at_960": 16.606106506853905,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_15_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000752.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000752.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000752.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+      "source_sha256": "0f67ac87af046057776d7c6eb9558e453b2bd9b22d3b0c9a8edb59bf8a6e2062",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            1063.360000000002,
+            663.4899999999999,
+            1119.2288094193677,
+            701.8693228034683
+          ]
+        }
+      ],
+      "head_height_at_960": 19.189661401734213,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_16_S63_DATA3_H0_L1_D2023-09-14-10-20_001_002599.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-20_001_002599.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-20_001_002599.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-14-10-20_001",
+      "source_sha256": "78c52becb5118211654da0c8efc808a815b011ec75c98d93371f66a8f8e75352",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            1045.6200000000003,
+            252.6786512061154,
+            1116.641764324664,
+            291.4888151498327
+          ]
+        }
+      ],
+      "head_height_at_960": 19.40508197185865,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_17_S63_DATA3_H0_L1_D2023-10-12-10-17_001_002500.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-17_001_002500.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-17_001_002500.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-10-12-10-17_001",
+      "source_sha256": "242707dc4a38a01138bbb7a61c283bc35a473c7f9de618156dfaf5e28a8adebd",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            765.2400000000007,
+            311.3999999999992,
+            839.5288743582878,
+            351.866714198642
+          ]
+        }
+      ],
+      "head_height_at_960": 20.233357099321406,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_18_S63_DATA3_H0_L1_D2023-09-14-10-33_001_003709.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_003709.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-33_001_003709.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-14-10-33_001",
+      "source_sha256": "fcb79f6b40ced060c0bb3e990ecdfd2f08c731164c027ff3f5a28d62c0b29fca",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            828.2000000000006,
+            243.8900000000008,
+            907.2984040324795,
+            293.17848516430547
+          ]
+        }
+      ],
+      "head_height_at_960": 24.64424258215233,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_19_S63_DATA3_H0_L1_D2023-09-07-13-08_001_000462.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000462.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-07-13-08_001_000462.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-07-13-08_001",
+      "source_sha256": "2e072be9aed74442735ca934cfe645631170963455a70bc58685e7da6a79716a",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            1324.59,
+            519,
+            1372.103620402927,
+            569.839163204769
+          ]
+        }
+      ],
+      "head_height_at_960": 25.419581602384483,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_20_S63_DATA3_H0_L1_D2023-09-14-10-35_002_001653.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001653.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001653.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-14-10-35_002",
+      "source_sha256": "b82bb669962a928b686c5debbe00d736474745e09b787873123e9a0ad9d25902",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            243.6977927546488,
+            362.2691361236755,
+            304.1770251140558,
+            416.49605585416754
+          ]
+        }
+      ],
+      "head_height_at_960": 27.113459865246032,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_21_S63_DATA3_H0_L1_D2023-09-20-03-16_001_001244.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_001244.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-20-03-16_001_001244.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-20-03-16_001",
+      "source_sha256": "d5ae446bc88937e666bb48000b7d3d09885367cb253d2f01d8a0804599333ff2",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            973.1571087505497,
+            617.8946267815718,
+            1043.2169556365611,
+            676.9132393057935
+          ]
+        }
+      ],
+      "head_height_at_960": 29.50930626211084,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_22_S63_DATA3_H0_L1_D2023-09-14-10-35_002_001144.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001144.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-09-14-10-35_002_001144.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-09-14-10-35_002",
+      "source_sha256": "e2e22b14323fa18727d980b63dbf50311b4c21455cb635b1cfb84c66782ca61f",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            684.6994416922765,
+            265.6140990115569,
+            784.4489037959911,
+            327.83240898594744
+          ]
+        }
+      ],
+      "head_height_at_960": 31.109154987195268,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    },
+    {
+      "name": "real_23_S63_DATA3_H0_L1_D2023-10-12-10-21_001_001233.jpg",
+      "source_image": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/source/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_001233.jpg",
+      "source_label": "/Users/sanghyeopkim/Desktop/\u1107\u1175\u110c\u1165\u11abAI\u110b\u1161\u11ab\u110c\u1165\u11ab\u1100\u116a\u11ab\u110c\u1166(26_7 ~ 11)/datasets/aihub_smartyard/training/labels/helmet_missing/S63_DATA3_H0_L1_D2023-10-12-10-21_001_001233.json",
+      "source_sequence": "S63_DATA3_H0_L1_D2023-10-12-10-21_001",
+      "source_sha256": "ca0d8c9562dfdccf200a552546c96ef1aa63287d14b6c38c63b0856a8b2f5aee",
+      "gt": [
+        {
+          "class": 1,
+          "box": [
+            843.7600000000017,
+            451.5700000000009,
+            912.312980045258,
+            514.2580165268796
+          ]
+        }
+      ],
+      "head_height_at_960": 31.344008263439346,
+      "status": "accepted",
+      "known_scope": "New exact source frame from an existing development-site sequence; not independent scene or camera.",
+      "visual_review": "Full frame and all individual annotated head crops reviewed.",
+      "reason": "Visible head and original class accepted; no automatic pseudo labels."
+    }
+  ],
+  "source_groups": {
+    "S63_DATA3_H1_L1_D2023-09-14-10-30_001": 1,
+    "S63_DATA3_H1_L1_D2023-09-14-10-23_001": 3,
+    "S63_DATA3_H1_L1_D2023-10-25-13-30_001": 3,
+    "S63_DATA3_H1_L1_D2023-10-25-13-35_001": 2,
+    "S63_DATA3_H1_L1_D2023-09-14-10-36_002": 1,
+    "S63_DATA3_H1_L1_D2023-10-13-10-20_001": 1,
+    "S63_DATA3_H1_L1_D2023-09-14-10-37_001": 1,
+    "S63_DATA3_H0_L1_D2023-09-14-10-33_001": 3,
+    "S63_DATA3_H0_L1_D2023-09-07-13-08_001": 3,
+    "S63_DATA3_H0_L1_D2023-09-14-10-20_001": 1,
+    "S63_DATA3_H0_L1_D2023-10-12-10-17_001": 1,
+    "S63_DATA3_H0_L1_D2023-09-14-10-35_002": 2,
+    "S63_DATA3_H0_L1_D2023-09-20-03-16_001": 1,
+    "S63_DATA3_H0_L1_D2023-10-12-10-21_001": 1
+  },
+  "excluded_evaluation_sequences": [
+    "S63_DATA3_H0_L1_D2023-10-25-15-49_021",
+    "S63_DATA3_H1_L1_D2023-10-25-13-40_001",
+    "S63_DATA3_H0_L3_D2023-08-16-13-20_001",
+    "S63_DATA3_H1_L1_D2023-10-25-13-45_001",
+    "S63_DATA3_H1_L1_D2023-10-25-13-55_001"
+  ],
+  "scope": "New exact frames from official training partition, same development-site pool; all official validation PPE source groups excluded. Original labels proposed only, not added to training pending visual review.",
+  "training_started": false,
+  "accepted": 22,
+  "reserved": 2
+}

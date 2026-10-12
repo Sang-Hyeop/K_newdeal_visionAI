@@ -1,0 +1,361 @@
+{
+  "stage": "complete_evaluated_not_deployed",
+  "max_epochs": 6,
+  "training_entries": 662,
+  "imgsz": 640,
+  "freeze": 10,
+  "learning_rate": 3e-05,
+  "policy": "Hood-only=no_helmet_head. All 510 original training entries retained plus 128 contextual and 24 visually verified background crops; unobservable unlabeled heads unchanged.",
+  "scope": "Legacy val12/test9; demo adaptation, not independent generalization.",
+  "deployed": false,
+  "updated_at": "2026-10-09T22:20:30.341701",
+  "current_epoch": 6,
+  "epoch_completed": 6,
+  "metrics": {
+    "metrics/precision(B)": 0.8266163420682653,
+    "metrics/recall(B)": 0.743421052631579,
+    "metrics/mAP50(B)": 0.8086121031679678,
+    "metrics/mAP50-95(B)": 0.4610367541359749
+  },
+  "weight": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/fit/weights/best.pt",
+  "weight_sha256": "1b7c2e76e050cb865ab6744061ae77aef724542dce2005663823c9e07124c979",
+  "evaluation": {
+    "scope": "Legacy val12/test9; demo adaptation, not independent generalization.",
+    "models": {
+      "v6_multiscale": {
+        "val": {
+          "classes": {
+            "0": {
+              "TP": 7,
+              "FP": 0,
+              "FN": 1
+            },
+            "1": {
+              "TP": 18,
+              "FP": 1,
+              "FN": 1
+            }
+          },
+          "macro_f1": 0.9403508771929825,
+          "total": {
+            "TP": 25,
+            "FP": 1,
+            "FN": 2
+          }
+        },
+        "test": {
+          "classes": {
+            "0": {
+              "TP": 4,
+              "FP": 0,
+              "FN": 3
+            },
+            "1": {
+              "TP": 5,
+              "FP": 0,
+              "FN": 0
+            }
+          },
+          "macro_f1": 0.8636363636363636,
+          "total": {
+            "TP": 9,
+            "FP": 0,
+            "FN": 3
+          }
+        }
+      },
+      "v9_multiscale": {
+        "val": {
+          "classes": {
+            "0": {
+              "TP": 6,
+              "FP": 4,
+              "FN": 2
+            },
+            "1": {
+              "TP": 18,
+              "FP": 4,
+              "FN": 1
+            }
+          },
+          "macro_f1": 0.7723577235772358,
+          "total": {
+            "TP": 24,
+            "FP": 8,
+            "FN": 3
+          }
+        },
+        "test": {
+          "classes": {
+            "0": {
+              "TP": 7,
+              "FP": 2,
+              "FN": 0
+            },
+            "1": {
+              "TP": 5,
+              "FP": 0,
+              "FN": 0
+            }
+          },
+          "macro_f1": 0.9375,
+          "total": {
+            "TP": 12,
+            "FP": 2,
+            "FN": 0
+          }
+        }
+      },
+      "v9_full960": {
+        "val": {
+          "classes": {
+            "0": {
+              "TP": 7,
+              "FP": 3,
+              "FN": 1
+            },
+            "1": {
+              "TP": 16,
+              "FP": 9,
+              "FN": 3
+            }
+          },
+          "macro_f1": 0.7525252525252526,
+          "total": {
+            "TP": 23,
+            "FP": 12,
+            "FN": 4
+          }
+        },
+        "test": {
+          "classes": {
+            "0": {
+              "TP": 5,
+              "FP": 1,
+              "FN": 2
+            },
+            "1": {
+              "TP": 5,
+              "FP": 3,
+              "FN": 0
+            }
+          },
+          "macro_f1": 0.7692307692307693,
+          "total": {
+            "TP": 10,
+            "FP": 4,
+            "FN": 2
+          }
+        }
+      }
+    },
+    "training_exposed_background_check": {
+      "v6": {
+        "total_false_boxes": 0,
+        "records": [
+          {
+            "image": "background_video4_000s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_002s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_004s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_006s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_008s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_010s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_012s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_016s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_000s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_001s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_002s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_003s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_004s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_006s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_008s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_010s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_004s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_025s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_040s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_060s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_080s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_091s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_120s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_160s.jpg",
+            "false_head_boxes": 0
+          }
+        ]
+      },
+      "v9": {
+        "total_false_boxes": 0,
+        "records": [
+          {
+            "image": "background_video4_000s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_002s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_004s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_006s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_008s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_010s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_012s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video4_016s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_000s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_001s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_002s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_003s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_004s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_006s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_008s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video5_010s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_004s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_025s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_040s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_060s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_080s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_091s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_120s.jpg",
+            "false_head_boxes": 0
+          },
+          {
+            "image": "background_video7_160s.jpg",
+            "false_head_boxes": 0
+          }
+        ]
+      }
+    },
+    "background_check_scope": "These 24 background crops were trained on; fit check only, not independent accuracy."
+  },
+  "final_comparison": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/final_comparison.json",
+  "decision": "not_promoted; existing weights retained",
+  "fresh_sequences_evaluated": 3
+}

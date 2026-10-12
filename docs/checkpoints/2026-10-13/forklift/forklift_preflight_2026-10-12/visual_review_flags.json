@@ -1,0 +1,20 @@
+[
+  {
+    "image": "task_2661266_21_NVIDIA_video_01077_f00043.jpg",
+    "reason": "Camera-side left/right mast-only parts boxed as two vehicles; may be two parts of the same forklift. Requires instance-definition review before unconditional training approval",
+    "labels_modified": false,
+    "automatically_excluded": true,
+    "resolved": true,
+    "decision": "exclude_entire_image_from_training",
+    "resolution": "차량 본체 없이 동일 차량의 마스트를 두 인스턴스로 표시한 사진. 원본 보관, 학습 목록에서 제외."
+  },
+  {
+    "image": "task_2661266_15_NVIDIA_video_01077_f00108.jpg",
+    "reason": "Camera-side left/right mast-only parts boxed as two vehicles; may be two parts of the same forklift. Requires instance-definition review before unconditional training approval",
+    "labels_modified": false,
+    "automatically_excluded": true,
+    "resolved": true,
+    "decision": "exclude_entire_image_from_training",
+    "resolution": "차량 본체 없이 동일 차량의 마스트를 두 인스턴스로 표시한 사진. 원본 보관, 학습 목록에서 제외."
+  }
+]

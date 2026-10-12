@@ -1,0 +1,336 @@
+{
+  "scope": "Full-network 960 fine tuning at lr1e-5; legacy val12/test9 and shared-site sequence comparison, not independent generalization.",
+  "models": {
+    "v6_multiscale": {
+      "val": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 0,
+            "FN": 1
+          },
+          "1": {
+            "TP": 18,
+            "FP": 1,
+            "FN": 1
+          }
+        },
+        "macro_f1": 0.9403508771929825,
+        "total": {
+          "TP": 25,
+          "FP": 1,
+          "FN": 2
+        }
+      },
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 4,
+            "FP": 0,
+            "FN": 3
+          },
+          "1": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0
+          }
+        },
+        "macro_f1": 0.8636363636363636,
+        "total": {
+          "TP": 9,
+          "FP": 0,
+          "FN": 3
+        }
+      }
+    },
+    "v11_multiscale": {
+      "val": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 4,
+            "FN": 1
+          },
+          "1": {
+            "TP": 13,
+            "FP": 6,
+            "FN": 6
+          }
+        },
+        "macro_f1": 0.7105263157894737,
+        "total": {
+          "TP": 20,
+          "FP": 10,
+          "FN": 7
+        }
+      },
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 6,
+            "FP": 3,
+            "FN": 1
+          },
+          "1": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0
+          }
+        },
+        "macro_f1": 0.875,
+        "total": {
+          "TP": 11,
+          "FP": 3,
+          "FN": 1
+        }
+      }
+    },
+    "v11_full960": {
+      "val": {
+        "classes": {
+          "0": {
+            "TP": 6,
+            "FP": 1,
+            "FN": 2
+          },
+          "1": {
+            "TP": 12,
+            "FP": 10,
+            "FN": 7
+          }
+        },
+        "macro_f1": 0.6926829268292682,
+        "total": {
+          "TP": 18,
+          "FP": 11,
+          "FN": 9
+        }
+      },
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 3,
+            "FP": 2,
+            "FN": 4
+          },
+          "1": {
+            "TP": 4,
+            "FP": 2,
+            "FN": 1
+          }
+        },
+        "macro_f1": 0.6136363636363636,
+        "total": {
+          "TP": 7,
+          "FP": 4,
+          "FN": 5
+        }
+      }
+    }
+  },
+  "training_exposed_background_check": {
+    "v6": {
+      "total_false_boxes": 0,
+      "records": [
+        {
+          "image": "background_video4_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_012s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_016s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_001s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_003s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_025s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_040s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_060s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_080s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_091s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_120s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_160s.jpg",
+          "false_head_boxes": 0
+        }
+      ]
+    },
+    "v11": {
+      "total_false_boxes": 0,
+      "records": [
+        {
+          "image": "background_video4_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_012s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_016s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_001s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_003s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_025s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_040s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_060s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_080s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_091s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_120s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_160s.jpg",
+          "false_head_boxes": 0
+        }
+      ]
+    }
+  },
+  "background_check_scope": "These 24 background crops were trained on; fit check only, not independent accuracy."
+}

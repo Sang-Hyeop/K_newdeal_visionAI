@@ -1,0 +1,546 @@
+{
+  "training_entries": 662,
+  "original_images_preserved": 510,
+  "context_augmentations": 128,
+  "verified_background_augmentations": 24,
+  "legacy": {
+    "v6_multiscale": {
+      "val": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 0,
+            "FN": 1
+          },
+          "1": {
+            "TP": 18,
+            "FP": 1,
+            "FN": 1
+          }
+        },
+        "macro_f1": 0.9403508771929825,
+        "total": {
+          "TP": 25,
+          "FP": 1,
+          "FN": 2
+        }
+      },
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 4,
+            "FP": 0,
+            "FN": 3
+          },
+          "1": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0
+          }
+        },
+        "macro_f1": 0.8636363636363636,
+        "total": {
+          "TP": 9,
+          "FP": 0,
+          "FN": 3
+        }
+      }
+    },
+    "v9_multiscale": {
+      "val": {
+        "classes": {
+          "0": {
+            "TP": 6,
+            "FP": 4,
+            "FN": 2
+          },
+          "1": {
+            "TP": 18,
+            "FP": 4,
+            "FN": 1
+          }
+        },
+        "macro_f1": 0.7723577235772358,
+        "total": {
+          "TP": 24,
+          "FP": 8,
+          "FN": 3
+        }
+      },
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 2,
+            "FN": 0
+          },
+          "1": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 0
+          }
+        },
+        "macro_f1": 0.9375,
+        "total": {
+          "TP": 12,
+          "FP": 2,
+          "FN": 0
+        }
+      }
+    },
+    "v9_full960": {
+      "val": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 3,
+            "FN": 1
+          },
+          "1": {
+            "TP": 16,
+            "FP": 9,
+            "FN": 3
+          }
+        },
+        "macro_f1": 0.7525252525252526,
+        "total": {
+          "TP": 23,
+          "FP": 12,
+          "FN": 4
+        }
+      },
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 5,
+            "FP": 1,
+            "FN": 2
+          },
+          "1": {
+            "TP": 5,
+            "FP": 3,
+            "FN": 0
+          }
+        },
+        "macro_f1": 0.7692307692307693,
+        "total": {
+          "TP": 10,
+          "FP": 4,
+          "FN": 2
+        }
+      }
+    }
+  },
+  "fresh_sequence_baseline": {
+    "full960": {
+      "classes": {
+        "0": {
+          "TP": 4,
+          "FP": 0,
+          "FN": 2
+        },
+        "1": {
+          "TP": 2,
+          "FP": 2,
+          "FN": 1
+        }
+      },
+      "macro_f1": 0.6857142857142857,
+      "total": {
+        "TP": 6,
+        "FP": 2,
+        "FN": 3
+      }
+    },
+    "multiscale": {
+      "classes": {
+        "0": {
+          "TP": 2,
+          "FP": 0,
+          "FN": 4
+        },
+        "1": {
+          "TP": 2,
+          "FP": 1,
+          "FN": 1
+        }
+      },
+      "macro_f1": 0.5833333333333333,
+      "total": {
+        "TP": 4,
+        "FP": 1,
+        "FN": 5
+      }
+    },
+    "guarded": {
+      "classes": {
+        "0": {
+          "TP": 2,
+          "FP": 0,
+          "FN": 4
+        },
+        "1": {
+          "TP": 2,
+          "FP": 1,
+          "FN": 1
+        }
+      },
+      "macro_f1": 0.5833333333333333,
+      "total": {
+        "TP": 4,
+        "FP": 1,
+        "FN": 5
+      }
+    }
+  },
+  "fresh_sequence_candidate": {
+    "full960": {
+      "classes": {
+        "0": {
+          "TP": 5,
+          "FP": 0,
+          "FN": 1
+        },
+        "1": {
+          "TP": 2,
+          "FP": 3,
+          "FN": 1
+        }
+      },
+      "macro_f1": 0.7045454545454546,
+      "total": {
+        "TP": 7,
+        "FP": 3,
+        "FN": 2
+      }
+    },
+    "multiscale": {
+      "classes": {
+        "0": {
+          "TP": 4,
+          "FP": 0,
+          "FN": 2
+        },
+        "1": {
+          "TP": 2,
+          "FP": 6,
+          "FN": 1
+        }
+      },
+      "macro_f1": 0.5818181818181818,
+      "total": {
+        "TP": 6,
+        "FP": 6,
+        "FN": 3
+      }
+    },
+    "guarded": {
+      "classes": {
+        "0": {
+          "TP": 4,
+          "FP": 0,
+          "FN": 2
+        },
+        "1": {
+          "TP": 2,
+          "FP": 2,
+          "FN": 1
+        }
+      },
+      "macro_f1": 0.6857142857142857,
+      "total": {
+        "TP": 6,
+        "FP": 2,
+        "FN": 3
+      }
+    },
+    "calibrated": {
+      "classes": {
+        "0": {
+          "TP": 3,
+          "FP": 0,
+          "FN": 3
+        },
+        "1": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 3
+        }
+      },
+      "macro_f1": 0.3333333333333333,
+      "total": {
+        "TP": 3,
+        "FP": 0,
+        "FN": 6
+      }
+    }
+  },
+  "training_exposed_background_check": {
+    "v6": {
+      "total_false_boxes": 0,
+      "records": [
+        {
+          "image": "background_video4_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_012s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_016s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_001s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_003s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_025s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_040s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_060s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_080s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_091s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_120s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_160s.jpg",
+          "false_head_boxes": 0
+        }
+      ]
+    },
+    "v9": {
+      "total_false_boxes": 0,
+      "records": [
+        {
+          "image": "background_video4_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_012s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video4_016s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_000s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_001s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_002s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_003s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_006s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_008s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video5_010s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_004s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_025s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_040s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_060s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_080s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_091s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_120s.jpg",
+          "false_head_boxes": 0
+        },
+        {
+          "image": "background_video7_160s.jpg",
+          "false_head_boxes": 0
+        }
+      ]
+    }
+  },
+  "background_check_scope": "These 24 background crops were trained on; fit check only, not independent accuracy.",
+  "demo5_visual_reference": {
+    "scope": "Assistant visual reference of 4 demo-exposed video5 frames. Approximate head boxes manually placed from visible pixels; occluded head regions ignored. Diagnostic, not independent benchmark or user-CVAT replacement.",
+    "baseline": {
+      "classes": {
+        "0": {
+          "TP": 12,
+          "FP": 4,
+          "FN": 0
+        },
+        "1": {
+          "TP": 7,
+          "FP": 0,
+          "FN": 0
+        }
+      },
+      "total": {
+        "TP": 19,
+        "FP": 4,
+        "FN": 0
+      },
+      "ignored_predictions": 0
+    },
+    "v9_multiscale": {
+      "classes": {
+        "0": {
+          "TP": 12,
+          "FP": 2,
+          "FN": 0
+        },
+        "1": {
+          "TP": 6,
+          "FP": 6,
+          "FN": 1
+        }
+      },
+      "total": {
+        "TP": 18,
+        "FP": 8,
+        "FN": 1
+      },
+      "ignored_predictions": 1
+    }
+  },
+  "video_checks": [
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/video_5_baseline_vs_multiscale.mp4",
+      "frames": 12,
+      "sha256": "919d956281a06d7a8a02d041e6280b9253c0583cf641336f78416462cf663e2d",
+      "first_last_decodable": true
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/video_7_baseline_vs_multiscale.mp4",
+      "frames": 182,
+      "sha256": "05144605fd4a588c195fb62386d17c7452fa9a0d7219886bc68181e2842cf8b3",
+      "first_last_decodable": true
+    }
+  ],
+  "deployed": false,
+  "validation_selected_method": "v9_multiscale",
+  "legacy_validation_nonregression": false,
+  "fresh_sequence_nonregression": false,
+  "decision": "not_promoted; existing weights retained",
+  "scope": "Fresh 9 frames from 3 unused source sequences are shared-site small-set evidence. Demo frames and background crops are training-exposed. No independent-site or complete-video accuracy claim."
+}

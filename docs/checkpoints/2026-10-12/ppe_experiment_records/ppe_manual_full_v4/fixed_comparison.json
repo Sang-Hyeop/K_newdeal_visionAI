@@ -1,0 +1,36 @@
+{
+  "confidence": 0.25,
+  "iou": 0.5,
+  "imgsz": 640,
+  "scope": "single PPE network comparison; does not evaluate deployed ensemble or full videos",
+  "models": {
+    "baseline": {
+      "legacy": {
+        "0": {
+          "TP": 3,
+          "FP": 1,
+          "FN": 4
+        },
+        "1": {
+          "TP": 4,
+          "FP": 1,
+          "FN": 1
+        }
+      }
+    },
+    "candidate": {
+      "legacy": {
+        "0": {
+          "TP": 4,
+          "FP": 0,
+          "FN": 3
+        },
+        "1": {
+          "TP": 5,
+          "FP": 3,
+          "FN": 0
+        }
+      }
+    }
+  }
+}

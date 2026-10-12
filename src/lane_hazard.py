@@ -30,6 +30,9 @@ class LaneHazard:
         evidence=[{'track_id':k,'last_seen_seconds':self.vehicles[k]['last_seen'],'bbox_xyxy':self.vehicles[k]['bbox'],'anchor_xy':self.vehicles[k]['anchor'],'age_seconds':timestamp-self.vehicles[k]['last_seen']} for k in present+lost]
         for event in events:
             inside=event['inside']
+            position_confirmed=event['observation_status']=='confirmed' and inside is not None
+            event.update(position_observation_status='confirmed' if position_confirmed else 'unconfirmed',lane_membership=('inside' if inside else 'outside') if position_confirmed else 'unknown')
+            if event['event_type']=='zone_dwell':event['dwell_observation_status']='confirmed' if position_confirmed else 'unconfirmed'
             if event['event_type']=='zone_dwell':event['dwell_time_band']=('SAFE' if event.get('observed_dwell_seconds',0)<self.safe else 'WARNING' if event.get('observed_dwell_seconds',0)<self.critical else 'CRITICAL') if self.policy=='timed' else event['severity']
             event.update(vehicle_lane_state=state,vehicle_observation_status='confirmed' if present else 'unconfirmed' if held or lost or ambiguous else 'not_detected',
                          vehicle_track_ids=present+lost,vehicle_evidence=evidence,lane_rule='pedestrian_inside_WARNING; observed_vehicle_CRITICAL; lost_vehicle_hold_then_UNKNOWN',

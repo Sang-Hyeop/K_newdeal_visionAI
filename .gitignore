@@ -36,3 +36,6 @@ runs/
 data/videos/*
 !data/videos/*.mp4
 !data/videos/README.md
+
+# Local annotation restore backup
+/docs/checkpoints/2026-10-12/outputs_reorganization/pre_update_ppe_labels.zip

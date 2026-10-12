@@ -1,0 +1,10 @@
+{
+  "original_training_kept": 626,
+  "new_context_crops": 64,
+  "training": 690,
+  "val": 99,
+  "test": 61,
+  "new_independent_photos": 0,
+  "labels_modified": false,
+  "partial_other_boxes_rejected": true
+}

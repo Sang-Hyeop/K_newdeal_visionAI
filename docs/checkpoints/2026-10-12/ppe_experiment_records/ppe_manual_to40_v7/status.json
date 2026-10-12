@@ -1,0 +1,19 @@
+{
+  "state": "complete_experimental_not_promoted",
+  "training_entries": 510,
+  "imgsz": 960,
+  "additional_epochs": 8,
+  "previous_epochs": 32,
+  "total_target_epochs": 40,
+  "patience": 0,
+  "continuation_note": "Weights continued from stripped last.pt; optimizer restarts; not an exact optimizer-state resume.",
+  "device": "cpu",
+  "previous_model": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_960_v6/fit/weights/best.pt",
+  "policy": "All 160 user-labeled new images included; hood-only=no_helmet_head, visible helmet=helmeted_head; user unobservable unlabeled heads unchanged.",
+  "scope": "Development experiment; legacy val12/test9, not independent generalization. Existing deployed model unchanged.",
+  "updated_at_utc": "2026-10-09T11:23:18.403860+00:00",
+  "weight": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_to40_v7/fit/weights/best.pt",
+  "weight_sha256": "06b0ff97a78ece7f6551cb64f8561e108459340f21a679b9fbc246cd70c37df9",
+  "comparison": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_to40_v7/fixed_comparison.json",
+  "video": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_to40_v7/video7_v6_vs_v7_at_960.mp4"
+}

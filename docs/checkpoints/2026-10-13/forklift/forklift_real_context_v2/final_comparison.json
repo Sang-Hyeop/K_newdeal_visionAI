@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "existing_test": {
+      "metrics/precision(B)": 0.777995415594407,
+      "metrics/recall(B)": 0.7450980392156863,
+      "metrics/mAP50(B)": 0.7625838998097004,
+      "metrics/mAP50-95(B)": 0.3467582589820541,
+      "fitness": 0.3467582589820541
+    },
+    "new_test": {
+      "metrics/precision(B)": 1.0,
+      "metrics/recall(B)": 0.7466448686716565,
+      "metrics/mAP50(B)": 0.7587036062121612,
+      "metrics/mAP50-95(B)": 0.45208140015639364,
+      "fitness": 0.45208140015639364
+    }
+  },
+  "candidate": {
+    "existing_test": {
+      "metrics/precision(B)": 0.8089287557332355,
+      "metrics/recall(B)": 0.7843137254901961,
+      "metrics/mAP50(B)": 0.8342872372208328,
+      "metrics/mAP50-95(B)": 0.47374428280973147,
+      "fitness": 0.47374428280973147
+    },
+    "new_test": {
+      "metrics/precision(B)": 0.8799779015127024,
+      "metrics/recall(B)": 0.75,
+      "metrics/mAP50(B)": 0.7595000000000001,
+      "metrics/mAP50-95(B)": 0.5367778225806452,
+      "fitness": 0.5367778225806452
+    }
+  },
+  "candidate_weights": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/forklift_real_context_v2/weights/best.pt",
+  "candidate_sha256": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa",
+  "promoted": false,
+  "limits": "Small development tests from related sites; training includes scene adaptation and synthetic frames. AP metrics are not counts at a deployed confidence threshold."
+}

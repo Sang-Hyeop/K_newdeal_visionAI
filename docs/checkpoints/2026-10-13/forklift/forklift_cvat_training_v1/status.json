@@ -1,0 +1,10 @@
+{
+  "stage": "completed",
+  "updated_at": "2026-10-12 07:36:30",
+  "training_images": 626,
+  "validation_images": 99,
+  "test_images": 61,
+  "epochs": 6,
+  "candidate_weights": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/forklift_cvat_combined_v1/weights/best.pt",
+  "promoted": false
+}

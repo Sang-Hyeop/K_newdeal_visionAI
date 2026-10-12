@@ -1,0 +1,7 @@
+{
+  "stage": "complete_experimental_not_deployed",
+  "completed": 30,
+  "total": 30,
+  "deployed": false,
+  "evaluation": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_small_head_v13/fallback/evaluation.json"
+}

@@ -58,3 +58,18 @@ class UserThreeSecondLaneTests(unittest.TestCase):
   for name,cls in [('dwell-demo.json',TrackedZone),('warehouse-summary.json',ScenarioZone)]:
    cfg=json.loads((root/'configs/cameras'/name).read_text());pipe=cls(cfg,(720,1280),5)
    self.assertEqual(pipe.lane.safe,3);self.assertEqual(pipe.lane.critical,3)
+
+class PositionAndRiskEvidenceTests(unittest.TestCase):
+ def test_observed_position_retained_when_vehicle_disappears(self):
+  rule=LaneHazard(P,policy='timed',safe_seconds=3,critical_seconds=3)
+  rule.update(0,[event()],[fork()],(500,500))
+  e=event(kind='zone_dwell');e['observed_dwell_seconds']=4
+  rule.update(4,[e],[],(500,500))
+  self.assertIsNone(e['severity']);self.assertEqual(e['observation_status'],'unconfirmed')
+  self.assertEqual(e['position_observation_status'],'confirmed');self.assertEqual(e['lane_membership'],'inside')
+  self.assertEqual(e['dwell_observation_status'],'confirmed');self.assertEqual(e['observed_dwell_seconds'],4)
+ def test_missing_person_does_not_claim_observed_membership(self):
+  rule=LaneHazard(P,policy='timed',safe_seconds=3,critical_seconds=3)
+  e=event(kind='zone_dwell');e.update(inside=None,observation_status='unconfirmed',observed_dwell_seconds=4)
+  rule.update(0,[e],[],(500,500))
+  self.assertEqual(e['lane_membership'],'unknown');self.assertEqual(e['position_observation_status'],'unconfirmed');self.assertEqual(e['dwell_observation_status'],'unconfirmed');self.assertIsNone(e['severity'])
