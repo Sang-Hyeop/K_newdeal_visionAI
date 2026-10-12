@@ -1,0 +1,344 @@
+{
+  "selection": "Maximize macro class F1 on validation12 only; thresholds maximize each class F1. Tie: recall, precision, lower threshold; resolution tie prefers smaller size. Test9 never used for selection.",
+  "scope": "Small development validation/test, historical baseline exposure possible; not independent generalization. Hood-only heads follow user no_helmet_head policy. Unannotated indistinguishable heads are not verified FN ground truth.",
+  "model_sha256": "06b0ff97a78ece7f6551cb64f8561e108459340f21a679b9fbc246cd70c37df9",
+  "validation_search": [
+    {
+      "imgsz": 640,
+      "thresholds": [
+        0.45,
+        0.2
+      ],
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 5,
+            "FP": 0,
+            "FN": 3,
+            "precision": 1.0,
+            "recall": 0.625,
+            "f1": 0.7692307692307693
+          },
+          "1": {
+            "TP": 14,
+            "FP": 2,
+            "FN": 5,
+            "precision": 0.875,
+            "recall": 0.7368421052631579,
+            "f1": 0.8
+          }
+        },
+        "macro_f1": 0.7846153846153847,
+        "total": {
+          "TP": 19,
+          "FP": 2,
+          "FN": 8
+        }
+      },
+      "default_validation": {
+        "classes": {
+          "0": {
+            "TP": 6,
+            "FP": 2,
+            "FN": 2,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "1": {
+            "TP": 13,
+            "FP": 1,
+            "FN": 6,
+            "precision": 0.9285714285714286,
+            "recall": 0.6842105263157895,
+            "f1": 0.7878787878787878
+          }
+        },
+        "macro_f1": 0.7689393939393939,
+        "total": {
+          "TP": 19,
+          "FP": 3,
+          "FN": 8
+        }
+      }
+    },
+    {
+      "imgsz": 960,
+      "thresholds": [
+        0.15,
+        0.15
+      ],
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 16,
+            "FP": 5,
+            "FN": 3,
+            "precision": 0.7619047619047619,
+            "recall": 0.8421052631578947,
+            "f1": 0.8
+          }
+        },
+        "macro_f1": 0.8375,
+        "total": {
+          "TP": 23,
+          "FP": 6,
+          "FN": 4
+        }
+      },
+      "default_validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 1,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          },
+          "1": {
+            "TP": 14,
+            "FP": 4,
+            "FN": 5,
+            "precision": 0.7777777777777778,
+            "recall": 0.7368421052631579,
+            "f1": 0.7567567567567568
+          }
+        },
+        "macro_f1": 0.8158783783783784,
+        "total": {
+          "TP": 21,
+          "FP": 5,
+          "FN": 6
+        }
+      }
+    },
+    {
+      "imgsz": 1280,
+      "thresholds": [
+        0.25,
+        0.15
+      ],
+      "validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "1": {
+            "TP": 11,
+            "FP": 3,
+            "FN": 8,
+            "precision": 0.7857142857142857,
+            "recall": 0.5789473684210527,
+            "f1": 0.6666666666666666
+          }
+        },
+        "macro_f1": 0.8,
+        "total": {
+          "TP": 18,
+          "FP": 3,
+          "FN": 9
+        }
+      },
+      "default_validation": {
+        "classes": {
+          "0": {
+            "TP": 7,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "1": {
+            "TP": 7,
+            "FP": 1,
+            "FN": 12,
+            "precision": 0.875,
+            "recall": 0.3684210526315789,
+            "f1": 0.5185185185185185
+          }
+        },
+        "macro_f1": 0.7259259259259259,
+        "total": {
+          "TP": 14,
+          "FP": 1,
+          "FN": 13
+        }
+      }
+    }
+  ],
+  "selected": {
+    "imgsz": 960,
+    "thresholds": [
+      0.15,
+      0.15
+    ],
+    "validation": {
+      "classes": {
+        "0": {
+          "TP": 7,
+          "FP": 1,
+          "FN": 1,
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875
+        },
+        "1": {
+          "TP": 16,
+          "FP": 5,
+          "FN": 3,
+          "precision": 0.7619047619047619,
+          "recall": 0.8421052631578947,
+          "f1": 0.8
+        }
+      },
+      "macro_f1": 0.8375,
+      "total": {
+        "TP": 23,
+        "FP": 6,
+        "FN": 4
+      }
+    },
+    "default_validation": {
+      "classes": {
+        "0": {
+          "TP": 7,
+          "FP": 1,
+          "FN": 1,
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875
+        },
+        "1": {
+          "TP": 14,
+          "FP": 4,
+          "FN": 5,
+          "precision": 0.7777777777777778,
+          "recall": 0.7368421052631579,
+          "f1": 0.7567567567567568
+        }
+      },
+      "macro_f1": 0.8158783783783784,
+      "total": {
+        "TP": 21,
+        "FP": 5,
+        "FN": 6
+      }
+    }
+  },
+  "test_comparison": {
+    "v7_default": {
+      "imgsz": 960,
+      "thresholds": [
+        0.25,
+        0.25
+      ],
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 4,
+            "FP": 0,
+            "FN": 3,
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1": 0.7272727272727273
+          },
+          "1": {
+            "TP": 4,
+            "FP": 1,
+            "FN": 1,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          }
+        },
+        "macro_f1": 0.7636363636363637,
+        "total": {
+          "TP": 8,
+          "FP": 1,
+          "FN": 4
+        }
+      }
+    },
+    "v7_validation_selected": {
+      "imgsz": 960,
+      "thresholds": [
+        0.15,
+        0.15
+      ],
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 4,
+            "FP": 1,
+            "FN": 3,
+            "precision": 0.8,
+            "recall": 0.5714285714285714,
+            "f1": 0.6666666666666666
+          },
+          "1": {
+            "TP": 5,
+            "FP": 2,
+            "FN": 0,
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333334
+          }
+        },
+        "macro_f1": 0.75,
+        "total": {
+          "TP": 9,
+          "FP": 3,
+          "FN": 3
+        }
+      }
+    },
+    "previous_v6_default": {
+      "imgsz": 640,
+      "thresholds": [
+        0.25,
+        0.25
+      ],
+      "test": {
+        "classes": {
+          "0": {
+            "TP": 6,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.9230769230769231
+          },
+          "1": {
+            "TP": 5,
+            "FP": 1,
+            "FN": 0,
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091
+          }
+        },
+        "macro_f1": 0.916083916083916,
+        "total": {
+          "TP": 11,
+          "FP": 1,
+          "FN": 1
+        }
+      }
+    }
+  }
+}

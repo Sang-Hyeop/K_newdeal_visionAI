@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/fit/weights/best.pt",
+      "bytes": 5382405,
+      "sha256": "1b7c2e76e050cb865ab6744061ae77aef724542dce2005663823c9e07124c979"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/data_manifest.json",
+      "bytes": 76579,
+      "sha256": "884945de4a6d8d8760e080f0fc3a2b2972384a5d36c01d5e8097d852a679c483"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_v9/final_comparison.json",
+      "bytes": 11943,
+      "sha256": "f043d9ac09b46a46d0fdb96e425cc11f210936752ab064b4bd70f33f7c8a02df"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/work/ppe_targeted_v9/pipeline.py",
+      "bytes": 5532,
+      "sha256": "9017f257d7d8ad9125b2f8be47b6247e7d37ba473b07a34834b0d13779f88241"
+    }
+  ],
+  "deployed": false,
+  "storage": "Local outputs; not uploaded to GitHub"
+}

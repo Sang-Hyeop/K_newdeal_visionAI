@@ -71,3 +71,15 @@ class ScenarioRenderTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class LaneOverlayScopeTests(unittest.TestCase):
+ def test_only_monitored_lane_is_colored_and_unknown_is_neutral(self):
+  import numpy as np
+  from src.scenario_render import roi_overlay
+  outer=np.array([[2,2],[98,2],[98,98],[2,98]],np.float32)
+  excluded=np.array([[20,20],[40,20],[40,40],[20,40]],np.float32)
+  for severity in ['SAFE','WARNING','CRITICAL',None]:
+   image=np.full((100,100,3),100,np.uint8);roi_overlay(image,outer,[excluded],severity)
+   self.assertTrue(np.array_equal(image[30,30],[100,100,100]))
+   if severity is None:self.assertEqual(len(set(image[60,60].tolist())),1)
+   else:self.assertGreater(len(set(image[60,60].tolist())),1)

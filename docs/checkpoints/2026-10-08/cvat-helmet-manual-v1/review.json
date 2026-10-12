@@ -1,0 +1,13 @@
+{
+  "exact_image_overlap_with_previous_color_dataset": [],
+  "limitation": "No exact match does not rule out same-video or same-site exposure.",
+  "manual_review": "203 head crops reviewed. 51 images accepted for pilot, 6 held for ambiguous distant driver/head annotations. Original boxes preserved. Minor box padding and partial occlusion accepted.",
+  "hold_images": [
+    "NV_video_00261_t01.jpg",
+    "NV_video_00261_t03.jpg",
+    "NV_video_00261_t05.jpg",
+    "NV_video_00259_t03.jpg",
+    "NV_video_00259_t01.jpg",
+    "NV_video_00259_t05.jpg"
+  ]
+}

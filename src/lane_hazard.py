@@ -8,7 +8,7 @@ class LaneHazard:
         self.polygon=np.asarray(polygon,dtype=np.float32)
         if not math.isfinite(hold_seconds) or hold_seconds<=0:raise ValueError('Positive hold required')
         self.hold=hold_seconds;self.vehicles={};self.last=None;self.contains=contains;self.policy=policy;self.safe=safe_seconds;self.critical=critical_seconds
-        if policy not in {"immediate","timed"} or not 0<=safe_seconds<critical_seconds:raise ValueError("Invalid lane policy")
+        if policy not in {"immediate","timed"} or not 0<=safe_seconds<=critical_seconds:raise ValueError("Invalid lane policy")
     def reset(self):self.vehicles.clear();self.last=None
     def update(self,timestamp,events,forklifts,shape):
         if not math.isfinite(timestamp) or timestamp<0 or self.last is not None and timestamp<=self.last:raise ValueError('Increasing timestamps required')
@@ -30,6 +30,9 @@ class LaneHazard:
         evidence=[{'track_id':k,'last_seen_seconds':self.vehicles[k]['last_seen'],'bbox_xyxy':self.vehicles[k]['bbox'],'anchor_xy':self.vehicles[k]['anchor'],'age_seconds':timestamp-self.vehicles[k]['last_seen']} for k in present+lost]
         for event in events:
             inside=event['inside']
+            position_confirmed=event['observation_status']=='confirmed' and inside is not None
+            event.update(position_observation_status='confirmed' if position_confirmed else 'unconfirmed',lane_membership=('inside' if inside else 'outside') if position_confirmed else 'unknown')
+            if event['event_type']=='zone_dwell':event['dwell_observation_status']='confirmed' if position_confirmed else 'unconfirmed'
             if event['event_type']=='zone_dwell':event['dwell_time_band']=('SAFE' if event.get('observed_dwell_seconds',0)<self.safe else 'WARNING' if event.get('observed_dwell_seconds',0)<self.critical else 'CRITICAL') if self.policy=='timed' else event['severity']
             event.update(vehicle_lane_state=state,vehicle_observation_status='confirmed' if present else 'unconfirmed' if held or lost or ambiguous else 'not_detected',
                          vehicle_track_ids=present+lost,vehicle_evidence=evidence,lane_rule='pedestrian_inside_WARNING; observed_vehicle_CRITICAL; lost_vehicle_hold_then_UNKNOWN',

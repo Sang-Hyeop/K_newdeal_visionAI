@@ -1,0 +1,14 @@
+{
+  "first_import": {
+    "events": 521,
+    "observations": 372
+  },
+  "second_import": {
+    "events": 521,
+    "observations": 372
+  },
+  "duplicate_import_idempotent": true,
+  "invalid_unknown_safe_rejected": true,
+  "feature_file_pairs": 15,
+  "scope": "Offline sample contract/import check only; team server and dashboard not contacted"
+}

@@ -1,0 +1,167 @@
+{
+  "stage": "complete_evaluated_not_deployed",
+  "max_epochs": 6,
+  "training_entries": 532,
+  "imgsz": 960,
+  "freeze": 10,
+  "learning_rate": 3e-05,
+  "policy": "Hood-only=no_helmet_head. All 510 original training entries retained plus 22 visually reviewed real small-head frames; unobservable unlabeled heads unchanged.",
+  "scope": "22 additional real annotated small-head frames; same development-site pool, not independent generalization.",
+  "deployed": false,
+  "updated_at": "2026-10-10T12:19:44.513176",
+  "current_epoch": 6,
+  "epoch_completed": 6,
+  "metrics": {
+    "metrics/precision(B)": 0.9046964356500102,
+    "metrics/recall(B)": 0.6992896678981524,
+    "metrics/mAP50(B)": 0.8284117358389804,
+    "metrics/mAP50-95(B)": 0.45189781277925267
+  },
+  "weight": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_real_small_v14/fit/weights/best.pt",
+  "weight_sha256": "e77c93ca5909b734568bb12f1491ae1401f87b076f704c484b82eb8ce20163d6",
+  "evaluation": {
+    "scope": "22 additional real annotated small-head frames; same development-site pool, not independent generalization.",
+    "models": {
+      "v6_multiscale": {
+        "val": {
+          "classes": {
+            "0": {
+              "TP": 7,
+              "FP": 0,
+              "FN": 1
+            },
+            "1": {
+              "TP": 18,
+              "FP": 1,
+              "FN": 1
+            }
+          },
+          "macro_f1": 0.9403508771929825,
+          "total": {
+            "TP": 25,
+            "FP": 1,
+            "FN": 2
+          }
+        },
+        "test": {
+          "classes": {
+            "0": {
+              "TP": 4,
+              "FP": 0,
+              "FN": 3
+            },
+            "1": {
+              "TP": 5,
+              "FP": 0,
+              "FN": 0
+            }
+          },
+          "macro_f1": 0.8636363636363636,
+          "total": {
+            "TP": 9,
+            "FP": 0,
+            "FN": 3
+          }
+        }
+      },
+      "v14_multiscale": {
+        "val": {
+          "classes": {
+            "0": {
+              "TP": 7,
+              "FP": 0,
+              "FN": 1
+            },
+            "1": {
+              "TP": 18,
+              "FP": 1,
+              "FN": 1
+            }
+          },
+          "macro_f1": 0.9403508771929825,
+          "total": {
+            "TP": 25,
+            "FP": 1,
+            "FN": 2
+          }
+        },
+        "test": {
+          "classes": {
+            "0": {
+              "TP": 5,
+              "FP": 1,
+              "FN": 2
+            },
+            "1": {
+              "TP": 5,
+              "FP": 0,
+              "FN": 0
+            }
+          },
+          "macro_f1": 0.8846153846153846,
+          "total": {
+            "TP": 10,
+            "FP": 1,
+            "FN": 2
+          }
+        }
+      },
+      "v14_full960": {
+        "val": {
+          "classes": {
+            "0": {
+              "TP": 7,
+              "FP": 1,
+              "FN": 1
+            },
+            "1": {
+              "TP": 17,
+              "FP": 4,
+              "FN": 2
+            }
+          },
+          "macro_f1": 0.8625,
+          "total": {
+            "TP": 24,
+            "FP": 5,
+            "FN": 3
+          }
+        },
+        "test": {
+          "classes": {
+            "0": {
+              "TP": 4,
+              "FP": 1,
+              "FN": 3
+            },
+            "1": {
+              "TP": 5,
+              "FP": 2,
+              "FN": 0
+            }
+          },
+          "macro_f1": 0.75,
+          "total": {
+            "TP": 9,
+            "FP": 3,
+            "FN": 3
+          }
+        }
+      }
+    },
+    "training_exposed_background_check": {
+      "v6": {
+        "total_false_boxes": 0,
+        "records": []
+      },
+      "v14": {
+        "total_false_boxes": 0,
+        "records": []
+      }
+    },
+    "background_check_scope": "No background crops added in this experiment; empty check retained for compatibility."
+  },
+  "final_comparison": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_real_small_v14/final_comparison.json",
+  "decision": "not_promoted; existing weights retained",
+  "fresh_sequences_evaluated": 3
+}

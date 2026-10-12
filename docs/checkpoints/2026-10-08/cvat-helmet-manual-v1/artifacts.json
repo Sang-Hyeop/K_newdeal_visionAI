@@ -1,0 +1,15 @@
+{
+  "status": "experimental_not_promoted",
+  "artifacts": [
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/cvat_helmet_manual_v1/fit/weights/best.pt",
+      "bytes": 5358597,
+      "sha256": "59e81e9950a8068b5846811c033d6852b0682bc60e887fcbc5218c1f068b8427"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/cvat_helmet_manual_v1/fit/weights/last.pt",
+      "bytes": 5358597,
+      "sha256": "99ae9b29b955ddad277e9650209c868b77f9b6f15d2851254a705d9aad21ebe8"
+    }
+  ]
+}

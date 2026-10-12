@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_multiscale/multiscale_detector.py",
+      "bytes": 1848,
+      "sha256": "15ceb1a23f895508f7d7c3786ed2aa7fcce8e3cd2cb1aa97c22f8817722e013b"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_multiscale/guarded_detector.py",
+      "bytes": 1684,
+      "sha256": "a29f8323fdd8cd3df5a199aa42a8d0760755699cf9dd4c33baeefea1f28dd442"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_960_v6/fit/weights/best.pt",
+      "bytes": 5451269,
+      "sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_unfrozen_v8/fit/weights/best.pt",
+      "bytes": 5382725,
+      "sha256": "286cd5ad2d171e9bcf63792f69fb1c7aef8eea30364b0b8682152d04128839fd"
+    }
+  ],
+  "storage": "Local outputs only; not deployed or uploaded to GitHub"
+}

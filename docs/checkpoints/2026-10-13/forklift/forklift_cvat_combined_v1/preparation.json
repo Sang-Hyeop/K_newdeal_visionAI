@@ -1,0 +1,15 @@
+{
+  "total": 786,
+  "splits": {
+    "train": 626,
+    "val": 99,
+    "test": 61
+  },
+  "origins": {
+    "existing": 633,
+    "new_cvat": 153
+  },
+  "duplicate_files": 0,
+  "existing_training_includes_context_crops": true,
+  "independent_site_validation": false
+}

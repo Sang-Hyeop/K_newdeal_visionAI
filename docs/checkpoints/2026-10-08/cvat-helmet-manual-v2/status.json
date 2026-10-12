@@ -1,0 +1,8 @@
+{
+  "status": "experimental_not_promoted",
+  "reason": "Bare-head false positives removed at cost of all six manual true positives; not a solution",
+  "weights": "/Users/sanghyeopkim/Desktop/workspace/outputs/training/cvat_helmet_manual_v2/fit/weights/best.pt",
+  "bytes": 5358341,
+  "sha256": "7672f6a5522813c54ca9b05614c7efee111fca1521351a2ddd1cd579b316071c",
+  "audit_scope": "311 replay images checked for exact duplicates and matching labels; 24 support thumbnails visually checked, not exhaustive label audit"
+}

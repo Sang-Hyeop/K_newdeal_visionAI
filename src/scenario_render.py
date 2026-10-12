@@ -6,13 +6,10 @@ def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,
  mask=np.zeros(frame.shape[:2],np.uint8);cv2.fillPoly(mask,[np.asarray(polygon,np.int32)],255)
  for p in safe_polygons:cv2.fillPoly(mask,[np.asarray(p,np.int32)],0)
  if not active:severity=None
- if severity is not None:
-  layer=frame.copy();layer[mask>0]=COLORS[severity];alpha=alpha_safe if severity=='SAFE'else alpha_alert;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
- if active:
-  layer=frame.copy()
-  for p in safe_polygons:cv2.fillPoly(layer,[np.asarray(p,np.int32)],COLORS['SAFE'])
-  frame[:]=cv2.addWeighted(layer,alpha_safe,frame,1-alpha_safe,0)
- for p in [polygon,*safe_polygons]:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS['SAFE'] if active and any(p is q for q in safe_polygons) else COLORS[severity],2)
+ layer=frame.copy();layer[mask>0]=COLORS[severity];alpha=alpha_alert if severity in {'WARNING','CRITICAL'} else alpha_safe;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
+ # Excluded storage/walking regions are not the monitored lane or a safety verdict.
+ cv2.polylines(frame,[np.asarray(polygon,np.int32)],True,COLORS[severity],2)
+ for p in safe_polygons:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS[None],1)
  return frame
 
 def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,driver_overlap_threshold=.8):
@@ -26,6 +23,7 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
  for feature,events in groups.items():
   if detections is not None:continue
   for e in events:
+   if feature=='zone_access' and any(q.get('track_id')==e.get('track_id') for q in groups.get('zone_dwell',[])):continue
    color=COLORS[e['severity'] if e.get('observation_status')=='confirmed'else None];box=e.get('person_bbox_xyxy',e.get('head_bbox_xyxy'))
    if feature=='ppe'and e['severity']=='WARNING':
     bare=[h for h in e.get('head_candidates',[])if h['class']=='no_helmet_head']
@@ -35,11 +33,15 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
    for b in boxes:
     a,y,c,d=map(int,b);cv2.rectangle(frame,(a,y),(c,d),color,2)
     label=e['severity']or'UNKNOWN'
+    if feature in {'zone_access','zone_dwell'}:
+     label='LANE '+label
+     if e.get('position_observation_status')=='confirmed' and e.get('lane_membership')=='inside' and e.get('severity') is None:label='LANE IN / RISK UNKNOWN'
     if feature=='ppe':label='HELMET'if e['ppe_state']=='helmet_detected'and e['severity']=='SAFE'else'NO HELMET? REVIEW'if e['severity']=='WARNING'else'PPE UNKNOWN'
     if feature=='ppe'and e.get('vehicle_overlap_review_required')and e['severity']=='WARNING':label='PPE REVIEW: VEHICLE OVERLAP'
     if feature=='ppe'and e.get('hood_evidence'):label='PPE REVIEW: HOOD'if e['severity']=='WARNING'else'PPE UNKNOWN: HOOD'
     if 'observed_dwell_seconds'in e:label+=f" {e['observed_dwell_seconds']:.1f}s"
-    cv2.putText(frame,label,(a,max(105,y-5)),0,.48,color,1)
+    label_y=y+14 if feature=='ppe' else max(105,y-20) if feature in {'zone_access','zone_dwell'} else max(105,y-5)
+    cv2.putText(frame,label,(a,label_y),0,.48,color,1)
  y=22
  for feature,events in groups.items():
   status=feature_status(events);color=COLORS[status['severity']];label=f"{feature.upper()}: {status['display_state']}  UNKNOWN={status['unknown_event_count']}"

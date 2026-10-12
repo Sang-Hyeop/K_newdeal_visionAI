@@ -1,0 +1,18 @@
+[
+  {
+    "video": 5,
+    "frames": 12,
+    "elapsed_seconds": 3.639774707960896,
+    "output": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_960_v10/video_5_baseline_vs_calibrated.mp4",
+    "sha256": "0cafe4a59ff796e7a2d1dce12d1cb3cca6548e8b47913961a2f38bcab68c87cd",
+    "scope": "1fps qualitative; no complete video ground truth"
+  },
+  {
+    "video": 7,
+    "frames": 182,
+    "elapsed_seconds": 29.099819375027437,
+    "output": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_targeted_960_v10/video_7_baseline_vs_calibrated.mp4",
+    "sha256": "2dcca5327994b2aa22df94b3b258aed1edd13c5b0a18cd3679f15873cbc7ba1f",
+    "scope": "1fps qualitative; no complete video ground truth"
+  }
+]

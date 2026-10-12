@@ -1,5 +1,5 @@
 {
-  "policy_version": "user_plan_3_5_alpha_v2",
+  "policy_version": "user_vehicle_lane_3_seconds_v3",
   "scenarios": [
     {
       "video_number": 1,

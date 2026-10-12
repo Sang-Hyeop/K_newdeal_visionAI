@@ -1,0 +1,10 @@
+[
+  {
+    "video": 5,
+    "frames": 12,
+    "elapsed_seconds": 6.948822707985528,
+    "output": "/Users/sanghyeopkim/Documents/Codex/2026-10-08/new-chat-3/outputs/ppe_manual_unfrozen_v8/video_5_baseline_vs_multiscale.mp4",
+    "sha256": "d6dbe1dbb46244c090f0259e14ee0e1ef3740554b851d5c76822adf85de80a3a",
+    "scope": "1fps qualitative; no complete video ground truth"
+  }
+]
