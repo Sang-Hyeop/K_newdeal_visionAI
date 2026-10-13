@@ -72,3 +72,26 @@ class RecentPedestrianOverlapTests(unittest.TestCase):
   p={'track_id':'p','bbox_xyxy':[428,348,589,565]};f={'track_id':'f','bbox_xyxy':[492,146,733,492]};rule.update(0,[p],[f],(720,1280))
   p['bbox_xyxy']=[414,343,519,564];f['bbox_xyxy']=[351,156,733,556]
   self.assertIsNone(rule.update(2,[p],[f],(720,1280))[0]['severity'])
+
+class BoundaryAndOperatorTests(unittest.TestCase):
+ def test_nearest_side_matches_foot_height(self):
+  r=Proximity(distance_geometry='box_boundary').update(0,[{'track_id':'p','bbox_xyxy':[0,0,20,100]}],[{'track_id':'f','bbox_xyxy':[30,0,100,200]}],(500,500))[0]
+  self.assertEqual(r['nearest_vehicle_point_xy'],[30,100]);self.assertEqual(r['normalized_image_gap'],.2)
+ def test_operator_only_after_repeated_inside_observations(self):
+  r=Proximity(exclude_probable_operator=True);p={'track_id':'p','bbox_xyxy':[40,20,60,60]};f={'track_id':'f','bbox_xyxy':[0,0,100,200]}
+  self.assertTrue(r.update(0,[p],[f],(500,500)));r.update(.2,[p],[f],(500,500));self.assertEqual(r.update(.4,[p],[f],(500,500)),[])
+ def test_pedestrian_not_excluded_when_vehicle_box_expands(self):
+  r=Proximity(distance_geometry='box_boundary',exclude_probable_operator=True);p={'track_id':'p','bbox_xyxy':[20,0,40,100]};f={'track_id':'f','bbox_xyxy':[60,0,100,200]};r.update(0,[p],[f],(500,500));f['bbox_xyxy']=[10,0,100,200]
+  for t in [.2,.4,.6]:self.assertEqual(r.update(t,[p],[f],(500,500))[0]['severity'],'CRITICAL')
+
+class BoundaryClippingSafetyTests(unittest.TestCase):
+ def test_known_pedestrian_does_not_clear_clipped_vehicle_unknown(self):
+  r=Proximity(distance_geometry='box_boundary');p={'track_id':'p','bbox_xyxy':[20,10,40,100]};f={'track_id':'f','bbox_xyxy':[60,10,100,200]};r.update(0,[p],[f],(500,500));f['bbox_xyxy']=[0,0,100,200]
+  self.assertEqual(r.update(.2,[p],[f],(500,500))[0]['reason'],'forklift_extent_clipped')
+
+class DuplicateOccupantTests(unittest.TestCase):
+ def test_duplicate_cabin_person_uses_existing_association(self):
+  r=Proximity(exclude_probable_operator=True);p={'track_id':'driver','bbox_xyxy':[40,20,60,60]};f={'track_id':'f','bbox_xyxy':[10,0,100,200]}
+  for t in [0,.2,.4]:r.update(t,[p],[f],(500,500))
+  duplicate={'track_id':'new-driver-id','bbox_xyxy':[39,21,59,61]}
+  self.assertEqual(r.update(.6,[p,duplicate],[f],(500,500)),[])

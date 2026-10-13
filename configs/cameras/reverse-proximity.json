@@ -3,7 +3,7 @@
   "source_name": "2_forklift_back.mp4",
   "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
   "warning_ratio": 1.0,
-  "critical_ratio": 0.3,
+  "critical_ratio": 0.5,
   "hysteresis_ratio": 0.1,
   "max_gap_seconds": 1,
   "distance_unit": "person_height_normalized_image_gap",
@@ -12,7 +12,11 @@
   "detection_scope": "full_frame",
   "distance_mode": "image_plane",
   "zone_roi_used": false,
-  "policy_version": "proximity-reverse-object-review-v3",
+  "policy_version": "reverse-boundary-operator-review-v4",
   "object_review_profile": "configs/video2-object-review.json",
-  "tracker_fuse_score": false
+  "tracker_fuse_score": false,
+  "distance_geometry": "box_boundary",
+  "exclude_probable_operator": true,
+  "expose_current_person_candidates": true,
+  "threshold_scope": "development camera thresholds for nearest bbox geometry; not physical collision distance"
 }
