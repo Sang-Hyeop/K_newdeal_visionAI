@@ -54,7 +54,7 @@
       "primary_features": [
         "ppe"
       ],
-      "camera_config": null,
+      "camera_config": "configs/cameras/ppe-warehouse-review.json",
       "distance_meters": null
     },
     {
