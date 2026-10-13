@@ -1,0 +1,149 @@
+{
+  "samples": 106,
+  "target_checks": [
+    {
+      "time": 0,
+      "objects": [
+        {
+          "class": "person",
+          "confidence": 0.9606292843818665,
+          "bbox_xyxy": [
+            1544.734130859375,
+            394.3871154785156,
+            1669.5347900390625,
+            588.13720703125
+          ],
+          "model_source": "person_adaptation"
+        },
+        {
+          "class": "forklift",
+          "confidence": 0.40935149788856506,
+          "bbox_xyxy": [
+            819.6617431640625,
+            291.4010009765625,
+            1449.719970703125,
+            1080.0
+          ],
+          "model_source": "supplement_highres"
+        }
+      ],
+      "status": {
+        "severity": null,
+        "display_state": "UNKNOWN",
+        "observed_event_count": 1,
+        "unknown_event_count": 1,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      }
+    },
+    {
+      "time": 4,
+      "objects": [
+        {
+          "class": "person",
+          "confidence": 0.9636741280555725,
+          "bbox_xyxy": [
+            1546.7652587890625,
+            404.48724365234375,
+            1670.23291015625,
+            590.282958984375
+          ],
+          "model_source": "person_adaptation"
+        },
+        {
+          "class": "person",
+          "confidence": 0.7554288506507874,
+          "bbox_xyxy": [
+            388.1327819824219,
+            57.18555450439453,
+            436.8123779296875,
+            189.54241943359375
+          ],
+          "model_source": "person_coco"
+        },
+        {
+          "class": "forklift",
+          "confidence": 0.6513059139251709,
+          "bbox_xyxy": [
+            978.0516357421875,
+            196.5223388671875,
+            1449.5841064453125,
+            785.7515258789062
+          ],
+          "model_source": "supplement_highres"
+        }
+      ],
+      "status": {
+        "severity": "WARNING",
+        "display_state": "WARNING",
+        "observed_event_count": 3,
+        "unknown_event_count": 1,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      }
+    },
+    {
+      "time": 6.4,
+      "objects": [
+        {
+          "class": "person",
+          "confidence": 0.9531717300415039,
+          "bbox_xyxy": [
+            1546.8369140625,
+            404.9376525878906,
+            1669.8662109375,
+            592.6858520507812
+          ],
+          "model_source": "person_adaptation"
+        },
+        {
+          "class": "person",
+          "confidence": 0.8539023995399475,
+          "bbox_xyxy": [
+            325.93670654296875,
+            98.70716857910156,
+            385.9976806640625,
+            251.95005798339844
+          ],
+          "model_source": "person_adaptation"
+        },
+        {
+          "class": "person",
+          "confidence": 0.5059154033660889,
+          "bbox_xyxy": [
+            778.2910766601562,
+            225.77792358398438,
+            875.2622680664062,
+            390.7518310546875
+          ],
+          "model_source": "person_adaptation"
+        },
+        {
+          "class": "forklift",
+          "confidence": 0.6756061315536499,
+          "bbox_xyxy": [
+            662.1004638671875,
+            124.90200805664062,
+            1152.0731201171875,
+            606.6343383789062
+          ],
+          "model_source": "supplement_highres"
+        }
+      ],
+      "status": {
+        "severity": null,
+        "display_state": "UNKNOWN",
+        "observed_event_count": 3,
+        "unknown_event_count": 1,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      }
+    }
+  ],
+  "tests": 162,
+  "video_sha256": "53b992f3d8bfce2953117780057d9b09466a9ed701be2549e9ca6b2867c7132b",
+  "limits": "Development camera review only. Cargo included in current forklift annotations; clipped extent remains UNKNOWN. PPE may be unknown or a review candidate. Not full ground-truth validation."
+}
