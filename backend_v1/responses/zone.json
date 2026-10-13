@@ -1,0 +1,48 @@
+{
+  "events": [
+    {
+      "schema_version": "1.0",
+      "camera_id": "dwell-demo",
+      "video": "4_hazard_zone_dwell.mp4",
+      "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "timestamp_seconds": 1.0427083333333333,
+      "event_type": "zone_access",
+      "severity": null,
+      "observation_status": "unconfirmed",
+      "track_ids": [
+        "0:3"
+      ],
+      "evidence": {
+        "track_id": "0:3",
+        "inside": null,
+        "region": "unknown",
+        "signed_distance_pixels": null,
+        "approach_margin_pixels": 5.4,
+        "entry_observed": false,
+        "exit_observed": false,
+        "authorization_status": "not_assessed",
+        "anchor_xy": null,
+        "vehicle_lane_state": "no_vehicle_detected_in_lane",
+        "vehicle_observation_status": "not_detected",
+        "vehicle_track_ids": [],
+        "vehicle_evidence": [],
+        "lane_rule": "pedestrian_inside_WARNING; observed_vehicle_CRITICAL; lost_vehicle_hold_then_UNKNOWN",
+        "vehicle_absence_confirmed": false,
+        "rule_validation_status": "development_image_anchor_rule",
+        "roi_id": "yellow_line_vehicle_lane",
+        "scope": "configured_demo_access_rule",
+        "roi_purpose": "user_defined_forklift_lane_pedestrian_conditional_warning",
+        "roi_review_status": "business_rule_confirmed_by_user; floor_geometry_manually_reviewed"
+      },
+      "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "config_version": "69b2eccf767ea8a7e506e097dba8650029e506a4c3853ad13ffece72e463d271",
+      "scope": "observed_subjects_for_this_feature_only",
+      "event_id": "0808b7987c39fec4cf9956b5c234c0afcb7fedcd959acd4e4c2511857af8fb3a",
+      "distance_meters": null
+    }
+  ],
+  "total": 8,
+  "count": 1,
+  "limit": 1,
+  "offset": 0
+}

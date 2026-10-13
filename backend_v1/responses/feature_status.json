@@ -1,0 +1,746 @@
+{
+  "count": 4,
+  "feature_status": [
+    {
+      "schema_version": "1.0",
+      "feature": "ppe",
+      "camera_id": "5_PPE_Helmet-ppe",
+      "video": "5_PPE_Helmet.mp4",
+      "timestamp_seconds": 1.4597916666666666,
+      "frame_index": 35,
+      "scene_id": 0,
+      "global_safety_status": "not_evaluated",
+      "feature_status": {
+        "severity": null,
+        "display_state": "UNKNOWN",
+        "observed_event_count": 3,
+        "unknown_event_count": 3,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      },
+      "observation_status": "unconfirmed",
+      "events": [
+        {
+          "schema_version": "1.0",
+          "camera_id": "5_PPE_Helmet-ppe",
+          "video": "5_PPE_Helmet.mp4",
+          "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "ppe",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "0:3"
+          ],
+          "evidence": {
+            "track_id": "0:3",
+            "ppe_state": "helmet_detected",
+            "reason": "pending_temporal_confirmation",
+            "person_bbox_xyxy": [
+              602.84912109375,
+              459.18426513671875,
+              734.790771484375,
+              720.0
+            ],
+            "head_candidates": [
+              {
+                "class": "helmeted_head",
+                "confidence": 0.6906226873397827,
+                "bbox_xyxy": [
+                  638.6733055114746,
+                  458.4413604736328,
+                  691.8063125610352,
+                  537.7512664794922
+                ],
+                "source": "person_crop"
+              },
+              {
+                "class": "helmeted_head",
+                "confidence": 0.3675890564918518,
+                "bbox_xyxy": [
+                  637.1728858947754,
+                  458.34022331237793,
+                  687.8905563354492,
+                  507.82262420654297
+                ],
+                "source": "person_crop"
+              }
+            ],
+            "violation_status": "not_verified",
+            "scope": "helmet_observation_for_this_person_only"
+          },
+          "model_version": "f773dd30e9e7d0fdf01c930c6dc0a4b732d34ee13cabf8b97bc1d8db6001be43",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "7965c37689f9f5305aea0d79d1f365ee17628d1d8b5cd8dac1fb752db242ef11",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "5_PPE_Helmet-ppe",
+          "video": "5_PPE_Helmet.mp4",
+          "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "ppe",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "0:4"
+          ],
+          "evidence": {
+            "track_id": "0:4",
+            "ppe_state": "unknown",
+            "reason": "conflicting_or_missing_or_low_confidence_head",
+            "person_bbox_xyxy": [
+              472.16168212890625,
+              417.374267578125,
+              613.7123413085938,
+              720.0
+            ],
+            "head_candidates": [],
+            "violation_status": "not_verified",
+            "scope": "helmet_observation_for_this_person_only"
+          },
+          "model_version": "f773dd30e9e7d0fdf01c930c6dc0a4b732d34ee13cabf8b97bc1d8db6001be43",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "99b45c2cc6706b925f21adcadb017b10c184e17083515fd2eab44671e75711d0",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "5_PPE_Helmet-ppe",
+          "video": "5_PPE_Helmet.mp4",
+          "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "ppe",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "0:5"
+          ],
+          "evidence": {
+            "track_id": "0:5",
+            "ppe_state": "unknown",
+            "reason": "conflicting_or_missing_or_low_confidence_head",
+            "person_bbox_xyxy": [
+              409.7451171875,
+              418.0694580078125,
+              613.365234375,
+              720.0
+            ],
+            "head_candidates": [],
+            "violation_status": "not_verified",
+            "scope": "helmet_observation_for_this_person_only"
+          },
+          "model_version": "f773dd30e9e7d0fdf01c930c6dc0a4b732d34ee13cabf8b97bc1d8db6001be43",
+          "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "ebfcc8de5b15b0d865aec77bcabdb988d99775cc34ade5086c8c9f4a8afde8be",
+          "distance_meters": null
+        }
+      ],
+      "distance_meters": null
+    },
+    {
+      "schema_version": "1.0",
+      "feature": "zone",
+      "camera_id": "dwell-demo",
+      "video": "4_hazard_zone_dwell.mp4",
+      "timestamp_seconds": 1.4597916666666666,
+      "frame_index": 35,
+      "scene_id": 0,
+      "global_safety_status": "not_evaluated",
+      "feature_status": {
+        "severity": "CRITICAL",
+        "display_state": "CRITICAL",
+        "observed_event_count": 7,
+        "unknown_event_count": 1,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      },
+      "observation_status": "confirmed",
+      "events": [
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_dwell",
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "0:1"
+          ],
+          "evidence": {
+            "track_id": "0:1",
+            "inside": false,
+            "observed_dwell_seconds": 0.0,
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_dwell_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "person_bbox_xyxy": [
+              261.2659912109375,
+              4.688850402832031,
+              363.87298583984375,
+              306.9914855957031
+            ],
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "eb4670051a4903768d829e4f527b016bc5e46c38020e1048c95ea5dd454e9de5",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_dwell",
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "0:2"
+          ],
+          "evidence": {
+            "track_id": "0:2",
+            "inside": true,
+            "observed_dwell_seconds": 1.0427083333333333,
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_dwell_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "person_bbox_xyxy": [
+              674.2782592773438,
+              689.2490234375,
+              847.8662719726562,
+              1001.0974731445312
+            ],
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "70e6edd74ac75b1f51eaf00a8eb5b706f2b79eea004aeba385ba7469bd1f7ee4",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_dwell",
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "0:12"
+          ],
+          "evidence": {
+            "track_id": "0:12",
+            "inside": false,
+            "observed_dwell_seconds": 0.0,
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_dwell_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "person_bbox_xyxy": [
+              1334.0601806640625,
+              0.0,
+              1371.52099609375,
+              80.35279083251953
+            ],
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "6c6675fc6a3a1b6d9150493785fb1ba452870e479e88422c17aa39514a5af142",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_access",
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "0:1"
+          ],
+          "evidence": {
+            "track_id": "0:1",
+            "inside": false,
+            "region": "outside",
+            "signed_distance_pixels": -106.47433535201586,
+            "approach_margin_pixels": 54.0,
+            "entry_observed": false,
+            "exit_observed": false,
+            "authorization_status": "not_assessed",
+            "anchor_xy": [
+              312.5694885253906,
+              306.9914855957031
+            ],
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_access_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "person_bbox_xyxy": [
+              261.2659912109375,
+              4.688850402832031,
+              363.87298583984375,
+              306.9914855957031
+            ],
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "5b3b8bb01c2a324923c97c1b3994eb561c650d6ff902946464f283b9d138d2d3",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_access",
+          "severity": "CRITICAL",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "0:2"
+          ],
+          "evidence": {
+            "track_id": "0:2",
+            "inside": true,
+            "region": "inside",
+            "signed_distance_pixels": 73.50250244140625,
+            "approach_margin_pixels": 54.0,
+            "entry_observed": false,
+            "exit_observed": false,
+            "authorization_status": "not_assessed",
+            "anchor_xy": [
+              761.072265625,
+              1001.0974731445312
+            ],
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_access_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "person_bbox_xyxy": [
+              674.2782592773438,
+              689.2490234375,
+              847.8662719726562,
+              1001.0974731445312
+            ],
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "709eb84703a35ddb2f924bc255c02d303da2e4306a056e9c18d986cea96c931d",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_access",
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "0:12"
+          ],
+          "evidence": {
+            "track_id": "0:12",
+            "inside": false,
+            "region": "outside",
+            "signed_distance_pixels": -330.4197328944164,
+            "approach_margin_pixels": 54.0,
+            "entry_observed": false,
+            "exit_observed": false,
+            "authorization_status": "not_assessed",
+            "anchor_xy": [
+              1352.7905883789062,
+              80.35279083251953
+            ],
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_access_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "person_bbox_xyxy": [
+              1334.0601806640625,
+              0.0,
+              1371.52099609375,
+              80.35279083251953
+            ],
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "9cf595f4a4b9855affb3cc1a1a0b47bbcbc9e50ae7be5c35e8b89a8e0c5abc54",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "dwell-demo",
+          "video": "4_hazard_zone_dwell.mp4",
+          "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "zone_access",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "0:3"
+          ],
+          "evidence": {
+            "track_id": "0:3",
+            "inside": null,
+            "region": "unknown",
+            "signed_distance_pixels": null,
+            "approach_margin_pixels": 54.0,
+            "entry_observed": false,
+            "exit_observed": false,
+            "authorization_status": "not_assessed",
+            "anchor_xy": null,
+            "roi_id": "machine-work-area",
+            "scope": "configured_demo_access_rule",
+            "roi_purpose": "demonstration_only_not_confirmed_prohibited_area",
+            "roi_review_status": "provisional_demo_boundary_requires_site_rule_confirmation"
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "4d12604ef029a068601514ba1ea2738a08c9f2b5815fe5811ca9e08cdebd0cad",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "b30d3783b66fca32b2e661e2b2632d60db3dde3ea8e2240bc9c711662262d5fe",
+          "distance_meters": null
+        }
+      ],
+      "distance_meters": null
+    },
+    {
+      "schema_version": "1.0",
+      "feature": "proximity",
+      "camera_id": "forward-proximity",
+      "video": "1_forklift_forward.mp4",
+      "timestamp_seconds": 1.4597916666666666,
+      "frame_index": 35,
+      "scene_id": 0,
+      "global_safety_status": "not_evaluated",
+      "feature_status": {
+        "severity": "WARNING",
+        "display_state": "WARNING",
+        "observed_event_count": 5,
+        "unknown_event_count": 4,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      },
+      "observation_status": "confirmed",
+      "events": [
+        {
+          "schema_version": "1.0",
+          "camera_id": "forward-proximity",
+          "video": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "proximity",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "P0:1",
+            "F0:1"
+          ],
+          "evidence": {
+            "person_track_id": "P0:1",
+            "forklift_track_id": "F0:1",
+            "reason": "forklift_extent_clipped",
+            "person_anchor_xy": [
+              571.0101318359375,
+              396.8614501953125
+            ],
+            "forklift_ground_proxy_xyxy": [
+              3.95501708984375,
+              612.0,
+              568.4671630859375,
+              720.0
+            ],
+            "nearest_vehicle_point_xy": [
+              568.4671630859375,
+              612.0
+            ],
+            "image_gap_pixels": 215.15357840883678,
+            "normalized_image_gap": 1.2371114996416426,
+            "image_gap_closing_rate": null,
+            "orientation_status": "unknown",
+            "distance_meters": null,
+            "scope": "camera_image_plane_proximity_candidate",
+            "distance_unit": "person_height_normalized_image_gap",
+            "zone_roi_used": false
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "3d2b959d3aaae25532a0923a53990bd8f7fa1f6cf432d1352029486aa2b5b169",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "91b0e108418875dfa3bd971f5e7ff1f1397a53b08504fe0d7227deef852dd11e",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "forward-proximity",
+          "video": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "proximity",
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "track_ids": [
+            "P0:1",
+            "F0:2"
+          ],
+          "evidence": {
+            "person_track_id": "P0:1",
+            "forklift_track_id": "F0:2",
+            "reason": "image_plane_proximity_rule",
+            "person_anchor_xy": [
+              571.0101318359375,
+              396.8614501953125
+            ],
+            "forklift_ground_proxy_xyxy": [
+              628.330078125,
+              245.42392272949218,
+              702.410888671875,
+              274.3867492675781
+            ],
+            "nearest_vehicle_point_xy": [
+              628.330078125,
+              274.3867492675781
+            ],
+            "image_gap_pixels": 135.2243639656663,
+            "normalized_image_gap": 0.7775265321210288,
+            "image_gap_closing_rate": 0.2953153111859262,
+            "orientation_status": "unknown",
+            "distance_meters": null,
+            "scope": "camera_image_plane_proximity_candidate",
+            "distance_unit": "person_height_normalized_image_gap",
+            "zone_roi_used": false,
+            "person_bbox_xyxy": [
+              536.23876953125,
+              222.94537353515625,
+              605.781494140625,
+              396.8614501953125
+            ],
+            "forklift_bbox_xyxy": [
+              628.330078125,
+              81.30123901367188,
+              702.410888671875,
+              274.3867492675781
+            ]
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "3d2b959d3aaae25532a0923a53990bd8f7fa1f6cf432d1352029486aa2b5b169",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "cb60cf9a326bb955476ccd05b4b51d2b11c1349fdc09333efd8f655ee93ff72e",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "forward-proximity",
+          "video": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "proximity",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "P0:3",
+            "F0:1"
+          ],
+          "evidence": {
+            "person_track_id": "P0:3",
+            "forklift_track_id": "F0:1",
+            "reason": "forklift_extent_clipped",
+            "person_anchor_xy": [
+              660.359130859375,
+              273.77783203125
+            ],
+            "forklift_ground_proxy_xyxy": [
+              3.95501708984375,
+              612.0,
+              568.4671630859375,
+              720.0
+            ],
+            "nearest_vehicle_point_xy": [
+              568.4671630859375,
+              612.0
+            ],
+            "image_gap_pixels": 350.4830504414669,
+            "normalized_image_gap": 2.673461364933106,
+            "image_gap_closing_rate": null,
+            "orientation_status": "unknown",
+            "distance_meters": null,
+            "scope": "camera_image_plane_proximity_candidate",
+            "distance_unit": "person_height_normalized_image_gap",
+            "zone_roi_used": false
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "3d2b959d3aaae25532a0923a53990bd8f7fa1f6cf432d1352029486aa2b5b169",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "693d6f16a70a3d98d9f1178769dc9a0286c29c5a95ff6a963b9723e1adbc2247",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "forward-proximity",
+          "video": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "proximity",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "P0:3",
+            "F0:2"
+          ],
+          "evidence": {
+            "person_track_id": "P0:3",
+            "forklift_track_id": "F0:2",
+            "reason": "possible_operator_or_occluded_person",
+            "person_anchor_xy": [
+              660.359130859375,
+              273.77783203125
+            ],
+            "forklift_ground_proxy_xyxy": [
+              628.330078125,
+              245.42392272949218,
+              702.410888671875,
+              274.3867492675781
+            ],
+            "nearest_vehicle_point_xy": [
+              660.359130859375,
+              273.77783203125
+            ],
+            "image_gap_pixels": 0.0,
+            "normalized_image_gap": 0.0,
+            "image_gap_closing_rate": null,
+            "orientation_status": "unknown",
+            "distance_meters": null,
+            "scope": "camera_image_plane_proximity_candidate",
+            "distance_unit": "person_height_normalized_image_gap",
+            "zone_roi_used": false
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "3d2b959d3aaae25532a0923a53990bd8f7fa1f6cf432d1352029486aa2b5b169",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "5212a0b88929ba0f5c36e0370dfbe3c61913cfde5fbf167fc0681f92cc27f099",
+          "distance_meters": null
+        },
+        {
+          "schema_version": "1.0",
+          "camera_id": "forward-proximity",
+          "video": "1_forklift_forward.mp4",
+          "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
+          "timestamp_seconds": 1.4597916666666666,
+          "event_type": "proximity",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "P0:2",
+            "F0:1"
+          ],
+          "evidence": {
+            "person_track_id": "P0:2",
+            "forklift_track_id": "F0:1",
+            "reason": "pair_not_observed",
+            "scope": "camera_image_plane_proximity_candidate",
+            "orientation_status": "unknown",
+            "distance_meters": null,
+            "distance_unit": "person_height_normalized_image_gap",
+            "zone_roi_used": false
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "3d2b959d3aaae25532a0923a53990bd8f7fa1f6cf432d1352029486aa2b5b169",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "af0734c257077a639df8b91104e80009b228e086d8e75311fc107b48a0f16e35",
+          "distance_meters": null
+        }
+      ],
+      "distance_meters": null
+    },
+    {
+      "schema_version": "1.0",
+      "feature": "proximity",
+      "camera_id": "reverse-proximity",
+      "video": "2_forklift_back.mp4",
+      "timestamp_seconds": 1.4,
+      "frame_index": 35,
+      "scene_id": 0,
+      "global_safety_status": "not_evaluated",
+      "feature_status": {
+        "severity": null,
+        "display_state": "UNKNOWN",
+        "observed_event_count": 1,
+        "unknown_event_count": 1,
+        "coverage": "partial",
+        "scope": "this_feature_and_observed_subjects_only",
+        "global_safety_status": "not_evaluated"
+      },
+      "observation_status": "unconfirmed",
+      "events": [
+        {
+          "schema_version": "1.0",
+          "camera_id": "reverse-proximity",
+          "video": "2_forklift_back.mp4",
+          "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+          "timestamp_seconds": 1.4,
+          "event_type": "proximity",
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "track_ids": [
+            "P0:3",
+            "F0:1"
+          ],
+          "evidence": {
+            "person_track_id": "P0:3",
+            "forklift_track_id": "F0:1",
+            "reason": "forklift_extent_clipped",
+            "person_anchor_xy": [
+              1152.8160400390625,
+              387.4818420410156
+            ],
+            "forklift_ground_proxy_xyxy": [
+              0.0,
+              393.65089721679686,
+              227.8173065185547,
+              444.1619873046875
+            ],
+            "nearest_vehicle_point_xy": [
+              227.8173065185547,
+              393.65089721679686
+            ],
+            "image_gap_pixels": 925.0193048019621,
+            "normalized_image_gap": 3.6646348942905753,
+            "image_gap_closing_rate": null,
+            "orientation_status": "unknown",
+            "distance_meters": null,
+            "scope": "camera_image_plane_proximity_candidate",
+            "distance_unit": "person_height_normalized_image_gap",
+            "zone_roi_used": false
+          },
+          "model_version": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+          "config_version": "8055844dd7e6d49ed833cab1500c2770121dfffd36f31db7f758714ff67a3a97",
+          "scope": "observed_subjects_for_this_feature_only",
+          "event_id": "4df799e39fcb098106e358dfc1a2490239094a739546845ade6044316ed5cbc2",
+          "distance_meters": null
+        }
+      ],
+      "distance_meters": null
+    }
+  ],
+  "global_safety_status": "not_evaluated"
+}
