@@ -161,7 +161,7 @@ def draw_vehicle_pair_connections(frame,events):
  for e in events:
   boxes=e.get('forklift_bboxes_xyxy')
   if not boxes or len(boxes)!=2:continue
-  p,q=boxes;x,y=axis(p[0],p[2],q[0],q[2]);u,v=axis(p[3]-.15*(p[3]-p[1]),p[3],q[3]-.15*(q[3]-q[1]),q[3])
+  p,q=e.get('distance_bboxes_xyxy',[[v[0],v[3]-.15*(v[3]-v[1]),v[2],v[3]] for v in boxes]);x,y=axis(p[0],p[2],q[0],q[2]);u,v=axis(p[1],p[3],q[1],q[3])
   confirmed=e.get('observation_status')=='confirmed';state=e.get('severity') if confirmed else None;color=COLORS[state] if state else (0,165,255)
   a,b=(int(x),int(u)),(int(y),int(v));cv2.line(frame,a,b,color,3);cv2.circle(frame,a,5,color,-1);cv2.circle(frame,b,5,color,-1)
   label=f"FORKLIFT PAIR: {state or 'UNKNOWN / CHECK'}  gap {e.get('normalized_image_gap',0):.2f}"

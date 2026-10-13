@@ -37,7 +37,16 @@ def select_review_objects(predictions, shape, profile):
             if other_area>area and inter/area>=profile.get('vehicle_part_containment_threshold',.85):contained=True;break
         if contained:rejected.append({**d,'review_reason':'contained_vehicle_part_duplicate'})
         else:deduplicated.append(d)
-    kept=[d for d in kept if d['class']=='person']+deduplicated
+    people_kept=[]
+    for d in kept:
+        if d['class']!='person':continue
+        box=d['bbox_xyxy'];area=max(1,(box[2]-box[0])*(box[3]-box[1]))
+        supported=any(max(0,min(box[2],v['bbox_xyxy'][2])-max(box[0],v['bbox_xyxy'][0]))*max(0,min(box[3],v['bbox_xyxy'][3])-max(box[1],v['bbox_xyxy'][1]))/area>=.5 for v in deduplicated)
+        corroborated=any(q['confidence']>=.15 and iou(box,q['bbox_xyxy'])>=.3 for q in predictions.get('person_coco',[]))
+        if profile.get('weak_person_requires_context') and d.get('model_source')!='person_coco' and d['confidence']<.5 and not supported and not corroborated:
+            rejected.append({**d,'review_reason':'weak_person_without_vehicle_or_coco_support'})
+        else:people_kept.append(d)
+    kept=people_kept+deduplicated
     return kept,rejected
 
 def predict_review_objects(models,person_model,frame,profile):
@@ -51,6 +60,19 @@ def predict_review_objects(models,person_model,frame,profile):
     if profile.get('vehicle_support_required'):
         result=models.review_support.predict(frame,conf=profile.get('vehicle_support_minimum_confidence',.1),imgsz=1280,device='cpu',verbose=False)[0]
         predictions['vehicle_support']=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':'vehicle_support'}for b in result.boxes]
+    if profile.get('vehicle_context_refinement'):
+        predictions['vehicle_context']=[]
+        h,w=frame.shape[:2]
+        for d in predictions['supplement_highres']:
+            b=d['bbox_xyxy'];bw,bh=b[2]-b[0],b[3]-b[1]
+            if d['class']!='forklift' or d['confidence']<.25 or bw/bh<1.5:continue
+            x0,y0=max(0,int(b[0]-.15*bw)),max(0,int(b[1]-.25*bh));x1,y1=min(w,int(b[2]+.15*bw)),min(h,int(b[3]+.25*bh))
+            result=models.supplement.predict(frame[y0:y1,x0:x1],conf=.4,imgsz=1280,device='cpu',verbose=False)[0]
+            for item in result.boxes:
+                q=item.xyxy[0].tolist()
+                if q[0]<=1 or q[1]<=1 or q[2]>=x1-x0-1 or q[3]>=y1-y0-1:continue
+                q=[q[0]+x0,q[1]+y0,q[2]+x0,q[3]+y0]
+                predictions['vehicle_context'].append({'class':result.names[int(item.cls.item())],'confidence':float(item.conf.item()),'bbox_xyxy':q,'model_source':'vehicle_context'})
     return select_review_objects(predictions,frame.shape[:2],profile)
 
 

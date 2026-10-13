@@ -12,8 +12,10 @@ def unreliable_vehicle_pair(p,q,iou_threshold=.5,containment_threshold=.65):
  return smaller>0 and inter/smaller>=containment_threshold
 
 class ForkliftProximity:
- def __init__(self,warning=1,critical=.15,hysteresis=.1,gap=1):
+ def __init__(self,warning=1,critical=.15,hysteresis=.1,gap=1,distance_geometry="ground_band"):
   if not all(math.isfinite(x)for x in[warning,critical,hysteresis,gap])or not 0<=critical<warning or hysteresis<0 or gap<=0:raise ValueError('Invalid pair thresholds')
+  if distance_geometry not in ("ground_band","box_boundary"):raise ValueError("Invalid distance geometry")
+  self.distance_geometry=distance_geometry
   self.warning=warning;self.critical=critical;self.hysteresis=hysteresis;self.gap=gap;self.previous={};self.last=None
  def reset(self):self.previous.clear();self.last=None
  def update(self,timestamp,vehicles,shape):
@@ -24,12 +26,12 @@ class ForkliftProximity:
    key=(a['track_id'],b['track_id']);seen.add(key);p=a.get('detected_bbox_xyxy',a['bbox_xyxy']);q=b.get('detected_bbox_xyxy',b['bbox_xyxy'])
    if any(len(v)!=4 or not all(math.isfinite(x)for x in v)or v[2]<=v[0]or v[3]<=v[1]for v in[p,q]):raise ValueError('Invalid vehicle bbox')
    foot=lambda v:[v[0],v[3]-.15*(v[3]-v[1]),v[2],v[3]]
-   x,y=foot(p),foot(q);distance=math.hypot(max(0,x[0]-y[2],y[0]-x[2]),max(0,x[1]-y[3],y[1]-x[3]));ratio=distance/min(p[3]-p[1],q[3]-q[1]);old=self.previous.get(key);continuous=old and old['severity']and timestamp-old['time']<=self.gap;clipped=any(v[0]<=0 or v[2]>=w-1 or v[3]>=h-1 for v in[p,q]);merged=unreliable_vehicle_pair(p,q)
+   shared_height=min(p[3],q[3])>max(p[1],q[1]);x,y=(p,q) if self.distance_geometry=="box_boundary" and shared_height else (foot(p),foot(q));distance=math.hypot(max(0,x[0]-y[2],y[0]-x[2]),max(0,x[1]-y[3],y[1]-x[3]));ratio=distance/min(p[3]-p[1],q[3]-q[1]);old=self.previous.get(key);continuous=old and old['severity']and timestamp-old['time']<=self.gap;clipped=any(v[0]<=0 or v[2]>=w-1 or v[3]>=h-1 for v in[p,q]);merged=unreliable_vehicle_pair(p,q)
    if clipped or merged:severity=None;reason='forklift_extent_clipped'if clipped else'merged_or_duplicate_vehicle_boxes'
    else:
     severity='CRITICAL'if ratio<=self.critical+(self.hysteresis if continuous and old['severity']=='CRITICAL'else 0)else'WARNING'if ratio<=self.warning+(self.hysteresis if continuous and old['severity']in['WARNING','CRITICAL']else 0)else'SAFE';reason='image_plane_vehicle_pair_rule'
    self.previous[key]={'time':timestamp,'severity':severity}
-   events.append({'event_type':'forklift_forklift_proximity','timestamp_seconds':timestamp,'forklift_track_ids':list(key),'severity':severity,'observation_status':'unconfirmed'if clipped or merged else'confirmed','reason':reason,'forklift_bboxes_xyxy':[p,q],'image_gap_pixels':distance,'normalized_image_gap':ratio,'distance_meters':None,'orientation_status':'unknown','zone_roi_used':False,'scope':'observed_vehicle_pair_image_distance_only'})
+   events.append({'event_type':'forklift_forklift_proximity','timestamp_seconds':timestamp,'forklift_track_ids':list(key),'severity':severity,'observation_status':'unconfirmed'if clipped or merged else'confirmed','reason':reason,'forklift_bboxes_xyxy':[p,q],'distance_geometry':self.distance_geometry,'distance_bboxes_xyxy':[x,y],'image_gap_pixels':distance,'normalized_image_gap':ratio,'distance_meters':None,'orientation_status':'unknown','zone_roi_used':False,'scope':'observed_vehicle_pair_image_distance_only'})
   for key,v in list(self.previous.items()):
    if key in seen:continue
    events.append({'event_type':'forklift_forklift_proximity','timestamp_seconds':timestamp,'forklift_track_ids':list(key),'severity':None,'observation_status':'unconfirmed','reason':'pair_not_observed','distance_meters':None})

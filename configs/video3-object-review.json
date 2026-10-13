@@ -1,12 +1,13 @@
 {
-  "policy_version": "video3-cvat-object-review-v1",
+  "policy_version": "video3-context-boundary-review-v3",
   "person_prediction_keys": [
     "person_coco",
     "baseline",
     "person_adaptation"
   ],
   "vehicle_prediction_keys": [
-    "supplement_highres"
+    "supplement_highres",
+    "vehicle_context"
   ],
   "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
   "maximum_vehicle_frame_area": 0.35,
@@ -20,5 +21,7 @@
   "status": "experimental_video3_development_review",
   "limitation": "Related development-scene model; not independent validation. Loaded vehicle boxes can include cargo; clipped geometry remains UNKNOWN. People combine current COCO and baseline proposals; no held boxes. Large envelopes containing two separate current proposals are diagnostic only; not a proven instance segmentation method.",
   "show_safe_pairs_for_other_people": false,
-  "review_multi_vehicle_envelopes": true
+  "review_multi_vehicle_envelopes": true,
+  "vehicle_context_refinement": true,
+  "weak_person_requires_context": true
 }
