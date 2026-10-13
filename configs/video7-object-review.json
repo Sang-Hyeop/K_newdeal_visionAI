@@ -1,5 +1,5 @@
 {
-  "policy_version": "video7-selected-ppe-object-review-v1",
+  "policy_version": "video7-user-review-batch-v2",
   "status": "experimental_video7_development_review",
   "person_prediction_keys": [
     "person_coco",
@@ -10,12 +10,12 @@
   ],
   "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
   "vehicle_support_required": true,
-  "vehicle_support_weights": "models/pilot_v16_related/person_forklift.pt",
-  "vehicle_support_minimum_confidence": 0.25,
-  "vehicle_support_minimum_iou": 0.2,
+  "vehicle_support_weights": "models/nvidia_object_adaptation_v1/best.pt",
+  "vehicle_support_minimum_confidence": 0.12,
+  "vehicle_support_minimum_iou": 0.3,
   "minimum_confidence_by_class": {
     "person": 0.25,
-    "forklift": 0.25
+    "forklift": 0.12
   },
   "maximum_vehicle_frame_area": 0.35,
   "vehicle_part_containment_threshold": 0.85,
@@ -25,5 +25,10 @@
   "ppe_person_upper_fraction": 0.35,
   "renderer": "object_first",
   "show_safe_pairs_for_other_people": true,
-  "limitation": "Related CCTV development video; support agreement can reject occluded/low-confidence actual vehicles. No zero-miss or unseen-site claim."
+  "limitation": "Related CCTV development video; support agreement can reject occluded/low-confidence actual vehicles. No zero-miss or unseen-site claim.",
+  "vehicle_support_context": true,
+  "vehicle_support_context_minimum_candidate_confidence": 0.5,
+  "vehicle_support_context_minimum_confidence": 0.3,
+  "deduplicate_cabin_people": true,
+  "vehicle_support_person_context_scale": 1.25
 }

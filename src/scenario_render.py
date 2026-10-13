@@ -18,8 +18,16 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
  if zone:
   pipeline,row=zone;cfg=getattr(pipeline,'config',{})
   roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2),cfg.get('roi_unknown_color'),cfg.get('roi_alpha_unknown',.2))
+  if cfg.get('compact_risk_display'):
+   movement=feature_status(groups.get('zone_dwell',[])+groups.get('proximity',[]))
+   groups={k:v for k,v in groups.items() if k!='zone_access'}
+   if cfg.get('proximity_alert_lines_only'):
+    display_groups={**groups,'proximity':[e for e in groups.get('proximity',[]) if e.get('severity') in {'WARNING','CRITICAL'} and e.get('observation_status')=='confirmed']}
+   else:display_groups=groups
+  else:display_groups=groups;movement=None
+ else:display_groups=groups;movement=None
  if detections is not None:
-  draw_review_objects(frame,detections,groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
+  draw_review_objects(frame,detections,display_groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
   draw_vehicle_pair_connections(frame,groups.get("forklift_proximity",[]))
  for feature,events in groups.items():
   if detections is not None and feature not in {'zone_access','zone_dwell'}:continue
@@ -40,10 +48,15 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
     if feature=='ppe':label='HELMET'if e['ppe_state']=='helmet_detected'and e['severity']=='SAFE'else'NO HELMET? REVIEW'if e['severity']=='WARNING'else'PPE UNKNOWN'
     if feature=='ppe'and e.get('vehicle_overlap_review_required')and e['severity']=='WARNING':label='PPE REVIEW: VEHICLE OVERLAP'
     if feature=='ppe'and e.get('hood_evidence'):label='PPE REVIEW: HOOD'if e['severity']=='WARNING'else'PPE UNKNOWN: HOOD'
-    if 'observed_dwell_seconds'in e:label+=f" {e['observed_dwell_seconds']:.1f}s"
+    if 'observed_dwell_seconds'in e:
+     elapsed=e.get('observed_vehicle_co_presence_seconds',e['observed_dwell_seconds']) if e.get('vehicle_lane_state')=='observed_in_lane' and e.get('inside') else e['observed_dwell_seconds']
+     label+=f" {elapsed:.1f}s"
     label_y=y+14 if feature=='ppe' else max(105,y-20) if feature in {'zone_access','zone_dwell'} else max(105,y-5)
     cv2.putText(frame,label,(a,label_y),0,.48,color,1)
  y=22
+ if movement is not None:
+  cv2.rectangle(frame,(5,5),(min(frame.shape[1]-5,660),27),(20,20,20),-1)
+  cv2.putText(frame,'MOVEMENT RISK: '+movement['display_state'],(12,y),0,.55,COLORS[movement['severity']],2);y+=27
  for feature,events in groups.items():
   status=feature_status(events);color=COLORS[status['severity']];label=f"{feature.upper()}: {status['display_state']}  UNKNOWN={status['unknown_event_count']}"
   cv2.rectangle(frame,(5,y-17),(min(frame.shape[1]-5,660),y+5),(20,20,20),-1);cv2.putText(frame,label,(12,y),0,.55,color,2);y+=27

@@ -1,6 +1,7 @@
 """Full-frame proximity; fixed forbidden-area ROIs belong to TrackedZone."""
 from .person_tracker import PersonTracker
 from .proximity import Proximity
+from .operator_association import OperatorAssociation
 
 class TrackedProximity:
     def __init__(self,config,processed_fps):
@@ -10,9 +11,10 @@ class TrackedProximity:
             raise ValueError('Proximity requires full_frame configuration without a zone ROI')
         self.config=config
         self.people=PersonTracker(processed_fps,config['max_gap_seconds'],namespace='P',expose_current_candidates=config.get('expose_current_person_candidates',False),fuse_score=config.get('tracker_fuse_score',True))
-        self.forklifts=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F',fuse_score=config.get('forklift_tracker_fuse_score',config.get('tracker_fuse_score',True)))
+        self.forklifts=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F',fuse_score=config.get('forklift_tracker_fuse_score',config.get('tracker_fuse_score',True)),high_threshold=config.get('forklift_tracker_high_threshold',.25))
         self.rule=Proximity(config['warning_ratio'],config['critical_ratio'],config['hysteresis_ratio'],config['max_gap_seconds'],recent_pedestrian_overlap=config.get('recent_pedestrian_overlap',False),distance_geometry=config.get('distance_geometry','ground_band'),exclude_probable_operator=config.get('exclude_probable_operator',False))
         self.previous={}
+        self.operators=OperatorAssociation(config['max_gap_seconds']) if config.get('associate_riders') else None
 
     def update(self,timestamp,detections,shape,scene_cut=False):
         scene=self.people.scene
@@ -20,7 +22,11 @@ class TrackedProximity:
         ft,fm=self.forklifts.update(timestamp,detections,shape,scene_cut)
         if self.people.scene!=scene:
             self.rule.reset();self.previous.clear()
+            if self.operators:self.operators.reset()
         events=self.rule.update(timestamp,pt,ft,shape);transitions=[]
+        associations=self.operators.update(timestamp,pt,ft) if self.operators else {}
+        excluded=[e for e in events if associations.get(e['person_track_id'])==e['forklift_track_id']]
+        events=[e for e in events if associations.get(e['person_track_id'])!=e['forklift_track_id']]
         for event in events:
             event.update(camera_id=self.config['camera_id'],distance_unit='person_height_normalized_image_gap',zone_roi_used=False)
             key=(event['person_track_id'],event['forklift_track_id']);state=(event['severity'],event['reason'])
@@ -31,4 +37,4 @@ class TrackedProximity:
         return {'timestamp_seconds':timestamp,'scene_id':self.people.scene,'people':pt,'forklifts':ft,
                 'missing_people':pm,'missing_forklifts':fm,'events':events,'transitions':transitions,
                 'scene_cut':scene_cut,'zone_roi_used':False,'detection_scope':'full_frame',
-                'global_safety_status':'not_evaluated','pair_observation_status':'some_pairs_observed' if any(e['severity'] is not None for e in events) else 'unconfirmed'}
+                'excluded_rider_pairs':excluded,'rider_associations':associations,'global_safety_status':'not_evaluated','pair_observation_status':'some_pairs_observed' if any(e['severity'] is not None for e in events) else 'unconfirmed'}
