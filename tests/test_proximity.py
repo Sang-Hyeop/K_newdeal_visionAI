@@ -54,3 +54,21 @@ class ProximityTests(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
+class RecentPedestrianOverlapTests(unittest.TestCase):
+ def test_video1_expanding_box_preserves_observed_pedestrian_danger(self):
+  rule=Proximity(1.6,.8,max_gap=1,recent_pedestrian_overlap=True)
+  p={'track_id':'p','bbox_xyxy':[428,348,589,565]};f={'track_id':'f','bbox_xyxy':[492,146,733,492]}
+  self.assertEqual(rule.update(10.64,[p],[f],(720,1280))[0]['severity'],'CRITICAL')
+  p['bbox_xyxy']=[414,343,519,564];f['bbox_xyxy']=[351,156,733,556]
+  event=rule.update(10.84,[p],[f],(720,1280))[0]
+  self.assertEqual(event['severity'],'CRITICAL');self.assertTrue(event['recent_pedestrian_overlap_evidence'])
+ def test_first_overlap_cannot_claim_pedestrian_role(self):
+  rule=Proximity(1.6,.8,recent_pedestrian_overlap=True)
+  p={'track_id':'p','bbox_xyxy':[414,343,519,564]};f={'track_id':'f','bbox_xyxy':[351,156,733,556]}
+  self.assertIsNone(rule.update(0,[p],[f],(720,1280))[0]['severity'])
+ def test_old_evidence_expires(self):
+  rule=Proximity(1.6,.8,max_gap=1,recent_pedestrian_overlap=True)
+  p={'track_id':'p','bbox_xyxy':[428,348,589,565]};f={'track_id':'f','bbox_xyxy':[492,146,733,492]};rule.update(0,[p],[f],(720,1280))
+  p['bbox_xyxy']=[414,343,519,564];f['bbox_xyxy']=[351,156,733,556]
+  self.assertIsNone(rule.update(2,[p],[f],(720,1280))[0]['severity'])

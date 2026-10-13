@@ -50,13 +50,13 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
 
 
 def select_proximity_display_events(events,warning_ratio=1.6,driver_overlap_threshold=.8):
- """Select observed pairs except people mostly inside a forklift box.
+ """Select alerts and near ambiguity before distant safe fallback.
 
- The overlap rule is a demo-view exclusion heuristic, not proof that the person
- is the operator. Safe pairs are only a per-person fallback without alerts.
+ Box overlap alone does not establish the operator role; nearby ambiguous
+ pairs remain visible. Safe pairs are only a per-person fallback without alerts.
  """
  pairs=[e for e in events if e.get('person_anchor_xy') and e.get('nearest_vehicle_point_xy') and e.get('normalized_image_gap') is not None]
- pairs=[e for e in pairs if _person_vehicle_overlap(e)<driver_overlap_threshold]
+ pairs=exclude_driver_overlap_pairs(pairs,driver_overlap_threshold)
  alerts=[e for e in pairs if e.get('observation_status')=='confirmed' and e.get('severity') in {'WARNING','CRITICAL'}]
  uncertain=[e for e in pairs if e.get('observation_status')!='confirmed' and e['normalized_image_gap']<=warning_ratio]
  if alerts or uncertain:
@@ -78,8 +78,11 @@ def _person_vehicle_overlap(event):
 
 
 def exclude_driver_overlap_pairs(events,threshold=.8):
- """Exclude person/forklift pairs likely to be the seated operator in this demo."""
- return [event for event in events if _person_vehicle_overlap(event)<threshold]
+ """Only explicit operator evidence can remove a pair; box overlap is ambiguous.
+
+ Preserve nearby UNKNOWN so a distant SAFE pair cannot mask possible danger.
+ """
+ return [event for event in events if not event.get("operator_confirmed",False)]
 
 
 def _box_iou(a,b):

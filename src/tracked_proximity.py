@@ -11,7 +11,7 @@ class TrackedProximity:
         self.config=config
         self.people=PersonTracker(processed_fps,config['max_gap_seconds'],namespace='P',fuse_score=config.get('tracker_fuse_score',True))
         self.forklifts=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F',fuse_score=config.get('forklift_tracker_fuse_score',config.get('tracker_fuse_score',True)))
-        self.rule=Proximity(config['warning_ratio'],config['critical_ratio'],config['hysteresis_ratio'],config['max_gap_seconds'])
+        self.rule=Proximity(config['warning_ratio'],config['critical_ratio'],config['hysteresis_ratio'],config['max_gap_seconds'],recent_pedestrian_overlap=config.get('recent_pedestrian_overlap',False))
         self.previous={}
 
     def update(self,timestamp,detections,shape,scene_cut=False):

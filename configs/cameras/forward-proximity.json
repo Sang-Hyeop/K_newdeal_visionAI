@@ -12,8 +12,9 @@
   "detection_scope": "full_frame",
   "distance_mode": "image_plane",
   "zone_roi_used": false,
-  "policy_version": "proximity-forward-reviewed-v3",
+  "policy_version": "proximity-forward-pedestrian-evidence-v4",
   "object_review_profile": "configs/video1-object-review.json",
   "tracker_fuse_score": false,
-  "driver_overlap_exclusion_ratio": 0.8
+  "driver_overlap_exclusion_ratio": 0.8,
+  "recent_pedestrian_overlap": true
 }

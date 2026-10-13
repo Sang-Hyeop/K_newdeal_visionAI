@@ -51,7 +51,7 @@ class ScenarioRenderTests(unittest.TestCase):
         self.assertEqual({item['class'] for _, item in candidates}, {'helmeted_head', 'no_helmet_head'})
         self.assertEqual(len(candidates), 2)
 
-    def test_person_mostly_inside_forklift_box_is_excluded_from_display_pairs(self):
+    def test_overlap_alone_does_not_hide_ambiguous_pair(self):
         driver = {
             'person_track_id': 'p-driver', 'observation_status': 'unconfirmed',
             'severity': None, 'normalized_image_gap': .2,
@@ -65,8 +65,8 @@ class ScenarioRenderTests(unittest.TestCase):
             'person_bbox_xyxy': [110, 40, 140, 90], 'forklift_bbox_xyxy': [0, 0, 100, 100],
         }
 
-        self.assertEqual(exclude_driver_overlap_pairs([driver, pedestrian]), [pedestrian])
-        self.assertEqual(select_proximity_display_events([driver, pedestrian]), [pedestrian])
+        self.assertEqual(exclude_driver_overlap_pairs([driver, pedestrian]), [driver,pedestrian])
+        self.assertEqual(select_proximity_display_events([driver, pedestrian]), [pedestrian,driver])
 
 
 if __name__ == '__main__':
@@ -83,3 +83,12 @@ class LaneOverlayScopeTests(unittest.TestCase):
    self.assertTrue(np.array_equal(image[30,30],[100,100,100]))
    if severity is None:self.assertEqual(len(set(image[60,60].tolist())),1)
    else:self.assertGreater(len(set(image[60,60].tolist())),1)
+
+class AmbiguousPairSafetyTests(unittest.TestCase):
+ def test_overlapping_close_unknown_prevents_distant_safe_fallback(self):
+  from src.feature_status import feature_status
+  near={'person_track_id':'p','forklift_track_id':'front','severity':None,'observation_status':'unconfirmed','person_bbox_xyxy':[40,40,60,90],'forklift_bbox_xyxy':[0,0,100,100],'person_anchor_xy':[50,90],'nearest_vehicle_point_xy':[50,90],'normalized_image_gap':.01}
+  far={**near,'forklift_track_id':'far','forklift_bbox_xyxy':[300,0,400,100],'normalized_image_gap':2.4,'severity':'SAFE','observation_status':'confirmed'}
+  events=exclude_driver_overlap_pairs([near,far])
+  self.assertEqual(feature_status(events)['display_state'],'UNKNOWN')
+  self.assertEqual(select_proximity_display_events(events),[near])
