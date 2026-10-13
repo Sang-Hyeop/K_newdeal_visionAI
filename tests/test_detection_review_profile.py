@@ -36,3 +36,35 @@ class ReviewedObjectProfileTests(unittest.TestCase):
         self.assertEqual(Proximity(1.5,.65).update(0,[p],[f],(500,500))[0]['severity'],'WARNING')
         p['bbox_xyxy']=[245,100,265,200]
         self.assertEqual(Proximity(1.5,.65).update(0,[p],[f],(500,500))[0]['severity'],'CRITICAL')
+
+class WeakProposalRoutingTests(unittest.TestCase):
+    def test_weak_background_is_diagnostic_not_routed(self):
+        real={'class':'forklift','confidence':.86,'bbox_xyxy':[600,80,700,400]}
+        background={'class':'forklift','confidence':.34,'bbox_xyxy':[710,2,750,80]}
+        low_person={'class':'person','confidence':.24,'bbox_xyxy':[900,2,1000,150]}
+        worker={'class':'person','confidence':.41,'bbox_xyxy':[440,270,530,510]}
+        p={'baseline':[],'supplement':[real],'supplement_highres':[background],'person_coco':[worker,low_person]}
+        profile={'maximum_vehicle_frame_area':.35,'minimum_confidence_by_class':{'person':.25,'forklift':.4}}
+        kept,rejected=select_review_objects(p,(720,1280),profile)
+        self.assertEqual(kept,[worker,real])
+        self.assertEqual(len(rejected),2)
+        self.assertTrue(all(d['review_reason']=='low_confidence_requires_review' for d in rejected))
+        self.assertEqual({d['confidence'] for d in rejected},{.34,.24})
+    def test_two_strong_real_vehicles_at_start_are_preserved(self):
+        vehicles=[{'class':'forklift','confidence':c,'bbox_xyxy':b} for c,b in [(.83,[686,10,727,94]),(.79,[639,66,718,203])]]
+        p={'baseline':[],'supplement':[],'supplement_highres':vehicles,'person_coco':[]}
+        kept,rejected=select_review_objects(p,(720,1280),{'maximum_vehicle_frame_area':.35,'minimum_confidence_by_class':{'forklift':.4}})
+        self.assertEqual(len(kept),2);self.assertEqual(rejected,[])
+
+class VehicleReviewSupportTests(unittest.TestCase):
+    def test_supported_weak_vehicle_retained_and_strong_background_rejected(self):
+        vehicle={'class':'forklift','confidence':.2,'bbox_xyxy':[600,80,700,400]}
+        shelf={'class':'forklift','confidence':.61,'bbox_xyxy':[710,2,750,80]}
+        p={'baseline':[],'supplement':[vehicle,shelf],'supplement_highres':[],'person_coco':[],'vehicle_support':[dict(vehicle,confidence=.15)]}
+        kept,rejected=select_review_objects(p,(720,1280),{'maximum_vehicle_frame_area':.35,'vehicle_support_required':True})
+        self.assertEqual(kept,[vehicle]);self.assertEqual(rejected[0]['review_reason'],'vehicle_not_supported_by_review_model')
+    def test_absent_support_does_not_confirm_vehicle(self):
+        d={'class':'forklift','confidence':.9,'bbox_xyxy':[20,20,50,100]}
+        p={'baseline':[],'supplement':[d],'supplement_highres':[],'person_coco':[]}
+        kept,rejected=select_review_objects(p,(200,200),{'maximum_vehicle_frame_area':.35,'vehicle_support_required':True})
+        self.assertEqual(kept,[]);self.assertEqual(len(rejected),1)

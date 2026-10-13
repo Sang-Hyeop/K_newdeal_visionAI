@@ -8,7 +8,11 @@ def select_review_objects(predictions, shape, profile):
     for d in sorted(people+vehicles,key=lambda d:-d['confidence']):
         box=d['bbox_xyxy'];area=(box[2]-box[0])*(box[3]-box[1])/(width*height)
         reason=None
-        if d['class']=='forklift'and area>profile['maximum_vehicle_frame_area']:reason='oversized_vehicle_requires_review'
+        if d['confidence'] < profile.get('minimum_confidence_by_class',{}).get(d['class'],0):reason='low_confidence_requires_review'
+        elif d['class']=='forklift'and area>profile['maximum_vehicle_frame_area']:reason='oversized_vehicle_requires_review'
+        if reason is None and d['class']=='forklift' and profile.get('vehicle_support_required'):
+            support=predictions.get('vehicle_support',[])
+            if not any(q['class']=='forklift' and q['confidence']>=profile.get('vehicle_support_minimum_confidence',.1) and iou(box,q['bbox_xyxy'])>=profile.get('vehicle_support_minimum_iou',.3) for q in support):reason='vehicle_not_supported_by_review_model'
         if reason:rejected.append({**d,'review_reason':reason});continue
         if any(d['class']==k['class']and iou(box,k['bbox_xyxy'])>=.5 for k in kept):continue
         kept.append(dict(d))
@@ -31,4 +35,7 @@ def predict_review_objects(models,person_model,frame,profile):
     for key,model,imgsz,kwargs in [('baseline',models.baseline,640,{}),('supplement',models.supplement,640,{}),('supplement_highres',models.supplement,1280,{}),('person_coco',person_model,1280,{'classes':[0]})]:
         result=model.predict(frame,conf=.1,imgsz=imgsz,device='cpu',verbose=False,**kwargs)[0]
         predictions[key]=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':key}for b in result.boxes]
+    if profile.get('vehicle_support_required'):
+        result=models.review_support.predict(frame,conf=profile.get('vehicle_support_minimum_confidence',.1),imgsz=1280,device='cpu',verbose=False)[0]
+        predictions['vehicle_support']=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':'vehicle_support'}for b in result.boxes]
     return select_review_objects(predictions,frame.shape[:2],profile)

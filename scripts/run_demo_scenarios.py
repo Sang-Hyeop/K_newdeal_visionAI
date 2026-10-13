@@ -56,6 +56,7 @@ def main():
   review=json.load(open(ROOT/pcfg['object_review_profile']))if n==1 and pcfg.get('object_review_profile')else None
   if review and review.get('vehicle_weights'):
    hashes[review['vehicle_weights']]=sha(ROOT/review['vehicle_weights'])
+  if review and review.get('vehicle_support_weights'):hashes[review['vehicle_support_weights']]=sha(ROOT/review['vehicle_support_weights'])
   review_rows=None;review_person_model=None
   if a.object_review_cache:
    if not review:raise ValueError('Object review cache requires a reviewed camera profile')
@@ -94,6 +95,7 @@ def main():
      else:
       if models is None:models=ObjectRecallEnsemble(YOLO(ROOT/obj['baseline_weights']),YOLO(ROOT/obj['supplement_weights']))
       if review.get('vehicle_weights'):models.supplement=YOLO(ROOT/review['vehicle_weights']) if not getattr(models,'review_weight_loaded',False) else models.supplement;models.review_weight_loaded=True
+      if review.get('vehicle_support_required') and not hasattr(models,'review_support'):models.review_support=YOLO(ROOT/review['vehicle_support_weights'])
       if review_person_model is None:review_person_model=YOLO(ROOT/profile['weights']['objects'])
       detections,rejected_objects=predict_review_objects(models,review_person_model,frame,review)
     if specialist:
@@ -121,7 +123,9 @@ def main():
     if idx in cached:
      ppe_tracks=cached[idx]['tracks'];heads=cached[idx]['head_detections'];current={v['track_id']for v in ppe_tracks};missing=[{'track_id':e['track_id']}for e in cached[idx]['events']if e.get('track_id') not in current and e.get('reason')=='person_not_observed'];ppe_events,_=prule.update(t,ppe_tracks,missing,cut);proposals=heads+[q for tr in ppe_tracks for q in tr['ppe']['head_candidates']];extra,_=hrule.update(t,proposals,[tr['detected_bbox_xyxy']for tr in ppe_tracks],(h,w),cut,body_events=ppe_events);ppe_events+=extra
     else:
-     pp=person_model.predict(frame,classes=[0],conf=.1,imgsz=1280,device='cpu',verbose=False)[0];people=[{'class':'person','confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in pp.boxes];ppe_tracks,missing=pt.update(t,people,(h,w),cut)
+     pp=person_model.predict(frame,classes=[0],conf=.1,imgsz=1280,device='cpu',verbose=False)[0];people=[{'class':'person','confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in pp.boxes];
+     if review:people=[d for d in people if d['confidence']>=review.get('minimum_confidence_by_class',{}).get('person',0)]
+     ppe_tracks,missing=pt.update(t,people,(h,w),cut)
      if a.ppe_final:
       heads=[{'class':ppe.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'final_v6_full_frame','model_sources':['baseline','final_v6']} for q in ppe.predict(frame)]
       boxes=[v['detected_bbox_xyxy']for v in ppe_tracks];proposals=heads;observations=[{'head_candidates':[],'rejected_candidates':[],'state':'unknown'}for _ in boxes]
