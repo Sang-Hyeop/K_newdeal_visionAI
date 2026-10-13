@@ -1,0 +1,21 @@
+{
+  "policy_version": "video4-coco-person-selected-bundle-review-v1",
+  "status": "experimental_video4_development_review",
+  "person_prediction_keys": [
+    "person_coco"
+  ],
+  "vehicle_prediction_keys": [
+    "baseline",
+    "supplement",
+    "supplement_highres"
+  ],
+  "minimum_confidence_by_class": {
+    "person": 0.25,
+    "forklift": 0.25
+  },
+  "maximum_vehicle_frame_area": 0.35,
+  "vehicle_part_containment_threshold": 0.85,
+  "ppe_requires_observed_person": true,
+  "renderer": "object_first",
+  "limitation": "COCO current person observations reduce equipment proposals; small/background false positives and occlusion misses remain. No independent-site evaluation."
+}

@@ -22,7 +22,7 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
   draw_review_objects(frame,detections,groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
   draw_vehicle_pair_connections(frame,groups.get("forklift_proximity",[]))
  for feature,events in groups.items():
-  if detections is not None:continue
+  if detections is not None and feature not in {'zone_access','zone_dwell'}:continue
   for e in events:
    if feature=='zone_access' and any(q.get('track_id')==e.get('track_id') for q in groups.get('zone_dwell',[])):continue
    color=COLORS[e['severity'] if e.get('observation_status')=='confirmed'else None];box=e.get('person_bbox_xyxy',e.get('head_bbox_xyxy'))
