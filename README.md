@@ -8,6 +8,7 @@
 - [영상별 시연 기준](docs/demo-feature-show-plan-2026-10-07.md)
 - [실행 방법](docs/demo-scenario-runbook-2026-10-07.md)
 - [백엔드·대시보드 연동](docs/team-integration-pack-2026-10-07.md)
+- [샘플 기반 백엔드 API 및 대시보드 전달물](backend_v1/HANDOFF_KO.md)
 - [남은 과제](docs/remaining-gaps-2026-10-07.md)
 - [개발 도구 용도별 목록](scripts/README.md)
 

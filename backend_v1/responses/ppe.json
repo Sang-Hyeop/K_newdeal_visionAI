@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "schema_version": "1.0",
+      "camera_id": "5_PPE_Helmet-ppe",
+      "video": "5_PPE_Helmet.mp4",
+      "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+      "timestamp_seconds": 1.8768749999999998,
+      "event_type": "ppe",
+      "severity": null,
+      "observation_status": "unconfirmed",
+      "track_ids": [
+        "0:4"
+      ],
+      "evidence": {
+        "track_id": "0:4",
+        "ppe_state": "unknown",
+        "reason": "conflicting_or_missing_or_low_confidence_head",
+        "person_bbox_xyxy": [
+          450.9073791503906,
+          365.581787109375,
+          613.1683349609375,
+          720.0
+        ],
+        "head_candidates": [],
+        "violation_status": "not_verified",
+        "scope": "helmet_observation_for_this_person_only"
+      },
+      "model_version": "f773dd30e9e7d0fdf01c930c6dc0a4b732d34ee13cabf8b97bc1d8db6001be43",
+      "config_version": "b0e41786497c33d3315fd745d3f1ed766679cfaa2bb15c0db28a7e6f0a45046e",
+      "scope": "observed_subjects_for_this_feature_only",
+      "event_id": "a7520597271e8e663630bc49657f5ccac45a5b84ae16b8c299ef8c4e7e532b18",
+      "distance_meters": null
+    }
+  ],
+  "total": 7,
+  "count": 1,
+  "limit": 1,
+  "offset": 0
+}
