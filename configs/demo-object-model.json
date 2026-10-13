@@ -105,5 +105,12 @@
     "Training-exposed scene success is not proof of unseen-site zero misses",
     "PPE bare-head misses remain",
     "No front/rear orientation or camera-to-meter calibration"
-  ]
+  ],
+  "annotation_amendment": {
+    "date": "2026-10-13",
+    "status": "training_annotations_corrected_model_weights_not_retrained",
+    "reason": "user-confirmed left dark-blue equipment mislabeled as person/head",
+    "weights_unchanged": true,
+    "old_evaluation_status": "historical_pre_correction; reevaluation/retraining required"
+  }
 }

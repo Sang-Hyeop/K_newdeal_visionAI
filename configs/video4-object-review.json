@@ -17,5 +17,23 @@
   "vehicle_part_containment_threshold": 0.85,
   "ppe_requires_observed_person": true,
   "renderer": "object_first",
-  "limitation": "COCO current person observations reduce equipment proposals; small/background false positives and occlusion misses remain. No independent-site evaluation."
+  "limitation": "COCO current person observations reduce equipment proposals; small/background false positives and occlusion misses remain. No independent-site evaluation.",
+  "confirmed_equipment_regions": [
+    {
+      "id": "user_confirmed_dark_blue_equipment",
+      "bbox_normalized": [
+        0.08854166666666667,
+        0.08333333333333333,
+        0.1328125,
+        0.24537037037037038
+      ],
+      "excluded_classes": [
+        "person",
+        "helmeted_head",
+        "no_helmet_head"
+      ],
+      "review": "User explicitly confirmed left dark blue structure is equipment on2026-10-13; right worker remains person",
+      "scope": "fixed video4 camera only; not transferable to new camera views"
+    }
+  ]
 }

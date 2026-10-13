@@ -21,7 +21,7 @@ from src.hoodie_guard import apply_hood_guard,predict_hood_detections
 from src.ppe_vehicle_guard import apply_ppe_vehicle_guard
 from src.scenario_render import exclude_driver_overlap_pairs, render
 from src.feature_status import feature_status
-from src.detection_review_profile import predict_review_objects,select_review_objects,build_review_models
+from src.detection_review_profile import predict_review_objects,select_review_objects,build_review_models,exclude_confirmed_equipment
 from src.event_contract import export_events
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -132,6 +132,8 @@ def main():
       raw=ppe.predict(frame,conf=.25,imgsz=640,device='cpu',verbose=False)[0];heads=[{'class':ppe.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'source':'full_frame','model_sources':getattr(b,'model_sources',['single_ppe_model'])}for b in raw.boxes]
       if a.ppe_search=='full_recall':tiles,_=infer_tiled_heads(frame,ppe);heads+=tiles
       boxes=[v['detected_bbox_xyxy']for v in ppe_tracks];observations=infer_person_ppe(frame,boxes,ppe,full_frame_heads=heads,crop_height_fraction=1);proposals=heads+[q for o in observations for q in o['head_candidates']];heads+=refine_weak_heads(frame,proposals,ppe);proposals=heads+[q for o in observations for q in o['head_candidates']]
+     if review:
+      proposals,equipment_heads=exclude_confirmed_equipment(proposals,(h,w),review);heads,_=exclude_confirmed_equipment(heads,(h,w),review);rejected_objects+=equipment_heads
      for i,(track,obs)in enumerate(zip(ppe_tracks,observations)):
       selected=[q for q in proposals if head_owner(q['bbox_xyxy'],boxes,h)==i];classes={q['class']for q in selected};obs.update(head_candidates=selected,state='helmet_detected'if classes=={'helmeted_head'}else'no_helmet_candidate'if classes=={'no_helmet_head'}else'conflicting_evidence'if len(classes)>1 else'unknown');track['ppe']=obs
      ppe_events,_=prule.update(t,ppe_tracks,missing,cut);extra,_=hrule.update(t,proposals,boxes,(h,w),cut,body_events=ppe_events);ppe_events+=extra

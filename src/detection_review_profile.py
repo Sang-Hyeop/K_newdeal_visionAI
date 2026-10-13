@@ -2,6 +2,21 @@
 from .ppe_tiled_inference import iou
 from types import SimpleNamespace
 
+
+def exclude_confirmed_equipment(proposals,shape,profile):
+    """Exclude only user-confirmed fixed-camera equipment; never infer a general role."""
+    h,w=shape;kept=[];rejected=[]
+    for d in proposals:
+        a=d['bbox_xyxy'];area=max(1,(a[2]-a[0])*(a[3]-a[1]));blocked=False
+        for region in profile.get('confirmed_equipment_regions',[]):
+            if d['class'] not in region.get('excluded_classes',[]):continue
+            b=region['bbox_normalized'];b=[b[0]*w,b[1]*h,b[2]*w,b[3]*h]
+            inter=max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]))
+            if inter/area>=.8:blocked=True;break
+        if blocked:rejected.append({**d,'review_reason':'user_confirmed_equipment_not_person_or_head'})
+        else:kept.append(d)
+    return kept,rejected
+
 def select_review_objects(predictions, shape, profile):
     height,width=shape;kept=[];rejected=[]
     people=[d for key in profile.get('person_prediction_keys',('person_coco',)) for d in predictions[key] if d['class']=='person']
@@ -63,7 +78,8 @@ def select_review_objects(predictions, shape, profile):
             else:unique.append(d)
         people_kept=unique
     kept=people_kept+deduplicated
-    return kept,rejected
+    kept,equipment_rejected=exclude_confirmed_equipment(kept,shape,profile)
+    return kept,rejected+equipment_rejected
 
 def predict_review_objects(models,person_model,frame,profile):
     predictions={}

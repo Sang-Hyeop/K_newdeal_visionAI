@@ -30,13 +30,6 @@
         ],
         [
           0,
-          174,
-          116,
-          48,
-          84
-        ],
-        [
-          0,
           382,
           194,
           56,
@@ -60,7 +53,8 @@
       "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
       "masked_regions_xyxy_960": [],
       "qa_status": "manual_whole_frame_visible_person_review",
-      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation",
+      "annotation_amendment": "2026-10-13 user-confirmed equipment labels removed; old metrics require reevaluation"
     },
     {
       "id": 2,
@@ -85,13 +79,6 @@
         ],
         [
           0,
-          174,
-          116,
-          48,
-          84
-        ],
-        [
-          0,
           374,
           192,
           66,
@@ -108,7 +95,8 @@
       "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
       "masked_regions_xyxy_960": [],
       "qa_status": "manual_whole_frame_visible_person_review",
-      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation",
+      "annotation_amendment": "2026-10-13 user-confirmed equipment labels removed; old metrics require reevaluation"
     },
     {
       "id": 2,
@@ -140,13 +128,6 @@
         ],
         [
           0,
-          178,
-          130,
-          62,
-          72
-        ],
-        [
-          0,
           374,
           182,
           66,
@@ -156,7 +137,8 @@
       "source_sha256": "46b96fe7d6b8d829ac0d97069cb94632a3a8ba8259640d77502735d3131943c0",
       "masked_regions_xyxy_960": [],
       "qa_status": "manual_whole_frame_visible_person_review",
-      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation",
+      "annotation_amendment": "2026-10-13 user-confirmed equipment labels removed; old metrics require reevaluation"
     },
     {
       "id": 3,
@@ -181,13 +163,6 @@
         ],
         [
           0,
-          174,
-          116,
-          48,
-          84
-        ],
-        [
-          0,
           220,
           92,
           78,
@@ -204,7 +179,8 @@
       "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
       "masked_regions_xyxy_960": [],
       "qa_status": "manual_whole_frame_visible_person_review",
-      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation",
+      "annotation_amendment": "2026-10-13 user-confirmed equipment labels removed; old metrics require reevaluation"
     },
     {
       "id": 3,
@@ -229,13 +205,6 @@
         ],
         [
           0,
-          174,
-          116,
-          48,
-          84
-        ],
-        [
-          0,
           240,
           104,
           70,
@@ -245,7 +214,8 @@
       "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
       "masked_regions_xyxy_960": [],
       "qa_status": "manual_whole_frame_visible_person_review",
-      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation",
+      "annotation_amendment": "2026-10-13 user-confirmed equipment labels removed; old metrics require reevaluation"
     },
     {
       "id": 3,
@@ -277,13 +247,6 @@
         ],
         [
           0,
-          178,
-          114,
-          44,
-          86
-        ],
-        [
-          0,
           222,
           96,
           56,
@@ -293,7 +256,8 @@
       "source_sha256": "73483eb34ac57618e31e9cb02ecbb198f05c57d9d09ac40c69c7f27a88dbf86d",
       "masked_regions_xyxy_960": [],
       "qa_status": "manual_whole_frame_visible_person_review",
-      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation"
+      "camera_generalization": "factory camera domain overlaps some demos; not unseen-site evaluation",
+      "annotation_amendment": "2026-10-13 user-confirmed equipment labels removed; old metrics require reevaluation"
     },
     {
       "id": 4,
