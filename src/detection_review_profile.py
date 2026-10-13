@@ -46,6 +46,22 @@ def select_review_objects(predictions, shape, profile):
         if profile.get('weak_person_requires_context') and d.get('model_source')!='person_coco' and d['confidence']<.5 and not supported and not corroborated:
             rejected.append({**d,'review_reason':'weak_person_without_vehicle_or_coco_support'})
         else:people_kept.append(d)
+    if profile.get('deduplicate_cabin_people'):
+        unique=[]
+        def coverage(a,b):
+            inter=max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]))
+            return inter/max(1,(a[2]-a[0])*(a[3]-a[1]))
+        for d in people_kept:
+            a=d['bbox_xyxy'];duplicate=False
+            for other in unique:
+                b=other['bbox_xyxy']
+                if d.get('model_source')==other.get('model_source'):continue
+                overlapping=iou(a,b)>=.3 or max(coverage(a,b),coverage(b,a))>=.85
+                same_cabin=any(coverage(a,v['bbox_xyxy'])>=.9 and coverage(b,v['bbox_xyxy'])>=.9 and max(a[3],b[3])<=v['bbox_xyxy'][1]+.85*(v['bbox_xyxy'][3]-v['bbox_xyxy'][1]) for v in deduplicated)
+                if overlapping and same_cabin:duplicate=True;break
+            if duplicate:rejected.append({**d,'review_reason':'duplicate_person_cross_model_same_cabin'})
+            else:unique.append(d)
+        people_kept=unique
     kept=people_kept+deduplicated
     return kept,rejected
 

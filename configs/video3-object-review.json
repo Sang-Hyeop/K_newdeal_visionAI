@@ -1,5 +1,5 @@
 {
-  "policy_version": "video3-context-boundary-review-v3",
+  "policy_version": "video3-context-boundary-person-dedup-v4",
   "person_prediction_keys": [
     "person_coco",
     "baseline",
@@ -23,5 +23,6 @@
   "show_safe_pairs_for_other_people": false,
   "review_multi_vehicle_envelopes": true,
   "vehicle_context_refinement": true,
-  "weak_person_requires_context": true
+  "weak_person_requires_context": true,
+  "deduplicate_cabin_people": true
 }
