@@ -158,7 +158,7 @@ def main():
      laststate[feature]=now;feature_rows.setdefault(feature,[]).append({'frame_index':idx,'timestamp_seconds':t,'events':events,'transitions':transitions,'scene_id':zrow['scene_id']if zrow else pt.scene,'roi_active':zrow['roi_active']if zrow else True})
     canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None,proximity_warning_ratio=(pcfg or {}).get('warning_ratio',1.6),include_other_safe_people=(review or {}).get('show_safe_pairs_for_other_people',False))
     if review:
-     cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} person-height gap",(12,h-34),0,.42,(230,230,230),1)
+     cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} {'vehicle-height' if n==3 else 'person-height'} gap",(12,h-34),0,.42,(230,230,230),1)
     if use_hood:
      for event in ppe_events:
       if event.get('hood_evidence'):

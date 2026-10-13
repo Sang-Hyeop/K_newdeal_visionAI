@@ -11,6 +11,15 @@ def select_review_objects(predictions, shape, profile):
         reason=None
         if d['confidence'] < profile.get('minimum_confidence_by_class',{}).get(d['class'],0):reason='low_confidence_requires_review'
         elif d['class']=='forklift'and area>profile['maximum_vehicle_frame_area']:reason='oversized_vehicle_requires_review'
+        if reason is None and d['class']=='forklift' and profile.get('review_multi_vehicle_envelopes'):
+            area_px=(box[2]-box[0])*(box[3]-box[1]);children=[]
+            for q in vehicles:
+                b=q['bbox_xyxy'];a=(b[2]-b[0])*(b[3]-b[1]);inter=max(0,min(box[2],b[2])-max(box[0],b[0]))*max(0,min(box[3],b[3])-max(box[1],b[1]))
+                if q is not d and q['confidence']>=.25 and .25*area_px<a<.85*area_px and inter/max(a,1e-9)>=.9:children.append(q)
+            for i,left in enumerate(children):
+                for right in children[i+1:]:
+                    a,b=left['bbox_xyxy'],right['bbox_xyxy'];inter=max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]));union=(a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-inter
+                    if iou(a,b)<.35 and union/area_px>=.7:reason='multi_vehicle_envelope_requires_review'
         if reason is None and d['class']=='forklift' and profile.get('vehicle_support_required'):
             support=predictions.get('vehicle_support',[])
             if not any(q['class']=='forklift' and q['confidence']>=profile.get('vehicle_support_minimum_confidence',.1) and iou(box,q['bbox_xyxy'])>=profile.get('vehicle_support_minimum_iou',.3) for q in support):reason='vehicle_not_supported_by_review_model'

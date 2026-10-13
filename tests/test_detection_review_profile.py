@@ -87,3 +87,12 @@ class CameraRouteIsolationTests(unittest.TestCase):
   first=build_review_models(base,{'vehicle_weights':'video1','vehicle_support_required':True,'vehicle_support_weights':'support'},lambda path:path)
   second=build_review_models(base,{'vehicle_weights':'video2'},lambda path:path)
   self.assertEqual(first.supplement,'video1');self.assertEqual(second.supplement,'video2');self.assertEqual(base.supplement,'shared');self.assertEqual(first.review_support,'support');self.assertFalse(hasattr(second,'review_support'))
+
+class MultiVehicleEnvelopeTests(unittest.TestCase):
+ def test_two_vehicle_proposals_not_dropped_inside_combined_box(self):
+  full={'class':'forklift','confidence':.8,'bbox_xyxy':[10,20,110,100]}
+  left={'class':'forklift','confidence':.4,'bbox_xyxy':[10,20,65,100]}
+  right={'class':'forklift','confidence':.4,'bbox_xyxy':[55,20,110,100]}
+  p={'baseline':[],'supplement':[full,left,right],'supplement_highres':[],'person_coco':[]}
+  kept,rejected=select_review_objects(p,(400,400),{'maximum_vehicle_frame_area':.35,'review_multi_vehicle_envelopes':True})
+  self.assertEqual(kept,[left,right]);self.assertEqual(rejected[0]['review_reason'],'multi_vehicle_envelope_requires_review')

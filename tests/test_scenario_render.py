@@ -100,3 +100,14 @@ class PerPersonDistanceDisplayTests(unittest.TestCase):
   worker={**far,'person_track_id':'worker'}
   selected=select_proximity_display_events([near,far,worker],include_other_safe_people=True)
   self.assertEqual(selected,[near,worker])
+
+class VehiclePairObjectFirstDisplayTests(unittest.TestCase):
+ def test_vehicle_pair_connection_survives_object_first_rendering(self):
+  import numpy as np
+  from src.forklift_proximity import ForkliftProximity
+  from src.scenario_render import render
+  vehicles=[{'track_id':'a','bbox_xyxy':[20,30,80,200]},{'track_id':'b','bbox_xyxy':[150,30,220,200]}]
+  events=ForkliftProximity().update(0,vehicles,(300,300))
+  image=np.zeros((300,300,3),np.uint8)
+  render(image,{'forklift_proximity':events},detections=[])
+  self.assertTrue(image[187,110].any())

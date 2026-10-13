@@ -31,7 +31,7 @@
       "primary_features": [
         "forklift_forklift_proximity"
       ],
-      "camera_config": null,
+      "camera_config": "configs/cameras/forklift-pair-review.json",
       "distance_meters": null
     },
     {

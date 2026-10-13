@@ -20,6 +20,7 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
   roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2))
  if detections is not None:
   draw_review_objects(frame,detections,groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
+  draw_vehicle_pair_connections(frame,groups.get("forklift_proximity",[]))
  for feature,events in groups.items():
   if detections is not None:continue
   for e in events:
@@ -149,3 +150,19 @@ def draw_review_objects(frame,detections,groups,warning_ratio=1.6,driver_overlap
  if len(display_events)>3:
   cv2.rectangle(frame,(7,legend_y-15),(min(frame.shape[1]-7,410),legend_y+5),(20,20,20),-1)
   cv2.putText(frame,f"{len(display_events)} person-forklift pairs shown; details in event log",(12,legend_y),0,.43,(0,165,255),1)
+
+
+def draw_vehicle_pair_connections(frame,events):
+ """Draw the same ground-band rectangle gap used by ForkliftProximity."""
+ def axis(a,b,c,d):
+  if b<c:return b,c
+  if d<a:return a,d
+  shared=(max(a,c)+min(b,d))/2;return shared,shared
+ for e in events:
+  boxes=e.get('forklift_bboxes_xyxy')
+  if not boxes or len(boxes)!=2:continue
+  p,q=boxes;x,y=axis(p[0],p[2],q[0],q[2]);u,v=axis(p[3]-.15*(p[3]-p[1]),p[3],q[3]-.15*(q[3]-q[1]),q[3])
+  confirmed=e.get('observation_status')=='confirmed';state=e.get('severity') if confirmed else None;color=COLORS[state] if state else (0,165,255)
+  a,b=(int(x),int(u)),(int(y),int(v));cv2.line(frame,a,b,color,3);cv2.circle(frame,a,5,color,-1);cv2.circle(frame,b,5,color,-1)
+  label=f"FORKLIFT PAIR: {state or 'UNKNOWN / CHECK'}  gap {e.get('normalized_image_gap',0):.2f}"
+  cv2.putText(frame,label,(max(5,min(a[0],b[0])),max(85,min(a[1],b[1])-12)),0,.45,color,1)
