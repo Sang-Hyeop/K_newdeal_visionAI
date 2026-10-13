@@ -103,5 +103,12 @@
   "vehicle_presence_scope": "same_monitored_floor_lane_outside_safe_boxes",
   "distance_mode": "image_plane",
   "policy_version": "user_vehicle_lane_3_seconds_v3",
-  "vehicle_critical_seconds": 3
+  "vehicle_critical_seconds": 3,
+  "object_review_profile": "configs/video7-object-review.json",
+  "roi_unknown_color": [
+    255,
+    180,
+    0
+  ],
+  "roi_alpha_unknown": 0.2
 }

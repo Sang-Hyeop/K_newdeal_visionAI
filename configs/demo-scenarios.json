@@ -66,7 +66,9 @@
         "ppe"
       ],
       "camera_config": null,
-      "distance_meters": null
+      "distance_meters": null,
+      "review_enabled": false,
+      "exclusion_reason": "User2026-10-13: similar tovideo5; no longer used in presentation/review"
     },
     {
       "video_number": 7,

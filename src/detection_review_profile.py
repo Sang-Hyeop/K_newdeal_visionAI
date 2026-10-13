@@ -86,6 +86,9 @@ def predict_review_objects(models,person_model,frame,profile):
     for key,model,imgsz,kwargs in [('baseline',models.baseline,640,{}),('supplement',models.supplement,640,{}),('supplement_highres',models.supplement,1280,{}),('person_coco',person_model,1280,{'classes':[0]})]:
         result=model.predict(frame,conf=.1,imgsz=imgsz,device='cpu',verbose=False,**kwargs)[0]
         predictions[key]=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':key}for b in result.boxes]
+    if 'baseline_highres' in profile.get('person_prediction_keys',()) or 'baseline_highres' in profile.get('vehicle_prediction_keys',()):
+        result=models.baseline.predict(frame,conf=.1,imgsz=1280,device='cpu',verbose=False)[0]
+        predictions['baseline_highres']=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':'baseline_highres'}for b in result.boxes]
     if 'person_adaptation' in profile.get('person_prediction_keys',()):
         result=models.person_adaptation.predict(frame,conf=.1,imgsz=640,device='cpu',verbose=False)[0]
         predictions['person_adaptation']=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':'person_adaptation'}for b in result.boxes]

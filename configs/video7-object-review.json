@@ -1,0 +1,29 @@
+{
+  "policy_version": "video7-selected-ppe-object-review-v1",
+  "status": "experimental_video7_development_review",
+  "person_prediction_keys": [
+    "person_coco",
+    "baseline_highres"
+  ],
+  "vehicle_prediction_keys": [
+    "supplement_highres"
+  ],
+  "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "vehicle_support_required": true,
+  "vehicle_support_weights": "models/pilot_v16_related/person_forklift.pt",
+  "vehicle_support_minimum_confidence": 0.25,
+  "vehicle_support_minimum_iou": 0.2,
+  "minimum_confidence_by_class": {
+    "person": 0.25,
+    "forklift": 0.25
+  },
+  "maximum_vehicle_frame_area": 0.35,
+  "vehicle_part_containment_threshold": 0.85,
+  "ppe_requires_observed_person": true,
+  "ppe_person_context": true,
+  "ppe_one_head_per_class_per_person": true,
+  "ppe_person_upper_fraction": 0.35,
+  "renderer": "object_first",
+  "show_safe_pairs_for_other_people": true,
+  "limitation": "Related CCTV development video; support agreement can reject occluded/low-confidence actual vehicles. No zero-miss or unseen-site claim."
+}

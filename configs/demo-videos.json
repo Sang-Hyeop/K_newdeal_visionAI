@@ -83,7 +83,9 @@
     "sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
     "training_eligible": false,
     "purpose": "demo_and_development_validation",
-    "size_bytes": 19188319
+    "size_bytes": 19188319,
+    "review_enabled": false,
+    "exclusion_reason": "User2026-10-13: duplicate scenario ofvideo5; no longer used"
   },
   {
     "file": "7_Logistics Warehouse.mp4",
