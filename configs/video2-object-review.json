@@ -1,0 +1,23 @@
+{
+  "policy_version": "video2-cvat-person-routing-v1",
+  "person_prediction_keys": [
+    "person_coco",
+    "baseline",
+    "person_adaptation"
+  ],
+  "vehicle_prediction_keys": [
+    "supplement_highres"
+  ],
+  "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "maximum_vehicle_frame_area": 0.35,
+  "vehicle_part_containment_threshold": 0.6,
+  "minimum_confidence_by_class": {
+    "person": 0.25,
+    "forklift": 0.25
+  },
+  "ppe_requires_observed_person": true,
+  "renderer": "object_first",
+  "status": "experimental_video2_development_review",
+  "limitation": "Related development-scene model; not independent validation. Loaded vehicle boxes can include cargo; clipped geometry remains UNKNOWN. People combine current COCO and baseline proposals; no held boxes.",
+  "show_safe_pairs_for_other_people": true
+}

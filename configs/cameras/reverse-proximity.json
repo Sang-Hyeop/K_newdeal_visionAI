@@ -12,5 +12,7 @@
   "detection_scope": "full_frame",
   "distance_mode": "image_plane",
   "zone_roi_used": false,
-  "policy_version": "proximity-full-frame-v2"
+  "policy_version": "proximity-reverse-object-review-v3",
+  "object_review_profile": "configs/video2-object-review.json",
+  "tracker_fuse_score": false
 }

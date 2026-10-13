@@ -68,3 +68,22 @@ class VehicleReviewSupportTests(unittest.TestCase):
         p={'baseline':[],'supplement':[d],'supplement_highres':[],'person_coco':[]}
         kept,rejected=select_review_objects(p,(200,200),{'maximum_vehicle_frame_area':.35,'vehicle_support_required':True})
         self.assertEqual(kept,[]);self.assertEqual(len(rejected),1)
+
+class ReviewedPersonRoutingTests(unittest.TestCase):
+ def test_seated_baseline_and_walking_coco_person_both_preserved(self):
+  seated={'class':'person','confidence':.96,'bbox_xyxy':[1540,400,1670,600]}
+  walking={'class':'person','confidence':.75,'bbox_xyxy':[380,50,440,200]}
+  background={'class':'forklift','confidence':.32,'bbox_xyxy':[0,100,220,450]}
+  vehicle={'class':'forklift','confidence':.6,'bbox_xyxy':[800,200,1400,900]}
+  p={'baseline':[seated,background],'person_coco':[walking],'supplement':[],'supplement_highres':[vehicle]}
+  kept,rejected=select_review_objects(p,(1080,1920),{'person_prediction_keys':['person_coco','baseline'],'vehicle_prediction_keys':['supplement_highres'],'maximum_vehicle_frame_area':.35})
+  self.assertEqual(sum(d['class']=='person' for d in kept),2);self.assertIn(vehicle,kept);self.assertNotIn(background,kept)
+
+class CameraRouteIsolationTests(unittest.TestCase):
+ def test_two_camera_models_do_not_replace_shared_bundle(self):
+  from types import SimpleNamespace
+  from src.detection_review_profile import build_review_models
+  base=SimpleNamespace(baseline='base',supplement='shared')
+  first=build_review_models(base,{'vehicle_weights':'video1','vehicle_support_required':True,'vehicle_support_weights':'support'},lambda path:path)
+  second=build_review_models(base,{'vehicle_weights':'video2'},lambda path:path)
+  self.assertEqual(first.supplement,'video1');self.assertEqual(second.supplement,'video2');self.assertEqual(base.supplement,'shared');self.assertEqual(first.review_support,'support');self.assertFalse(hasattr(second,'review_support'))

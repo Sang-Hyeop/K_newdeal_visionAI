@@ -12,14 +12,14 @@ def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,
  for p in safe_polygons:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS[None],1)
  return frame
 
-def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,driver_overlap_threshold=.8):
+def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,driver_overlap_threshold=.8,include_other_safe_people=False):
  if detections is not None and 'proximity' in groups:
   groups={**groups,'proximity':exclude_driver_overlap_pairs(groups['proximity'],driver_overlap_threshold)}
  if zone:
   pipeline,row=zone;cfg=getattr(pipeline,'config',{})
   roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2))
  if detections is not None:
-  draw_review_objects(frame,detections,groups,proximity_warning_ratio,driver_overlap_threshold)
+  draw_review_objects(frame,detections,groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
  for feature,events in groups.items():
   if detections is not None:continue
   for e in events:
@@ -49,7 +49,7 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
  return frame
 
 
-def select_proximity_display_events(events,warning_ratio=1.6,driver_overlap_threshold=.8):
+def select_proximity_display_events(events,warning_ratio=1.6,driver_overlap_threshold=.8,include_other_safe_people=False):
  """Select alerts and near ambiguity before distant safe fallback.
 
  Box overlap alone does not establish the operator role; nearby ambiguous
@@ -60,7 +60,12 @@ def select_proximity_display_events(events,warning_ratio=1.6,driver_overlap_thre
  alerts=[e for e in pairs if e.get('observation_status')=='confirmed' and e.get('severity') in {'WARNING','CRITICAL'}]
  uncertain=[e for e in pairs if e.get('observation_status')!='confirmed' and e['normalized_image_gap']<=warning_ratio]
  if alerts or uncertain:
-  return alerts+uncertain
+  selected=alerts+uncertain
+  if include_other_safe_people:
+   covered={e.get("person_track_id") for e in selected}
+   safe=[e for e in pairs if e.get("observation_status")=="confirmed" and e.get("severity")=="SAFE" and e.get("person_track_id") not in covered]
+   for person_id in dict.fromkeys(e.get("person_track_id") for e in safe):selected.append(min((e for e in safe if e.get("person_track_id")==person_id),key=lambda e:e["normalized_image_gap"]))
+  return selected
  safe=[e for e in pairs if e.get('observation_status')=='confirmed' and e.get('severity')=='SAFE']
  selected=[]
  for person_id in dict.fromkeys(e.get('person_track_id') for e in safe):
@@ -105,7 +110,7 @@ def select_ppe_review_candidates(events,iou_threshold=.5):
  return selected
 
 
-def draw_review_objects(frame,detections,groups,warning_ratio=1.6,driver_overlap_threshold=.8):
+def draw_review_objects(frame,detections,groups,warning_ratio=1.6,driver_overlap_threshold=.8,include_other_safe_people=False):
  """Draw each observed object once; unassociated head proposals stay in diagnostics."""
  for d in detections:
   if d['confidence']<.1:continue
@@ -127,7 +132,7 @@ def draw_review_objects(frame,detections,groups,warning_ratio=1.6,driver_overlap
   color=COLORS['SAFE']if confirmed else(255,180,0)if helmet else(0,165,255)
   label=('H'if confirmed else'H?'if helmet else'NH?')+f" {h['confidence']:.2f}"
   cv2.rectangle(frame,(a,y),(c,b),color,2);cv2.putText(frame,label,(a,max(120,y-5)),0,.4,color,1)
- display_events=select_proximity_display_events(groups.get('proximity',[]),warning_ratio,driver_overlap_threshold)
+ display_events=select_proximity_display_events(groups.get('proximity',[]),warning_ratio,driver_overlap_threshold,include_other_safe_people)
  legend_y=frame.shape[0]-100
  for e in display_events:
   confirmed=e.get('observation_status')=='confirmed' and e.get('severity') in {'SAFE','WARNING','CRITICAL'}

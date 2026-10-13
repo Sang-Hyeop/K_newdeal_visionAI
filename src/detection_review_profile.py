@@ -1,9 +1,10 @@
 """Camera-reviewed object routing; rejected proposals remain available for diagnostics."""
 from .ppe_tiled_inference import iou
+from types import SimpleNamespace
 
 def select_review_objects(predictions, shape, profile):
     height,width=shape;kept=[];rejected=[]
-    people=predictions['person_coco']
+    people=[d for key in profile.get('person_prediction_keys',('person_coco',)) for d in predictions[key] if d['class']=='person']
     vehicles=[d for key in profile.get('vehicle_prediction_keys',('baseline','supplement','supplement_highres')) for d in predictions[key] if d['class']=='forklift']
     for d in sorted(people+vehicles,key=lambda d:-d['confidence']):
         box=d['bbox_xyxy'];area=(box[2]-box[0])*(box[3]-box[1])/(width*height)
@@ -35,7 +36,18 @@ def predict_review_objects(models,person_model,frame,profile):
     for key,model,imgsz,kwargs in [('baseline',models.baseline,640,{}),('supplement',models.supplement,640,{}),('supplement_highres',models.supplement,1280,{}),('person_coco',person_model,1280,{'classes':[0]})]:
         result=model.predict(frame,conf=.1,imgsz=imgsz,device='cpu',verbose=False,**kwargs)[0]
         predictions[key]=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':key}for b in result.boxes]
+    if 'person_adaptation' in profile.get('person_prediction_keys',()):
+        result=models.person_adaptation.predict(frame,conf=.1,imgsz=640,device='cpu',verbose=False)[0]
+        predictions['person_adaptation']=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':'person_adaptation'}for b in result.boxes]
     if profile.get('vehicle_support_required'):
         result=models.review_support.predict(frame,conf=profile.get('vehicle_support_minimum_confidence',.1),imgsz=1280,device='cpu',verbose=False)[0]
         predictions['vehicle_support']=[{'class':result.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'model_source':'vehicle_support'}for b in result.boxes]
     return select_review_objects(predictions,frame.shape[:2],profile)
+
+
+def build_review_models(models,profile,model_loader):
+    """Keep each camera route isolated from the production object bundle."""
+    route=SimpleNamespace(baseline=models.baseline,person_adaptation=models.supplement,supplement=model_loader(profile['vehicle_weights']) if profile.get('vehicle_weights') else models.supplement)
+    if profile.get('vehicle_support_required'):
+        route.review_support=model_loader(profile['vehicle_support_weights'])
+    return route

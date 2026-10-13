@@ -21,7 +21,7 @@ from src.hoodie_guard import apply_hood_guard,predict_hood_detections
 from src.ppe_vehicle_guard import apply_ppe_vehicle_guard
 from src.scenario_render import exclude_driver_overlap_pairs, render
 from src.feature_status import feature_status
-from src.detection_review_profile import predict_review_objects,select_review_objects
+from src.detection_review_profile import predict_review_objects,select_review_objects,build_review_models
 from src.event_contract import export_events
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -53,11 +53,11 @@ def main():
  for n in a.videos:
   spec=next(s for s in manifest['scenarios']if s['video_number']==n);source=ROOT/'data/videos'/spec['source_name'];assert sha(source)==spec['source_sha256'];dest=a.output/f'video{n}';dest.mkdir();cap=cv2.VideoCapture(str(source));fps=cap.get(5);h,w=int(cap.get(4)),int(cap.get(3));stride=max(1,round(fps/a.sample_fps));rate=fps/stride;cached={};hood_saved={};use_hood=bool(hood and n in hood['demo_videos'])
   pcfg=json.load(open(ROOT/spec['camera_config']))if spec['camera_config']else None
-  review=json.load(open(ROOT/pcfg['object_review_profile']))if n==1 and pcfg.get('object_review_profile')else None
+  review=json.load(open(ROOT/pcfg['object_review_profile']))if (pcfg or {}).get('object_review_profile')else None
   if review and review.get('vehicle_weights'):
    hashes[review['vehicle_weights']]=sha(ROOT/review['vehicle_weights'])
   if review and review.get('vehicle_support_weights'):hashes[review['vehicle_support_weights']]=sha(ROOT/review['vehicle_support_weights'])
-  review_rows=None;review_person_model=None
+  review_rows=None;review_person_model=None;review_models=None
   if a.object_review_cache:
    if not review:raise ValueError('Object review cache requires a reviewed camera profile')
    metadata=json.load(open(a.object_review_cache/'metadata.json'));assert metadata['source_sha256']==spec['source_sha256']and all(hashes[k]==v for k,v in metadata['model_hashes'].items())and abs(metadata['processed_fps']-rate)<1e-9
@@ -94,10 +94,9 @@ def main():
      if review_rows:detections,rejected_objects=select_review_objects(review_rows[idx],(h,w),review)
      else:
       if models is None:models=ObjectRecallEnsemble(YOLO(ROOT/obj['baseline_weights']),YOLO(ROOT/obj['supplement_weights']))
-      if review.get('vehicle_weights'):models.supplement=YOLO(ROOT/review['vehicle_weights']) if not getattr(models,'review_weight_loaded',False) else models.supplement;models.review_weight_loaded=True
-      if review.get('vehicle_support_required') and not hasattr(models,'review_support'):models.review_support=YOLO(ROOT/review['vehicle_support_weights'])
+      if review_models is None:review_models=build_review_models(models,review,lambda path:YOLO(ROOT/path))
       if review_person_model is None:review_person_model=YOLO(ROOT/profile['weights']['objects'])
-      detections,rejected_objects=predict_review_objects(models,review_person_model,frame,review)
+      detections,rejected_objects=predict_review_objects(review_models,review_person_model,frame,review)
     if specialist:
      for model,model_source in [(specialist,str(a.forklift_specialist)),*additional_forklift_models]:
       for size in dict.fromkeys(a.forklift_specialist_imgsz):
@@ -124,7 +123,7 @@ def main():
      ppe_tracks=cached[idx]['tracks'];heads=cached[idx]['head_detections'];current={v['track_id']for v in ppe_tracks};missing=[{'track_id':e['track_id']}for e in cached[idx]['events']if e.get('track_id') not in current and e.get('reason')=='person_not_observed'];ppe_events,_=prule.update(t,ppe_tracks,missing,cut);proposals=heads+[q for tr in ppe_tracks for q in tr['ppe']['head_candidates']];extra,_=hrule.update(t,proposals,[tr['detected_bbox_xyxy']for tr in ppe_tracks],(h,w),cut,body_events=ppe_events);ppe_events+=extra
     else:
      pp=person_model.predict(frame,classes=[0],conf=.1,imgsz=1280,device='cpu',verbose=False)[0];people=[{'class':'person','confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in pp.boxes];
-     if review:people=[d for d in people if d['confidence']>=review.get('minimum_confidence_by_class',{}).get('person',0)]
+     if review:people=[dict(d) for d in detections if d['class']=='person']
      ppe_tracks,missing=pt.update(t,people,(h,w),cut)
      if a.ppe_final:
       heads=[{'class':ppe.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'final_v6_full_frame','model_sources':['baseline','final_v6']} for q in ppe.predict(frame)]
@@ -157,7 +156,7 @@ def main():
       identity=tuple(e.get('forklift_track_ids',[]))or tuple(str(e.get(k,''))for k in['track_id','person_track_id','forklift_track_id']);key=(e['event_type'],identity);state=(e.get('severity'),e.get('observation_status'),e.get('ppe_state'),e.get('inside'),e.get('reason'),e.get('risk_reason'),bool(e.get('hood_evidence')));now[key]=state
       if old.get(key)!=state:transitions.append(e)
      laststate[feature]=now;feature_rows.setdefault(feature,[]).append({'frame_index':idx,'timestamp_seconds':t,'events':events,'transitions':transitions,'scene_id':zrow['scene_id']if zrow else pt.scene,'roi_active':zrow['roi_active']if zrow else True})
-    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None,proximity_warning_ratio=(pcfg or {}).get('warning_ratio',1.6))
+    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None,proximity_warning_ratio=(pcfg or {}).get('warning_ratio',1.6),include_other_safe_people=(review or {}).get('show_safe_pairs_for_other_people',False))
     if review:
      cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} person-height gap",(12,h-34),0,.42,(230,230,230),1)
     if use_hood:

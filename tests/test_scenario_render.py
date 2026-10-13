@@ -92,3 +92,11 @@ class AmbiguousPairSafetyTests(unittest.TestCase):
   events=exclude_driver_overlap_pairs([near,far])
   self.assertEqual(feature_status(events)['display_state'],'UNKNOWN')
   self.assertEqual(select_proximity_display_events(events),[near])
+
+class PerPersonDistanceDisplayTests(unittest.TestCase):
+ def test_other_person_safe_line_visible_without_masking_same_person_unknown(self):
+  near={'person_track_id':'driver','severity':None,'observation_status':'unconfirmed','normalized_image_gap':.2,'person_anchor_xy':[1,1],'nearest_vehicle_point_xy':[2,2]}
+  far={**near,'severity':'SAFE','observation_status':'confirmed','normalized_image_gap':3}
+  worker={**far,'person_track_id':'worker'}
+  selected=select_proximity_display_events([near,far,worker],include_other_safe_people=True)
+  self.assertEqual(selected,[near,worker])
