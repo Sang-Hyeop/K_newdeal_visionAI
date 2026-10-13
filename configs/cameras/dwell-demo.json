@@ -53,5 +53,11 @@
   "roi_alpha_alert": 0.2,
   "vehicle_presence_scope": "same_yellow_line_vehicle_lane",
   "vehicle_critical_seconds": 3,
-  "object_review_profile": "configs/video4-object-review.json"
+  "object_review_profile": "configs/video4-object-review.json",
+  "roi_unknown_color": [
+    255,
+    180,
+    0
+  ],
+  "roi_alpha_unknown": 0.2
 }

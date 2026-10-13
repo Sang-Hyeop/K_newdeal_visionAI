@@ -2,7 +2,7 @@
 import math
 
 
-def head_matches_person(head, person, image_height=None):
+def head_matches_person(head, person, image_height=None, upper_fraction=.35):
     """Reject body-sized boxes and heads outside this person's upper region."""
     x1, y1, x2, y2 = person
     a, b, c, d = head
@@ -15,18 +15,18 @@ def head_matches_person(head, person, image_height=None):
     head_width, head_height = c-a, d-b
     height_limit = min(.85 * ph, .95 * pw, 1.6 * head_width) if clipped else .4 * ph
     width_limit = .9 * pw if clipped else 1.1 * pw
-    upper_fraction = .65 if clipped else .35
+    upper_fraction = .65 if clipped else upper_fraction
     return (x1 - .15 * pw <= (a + c) / 2 <= x2 + .15 * pw
             and y1 - .1 * ph <= (b + d) / 2 <= y1 + upper_fraction * ph
             and head_height <= height_limit and head_width <= width_limit)
 
 
-def head_owner(head, people, image_height=None):
+def head_owner(head, people, image_height=None, upper_fraction=.35):
     """Select nearest compatible upper-head anchor; ties stay unassigned."""
     a,b,c,d=head;cx,cy=(a+c)/2,(b+d)/2
     scores=[]
     for index,person in enumerate(people):
-        if head_matches_person(head,person,image_height):
+        if head_matches_person(head,person,image_height,upper_fraction):
             x1,y1,x2,y2=person
             scores.append(((cx-(x1+x2)/2)**2+(cy-(y1+.1*(y2-y1)))**2,index))
     scores.sort()

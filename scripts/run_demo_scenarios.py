@@ -127,7 +127,10 @@ def main():
      ppe_tracks,missing=pt.update(t,people,(h,w),cut)
      if a.ppe_final:
       heads=[{'class':ppe.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'final_v6_full_frame','model_sources':['baseline','final_v6']} for q in ppe.predict(frame)]
-      boxes=[v['detected_bbox_xyxy']for v in ppe_tracks];proposals=heads;observations=[{'head_candidates':[],'rejected_candidates':[],'state':'unknown'}for _ in boxes]
+      boxes=[v['detected_bbox_xyxy']for v in ppe_tracks]
+      if review and review.get('ppe_person_context'):
+       heads += [{'class':ppe.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'final_v6_person_context','model_sources':['baseline','final_v6']}for q in ppe.predict_person_context(frame,boxes)]
+      proposals=heads;observations=[{'head_candidates':[],'rejected_candidates':[],'state':'unknown'}for _ in boxes]
      else:
       raw=ppe.predict(frame,conf=.25,imgsz=640,device='cpu',verbose=False)[0];heads=[{'class':ppe.names[int(b.cls.item())],'confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist(),'source':'full_frame','model_sources':getattr(b,'model_sources',['single_ppe_model'])}for b in raw.boxes]
       if a.ppe_search=='full_recall':tiles,_=infer_tiled_heads(frame,ppe);heads+=tiles
@@ -135,7 +138,10 @@ def main():
      if review:
       proposals,equipment_heads=exclude_confirmed_equipment(proposals,(h,w),review);heads,_=exclude_confirmed_equipment(heads,(h,w),review);rejected_objects+=equipment_heads
      for i,(track,obs)in enumerate(zip(ppe_tracks,observations)):
-      selected=[q for q in proposals if head_owner(q['bbox_xyxy'],boxes,h)==i];classes={q['class']for q in selected};obs.update(head_candidates=selected,state='helmet_detected'if classes=={'helmeted_head'}else'no_helmet_candidate'if classes=={'no_helmet_head'}else'conflicting_evidence'if len(classes)>1 else'unknown');track['ppe']=obs
+      selected=[q for q in proposals if head_owner(q['bbox_xyxy'],boxes,h,upper_fraction=(review or {}).get('ppe_person_upper_fraction',.35))==i];classes={q['class']for q in selected}
+      if review and review.get('ppe_one_head_per_class_per_person'):
+       selected=[max((q for q in selected if q['class']==cls),key=lambda q:q['confidence'])for cls in sorted(classes)]
+      obs.update(head_candidates=selected,state='helmet_detected'if classes=={'helmeted_head'}else'no_helmet_candidate'if classes=={'no_helmet_head'}else'conflicting_evidence'if len(classes)>1 else'unknown');track['ppe']=obs
      ppe_events,_=prule.update(t,ppe_tracks,missing,cut);extra,_=hrule.update(t,proposals,boxes,(h,w),cut,body_events=ppe_events);ppe_events+=extra
     suppressed_ppe=[]
     if review and review.get('ppe_requires_observed_person'):

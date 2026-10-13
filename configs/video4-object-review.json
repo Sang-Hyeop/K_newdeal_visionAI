@@ -1,8 +1,9 @@
 {
-  "policy_version": "video4-coco-person-selected-bundle-review-v1",
+  "policy_version": "video4-supported-vehicle-context-ppe-review-v2",
   "status": "experimental_video4_development_review",
   "person_prediction_keys": [
-    "person_coco"
+    "person_coco",
+    "person_adaptation"
   ],
   "vehicle_prediction_keys": [
     "baseline",
@@ -33,7 +34,17 @@
         "no_helmet_head"
       ],
       "review": "User explicitly confirmed left dark blue structure is equipment on2026-10-13; right worker remains person",
-      "scope": "fixed video4 camera only; not transferable to new camera views"
+      "scope": "fixed video4 camera only; not transferable to new camera views",
+      "minimum_coverage": 0.5,
+      "require_center_inside": true
     }
-  ]
+  ],
+  "vehicle_support_required": true,
+  "vehicle_support_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "vehicle_support_minimum_confidence": 0.25,
+  "vehicle_support_minimum_iou": 0.5,
+  "ppe_person_context": true,
+  "ppe_one_head_per_class_per_person": true,
+  "review_ground_truth": "User confirmed whole video4 contains zero actual forklifts; used for evaluation, never forced as pipeline output",
+  "ppe_person_upper_fraction": 0.5
 }

@@ -2,13 +2,13 @@
 import cv2,numpy as np
 from src.feature_status import feature_status
 COLORS={'SAFE':(0,180,0),'WARNING':(0,140,255),'CRITICAL':(0,0,255),None:(150,150,150)}
-def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,alpha_alert=.2):
+def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,alpha_alert=.2,unknown_color=None,alpha_unknown=.2):
  mask=np.zeros(frame.shape[:2],np.uint8);cv2.fillPoly(mask,[np.asarray(polygon,np.int32)],255)
  for p in safe_polygons:cv2.fillPoly(mask,[np.asarray(p,np.int32)],0)
  if not active:severity=None
- layer=frame.copy();layer[mask>0]=COLORS[severity];alpha=alpha_alert if severity in {'WARNING','CRITICAL'} else alpha_safe;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
+ color=tuple(unknown_color) if severity is None and unknown_color is not None else COLORS[severity];layer=frame.copy();layer[mask>0]=color;alpha=alpha_unknown if severity is None and unknown_color is not None else alpha_alert if severity in {'WARNING','CRITICAL'} else alpha_safe;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
  # Excluded storage/walking regions are not the monitored lane or a safety verdict.
- cv2.polylines(frame,[np.asarray(polygon,np.int32)],True,COLORS[severity],2)
+ cv2.polylines(frame,[np.asarray(polygon,np.int32)],True,color,2)
  for p in safe_polygons:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS[None],1)
  return frame
 
@@ -17,7 +17,7 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
   groups={**groups,'proximity':exclude_driver_overlap_pairs(groups['proximity'],driver_overlap_threshold)}
  if zone:
   pipeline,row=zone;cfg=getattr(pipeline,'config',{})
-  roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2))
+  roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2),cfg.get('roi_unknown_color'),cfg.get('roi_alpha_unknown',.2))
  if detections is not None:
   draw_review_objects(frame,detections,groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
   draw_vehicle_pair_connections(frame,groups.get("forklift_proximity",[]))
@@ -131,7 +131,7 @@ def draw_review_objects(frame,detections,groups,warning_ratio=1.6,driver_overlap
  for e,h in select_ppe_review_candidates(groups.get('ppe',[])):
   a,y,c,b=map(int,h['bbox_xyxy']);helmet=h['class']=='helmeted_head';confirmed=e.get('observation_status')=='confirmed' and e.get('severity')=='SAFE' and helmet
   color=COLORS['SAFE']if confirmed else(255,180,0)if helmet else(0,165,255)
-  label=('H'if confirmed else'H?'if helmet else'NH?')+f" {h['confidence']:.2f}"
+  label=('HELMET'if confirmed else'HELMET CANDIDATE'if helmet else'NO HELMET CANDIDATE')+f" {h['confidence']:.2f}"
   cv2.rectangle(frame,(a,y),(c,b),color,2);cv2.putText(frame,label,(a,max(120,y-5)),0,.4,color,1)
  display_events=select_proximity_display_events(groups.get('proximity',[]),warning_ratio,driver_overlap_threshold,include_other_safe_people)
  legend_y=frame.shape[0]-100
