@@ -3,7 +3,7 @@ import cv2,numpy as np
 from src.person_tracker import PersonTracker
 from src.zone_dwell import ZoneDwell
 from src.lane_hazard import LaneHazard
-from src.operator_association import OperatorAssociation
+from src.operator_association import OperatorAssociation, TemporalOperatorAssociation
 def mark_uncertain_lane_events(events):
  for e in events:
   if e.get('inside') is True and e.get('vehicle_observation_status')=='unconfirmed' and e.get('severity') is not None:
@@ -24,16 +24,19 @@ class ScenarioZone:
   scene=self.people.scene;people,missing=self.people.update(timestamp,detections,shape,scene_cut);vehicles,vm=self.vehicles.update(timestamp,detections,shape,scene_cut)
   if self.people.scene!=scene:self.dwell.reset();self.previous.clear()
   if scene_cut:self.roi_active=False;self.lane.reset()
-  if not hasattr(self,'operators'):self.operators=OperatorAssociation(self.config['max_gap_seconds'])
+  if not hasattr(self,'operators'):self.operators=(TemporalOperatorAssociation if self.config.get('temporal_riders') else OperatorAssociation)(self.config['max_gap_seconds'])
   if scene_cut:self.operators.reset()
   associations=self.operators.update(timestamp,people,vehicles) if self.config.get('exclude_riders_from_lane') else {}
+  pending=set(self.operators.states)-set(associations) if self.config.get('temporal_riders') else set()
   for pid in associations:self.dwell.visits.pop(pid,None)
   boxes={t['track_id']:t['detected_bbox_xyxy']for t in people};valid=[{**t,'bbox_xyxy':t['detected_bbox_xyxy']}for t in people if t['track_id'] not in associations and t['detected_bbox_xyxy'][3]<shape[0]-1];events=self.dwell.update(timestamp,valid)if self.roi_active else[]
   for e in events:
    if e['track_id']in boxes and e['observation_status']=='confirmed':
     e['person_bbox_xyxy']=boxes[e['track_id']];b=boxes[e['track_id']];point=((b[0]+b[2])/2,b[3])
     if cv2.pointPolygonTest(self.polygon,point,False)<0:e.update(inside=None,severity=None,observation_status='unconfirmed',risk_reason='outside_monitored_floor')
-  state=self.lane.update(timestamp,events,vehicles,shape)if self.roi_active else None;access=[];transitions=[]
+  state=self.lane.update(timestamp,[e for e in events if e['track_id'] not in pending],vehicles,shape)if self.roi_active else None;access=[];transitions=[]
+  for e in events:
+   if e['track_id'] in pending:e.update(severity=None,observation_status='unconfirmed',reason='person_role_confirmation_pending',risk_reason='person_role_confirmation_pending')
   for e in mark_uncertain_lane_events(events):
    old=self.previous.get(e['track_id']);inside=e['inside'];entry=bool(old and old['inside']is False and inside is True);exit=bool(old and old['inside']is True and inside is False)
    e.update(camera_id=self.config['camera_id'],roi_id=self.config['roi_id'],roi_purpose='floor_minus_safe_storage_zones',distance_meters=None,
@@ -44,4 +47,4 @@ class ScenarioZone:
    if old is None or old['key']!=key:transitions.extend([e.copy(),a.copy()])
    self.previous[e['track_id']]={'key':key,'inside':inside}
   self.previous={k:v for k,v in self.previous.items()if k in {e['track_id']for e in events}}
-  return {'timestamp_seconds':timestamp,'scene_id':self.people.scene,'tracks':people,'missing_tracks':missing,'forklifts':vehicles,'missing_forklifts':vm,'events':events+access,'transitions':transitions,'roi_active':self.roi_active,'vehicle_lane_state':state,'global_safety_status':'not_evaluated','excluded_riders':associations}
+  return {'timestamp_seconds':timestamp,'scene_id':self.people.scene,'tracks':people,'missing_tracks':missing,'forklifts':vehicles,'missing_forklifts':vm,'events':events+access,'transitions':transitions,'roi_active':self.roi_active,'vehicle_lane_state':state,'global_safety_status':'not_evaluated','excluded_riders':associations,'pending_rider_ids':sorted(pending)}
