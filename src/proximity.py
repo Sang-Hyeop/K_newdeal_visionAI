@@ -13,7 +13,7 @@ class Proximity:
             raise ValueError('Invalid proximity thresholds')
         self.warning=warning_ratio;self.critical=critical_ratio;self.hysteresis=hysteresis;self.gap=max_gap
         self.previous={};self.last_timestamp=None;self.recent_pedestrian_overlap=recent_pedestrian_overlap
-        if distance_geometry not in {"ground_band","box_boundary"}:raise ValueError("Unknown distance geometry")
+        if distance_geometry not in {"ground_band","box_boundary","bottom_center"}:raise ValueError("Unknown distance geometry")
         self.geometry=distance_geometry;self.exclude_operator=exclude_probable_operator;self.roles={}
 
     def reset(self):self.previous.clear();self.roles.clear();self.last_timestamp=None
@@ -34,7 +34,7 @@ class Proximity:
                 margin=max(2.0,.02*(p[3]-p[1]))
                 foot_outside=p[3]>f[3]+margin or (p[0]+p[2])/2<f[0]-margin or (p[0]+p[2])/2>f[2]+margin
                 point=((p[0]+p[2])/2,p[3]);footprint=[f[0],f[3]-.15*(f[3]-f[1]),f[2],f[3]]
-                nearest=closest_point(point,f if self.geometry=="box_boundary" else footprint);distance=math.dist(point,nearest);ratio=distance/(p[3]-p[1])
+                nearest=((f[0]+f[2])/2,f[3]) if self.geometry=="bottom_center" else closest_point(point,f if self.geometry=="box_boundary" else footprint);distance=math.dist(point,nearest);ratio=distance/(p[3]-p[1])
                 if p[3]>=height-1:reason='person_anchor_bottom_clipped'
                 elif f[0]<=0 or f[2]>=width-1 or f[3]>=height-1:reason='forklift_extent_clipped'
                 else:
@@ -65,7 +65,7 @@ class Proximity:
                 role['person_box']=list(p)
                 operator=bool(self.exclude_operator and (role['inside_count']>=3 or duplicate_operator))
                 if operator:self.previous.pop(key,None);continue
-                if self.geometry=='box_boundary' and role['pedestrian_seen'] and overlap_fraction>=.8 and reason=='possible_operator_or_occluded_person':reason=None;pedestrian_evidence=True
+                if self.geometry in {'box_boundary','bottom_center'} and role['pedestrian_seen'] and overlap_fraction>=.8 and reason=='possible_operator_or_occluded_person':reason=None;pedestrian_evidence=True
                 if person.get('observation_status')=='unconfirmed':reason='person_track_confirmation_pending'
                 continuous=old is not None and old['severity'] is not None and timestamp-old['timestamp']<=self.gap
                 trend=None
