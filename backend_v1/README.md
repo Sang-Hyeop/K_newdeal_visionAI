@@ -47,7 +47,8 @@ network exposure are out of scope.
 | `/feature-status` | latest observation for each camera/feature/video stream | camera_id, feature, video |
 
 Korean display labels (do not rewrite stored codes):
-`../docs/dashboard-ko-labels.md`, helpers in `dashboard_labels.py`,
+`configs/dashboard-labels.ko.json`, `../docs/dashboard-ko-labels.md`,
+`../docs/event-log-field-contract.md`, helpers in `dashboard_labels.py`,
 summary `dashboard-labels-ko.md`. ROI wording: `roi-wording-2026-10-07.md`.
 
 `severity=null` selects SQL NULL. Limit defaults to 50 (1..500).

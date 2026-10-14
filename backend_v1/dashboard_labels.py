@@ -1,179 +1,148 @@
-"""Display-only Korean labels for dashboard integration.
+"""Display-only Korean labels loaded from configs/dashboard-labels.ko.json.
 
-API field names and enum values stay English. Callers map for UI rendering only.
-Unknown codes return a safe fallback without raising.
+API field names and enums stay English. Mapping is for UI/CSV display layers.
+Functions never mutate the input event object.
 """
 from __future__ import annotations
 
-EVENT_TYPE_LABELS = {
-    'proximity': '지게차·작업자 근접 위험',
-    'zone_access': '구역 접근·진입',
-    'zone_dwell': '구역 체류',
-    'ppe': '안전모 착용 상태',
-    'status': '상태 정보',
-}
+import copy
+import csv
+import io
+import json
+from pathlib import Path
 
-SEVERITY_LABELS = {
-    'SAFE': '안전',
-    'WARNING': '주의',
-    'CRITICAL': '위험',
-}
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_LABELS_PATH = ROOT / 'configs' / 'dashboard-labels.ko.json'
 
-OBSERVATION_STATUS_LABELS = {
-    'confirmed': '확인됨',
-    'unconfirmed': '미확인',
-}
-
-DISPLAY_STATE_LABELS = {
-    'SAFE': '안전',
-    'WARNING': '주의',
-    'CRITICAL': '위험',
-    'UNKNOWN': '미확인',
-}
-
-GLOBAL_SAFETY_LABELS = {
-    'not_evaluated': '평가하지 않음',
-}
-
-REGION_LABELS = {
-    'outside': '구역 밖',
-    'approach': '구역 접근',
-    'inside': '구역 내부',
-    'unknown': '미확인',
-}
-
-FIELD_LABELS = {
-    'camera_id': '카메라',
-    'video': '영상',
-    'timestamp_seconds': '영상 시간',
-    'event_type': '이벤트 종류',
-    'severity': '위험도',
-    'observation_status': '관측 상태',
-    'track_ids': '추적 ID',
-    'event_id': '이벤트 ID',
-    'observed_dwell_seconds': '관측 체류시간',
-    'roi_id': '구역 ID',
-    'model_version': '모델 버전',
-    'config_version': '설정 버전',
-    'source_sha256': '원본 영상 해시',
-    'feature': '기능',
-    'display_state': '표시 상태',
-    'global_safety_status': '전체 안전 상태',
-    'evidence': '근거',
-    'distance_meters': '미터 거리',
-}
-
-PPE_STATE_LABELS = {
-    'helmet_detected': '안전모 감지',
-    'no_helmet_candidate': '미착용 후보',
-    'conflicting_evidence': '근거 충돌',
-    'unknown': '불명',
-}
-
-REASON_LABELS = {
-    'image_plane_proximity_rule': '화면상 거리 규칙',
-    'no_observed_subject_pair_or_person': '관측 대상 없음',
-    'pair_not_observed': '쌍 관측 끊김',
-    'person_track_confirmation_pending': '사람 추적 확인 대기',
-    'person_role_confirmation_pending': '역할 확인 대기',
-    'pending_temporal_confirmation': '시간 누적 확인 대기',
-    'possible_operator_or_occluded_person': '운전자·가림 가능',
-    'vehicle_occupancy_unconfirmed': '차량 점유 미확인',
-    'forklift_extent_clipped': '지게차 화면 잘림',
-    'stable_helmet_evidence': '안전모 착용 근거 안정',
-    'stable_no_helmet_candidate_requires_review': '미착용 후보(검토 필요)',
-    'stable_low_confidence_ppe_requires_review': 'PPE 신뢰도 낮음(검토)',
-    'stable_conflicting_ppe_requires_review': 'PPE 근거 충돌(검토)',
-    'conflicting_or_missing_or_low_confidence_head': '머리 검출 충돌·부족·저신뢰',
-    'supplement_only_helmet_unconfirmed': '보조 근거만 있어 미확정',
-    'outside_restricted_robot_roi': '제한 ROI 밖',
-    'inside_restricted_robot_roi': '제한 ROI 안',
-    'possible_operator_or_equipment_person_box': '운전자·설비 박스 가능',
-    'person_not_observed': '사람 미관측',
-    'head_not_observed': '머리 미관측',
-}
-
-# presentation_video_number -> API video filter value (from configs/demo-videos.json + live API)
-PRESENTATION_VIDEOS = {
-    1: '1_forklift_worker_collision_risk.mp4',
-    2: '2_restricted_zone_intrusion.mp4',
-    3: '3_PPE_Helmet.mp4',
-    4: '4_hazard_zone_dwell.mp4',
-    5: '5_Logistics Warehouse.mp4',
-}
-
-PRESENTATION_TITLES = {
-    1: '1. 지게차–작업자 근접',
-    2: '2. 제한구역 접근',
-    3: '3. 안전모(PPE)',
-    4: '4. 위험구역 체류',
-    5: '5. 물류창고 종합',
-}
-
-EMPTY_EVENTS_MESSAGE = '조회 결과 없음'
-EMPTY_OBSERVATIONS_MESSAGE = '관측 없음'
-UNKNOWN_LABEL = '알 수 없음'
-NOT_PROVIDED_METERS = '미제공'
+_CACHE: dict | None = None
+_CACHE_PATH: Path | None = None
 
 
-def label_for(table: dict, value, *, allow_null: bool = False) -> str:
+def load_labels(path: Path | None = None) -> dict:
+    """Load UTF-8 label JSON without BOM. Cached per path."""
+    global _CACHE, _CACHE_PATH
+    target = Path(path) if path is not None else DEFAULT_LABELS_PATH
+    if _CACHE is not None and _CACHE_PATH == target:
+        return _CACHE
+    raw = target.read_bytes()
+    if raw.startswith(b'\xef\xbb\xbf'):
+        raise ValueError(f'BOM not allowed in default label file: {target}')
+    data = json.loads(raw.decode('utf-8'))
+    _CACHE, _CACHE_PATH = data, target
+    return data
+
+
+def reload_labels(path: Path | None = None) -> dict:
+    global _CACHE, _CACHE_PATH
+    _CACHE, _CACHE_PATH = None, None
+    return load_labels(path)
+
+
+def _table(name: str) -> dict:
+    return load_labels().get(name) or {}
+
+
+def label_for(table: dict, value, *, null_as: str | None = None) -> str:
+    labels = load_labels()
     if value is None:
-        return '미확인' if allow_null else UNKNOWN_LABEL
-    if value in table:
-        return table[value]
-    return f'{UNKNOWN_LABEL} ({value})'
+        return null_as if null_as is not None else labels.get('null_display', '미확인')
+    key = value if not isinstance(value, bool) else value
+    if key in table:
+        return table[key]
+    if value is None and 'null' in table:
+        return table['null']
+    prefix = labels.get('unknown_prefix', '알 수 없음')
+    return f'{prefix} ({value})'
 
 
 def event_type_label(value) -> str:
-    return label_for(EVENT_TYPE_LABELS, value)
+    return label_for(_table('event_types'), value)
 
 
 def severity_label(value, observation_status=None) -> str:
+    table = _table('severities')
     if value is None:
-        if observation_status == 'unconfirmed':
-            return '미확인'
-        return '미확인'
-    return label_for(SEVERITY_LABELS, value)
+        return table.get('null', load_labels().get('null_display', '미확인'))
+    return label_for(table, value)
 
 
 def observation_status_label(value) -> str:
-    return label_for(OBSERVATION_STATUS_LABELS, value)
+    return label_for(_table('observation_statuses'), value)
+
+
+def assessment_state_label(value) -> str:
+    return label_for(_table('assessment_states'), value)
 
 
 def display_state_label(value) -> str:
-    return label_for(DISPLAY_STATE_LABELS, value)
+    return label_for(_table('display_states'), value)
+
+
+def notification_category_label(value) -> str:
+    return label_for(_table('notification_categories'), value)
 
 
 def global_safety_label(value='not_evaluated') -> str:
-    return label_for(GLOBAL_SAFETY_LABELS, value)
+    return label_for(_table('global_safety_statuses'), value)
 
 
 def region_label(value) -> str:
-    return label_for(REGION_LABELS, value)
-
-
-def field_label(name: str) -> str:
-    return FIELD_LABELS.get(name, name)
+    return label_for(_table('regions'), value)
 
 
 def ppe_state_label(value) -> str:
-    return label_for(PPE_STATE_LABELS, value)
+    return label_for(_table('ppe_states'), value)
 
 
-def reason_label(value) -> str:
-    return label_for(REASON_LABELS, value)
+def violation_status_label(value) -> str:
+    return label_for(_table('violation_statuses'), value)
+
+
+def object_class_label(value) -> str:
+    return label_for(_table('object_classes'), value)
+
+
+def camera_label(camera_id) -> str:
+    table = _table('cameras')
+    if camera_id in table:
+        return table[camera_id]
+    prefix = load_labels().get('unknown_prefix', '알 수 없음')
+    return f'{prefix} ({camera_id})'
+
+
+def zone_label(roi_id) -> str:
+    if roi_id is None:
+        return ''
+    table = _table('zones')
+    if roi_id in table:
+        return table[roi_id]
+    prefix = load_labels().get('unknown_prefix', '알 수 없음')
+    return f'{prefix} ({roi_id})'
+
+
+def video_label(video) -> str:
+    entry = _table('videos').get(video)
+    if isinstance(entry, dict) and entry.get('label'):
+        return entry['label']
+    if isinstance(entry, str):
+        return entry
+    prefix = load_labels().get('unknown_prefix', '알 수 없음')
+    return f'{prefix} ({video})'
+
+
+def field_label(name: str) -> str:
+    return _table('columns').get(name, name)
 
 
 def format_timestamp_seconds(value) -> str:
-    """Video-relative seconds only; never attaches wall-clock dates."""
     if value is None:
-        return UNKNOWN_LABEL
+        return load_labels().get('null_display', '미확인')
     try:
         number = float(value)
     except (TypeError, ValueError):
-        return f'{UNKNOWN_LABEL} ({value})'
-    if number != number or number in (float('inf'), float('-inf')):  # NaN/inf
-        return f'{UNKNOWN_LABEL} ({value})'
+        return label_for({}, value)
+    if number != number or number in (float('inf'), float('-inf')):
+        return label_for({}, value)
     if number == int(number) and abs(number) < 1e15:
         return f'{int(number)}초'
     text = f'{number:.3f}'.rstrip('0').rstrip('.')
@@ -186,21 +155,140 @@ def format_dwell_seconds(value) -> str:
 
 def format_distance_meters(value) -> str:
     if value is None:
-        return NOT_PROVIDED_METERS
-    return f'{UNKNOWN_LABEL} (보정 없는 m 표시 금지: {value})'
+        return load_labels().get('meters_not_provided', '미제공')
+    return f'{load_labels().get("unknown_prefix", "알 수 없음")} (보정 없는 m 표시 금지: {value})'
 
 
 def presentation_video(number: int) -> str | None:
-    return PRESENTATION_VIDEOS.get(number)
+    for video, meta in _table('videos').items():
+        if isinstance(meta, dict) and meta.get('presentation_video_number') == number:
+            return video
+    return None
 
 
 def presentation_title(number: int) -> str | None:
-    return PRESENTATION_TITLES.get(number)
+    video = presentation_video(number)
+    return video_label(video) if video else None
 
 
 def empty_events_message() -> str:
-    return EMPTY_EVENTS_MESSAGE
+    return load_labels().get('empty_events_message', '조회 결과 없음')
 
 
 def empty_observations_message() -> str:
-    return EMPTY_OBSERVATIONS_MESSAGE
+    return load_labels().get('empty_observations_message', '관측 없음')
+
+
+def csv_header_order() -> list[str]:
+    return list(load_labels().get('csv_header_order') or [])
+
+
+def display_view(event: dict) -> dict:
+    """Return a new display dict; does not mutate event."""
+    source = copy.deepcopy(event)
+    evidence = source.get('evidence') if isinstance(source.get('evidence'), dict) else {}
+    return {
+        'event_id': source.get('event_id'),
+        'schema_version': source.get('schema_version'),
+        'camera_id': source.get('camera_id'),
+        'camera_label': camera_label(source.get('camera_id')),
+        'video': source.get('video'),
+        'video_label': video_label(source.get('video')),
+        'source_sha256': source.get('source_sha256'),
+        'timestamp_seconds': source.get('timestamp_seconds'),
+        'timestamp_display': format_timestamp_seconds(source.get('timestamp_seconds')),
+        'event_type': source.get('event_type'),
+        'event_type_label': event_type_label(source.get('event_type')),
+        'severity': source.get('severity'),
+        'severity_label': severity_label(source.get('severity'), source.get('observation_status')),
+        'observation_status': source.get('observation_status'),
+        'observation_status_label': observation_status_label(source.get('observation_status')),
+        'assessment_state': source.get('assessment_state'),
+        'assessment_state_label': assessment_state_label(source.get('assessment_state')),
+        'alert_eligible': source.get('alert_eligible'),
+        'notification_category': source.get('notification_category'),
+        'notification_category_label': notification_category_label(source.get('notification_category')),
+        'status_reason': source.get('status_reason'),
+        'track_ids': source.get('track_ids'),
+        'roi_id': evidence.get('roi_id'),
+        'zone_label': zone_label(evidence.get('roi_id')),
+        'observed_dwell_seconds': evidence.get('observed_dwell_seconds'),
+        'ppe_state': evidence.get('ppe_state'),
+        'ppe_state_label': ppe_state_label(evidence.get('ppe_state')) if evidence.get('ppe_state') is not None else '',
+        'violation_status': evidence.get('violation_status'),
+        'violation_status_label': (
+            violation_status_label(evidence.get('violation_status'))
+            if evidence.get('violation_status') is not None else ''),
+        'region': evidence.get('region'),
+        'region_label': region_label(evidence.get('region')) if evidence.get('region') is not None else '',
+        'distance_meters': evidence.get('distance_meters', source.get('distance_meters')),
+        'distance_meters_label': format_distance_meters(
+            evidence.get('distance_meters', source.get('distance_meters'))),
+        'model_version': source.get('model_version'),
+        'config_version': source.get('config_version'),
+        'scope': source.get('scope'),
+        'evidence': evidence,
+    }
+
+
+def _csv_cell(value) -> str:
+    if value is None:
+        return ''
+    if isinstance(value, bool):
+        return 'true' if value else 'false'
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, ensure_ascii=False, separators=(',', ':'), allow_nan=False)
+    return str(value)
+
+
+def event_to_csv_row(event: dict) -> dict:
+    view = display_view(event)
+    row = {}
+    for key in csv_header_order():
+        if key in view:
+            row[key] = view[key]
+        elif key == 'evidence':
+            row[key] = view.get('evidence')
+        else:
+            row[key] = event.get(key)
+    return row
+
+
+def write_events_csv(events: list[dict], path: Path | None = None, *, utf8_sig: bool = False) -> str:
+    """Write display CSV. Default UTF-8 without BOM; utf8_sig=True for Excel."""
+    header = csv_header_order()
+    buffer = io.StringIO()
+    writer = csv.DictWriter(buffer, fieldnames=header, extrasaction='ignore', lineterminator='\n')
+    writer.writeheader()
+    for event in events:
+        raw_row = event_to_csv_row(event)
+        writer.writerow({key: _csv_cell(raw_row.get(key)) for key in header})
+    text = buffer.getvalue()
+    if path is not None:
+        encoding = 'utf-8-sig' if utf8_sig else 'utf-8'
+        Path(path).write_text(text, encoding=encoding, newline='')
+    return text
+
+
+def write_display_json(events: list[dict], path: Path | None = None) -> str:
+    payload = {
+        'schema': 'dashboard_display_v1',
+        'label_version': load_labels().get('version'),
+        'count': len(events),
+        'events': [display_view(event) for event in events],
+    }
+    text = json.dumps(payload, ensure_ascii=False, indent=2) + '\n'
+    if path is not None:
+        Path(path).write_text(text, encoding='utf-8', newline='\n')
+    return text
+
+
+# Compatibility aliases used by earlier tests
+PRESENTATION_VIDEOS = {n: None for n in range(1, 6)}  # filled lazily via presentation_video
+
+def _fill_presentation_videos():
+    global PRESENTATION_VIDEOS
+    PRESENTATION_VIDEOS = {n: presentation_video(n) for n in range(1, 6)}
+
+
+_fill_presentation_videos()

@@ -1,14 +1,16 @@
 # 대시보드 한글 라벨 및 이벤트 로그 연동
 
-작성일: 2026-10-14  
-브랜치: `feat/backend-event-log-review`  
+작성일: 2026-10-14
+브랜치: `feat/backend-event-log-review`
 평가 항목: 5(조회·표시), 8(문서·인계)
 
-API·JSONL의 **영문 필드명·enum은 유지**하고, 화면 표시만 한글로 매핑합니다.  
-표시용 코드: `backend_v1/dashboard_labels.py`  
+API·JSONL의 **영문 필드명·enum은 유지**하고, 화면 표시만 한글로 매핑합니다.
+기계 판독 매핑: `configs/dashboard-labels.ko.json`
+표시·CSV 함수: `backend_v1/dashboard_labels.py`
+JSON/CSV 계약 초안: `docs/event-log-field-contract.md` (합의 상태: 담당자 검토 대기)
 말투: `backend_v1/roi-wording-2026-10-07.md` / `docs/roi-wording-2026-10-07.md`
 
-**실제 화면(프론트엔드) 코드는 이 저장소에 없습니다.**  
+**실제 화면(프론트엔드) 코드는 이 저장소에 없습니다.**
 본 문서는 라벨표·연동 규칙·검증 기록입니다. Gradio/웹 UI에 “적용 완료”로 해석하지 않습니다.
 
 ---
