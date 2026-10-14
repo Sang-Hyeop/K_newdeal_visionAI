@@ -1,0 +1,127 @@
+{
+  "status": "verified",
+  "active_legacy_scenario_numbers": [
+    2,
+    4,
+    5,
+    7
+  ],
+  "presentation2_runner": "scripts/run_intrusion_review.py",
+  "source_files": [
+    {
+      "file": "1_forklift_worker_collision_risk.mp4",
+      "fps": 25.0,
+      "frames": 527,
+      "seconds": 21.08,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "training_eligible": false,
+      "purpose": "demo_and_development_validation",
+      "size_bytes": 54018399,
+      "presentation_video_number": 1,
+      "legacy_scenario_number": 2,
+      "runner": "scripts/run_demo_scenarios.py"
+    },
+    {
+      "file": "2_restricted_zone_intrusion.mp4",
+      "fps": 24.0,
+      "frames": 289,
+      "seconds": 12.041666666666666,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sha256": "f656df46a9f5943b06a29a3adbce03da974c087c3af70692a695a1b1b7bb79b9",
+      "size_bytes": 9356474,
+      "training_eligible": false,
+      "purpose": "demo_and_development_validation",
+      "presentation_video_number": 2,
+      "legacy_scenario_number": null,
+      "runner": "scripts/run_intrusion_review.py",
+      "source_type": "AI_generated_demo_not_independent_CCTV_validation"
+    },
+    {
+      "file": "3_PPE_Helmet.mp4",
+      "fps": 23.976023976023978,
+      "frames": 288,
+      "seconds": 12.011999999999999,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+      "training_eligible": false,
+      "purpose": "demo_and_development_validation",
+      "size_bytes": 18710180,
+      "presentation_video_number": 3,
+      "legacy_scenario_number": 5,
+      "runner": "scripts/run_demo_scenarios.py"
+    },
+    {
+      "file": "4_hazard_zone_dwell.mp4",
+      "fps": 23.976023976023978,
+      "frames": 457,
+      "seconds": 19.06070833333333,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "training_eligible": false,
+      "purpose": "demo_and_development_validation",
+      "size_bytes": 49104652,
+      "presentation_video_number": 4,
+      "legacy_scenario_number": 4,
+      "runner": "scripts/run_demo_scenarios.py"
+    },
+    {
+      "file": "5_Logistics Warehouse.mp4",
+      "fps": 24.0,
+      "frames": 4349,
+      "seconds": 181.20833333333334,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "training_eligible": false,
+      "purpose": "demo_and_development_validation",
+      "size_bytes": 21890089,
+      "previously_registered_sha256": "772f409b8e001559238cdee38cbb6094c55695076bd018ca1886e0febaaa6d18",
+      "metadata_update_note": "Shortened to ~3:01 and recompressed with x264 CRF23; previous upload was 272s / ~26.9 MiB",
+      "presentation_video_number": 5,
+      "legacy_scenario_number": 7,
+      "runner": "scripts/run_demo_scenarios.py"
+    }
+  ],
+  "local_review_artifacts_not_uploaded_to_git": [
+    {
+      "path": "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4",
+      "bytes": 15097560,
+      "sha256": "a8169e0c3a83fbdac0d66d32f23f75125ba8861bfb01a08cd29522988244ad58"
+    },
+    {
+      "path": "outputs/reviews/2_restricted_zone_intrusion_latest.mp4",
+      "bytes": 2473315,
+      "sha256": "d6e6b7e7fe6aa76ea5fdd955d970c80b8a75a60b7916f1d6715d3fb314d9ac6c"
+    },
+    {
+      "path": "outputs/reviews/3_PPE_Helmet_latest.mp4",
+      "bytes": 4123616,
+      "sha256": "e2e6f1a66eb3c5bad8db23f59c1bc3362c31d835274e68cdc8e1ab3f14fcf026"
+    },
+    {
+      "path": "outputs/reviews/4_hazard_zone_dwell_worker_fixed.mp4",
+      "bytes": 15622342,
+      "sha256": "1ffaa6c6831f7d07758c6c23126bdcf2bb3fb2b3587f23aa041cae91024d4443"
+    },
+    {
+      "path": "outputs/reviews/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4",
+      "bytes": 38966738,
+      "sha256": "928e0407d90dd03d1057831951e5aed837eeb92aa4f5ceb2e15673d0625bc207"
+    }
+  ]
+}
