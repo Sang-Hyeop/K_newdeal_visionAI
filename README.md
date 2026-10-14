@@ -43,4 +43,4 @@ Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install
 
 거리 값은 보정되지 않은 화면상 상대 거리이며 실제 m가 아닙니다. 가림·최초 등장·미탐은 미확인으로 남습니다. 2번은 AI 생성 시연 영상입니다. 시연 적응 결과를 독립 현장 정확도로 설명하지 않습니다.
 
-`docs/`의 날짜별 문서는 과거 실험 근거이며 현재 실행 안내가 아닙니다. 과거 문서의 7개 영상 번호는 내부 시나리오 번호입니다. **현재 사용자는 발표 번호 1~5와 `handoff.py`만 사용합니다.** 삭제 목록과 검증 결과는 `docs/checkpoints/2026-10-14/five-video-cleanup/`에 기록합니다. 과거 코드·설정은 Git 이력에서 확인할 수 있습니다.
+현재 문서는 `docs/README.md`에서 시작합니다. 과거 리뷰·학습 실험·초안은 docs에서 삭제했고 Git 이력에서 확인합니다. 현재 사용자는 발표 번호1~5와 handoff.py를 사용합니다. 파일 정리·실행 검증 기록은 `docs/checkpoints/2026-10-14/five-video-cleanup/`에 있습니다.

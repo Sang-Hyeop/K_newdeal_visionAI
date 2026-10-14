@@ -48,15 +48,11 @@ PPE의 confirmed WARNING 검토 후보는 classification_status=unconfirmed여�
 
 ## 자료 위치 및 범위
 
-요청한 새파일 프로젝트에는 10월 7일 자료가 없어, 옆의
-`시선_팀프로젝트_공유본/docs/team-integration-pack-2026-10-07.md`와
-`docs/team-samples/2026-10-07/`를 기준으로 구현했습니다.
-샘플 사본은 이 폴더의 samples에 포함되어 독립 실행할 수 있습니다.
-문서의 모델 실행 명령은 실행하지 않았습니다.
+현재 전체 자료 설치·실행은 `docs/github-team-quickstart.md`, 이벤트 계약은 `docs/detection-output-contract.md`를 따릅니다. 삭제된 과거 docs/team-samples 대신 이 폴더의 samples는 회귀 테스트용으로 유지합니다. 실제 최신 전체 자료는 outputs/events/presentation1~5입니다.
 
 현재 API는 로컬 Python 표준 HTTP 서버입니다. 인증과 브라우저 CORS는
 구현하지 않았습니다. Gradio의 서버 측 Python에서는 바로 호출할 수 있습니다.
-기존 src/api.py의 구형 API와 별도이며 실행 진입점은 backend.py입니다.
+전체 자료 실행 진입점은 프로젝트 최상위의 handoff.py backend입니다.
 
 ## 대시보드 전달 파일
 

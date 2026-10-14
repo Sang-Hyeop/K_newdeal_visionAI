@@ -1,6 +1,6 @@
 # 5번 영상 차량·탑승자 복구 리뷰 (2026-10-14)
 
-상태: experimental_not_promoted. 기존 5번 확정 설정과 기존 출력은 보존한다. 이번 결과는 같은 CCTV의 보완 실험이며 미터 거리·독립 현장 정확도·실시간 처리 성능을 주장하지 않는다.
+상태: experimental_not_promoted. 현재 발표5 연결은 configs/team-runtime-index.json과 handoff.py를 따른다. 과거 출력은 정리에서 삭제했다. 이번 결과는 같은 CCTV의 보완 실험이며 미터 거리·독립 현장 정확도·실시간 처리 성능을 주장하지 않는다.
 
 ## 문제와 변경
 
@@ -15,13 +15,7 @@
 
 ## 실행
 
-`safety` 환경에서 프로젝트 루트를 기준으로 실행한다. 내부 시나리오 번호 7은 최종 발표 영상 번호 5에 대응한다.
-
-```sh
-python scripts/recover_vehicle_cache.py --input outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video7 --output outputs/diagnostics/new_vehicle_candidates/video7 --candidates-only
-python scripts/review_vehicle_recovery_cache.py --input outputs/diagnostics/new_vehicle_candidates/video7 --output outputs/diagnostics/new_vehicle_review_cache/video7
-python scripts/run_demo_scenarios.py --videos 7 --ppe-final --sample-fps 5 --reuse-run outputs/diagnostics/new_vehicle_review_cache --reuse-objects --proximity-geometry bottom_center --temporal-riders --output outputs/diagnostics/new_vehicle_rider_review
-```
+현재 실행 입구는 프로젝트 최상위에서 `python handoff.py run --video 5`입니다. 기본은 보관한 실제 관측 캐시를 사용합니다. `--fresh`를 추가하면 원본 추론→차량 복구→후보 검수→역할·거리 재평가를 순서대로 실행합니다. 내부 번호7은 발표5를 뜻하지만 사용자가 직접 지정하지 않습니다.
 
 현재 실험의 초기 후보 일부는 사각형 확대 방식 pilot과 정사각형 확대 방식 양쪽의 실제 추론을 보존했다. 모든 시점에 같은 공간적 판정을 적용하며 특정 시각의 경고나 강제 클래스 변경은 없다. 원시 후보 로그·모델·원본·후처리 해시로 현재 결과를 보관한다. 새 실행의 후보 개수는 pilot을 재사용한 이번 결과와 다를 수 있다.
 

@@ -5,7 +5,7 @@ From the repository root, run `python scripts/setup_runtime.py` and then `python
 # Dashboard Backend v1
 
 Python 3.11+ standard library only. No YOLO, model weights, training, or video inference.
-Source contract: team-integration-pack-2026-10-07.md and its five sample directories.
+Current event contract: ../docs/detection-output-contract.md. Legacy sample fixtures are preserved in this backend directory for regression tests.
 
 ## Run
 
