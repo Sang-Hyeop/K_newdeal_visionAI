@@ -62,7 +62,11 @@ Use supplied roi_alpha_safe / roi_alpha_alert; defaults are approximately
 0.15 / 0.2. SAFE green, WARNING orange, CRITICAL red. Proximity has no fixed ROI.
 
 The team's ROI wording document is included as `roi-wording-2026-10-07.md`.
-Attach that document and this spec when handing work to the dashboard AI.
+Korean UI labels for codes (`event_type`, `severity`, `reason`, video titles)
+are in `../docs/dashboard-ko-labels.md` with helpers in `dashboard_labels.py`.
+Keep API field values in English; map only for display. Attach this spec, the
+ROI wording doc, and the Korean label document when handing work to the
+dashboard AI.
 
 ## Actual HTTP examples
 

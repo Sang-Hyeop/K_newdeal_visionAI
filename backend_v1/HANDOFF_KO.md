@@ -63,7 +63,10 @@ PPE의 confirmed WARNING 검토 후보는 classification_status=unconfirmed여�
 API 상세 규격은 API_SPEC.md입니다. responses 폴더에는 실제 HTTP로 조회한
 근접·zone·PPE 목록 예시와 이벤트 상세, 최신 배너 예시가 있습니다.
 원본 문구 규칙은 roi-wording-2026-10-07.md에 동봉했습니다.
-대시보드 AI에는 이 문구 문서와 API_SPEC.md를 함께 전달하세요.
+화면용 한글 라벨·연동 규칙은 ../docs/dashboard-ko-labels.md 와
+dashboard_labels.py 입니다. 요약은 dashboard-labels-ko.md 입니다.
+대시보드 AI에는 API_SPEC.md, roi-wording-2026-10-07.md,
+docs/dashboard-ko-labels.md를 함께 전달하세요.
 ROI는 evidence 다각형 또는 별도로 전달한 summary.json의 camera_config로
 대시보드가 직접 fill합니다. SAFE 초록, WARNING 주황, CRITICAL 빨강이며
 알파 기본값은 약 0.15 / 0.2입니다. 좌표가 없으면 임의로 만들지 않습니다.
