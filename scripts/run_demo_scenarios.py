@@ -179,7 +179,7 @@ def main():
      for event in ppe_events:
       if event.get('hood_evidence'):
        d=max(event['hood_evidence'],key=lambda q:q['confidence']);x,y,aa,bb=map(int,d['bbox_xyxy']);cv2.rectangle(canvas,(x,y),(aa,bb),(255,180,0),2);cv2.putText(canvas,f"HOOD? REVIEW {d['confidence']:.2f}",(x,max(110,y-15)),0,.48,(255,180,0),1)
-    cv2.putText(canvas,f'VIDEO {n} / t={t:.2f}s / DEMO-ADAPTED / METERS UNCALIBRATED',(12,h-14),0,.48,(0,190,255),1);writer.write(canvas)
+    cv2.putText(canvas,f"VIDEO {spec.get('presentation_video_number',n)} / t={t:.2f}s / DEMO-ADAPTED / METERS UNCALIBRATED",(12,h-14),0,.48,(0,190,255),1);writer.write(canvas)
     if len(rows)in[1,26,51,76]:cv2.imwrite(str(dest/f'preview_{len(rows)-1}.jpg'),canvas)
     if len(rows)%25==0:print(f'video{n}: {len(rows)} samples / {t:.1f}s',flush=True)
     idx+=1

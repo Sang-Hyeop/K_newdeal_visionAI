@@ -19,5 +19,6 @@
   "renderer": "object_first",
   "status": "experimental_video2_development_review",
   "limitation": "Related development-scene model; not independent validation. Loaded vehicle boxes can include cargo; clipped geometry remains UNKNOWN. People combine current COCO and baseline proposals; no held boxes.",
-  "show_safe_pairs_for_other_people": true
+  "show_safe_pairs_for_other_people": true,
+  "ppe_person_context": true
 }

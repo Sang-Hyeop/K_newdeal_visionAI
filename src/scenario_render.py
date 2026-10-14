@@ -1,6 +1,7 @@
 """Independent feature banners and faint configured ROI fills."""
 import cv2,numpy as np
 from src.feature_status import feature_status
+from src.observation_display import display_label, event_display, LABELS
 COLORS={'SAFE':(0,180,0),'WARNING':(0,140,255),'CRITICAL':(0,0,255),None:(150,150,150)}
 def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,alpha_alert=.2,unknown_color=None,alpha_unknown=.2):
  mask=np.zeros(frame.shape[:2],np.uint8);cv2.fillPoly(mask,[np.asarray(polygon,np.int32)],255)
@@ -58,7 +59,7 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
   cv2.rectangle(frame,(5,5),(min(frame.shape[1]-5,660),27),(20,20,20),-1)
   cv2.putText(frame,'MOVEMENT RISK: '+movement['display_state'],(12,y),0,.55,COLORS[movement['severity']],2);y+=27
  for feature,events in groups.items():
-  status=feature_status(events);color=COLORS[status['severity']];label=f"{feature.upper()}: {status['display_state']}  UNKNOWN={status['unknown_event_count']}"
+  status=feature_status(events);color=COLORS[status['severity']];label=f"{feature.upper()}: {display_label(events)}  WAIT={status['assessment_counts']['pending']} CHECK={status['assessment_counts']['unassessable']} LOST={status['assessment_counts']['observation_lost']}"
   cv2.rectangle(frame,(5,y-17),(min(frame.shape[1]-5,660),y+5),(20,20,20),-1);cv2.putText(frame,label,(12,y),0,.55,color,2);y+=27
  return frame
 
@@ -139,12 +140,12 @@ def draw_review_objects(frame,detections,groups,warning_ratio=1.6,driver_overlap
   if e.get('severity')=='SAFE' and e.get('observation_status')=='confirmed':status='PPE OK';status_color=COLORS['SAFE']
   elif e.get('severity')=='WARNING' and not candidates:status='PPE REVIEW';status_color=COLORS['WARNING']
   elif e.get('ppe_state')=='conflicting_evidence' and not candidates:status='PPE CONFLICT';status_color=COLORS['WARNING']
-  elif not candidates:status='PPE UNKNOWN';status_color=COLORS[None]
+  elif not candidates:status='PPE '+LABELS[event_display(e)['assessment_state']];status_color=COLORS[None]
   if status:cv2.putText(frame,status,(x+2,min(frame.shape[0]-8,y+18)),0,.38,status_color,1)
  for e,h in select_ppe_review_candidates(groups.get('ppe',[])):
   a,y,c,b=map(int,h['bbox_xyxy']);helmet=h['class']=='helmeted_head';confirmed=e.get('observation_status')=='confirmed' and e.get('severity')=='SAFE' and helmet
   color=COLORS['SAFE']if confirmed else(255,180,0)if helmet else(0,165,255)
-  label=('HELMET'if confirmed else'HELMET CANDIDATE'if helmet else'NO HELMET CANDIDATE')+f" {h['confidence']:.2f}"
+  label=('HELMET'if confirmed else'HELMET CANDIDATE'if helmet else'NO HELMET DETECTED'if e.get('severity')=='WARNING' and e.get('observation_status')=='confirmed' and e.get('classification_status')=='observed_candidate' else'NO HELMET CANDIDATE')+f" {h['confidence']:.2f}"
   cv2.rectangle(frame,(a,y),(c,b),color,2);cv2.putText(frame,label,(a,max(120,y-5)),0,.4,color,1)
  display_events=select_proximity_display_events(groups.get('proximity',[]),warning_ratio,driver_overlap_threshold,include_other_safe_people)
  legend_y=frame.shape[0]-100
