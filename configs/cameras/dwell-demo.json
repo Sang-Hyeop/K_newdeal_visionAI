@@ -59,5 +59,6 @@
     180,
     0
   ],
-  "roi_alpha_unknown": 0.2
+  "roi_alpha_unknown": 0.2,
+  "compact_person_display": true
 }

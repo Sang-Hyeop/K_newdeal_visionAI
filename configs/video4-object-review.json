@@ -64,5 +64,6 @@
   "ppe_person_context": true,
   "ppe_one_head_per_class_per_person": true,
   "review_ground_truth": "User confirmed whole video4 contains zero actual forklifts; used for evaluation, never forced as pipeline output",
-  "ppe_person_upper_fraction": 0.5
+  "ppe_person_upper_fraction": 0.5,
+  "deduplicate_person_containment": true
 }

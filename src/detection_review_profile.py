@@ -77,6 +77,9 @@ def select_review_objects(predictions, shape, profile):
             if duplicate:rejected.append({**d,'review_reason':'duplicate_person_cross_model_same_cabin'})
             else:unique.append(d)
         people_kept=unique
+    if profile.get('deduplicate_person_containment'):
+        from .person_display_cleanup import deduplicate_people
+        people_kept,duplicates=deduplicate_people(people_kept);rejected+=duplicates
     kept=people_kept+deduplicated
     kept,equipment_rejected=exclude_confirmed_equipment(kept,shape,profile)
     return kept,rejected+equipment_rejected

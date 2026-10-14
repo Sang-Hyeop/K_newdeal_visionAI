@@ -14,6 +14,7 @@ def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,
  return frame
 
 def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,driver_overlap_threshold=.8,include_other_safe_people=False):
+ compact_people=bool(zone and getattr(zone[0],'config',{}).get('compact_person_display'))
  if detections is not None and 'proximity' in groups:
   groups={**groups,'proximity':exclude_driver_overlap_pairs(groups['proximity'],driver_overlap_threshold)}
  if zone:
@@ -28,13 +29,18 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
   else:display_groups=groups;movement=None
  else:display_groups=groups;movement=None
  if detections is not None:
-  draw_review_objects(frame,detections,display_groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
+  if compact_people:
+   from .person_display_cleanup import draw_compact_people
+   draw_review_objects(frame,[d for d in detections if d['class']!='person'],{},proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
+   draw_compact_people(frame,detections,groups)
+  else:draw_review_objects(frame,detections,display_groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
   draw_vehicle_pair_connections(frame,groups.get("forklift_proximity",[]))
  for feature,events in groups.items():
   if detections is not None and feature not in {'zone_access','zone_dwell'}:continue
   for e in events:
    if feature=='zone_access' and any(q.get('track_id')==e.get('track_id') for q in groups.get('zone_dwell',[])):continue
    color=COLORS[e['severity'] if e.get('observation_status')=='confirmed'else None];box=e.get('person_bbox_xyxy',e.get('head_bbox_xyxy'))
+  if compact_people and feature in {'zone_access','zone_dwell','ppe'}:continue
    if feature=='ppe'and e['severity']=='WARNING':
     bare=[h for h in e.get('head_candidates',[])if h['class']=='no_helmet_head']
     if bare:box=max(bare,key=lambda h:h['confidence'])['bbox_xyxy']

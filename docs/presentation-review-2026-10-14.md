@@ -52,3 +52,15 @@ python scripts/run_intrusion_review.py --output outputs/diagnostics/presentation
 이 보완은 해당 고정 카메라 후처리이며 재학습은 아니다. 카메라나 설비 위치가 바뀌거나 사람이 설비 앞을 가리는 경우 영역 재검수가 필요하다. 기존 통로 ROI와 3초 주의 기준은 유지한다. 검증 결과는 outputs/diagnostics/presentation4_equipment_corrected_2026-10-14/video4/review_verification.json에 기록한다. 평가 항목 3·6·8에 기여한다.
 
 4번 보완 검증: 기계 PERSON 오탐 6개 제거, 그 외 객체 검출 339개는 이전과 전부 일치. 3.34초 오른쪽 실제 작업자 유지 확인. 지게차 검출 0, 체류 CRITICAL 0 유지. 테스트 212개·전체 92프레임 디코딩 통과. 최신 재생 경로 outputs/reviews/4_hazard_zone_dwell_latest.mp4를 새 결과로 교체했다.
+
+## 4번 중복 사람 및 표시 정리
+
+사용자 승인 범위: 4번에서 같은 작업자의 중복 검출을 정리하고 몸 박스 하나에 통로·체류·PPE 상태를 문구로 표시한다.
+
+카메라 프로필의 deduplicate_person_containment를 켜고, 서로 다른 모델의 사람 후보가 작은 박스 면적의 85% 이상 겹치며 가로 중심·발점이 가까울 때만 낮은 신뢰도 후보를 제외한다. 추적 전에 적용하고 제외 후보의 출처와 사유는 진단 로그에 남긴다. 인접 작업자와 발점이 다른 겹친 사람을 보존하는 회귀 검사를 포함한다. 과밀·완전 가림 장면의 일반 해법으로 보장하지 않으며 해당 카메라의 리뷰용 설정이다.
+
+dwell-demo의 compact_person_display 옵션으로 사람별 몸 박스를 한 번만 그린다. 기존 사람·구역·머리 박스를 중복해서 그리지 않고 PERSON, LANE IN/OUT·체류초·판정, PPE 상태를 문구로 묶는다. 위험·검토 후보·판정 불가는 구분하며 이벤트 로그의 기능별 근거는 유지한다. 다른 영상 설정은 변경하지 않았다. 모델 재학습과 위험 임계값 변경은 없다.
+
+평가 항목 3·5·6·8(중복 집계, 화면 이해, 회귀 검증, 인계)에 기여한다. 실행 결과·해시는 outputs/diagnostics/presentation4_compact_review_2026-10-14/video4/review_verification.json에 기록한다.
+
+4번 중복 정리 검증: 전체 92개 분석 프레임에서 중복 사람 후보 17건 제외, 나머지 사람 후보 322건은 정리 규칙 적용 전후와 일치. 지적된 8.76초 작업자의 사람·PPE 추적은 각 1개로 확인했다. 지게차 검출 0·체류 CRITICAL 0 유지. 테스트 217개 및 결과 전체 92프레임 디코딩 통과. 최신 MP4 경로를 새 결과로 교체했다.
