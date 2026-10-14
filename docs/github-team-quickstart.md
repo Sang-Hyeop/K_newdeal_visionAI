@@ -65,3 +65,18 @@ python handoff.py run --video 5
 ## 제공 범위
 
 모델 6개, PPE 보조 코드, 결과 MP4 5개, 전체 이벤트·관측·진단 로그, 재현용 캐시와 조회 DB를 설치한다. 소스·설정·입력 MP4는 Git으로 받는다. 가상환경·재학습용 데이터셋·과거 실험 전체는 별도로 관리한다. requirements-runtime.txt는 macOS safety 환경에서 확인한 버전이며 Windows 전체 실행은 아직 검증하지 않았다.
+
+## GitHub에서 새로 받은 폴더의 검증
+
+GitHub에서 작업 브랜치를 새로 clone한 뒤 공개 Release 다운로드→111개 자료 설치→원본 5개 및 실행 자료 해시 검사→모델 6개 CPU 추론→검사 252+8개→실제 로그 재가져오기→5번 1샘플 재실행을 확인했다. DB는 이벤트 6,139건·관측 4,142건·영상 5개다. 검증 환경은 기존 safety Python 환경을 사용했으며 새 운영체제의 의존성 설치까지 검증한 것은 아니다. 근거는 docs/checkpoints/2026-10-14/github-runtime-verification.json이다.
+
+main 반영 전에는 Release 태그로도 시작할 수 있다:
+
+```sh
+git clone --branch runtime-2026-10-14 --depth 1 https://github.com/Sang-Hyeop/K_newdeal_visionAI.git
+cd K_newdeal_visionAI
+python scripts/setup_runtime.py
+python handoff.py backend --port 8010
+```
+
+태그에서 작업 브랜치를 만들려면 `git switch -c feat/작업이름`을 사용한다.
