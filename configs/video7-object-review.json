@@ -1,5 +1,5 @@
 {
-  "policy_version": "video7-user-review-batch-v2",
+  "policy_version": "video7-reviewed-static-stockpile-v3",
   "status": "experimental_video7_development_review",
   "person_prediction_keys": [
     "person_coco",
@@ -30,5 +30,23 @@
   "vehicle_support_context_minimum_candidate_confidence": 0.5,
   "vehicle_support_context_minimum_confidence": 0.3,
   "deduplicate_cabin_people": true,
-  "vehicle_support_person_context_scale": 1.25
+  "vehicle_support_person_context_scale": 1.25,
+  "confirmed_equipment_regions": [
+    {
+      "region_id": "user_confirmed_center_stockpile_2026_10_14",
+      "bbox_normalized": [
+        0.303,
+        0.215,
+        0.405,
+        0.415
+      ],
+      "excluded_classes": [
+        "forklift"
+      ],
+      "minimum_coverage": 0.85,
+      "require_center_inside": true,
+      "review_reason": "user_confirmed_stockpile_not_forklift",
+      "limitation": "Fixed reviewed source camera; a future actual vehicle overlapping this stockpile needs fresh region review."
+    }
+  ]
 }

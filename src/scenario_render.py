@@ -3,23 +3,23 @@ import cv2,numpy as np
 from src.feature_status import feature_status
 from src.observation_display import display_label, event_display, LABELS
 COLORS={'SAFE':(0,180,0),'WARNING':(0,140,255),'CRITICAL':(0,0,255),None:(150,150,150)}
-def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,alpha_alert=.2,unknown_color=None,alpha_unknown=.2):
+def roi_overlay(frame,polygon,safe_polygons,severity,active=True,alpha_safe=.15,alpha_alert=.2,unknown_color=None,alpha_unknown=.2,draw_outer_boundary=True):
  mask=np.zeros(frame.shape[:2],np.uint8);cv2.fillPoly(mask,[np.asarray(polygon,np.int32)],255)
  for p in safe_polygons:cv2.fillPoly(mask,[np.asarray(p,np.int32)],0)
  if not active:severity=None
  color=tuple(unknown_color) if severity is None and unknown_color is not None else COLORS[severity];layer=frame.copy();layer[mask>0]=color;alpha=alpha_unknown if severity is None and unknown_color is not None else alpha_alert if severity in {'WARNING','CRITICAL'} else alpha_safe;frame[:]=cv2.addWeighted(layer,alpha,frame,1-alpha,0)
  # Excluded storage/walking regions are not the monitored lane or a safety verdict.
- cv2.polylines(frame,[np.asarray(polygon,np.int32)],True,color,2)
+ if draw_outer_boundary:cv2.polylines(frame,[np.asarray(polygon,np.int32)],True,color,2)
  for p in safe_polygons:cv2.polylines(frame,[np.asarray(p,np.int32)],True,COLORS[None],1)
  return frame
 
-def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,driver_overlap_threshold=.8,include_other_safe_people=False):
+def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,driver_overlap_threshold=.8,include_other_safe_people=False,vehicle_occupancy=None):
  compact_people=bool(zone and getattr(zone[0],'config',{}).get('compact_person_display'))
  if detections is not None and 'proximity' in groups:
   groups={**groups,'proximity':exclude_driver_overlap_pairs(groups['proximity'],driver_overlap_threshold)}
  if zone:
   pipeline,row=zone;cfg=getattr(pipeline,'config',{})
-  roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2),cfg.get('roi_unknown_color'),cfg.get('roi_alpha_unknown',.2))
+  roi_overlay(frame,pipeline.polygon,getattr(pipeline,'safe_polygons',[]),feature_status(row['events'])['severity'],row['roi_active'],cfg.get('roi_alpha_safe',.15),cfg.get('roi_alpha_alert',.2),cfg.get('roi_unknown_color'),cfg.get('roi_alpha_unknown',.2),cfg.get('roi_draw_outer_boundary',True))
   if cfg.get('compact_risk_display'):
    movement=feature_status(groups.get('zone_dwell',[])+groups.get('proximity',[]))
    groups={k:v for k,v in groups.items() if k!='zone_access'}
@@ -35,12 +35,16 @@ def render(frame,groups,zone=None,detections=None,proximity_warning_ratio=1.6,dr
    draw_compact_people(frame,detections,groups)
   else:draw_review_objects(frame,detections,display_groups,proximity_warning_ratio,driver_overlap_threshold,include_other_safe_people)
   draw_vehicle_pair_connections(frame,groups.get("forklift_proximity",[]))
+ if vehicle_occupancy:
+  for state in vehicle_occupancy.values():
+   x,y,_,_=map(int,state['bbox_xyxy']);known=state['status']=='occupied_observed'
+   cv2.putText(frame,'RIDER OBSERVED' if known else 'RIDER UNKNOWN',(x,max(135,y+17)),0,.4,(0,200,120) if known else (160,160,160),1)
  for feature,events in groups.items():
+  if compact_people and feature in {'zone_access','zone_dwell','ppe'}:continue
   if detections is not None and feature not in {'zone_access','zone_dwell'}:continue
   for e in events:
    if feature=='zone_access' and any(q.get('track_id')==e.get('track_id') for q in groups.get('zone_dwell',[])):continue
    color=COLORS[e['severity'] if e.get('observation_status')=='confirmed'else None];box=e.get('person_bbox_xyxy',e.get('head_bbox_xyxy'))
-  if compact_people and feature in {'zone_access','zone_dwell','ppe'}:continue
    if feature=='ppe'and e['severity']=='WARNING':
     bare=[h for h in e.get('head_candidates',[])if h['class']=='no_helmet_head']
     if bare:box=max(bare,key=lambda h:h['confidence'])['bbox_xyxy']
@@ -76,7 +80,7 @@ def select_proximity_display_events(events,warning_ratio=1.6,driver_overlap_thre
  Box overlap alone does not establish the operator role; nearby ambiguous
  pairs remain visible. Safe pairs are only a per-person fallback without alerts.
  """
- pairs=[e for e in events if e.get('person_anchor_xy') and e.get('nearest_vehicle_point_xy') and e.get('normalized_image_gap') is not None]
+ pairs=[e for e in events if e.get('person_anchor_xy') and e.get('nearest_vehicle_point_xy') and e.get('normalized_image_gap') is not None and e.get('distance_display_enabled',True)]
  pairs=exclude_driver_overlap_pairs(pairs,driver_overlap_threshold)
  alerts=[e for e in pairs if e.get('observation_status')=='confirmed' and e.get('severity') in {'WARNING','CRITICAL'}]
  uncertain=[e for e in pairs if e.get('observation_status')!='confirmed' and e['normalized_image_gap']<=warning_ratio]

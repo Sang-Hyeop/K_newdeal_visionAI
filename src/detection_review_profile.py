@@ -16,7 +16,7 @@ def exclude_confirmed_equipment(proposals,shape,profile,frame=None):
             b=region['bbox_normalized'];b=[b[0]*w,b[1]*h,b[2]*w,b[3]*h]
             inter=max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]))
             if inter/area>=region.get('minimum_coverage',.8) and (not region.get('require_center_inside') or b[0]<=(a[0]+a[2])/2<=b[2] and b[1]<=(a[1]+a[3])/2<=b[3]):blocked=True;break
-        if blocked:rejected.append({**d,'review_reason':'user_confirmed_equipment_not_person_or_head'})
+        if blocked:rejected.append({**d,'review_reason':region.get('review_reason','user_confirmed_equipment_not_person_or_head'),'equipment_region_id':region.get('region_id')})
         else:kept.append(d)
     return kept,rejected
 

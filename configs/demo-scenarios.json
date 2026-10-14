@@ -72,7 +72,7 @@
     },
     {
       "video_number": 7,
-      "source_name": "7_Logistics Warehouse.mp4",
+      "source_name": "5_Logistics Warehouse.mp4",
       "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
       "ppe_enabled": true,
       "primary_features": [
@@ -81,7 +81,8 @@
         "conditional_person_forklift_proximity"
       ],
       "camera_config": "configs/cameras/warehouse-summary.json",
-      "distance_meters": null
+      "distance_meters": null,
+      "presentation_video_number": 5
     }
   ],
   "forklift_pair_warning_ratio": 1,

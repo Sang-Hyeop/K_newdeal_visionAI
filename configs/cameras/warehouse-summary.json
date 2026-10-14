@@ -1,6 +1,6 @@
 {
   "camera_id": "warehouse-summary",
-  "source_name": "7_Logistics Warehouse.mp4",
+  "source_name": "5_Logistics Warehouse.mp4",
   "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
   "roi_id": "warehouse_lane_outside_safe_boxes",
   "safe_seconds": 3,
@@ -128,9 +128,9 @@
   "vehicle_critical_seconds": 3,
   "object_review_profile": "configs/video7-object-review.json",
   "roi_unknown_color": [
-    255,
-    180,
-    0
+    150,
+    150,
+    150
   ],
   "roi_alpha_unknown": 0.05,
   "exclude_riders_from_lane": true,
@@ -138,8 +138,13 @@
   "warning_ratio": 1,
   "critical_ratio": 0.3,
   "compact_risk_display": true,
-  "proximity_alert_lines_only": true,
+  "proximity_alert_lines_only": false,
   "tracker_fuse_score": false,
   "forklift_tracker_fuse_score": false,
-  "forklift_tracker_high_threshold": 0.12
+  "forklift_tracker_high_threshold": 0.12,
+  "proximity_requires_observed_rider": true,
+  "occupancy_minimum_observations": 3,
+  "proximity_lane_filter": true,
+  "proximity_policy_version": "observed_rider_lane_inside_all_outside_critical_v1",
+  "roi_draw_outer_boundary": false
 }

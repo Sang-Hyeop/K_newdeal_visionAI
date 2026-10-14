@@ -2,6 +2,7 @@
 from .person_tracker import PersonTracker
 from .proximity import Proximity
 from .operator_association import OperatorAssociation
+from .vehicle_occupancy import VehicleOccupancy, gate_proximity
 
 class TrackedProximity:
     def __init__(self,config,processed_fps):
@@ -15,20 +16,25 @@ class TrackedProximity:
         self.rule=Proximity(config['warning_ratio'],config['critical_ratio'],config['hysteresis_ratio'],config['max_gap_seconds'],recent_pedestrian_overlap=config.get('recent_pedestrian_overlap',False),distance_geometry=config.get('distance_geometry','ground_band'),exclude_probable_operator=config.get('exclude_probable_operator',False))
         self.previous={}
         self.operators=OperatorAssociation(config['max_gap_seconds']) if config.get('associate_riders') else None
+        self.occupancy=VehicleOccupancy(config.get('occupancy_minimum_observations',3),config['max_gap_seconds']) if config.get('proximity_requires_observed_rider') else None
 
-    def update(self,timestamp,detections,shape,scene_cut=False):
+    def update(self,timestamp,detections,shape,scene_cut=False,roi_active=True):
         scene=self.people.scene
         pt,pm=self.people.update(timestamp,detections,shape,scene_cut)
         ft,fm=self.forklifts.update(timestamp,detections,shape,scene_cut)
         if self.people.scene!=scene:
             self.rule.reset();self.previous.clear()
             if self.operators:self.operators.reset()
+            if self.occupancy:self.occupancy.reset()
         events=self.rule.update(timestamp,pt,ft,shape);transitions=[]
         associations=self.operators.update(timestamp,pt,ft) if self.operators else {}
         excluded=[e for e in events if associations.get(e['person_track_id'])==e['forklift_track_id']]
         events=[e for e in events if associations.get(e['person_track_id'])!=e['forklift_track_id']]
+        occupancy=self.occupancy.update(timestamp,pt,ft,associations) if self.occupancy else {}
+        suppressed=[]
+        if self.occupancy:events,suppressed=gate_proximity(events,occupancy,shape,self.config,roi_active)
         for event in events:
-            event.update(camera_id=self.config['camera_id'],distance_unit='person_height_normalized_image_gap',zone_roi_used=False)
+            event.update(camera_id=self.config['camera_id'],distance_unit='person_height_normalized_image_gap',zone_roi_used=bool(self.occupancy))
             key=(event['person_track_id'],event['forklift_track_id']);state=(event['severity'],event['reason'])
             if self.previous.get(key)!=state:transitions.append(event.copy())
             self.previous[key]=state
@@ -36,5 +42,6 @@ class TrackedProximity:
         self.previous={k:v for k,v in self.previous.items() if k in active}
         return {'timestamp_seconds':timestamp,'scene_id':self.people.scene,'people':pt,'forklifts':ft,
                 'missing_people':pm,'missing_forklifts':fm,'events':events,'transitions':transitions,
-                'scene_cut':scene_cut,'zone_roi_used':False,'detection_scope':'full_frame',
+                'scene_cut':scene_cut,'zone_roi_used':bool(self.occupancy),'detection_scope':'full_frame',
+                'vehicle_occupancy':occupancy,'suppressed_proximity_events':suppressed,
                 'excluded_rider_pairs':excluded,'rider_associations':associations,'global_safety_status':'not_evaluated','pair_observation_status':'some_pairs_observed' if any(e['severity'] is not None for e in events) else 'unconfirmed'}

@@ -83,7 +83,7 @@ def main():
   if use_hood and hood_model is None and not hood_saved:hood_model=YOLO(str(ROOT/hood['weights']))
   pcfg=json.load(open(ROOT/spec['camera_config']))if spec['camera_config']else None
   if a.forklift_geometric_association and pcfg:pcfg={**pcfg,'forklift_tracker_fuse_score':False}
-  zone=TrackedZone(pcfg,(h,w),rate)if n==4 else ScenarioZone(pcfg,(h,w),rate)if n==7 else None;prox=TrackedProximity(pcfg,rate)if n in[1,2]else TrackedProximity({**json.load(open(ROOT/'configs/cameras/forward-proximity.json')),'camera_id':'warehouse-conditional','warning_ratio':1.0,'critical_ratio':pcfg.get('critical_ratio',.3),'distance_geometry':'box_boundary','associate_riders':True,'tracker_fuse_score':pcfg.get('tracker_fuse_score',True),'forklift_tracker_fuse_score':pcfg.get('forklift_tracker_fuse_score',True),'forklift_tracker_high_threshold':pcfg.get('forklift_tracker_high_threshold',.25)},rate)if n==7 else None;vehicle_tracker=PersonTracker(rate,target_class='forklift',namespace='FF',fuse_score=not a.forklift_geometric_association)if n==3 else None;pair=ForkliftProximity(warning=pcfg.get("warning_ratio",1),critical=pcfg.get("critical_ratio",.15),distance_geometry=pcfg.get("distance_geometry","ground_band"))if n==3 else None;pt=PersonTracker(rate,expose_current_candidates=True);prule=PPEEvents(policy);hrule=UnassignedHeadEvents(rate,policy);rows=[];feature_rows={};laststate={};prev=None;idx=0;writer=cv2.VideoWriter(str(dest/'demo.mp4'),cv2.VideoWriter_fourcc(*'mp4v'),rate,(w,h));hood_vetoes=0;hood_samples=0
+  zone=TrackedZone(pcfg,(h,w),rate)if n==4 else ScenarioZone(pcfg,(h,w),rate)if n==7 else None;prox=TrackedProximity(pcfg,rate)if n in[1,2]else TrackedProximity({**json.load(open(ROOT/'configs/cameras/forward-proximity.json')),**pcfg,'camera_id':'warehouse-conditional','warning_ratio':1.0,'critical_ratio':pcfg.get('critical_ratio',.3),'distance_geometry':'box_boundary','associate_riders':True,'tracker_fuse_score':pcfg.get('tracker_fuse_score',True),'forklift_tracker_fuse_score':pcfg.get('forklift_tracker_fuse_score',True),'forklift_tracker_high_threshold':pcfg.get('forklift_tracker_high_threshold',.25)},rate)if n==7 else None;vehicle_tracker=PersonTracker(rate,target_class='forklift',namespace='FF',fuse_score=not a.forklift_geometric_association)if n==3 else None;pair=ForkliftProximity(warning=pcfg.get("warning_ratio",1),critical=pcfg.get("critical_ratio",.15),distance_geometry=pcfg.get("distance_geometry","ground_band"))if n==3 else None;pt=PersonTracker(rate,expose_current_candidates=True);prule=PPEEvents(policy);hrule=UnassignedHeadEvents(rate,policy);rows=[];feature_rows={};laststate={};prev=None;idx=0;writer=cv2.VideoWriter(str(dest/'demo.mp4'),cv2.VideoWriter_fourcc(*'mp4v'),rate,(w,h));hood_vetoes=0;hood_samples=0
   if not writer.isOpened():raise ValueError('Writer failed')
   try:
    while True:
@@ -119,7 +119,7 @@ def main():
     if zrow:
      for kind in['zone_access','zone_dwell']:groups[kind]=[e for e in zrow['events']if e['event_type']==kind]
     if prox:
-     proximity=prox.update(t,detections,(h,w),cut);events=proximity['events']
+     proximity=prox.update(t,detections,(h,w),cut,roi_active=zrow['roi_active'] if zrow else True);events=proximity['events']
      if n==1:events=exclude_driver_overlap_pairs(events,pcfg.get('driver_overlap_exclusion_ratio',.8))
      groups['proximity']=events
     if pair:
@@ -172,7 +172,7 @@ def main():
       identity=tuple(e.get('forklift_track_ids',[]))or tuple(str(e.get(k,''))for k in['track_id','person_track_id','forklift_track_id']);key=(e['event_type'],identity);state=(e.get('severity'),e.get('observation_status'),e.get('ppe_state'),e.get('inside'),e.get('reason'),e.get('risk_reason'),bool(e.get('hood_evidence')));now[key]=state
       if old.get(key)!=state:transitions.append(e)
      laststate[feature]=now;feature_rows.setdefault(feature,[]).append({'frame_index':idx,'timestamp_seconds':t,'events':events,'transitions':transitions,'scene_id':zrow['scene_id']if zrow else pt.scene,'roi_active':zrow['roi_active']if zrow else True})
-    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None,proximity_warning_ratio=(pcfg or {}).get('warning_ratio',1.6),include_other_safe_people=(review or {}).get('show_safe_pairs_for_other_people',False))
+    canvas=render(frame.copy(),groups,(zone,zrow)if zone else None,detections=detections if review or specialist else None,proximity_warning_ratio=(pcfg or {}).get('warning_ratio',1.6),include_other_safe_people=(review or {}).get('show_safe_pairs_for_other_people',False),vehicle_occupancy=proximity.get('vehicle_occupancy') if prox else None)
     if review and n in [1,2,3]:
      cv2.putText(canvas,f"WARNING <= {pcfg['warning_ratio']:.2f} / CRITICAL <= {pcfg['critical_ratio']:.2f} {'vehicle-height' if n==3 else 'person-height'} gap",(12,h-34),0,.42,(230,230,230),1)
     if use_hood:
