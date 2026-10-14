@@ -12,7 +12,7 @@ cd K_newdeal_visionAI
 python scripts/setup_runtime.py
 ```
 
-`setup_runtime.py`는 Python 표준 라이브러리만 사용한다. 약 179MB의 GitHub Release를 다운로드하고 ZIP·개별 파일 해시를 검사한 뒤, `models/`와 `outputs/`의 정해진 위치에 설치한다. 다른 내용의 기존 파일은 기본적으로 보존하고 오류로 알려준다. 의도적으로 기존 실행 자료를 교체할 때만 `--replace`를 사용한다.
+`setup_runtime.py`는 Python 표준 라이브러리만 사용한다. Release ZIP의 과거 내부 번호를 설치 시 현재 발표 번호(video1/video3/video4/video5)로 배치한다. 기존 설치는 setup_runtime.py를 다시 실행하면 되며, 이전 경로는 해시가 같은 복사본만 제거한다. 수정된 기존 파일은 보존한다. 약 179MB의 GitHub Release를 다운로드하고 ZIP·개별 파일 해시를 검사한 뒤, `models/`와 `outputs/`의 정해진 위치에 설치한다. 다른 내용의 기존 파일은 기본적으로 보존하고 오류로 알려준다. 의도적으로 기존 실행 자료를 교체할 때만 `--replace`를 사용한다.
 
 직접 GitHub [Releases](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-14)에서 ZIP을 받은 경우에도 `python scripts/setup_runtime.py --archive 받은파일.zip`로 설치할 수 있다.
 

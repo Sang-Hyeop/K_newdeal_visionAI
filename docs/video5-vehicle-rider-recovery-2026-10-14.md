@@ -41,6 +41,6 @@ PPE 머리/몸 관측은 해시를 확인한 기존 실제 추론을 재사용�
 - 새 차량 관측 472건, 탑승자 거리 쌍 제외 1198건, 역할 대기 쌍 1586건, 합침/중복 몸 박스 정리 13건. 모두 샘플별 관측 개수이며 개체 수나 정확도 개선율이 아니다.
 - 모든 샘플에서 확인된 탑승자 거리 쌍 제거, 역할 대기의 거리·통로 경고 금지, PPE 원시 관측 보존, 소스 프레임 일치, 별도 하단 보행자 보존을 검증했다.
 - 결과: `outputs/reviews/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4`
-- 로그: `outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7`
+- 로그: `outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5`
 - 아티팩트 해시 및 검증: `docs/checkpoints/2026-10-14/vehicle-rider-recovery/`
 - 출력 SHA-256: `928e0407d90dd03d1057831951e5aed837eeb92aa4f5ceb2e15673d0625bc207`
