@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import sqlite3
+import sys
 from contextlib import contextmanager
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -36,9 +37,18 @@ CREATE INDEX IF NOT EXISTS observation_lookup
  ON observations(camera_id,feature,video,timestamp_seconds DESC,frame_index DESC);
 """
 
+CONFLICT_ID_LIMIT = 20
+
 
 def dumps(value):
     return json.dumps(value, ensure_ascii=False, allow_nan=False)
+
+
+def import_failure(path, line, error_type, field, message):
+    """Raise a structured import error without dumping the full source row."""
+    raise ValueError(
+        f'{path}:{line}: error_type={error_type}; field={field}; {message}'
+    ) from None
 
 
 def evidence_source(raw):
@@ -61,13 +71,15 @@ def evidence_source(raw):
 
 def validate_base(record):
     if not isinstance(record, dict) or record.get('schema_version') != '1.0':
-        raise ValueError('Expected a schema_version=1.0 object')
+        raise ValueError('schema_version must be the string 1.0')
     for key in ('camera_id', 'video', 'observation_status'):
         if not isinstance(record.get(key), str) or not record[key]:
             raise ValueError(f'Missing or invalid {key}')
+    if record['observation_status'] not in ('confirmed', 'unconfirmed'):
+        raise ValueError('observation_status must be confirmed or unconfirmed')
     timestamp = record.get('timestamp_seconds')
     if isinstance(timestamp, bool) or not isinstance(timestamp, (int, float)):
-        raise ValueError('Invalid timestamp_seconds')
+        raise ValueError('timestamp_seconds must be a finite number')
     if not math.isfinite(timestamp) or timestamp < 0:
         raise ValueError('timestamp_seconds must be finite and nonnegative')
 
@@ -90,14 +102,16 @@ def normalize_event(record):
         if not isinstance(record.get(key), str) or not record[key]:
             raise ValueError(f'Missing or invalid {key}')
     if record['event_type'] not in ('proximity', 'zone_access', 'zone_dwell', 'ppe', 'status'):
-        raise ValueError('Invalid event_type')
+        raise ValueError('event_type must be proximity, zone_access, zone_dwell, ppe, or status')
     if not isinstance(record.get('evidence'), dict):
         raise ValueError('evidence must be an object')
+    # source_sha256, scope, track_ids, model_version, and config_version are preserved
+    # when present. They are not invented here and are not required for sample imports.
     result = copy.deepcopy(record)
     if result['observation_status'] == 'unconfirmed':
         result['severity'] = None
     if result.get('severity') not in (None, 'SAFE', 'WARNING', 'CRITICAL'):
-        raise ValueError('Invalid severity')
+        raise ValueError('severity must be SAFE, WARNING, CRITICAL, or null')
     null_distances(result)
     result['distance_meters'] = None
     return result
@@ -106,14 +120,14 @@ def normalize_event(record):
 def normalize_observation(record):
     validate_base(record)
     if not isinstance(record.get('feature'), str) or not record['feature']:
-        raise ValueError('Missing feature')
+        raise ValueError('Missing or invalid feature')
     if not isinstance(record.get('feature_status'), dict):
-        raise ValueError('Missing feature_status')
+        raise ValueError('feature_status must be an object')
     if not isinstance(record.get('events'), list):
         raise ValueError('events must be an array')
     frame = record.get('frame_index', 0)
     if isinstance(frame, bool) or not isinstance(frame, int) or frame < 0:
-        raise ValueError('Invalid frame_index')
+        raise ValueError('frame_index must be a nonnegative integer')
     result = copy.deepcopy(record)
     result['events'] = [normalize_event(event) for event in record['events']]
     status = result['feature_status']
@@ -144,6 +158,17 @@ def normalize_observation(record):
     return result
 
 
+def _field_from_message(message):
+    text = str(message)
+    for key in ('schema_version', 'event_id', 'event_type', 'severity', 'observation_status',
+                'camera_id', 'video', 'timestamp_seconds', 'evidence', 'feature',
+                'feature_status', 'events', 'frame_index', 'track_ids', 'model_version',
+                'config_version', 'source_sha256', 'scope'):
+        if key in text:
+            return key
+    return 'record'
+
+
 def parse_jsonl(path, kind):
     normalize = {'events': normalize_event, 'observations': normalize_observation}[kind]
     with Path(path).open(encoding='utf-8-sig') as source:
@@ -152,10 +177,24 @@ def parse_jsonl(path, kind):
             if not raw.strip():
                 continue
             try:
-                record = json.loads(raw, parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+                record = json.loads(raw, parse_constant=lambda value: (_ for _ in ()).throw(
+                    ValueError(f'non-finite JSON constant {value}')))
+            except ValueError as error:
+                import_failure(path, number, 'invalid_json', 'record', str(error))
+            try:
                 yield normalize(record), raw
             except (ValueError, TypeError, KeyError) as error:
-                raise ValueError(f'{path}:{number}: {error}') from error
+                import_failure(path, number, 'contract_violation', _field_from_message(error), str(error))
+
+
+def observation_id_for(raw):
+    """Stable id from the exact UTF-8 source line (trailing CR/LF already removed)."""
+    return hashlib.sha256(raw.encode('utf-8')).hexdigest()
+
+
+def same_payload(existing_payload, record):
+    """Content equality ignores JSON key order; whitespace-only raw differences still compare equal here."""
+    return json.loads(existing_payload) == record
 
 
 class Store:
@@ -176,29 +215,71 @@ class Store:
             db.close()
 
     def ingest(self, root):
-        counts = {'events': 0, 'observations': 0}
+        """Import recursively. One transaction; failure rolls back the whole import."""
+        inserted = {'events': 0, 'observations': 0}
+        duplicates = {'events': 0, 'observations': 0}
+        conflicts = {'events': 0, 'observations': 0}
+        read = {'events': 0, 'observations': 0}
+        files = 0
+        conflict_ids = {'events': [], 'observations': []}
         with self.connect() as db:
-            for kind in counts:
+            for kind in ('events', 'observations'):
                 paths = sorted(set(Path(root).rglob(f'{kind}_v1.jsonl')) |
                                set(Path(root).rglob(f'{kind}_v1.head.jsonl')))
                 if not paths:
                     raise ValueError(f'No {kind}_v1 JSONL files in {root}')
+                files += len(paths)
                 for path in paths:
                     for record, raw in parse_jsonl(path, kind):
+                        read[kind] += 1
+                        payload = dumps(record)
                         if kind == 'events':
-                            cursor = db.execute(
-                                'INSERT INTO events VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(event_id) DO NOTHING',
-                                (record['event_id'], record['camera_id'], record['video'],
-                                 record['event_type'], record['timestamp_seconds'], record.get('severity'),
-                                 record['observation_status'], evidence_source(raw), raw, dumps(record)))
+                            identity = record['event_id']
+                            existing = db.execute(
+                                'SELECT payload FROM events WHERE event_id=?', (identity,)).fetchone()
+                            if existing is None:
+                                db.execute(
+                                    'INSERT INTO events VALUES (?,?,?,?,?,?,?,?,?,?)',
+                                    (identity, record['camera_id'], record['video'],
+                                     record['event_type'], record['timestamp_seconds'], record.get('severity'),
+                                     record['observation_status'], evidence_source(raw), raw, payload))
+                                inserted[kind] += 1
+                            elif same_payload(existing['payload'], record):
+                                duplicates[kind] += 1
+                            else:
+                                conflicts[kind] += 1
+                                if len(conflict_ids[kind]) < CONFLICT_ID_LIMIT:
+                                    conflict_ids[kind].append(identity)
                         else:
-                            identity = hashlib.sha256(raw.encode('utf-8')).hexdigest()
-                            cursor = db.execute(
-                                'INSERT INTO observations VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(observation_id) DO NOTHING',
-                                (identity, record['camera_id'], record['feature'], record['video'],
-                                 record['timestamp_seconds'], record.get('frame_index', 0), raw, dumps(record)))
-                        counts[kind] += cursor.rowcount
-        return counts
+                            identity = observation_id_for(raw)
+                            existing = db.execute(
+                                'SELECT payload FROM observations WHERE observation_id=?',
+                                (identity,)).fetchone()
+                            if existing is None:
+                                db.execute(
+                                    'INSERT INTO observations VALUES (?,?,?,?,?,?,?,?)',
+                                    (identity, record['camera_id'], record['feature'], record['video'],
+                                     record['timestamp_seconds'], record.get('frame_index', 0), raw, payload))
+                                inserted[kind] += 1
+                            elif same_payload(existing['payload'], record):
+                                duplicates[kind] += 1
+                            else:
+                                # Same raw hash implies identical raw text, so this branch is defensive.
+                                conflicts[kind] += 1
+                                if len(conflict_ids[kind]) < CONFLICT_ID_LIMIT:
+                                    conflict_ids[kind].append(identity)
+        return {
+            'ok': True,
+            'files': files,
+            'read': read,
+            'inserted': inserted,
+            'duplicates': duplicates,
+            'conflicts': conflicts,
+            'conflict_ids': conflict_ids,
+            # Compatibility aliases: newly stored rows only.
+            'events': inserted['events'],
+            'observations': inserted['observations'],
+        }
 
     def events(self, filters):
         clauses, values = [], []
@@ -305,17 +386,23 @@ def main():
     parser.add_argument('--import-only', action='store_true')
     args = parser.parse_args()
     store = Store(args.db)
-    print(dumps(store.ingest(args.samples)))
-    if not args.import_only:
-        server = ThreadingHTTPServer((args.host, args.port), handler_for(store))
-        print(f'API: http://{args.host}:{args.port}', flush=True)
-        try:
-            server.serve_forever()
-        except KeyboardInterrupt:
-            pass
-        finally:
-            server.server_close()
+    try:
+        print(dumps(store.ingest(args.samples)), flush=True)
+    except ValueError as error:
+        print(dumps({'ok': False, 'error': str(error)}), file=sys.stderr, flush=True)
+        return 1
+    if args.import_only:
+        return 0
+    server = ThreadingHTTPServer((args.host, args.port), handler_for(store))
+    print(f'API: http://{args.host}:{args.port}', flush=True)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close()
+    return 0
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

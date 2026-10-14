@@ -2,6 +2,8 @@
 
 Base URL: `http://127.0.0.1:8010`. All responses are UTF-8 JSON.
 Start with `python backend.py --port 8010`. No additional packages required.
+The server listens on localhost by default. There is no authentication and no
+CORS configuration; treat it as a local integration API only.
 
 ## GET /events
 

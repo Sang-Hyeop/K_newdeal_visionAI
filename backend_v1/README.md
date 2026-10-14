@@ -20,8 +20,23 @@ python backend.py --port 8010
 The default input is `samples/`. SQLite is created at `data/backend.sqlite3`.
 Override inputs with `--samples PATH --db PATH`. Both `*_v1.jsonl` and the
 team sample filenames `*_v1.head.jsonl` are accepted recursively.
-Reimporting the same samples inserts no duplicates. A malformed import rolls
-back the whole transaction and reports the filename and line number.
+
+Successful import prints JSON with `ok`, `files`, `read`, `inserted`,
+`duplicates`, `conflicts`, and compatibility aliases `events` /
+`observations` (newly inserted rows only). Reimporting the same samples
+inserts no duplicates. Same `event_id` with different normalized content is a
+conflict: the first row is kept, later rows are counted under `conflicts` and
+never overwrite. Observation ids are SHA-256 of the exact UTF-8 source line
+(trailing CR/LF stripped); whitespace or key-order-only differences therefore
+create a new observation id and are stored as additional rows. Event duplicate
+detection compares normalized payloads, so key order / whitespace-only event
+rewrites of the same id count as duplicates.
+
+A malformed import rolls back the whole transaction, exits with code 1, and
+reports `path:line: error_type=...; field=...; message` without dumping the
+full source row. This local server binds to localhost by default and does not
+implement authentication or CORS. Live CCTV ingest, WebSocket push, and public
+network exposure are out of scope.
 
 ## Three GET APIs
 
@@ -64,5 +79,11 @@ a confirmed WARNING review candidate; its evidence is preserved.
 Observations are not inserted into the transition-event table. Their embedded
 events remain available in the feature-status response. This avoids treating
 every frame as a state transition. Conflicting duplicate event IDs retain the
-first event. The API binds localhost by default and is a local integration
-server; it does not implement authentication or cross-origin browser access.
+first event.
+
+`source_sha256`, `scope`, `track_ids`, `model_version`, and `config_version`
+are preserved when present in the input. The importer does not invent missing
+values. `raw_json` stores the source line after stripping only trailing `\r` /
+`\n`; interior whitespace and key order are kept as written. `evidence` stores
+the exact original JSON value for the `evidence` field; `payload` is the
+normalized API object (`allow_nan=False`).
