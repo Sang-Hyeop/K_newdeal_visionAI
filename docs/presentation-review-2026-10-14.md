@@ -32,3 +32,15 @@ python scripts/run_intrusion_review.py --output outputs/diagnostics/presentation
 현재 3_PPE_Helmet.mp4는 기존 5_PPE_Helmet.mp4와 SHA-256이 동일하다. 내부 시나리오 5의 현재 선정 v6 + 사람 주변 확대 추론 설정·모델 해시를 검증하고 실제 탐지 캐시를 재사용했다. 현재 상태 구분·이벤트 필드·화면을 다시 생성했다. 재학습은 없다.
 
 결과: outputs/reviews/3_PPE_Helmet_latest.mp4. 로그: outputs/diagnostics/presentation3_ppe_review_2026-10-14/video5/ppe/. 약 12초 전체 58개 프레임 디코딩 확인. 58개 분석 프레임 중 PPE WARNING 36, SAFE 1, UNKNOWN 21. 이는 정확도나 사람 수가 아니며, 초반 가려진 작업자와 일부 머리 미확인이 남는다.
+
+## 3번 사용자 피드백
+
+사용자가 3번 확인 후 4번 리뷰로 진행했다.
+
+## 4번: 위험구역 체류시간 리뷰 대기
+
+입력은 확정한 4_hazard_zone_dwell.mp4. 기존 v9와 원본·모델·객체 검수 프로필 해시를 검증해 실제 탐지 캐시를 재사용하고, 현재 체류 규칙·상태 표시·이벤트를 재생성했다. PPE v6 + 사람 확대 추론을 유지한다.
+
+결과: outputs/reviews/4_hazard_zone_dwell_latest.mp4. 이벤트는 outputs/diagnostics/presentation4_dwell_review_2026-10-14/video4/{zone_access,zone_dwell,ppe}/에 저장했다. 실제 지게차 없는 영상이므로 통로 체류 3초부터 최대 WARNING이며 체류만으로 CRITICAL을 만들지 않는다. 전기 제어실의 허가 ON/OFF 및 3초 주의·6초 위험 규칙을 이 영상에 적용하지 않았다.
+
+전체 92개 분석 프레임 디코딩 확인. 지게차 검출 0, 체류 WARNING 표시, 체류 CRITICAL 0을 검증했다. 일부 가림·화면 아래로 잘린 발점은 미확인으로 남는다. 결과 해시는 실행 폴더 review_verification.json에 기록했다.
