@@ -11,6 +11,8 @@
 
 ## 개발·라벨링 기준
 
+- [공통 감지 코드 구성](../src/README.md)
+
 - [감지 담당 목표와 범위](detection-goal.md)
 - [라벨링 기준](labeling-policy-v2.md)
 - [사용자 확인 설비 오라벨 수정과 재학습 과제](equipment-annotation-correction-2026-10-13.md)

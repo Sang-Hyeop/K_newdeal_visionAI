@@ -2,7 +2,11 @@
 import hashlib,json
 from types import SimpleNamespace
 import torch
-from src.ppe_recall_ensemble import iou
+def iou(a,b):
+    x=max(0,min(a[2],b[2])-max(a[0],b[0]))
+    y=max(0,min(a[3],b[3])-max(a[1],b[1]))
+    intersection=x*y
+    return intersection/max(1e-9,(a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-intersection)
 
 class ObjectRecallEnsemble:
     names={0:'person',1:'forklift'}
