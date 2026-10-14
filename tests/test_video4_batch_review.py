@@ -22,10 +22,10 @@ class Video4BatchReviewTests(unittest.TestCase):
   profile={'person_prediction_keys':[],'vehicle_prediction_keys':['base'],'maximum_vehicle_frame_area':.35,'vehicle_support_required':True,'vehicle_support_minimum_confidence':.25,'vehicle_support_minimum_iou':.5}
   kept,rejected=select_review_objects({'base':[real,fake],'vehicle_support':[real]},(600,600),profile)
   self.assertEqual(kept,[real]);self.assertEqual(rejected[0]['review_reason'],'vehicle_not_supported_by_review_model')
- def test_expanded_equipment_proposal_is_not_right_worker(self):
+ def test_moving_worker_must_not_be_removed_without_reference_evidence(self):
   p=json.loads((Path(__file__).resolve().parents[1]/'configs/video4-object-review.json').read_text())
   rows=[{'class':'person','bbox_xyxy':[137,112,244,247]},{'class':'person','bbox_xyxy':[264,9,354,223]}]
-  kept,rejected=exclude_confirmed_equipment(rows,(1080,1920),p);self.assertEqual(kept,rows[1:]);self.assertEqual(len(rejected),1)
+  kept,rejected=exclude_confirmed_equipment(rows,(1080,1920),p);self.assertEqual(kept,rows);self.assertEqual(rejected,[])
  def test_tall_person_extent_can_reject_real_head_under_default_gate(self):
   from src.ppe_person_crop import head_owner
   head=[284,94,298,117];people=[[260,6,340,230]]

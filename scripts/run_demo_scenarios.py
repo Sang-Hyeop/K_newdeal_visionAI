@@ -143,7 +143,7 @@ def main():
       if a.ppe_search=='full_recall':tiles,_=infer_tiled_heads(frame,ppe);heads+=tiles
       boxes=[v['detected_bbox_xyxy']for v in ppe_tracks];observations=infer_person_ppe(frame,boxes,ppe,full_frame_heads=heads,crop_height_fraction=1);proposals=heads+[q for o in observations for q in o['head_candidates']];heads+=refine_weak_heads(frame,proposals,ppe);proposals=heads+[q for o in observations for q in o['head_candidates']]
      if review:
-      proposals,equipment_heads=exclude_confirmed_equipment(proposals,(h,w),review);heads,_=exclude_confirmed_equipment(heads,(h,w),review);rejected_objects+=equipment_heads
+      proposals,equipment_heads=exclude_confirmed_equipment(proposals,(h,w),review,frame);heads,_=exclude_confirmed_equipment(heads,(h,w),review,frame);rejected_objects+=equipment_heads
      for i,(track,obs)in enumerate(zip(ppe_tracks,observations)):
       selected=[q for q in proposals if head_owner(q['bbox_xyxy'],boxes,h,upper_fraction=(review or {}).get('ppe_person_upper_fraction',.35))==i];classes={q['class']for q in selected}
       if review and review.get('ppe_one_head_per_class_per_person'):

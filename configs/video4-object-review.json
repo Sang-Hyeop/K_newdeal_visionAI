@@ -24,8 +24,8 @@
       "id": "user_confirmed_dark_blue_equipment",
       "bbox_normalized": [
         0.08854166666666667,
-        0.08333333333333333,
-        0.1328125,
+        0.09259259259259259,
+        0.14322916666666666,
         0.24537037037037038
       ],
       "excluded_classes": [
@@ -35,8 +35,25 @@
       ],
       "review": "User explicitly confirmed left dark blue structure is equipment on2026-10-13; right worker remains person",
       "scope": "fixed video4 camera only; not transferable to new camera views",
-      "minimum_coverage": 0.5,
-      "require_center_inside": true
+      "minimum_coverage": 0.96,
+      "require_center_inside": true,
+      "region_id": "left_equipment_only_when_reference_unchanged",
+      "empty_reference": {
+        "image_path": "configs/cameras/equipment-references/video4-left-empty.png",
+        "comparison_box_xyxy": [
+          175,
+          110,
+          235,
+          200
+        ],
+        "frame_size": [
+          1920,
+          1080
+        ],
+        "pixel_difference_threshold": 25,
+        "maximum_changed_fraction": 0.06
+      },
+      "review_reason": "current_patch_matches_user_confirmed_empty_left_equipment"
     },
     {
       "region_id": "presentation4_far_upper_left_machine",
@@ -55,6 +72,38 @@
       "require_center_inside": true,
       "review_reason": "user_confirmed_far_left_machine_2026_10_14",
       "scope": "fixed video4 camera only; user confirmed machine in screenshot at 3.34s; right worker retained"
+    },
+    {
+      "region_id": "right_equipment_after_worker_moves",
+      "bbox_normalized": [
+        0.12760416666666666,
+        0,
+        0.1875,
+        0.24537037037037038
+      ],
+      "minimum_coverage": 0.8,
+      "require_center_inside": true,
+      "excluded_classes": [
+        "person",
+        "helmeted_head",
+        "no_helmet_head"
+      ],
+      "empty_reference": {
+        "image_path": "configs/cameras/equipment-references/video4-right-empty.png",
+        "comparison_box_xyxy": [
+          245,
+          75,
+          360,
+          260
+        ],
+        "frame_size": [
+          1920,
+          1080
+        ],
+        "pixel_difference_threshold": 25,
+        "maximum_changed_fraction": 0.06
+      },
+      "review_reason": "current_patch_matches_reviewed_empty_right_equipment"
     }
   ],
   "vehicle_support_required": true,
@@ -65,5 +114,12 @@
   "ppe_one_head_per_class_per_person": true,
   "review_ground_truth": "User confirmed whole video4 contains zero actual forklifts; used for evaluation, never forced as pipeline output",
   "ppe_person_upper_fraction": 0.5,
-  "deduplicate_person_containment": true
+  "deduplicate_person_containment": true,
+  "reference_policy": "Static fixed-camera reference only. Changed patch preserves detector proposals, never fabricates a person; no source-time gates. Re-review on lighting or camera changes.",
+  "person_deduplication_options": {
+    "prefer_source": "person_adaptation",
+    "minimum_coverage": 0.65,
+    "center_tolerance": 0.4,
+    "foot_tolerance": 0.45
+  }
 }

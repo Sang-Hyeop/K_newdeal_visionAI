@@ -3,13 +3,16 @@ from .ppe_tiled_inference import iou
 from types import SimpleNamespace
 
 
-def exclude_confirmed_equipment(proposals,shape,profile):
+def exclude_confirmed_equipment(proposals,shape,profile,frame=None):
     """Exclude only user-confirmed fixed-camera equipment; never infer a general role."""
     h,w=shape;kept=[];rejected=[]
     for d in proposals:
         a=d['bbox_xyxy'];area=max(1,(a[2]-a[0])*(a[3]-a[1]));blocked=False
         for region in profile.get('confirmed_equipment_regions',[]):
             if d['class'] not in region.get('excluded_classes',[]):continue
+            if region.get('empty_reference'):
+                from .equipment_reference import matches_empty_equipment
+                if not matches_empty_equipment(frame,region):continue
             b=region['bbox_normalized'];b=[b[0]*w,b[1]*h,b[2]*w,b[3]*h]
             inter=max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]))
             if inter/area>=region.get('minimum_coverage',.8) and (not region.get('require_center_inside') or b[0]<=(a[0]+a[2])/2<=b[2] and b[1]<=(a[1]+a[3])/2<=b[3]):blocked=True;break
@@ -17,7 +20,7 @@ def exclude_confirmed_equipment(proposals,shape,profile):
         else:kept.append(d)
     return kept,rejected
 
-def select_review_objects(predictions, shape, profile):
+def select_review_objects(predictions, shape, profile, frame=None):
     height,width=shape;kept=[];rejected=[]
     people=[d for key in profile.get('person_prediction_keys',('person_coco',)) for d in predictions[key] if d['class']=='person']
     vehicles=[d for key in profile.get('vehicle_prediction_keys',('baseline','supplement','supplement_highres')) for d in predictions[key] if d['class']=='forklift']
@@ -79,9 +82,9 @@ def select_review_objects(predictions, shape, profile):
         people_kept=unique
     if profile.get('deduplicate_person_containment'):
         from .person_display_cleanup import deduplicate_people
-        people_kept,duplicates=deduplicate_people(people_kept);rejected+=duplicates
+        people_kept,duplicates=deduplicate_people(people_kept,**profile.get('person_deduplication_options',{}));rejected+=duplicates
     kept=people_kept+deduplicated
-    kept,equipment_rejected=exclude_confirmed_equipment(kept,shape,profile)
+    kept,equipment_rejected=exclude_confirmed_equipment(kept,shape,profile,frame)
     return kept,rejected+equipment_rejected
 
 def predict_review_objects(models,person_model,frame,profile):
@@ -137,7 +140,7 @@ def predict_review_objects(models,person_model,frame,profile):
                 if q[0]<=1 or q[1]<=1 or q[2]>=x1-x0-1 or q[3]>=y1-y0-1:continue
                 q=[q[0]+x0,q[1]+y0,q[2]+x0,q[3]+y0]
                 predictions['vehicle_context'].append({'class':result.names[int(item.cls.item())],'confidence':float(item.conf.item()),'bbox_xyxy':q,'model_source':'vehicle_context'})
-    return select_review_objects(predictions,frame.shape[:2],profile)
+    return select_review_objects(predictions,frame.shape[:2],profile,frame)
 
 
 def build_review_models(models,profile,model_loader):

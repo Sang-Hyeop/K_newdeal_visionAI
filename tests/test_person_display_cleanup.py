@@ -21,3 +21,14 @@ class CleanupTests(unittest.TestCase):
   with patch('src.person_display_cleanup.cv2.rectangle') as rectangles:
    draw_compact_people(np.zeros((300,400,3),np.uint8),[d],dict(zone_dwell=events,ppe=[]))
   self.assertEqual(rectangles.call_count,1)
+
+class ReviewedResidualDuplicateTests(unittest.TestCase):
+ def test_shifted_cross_model_duplicate_prefers_current_coco_body(self):
+  a=person([260,6,348,225],'person_adaptation',.45);b=person([243,96,298,231],'person_coco',.43)
+  kept,rejected=deduplicate_people([a,b],prefer_source='person_coco',minimum_coverage=.65,center_tolerance=.4,foot_tolerance=.2)
+  self.assertEqual(kept,[b]);self.assertEqual(len(rejected),1)
+
+ def test_partial_body_same_foot_region_deduplicates_for_video4(self):
+  a=person([138,103,237,243],'person_adaptation',.74);b=person([136,136,217,206],'person_coco',.32)
+  kept,_=deduplicate_people([a,b],prefer_source='person_adaptation',minimum_coverage=.65,center_tolerance=.4,foot_tolerance=.45)
+  self.assertEqual(kept,[a])

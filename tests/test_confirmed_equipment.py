@@ -9,13 +9,13 @@ class ConfirmedEquipmentTests(unittest.TestCase):
  def test_other_camera_without_confirmed_region_unchanged(self):
   p=[{'class':'person','bbox_xyxy':[180,133,217,195]}]
   self.assertEqual(exclude_confirmed_equipment(p,(1080,1920),{}),(p,[]))
- def test_current_profile_blocks_expanded_equipment_box_preserves_right_worker(self):
+ def test_reference_profile_requires_current_image_before_exclusion(self):
   import json
   from pathlib import Path
   profile=json.loads((Path(__file__).resolve().parents[1]/'configs/video4-object-review.json').read_text())
   proposals=[{'class':'person','bbox_xyxy':[181.9,111.2,266.7,250.5]},{'class':'person','bbox_xyxy':[258,68,320,218]}]
   kept,rejected=exclude_confirmed_equipment(proposals,(1080,1920),profile)
-  self.assertEqual(kept,proposals[1:]);self.assertEqual(len(rejected),1)
+  self.assertEqual(kept,proposals);self.assertEqual(rejected,[])
  def test_manual_source_does_not_regenerate_equipment_person(self):
   import json,ast
   from pathlib import Path

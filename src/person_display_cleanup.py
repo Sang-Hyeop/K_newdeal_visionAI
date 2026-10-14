@@ -2,9 +2,9 @@
 import cv2
 from .ppe_tiled_inference import iou
 
-def deduplicate_people(people):
+def deduplicate_people(people,prefer_source=None,minimum_coverage=.85,center_tolerance=.35,foot_tolerance=.15):
     kept=[];rejected=[]
-    for d in sorted(people,key=lambda q:-q['confidence']):
+    for d in sorted(people,key=lambda q:(q.get('model_source')!=prefer_source,-q['confidence'])):
         a=d['bbox_xyxy'];duplicate=False
         for other in kept:
             b=other['bbox_xyxy']
@@ -12,7 +12,7 @@ def deduplicate_people(people):
             inter=max(0,min(a[2],b[2])-max(a[0],b[0]))*max(0,min(a[3],b[3])-max(a[1],b[1]))
             area=min((a[2]-a[0])*(a[3]-a[1]),(b[2]-b[0])*(b[3]-b[1]))
             maxw=max(a[2]-a[0],b[2]-b[0]);maxh=max(a[3]-a[1],b[3]-b[1])
-            if inter/max(area,1)>=.85 and abs((a[0]+a[2]-b[0]-b[2])/2)<=.35*maxw and abs(a[3]-b[3])<=.15*maxh:
+            if inter/max(area,1)>=minimum_coverage and abs((a[0]+a[2]-b[0]-b[2])/2)<=center_tolerance*maxw and abs(a[3]-b[3])<=foot_tolerance*maxh:
                 duplicate=True;break
         if duplicate:rejected.append({**d,'review_reason':'cross_model_same_person_containment_and_footpoint','duplicate_of_bbox_xyxy':other['bbox_xyxy']})
         else:kept.append(d)
