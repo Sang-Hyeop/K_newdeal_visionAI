@@ -1,3 +1,7 @@
+## Current full-review inputs (2026-10-14)
+
+From the repository root, run `python scripts/setup_runtime.py` and then `python handoff.py backend --port 8010` to use all five current videos' logs. Python 3.11 standard library is sufficient for setup/backend; YOLO packages are only needed for new inference. See [team quickstart](../docs/github-team-quickstart.md). The original sample-only workflow below remains available without downloading runtime assets.
+
 # Dashboard Backend v1
 
 Python 3.11+ standard library only. No YOLO, model weights, training, or video inference.

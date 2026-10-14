@@ -1,3 +1,7 @@
+# GitHub 실행 자료 설치
+
+저장소 루트에서 `python scripts/setup_runtime.py`를 실행하면 GitHub Releases의 검증된 모델·최신 결과·로그를 설치합니다. [팀 시작 안내](../docs/github-team-quickstart.md)를 우선 확인하세요.
+
 # 모델 가중치
 
 현재 모델 구성은 configs/demo-object-model.json, configs/demo-ppe-model.json, configs/demo-hood-model.json에 있습니다. 실파일 7개와 SHA-256은 docs/checkpoints/2026-10-07/model-share-manifest.json을 확인합니다. 후드 v1을 유지하며 hoodie_context_v2는 미채택 실험입니다.
