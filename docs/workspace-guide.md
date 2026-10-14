@@ -1,7 +1,7 @@
 # workspace 사용 안내 — 2026-10-14
 
 ## 시작점
-현재 최종 발표는 기능별4개와 종합1개, 총5개 영상 구성이다. 실행 설정은 아직 과거1~7번 체계이므로 파일명만 보고 예전 실행 명령을 바로 쓰지 않는다. 번호·입력·ROI 갱신은 다음 단계다.
+현재 최종 발표는 기능별4개와 종합1개, 총5개 영상 구성이다. 발표 번호와 기존 내부 실행 번호는 다르다. 발표 1/3/4/5는 내부 2/5/4/7이며, 발표 2번 ROI는 별도 실행기를 쓴다. 현재 원본 메타데이터는 configs/demo-videos.json, 실행 예시는 docs/progress-2026-10-14.md를 확인한다.
 
 - 프로젝트 기준: docs/detection-goal.md
 - 이전 시연 기준과 최신 변경: docs/demo-feature-show-plan-2026-10-07.md
@@ -27,18 +27,16 @@
 - _local_archive/: 과거 복구 자료. 현재 변경 중인 원본의 유일한 백업은 삭제하지 않았다.
 
 ## 최신 결과 찾기
-- 4번 이전 통로 리뷰: outputs/diagnostics/video4_batch_review_v9/video4/demo.mp4
-- 5번 이전 PPE 리뷰: outputs/reviews/video5_review_final_2026-10-13.mp4
-- 7번 이전 종합 최신 보완: outputs/reviews/video7_review_revised_2026-10-13.mp4
-- 최신1번 로그: outputs/diagnostics/video1_proximity_safety_v4_verified/
-- 최신2번 로그: outputs/diagnostics/video2_distance_review_v7/
-- 최신3번 로그: outputs/diagnostics/video3_person_dedup_v5/
-- 최신4번 로그: outputs/diagnostics/video4_batch_review_v9/
-- 최신5번 로그: outputs/diagnostics/video5_selected_review_2026-10-13/
-- 최신7번 로그: outputs/diagnostics/video7_batch_review_v7_final/
 
-위 번호는 기존1~7번 리뷰 번호다. 현재 발표번호1~5와 혼동하지 않는다.
-전기 제어실 체류 초안은 메인 채팅 outputs에 있으며 workspace 통합 전이다.
+아래 번호는 최종 발표 1~5번이다. 모두 workspace의 outputs/reviews/에 보관한다.
+
+- 1번: outputs/reviews/1_forklift_worker_collision_risk_latest.mp4
+- 2번: outputs/reviews/2_restricted_zone_intrusion_latest.mp4
+- 3번: outputs/reviews/3_PPE_Helmet_latest.mp4
+- 4번: outputs/reviews/4_hazard_zone_dwell_worker_fixed.mp4
+- 5번: outputs/reviews/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4
+
+5번 최신 실행 로그는 outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7/이다. `video7`은 기존 내부 번호다. 이전 리뷰와 latest 파일을 혼동하지 않도록 docs/progress-2026-10-14.md의 현재 결과를 우선한다. 모델·생성 결과는 Git 제외이며 원본 MP4 5개와 코드·설정·검증 기록을 Git으로 공유한다.
 
 ## 현재 모델과 실행 구조
 - 기존 통합 진입점: scripts/run_demo_scenarios.py

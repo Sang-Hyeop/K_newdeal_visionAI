@@ -10,18 +10,21 @@
         "person_forklift_proximity"
       ],
       "camera_config": "configs/cameras/forward-proximity.json",
-      "distance_meters": null
+      "distance_meters": null,
+      "review_enabled": false,
+      "exclusion_reason": "2026-10-14 final presentation uses five selected inputs; historical source removed from active data/videos"
     },
     {
       "video_number": 2,
-      "source_name": "2_forklift_back.mp4",
+      "source_name": "1_forklift_worker_collision_risk.mp4",
       "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
       "ppe_enabled": true,
       "primary_features": [
         "person_forklift_proximity"
       ],
       "camera_config": "configs/cameras/reverse-proximity.json",
-      "distance_meters": null
+      "distance_meters": null,
+      "presentation_video_number": 1
     },
     {
       "video_number": 3,
@@ -32,7 +35,9 @@
         "forklift_forklift_proximity"
       ],
       "camera_config": "configs/cameras/forklift-pair-review.json",
-      "distance_meters": null
+      "distance_meters": null,
+      "review_enabled": false,
+      "exclusion_reason": "2026-10-14 final presentation uses five selected inputs; historical source removed from active data/videos"
     },
     {
       "video_number": 4,
@@ -48,14 +53,15 @@
     },
     {
       "video_number": 5,
-      "source_name": "5_PPE_Helmet.mp4",
+      "source_name": "3_PPE_Helmet.mp4",
       "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
       "ppe_enabled": true,
       "primary_features": [
         "ppe"
       ],
       "camera_config": "configs/cameras/ppe-warehouse-review.json",
-      "distance_meters": null
+      "distance_meters": null,
+      "presentation_video_number": 3
     },
     {
       "video_number": 6,
