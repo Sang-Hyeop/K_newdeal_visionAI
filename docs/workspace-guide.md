@@ -36,7 +36,7 @@
 - 4번: outputs/reviews/4_hazard_zone_dwell_worker_fixed.mp4
 - 5번: outputs/reviews/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4
 
-5번 최신 실행 로그는 outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7/이다. `video7`은 기존 내부 번호다. 이전 리뷰와 latest 파일을 혼동하지 않도록 docs/progress-2026-10-14.md의 현재 결과를 우선한다. 모델·생성 결과는 Git 제외이며 원본 MP4 5개와 코드·설정·검증 기록을 Git으로 공유한다.
+5번 최신 실행 로그는 outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7/이다. `video7`은 기존 내부 번호다. 이전 리뷰와 latest 파일을 혼동하지 않도록 docs/progress-2026-10-14.md의 현재 결과를 우선한다. 모델·생성 결과는 Git 제외지만 GitHub Releases에서 `python scripts/setup_runtime.py`로 받을 수 있다. 원본 MP4 5개와 코드·설정·검증 기록은 Git으로 공유한다. 최신 팀 시작 방법은 docs/github-team-quickstart.md를 우선한다.
 
 ## 현재 모델과 실행 구조
 - 기존 통합 진입점: scripts/run_demo_scenarios.py

@@ -2,6 +2,24 @@
 
 작업자·지게차·안전모를 검출하고, 근접 위험·구역 침범·체류를 판정해 이벤트와 관제 화면으로 연결하는 팀 프로젝트입니다. 최종 발표는 기능별 4개와 종합 1개, 총 5개 영상 구성입니다. 화면상 거리는 미터 거리가 아니며 독립 현장 정확도와 전 프레임 미탐 0을 증명한 상태는 아닙니다.
 
+## 팀원이 처음 받았을 때
+
+Python 3.11을 준비하고 GitHub에서 코드와 실행 자료를 받습니다. 개인 ZIP 전달 없이 진행할 수 있습니다.
+
+```sh
+git clone https://github.com/Sang-Hyeop/K_newdeal_visionAI.git
+cd K_newdeal_visionAI
+python scripts/setup_runtime.py
+python handoff.py check
+```
+
+코드·설정·원본 5개는 Git, 모델 6개·최신 결과 5개·전체 이벤트 로그·조회 DB는 [GitHub Releases](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-14)로 제공합니다. 설치 스크립트가 약 179MB의 자료를 검증해 프로젝트 안에 배치합니다.
+
+- **백엔드/대시보드:** `python handoff.py backend --port 8010` (표준 라이브러리만 필요)
+- **감지:** `python -m pip install -r requirements-runtime.txt` → `python handoff.py run --video 1`
+- **발표/검수:** `outputs/reviews/`의 MP4 재생
+- [역할별 실행·로그·검증 안내](docs/github-team-quickstart.md)
+
 ## 시작하기
 
 - [10/14 작업 정리·최신 결과·발표 번호별 실행](docs/progress-2026-10-14.md)
@@ -21,7 +39,7 @@ python -m pip install -r requirements.txt
 python scripts/run_demo_scenarios.py --videos 2 --ppe-final --sample-fps 5 --output outputs/diagnostics/beta_presentation1
 ```
 
-위 명령은 최종 발표 1번 영상을 기존 내부 시나리오 2로 실행합니다. 발표 3/4/5는 내부 5/4/7이며 발표 2번 ROI는 `scripts/run_intrusion_review.py`를 사용합니다. 필요한 모델은 별도 가중치 패키지로 `models/`에 준비하고, 출력은 아직 없는 새 디렉터리를 지정합니다. [현재 5번 차량 복구·탑승자 실험 재현](docs/video5-vehicle-rider-recovery-2026-10-14.md)은 별도 추가 추론과 명시적 실험 옵션을 사용합니다.
+위 명령은 최종 발표 1번 영상을 기존 내부 시나리오 2로 실행합니다. 발표 3/4/5는 내부 5/4/7이며 발표 2번 ROI는 `scripts/run_intrusion_review.py`를 사용합니다. 필요한 모델은 `python scripts/setup_runtime.py`로 `models/`에 설치하고, 출력은 아직 없는 새 디렉터리를 지정합니다. [현재 5번 차량 복구·탑승자 실험 재현](docs/video5-vehicle-rider-recovery-2026-10-14.md)은 별도 추가 추론과 명시적 실험 옵션을 사용합니다.
 
 최종 PPE는 `models/ppe_final/ppe_helmet_v6_960.pt`입니다. 객체 기본 모델과 카메라별 보완 모델은 `configs/`에 정의돼 있습니다. 여러 모델을 연결하는 구조이며 단일 `.pt` 통합이 완료된 상태는 아닙니다.
 
@@ -40,7 +58,7 @@ python scripts/run_demo_scenarios.py --videos 2 --ppe-final --sample-fps 5 --out
 - `outputs/handoff/`: 팀 연동 전달자료.
 - `docs/history/`, `docs/checkpoints/`: 과거 해설·작은 검증 증거.
 
-생성 영상·대용량 로그·학습 데이터·가중치는 Git과 별도로 공유합니다. 최신 파일명은 [작업 정리](docs/progress-2026-10-14.md)를 확인합니다.
+모델·최신 생성 영상·현재 전체 로그는 GitHub Releases에서 설치합니다. 재학습용 데이터셋과 과거 실험 전체는 별도로 관리합니다. 최신 파일명은 [작업 정리](docs/progress-2026-10-14.md)를 확인합니다.
 
 ## 검증과 협업
 

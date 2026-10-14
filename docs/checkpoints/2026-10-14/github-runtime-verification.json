@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "status": "passed",
+  "source_download": "git clone --depth 1 --single-branch --branch chore/github-runtime-handoff https://github.com/Sang-Hyeop/K_newdeal_visionAI.git",
+  "checkout_commit": "030b836934fd8b373eaf105bc3f975f489b824f6",
+  "asset_download_url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/download/runtime-2026-10-14/siseon-runtime-2026-10-14.zip",
+  "asset_sha256": "e7abb45e816069db231f0e783e75703e990903026568b1b76b248f8e466d9b0d",
+  "asset_bytes": 179303541,
+  "installer_downloaded_from_public_github": true,
+  "installed_files": 111,
+  "input_video_hashes_verified": 5,
+  "cpu_model_inference_verified": 6,
+  "ppe_helper_verified": true,
+  "detection_tests_passed": 252,
+  "backend_tests_passed": 8,
+  "current_log_database_counts": {
+    "events": 6139,
+    "observations": 4142
+  },
+  "presentation_videos_in_database": 5,
+  "cached_presentation5_execution_smoke_test": true,
+  "max_seconds_for_execution_smoke": 0.01,
+  "limitations": [
+    "Python dependencies supplied by the existing safety environment during validation; no fresh OS/Python installation tested",
+    "Windows full execution not tested",
+    "Training datasets are not part of runtime release",
+    "No new full-video accuracy evaluation"
+  ]
+}

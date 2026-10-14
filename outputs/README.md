@@ -1,3 +1,7 @@
+# GitHub 실행 자료 설치
+
+저장소 루트에서 `python scripts/setup_runtime.py`를 실행하면 GitHub Releases의 검증된 모델·최신 결과·로그를 설치합니다. [팀 시작 안내](../docs/github-team-quickstart.md)를 우선 확인하세요.
+
 # 실행 결과
 
 최신 재생용 리뷰는 reviews/, 검출·추적·판정 근거는 diagnostics/, 발표 사진은 presentation/, 팀 연동 자료는 handoff/에 있다.

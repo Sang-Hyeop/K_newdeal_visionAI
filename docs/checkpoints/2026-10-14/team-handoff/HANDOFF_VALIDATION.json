@@ -1,0 +1,48 @@
+{
+  "status": "passed_on_prepared_handoff_copy",
+  "date": "2026-10-14",
+  "source_commit": "acc38fa1459d287de1a4bd7949ffd43c4a8c5e32",
+  "detection_tests_passed": 248,
+  "backend_tests_passed": 8,
+  "model_weights_loaded_and_first_frame_cpu_inference": 6,
+  "ppe_duplicate_helper_loaded": true,
+  "cached_review_execution_smoke_tests": [
+    1,
+    3,
+    4,
+    5
+  ],
+  "fresh_vehicle_recovery_pipeline_smoke_test": {
+    "presentation_video": 5,
+    "max_seconds": 0.01,
+    "note": "One sampled frame verifies the fresh inference → recovery → review → role/geometry pipeline; not a full new accuracy evaluation."
+  },
+  "source_videos": 5,
+  "latest_review_videos": 5,
+  "backend": {
+    "database_counts": {
+      "events": 6139,
+      "observations": 4142
+    },
+    "videos": [
+      "1_forklift_worker_collision_risk.mp4",
+      "2_restricted_zone_intrusion.mp4",
+      "3_PPE_Helmet.mp4",
+      "4_hazard_zone_dwell.mp4",
+      "5_Logistics Warehouse.mp4"
+    ],
+    "latest_status_streams": 12,
+    "http_get_verified": [
+      "/events?limit=5",
+      "/events/{event_id}",
+      "/feature-status"
+    ],
+    "reimport_inserted": {
+      "events": 0,
+      "observations": 0
+    },
+    "sqlite_integrity": "ok"
+  },
+  "full_video_accuracy_claim": false,
+  "platform_tested": "macOS, safety Python 3.11.15; Windows launcher provided but Windows runtime not executed"
+}
