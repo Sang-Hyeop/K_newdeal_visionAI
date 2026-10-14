@@ -1,0 +1,171 @@
+{
+  "version": "1.0",
+  "language": "ko",
+  "encoding": "utf-8",
+  "scope": "display_only_labels_for_dashboard_and_csv_export",
+  "api_keeps_english_codes": true,
+  "agreement_status": "pending_review",
+  "notes": {
+    "forklift_proximity": "Producer may emit forklift_proximity before normalize; backend_v1 ingest accepts only proximity, zone_access, zone_dwell, ppe, status.",
+    "region_approach": "Listed in detection-output-contract for zone_access; presentation1-5 logs currently contain outside/inside/unknown only.",
+    "zones": "Demo ROI display names; not verified legal restricted zones.",
+    "cameras": "demo-video N is legacy scenario id, not presentation number."
+  },
+  "event_types": {
+    "proximity": "지게차·작업자 근접 위험",
+    "zone_access": "구역 접근·진입",
+    "zone_dwell": "구역 체류",
+    "ppe": "안전모 착용 상태",
+    "status": "상태 정보"
+  },
+  "severities": {
+    "SAFE": "안전",
+    "WARNING": "주의",
+    "CRITICAL": "위험",
+    "null": "미확인"
+  },
+  "observation_statuses": {
+    "confirmed": "확인됨",
+    "unconfirmed": "미확인"
+  },
+  "assessment_states": {
+    "observed": "관측됨",
+    "pending": "판정 대기",
+    "unassessable": "판단 불가",
+    "observation_lost": "관측 끊김",
+    "no_observed_subjects": "관측 대상 없음"
+  },
+  "display_states": {
+    "SAFE": "안전",
+    "WARNING": "주의",
+    "CRITICAL": "위험",
+    "UNKNOWN": "미확인"
+  },
+  "notification_categories": {
+    "risk": "위험 알림",
+    "status": "상태 알림"
+  },
+  "global_safety_statuses": {
+    "not_evaluated": "평가하지 않음"
+  },
+  "regions": {
+    "outside": "구역 밖",
+    "approach": "구역 접근",
+    "inside": "구역 내부",
+    "unknown": "미확인"
+  },
+  "ppe_states": {
+    "helmet_detected": "안전모 착용 감지",
+    "no_helmet_candidate": "안전모 미착용 감지",
+    "conflicting_evidence": "안전모 미착용 감지",
+    "unknown": "미확인"
+  },
+  "violation_statuses": {
+    "not_verified": "위험"
+  },
+  "object_classes": {
+    "person": "작업자",
+    "forklift": "지게차",
+    "helmeted_head": "안전모 착용 머리",
+    "no_helmet_head": "안전모 미착용 머리"
+  },
+  "cameras": {
+    "demo-video2": "1번 영상 카메라",
+    "presentation2-robot-intrusion": "2번 영상 카메라",
+    "demo-video5": "3번 영상 카메라",
+    "demo-video4": "4번 영상 카메라",
+    "demo-video7": "5번 영상 카메라"
+  },
+  "zones": {
+    "yellow_line_vehicle_lane": "안전 통로(시연 ROI)",
+    "robot-red-floor": "로봇 작업구역(시연 ROI)",
+    "warehouse_lane_outside_safe_boxes": "안전 통로(시연 ROI)"
+  },
+  "videos": {
+    "1_forklift_worker_collision_risk.mp4": {
+      "presentation_video_number": 1,
+      "label": "1. 지게차–작업자 근접"
+    },
+    "2_restricted_zone_intrusion.mp4": {
+      "presentation_video_number": 2,
+      "label": "2. 제한구역 접근"
+    },
+    "3_PPE_Helmet.mp4": {
+      "presentation_video_number": 3,
+      "label": "3. 안전모 착용 상태"
+    },
+    "4_hazard_zone_dwell.mp4": {
+      "presentation_video_number": 4,
+      "label": "4. 위험구역 체류"
+    },
+    "5_Logistics Warehouse.mp4": {
+      "presentation_video_number": 5,
+      "label": "5. 물류창고 종합"
+    }
+  },
+  "columns": {
+    "schema_version": "스키마 버전",
+    "event_id": "이벤트 ID",
+    "camera_id": "카메라 ID",
+    "video": "영상",
+    "source_sha256": "원본 영상 해시",
+    "timestamp_seconds": "영상 시간",
+    "event_type": "이벤트 유형",
+    "severity": "심각도",
+    "observation_status": "관측 상태",
+    "assessment_state": "판정 상태",
+    "alert_eligible": "위험 알림 대상 여부",
+    "notification_category": "알림 분류",
+    "status_reason": "상태 사유",
+    "track_ids": "추적 ID",
+    "evidence": "판정 근거",
+    "model_version": "모델 버전",
+    "config_version": "설정 버전",
+    "scope": "판정 범위",
+    "roi_id": "구역 ID",
+    "observed_dwell_seconds": "관측 체류시간",
+    "ppe_state": "보호구 상태",
+    "violation_status": "위반 확인 상태",
+    "distance_meters": "미터 거리",
+    "region": "구역 위치"
+  },
+  "csv_header_order": [
+    "schema_version",
+    "event_id",
+    "camera_id",
+    "camera_label",
+    "video",
+    "video_label",
+    "source_sha256",
+    "timestamp_seconds",
+    "event_type",
+    "event_type_label",
+    "severity",
+    "severity_label",
+    "observation_status",
+    "observation_status_label",
+    "assessment_state",
+    "assessment_state_label",
+    "alert_eligible",
+    "notification_category",
+    "notification_category_label",
+    "status_reason",
+    "track_ids",
+    "roi_id",
+    "zone_label",
+    "observed_dwell_seconds",
+    "ppe_state",
+    "ppe_state_label",
+    "violation_status",
+    "violation_status_label",
+    "evidence",
+    "model_version",
+    "config_version",
+    "scope"
+  ],
+  "null_display": "미확인",
+  "unknown_prefix": "알 수 없음",
+  "empty_events_message": "조회 결과 없음",
+  "empty_observations_message": "관측 없음",
+  "meters_not_provided": "미제공"
+}
