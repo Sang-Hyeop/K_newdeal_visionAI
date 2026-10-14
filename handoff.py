@@ -71,7 +71,13 @@ def main():
     if a.action=='check':return check(a.models)
     if a.action=='list':
         index=json.loads((ROOT/'configs/team-runtime-index.json').read_text(encoding='utf-8'))
-        for row in index['videos']:print('Video',row['presentation_video_number'],'\n ',ROOT/row['review_video'],'\n ',ROOT/row['event_root'])
+        for row in index['videos']:
+            print('Video',row['presentation_video_number'], '\n Command:',row['entrypoint'])
+            for key in ['source_video','camera_config','object_review_profile','review_video','event_root']:
+                if row.get(key):print(' ',key+':',ROOT/row[key])
+            for path in row['implementation']:print('  implementation:',ROOT/path)
+            for path in row['models']:print('  model:',ROOT/path)
+            print('  mode:',row['mode'])
     elif a.action=='run':run_video(a.video,a.fresh,a.max_seconds)
     elif a.action=='backend':call('backend_v1/backend.py','--samples','outputs/events','--db','outputs/backend/full_review.sqlite3','--port',a.port,*(['--import-only']if a.import_only else[]))
     elif a.action=='test':

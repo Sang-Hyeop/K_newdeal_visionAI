@@ -1,9 +1,12 @@
-# GitHub 실행 자료 설치
+# 현재 발표용 모델 6개
 
-저장소 루트에서 `python scripts/setup_runtime.py`를 실행하면 GitHub Releases의 검증된 모델·최신 결과·로그를 설치합니다. [팀 시작 안내](../docs/github-team-quickstart.md)를 우선 확인하세요.
+설치: `python scripts/setup_runtime.py` / 검증: `python handoff.py check --models`.
 
-# 모델 가중치
+- `pilot_v16_related/person_forklift.pt`: 사람·지게차 기본.
+- `demo_object_adaptation_v1/best.pt`: 시연 장면 보완.
+- `pretrained/yolo26n.pt`: 사람 검출.
+- `ppe_final/ppe_helmet_v6_960.pt`: 현재 최종 PPE. 같은 폴더의 config.json과 ppe_duplicate_filter.py도 필요합니다.
+- `experiments/forklift_real_context_v2/weights/best.pt`: 현재 차량 검출 보완. experiments라는 폴더명과 관계없이 현재 발표 영상의 객체 검수 설정에서 사용하는 모델입니다.
+- `nvidia_object_adaptation_v1/best.pt`: 차량 교차 확인.
 
-현재 모델 구성은 configs/demo-object-model.json, configs/demo-ppe-model.json, configs/demo-hood-model.json에 있습니다. 실파일 7개와 SHA-256은 docs/checkpoints/2026-10-07/model-share-manifest.json을 확인합니다. 후드 v1을 유지하며 hoodie_context_v2는 미채택 실험입니다.
-
-.pt는 Git에서 제외되고 별도로 공유합니다. scripts/pack_demo_models.py로 채택된 모델을 묶습니다. 이전 모델은 성능 비교·복구용으로 보존하며 자동 삭제하지 않습니다.
+이전 모델은 삭제했습니다. 정확한 영상별 모델 목록과 해시는 configs/team-runtime-index.json 및 configs/github-runtime.json에 있습니다. 가중치는 GitHub Releases에서 배포하며 Git 이력에는 포함하지 않습니다.

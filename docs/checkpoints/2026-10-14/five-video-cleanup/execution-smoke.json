@@ -1,0 +1,38 @@
+[
+  {
+    "video": 1,
+    "mode": "cached_one_sample",
+    "returncode": 0,
+    "output": "RUN: scripts/run_demo_scenarios.py --videos 2 --ppe-final --sample-fps 5 --reuse-run outputs/diagnostics/presentation1_equipment_corrected_2026-10-14 --reuse-objects --max-seconds 0.01 --output outputs/handoff_runs/presentation1_20261014_164635_177830\nvideo2 complete\nResult: /Users/sanghyeopkim/Desktop/workspace/outputs/handoff_runs/presentation1_20261014_164635_177830\n"
+  },
+  {
+    "video": 2,
+    "mode": "full_fresh",
+    "returncode": 0,
+    "output": "c820a0\",\n    \"config_version\": \"f2cf07c240abc8458cca6762a30946165991a2db7a14f4321d2fc8ee784beb00\"\n  },\n  \"model_hashes\": {\n    \"models/pretrained/yolo26n.pt\": \"9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef\",\n    \"models/ppe_final/ppe_helmet_v6_960.pt\": \"6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b\"\n  },\n  \"camera_config\": {\n    \"camera_id\": \"presentation2-robot-intrusion\",\n    \"source_name\": \"2_restricted_zone_intrusion.mp4\",\n    \"source_sha256\": \"f656df46a9f5943b06a29a3adbce03da974c087c3af70692a695a1b1b7bb79b9\",\n    \"polygon_normalized\": [\n      [\n        0.3,\n        0.42\n      ],\n      [\n        0.72,\n        0.42\n      ],\n      [\n        0.75,\n        0.91\n      ],\n      [\n        0.265,\n        0.93\n      ]\n    ],\n    \"roi_id\": \"robot-red-floor\",\n    \"roi_review_status\": \"draft_from_visible_red_floor_requires_user_review\",\n    \"approach_margin_ratio\": 0.025,\n    \"max_gap_seconds\": 0.6,\n    \"person_weights\": \"models/pretrained/yolo26n.pt\",\n    \"person_imgsz\": 1280,\n    \"person_confidence\": 0.25,\n    \"ppe_final_config\": \"configs/ppe-final-model.json\",\n    \"entry_policy\": \"confirmed_current_person_bottom_center_inside_immediate_critical\",\n    \"source_type\": \"AI_generated_demo_not_independent_CCTV_validation\"\n  },\n  \"first_critical_seconds\": 5.416666666666667,\n  \"critical_sample_count\": 32,\n  \"review_status\": \"awaiting_user_review\"\n}\nResult: /Users/sanghyeopkim/Desktop/workspace/outputs/handoff_runs/presentation2_20261014_164636_612757\n"
+  },
+  {
+    "video": 3,
+    "mode": "cached_one_sample",
+    "returncode": 0,
+    "output": "RUN: scripts/run_demo_scenarios.py --videos 5 --ppe-final --sample-fps 5 --reuse-run outputs/diagnostics/presentation3_ppe_review_2026-10-14 --reuse-objects --max-seconds 0.01 --output outputs/handoff_runs/presentation3_20261014_164652_693277\nvideo5 complete\nResult: /Users/sanghyeopkim/Desktop/workspace/outputs/handoff_runs/presentation3_20261014_164652_693277\n"
+  },
+  {
+    "video": 4,
+    "mode": "cached_one_sample",
+    "returncode": 0,
+    "output": "RUN: scripts/run_demo_scenarios.py --videos 4 --ppe-final --sample-fps 5 --reuse-run outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14 --reuse-objects --max-seconds 0.01 --output outputs/handoff_runs/presentation4_20261014_164654_044512\nvideo4 complete\nResult: /Users/sanghyeopkim/Desktop/workspace/outputs/handoff_runs/presentation4_20261014_164654_044512\n"
+  },
+  {
+    "video": 5,
+    "mode": "cached_one_sample",
+    "returncode": 0,
+    "output": "RUN: scripts/run_demo_scenarios.py --videos 7 --ppe-final --sample-fps 5 --reuse-run outputs/diagnostics/presentation5_vehicle_recovery_review_cache_v2_2026-10-14 --reuse-objects --proximity-geometry bottom_center --temporal-riders --max-seconds 0.01 --output outputs/handoff_runs/presentation5_20261014_164655_434826\nvideo7 complete\nResult: /Users/sanghyeopkim/Desktop/workspace/outputs/handoff_runs/presentation5_20261014_164655_434826\n"
+  },
+  {
+    "video": 5,
+    "mode": "fresh_one_sample_full_recovery_pipeline",
+    "returncode": 0,
+    "output": "RUN: scripts/run_demo_scenarios.py --videos 7 --ppe-final --sample-fps 5 --proximity-geometry bottom_center --max-seconds 0.01 --output outputs/handoff_runs/presentation5_20261014_164657_903763/baseline\nvideo7 complete\nRUN: scripts/recover_vehicle_cache.py --input outputs/handoff_runs/presentation5_20261014_164657_903763/baseline/video7 --output outputs/handoff_runs/presentation5_20261014_164657_903763/candidates/video7 --candidates-only\nRUN: scripts/review_vehicle_recovery_cache.py --input outputs/handoff_runs/presentation5_20261014_164657_903763/candidates/video7 --output outputs/handoff_runs/presentation5_20261014_164657_903763/reviewed_cache/video7\n1 0 0\nRUN: scripts/run_demo_scenarios.py --videos 7 --ppe-final --sample-fps 5 --reuse-run outputs/handoff_runs/presentation5_20261014_164657_903763/reviewed_cache --reuse-objects --proximity-geometry bottom_center --temporal-riders --max-seconds 0.01 --output outputs/handoff_runs/presentation5_20261014_164657_903763/result\nvideo7 complete\nResult: /Users/sanghyeopkim/Desktop/workspace/outputs/handoff_runs/presentation5_20261014_164657_903763\n"
+  }
+]

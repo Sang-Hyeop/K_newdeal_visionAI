@@ -1,3 +1,7 @@
-# 설정 시작점
+# 현재 설정
 
-현재 전체 시연은 demo-scenarios.json, demo-object-model.json, demo-ppe-model.json, ppe-recall-review-policy.json을 읽습니다. 후드 옵션은 demo-hood-model.json을 사용합니다. cameras/는 카메라별 ROI·거리 판정입니다. review/는 학습·검수·평가 프로토콜로, 전체 실행 필수 파일이 아닙니다. selected-object-model.json은 기본 모델 선정 기록이며 demo-object-model.json의 시연 보완 모델 구성과 구분합니다.
+발표 번호 1~5의 연결 기준은 team-runtime-index.json입니다. demo-videos.json은 원본 해시, github-runtime.json은 배포 자료 해시입니다.
+
+카메라별 ROI·판정은 cameras/, 객체 후처리는 video*-object-review.json, 최종 PPE 경로는 demo-ppe-model.json 및 ppe-final-model.json입니다. demo-scenarios.json과 video*-object-review.json의 번호는 과거 내부 번호이므로 직접 실행 번호로 사용하지 않습니다. 실행은 handoff.py로 통일합니다.
+
+review/demo-adaptation-v1.json과 review/full-scene-v1.json은 정답 검증에서 참조합니다. 제거하지 않습니다. 일부 라이브러리의 선택 기능에 대한 설정은 남지만 현재 확정 실행 경로는 team-runtime-index.json만 기준으로 합니다.
