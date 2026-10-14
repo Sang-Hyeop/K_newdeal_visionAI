@@ -44,3 +44,11 @@ python scripts/run_intrusion_review.py --output outputs/diagnostics/presentation
 결과: outputs/reviews/4_hazard_zone_dwell_latest.mp4. 이벤트는 outputs/diagnostics/presentation4_dwell_review_2026-10-14/video4/{zone_access,zone_dwell,ppe}/에 저장했다. 실제 지게차 없는 영상이므로 통로 체류 3초부터 최대 WARNING이며 체류만으로 CRITICAL을 만들지 않는다. 전기 제어실의 허가 ON/OFF 및 3초 주의·6초 위험 규칙을 이 영상에 적용하지 않았다.
 
 전체 92개 분석 프레임 디코딩 확인. 지게차 검출 0, 체류 WARNING 표시, 체류 CRITICAL 0을 검증했다. 일부 가림·화면 아래로 잘린 발점은 미확인으로 남는다. 결과 해시는 실행 폴더 review_verification.json에 기록했다.
+
+## 4번 추가 보완: 왼쪽 위 가장자리 기계
+
+사용자가 약 3.34초 왼쪽 위 가장자리 PERSON 0.42를 실제 기계라고 확인했다. 기존 제외 영역과 별도 위치여서 새 카메라별 고정 설비 영역을 configs/video4-object-review.json에 추가했다. 해당 설비에 대부분 포함되는 사람·머리 후보를 추적·PPE 연결 이전에 제외하고 진단 사유를 남긴다. 시간 지정 규칙 없이 영상 전체에 적용한다. 바로 오른쪽 작업자와 부분적으로 걸친 일반 작업자는 제외하지 않는 회귀 검사를 추가했다.
+
+이 보완은 해당 고정 카메라 후처리이며 재학습은 아니다. 카메라나 설비 위치가 바뀌거나 사람이 설비 앞을 가리는 경우 영역 재검수가 필요하다. 기존 통로 ROI와 3초 주의 기준은 유지한다. 검증 결과는 outputs/diagnostics/presentation4_equipment_corrected_2026-10-14/video4/review_verification.json에 기록한다. 평가 항목 3·6·8에 기여한다.
+
+4번 보완 검증: 기계 PERSON 오탐 6개 제거, 그 외 객체 검출 339개는 이전과 전부 일치. 3.34초 오른쪽 실제 작업자 유지 확인. 지게차 검출 0, 체류 CRITICAL 0 유지. 테스트 212개·전체 92프레임 디코딩 통과. 최신 재생 경로 outputs/reviews/4_hazard_zone_dwell_latest.mp4를 새 결과로 교체했다.

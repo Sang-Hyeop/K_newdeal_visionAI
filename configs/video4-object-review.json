@@ -37,6 +37,24 @@
       "scope": "fixed video4 camera only; not transferable to new camera views",
       "minimum_coverage": 0.5,
       "require_center_inside": true
+    },
+    {
+      "region_id": "presentation4_far_upper_left_machine",
+      "bbox_normalized": [
+        0,
+        0.055,
+        0.055,
+        0.26
+      ],
+      "excluded_classes": [
+        "person",
+        "helmeted_head",
+        "no_helmet_head"
+      ],
+      "minimum_coverage": 0.85,
+      "require_center_inside": true,
+      "review_reason": "user_confirmed_far_left_machine_2026_10_14",
+      "scope": "fixed video4 camera only; user confirmed machine in screenshot at 3.34s; right worker retained"
     }
   ],
   "vehicle_support_required": true,
