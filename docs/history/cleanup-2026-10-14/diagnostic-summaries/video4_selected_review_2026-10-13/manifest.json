@@ -1,0 +1,113 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/4_hazard_zone_dwell.mp4",
+    "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+    "video_number": 4,
+    "samples": 92,
+    "processed_fps": 4.795204795204795,
+    "ppe_enabled": true,
+    "ppe_final_selected": true,
+    "review_max_seconds": null,
+    "forklift_geometric_association": false,
+    "ppe_cache_reused": false,
+    "all_real_inference_reused_from": null,
+    "ppe_search": "full_recall",
+    "features": {
+      "zone_access": {
+        "SAFE": 12,
+        "WARNING": 0,
+        "CRITICAL": 0,
+        "UNKNOWN": 80
+      },
+      "zone_dwell": {
+        "SAFE": 28,
+        "WARNING": 64,
+        "CRITICAL": 0,
+        "UNKNOWN": 0
+      },
+      "ppe": {
+        "SAFE": 0,
+        "WARNING": 90,
+        "CRITICAL": 0,
+        "UNKNOWN": 2
+      }
+    },
+    "context": {
+      "camera_id": "demo-video4",
+      "video": "4_hazard_zone_dwell.mp4",
+      "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "model_version": "821841aeb2b671baa673911b8e44807c80dbfaa22a758c562778633b11b62b39",
+      "config_version": "16b958666187c780e3e5a4569454444688adb95ca6a38250c83f01b5c9d276ca"
+    },
+    "model_hashes": {
+      "models/pilot_v16_related/person_forklift.pt": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "models/demo_object_adaptation_v1/best.pt": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+      "models/pretrained/yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "models/ppe_final/ppe_helmet_v6_960.pt": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b"
+    },
+    "camera_config": {
+      "camera_id": "dwell-demo",
+      "source_name": "4_hazard_zone_dwell.mp4",
+      "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "roi_id": "yellow_line_vehicle_lane",
+      "roi_purpose": "user_defined_forklift_lane_pedestrian_conditional_warning",
+      "polygon_normalized": [
+        [
+          0.65625,
+          0
+        ],
+        [
+          0.728125,
+          0
+        ],
+        [
+          0.909375,
+          1
+        ],
+        [
+          0.5208333333333334,
+          1
+        ],
+        [
+          0.540625,
+          0.8703703703703703
+        ],
+        [
+          0.5739583333333333,
+          0.6481481481481481
+        ],
+        [
+          0.603125,
+          0.4444444444444444
+        ],
+        [
+          0.6322916666666667,
+          0.18518518518518517
+        ]
+      ],
+      "safe_seconds": 3.0,
+      "critical_seconds": 5.0,
+      "lane_policy": "timed",
+      "max_gap_seconds": 1.0,
+      "anchor": "bbox_bottom_center_proxy",
+      "roi_review_status": "business_rule_confirmed_by_user; floor_geometry_manually_reviewed",
+      "vehicle_conditioned": true,
+      "vehicle_missing_hold_seconds": 1.0,
+      "access_enabled": true,
+      "approach_margin_ratio": 0.005,
+      "policy_version": "user_vehicle_lane_3_seconds_v3",
+      "roi_alpha_safe": 0.15,
+      "roi_alpha_alert": 0.2,
+      "vehicle_presence_scope": "same_yellow_line_vehicle_lane",
+      "vehicle_critical_seconds": 3
+    },
+    "limitations": [
+      "Sampled frames; zero misses not proven for unseen scenes",
+      "No calibrated meter distance",
+      "Hood-only follows user bare-head labeling policy; missing or uncertain detections remain UNKNOWN",
+      "PPE WARNING is review candidate, not verified violation",
+      "ROI floor proxies and geometry require review; scene cuts disable ROI",
+      "Hood auxiliary is experimental; Normal never means PPE safe"
+    ]
+  }
+]

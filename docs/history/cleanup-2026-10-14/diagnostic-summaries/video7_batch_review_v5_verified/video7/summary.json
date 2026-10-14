@@ -1,0 +1,245 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/7_Logistics Warehouse.mp4",
+  "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+  "video_number": 7,
+  "samples": 870,
+  "processed_fps": 4.8,
+  "ppe_enabled": true,
+  "ppe_final_selected": true,
+  "review_max_seconds": null,
+  "forklift_geometric_association": false,
+  "ppe_cache_reused": true,
+  "all_real_inference_reused_from": "outputs/diagnostics/video7_batch_review_v3_full",
+  "ppe_reused_from": "outputs/diagnostics/video7_batch_review_v3_full",
+  "reused_vehicle_context_refinement": true,
+  "ppe_search": "full_recall",
+  "features": {
+    "zone_access": {
+      "SAFE": 131,
+      "WARNING": 272,
+      "CRITICAL": 71,
+      "UNKNOWN": 396
+    },
+    "zone_dwell": {
+      "SAFE": 131,
+      "WARNING": 272,
+      "CRITICAL": 71,
+      "UNKNOWN": 396
+    },
+    "proximity": {
+      "SAFE": 10,
+      "WARNING": 268,
+      "CRITICAL": 286,
+      "UNKNOWN": 306
+    },
+    "ppe": {
+      "SAFE": 0,
+      "WARNING": 575,
+      "CRITICAL": 0,
+      "UNKNOWN": 295
+    }
+  },
+  "context": {
+    "camera_id": "demo-video7",
+    "video": "7_Logistics Warehouse.mp4",
+    "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+    "model_version": "140af5cd5d595c97fbb0409ca3c18b27b6ce384525c61f549925362475cb5dde",
+    "config_version": "3d6af22bc267b8bcfdafe4820547f6027bf9691e3df8cec1485312664131d08b"
+  },
+  "model_hashes": {
+    "models/pilot_v16_related/person_forklift.pt": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+    "models/demo_object_adaptation_v1/best.pt": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+    "models/pretrained/yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "models/ppe_final/ppe_helmet_v6_960.pt": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+    "models/experiments/forklift_real_context_v2/weights/best.pt": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa",
+    "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
+  },
+  "camera_config": {
+    "camera_id": "warehouse-summary",
+    "source_name": "7_Logistics Warehouse.mp4",
+    "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+    "roi_id": "warehouse_lane_outside_safe_boxes",
+    "safe_seconds": 3,
+    "critical_seconds": 5,
+    "max_gap_seconds": 1,
+    "vehicle_missing_hold_seconds": 1,
+    "roi_alpha_safe": 0.05,
+    "roi_alpha_alert": 0.08,
+    "roi_review_status": "user_hand_drawn_storage_exclusions_2026_10_13",
+    "monitor_floor_normalized": [
+      [
+        0.09375,
+        0.041666666666666664
+      ],
+      [
+        0.35234375,
+        0.05138888888888889
+      ],
+      [
+        0.59296875,
+        0.5194444444444445
+      ],
+      [
+        1.0,
+        0.9013888888888889
+      ],
+      [
+        0.87734375,
+        1.0
+      ],
+      [
+        0.10546875,
+        1.0
+      ],
+      [
+        0.0484375,
+        0.5472222222222223
+      ]
+    ],
+    "safe_polygons_normalized": [
+      [
+        [
+          0.142,
+          0.193
+        ],
+        [
+          0.295,
+          0.179
+        ],
+        [
+          0.418,
+          0.125
+        ],
+        [
+          0.505,
+          0.399
+        ],
+        [
+          0.254,
+          0.445
+        ]
+      ],
+      [
+        [
+          0.039,
+          0.264
+        ],
+        [
+          0.096,
+          0.364
+        ],
+        [
+          0.14,
+          0.506
+        ],
+        [
+          0.06,
+          0.53
+        ]
+      ],
+      [
+        [
+          0.061,
+          0.652
+        ],
+        [
+          0.157,
+          0.625
+        ],
+        [
+          0.195,
+          0.763
+        ],
+        [
+          0.091,
+          0.804
+        ]
+      ],
+      [
+        [
+          0.324,
+          0.602
+        ],
+        [
+          0.593,
+          0.51
+        ],
+        [
+          1,
+          0.901
+        ],
+        [
+          0.877,
+          1
+        ],
+        [
+          0.515,
+          1
+        ]
+      ]
+    ],
+    "vehicle_presence_scope": "same_monitored_floor_lane_outside_safe_boxes",
+    "distance_mode": "image_plane",
+    "policy_version": "user_vehicle_lane_3_seconds_v3",
+    "vehicle_critical_seconds": 3,
+    "object_review_profile": "configs/video7-object-review.json",
+    "roi_unknown_color": [
+      255,
+      180,
+      0
+    ],
+    "roi_alpha_unknown": 0.05,
+    "exclude_riders_from_lane": true,
+    "co_presence_timing": true,
+    "warning_ratio": 1,
+    "critical_ratio": 0.3,
+    "compact_risk_display": true,
+    "proximity_alert_lines_only": true,
+    "tracker_fuse_score": false,
+    "forklift_tracker_fuse_score": false,
+    "forklift_tracker_high_threshold": 0.12
+  },
+  "limitations": [
+    "Sampled frames; zero misses not proven for unseen scenes",
+    "No calibrated meter distance",
+    "Hood-only follows user bare-head labeling policy; missing or uncertain detections remain UNKNOWN",
+    "PPE WARNING is review candidate, not verified violation",
+    "ROI floor proxies and geometry require review; scene cuts disable ROI",
+    "Hood auxiliary is experimental; Normal never means PPE safe"
+  ],
+  "object_review_profile": {
+    "policy_version": "video7-user-review-batch-v2",
+    "status": "experimental_video7_development_review",
+    "person_prediction_keys": [
+      "person_coco",
+      "baseline_highres"
+    ],
+    "vehicle_prediction_keys": [
+      "supplement_highres"
+    ],
+    "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+    "vehicle_support_required": true,
+    "vehicle_support_weights": "models/nvidia_object_adaptation_v1/best.pt",
+    "vehicle_support_minimum_confidence": 0.12,
+    "vehicle_support_minimum_iou": 0.3,
+    "minimum_confidence_by_class": {
+      "person": 0.25,
+      "forklift": 0.12
+    },
+    "maximum_vehicle_frame_area": 0.35,
+    "vehicle_part_containment_threshold": 0.85,
+    "ppe_requires_observed_person": true,
+    "ppe_person_context": true,
+    "ppe_one_head_per_class_per_person": true,
+    "ppe_person_upper_fraction": 0.35,
+    "renderer": "object_first",
+    "show_safe_pairs_for_other_people": true,
+    "limitation": "Related CCTV development video; support agreement can reject occluded/low-confidence actual vehicles. No zero-miss or unseen-site claim.",
+    "vehicle_support_context": true,
+    "vehicle_support_context_minimum_candidate_confidence": 0.5,
+    "vehicle_support_context_minimum_confidence": 0.3,
+    "deduplicate_cabin_people": true,
+    "vehicle_support_person_context_scale": 1.25
+  },
+  "object_review_cache": null
+}

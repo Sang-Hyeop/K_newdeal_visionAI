@@ -1,0 +1,166 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/7_Logistics Warehouse.mp4",
+  "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+  "video_number": 7,
+  "samples": 870,
+  "processed_fps": 4.8,
+  "ppe_enabled": true,
+  "ppe_cache_reused": true,
+  "all_real_inference_reused_from": "outputs/diagnostics/scenario_plan_v2_long",
+  "ppe_search": "person_context",
+  "features": {
+    "zone_access": {
+      "SAFE": 108,
+      "WARNING": 150,
+      "CRITICAL": 89,
+      "UNKNOWN": 523
+    },
+    "zone_dwell": {
+      "SAFE": 108,
+      "WARNING": 150,
+      "CRITICAL": 89,
+      "UNKNOWN": 523
+    },
+    "proximity": {
+      "SAFE": 37,
+      "WARNING": 138,
+      "CRITICAL": 5,
+      "UNKNOWN": 690
+    },
+    "ppe": {
+      "SAFE": 0,
+      "WARNING": 417,
+      "CRITICAL": 0,
+      "UNKNOWN": 453
+    }
+  },
+  "context": {
+    "camera_id": "demo-video7",
+    "video": "7_Logistics Warehouse.mp4",
+    "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+    "model_version": "49b5c501fc6a338a6bf15555a4ed9165fbfbba93902fe33a75702c5242ca5759",
+    "config_version": "2d8c00a7955b29725f4e096e6a8fd674048d8674ece7e82682917d6a94cc7353"
+  },
+  "model_hashes": {
+    "models/pilot_v16_related/person_forklift.pt": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+    "models/demo_object_adaptation_v1/best.pt": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+    "models/pretrained/yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "models/pilot_v3_ppe_expansion/ppe.pt": "ca4e0f184e9c27c1606d697bad849ac7a718a820317e504489ab513beda3ac09",
+    "models/demo_ppe_interpolated_v4/ppe.pt": "744353b3fe2520795580e92905a5b9d04e4dc6788b037231b9d5c464c92fcf1b",
+    "models/demo_ppe_failure_context_v3/last.pt": "9d6f0cd3de768d788a6ba042ed93e56b6448ef29cdb135220baed4a73000acbe"
+  },
+  "camera_config": {
+    "camera_id": "warehouse-summary",
+    "source_name": "7_Logistics Warehouse.mp4",
+    "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+    "roi_id": "warehouse_lane_outside_safe_boxes",
+    "safe_seconds": 3,
+    "critical_seconds": 5,
+    "max_gap_seconds": 1,
+    "vehicle_missing_hold_seconds": 1,
+    "roi_alpha_safe": 0.15,
+    "roi_alpha_alert": 0.2,
+    "roi_review_status": "floor_geometry_manually_reviewed_demo_approximation",
+    "monitor_floor_normalized": [
+      [
+        0.09375,
+        0.041666666666666664
+      ],
+      [
+        0.35234375,
+        0.05138888888888889
+      ],
+      [
+        0.59296875,
+        0.5194444444444445
+      ],
+      [
+        1.0,
+        0.9013888888888889
+      ],
+      [
+        0.87734375,
+        1.0
+      ],
+      [
+        0.10546875,
+        1.0
+      ],
+      [
+        0.0484375,
+        0.5472222222222223
+      ]
+    ],
+    "safe_polygons_normalized": [
+      [
+        [
+          0.1421875,
+          0.19305555555555556
+        ],
+        [
+          0.41796875,
+          0.125
+        ],
+        [
+          0.490625,
+          0.4111111111111111
+        ],
+        [
+          0.25,
+          0.4486111111111111
+        ]
+      ],
+      [
+        [
+          0.0484375,
+          0.5527777777777778
+        ],
+        [
+          0.14375,
+          0.5625
+        ],
+        [
+          0.1984375,
+          0.7736111111111111
+        ],
+        [
+          0.0875,
+          0.8041666666666667
+        ]
+      ],
+      [
+        [
+          0.32265625,
+          0.5986111111111111
+        ],
+        [
+          0.5890625,
+          0.5180555555555556
+        ],
+        [
+          1.0,
+          0.8861111111111111
+        ],
+        [
+          0.8828125,
+          1.0
+        ],
+        [
+          0.48046875,
+          1.0
+        ]
+      ]
+    ],
+    "vehicle_presence_scope": "same_monitored_floor_lane_outside_safe_boxes",
+    "distance_mode": "image_plane",
+    "policy_version": "warehouse_lane_timed_3_5_v1"
+  },
+  "limitations": [
+    "Sampled frames; zero misses not proven for unseen scenes",
+    "No calibrated meter distance",
+    "Hoods and missing detections remain UNKNOWN",
+    "PPE WARNING is review candidate, not verified violation",
+    "ROI floor proxies and geometry require review; scene cuts disable ROI",
+    "Hood auxiliary is experimental; Normal never means PPE safe"
+  ]
+}

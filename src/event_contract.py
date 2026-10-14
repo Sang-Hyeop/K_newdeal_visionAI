@@ -1,6 +1,7 @@
 """Common event envelopes for observed rule transitions, never global safety."""
 import hashlib,json,math
 from .feature_status import feature_status
+from .observation_display import event_display
 
 def normalize_event(event,*,camera_id,video,source_sha256,model_version,config_version):
     timestamp=event['timestamp_seconds'];severity=event.get('severity');status=event.get('observation_status','unconfirmed')
@@ -16,7 +17,7 @@ def normalize_event(event,*,camera_id,video,source_sha256,model_version,config_v
     envelope={'schema_version':'1.0','camera_id':camera_id,'video':video,'source_sha256':source_sha256,
               'timestamp_seconds':timestamp,'event_type':kind,'severity':severity,'observation_status':status,
               'track_ids':identities,'evidence':evidence,'model_version':model_version,'config_version':config_version,
-              'scope':'observed_subjects_for_this_feature_only'}
+              'scope':'observed_subjects_for_this_feature_only',**event_display(event)}
     envelope['event_id']=hashlib.sha256(json.dumps(envelope,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
     return envelope
 

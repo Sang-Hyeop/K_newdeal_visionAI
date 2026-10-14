@@ -1,0 +1,7 @@
+{
+  "tests": 177,
+  "video_sha256": "25ca8ea42f3a421aedfb05ff080e30b21ff2b1a8f2ec5c69717c36fbff7a05f4",
+  "samples": 87,
+  "vehicle_detections_unchanged": true,
+  "scope": "video3_development_review"
+}

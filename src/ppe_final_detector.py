@@ -18,3 +18,17 @@ class FinalPPEDetector:
         result=self.model.predict(frame,imgsz=960,conf=0.15,device='cpu',verbose=False)[0]
         heads=[{'class':int(b.cls.item()),'confidence':float(b.conf.item()),'box':b.xyxy[0].tolist()} for b in result.boxes]
         return self.filter(heads,cover=0.8,overlap=0.7)
+
+    def predict_person_context(self,frame,boxes):
+        """Current person context only; crop edges cannot fabricate observed heads."""
+        h,w=frame.shape[:2];heads=[]
+        for box in boxes:
+            bw,bh=box[2]-box[0],box[3]-box[1]
+            x0,y0=max(0,int(box[0]-.75*bw)),max(0,int(box[1]-.7*bh))
+            x1,y1=min(w,int(box[2]+.75*bw)),min(h,int(box[3]+.7*bh))
+            result=self.model.predict(frame[y0:y1,x0:x1],imgsz=640,conf=.15,device='cpu',verbose=False)[0]
+            for b in result.boxes:
+                q=b.xyxy[0].tolist()
+                if (x0>0 and q[0]<=1) or (y0>0 and q[1]<=1) or (x1<w and q[2]>=x1-x0-1) or (y1<h and q[3]>=y1-y0-1):continue
+                heads.append({'class':int(b.cls.item()),'confidence':float(b.conf.item()),'box':[q[0]+x0,q[1]+y0,q[2]+x0,q[3]+y0]})
+        return self.filter(heads,cover=.8,overlap=.7)

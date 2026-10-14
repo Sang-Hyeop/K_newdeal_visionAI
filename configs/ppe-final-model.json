@@ -21,5 +21,12 @@
     "Small repeatedly used development evaluation; no independent-site generalization claim",
     "Temporal pending and person rejection experiments not promoted"
   ],
-  "integration": "Standalone final detector provided; historical ensemble demo runner remains unchanged"
+  "integration": "Standalone final detector provided; historical ensemble demo runner remains unchanged",
+  "annotation_amendment": {
+    "date": "2026-10-13",
+    "status": "training_annotations_corrected_model_weights_not_retrained",
+    "reason": "user-confirmed left dark-blue equipment mislabeled as person/head",
+    "weights_unchanged": true,
+    "old_evaluation_status": "historical_pre_correction; reevaluation/retraining required"
+  }
 }

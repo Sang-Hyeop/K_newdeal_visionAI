@@ -1,0 +1,147 @@
+{
+  "status": "experimental_not_promoted",
+  "samples": 870,
+  "duration_seconds": 181.25,
+  "processed_fps": 4.8,
+  "checks_passed": [
+    "source frame alignment",
+    "PPE observation cache unchanged",
+    "confirmed riders excluded from all pedestrian distance pairs",
+    "pending roles never produce distance or lane severity",
+    "separate lower pedestrian retained",
+    "four review vehicle matches",
+    "video frame count"
+  ],
+  "counts_not_accuracy_metrics": {
+    "added_vehicle_observations": 472,
+    "excluded_rider_pair_observations": 1198,
+    "pending_role_pair_observations": 1586,
+    "merged_or_duplicate_body_observations": 13
+  },
+  "review_samples": [
+    {
+      "t": 7.5,
+      "before_vehicle": {
+        "iou_to_review_box": 0.7074278179069236,
+        "confidence": 0.5604366064071655,
+        "bbox": [
+          542.6591796875,
+          115.57040405273438,
+          704.770751953125,
+          347.98480224609375
+        ]
+      },
+      "after_vehicle": {
+        "iou_to_review_box": 0.7074278179069236,
+        "confidence": 0.5604366064071655,
+        "bbox": [
+          542.6591796875,
+          115.57040405273438,
+          704.770751953125,
+          347.98480224609375
+        ]
+      },
+      "rider_associations": {},
+      "pending_rider_ids": [
+        "P0:14"
+      ]
+    },
+    {
+      "t": 16.041666666666668,
+      "before_vehicle": {
+        "iou_to_review_box": 0.9334637221979887,
+        "confidence": 0.5151985287666321,
+        "bbox": [
+          90.1824951171875,
+          217.7646484375,
+          285.50592041015625,
+          423.2645263671875
+        ]
+      },
+      "after_vehicle": {
+        "iou_to_review_box": 0.9334637221979887,
+        "confidence": 0.5151985287666321,
+        "bbox": [
+          90.1824951171875,
+          217.7646484375,
+          285.50592041015625,
+          423.2645263671875
+        ]
+      },
+      "rider_associations": {
+        "P0:30": "F0:13"
+      },
+      "pending_rider_ids": [
+        "P0:15",
+        "P0:26",
+        "P0:27"
+      ]
+    },
+    {
+      "t": 27.708333333333332,
+      "before_vehicle": {
+        "iou_to_review_box": 0.0,
+        "confidence": 0.7684020400047302,
+        "bbox": [
+          196.81436157226562,
+          135.98379516601562,
+          292.7019958496094,
+          291.2185363769531
+        ]
+      },
+      "after_vehicle": {
+        "iou_to_review_box": 0.9914135081702606,
+        "confidence": 0.4428994655609131,
+        "bbox": [
+          383.14637756347656,
+          197.17142486572266,
+          520.5039978027344,
+          358.5413818359375
+        ]
+      },
+      "rider_associations": {
+        "P0:27": "F0:14"
+      },
+      "pending_rider_ids": [
+        "P0:26"
+      ]
+    },
+    {
+      "t": 58.333333333333336,
+      "before_vehicle": {
+        "iou_to_review_box": 0.0,
+        "confidence": 0.4732447564601898,
+        "bbox": [
+          290.90460205078125,
+          96.12364959716797,
+          379.64825439453125,
+          192.5369873046875
+        ]
+      },
+      "after_vehicle": {
+        "iou_to_review_box": 0.9924935855604734,
+        "confidence": 0.605556070804596,
+        "bbox": [
+          313.45552825927734,
+          258.5712432861328,
+          487.1062927246094,
+          415.1038818359375
+        ]
+      },
+      "rider_associations": {
+        "P0:75": "F0:48",
+        "P0:80": "F0:49"
+      },
+      "pending_rider_ids": [
+        "P0:82",
+        "P0:83"
+      ]
+    }
+  ],
+  "remaining": [
+    "initial rider confirmation delay",
+    "occluded rider can remain unconfirmed even with current vehicle detection",
+    "image-plane distance only",
+    "some false positives and misses may remain; no ground-truth accuracy claim"
+  ]
+}

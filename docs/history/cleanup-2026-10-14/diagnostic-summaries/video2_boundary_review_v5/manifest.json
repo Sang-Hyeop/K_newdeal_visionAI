@@ -1,0 +1,97 @@
+[
+  {
+    "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/2_forklift_back.mp4",
+    "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+    "video_number": 2,
+    "samples": 106,
+    "processed_fps": 5.0,
+    "ppe_enabled": true,
+    "ppe_final_selected": true,
+    "review_max_seconds": null,
+    "forklift_geometric_association": false,
+    "ppe_cache_reused": false,
+    "all_real_inference_reused_from": null,
+    "ppe_search": "full_recall",
+    "features": {
+      "proximity": {
+        "SAFE": 16,
+        "WARNING": 30,
+        "CRITICAL": 15,
+        "UNKNOWN": 45
+      },
+      "ppe": {
+        "SAFE": 0,
+        "WARNING": 15,
+        "CRITICAL": 0,
+        "UNKNOWN": 91
+      }
+    },
+    "context": {
+      "camera_id": "demo-video2",
+      "video": "2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "model_version": "9a0c5e6c5fb882c6e535e173b3a581554ee939cef14307173c00ffb657dcfe3a",
+      "config_version": "e54975bf6d405358c0cc52df67bfeb426fca08949e4bcaf328bd81691532b061"
+    },
+    "model_hashes": {
+      "models/pilot_v16_related/person_forklift.pt": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+      "models/demo_object_adaptation_v1/best.pt": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+      "models/pretrained/yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "models/ppe_final/ppe_helmet_v6_960.pt": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+      "models/experiments/forklift_real_context_v2/weights/best.pt": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa"
+    },
+    "camera_config": {
+      "camera_id": "reverse-proximity",
+      "source_name": "2_forklift_back.mp4",
+      "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+      "warning_ratio": 1.0,
+      "critical_ratio": 0.3,
+      "hysteresis_ratio": 0.1,
+      "max_gap_seconds": 1,
+      "distance_unit": "person_height_normalized_image_gap",
+      "status": "unvalidated_camera_demo_rule",
+      "orientation_policy": "unknown_no_front_rear_claim",
+      "detection_scope": "full_frame",
+      "distance_mode": "image_plane",
+      "zone_roi_used": false,
+      "policy_version": "reverse-boundary-operator-review-v4",
+      "object_review_profile": "configs/video2-object-review.json",
+      "tracker_fuse_score": false,
+      "distance_geometry": "box_boundary",
+      "exclude_probable_operator": true,
+      "expose_current_person_candidates": true
+    },
+    "limitations": [
+      "Sampled frames; zero misses not proven for unseen scenes",
+      "No calibrated meter distance",
+      "Hood-only follows user bare-head labeling policy; missing or uncertain detections remain UNKNOWN",
+      "PPE WARNING is review candidate, not verified violation",
+      "ROI floor proxies and geometry require review; scene cuts disable ROI",
+      "Hood auxiliary is experimental; Normal never means PPE safe"
+    ],
+    "object_review_profile": {
+      "policy_version": "video2-cvat-person-routing-v1",
+      "person_prediction_keys": [
+        "person_coco",
+        "baseline",
+        "person_adaptation"
+      ],
+      "vehicle_prediction_keys": [
+        "supplement_highres"
+      ],
+      "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+      "maximum_vehicle_frame_area": 0.35,
+      "vehicle_part_containment_threshold": 0.6,
+      "minimum_confidence_by_class": {
+        "person": 0.25,
+        "forklift": 0.25
+      },
+      "ppe_requires_observed_person": true,
+      "renderer": "object_first",
+      "status": "experimental_video2_development_review",
+      "limitation": "Related development-scene model; not independent validation. Loaded vehicle boxes can include cargo; clipped geometry remains UNKNOWN. People combine current COCO and baseline proposals; no held boxes.",
+      "show_safe_pairs_for_other_people": true
+    },
+    "object_review_cache": null
+  }
+]

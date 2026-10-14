@@ -1,0 +1,27 @@
+{
+  "status": "selected_existing_model_development_review",
+  "video_path": "/Users/sanghyeopkim/Desktop/workspace/outputs/reviews/video5_review_final_2026-10-13.mp4",
+  "video_sha256": "0bf79afc8e529d15f6f2ce1af7b7f89b3d1f8b41415a2240eb8595229aef935a",
+  "decoded_frames": 58,
+  "processed_fps": 4.795,
+  "bytes": 4988427,
+  "ppe_weights": "models/ppe_final/ppe_helmet_v6_960.pt",
+  "ppe_weights_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+  "model_retrained_this_task": false,
+  "roi_used": false,
+  "proximity_enabled": false,
+  "dense_frame_time": 11.469791666666666,
+  "dense_people": 7,
+  "dense_ppe_states": {
+    "WARNING": 2,
+    "SAFE": 4,
+    "UNKNOWN": 1
+  },
+  "tests_passed": 187,
+  "limitations": [
+    "Early small/occluded worker misses remain",
+    "Some observed helmets remain pending/low-confidence UNKNOWN",
+    "Related repeated development scene; not independent-site evaluation",
+    "Equipment-label correction retraining still pending"
+  ]
+}

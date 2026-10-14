@@ -1,5 +1,5 @@
 {
-  "policy_version": "video1-nvidia-adaptation-v1",
+  "policy_version": "video1-background-review-v2",
   "person_source": "coco_person_1280",
   "vehicle_sources": [
     "nvidia_adaptation_640",
@@ -8,12 +8,20 @@
   "maximum_vehicle_frame_area": 0.35,
   "ppe_requires_observed_person": true,
   "renderer": "object_first",
-  "status": "camera_specific_review_not_generalized",
-  "limitation": "Oversized vehicles are retained in diagnostic review proposals, not confirmed as objects. A real vehicle occupying >35% of this image would also require review; do not use this threshold unchanged on a new camera.",
+  "status": "experimental_video1_background_review_not_generalized",
+  "limitation": "Oversized vehicles are retained in diagnostic review proposals, not confirmed as objects. A real vehicle occupying >35% of this image would also require review; do not use this threshold unchanged on a new camera. Confidence gates separate weak proposals from confirmed routing; weak real objects can be missed and must remain UNKNOWN. Thresholds are development-camera settings, not independent calibration.",
   "vehicle_part_containment_threshold": 0.6,
   "vehicle_weights": "models/nvidia_object_adaptation_v1/best.pt",
   "vehicle_prediction_keys": [
     "supplement",
     "supplement_highres"
-  ]
+  ],
+  "minimum_confidence_by_class": {
+    "person": 0.25,
+    "forklift": 0.1
+  },
+  "vehicle_support_required": true,
+  "vehicle_support_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "vehicle_support_minimum_confidence": 0.1,
+  "vehicle_support_minimum_iou": 0.3
 }

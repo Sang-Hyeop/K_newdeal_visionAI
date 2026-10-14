@@ -4,12 +4,13 @@ import cv2
 import numpy as np
 
 class LaneHazard:
-    def __init__(self,polygon,hold_seconds=1.0, contains=None, policy="immediate", safe_seconds=3, critical_seconds=5):
+    def __init__(self,polygon,hold_seconds=1.0, contains=None, policy="immediate", safe_seconds=3, critical_seconds=5,co_presence_timing=False):
         self.polygon=np.asarray(polygon,dtype=np.float32)
         if not math.isfinite(hold_seconds) or hold_seconds<=0:raise ValueError('Positive hold required')
         self.hold=hold_seconds;self.vehicles={};self.last=None;self.contains=contains;self.policy=policy;self.safe=safe_seconds;self.critical=critical_seconds
         if policy not in {"immediate","timed"} or not 0<=safe_seconds<=critical_seconds:raise ValueError("Invalid lane policy")
-    def reset(self):self.vehicles.clear();self.last=None
+        self.co_presence_timing=co_presence_timing;self.co_presence={}
+    def reset(self):self.vehicles.clear();self.co_presence.clear();self.last=None
     def update(self,timestamp,events,forklifts,shape):
         if not math.isfinite(timestamp) or timestamp<0 or self.last is not None and timestamp<=self.last:raise ValueError('Increasing timestamps required')
         self.last=timestamp;h,w=shape;seen=set();ambiguous=[];present=[]
@@ -33,6 +34,18 @@ class LaneHazard:
             position_confirmed=event['observation_status']=='confirmed' and inside is not None
             event.update(position_observation_status='confirmed' if position_confirmed else 'unconfirmed',lane_membership=('inside' if inside else 'outside') if position_confirmed else 'unknown')
             if event['event_type']=='zone_dwell':event['dwell_observation_status']='confirmed' if position_confirmed else 'unconfirmed'
+            elapsed=event.get('observed_dwell_seconds',0)
+            if self.co_presence_timing:
+                key=event['track_id'];old=self.co_presence.get(key)
+                together=bool(position_confirmed and inside and present)
+                if together:
+                    seconds=old['seconds']+(timestamp-old['last'] if old['observed'] else 0) if old and timestamp-old['last']<=self.hold else 0
+                    self.co_presence[key]={'seconds':seconds,'last':timestamp,'observed':True}
+                elif held and old:
+                    seconds=old['seconds'];old['observed']=False
+                else:
+                    seconds=0;self.co_presence.pop(key,None)
+                elapsed=seconds;event['observed_vehicle_co_presence_seconds']=seconds
             if event['event_type']=='zone_dwell':event['dwell_time_band']=('SAFE' if event.get('observed_dwell_seconds',0)<self.safe else 'WARNING' if event.get('observed_dwell_seconds',0)<self.critical else 'CRITICAL') if self.policy=='timed' else event['severity']
             event.update(vehicle_lane_state=state,vehicle_observation_status='confirmed' if present else 'unconfirmed' if held or lost or ambiguous else 'not_detected',
                          vehicle_track_ids=present+lost,vehicle_evidence=evidence,lane_rule='pedestrian_inside_WARNING; observed_vehicle_CRITICAL; lost_vehicle_hold_then_UNKNOWN',
@@ -40,7 +53,7 @@ class LaneHazard:
             if inside is None or event['observation_status']!='confirmed':event['severity']=None
             elif not inside:event['severity']='SAFE';event['risk_reason']='person_outside_vehicle_lane'
             elif state in {'observed_in_lane','recent_vehicle_missing_hold'}:
-                event['severity']='CRITICAL' if self.policy=='immediate' or event.get('observed_dwell_seconds',0)>=self.critical else 'WARNING';event['risk_reason']=state
+                event['severity']='CRITICAL' if self.policy=='immediate' or elapsed>=self.critical else 'WARNING';event['risk_reason']=state
             elif state=='vehicle_observation_unknown':event['severity']=None;event['observation_status']='unconfirmed';event['risk_reason']=state
             else:
                 event['severity']='SAFE' if self.policy=='timed' and event.get('observed_dwell_seconds',0)<self.safe else 'WARNING';event['risk_reason']='person_in_lane_no_vehicle_detected'

@@ -1,0 +1,36 @@
+{
+  "samples": 106,
+  "target_checks": [
+    {
+      "time": 2.5025,
+      "class_name": "forklift",
+      "old_confidence": 0.28625914454460144,
+      "rejected_from_routing": true
+    },
+    {
+      "time": 3.128125,
+      "class_name": "forklift",
+      "old_confidence": 0.342070609331131,
+      "rejected_from_routing": true
+    },
+    {
+      "time": 3.128125,
+      "class_name": "person",
+      "old_confidence": 0.23508690297603607,
+      "rejected_from_routing": true
+    },
+    {
+      "time": 14.806458333333332,
+      "class_name": "forklift",
+      "old_confidence": 0.11310745775699615,
+      "rejected_from_routing": true
+    }
+  ],
+  "starting_real_vehicles": 2,
+  "original_strong_vehicle_proposals_retained": 109,
+  "original_strong_vehicle_proposals_total": 114,
+  "strong_retention_is_not_ground_truth": true,
+  "training_started": false,
+  "scope": "Video1 camera development review; stricter confirmation can miss real objects. Unsupported proposals retained for diagnostics. Other camera routes unchanged.",
+  "video_sha256": "9bf6a7892e5f602bc175853b5e295cb94bb4e6538419a8372ed8482af90b91d3"
+}

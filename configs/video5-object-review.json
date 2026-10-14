@@ -1,0 +1,23 @@
+{
+  "policy_version": "video5-selected-v6-ppe-context-review-v1",
+  "status": "experimental_video5_development_review",
+  "person_prediction_keys": [
+    "person_coco"
+  ],
+  "vehicle_prediction_keys": [
+    "supplement_highres"
+  ],
+  "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "minimum_confidence_by_class": {
+    "person": 0.25,
+    "forklift": 0.25
+  },
+  "maximum_vehicle_frame_area": 0.35,
+  "vehicle_part_containment_threshold": 0.85,
+  "ppe_requires_observed_person": true,
+  "ppe_person_context": true,
+  "ppe_one_head_per_class_per_person": true,
+  "ppe_person_upper_fraction": 0.35,
+  "renderer": "object_first",
+  "limitation": "Selected existing v6 PPE weights before equipment-label amendment retraining; related development scene; small/occluded people and heads can remain unobserved. No ROI or proximity alerts."
+}

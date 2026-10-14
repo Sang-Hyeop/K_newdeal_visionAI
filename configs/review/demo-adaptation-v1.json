@@ -648,20 +648,13 @@
       ],
       [
         0,
-        88,
-        60,
-        118,
-        107
-      ],
-      [
-        0,
         129,
         34,
         158,
         109
       ]
     ],
-    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "review": "User-corrected2026-10-13: left dark blue equipment is not a person; right rear worker, seated worker and walkers preserved",
     "repeats": 4,
     "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
     "training_eligible": true,
@@ -699,20 +692,13 @@
       ],
       [
         0,
-        88,
-        60,
-        118,
-        108
-      ],
-      [
-        0,
         129,
         34,
         158,
         109
       ]
     ],
-    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "review": "User-corrected2026-10-13: left dark blue equipment is not a person; right rear worker, seated worker and walkers preserved",
     "repeats": 4,
     "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
     "training_eligible": true,
@@ -743,20 +729,13 @@
       ],
       [
         0,
-        88,
-        60,
-        119,
-        109
-      ],
-      [
-        0,
         129,
         34,
         158,
         109
       ]
     ],
-    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "review": "User-corrected2026-10-13: left dark blue equipment is not a person; right rear worker, seated worker and walkers preserved",
     "repeats": 4,
     "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
     "training_eligible": true,
@@ -794,20 +773,13 @@
       ],
       [
         0,
-        88,
-        51,
-        123,
-        109
-      ],
-      [
-        0,
         129,
         27,
         158,
         105
       ]
     ],
-    "review": "visible seated worker, lane walker, pedestrian walkway and rear workers; robot/sign stands are not person",
+    "review": "User-corrected2026-10-13: left dark blue equipment is not a person; right rear worker, seated worker and walkers preserved",
     "repeats": 4,
     "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
     "training_eligible": true,

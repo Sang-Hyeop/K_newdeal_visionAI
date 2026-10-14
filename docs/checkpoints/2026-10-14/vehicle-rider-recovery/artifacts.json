@@ -1,0 +1,51 @@
+{
+  "status": "experimental_not_promoted",
+  "new_training": false,
+  "unit_tests_passed": 248,
+  "files": [
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/reviews/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4",
+      "bytes": 38966738,
+      "sha256": "928e0407d90dd03d1057831951e5aed837eeb92aa4f5ceb2e15673d0625bc207"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Documents/Codex/2026-10-14/new-chat/outputs/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4",
+      "bytes": 38966738,
+      "sha256": "928e0407d90dd03d1057831951e5aed837eeb92aa4f5ceb2e15673d0625bc207"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7/detections.jsonl",
+      "bytes": 116541237,
+      "sha256": "a8726f4e6648382f07e9b4b3480179977f609bdbeb31ed91e0c36c0e4979557e"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7/summary.json",
+      "bytes": 9101,
+      "sha256": "e7ab2223b962354b91f73dfc28b5dae851c02477e5a98cae4bd9206c3ae662db"
+    },
+    {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7/verification.json",
+      "bytes": 3729,
+      "sha256": "73188f9d1ceba21c3050ace7db0bcf808e136e61100296e16d4ef9c31515c2a4"
+    }
+  ],
+  "model_hashes": {
+    "models/pilot_v16_related/person_forklift.pt": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+    "models/demo_object_adaptation_v1/best.pt": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+    "models/pretrained/yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "models/ppe_final/ppe_helmet_v6_960.pt": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+    "models/experiments/forklift_real_context_v2/weights/best.pt": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa",
+    "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
+  },
+  "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+  "event_log_root": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video7",
+  "verification": [
+    "source frame alignment",
+    "PPE observation cache unchanged",
+    "confirmed riders excluded from all pedestrian distance pairs",
+    "pending roles never produce distance or lane severity",
+    "separate lower pedestrian retained",
+    "four review vehicle matches",
+    "video frame count"
+  ]
+}

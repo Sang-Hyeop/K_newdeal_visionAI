@@ -1,0 +1,45 @@
+{
+  "source": "/Users/sanghyeopkim/Desktop/workspace/data/videos/6_Helmet_forklift.mp4",
+  "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+  "video_number": 6,
+  "samples": 20,
+  "processed_fps": 4.795204795204795,
+  "ppe_enabled": true,
+  "ppe_final_selected": true,
+  "review_max_seconds": 4.0,
+  "forklift_geometric_association": false,
+  "ppe_cache_reused": false,
+  "all_real_inference_reused_from": null,
+  "ppe_search": "full_recall",
+  "features": {
+    "ppe": {
+      "SAFE": 0,
+      "WARNING": 13,
+      "CRITICAL": 0,
+      "UNKNOWN": 7
+    }
+  },
+  "context": {
+    "camera_id": "demo-video6",
+    "video": "6_Helmet_forklift.mp4",
+    "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
+    "model_version": "b2620970e3cd0ccbbd3eecb0ec180784abd4965b6b694873b7b06ece36a035e4",
+    "config_version": "98fc41f1fb90005026e8aaf03b761f1e13a0e141c416185f6ab4c9a4a8997bb0"
+  },
+  "model_hashes": {
+    "models/pilot_v16_related/person_forklift.pt": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
+    "models/demo_object_adaptation_v1/best.pt": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16",
+    "models/pretrained/yolo26n.pt": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "models/ppe_final/ppe_helmet_v6_960.pt": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+    "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
+  },
+  "camera_config": null,
+  "limitations": [
+    "Sampled frames; zero misses not proven for unseen scenes",
+    "No calibrated meter distance",
+    "Hood-only follows user bare-head labeling policy; missing or uncertain detections remain UNKNOWN",
+    "PPE WARNING is review candidate, not verified violation",
+    "ROI floor proxies and geometry require review; scene cuts disable ROI",
+    "Hood auxiliary is experimental; Normal never means PPE safe"
+  ]
+}

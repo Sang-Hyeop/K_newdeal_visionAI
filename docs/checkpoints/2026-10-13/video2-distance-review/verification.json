@@ -1,0 +1,500 @@
+{
+  "samples": 106,
+  "checks": [
+    {
+      "time": 6.4,
+      "state": "SAFE",
+      "pairs": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:1",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 6.4,
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            1546.8369140625,
+            404.9376525878906,
+            1669.8662109375,
+            592.6858520507812
+          ],
+          "forklift_bbox_xyxy": [
+            662.1004638671875,
+            124.90200805664062,
+            1152.0731201171875,
+            606.6343383789062
+          ],
+          "person_anchor_xy": [
+            1608.3515625,
+            592.6858520507812
+          ],
+          "forklift_ground_proxy_xyxy": [
+            662.1004638671875,
+            534.3744888305664,
+            1152.0731201171875,
+            606.6343383789062
+          ],
+          "nearest_vehicle_point_xy": [
+            1152.0731201171875,
+            592.6858520507812
+          ],
+          "image_gap_pixels": 456.2784423828125,
+          "normalized_image_gap": 2.4302680062345856,
+          "image_gap_closing_rate": -1.0151299469077393,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        },
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:6",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 6.4,
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            325.93670654296875,
+            98.70716857910156,
+            385.9976806640625,
+            251.95005798339844
+          ],
+          "forklift_bbox_xyxy": [
+            662.1004638671875,
+            124.90200805664062,
+            1152.0731201171875,
+            606.6343383789062
+          ],
+          "person_anchor_xy": [
+            355.9671936035156,
+            251.95005798339844
+          ],
+          "forklift_ground_proxy_xyxy": [
+            662.1004638671875,
+            534.3744888305664,
+            1152.0731201171875,
+            606.6343383789062
+          ],
+          "nearest_vehicle_point_xy": [
+            662.1004638671875,
+            251.95005798339844
+          ],
+          "image_gap_pixels": 306.1332702636719,
+          "normalized_image_gap": 1.997699674377766,
+          "image_gap_closing_rate": 1.1717294856193827,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "time": 7.4,
+      "state": "WARNING",
+      "pairs": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:1",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 7.4,
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            1545.3255615234375,
+            403.269287109375,
+            1671.4317626953125,
+            592.929443359375
+          ],
+          "forklift_bbox_xyxy": [
+            544.7156372070312,
+            102.34968566894531,
+            997.528564453125,
+            546.9385986328125
+          ],
+          "person_anchor_xy": [
+            1608.378662109375,
+            592.929443359375
+          ],
+          "forklift_ground_proxy_xyxy": [
+            544.7156372070312,
+            480.2502616882324,
+            997.528564453125,
+            546.9385986328125
+          ],
+          "nearest_vehicle_point_xy": [
+            997.528564453125,
+            546.9385986328125
+          ],
+          "image_gap_pixels": 612.5789741782793,
+          "normalized_image_gap": 3.2298769878203095,
+          "image_gap_closing_rate": -0.8547539143632547,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        },
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:6",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 7.4,
+          "severity": "WARNING",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            351.1173095703125,
+            103.20011901855469,
+            414.7589111328125,
+            271.6674499511719
+          ],
+          "forklift_bbox_xyxy": [
+            544.7156372070312,
+            102.34968566894531,
+            997.528564453125,
+            546.9385986328125
+          ],
+          "person_anchor_xy": [
+            382.9381103515625,
+            271.6674499511719
+          ],
+          "forklift_ground_proxy_xyxy": [
+            544.7156372070312,
+            480.2502616882324,
+            997.528564453125,
+            546.9385986328125
+          ],
+          "nearest_vehicle_point_xy": [
+            544.7156372070312,
+            271.6674499511719
+          ],
+          "image_gap_pixels": 161.77752685546875,
+          "normalized_image_gap": 0.9602901996481193,
+          "image_gap_closing_rate": 0.9333888689530121,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "time": 8,
+      "state": "CRITICAL",
+      "pairs": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:1",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 8.0,
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            1545.4951171875,
+            401.1971740722656,
+            1666.131591796875,
+            590.395263671875
+          ],
+          "forklift_bbox_xyxy": [
+            478.2485046386719,
+            89.33724975585938,
+            904.910888671875,
+            511.219482421875
+          ],
+          "person_anchor_xy": [
+            1605.8133544921875,
+            590.395263671875
+          ],
+          "forklift_ground_proxy_xyxy": [
+            478.2485046386719,
+            447.93714752197263,
+            904.910888671875,
+            511.219482421875
+          ],
+          "nearest_vehicle_point_xy": [
+            904.910888671875,
+            511.219482421875
+          ],
+          "image_gap_pixels": 705.360241954097,
+          "normalized_image_gap": 3.728157316211893,
+          "image_gap_closing_rate": -0.9146352406765282,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        },
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:6",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 8.0,
+          "severity": "CRITICAL",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            381.5592346191406,
+            110.31182861328125,
+            438.6669006347656,
+            277.5082702636719
+          ],
+          "forklift_bbox_xyxy": [
+            478.2485046386719,
+            89.33724975585938,
+            904.910888671875,
+            511.219482421875
+          ],
+          "person_anchor_xy": [
+            410.1130676269531,
+            277.5082702636719
+          ],
+          "forklift_ground_proxy_xyxy": [
+            478.2485046386719,
+            447.93714752197263,
+            904.910888671875,
+            511.219482421875
+          ],
+          "nearest_vehicle_point_xy": [
+            478.2485046386719,
+            277.5082702636719
+          ],
+          "image_gap_pixels": 68.13543701171875,
+          "normalized_image_gap": 0.4075172673482526,
+          "image_gap_closing_rate": 1.2874598584039274,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "time": 12,
+      "state": "UNKNOWN",
+      "pairs": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:1",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 12.0,
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            1546.4239501953125,
+            399.456298828125,
+            1665.3809814453125,
+            591.01611328125
+          ],
+          "forklift_bbox_xyxy": [
+            223.19586181640625,
+            28.733413696289062,
+            522.3340454101562,
+            382.8797607421875
+          ],
+          "person_anchor_xy": [
+            1605.9024658203125,
+            591.01611328125
+          ],
+          "forklift_ground_proxy_xyxy": [
+            223.19586181640625,
+            329.75780868530273,
+            522.3340454101562,
+            382.8797607421875
+          ],
+          "nearest_vehicle_point_xy": [
+            522.3340454101562,
+            382.8797607421875
+          ],
+          "image_gap_pixels": 1103.3772079204944,
+          "normalized_image_gap": 5.75996177001149,
+          "image_gap_closing_rate": -0.5280698613409759,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        },
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:11",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 12.0,
+          "severity": null,
+          "observation_status": "unconfirmed",
+          "reason": "person_track_confirmation_pending",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            493.3460998535156,
+            141.29568481445312,
+            532.2381591796875,
+            297.8556213378906
+          ],
+          "forklift_bbox_xyxy": [
+            223.19586181640625,
+            28.733413696289062,
+            522.3340454101562,
+            382.8797607421875
+          ],
+          "person_anchor_xy": [
+            512.7921295166016,
+            297.8556213378906
+          ],
+          "forklift_ground_proxy_xyxy": [
+            223.19586181640625,
+            329.75780868530273,
+            522.3340454101562,
+            382.8797607421875
+          ],
+          "nearest_vehicle_point_xy": [
+            512.7921295166016,
+            297.8556213378906
+          ],
+          "image_gap_pixels": 0.0,
+          "normalized_image_gap": 0.0,
+          "image_gap_closing_rate": null,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    },
+    {
+      "time": 12.2,
+      "state": "CRITICAL",
+      "pairs": [
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:1",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 12.2,
+          "severity": "SAFE",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            1545.7862548828125,
+            399.6897888183594,
+            1668.9473876953125,
+            593.6022338867188
+          ],
+          "forklift_bbox_xyxy": [
+            213.68701171875,
+            36.53846740722656,
+            508.3605651855469,
+            383.665283203125
+          ],
+          "person_anchor_xy": [
+            1607.3668212890625,
+            593.6022338867188
+          ],
+          "forklift_ground_proxy_xyxy": [
+            213.68701171875,
+            331.59626083374025,
+            508.3605651855469,
+            383.665283203125
+          ],
+          "nearest_vehicle_point_xy": [
+            508.3605651855469,
+            383.665283203125
+          ],
+          "image_gap_pixels": 1118.8781319772909,
+          "normalized_image_gap": 5.7700171414106824,
+          "image_gap_closing_rate": -0.05027685699596347,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        },
+        {
+          "event_type": "person_forklift_proximity",
+          "person_track_id": "P0:11",
+          "forklift_track_id": "F0:1",
+          "timestamp_seconds": 12.2,
+          "severity": "CRITICAL",
+          "observation_status": "confirmed",
+          "reason": "image_plane_proximity_rule",
+          "recent_pedestrian_overlap_evidence": false,
+          "person_bbox_xyxy": [
+            480.1570129394531,
+            137.4780731201172,
+            524.24658203125,
+            302.3962707519531
+          ],
+          "forklift_bbox_xyxy": [
+            213.68701171875,
+            36.53846740722656,
+            508.3605651855469,
+            383.665283203125
+          ],
+          "person_anchor_xy": [
+            502.20179748535156,
+            302.3962707519531
+          ],
+          "forklift_ground_proxy_xyxy": [
+            213.68701171875,
+            331.59626083374025,
+            508.3605651855469,
+            383.665283203125
+          ],
+          "nearest_vehicle_point_xy": [
+            502.20179748535156,
+            302.3962707519531
+          ],
+          "image_gap_pixels": 0.0,
+          "normalized_image_gap": 0.0,
+          "image_gap_closing_rate": null,
+          "orientation_status": "unknown",
+          "distance_meters": null,
+          "distance_geometry": "box_boundary",
+          "scope": "camera_image_plane_proximity_candidate",
+          "camera_id": "reverse-proximity",
+          "distance_unit": "person_height_normalized_image_gap",
+          "zone_roi_used": false
+        }
+      ]
+    }
+  ],
+  "first_critical_before": 12.2,
+  "first_critical_after": 8.0,
+  "tests": 168,
+  "video_sha256": "80e30afd5cd011c882ae7298db3b56eb32cb8e32cdfda9497e739a13a6454795",
+  "limits": "Development camera: bbox geometry and probable occupant association are heuristics. Thresholds recalibrated for new geometry, not physical collision distances. New track at12s pending until12.2s."
+}

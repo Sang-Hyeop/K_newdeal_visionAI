@@ -8,15 +8,16 @@ from ultralytics.trackers.byte_tracker import BYTETracker, STrack
 
 
 class PersonTracker:
-    def __init__(self, processed_fps, max_gap_seconds=1.0, target_class='person', namespace='', expose_current_candidates=False, fuse_score=True):
+    def __init__(self, processed_fps, max_gap_seconds=1.0, target_class='person', namespace='', expose_current_candidates=False, fuse_score=True, high_threshold=.25):
         if processed_fps <= 0 or max_gap_seconds <= 0:
             raise ValueError('Positive FPS and gap required')
+        if not .1<high_threshold<=1:raise ValueError('Tracker threshold must exceed low threshold')
         self.gap = max_gap_seconds
         self.target_class=target_class;self.namespace=namespace
         self.expose_current_candidates=expose_current_candidates
         self._counter=itertools.count(1)
-        self.backend = BYTETracker(SimpleNamespace(track_high_thresh=.25,
-            track_low_thresh=.1, new_track_thresh=.25,
+        self.backend = BYTETracker(SimpleNamespace(track_high_thresh=high_threshold,
+            track_low_thresh=.1, new_track_thresh=high_threshold,
             track_buffer=max(1, math.ceil(processed_fps*max_gap_seconds)),
             match_thresh=.8, fuse_score=fuse_score))
         # Independent counters prevent one class's reset reusing another class's ID.

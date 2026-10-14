@@ -1,5 +1,7 @@
 # 실행 결과
 
-생성 영상·로그·추론 캐시·학습 결과는 Git에서 제외됩니다. 최신 확인본: diagnostics/scenario_ppe_contract_short/(1~4), diagnostics/scenario_ppe_contract_hood/(5~6), diagnostics/scenario_ppe_contract_verified/(7). 각 video번호/ 아래 demo.mp4, detections.jsonl, summary.json과 기능별 공통 이벤트가 있습니다.
+최신 재생용 리뷰는 reviews/, 검출·추적·판정 근거는 diagnostics/, 발표 사진은 presentation/, 팀 연동 자료는 handoff/에 있다.
+각 diagnostic/video번호/의 detections.jsonl·summary.json과 기능별 events_v1.jsonl·observations_v1.jsonl이 재처리 근거다. 최신 결과 목록은 docs/workspace-guide.md를 참고한다.
 
-과거 출력은 비교·재현 증거입니다. 캐시가 현재 재처리 실행에 사용될 수 있으므로 폴더 날짜만 보고 삭제하지 마세요. 현재 채택 모델·규칙은 configs/와 docs/workspace-guide.md를 확인합니다.
+2026-10-14 대체된 진단폴더44개와 임시 캐시를 삭제했다. 과거 작은 평가요약은 docs/history/cleanup-2026-10-14/diagnostic-summaries에 보존했다. 파일별 삭제목록은 cleanup-2026-10-14/deletion-manifest.json에 있다.
+유지한 기본실행 캐시는 코드/설정에서 참조하므로 임의 삭제하지 않는다.
