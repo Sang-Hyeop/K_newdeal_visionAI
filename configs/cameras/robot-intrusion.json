@@ -1,0 +1,16 @@
+{
+  "camera_id": "presentation2-robot-intrusion",
+  "source_name": "2_restricted_zone_intrusion.mp4",
+  "source_sha256": "f656df46a9f5943b06a29a3adbce03da974c087c3af70692a695a1b1b7bb79b9",
+  "polygon_normalized": [[0.30,0.42],[0.72,0.42],[0.75,0.91],[0.265,0.93]],
+  "roi_id": "robot-red-floor",
+  "roi_review_status": "draft_from_visible_red_floor_requires_user_review",
+  "approach_margin_ratio": 0.025,
+  "max_gap_seconds": 0.6,
+  "person_weights": "models/pretrained/yolo26n.pt",
+  "person_imgsz": 1280,
+  "person_confidence": 0.25,
+  "ppe_final_config": "configs/ppe-final-model.json",
+  "entry_policy": "confirmed_current_person_bottom_center_inside_immediate_critical",
+  "source_type": "AI_generated_demo_not_independent_CCTV_validation"
+}
