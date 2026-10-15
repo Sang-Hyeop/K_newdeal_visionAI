@@ -39,3 +39,5 @@ data/videos/*
 
 # Local annotation restore backup
 /docs/checkpoints/2026-10-12/outputs_reorganization/pre_update_ppe_labels.zip
+# Gradio dashboard local cache (beeps, converted clips)
+team7_data/
