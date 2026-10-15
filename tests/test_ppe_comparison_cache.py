@@ -38,3 +38,12 @@ class ConservativeHelmetGuardTests(unittest.TestCase):
   original={'class':'helmeted_head','confidence':.8,'source':'final_v6_full_frame','bbox_xyxy':[10,10,20,20]}
   bare={'class':'no_helmet_head','confidence':.8,'source':'experimental_v6_upper_body','bbox_xyxy':[30,10,40,20]}
   kept,blocked=m.conservative_extra_heads([original],[original,bare]);self.assertEqual(kept,[original,bare]);self.assertEqual(blocked,[])
+
+class ComparisonPresentationDisplayTests(unittest.TestCase):
+ def test_ppe_video_hides_legacy_cached_forklift_boxes(self):
+  objects=[{'class':'person'},{'class':'forklift'}]
+  self.assertEqual(m.comparison_display_detections(3,objects),[{'class':'person'}])
+  self.assertEqual(objects,[{'class':'person'},{'class':'forklift'}])
+ def test_integrated_video_keeps_people_and_vehicles(self):
+  objects=[{'class':'person'},{'class':'forklift'}]
+  self.assertEqual(m.comparison_display_detections(5,objects),objects)

@@ -1856,5 +1856,24 @@
     "hood_false_safe_regression_blocked": true,
     "production_assets_unchanged": true,
     "limitations": "ID counts are not identity accuracy. All11 new SAFE and15 losses reviewed; warning gains sampled. Production promotion requires correctness/identity validation."
+  },
+  "presentation_display_correction": {
+    "video": 3,
+    "display_classes": [
+      "person"
+    ],
+    "features": [
+      "ppe"
+    ],
+    "raw_ppe_observations_changed": false,
+    "reason": "Historical cached vehicle boxes leaked into PPE comparison renderer; current feature selection now applied to every comparison path.",
+    "review_sha256": {
+      "old_model_fresh_new_policy": "dcb25e663aa49244dc37b19cc22777f8726db42b1344e50a020faf54b9079fcd",
+      "expanded1577_new_policy": "3fbd357e4d4a765d6129fab7643fb42b19ca172fbaced05b14455f6be9b5e7fd",
+      "old_model_new_policy": "060a05e37a8f3d69b44432ee6054f663141215c2da9363f4ccdfcfcb5a6cfad1",
+      "upper_body_recheck_v6": "d7c14398411ace52a5097c07ea71c35f2a5ca799e3ed5f4705cb9e0d63dc0bc0",
+      "stability_guard_v6": "0e994df31c70dc490d76affd1003b9ff95a39de0ae4d6c81d48c181021487f7c"
+    },
+    "tests_passed": 260
   }
 }

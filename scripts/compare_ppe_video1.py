@@ -12,6 +12,7 @@ from src.scenario_render import render, roi_overlay, COLORS
 from src.feature_status import feature_status
 from src.event_contract import export_events
 from collections import Counter
+from src.scenario_selection import presentation_detections
 
 VIDEO_SPECS={
  1:{
@@ -65,6 +66,12 @@ VIDEO_SPECS={
   'use_vehicle_guard':True,
  },
 }
+
+def comparison_display_detections(video, detections):
+ specs=json.loads((ROOT/'configs/demo-scenarios.json').read_text())['scenarios']
+ spec=next(s for s in specs if s['video_number']==video)
+ return presentation_detections(detections,spec)
+
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def stats(rows):
@@ -205,7 +212,7 @@ def matched_existing(args):
    events,_=rule.update(t,tracks,missing,oldrow.get('scene_cut',False))
    if spec['use_vehicle_guard']:events=apply_ppe_vehicle_guard(events,vehicles)
    row['feature_events']['ppe']=events;row.setdefault('features',{})['ppe']=feature_status(events);rows.append(row)
-   groups={'ppe':events};canvas=render(frame.copy(),groups,detections=row['object_detections'])
+   groups={'ppe':events};canvas=render(frame.copy(),groups,detections=comparison_display_detections(args.video,row['object_detections']))
    cv2.putText(canvas,f'VIDEO {args.video} / FRESH v6 / MATCHED PPE REVIEW / t={t:.2f}s',(12,h-14),0,.48,(0,190,255),1);writer.write(canvas)
    if len(rows)%25==0:print(f'video{args.video}: fresh baseline {len(rows)}/{len(original)}',flush=True)
    idx+=1
@@ -274,7 +281,7 @@ def upper_body_audit(args):
     q=by[e['track_id']]
     if (e['severity'],e['observation_status'])!=(q['severity'],q['observation_status']):trace.append({'frame_index':idx,'timestamp_seconds':t,'track_id':e['track_id'],'baseline':e,'upper_body':q})
    previous_tracks={tr['track_id']:tr['detected_bbox_xyxy']for tr in tracks0}
-   left=render(frame.copy(),{'ppe':old['feature_events']['ppe']},detections=old['object_detections']);right=render(frame.copy(),{'ppe':events},detections=old['object_detections']);canvas=__import__('numpy').hstack([cv2.resize(left,(640,360)),cv2.resize(right,(640,360))]);cv2.rectangle(canvas,(0,0),(1280,27),(15,15,15),-1);cv2.putText(canvas,f'v6 MATCHED BASELINE / t={t:.2f}',(8,19),0,.5,(255,255,255),1);cv2.putText(canvas,'v6 + UPPER BODY / SAME RULES',(648,19),0,.5,(255,255,255),1);writer.write(canvas)
+   left=render(frame.copy(),{'ppe':old['feature_events']['ppe']},detections=comparison_display_detections(args.video,old['object_detections']));right=render(frame.copy(),{'ppe':events},detections=comparison_display_detections(args.video,old['object_detections']));canvas=__import__('numpy').hstack([cv2.resize(left,(640,360)),cv2.resize(right,(640,360))]);cv2.rectangle(canvas,(0,0),(1280,27),(15,15,15),-1);cv2.putText(canvas,f'v6 MATCHED BASELINE / t={t:.2f}',(8,19),0,.5,(255,255,255),1);cv2.putText(canvas,'v6 + UPPER BODY / SAME RULES',(648,19),0,.5,(255,255,255),1);writer.write(canvas)
    if len(rows)%100==0:print(f'video{args.video}: upper body {len(rows)}/{len(original)}',flush=True)
    idx+=1
  finally:cap.release();writer.release()
@@ -313,7 +320,7 @@ def stability_audit(args):
     tracks,_=trackers[arm].update(t,people,(h,w),old.get('scene_cut',False));assert sorted(tr['detected_bbox_xyxy']for tr in tracks)==sorted(tr['bbox_xyxy']for tr in people),'Tracking changed observed bodies'
     heads=guarded if use_crop else old['head_detections'];tracks=assign_head_observations(tracks,heads,h);events,_=rules[arm].update(t,tracks,(),old.get('scene_cut',False));events=apply_ppe_vehicle_guard(events,[d['bbox_xyxy']for d in old['object_detections']if d['class']=='forklift']);row=copy.deepcopy(old);save_ppe_observations(row,tracks,heads);row['feature_events']['ppe']=events;row['features']['ppe']=feature_status(events);rows[arm].append(row);ids[arm].update(tr['track_id']for tr in tracks)
     associations.extend({'frame_index':idx,'timestamp_seconds':t,'arm':arm,'old_track_id':p['track_id'],'new_track_id':q['track_id'],'bbox_xyxy':p['detected_bbox_xyxy']}for p in old['ppe_tracks']for q in tracks if p['detected_bbox_xyxy']==q['detected_bbox_xyxy'])
-   left=render(frame.copy(),{'ppe':rows['score_fused_baseline'][-1]['feature_events']['ppe']},detections=old['object_detections']);right=render(frame.copy(),{'ppe':rows['geometry_tracking_guarded_crop'][-1]['feature_events']['ppe']},detections=old['object_detections']);canvas=__import__('numpy').hstack([cv2.resize(left,(640,360)),cv2.resize(right,(640,360))]);cv2.rectangle(canvas,(0,0),(1280,27),(15,15,15),-1);cv2.putText(canvas,f'v6 CONTROL / t={t:.2f}',(8,19),0,.5,(255,255,255),1);cv2.putText(canvas,'GEOMETRY TRACKING + GUARDED CROP',(648,19),0,.5,(255,255,255),1);writer.write(canvas)
+   left=render(frame.copy(),{'ppe':rows['score_fused_baseline'][-1]['feature_events']['ppe']},detections=comparison_display_detections(args.video,old['object_detections']));right=render(frame.copy(),{'ppe':rows['geometry_tracking_guarded_crop'][-1]['feature_events']['ppe']},detections=comparison_display_detections(args.video,old['object_detections']));canvas=__import__('numpy').hstack([cv2.resize(left,(640,360)),cv2.resize(right,(640,360))]);cv2.rectangle(canvas,(0,0),(1280,27),(15,15,15),-1);cv2.putText(canvas,f'v6 CONTROL / t={t:.2f}',(8,19),0,.5,(255,255,255),1);cv2.putText(canvas,'GEOMETRY TRACKING + GUARDED CROP',(648,19),0,.5,(255,255,255),1);writer.write(canvas)
    if i%200==0:print(f'video{args.video}: stability {i}/{len(original)}',flush=True)
    idx+=1
  finally:cap.release();writer.release()
@@ -399,7 +406,7 @@ def main():
     else:
      groups={'ppe':events}
      if args.video==1 and 'proximity' in row['feature_events']:groups=row['feature_events']
-     canvas=render(frame.copy(),groups,detections=row['object_detections'],proximity_warning_ratio=cfg.get('warning_ratio',1.6),include_other_safe_people=True)
+     canvas=render(frame.copy(),groups,detections=comparison_display_detections(args.video,row['object_detections']),proximity_warning_ratio=cfg.get('warning_ratio',1.6),include_other_safe_people=True)
     cv2.putText(canvas,f"{spec['label']} / {n} / t={t:.2f}s / {spec['footer']}",(12,h-14),0,.5,(0,190,255),1)
     for e in events:
      if e.get('observation_held') and e.get('person_bbox_xyxy'):
