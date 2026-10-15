@@ -1,16 +1,21 @@
 {
-  "policy_version": "video5-selected-v6-ppe-context-review-v1",
-  "status": "experimental_video5_development_review",
+  "policy_version": "video7-reviewed-static-stockpile-v3",
+  "status": "experimental_video7_development_review",
   "person_prediction_keys": [
-    "person_coco"
+    "person_coco",
+    "baseline_highres"
   ],
   "vehicle_prediction_keys": [
     "supplement_highres"
   ],
   "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "vehicle_support_required": true,
+  "vehicle_support_weights": "models/nvidia_object_adaptation_v1/best.pt",
+  "vehicle_support_minimum_confidence": 0.12,
+  "vehicle_support_minimum_iou": 0.3,
   "minimum_confidence_by_class": {
     "person": 0.25,
-    "forklift": 0.25
+    "forklift": 0.12
   },
   "maximum_vehicle_frame_area": 0.35,
   "vehicle_part_containment_threshold": 0.85,
@@ -19,5 +24,29 @@
   "ppe_one_head_per_class_per_person": true,
   "ppe_person_upper_fraction": 0.35,
   "renderer": "object_first",
-  "limitation": "Selected existing v6 PPE weights before equipment-label amendment retraining; related development scene; small/occluded people and heads can remain unobserved. No ROI or proximity alerts."
+  "show_safe_pairs_for_other_people": true,
+  "limitation": "Related CCTV development video; support agreement can reject occluded/low-confidence actual vehicles. No zero-miss or unseen-site claim.",
+  "vehicle_support_context": true,
+  "vehicle_support_context_minimum_candidate_confidence": 0.5,
+  "vehicle_support_context_minimum_confidence": 0.3,
+  "deduplicate_cabin_people": true,
+  "vehicle_support_person_context_scale": 1.25,
+  "confirmed_equipment_regions": [
+    {
+      "region_id": "user_confirmed_center_stockpile_2026_10_14",
+      "bbox_normalized": [
+        0.303,
+        0.215,
+        0.405,
+        0.415
+      ],
+      "excluded_classes": [
+        "forklift"
+      ],
+      "minimum_coverage": 0.85,
+      "require_center_inside": true,
+      "review_reason": "user_confirmed_stockpile_not_forklift",
+      "limitation": "Fixed reviewed source camera; a future actual vehicle overlapping this stockpile needs fresh region review."
+    }
+  ]
 }

@@ -36,7 +36,7 @@ def person_labels(d,groups):
         status='HELMET' if stable and ppe.get('severity')=='SAFE' else 'NO HELMET DETECTED' if stable and ppe.get('severity')=='WARNING' and ppe.get('classification_status')=='observed_candidate' else 'NO HELMET? REVIEW' if ppe.get('severity')=='WARNING' else 'PENDING' if ppe.get('reason')=='pending_temporal_confirmation' else 'CHECK'
         labels.append('PPE: '+status)
         if stable and ppe.get('severity')=='WARNING' and severity!='CRITICAL':severity='WARNING'
-    else:labels.append('PPE: PENDING')
+    elif 'ppe' in groups:labels.append('PPE: PENDING')
     return labels,severity
 
 def draw_compact_people(frame,detections,groups):

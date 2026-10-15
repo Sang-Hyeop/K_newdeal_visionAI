@@ -126,7 +126,7 @@
   "distance_mode": "image_plane",
   "policy_version": "user_vehicle_lane_3_seconds_v3",
   "vehicle_critical_seconds": 3,
-  "object_review_profile": "configs/video7-object-review.json",
+  "object_review_profile": "configs/video5-object-review.json",
   "roi_unknown_color": [
     150,
     150,
@@ -137,7 +137,7 @@
   "co_presence_timing": true,
   "warning_ratio": 1,
   "critical_ratio": 0.3,
-  "compact_risk_display": true,
+  "compact_risk_display": false,
   "proximity_alert_lines_only": false,
   "tracker_fuse_score": false,
   "forklift_tracker_fuse_score": false,

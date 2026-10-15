@@ -31,6 +31,9 @@ def install_archive(root,config,archive,replace=False):
     if Path(archive).stat().st_size!=config['bytes'] or digest(archive)!=config['sha256']:raise ValueError('Release ZIP checksum mismatch')
     selected=targets(root,config);pending=[]
     for name,(target,item)in selected.items():
+        override=config.get('local_presentation_overrides',{}).get(item['path'],{})
+        if override.get('disabled_by_presentation_selection') and not target.exists():continue
+        if override.get('sha256') and target.is_file() and target.stat().st_size==override['bytes'] and digest(target)==override['sha256']:continue
         same=target.is_file()and target.stat().st_size==item['bytes']and digest(target)==item['sha256']
         if target.exists()and not same and not replace:raise ValueError('Existing file differs; preserved: '+item['path']+' (use --replace only if intended)')
         if not same:pending.append(name)
@@ -76,7 +79,8 @@ def main():
     installed,existing=install_archive(ROOT,config,archive,a.replace)
     print(f'PASS: installed {installed} assets; {existing} matching existing assets preserved.')
     print('Next: python -m pip install -r requirements-runtime.txt')
-    print('Then: python handoff.py check --models')
+    print('Then: python handoff.py refresh')
+    print('Finally: python handoff.py check --models')
     return 0
 if __name__=='__main__':
     try:sys.exit(main())

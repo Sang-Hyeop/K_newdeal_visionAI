@@ -2,7 +2,7 @@
   "camera_id": "forklift-pair-review",
   "source_name": "3_forklift_crush.mp4",
   "source_sha256": "45d88a410f60c27a593889f6e1988fa2f5b773a881cd97805cbcfa385ae119e7",
-  "object_review_profile": "configs/video3-object-review.json",
+  "object_review_profile": "configs/video3-forklift-pair-object-review.json",
   "warning_ratio": 1.0,
   "critical_ratio": 0.35,
   "distance_unit": "minimum_vehicle_height_normalized_image_gap",

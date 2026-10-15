@@ -37,7 +37,7 @@ python handoff.py test
 
 ## 새 PC 설치
 
-Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`를 실행합니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
+Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`, `python handoff.py refresh`를 순서대로 실행합니다. refresh는 기존 리뷰와 이벤트를 현재 영상별 기능 구성으로 수정합니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
 
 ## 한계와 과거 기록
 
