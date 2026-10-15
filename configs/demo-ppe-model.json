@@ -18,6 +18,11 @@
       5
     ],
     "helmet_guard": "Additional crop-only helmet evidence is review-only and cannot create SAFE",
-    "integration": "Current default; no experimental alternative runner"
+    "integration": "Current default; no experimental alternative runner",
+    "fixed_context_videos": [
+      5
+    ],
+    "fixed_context_version": "v6-approved-window-stable-tracking-guarded-fixed-context-v2",
+    "fixed_context_policy": "320-pixel current-image context only for insufficient heads; unchanged head ownership and evidence thresholds; crop-only helmets blocked"
   }
 }

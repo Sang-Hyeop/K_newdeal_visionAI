@@ -1507,8 +1507,8 @@
       "disabled_by_presentation_selection": true
     },
     "outputs/backend/full_review.sqlite3": {
-      "bytes": 174927872,
-      "sha256": "f42065e6d6a11049c0110d8b6e03d6324f2b89ae021ab2cd19a5196fe6dcf728"
+      "bytes": 175276032,
+      "sha256": "9f4e47e73b30e57712c7dee06fd0e0370d6f30d09755a9164ab5036908cd7f4f"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/detections.jsonl": {
       "bytes": 176917,
@@ -1569,64 +1569,64 @@
       "disabled_by_presentation_selection": true
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl": {
-      "bytes": 117435513,
-      "sha256": "35626497c39ceb4af1371f600358bf7d8a3998192239d46f409db34609eb7707"
+      "bytes": 117665512,
+      "sha256": "6476c34bcb2cd965940d959688813dfe2d066e4ab0daa76ebf9488f360bed6c3"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/events_v1.jsonl": {
-      "bytes": 2043042,
-      "sha256": "cf3938b1fc48078c087c2091068fd5b01fd4c155354622af7895aaacf18e1d0d"
+      "bytes": 2095857,
+      "sha256": "8638476d051b989ef2b8ca9d6f3c3eb7d11d011897fdff339f8b7051902f6f76"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/observations_v1.jsonl": {
-      "bytes": 6907917,
-      "sha256": "22ae4f7c95bbc0aaced9cd7ca224655e069e3b913bf33d61739af2cce7658af7"
+      "bytes": 6980640,
+      "sha256": "710ef2ed9850ab94c0997383a0842582b54a725c558cab9937a4c1fc9dd62b9e"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_0.jpg": {
-      "bytes": 366095,
-      "sha256": "e9a6c4397fc45078f8c7c507bea5089835e055ca106a418db530c82f45876d7c"
+      "bytes": 365391,
+      "sha256": "e58f5d31d27b66bdad433cb9a763b6f6f7fa8ea87e721e42e9a4b789a94603f1"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_25.jpg": {
       "bytes": 411902,
       "sha256": "1da975794a077ccf8ad6290b98811aeb43ca68f468cd5ba2265cd7e0344002ca"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_50.jpg": {
-      "bytes": 386331,
-      "sha256": "b72a76814ed6563186fab85320d7f759cedd2861adc3f4ff0ba479735b0f48b9"
+      "bytes": 386295,
+      "sha256": "5ab9c48756235276e140cd243035a397cd66a82f5e4d00d7111b8b0282dfc5e8"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_75.jpg": {
-      "bytes": 412176,
-      "sha256": "f3899654a18e089bc0630d9a19c0513e4c7318665cb9438502fe558f0ec16f05"
+      "bytes": 411994,
+      "sha256": "e829197cbdd43659a5f402d9dfe436a09040d984bcd8c43cd9e2c03c562dc2ce"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/events_v1.jsonl": {
       "bytes": 3567311,
-      "sha256": "99f6aa293bc65d456cea89accb520a15d0a06e87392c4fe1426063a84d766a63"
+      "sha256": "dbf54ad3393dd242c67e156c9818400fc81da1912d629d5ae8662a2351ae24f8"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/observations_v1.jsonl": {
       "bytes": 18298727,
-      "sha256": "d7ae2e395650f6cafb057ffb025ff771637a9eb7f95cad26291158f7ced1eed4"
+      "sha256": "afb1d71a2086e460235f800ec4314f782b3f2274f50977d1fc911a5ceb23b22e"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/summary.json": {
-      "bytes": 9294,
-      "sha256": "4c7d83f8f10a2803b57d7d0ea1aa6bb616fb585745a4fe22476daba7ae182617"
+      "bytes": 9141,
+      "sha256": "3b721e62d456c1eacdcef99f6d4eb4abad82ac6c774fd5c7cc4fd0f988a948f6"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/verification.json": {
-      "bytes": 4141,
-      "sha256": "daa106acdd3a04d84b64abbd4cb0cc92d294a5b1acaddae8f14e9b740f2703d3"
+      "bytes": 5021,
+      "sha256": "c73dd3da109725e6a3234e1ffe9751aa3894237b8529febc42e0a276276c16e1"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/events_v1.jsonl": {
       "bytes": 4080241,
-      "sha256": "8784c76800e8f56585068eb2432e41bd475d683125adaaac15b6d7131b310aa9"
+      "sha256": "cd77f54fb35c3a40c8b9c904ba85881296ba4f6c1e9f5cb851876948200bcbb2"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/observations_v1.jsonl": {
       "bytes": 18800718,
-      "sha256": "58af34ce92d98cdac9a26c437e49149a5d53bc8a571a22ab714c64fc9900fe72"
+      "sha256": "13dde9ab2923224a9375ccaa5800ee4d1fdd63642736e3b6880e8451a2c991a6"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/events_v1.jsonl": {
       "bytes": 3999849,
-      "sha256": "b33f5d2c826c79601922913869c6a382f1efdae8d6410834526c116ca95cbc95"
+      "sha256": "92b151cad4d3d3c71d5d9513c182ff57c54d201a37c16f9f86a1153859906965"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/observations_v1.jsonl": {
       "bytes": 18458098,
-      "sha256": "ebafcbdf14070ed658455a29289d96d291b7d5b09b0feb48766a2f59f60029fd"
+      "sha256": "9c302464690f82dc76c4e3f48b6a5f2ae7ed3e5cc108da841f663aefcfc803fe"
     },
     "outputs/events/presentation2/ppe/events_v1.jsonl": {
       "bytes": 5818,
@@ -1653,36 +1653,36 @@
       "sha256": "1a7ed117accb99c848b013354b4234cbd7cfe5e811e62f46ff358af8725cf986"
     },
     "outputs/events/presentation5/ppe/events_v1.jsonl": {
-      "bytes": 2043042,
-      "sha256": "cf3938b1fc48078c087c2091068fd5b01fd4c155354622af7895aaacf18e1d0d"
+      "bytes": 2095857,
+      "sha256": "8638476d051b989ef2b8ca9d6f3c3eb7d11d011897fdff339f8b7051902f6f76"
     },
     "outputs/events/presentation5/ppe/observations_v1.jsonl": {
-      "bytes": 6907917,
-      "sha256": "22ae4f7c95bbc0aaced9cd7ca224655e069e3b913bf33d61739af2cce7658af7"
+      "bytes": 6980640,
+      "sha256": "710ef2ed9850ab94c0997383a0842582b54a725c558cab9937a4c1fc9dd62b9e"
     },
     "outputs/events/presentation5/proximity/events_v1.jsonl": {
       "bytes": 3567311,
-      "sha256": "99f6aa293bc65d456cea89accb520a15d0a06e87392c4fe1426063a84d766a63"
+      "sha256": "dbf54ad3393dd242c67e156c9818400fc81da1912d629d5ae8662a2351ae24f8"
     },
     "outputs/events/presentation5/proximity/observations_v1.jsonl": {
       "bytes": 18298727,
-      "sha256": "d7ae2e395650f6cafb057ffb025ff771637a9eb7f95cad26291158f7ced1eed4"
+      "sha256": "afb1d71a2086e460235f800ec4314f782b3f2274f50977d1fc911a5ceb23b22e"
     },
     "outputs/events/presentation5/zone_access/events_v1.jsonl": {
       "bytes": 4080241,
-      "sha256": "8784c76800e8f56585068eb2432e41bd475d683125adaaac15b6d7131b310aa9"
+      "sha256": "cd77f54fb35c3a40c8b9c904ba85881296ba4f6c1e9f5cb851876948200bcbb2"
     },
     "outputs/events/presentation5/zone_access/observations_v1.jsonl": {
       "bytes": 18800718,
-      "sha256": "58af34ce92d98cdac9a26c437e49149a5d53bc8a571a22ab714c64fc9900fe72"
+      "sha256": "13dde9ab2923224a9375ccaa5800ee4d1fdd63642736e3b6880e8451a2c991a6"
     },
     "outputs/events/presentation5/zone_dwell/events_v1.jsonl": {
       "bytes": 3999849,
-      "sha256": "b33f5d2c826c79601922913869c6a382f1efdae8d6410834526c116ca95cbc95"
+      "sha256": "92b151cad4d3d3c71d5d9513c182ff57c54d201a37c16f9f86a1153859906965"
     },
     "outputs/events/presentation5/zone_dwell/observations_v1.jsonl": {
       "bytes": 18458098,
-      "sha256": "ebafcbdf14070ed658455a29289d96d291b7d5b09b0feb48766a2f59f60029fd"
+      "sha256": "9c302464690f82dc76c4e3f48b6a5f2ae7ed3e5cc108da841f663aefcfc803fe"
     },
     "outputs/reviews/2_restricted_zone_intrusion_latest.mp4": {
       "bytes": 1815909,
@@ -1693,8 +1693,8 @@
       "sha256": "871fc36de28341b92a753bb0d9aba0f2fd2e37bb7d0fb6948991b2b32c31f795"
     },
     "outputs/reviews/5_Logistics_Warehouse_latest.mp4": {
-      "bytes": 28728704,
-      "sha256": "9ba5c08d833cda68cafc54361900df6c69cca9d98fb8e3e8d3a73a25f0c6b22d"
+      "bytes": 28731285,
+      "sha256": "6d5700ab815c37262911d8e457528631d081363adb17dda4bc709ea32ea9ed36"
     }
   },
   "local_runtime_status": "Current local results; remote Release changes only after an explicit publish request",

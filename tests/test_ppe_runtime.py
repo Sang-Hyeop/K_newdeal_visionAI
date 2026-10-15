@@ -46,3 +46,32 @@ class RuntimePresentationDisplayTests(unittest.TestCase):
  def test_integrated_video_keeps_people_and_vehicles(self):
   objects=[{'class':'person'},{'class':'forklift'}]
   self.assertEqual(m.display_detections(5,objects),objects)
+
+class FixedContextRuntimeTests(unittest.TestCase):
+ def infer(self,video,extra):
+  import numpy as np
+  from types import SimpleNamespace
+  from unittest.mock import patch,Mock
+  model=SimpleNamespace(model=SimpleNamespace(names={0:'helmeted_head',1:'no_helmet_head'}),predict_upper_body_context=Mock(return_value=[]),predict_fixed_context=Mock(return_value=extra))
+  config={'guarded_upper_body_videos':[5],'fixed_context_videos':[5]}
+  policy={'helmet_evidence_confidence':.4,'no_helmet_evidence_confidence':.3}
+  with patch.object(m,'runtime_config',return_value=config),patch.object(m,'detect_current_heads',return_value=[]):
+   heads,blocked=m.infer_runtime_heads(model,np.zeros((400,400,3),dtype=np.uint8),[[100,100,200,300]],policy,None,video)
+  return heads,blocked,model
+ def test_fixed_context_helmet_is_blocked_and_bare_head_retained(self):
+  raw=[{'class':0,'confidence':.9,'box':[130,100,150,125]},{'class':1,'confidence':.8,'box':[130,100,150,125]}]
+  heads,blocked,_=self.infer(5,raw)
+  self.assertEqual([h['class']for h in heads],['no_helmet_head'])
+  self.assertEqual([h['class']for h in blocked],['helmeted_head'])
+ def test_fixed_context_cannot_assign_outside_person_head_region(self):
+  heads,blocked,_=self.infer(5,[{'class':1,'confidence':.95,'box':[300,300,320,320]}])
+  self.assertEqual(heads,[]);self.assertEqual(blocked,[])
+ def test_ppe_only_video_does_not_run_additional_context(self):
+  heads,blocked,model=self.infer(3,[])
+  model.predict_fixed_context.assert_not_called();model.predict_upper_body_context.assert_not_called()
+
+class RuntimeVersionScopeTests(unittest.TestCase):
+ def test_only_integrated_video_gets_new_cache_version(self):
+  self.assertEqual(m.runtime_version(2),m.runtime_version())
+  self.assertEqual(m.runtime_version(3),m.runtime_version())
+  self.assertNotEqual(m.runtime_version(5),m.runtime_version())

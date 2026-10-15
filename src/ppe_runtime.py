@@ -9,8 +9,9 @@ ROOT=Path(__file__).resolve().parents[1]
 def runtime_config():
  return json.loads((ROOT/'configs/demo-ppe-model.json').read_text())['runtime']
 
-def runtime_version():
- return runtime_config()['version']
+def runtime_version(video=None):
+ cfg=runtime_config()
+ return cfg.get('fixed_context_version',cfg['version'])if video in cfg.get('fixed_context_videos',[])else cfg['version']
 
 def load_policy():
  policy=json.loads((ROOT/runtime_config()['policy']).read_text())
@@ -74,4 +75,20 @@ def infer_runtime_heads(model,frame,boxes,policy,review,video):
   if len(supported)!=1:insufficient.append(box)
  extra=[{'class':model.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'v6_upper_body','model_sources':['baseline','final_v6']}for q in model.predict_upper_body_context(frame,insufficient)]if insufficient else[]
  if review:extra,_=exclude_confirmed_equipment(extra,frame.shape[:2],review,frame)
- return conservative_extra_heads(heads,heads+extra)
+ kept,blocked=conservative_extra_heads(heads,heads+extra)
+ if video in runtime_config().get('fixed_context_videos',[]):
+  missing=[]
+  for i,box in enumerate(boxes):
+   current=[q for q in kept if head_owner(q['bbox_xyxy'],boxes,frame.shape[0],upper_fraction=.35)==i]
+   if not any(q['confidence']>=policy['helmet_evidence_confidence'if q['class']=='helmeted_head'else'no_helmet_evidence_confidence']for q in current):missing.append(box)
+  fixed=[]
+  for box in missing:
+   owner=boxes.index(box)
+   for q in model.predict_fixed_context(frame,[box]):
+    if head_owner(q['box'],boxes,frame.shape[0],upper_fraction=.35)!=owner:continue
+    fixed.append({'class':model.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'v6_fixed_context','model_sources':['baseline','final_v6']})
+  if review:fixed,_=exclude_confirmed_equipment(fixed,frame.shape[:2],review,frame)
+  # As with upper-body search, new context alone must never certify helmet wearing.
+  blocked.extend(q for q in fixed if q['class']=='helmeted_head')
+  kept.extend(q for q in fixed if q['class']=='no_helmet_head')
+ return kept,blocked

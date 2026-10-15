@@ -213,7 +213,7 @@ def main():
                 if ppe_enabled:
                     if idx in cached:
                         entry=cached[idx]
-                        if entry['ppe_runtime_version']!=runtime_version() or entry['ppe_input_detections'] is None:
+                        if entry['ppe_runtime_version']!=runtime_version(n) or entry['ppe_input_detections'] is None:
                             raise ValueError('PPE cache is not current; install the latest runtime or run --fresh')
                         ppe_inputs=entry['ppe_input_detections'];heads=entry['head_detections'];blocked_helmets=entry['ppe_blocked_helmet_candidates']
                         ppe_tracks,_=pt.update(t,ppe_inputs,(h,w),cut)
@@ -238,7 +238,7 @@ def main():
                     zrow['transitions'] = [e for e in zrow.get('transitions', []) if e['event_type'] in groups]
                 record = {'frame_index': idx, 'timestamp_seconds': t, 'scene_cut': cut, 'object_detections': detections, 'ppe_tracks': ppe_tracks, 'head_detections': heads, 'features': {k: feature_status(v) for k, v in groups.items()}, 'feature_events': groups, 'zone': zrow, 'global_safety_status': 'not_evaluated','movement_input_detections':movement_inputs}
                 if ppe_enabled:
-                    record.update(ppe_input_detections=ppe_inputs,ppe_runtime_version=runtime_version(),ppe_blocked_helmet_candidates=blocked_helmets)
+                    record.update(ppe_input_detections=ppe_inputs,ppe_runtime_version=runtime_version(n),ppe_blocked_helmet_candidates=blocked_helmets)
                 if prox:
                     record['proximity_tracking'] = proximity
                 if review:
@@ -278,7 +278,7 @@ def main():
             writer.release()
         (dest / 'detections.jsonl').write_text(''.join((json.dumps(r) + '\n' for r in rows)))
         # Keep inert legacy keys to preserve config hashes and event IDs.
-        context = {'camera_id': f'demo-video{n}', 'video': source.name, 'source_sha256': spec['source_sha256'], 'model_version': hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest(), 'config_version': hashlib.sha256(json.dumps({'spec': spec, 'camera': pcfg, 'ppe_policy': policy, 'sample_fps': a.sample_fps, 'ppe_search': 'full_recall', 'hood_auxiliary': False, 'ppe_final': True, 'max_seconds': a.max_seconds, 'object_review_profile': review, 'forklift_specialist': None, 'forklift_specialist_imgsz': None, 'forklift_geometric_association': False, 'proximity_geometry_override': a.proximity_geometry, 'temporal_riders': a.temporal_riders, 'vehicle_recovery_provenance': cs.get('vehicle_recovery_provenance') if a.reuse_run else None, 'forklift_additional_weights': []}, sort_keys=True).encode()).hexdigest()}
+        context = {'camera_id': f'demo-video{n}', 'video': source.name, 'source_sha256': spec['source_sha256'], 'model_version': hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest(), 'config_version': hashlib.sha256(json.dumps({'spec': spec, 'camera': pcfg, 'ppe_policy': policy, 'sample_fps': a.sample_fps, 'ppe_search': 'full_recall', 'ppe_runtime': runtime_version(n) if ppe_enabled else None, 'hood_auxiliary': False, 'ppe_final': True, 'max_seconds': a.max_seconds, 'object_review_profile': review, 'forklift_specialist': None, 'forklift_specialist_imgsz': None, 'forklift_geometric_association': False, 'proximity_geometry_override': a.proximity_geometry, 'temporal_riders': a.temporal_riders, 'vehicle_recovery_provenance': cs.get('vehicle_recovery_provenance') if a.reuse_run else None, 'forklift_additional_weights': []}, sort_keys=True).encode()).hexdigest()}
         counts = {}
         for feature, records in feature_rows.items():
             directory = dest / feature
@@ -287,7 +287,7 @@ def main():
             counts[feature] = {state: sum((feature_status(r['events'])['display_state'] == state for r in records)) for state in ['SAFE', 'WARNING', 'CRITICAL', 'UNKNOWN']}
         summary = {'source': str(source), 'source_sha256': spec['source_sha256'], 'video_number': n, 'presentation_video_number': spec.get('presentation_video_number') or n, 'samples': len(rows), 'processed_fps': rate, 'ppe_enabled': ppe_enabled, 'ppe_final_selected': ppe_enabled, 'review_max_seconds': a.max_seconds, 'forklift_geometric_association': False, 'ppe_cache_reused': bool(cached), 'all_real_inference_reused_from': str(a.reuse_run) if a.reuse_objects else None, 'ppe_reused_from': str(a.reuse_run) if a.reuse_run else None, 'reused_vehicle_context_refinement': a.refine_reused_vehicles, 'ppe_search': 'full_recall', 'features': counts, 'context': context, 'model_hashes': hashes, 'camera_config': pcfg, 'geometry_comparison_override': a.proximity_geometry, 'temporal_riders': a.temporal_riders, 'vehicle_recovery_provenance': cs.get('vehicle_recovery_provenance') if a.reuse_run else None, 'limitations': ['Sampled frames; zero misses not proven for unseen scenes', 'No calibrated meter distance', 'Hood-only follows user bare-head labeling policy; missing or uncertain detections remain UNKNOWN', 'PPE WARNING is review candidate, not verified violation', 'ROI floor proxies and geometry require review; scene cuts disable ROI']}
         summary['enabled_features'] = sorted(groups)
-        if ppe_enabled:summary['ppe_runtime_version']=runtime_version()
+        if ppe_enabled:summary['ppe_runtime_version']=runtime_version(n)
         if a.temporal_riders:
             summary.update(status='current_default', rider_confirmation_observations=3, role_pending_policy='unconfirmed_no_distance_or_lane_alert', ppe_body_cache_note='PPE observations preserved from validated original cache; body cleanup applies to movement rules and display objects')
         if review:
