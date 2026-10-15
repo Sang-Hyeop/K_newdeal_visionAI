@@ -35,7 +35,9 @@ python handoff.py test
 
 이벤트 API는 `http://127.0.0.1:8010/events?limit=5`입니다. API·대시보드 연결은 `docs/github-team-quickstart.md`와 `backend_v1/API_SPEC.md`를 참조합니다.
 
-## 새 PC 설치
+## 업데이트 및 새 PC 설치
+
+기존 팀원은 이번 PR 병합 후 `git pull --ff-only origin main`을 먼저 실행합니다. 병합 전 작업 브랜치와 역할별 안내는 `docs/github-team-quickstart.md`를 참고합니다.
 
 Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`, `python handoff.py check`를 순서대로 실행합니다. 최신 Release에는 영상별 기능 구성이 적용된 결과가 포함돼 있습니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
 

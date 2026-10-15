@@ -1,8 +1,8 @@
 {
   "name": "Siseon team runtime handoff",
-  "date": "2026-10-14",
-  "source_commit": "acc38fa1459d287de1a4bd7949ffd43c4a8c5e32",
-  "source_branch": "main (PR #11 merged)",
+  "date": "2026-10-15",
+  "source_commit": "b12db8997e101921476527c6eb12ef95ee7993de",
+  "source_branch": "data/hoodie-ppe-candidates (current runtime update; PR required for main)",
   "python_tested": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
   "runtime_versions": {
     "ultralytics": "8.4.153",
