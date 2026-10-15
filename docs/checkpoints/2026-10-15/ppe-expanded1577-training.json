@@ -1,71 +1,169 @@
 {
-  "status": "training_started",
-  "date": "2026-10-15",
-  "request": {
-    "initial_weights": "/Users/sanghyeopkim/Desktop/workspace/models/ppe_final/ppe_helmet_v6_960.pt",
-    "initial_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
-    "initial_choice": "Original v6; previous head63 experiment was not promoted",
-    "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
-    "counts": {
-      "train": 1263,
-      "val": 218,
-      "test": 117
-    },
-    "params": {
-      "data": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/ppe_expanded_1577/dataset.yaml",
-      "epochs": 10,
-      "patience": 4,
-      "imgsz": 640,
-      "batch": 8,
-      "device": "cpu",
-      "workers": 0,
-      "project": "/Users/sanghyeopkim/Desktop/workspace/models/experiments",
-      "name": "ppe_expanded_1577",
-      "exist_ok": true,
-      "lr0": 0.0003,
-      "lrf": 0.1,
-      "optimizer": "AdamW",
-      "freeze": 10,
-      "seed": 42,
-      "deterministic": true,
-      "plots": false,
-      "save": true,
-      "amp": false,
-      "mosaic": 0.15,
-      "close_mosaic": 3,
-      "mixup": 0.0,
-      "degrees": 0.0,
-      "translate": 0.05,
-      "scale": 0.15,
-      "fliplr": 0.5,
-      "cache": false
-    },
-    "runtime_promotion": false
+  "status": "completed_candidate_not_promoted",
+  "counts": {
+    "train": 1263,
+    "val": 218,
+    "test": 117
   },
-  "counts_by_class": {
-    "train": {
-      "class_1_boxes": 2261,
-      "class_1_images": 655,
-      "class_0_boxes": 1307,
-      "class_0_images": 784
+  "epochs_completed": 10,
+  "elapsed_seconds": 3013.56352686882,
+  "policy_unchanged": true,
+  "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+  "dataset_manifest_sha256": "672adc7a5333a11634691d94fb8fe2c7fda486d5b8e524773ec85b84da60d91d",
+  "comparison": {
+    "baseline": {
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/models/ppe_final/ppe_helmet_v6_960.pt",
+      "sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+      "metrics": {
+        "metrics/precision(B)": 0.8583507384171036,
+        "metrics/recall(B)": 0.6636523884360902,
+        "metrics/mAP50(B)": 0.7685896068300573,
+        "metrics/mAP50-95(B)": 0.4010218916128445,
+        "fitness": 0.4010218916128445
+      },
+      "per_class": {
+        "class_ids": [
+          0,
+          1
+        ],
+        "precision": [
+          0.9060985343935628,
+          0.8106029424406446
+        ],
+        "recall": [
+          0.607318285679326,
+          0.7199864911928544
+        ],
+        "mAP50": [
+          0.7523952739340168,
+          0.7847839397260977
+        ],
+        "mAP50_95": [
+          0.4247449707479832,
+          0.3772988124777061
+        ]
+      }
     },
-    "val": {
-      "class_1_boxes": 522,
-      "class_1_images": 94,
-      "class_0_boxes": 276,
-      "class_0_images": 151
-    },
-    "test": {
-      "class_0_boxes": 143,
-      "class_1_boxes": 321,
-      "class_0_images": 80,
-      "class_1_images": 58
+    "candidate": {
+      "weights": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/ppe_expanded_1577/weights/best.pt",
+      "sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+      "metrics": {
+        "metrics/precision(B)": 0.9136419700961698,
+        "metrics/recall(B)": 0.868683762483111,
+        "metrics/mAP50(B)": 0.9318122601396412,
+        "metrics/mAP50-95(B)": 0.610855049757755,
+        "fitness": 0.610855049757755
+      },
+      "per_class": {
+        "class_ids": [
+          0,
+          1
+        ],
+        "precision": [
+          0.9226317978041274,
+          0.9046521423882122
+        ],
+        "recall": [
+          0.8339407336889634,
+          0.9034267912772586
+        ],
+        "mAP50": [
+          0.909512817310962,
+          0.9541117029683205
+        ],
+        "mAP50_95": [
+          0.5888517192869768,
+          0.6328583802285331
+        ]
+      }
     }
   },
-  "manifest_sha256": "672adc7a5333a11634691d94fb8fe2c7fda486d5b8e524773ec85b84da60d91d",
-  "data_path": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/ppe_expanded_1577",
-  "run_path": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/ppe_expanded_1577",
-  "source_label_validation_tolerance": 1e-06,
-  "label_note": "One historical annotation crosses y=0 by 0.0000005 normalized due to decimal rounding; retained unchanged, within 1e-6 validation tolerance.",
-  "github_uploaded": false
+  "weights": {
+    "best.pt": {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/ppe_expanded_1577/weights/best.pt",
+      "sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+      "bytes": 5364357
+    },
+    "last.pt": {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/ppe_expanded_1577/weights/last.pt",
+      "sha256": "0979d2b9f3eb7226357c04c51c3ea4a0bd6857e157a9997818edc8161898d8e0",
+      "bytes": 5364357
+    }
+  },
+  "limitation": "117 development/public-source test images (108 imported source test + 9 existing). Not independent real-site evaluation. Full video comparison still required.",
+  "date": "2026-10-15",
+  "preparation": {
+    "status": "training_started",
+    "date": "2026-10-15",
+    "request": {
+      "initial_weights": "/Users/sanghyeopkim/Desktop/workspace/models/ppe_final/ppe_helmet_v6_960.pt",
+      "initial_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+      "initial_choice": "Original v6; previous head63 experiment was not promoted",
+      "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+      "counts": {
+        "train": 1263,
+        "val": 218,
+        "test": 117
+      },
+      "params": {
+        "data": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/ppe_expanded_1577/dataset.yaml",
+        "epochs": 10,
+        "patience": 4,
+        "imgsz": 640,
+        "batch": 8,
+        "device": "cpu",
+        "workers": 0,
+        "project": "/Users/sanghyeopkim/Desktop/workspace/models/experiments",
+        "name": "ppe_expanded_1577",
+        "exist_ok": true,
+        "lr0": 0.0003,
+        "lrf": 0.1,
+        "optimizer": "AdamW",
+        "freeze": 10,
+        "seed": 42,
+        "deterministic": true,
+        "plots": false,
+        "save": true,
+        "amp": false,
+        "mosaic": 0.15,
+        "close_mosaic": 3,
+        "mixup": 0.0,
+        "degrees": 0.0,
+        "translate": 0.05,
+        "scale": 0.15,
+        "fliplr": 0.5,
+        "cache": false
+      },
+      "runtime_promotion": false
+    },
+    "counts_by_class": {
+      "train": {
+        "class_1_boxes": 2261,
+        "class_1_images": 655,
+        "class_0_boxes": 1307,
+        "class_0_images": 784
+      },
+      "val": {
+        "class_1_boxes": 522,
+        "class_1_images": 94,
+        "class_0_boxes": 276,
+        "class_0_images": 151
+      },
+      "test": {
+        "class_0_boxes": 143,
+        "class_1_boxes": 321,
+        "class_0_images": 80,
+        "class_1_images": 58
+      }
+    },
+    "manifest_sha256": "672adc7a5333a11634691d94fb8fe2c7fda486d5b8e524773ec85b84da60d91d",
+    "data_path": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/ppe_expanded_1577",
+    "run_path": "/Users/sanghyeopkim/Desktop/workspace/models/experiments/ppe_expanded_1577",
+    "source_label_validation_tolerance": 1e-06,
+    "label_note": "One historical annotation crosses y=0 by 0.0000005 normalized due to decimal rounding; retained unchanged, within 1e-6 validation tolerance.",
+    "github_uploaded": false
+  },
+  "best_validation_epoch": 10,
+  "github_uploaded": false,
+  "main_merged": false
 }
