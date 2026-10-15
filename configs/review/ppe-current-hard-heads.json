@@ -1,5 +1,5 @@
 {
-  "status": "reviewed_training_supplement_not_trained",
+  "status": "reviewed_training_supplement_trained_not_promoted",
   "classes": {
     "0": "helmeted_head",
     "1": "no_helmet_head"
@@ -455,5 +455,359 @@
     "cross_split_exact_file_overlap": 0,
     "new_label_bounds_tolerance": 0,
     "legacy_label_bounds_rounding_tolerance": 1e-05
+  },
+  "training_run": {
+    "status": "completed_not_promoted",
+    "decision": "Keep current v6 and reviews/events: validation recall and video3/video5 coverage worsened; source-crop review supports lost no-helmet evidence",
+    "base_weights_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+    "dataset_yaml_sha256": "b9452d1661102ee9469b1bdfd512d7766ab2ea5291836ffd425a19ef0a983038",
+    "training_input_aggregate_sha256": "3799fae2ed39365a8054bdc4cb79e8a3972e8e53f58b5442ffd8eede56db6952",
+    "train_items": 519,
+    "validation_items": 206,
+    "test_items": 108,
+    "test_evaluated": false,
+    "planned_epochs": 6,
+    "completed_epochs": 4,
+    "best_epoch": 1,
+    "early_stop_reason": "No validation fitness improvement for 3 epochs",
+    "settings": {
+      "data": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/ppe_current_hard_heads/dataset.yaml",
+      "epochs": 6,
+      "patience": 3,
+      "batch": 4,
+      "imgsz": 960,
+      "device": "cpu",
+      "workers": 0,
+      "optimizer": "AdamW",
+      "lr0": 5e-05,
+      "lrf": 0.1,
+      "warmup_epochs": 0.5,
+      "warmup_bias_lr": 5e-05,
+      "freeze": 10,
+      "seed": 42,
+      "deterministic": true,
+      "mosaic": 0,
+      "mixup": 0,
+      "copy_paste": 0,
+      "degrees": 0,
+      "translate": 0.05,
+      "scale": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0,
+      "close_mosaic": 0,
+      "amp": false,
+      "cache": false,
+      "plots": false,
+      "verbose": false
+    },
+    "epoch_history": [
+      {
+        "epoch": 1.0,
+        "time": 252.41,
+        "train/box_loss": 1.32798,
+        "train/cls_loss": 4.55059,
+        "train/l1_loss": 0.00757,
+        "metrics/precision(B)": 0.86519,
+        "metrics/recall(B)": 0.71032,
+        "metrics/mAP50(B)": 0.79692,
+        "metrics/mAP50-95(B)": 0.41612,
+        "val/box_loss": 1.52161,
+        "val/cls_loss": 3.07885,
+        "val/l1_loss": 0.01466,
+        "lr/pg0": 4.92308e-05,
+        "lr/pg1": 4.92308e-05,
+        "lr/pg2": 5e-05
+      },
+      {
+        "epoch": 2.0,
+        "time": 523.662,
+        "train/box_loss": 1.34269,
+        "train/cls_loss": 4.52252,
+        "train/l1_loss": 0.00747,
+        "metrics/precision(B)": 0.8513,
+        "metrics/recall(B)": 0.70946,
+        "metrics/mAP50(B)": 0.78936,
+        "metrics/mAP50-95(B)": 0.40328,
+        "val/box_loss": 1.51935,
+        "val/cls_loss": 3.11578,
+        "val/l1_loss": 0.01457,
+        "lr/pg0": 4.25e-05,
+        "lr/pg1": 4.25e-05,
+        "lr/pg2": 4.25e-05
+      },
+      {
+        "epoch": 3.0,
+        "time": 792.936,
+        "train/box_loss": 1.32166,
+        "train/cls_loss": 4.49431,
+        "train/l1_loss": 0.00719,
+        "metrics/precision(B)": 0.84113,
+        "metrics/recall(B)": 0.70304,
+        "metrics/mAP50(B)": 0.78535,
+        "metrics/mAP50-95(B)": 0.39957,
+        "val/box_loss": 1.51836,
+        "val/cls_loss": 3.13336,
+        "val/l1_loss": 0.01457,
+        "lr/pg0": 3.5e-05,
+        "lr/pg1": 3.5e-05,
+        "lr/pg2": 3.5e-05
+      },
+      {
+        "epoch": 4.0,
+        "time": 1102.37,
+        "train/box_loss": 1.35639,
+        "train/cls_loss": 4.44825,
+        "train/l1_loss": 0.00739,
+        "metrics/precision(B)": 0.85147,
+        "metrics/recall(B)": 0.70984,
+        "metrics/mAP50(B)": 0.79301,
+        "metrics/mAP50-95(B)": 0.40678,
+        "val/box_loss": 1.51148,
+        "val/cls_loss": 3.10294,
+        "val/l1_loss": 0.01449,
+        "lr/pg0": 2.75e-05,
+        "lr/pg1": 2.75e-05,
+        "lr/pg2": 2.75e-05
+      }
+    ],
+    "validation_same_batch4_imgsz960": {
+      "baseline": {
+        "metrics/precision(B)": 0.8598995123074809,
+        "metrics/recall(B)": 0.7240686859242443,
+        "metrics/mAP50(B)": 0.7989501944679764,
+        "metrics/mAP50-95(B)": 0.41624579350551383,
+        "fitness": 0.41624579350551383
+      },
+      "candidate": {
+        "metrics/precision(B)": 0.8654405300820271,
+        "metrics/recall(B)": 0.710175254845929,
+        "metrics/mAP50(B)": 0.7927742903397029,
+        "metrics/mAP50-95(B)": 0.41295105103951474,
+        "fitness": 0.41295105103951474
+      }
+    },
+    "checkpoint_equivalence": {
+      "screen_checkpoint_sha256": "b5aa80b46f37a99c83a10432262f352a0a8daa6ff40716b8a3a7543dd73bb33d",
+      "final_checkpoint_sha256": "44a3d9a36a43f1a18ba2a2a802932112f4e20939c89637467fa5dccd01b81808",
+      "loaded_state_dict_exactly_equal": true,
+      "model_state_sha256": "45db9b88a7ce9d9e03635076338bb2e6e1015ca8d8366bd865e2d0554b7f9d69"
+    },
+    "videos": {
+      "3": {
+        "counts": {
+          "observations": 246,
+          "old_unknown": 46,
+          "new_unknown": 51,
+          "WARNING->None": 5
+        },
+        "examples": [
+          {
+            "frame_index": 70,
+            "timestamp_seconds": 2.919583333333333,
+            "track_id": "0:5",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.2816337049007416
+              }
+            ]
+          },
+          {
+            "frame_index": 75,
+            "timestamp_seconds": 3.128125,
+            "track_id": "0:5",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "conflicting_or_missing_or_low_confidence_head",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.28207501769065857
+              }
+            ]
+          },
+          {
+            "frame_index": 80,
+            "timestamp_seconds": 3.3366666666666664,
+            "track_id": "0:5",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.2542702853679657
+              },
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.4883406460285187
+              }
+            ]
+          },
+          {
+            "frame_index": 85,
+            "timestamp_seconds": 3.545208333333333,
+            "track_id": "0:5",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": []
+          },
+          {
+            "frame_index": 90,
+            "timestamp_seconds": 3.7537499999999997,
+            "track_id": "0:5",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.3221375048160553
+              }
+            ]
+          }
+        ],
+        "samples": 58
+      },
+      "5": {
+        "counts": {
+          "observations": 4241,
+          "old_unknown": 2279,
+          "new_unknown": 2357,
+          "WARNING->None": 88,
+          "None->WARNING": 10
+        },
+        "examples": [
+          {
+            "frame_index": 35,
+            "timestamp_seconds": 1.4583333333333333,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "conflicting_or_missing_or_low_confidence_head",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.23989807069301605
+              },
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.157478928565979
+              }
+            ]
+          },
+          {
+            "frame_index": 40,
+            "timestamp_seconds": 1.6666666666666667,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.1846880316734314
+              },
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.3975412845611572
+              }
+            ]
+          },
+          {
+            "frame_index": 45,
+            "timestamp_seconds": 1.875,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.29530686140060425
+              },
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.7110303640365601
+              }
+            ]
+          },
+          {
+            "frame_index": 120,
+            "timestamp_seconds": 5.0,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "conflicting_or_missing_or_low_confidence_head",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.1661868691444397
+              }
+            ]
+          },
+          {
+            "frame_index": 200,
+            "timestamp_seconds": 8.333333333333334,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.332874059677124
+              }
+            ]
+          },
+          {
+            "frame_index": 205,
+            "timestamp_seconds": 8.541666666666666,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "pending_temporal_confirmation",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.1593676507472992
+              }
+            ]
+          },
+          {
+            "frame_index": 265,
+            "timestamp_seconds": 11.041666666666666,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "conflicting_or_missing_or_low_confidence_head",
+            "after_heads": []
+          },
+          {
+            "frame_index": 270,
+            "timestamp_seconds": 11.25,
+            "track_id": "0:1",
+            "before_severity": "WARNING",
+            "after_severity": null,
+            "after_reason": "conflicting_or_missing_or_low_confidence_head",
+            "after_heads": [
+              {
+                "class": "no_helmet_head",
+                "confidence": 0.23285701870918274
+              }
+            ]
+          }
+        ],
+        "samples": 870
+      }
+    },
+    "qualitative_review": "All five video3 regressions inspected: grey hood no-helmet evidence falls below locked confidence and breaks temporal confirmation; representative frames for eight dominant video5 change groups inspected. Not all changed frames independently labelled.",
+    "artifacts": "Rejected candidate weights, temporary inference caches and trial outputs deleted; nine reviewed training images/labels retained",
+    "runtime_promoted": false,
+    "github_pushed": false
   }
 }
