@@ -1,0 +1,143 @@
+{
+  "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
+  "old_run": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1",
+  "policy": {
+    "status": "user_approved_locked",
+    "approved_date": "2026-10-15",
+    "change_requires_user_instruction": true,
+    "execution_order": [
+      "63_head_retraining",
+      "implement_locked_policy",
+      "full_video_comparison"
+    ],
+    "head_proposal_confidence": 0.15,
+    "helmet_evidence_confidence": 0.4,
+    "no_helmet_evidence_confidence": 0.3,
+    "window_seconds": 1.0,
+    "minimum_valid_observations": 3,
+    "minimum_class_fraction": 0.75,
+    "reset_on_single_missed_head": false,
+    "maximum_state_hold_seconds": 0.6,
+    "opposite_evidence": "stop_hold_and_return_pending",
+    "reset_on": [
+      "track_identity_change",
+      "scene_cut"
+    ],
+    "person_head_geometry": "keep_current_until_user_authorizes_change",
+    "person_context_recheck": "recheck_people_without_sufficient_head_evidence",
+    "dashboard": "pending_without_alarm;unassessable_current_people_and_duration;merge_same_person_violation_episode;retain_raw_observations",
+    "runtime_implementation_status": "not_yet_applied_retraining_first",
+    "require_baseline_helmet_confirmation": true
+  },
+  "policy_file_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+  "new_model_sha256": "d2d8e571bb1d779c40fe47c857637c5ee967030f929602dbeb4a6abbc5276d6d",
+  "samples": 106,
+  "processed_fps": 5.0,
+  "same_person_and_vehicle_observations": true,
+  "scope": "PPE-only controlled comparison: old object/person detections reused with source hash and frame index checks; new PPE inference on original frames; existing proximity events unchanged. No independent correctness ground truth.",
+  "arms": {
+    "original": {
+      "counts": {
+        "total": 209,
+        "unconfirmed": 185,
+        "WARNING": 24
+      },
+      "unconfirmed_fraction": 0.8851674641148325,
+      "unconfirmed_reasons": {
+        "supplement_only_helmet_unconfirmed": 1,
+        "pending_temporal_confirmation": 34,
+        "conflicting_or_missing_or_low_confidence_head": 150
+      },
+      "held_person_samples": 0,
+      "warning_episode_starts": 7,
+      "state_changes_between_adjacent_observations": 14,
+      "denominator": "repeated person-time records, not unique people or actual violations"
+    },
+    "old_model_new_policy": {
+      "counts": {
+        "total": 209,
+        "unconfirmed": 148,
+        "WARNING": 61
+      },
+      "unconfirmed_fraction": 0.7081339712918661,
+      "unconfirmed_reasons": {
+        "conflicting_or_missing_or_low_confidence_head": 107,
+        "pending_temporal_confirmation": 41
+      },
+      "held_person_samples": 29,
+      "warning_episode_starts": 8,
+      "state_changes_between_adjacent_observations": 16,
+      "denominator": "repeated person-time records, not unique people or actual violations"
+    },
+    "head63_new_policy": {
+      "counts": {
+        "total": 209,
+        "unconfirmed": 147,
+        "WARNING": 62
+      },
+      "unconfirmed_fraction": 0.7033492822966507,
+      "unconfirmed_reasons": {
+        "conflicting_or_missing_or_low_confidence_head": 92,
+        "pending_temporal_confirmation": 55
+      },
+      "held_person_samples": 28,
+      "warning_episode_starts": 8,
+      "state_changes_between_adjacent_observations": 16,
+      "denominator": "repeated person-time records, not unique people or actual violations"
+    },
+    "matched_old_model_new_policy": {
+      "counts": {
+        "total": 209,
+        "unconfirmed": 148,
+        "WARNING": 61
+      },
+      "unconfirmed_fraction": 0.7081339712918661,
+      "unconfirmed_reasons": {
+        "conflicting_or_missing_or_low_confidence_head": 107,
+        "pending_temporal_confirmation": 41
+      },
+      "held_person_samples": 29,
+      "warning_episode_starts": 8,
+      "state_changes_between_adjacent_observations": 16,
+      "denominator": "repeated person-time records, not unique people or actual violations"
+    }
+  },
+  "controlled_model_comparison": "matched_old_model_new_policy vs head63_new_policy uses same targeted person-context recheck; old_model_new_policy replays original cached heads to isolate temporal policy only.",
+  "implementation": {
+    "entrypoint": "scripts/compare_ppe_video1.py",
+    "rolling_policy": "src/ppe_window_events.py",
+    "locked_values_changed": false,
+    "production_default_policy_changed": false,
+    "comparison_only": true,
+    "tests_passed": 244,
+    "model_and_targeted_recheck_control": "matched old model/new policy: 148 unconfirmed; new model/new policy:147",
+    "classification_ground_truth": "not exhaustively annotated for video1; rates measure output coverage, not accuracy",
+    "code_sha256": {
+      "src/ppe_events.py": "6c4e40dab142aa119ebebddacef3e1b6e39b328e4dd8e6b7597c7b9cb7a15a66",
+      "src/ppe_window_events.py": "3c8d4e6fc4cdb075d24b8f83fb8f9c8f083441214d0184c98bcb5037de487bff",
+      "src/ppe_final_detector.py": "ca18e85dbb5f1ab2773a56989986b9c558988ac61728a663ff11ce4332678e5f",
+      "scripts/compare_ppe_video1.py": "70fd64be7c575759c5850c4749c055c06b4780a41ed71d5b6d92784aa43fa46d",
+      "tests/test_ppe_window_events.py": "9fc953f0185b23f04c955b734fa20a453d1dca3cb5d2cae89a735613aa5af510"
+    }
+  },
+  "artifacts": {
+    "old_model_new_policy": {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_compare_2026-10-15/video1/old_model_new_policy/review.mp4",
+      "sha256": "9471af339455dc11a8295f5b2e1296970ebfe88ccfb939b32f0923974f13f0f3",
+      "frames": 106,
+      "fps": 5.0,
+      "duration_seconds": 21.2,
+      "events_sha256": "23d93a81e372f6048392cb642ea97454cde273f1f1d993f08a6815f488b59c50",
+      "observations_sha256": "b991c462aafee15d469fd8007b792827419554068891e24cc2e1dbe61659f54d"
+    },
+    "head63_new_policy": {
+      "path": "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/ppe_compare_2026-10-15/video1/head63_new_policy/review.mp4",
+      "sha256": "fdfb17b415301547d4e6d694a2af8504b2f5dccb48e8b73d562c9fd15ede62e9",
+      "frames": 106,
+      "fps": 5.0,
+      "duration_seconds": 21.2,
+      "events_sha256": "9d552f49ff83d9d7a70dc2484b518ec54501f7a3c6082c2c0e153cd2d5bd8bd9",
+      "observations_sha256": "7498464559b1de37755f010047423f23e5b73fc849bfe42810beb201272cf04e"
+    }
+  }
+}

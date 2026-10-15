@@ -4,14 +4,14 @@ from ultralytics import YOLO
 import importlib.util
 
 class FinalPPEDetector:
-    def __init__(self, bundle=None):
+    def __init__(self, bundle=None, weights=None):
         folder=Path(bundle) if bundle else Path(__file__).resolve().parent
         if not (folder/'ppe_helmet_v6_960.pt').exists():
             folder=Path(__file__).resolve().parents[1]/'models/ppe_final'
         spec=importlib.util.spec_from_file_location('ppe_final_duplicates',folder/'ppe_duplicate_filter.py')
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
         self.filter=module.clean
-        self.model=YOLO(str(folder/'ppe_helmet_v6_960.pt'))
+        self.model=YOLO(str(weights or folder/'ppe_helmet_v6_960.pt'))
         if self.model.names != {0:'helmeted_head',1:'no_helmet_head'}:
             raise ValueError('Unexpected PPE class order')
     def predict(self, frame):
