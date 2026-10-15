@@ -1,0 +1,459 @@
+{
+  "status": "reviewed_training_supplement_not_trained",
+  "classes": {
+    "0": "helmeted_head",
+    "1": "no_helmet_head"
+  },
+  "images": 9,
+  "head_boxes": 9,
+  "class_counts": {
+    "helmeted_head": 1,
+    "no_helmet_head": 8
+  },
+  "reviewed_candidates": 30,
+  "rejected_candidates": 21,
+  "video5_initial_reinspection_note": "Two preliminary accepted candidates rejected during overlay review for very small/occluded heads; final video5 acceptance6/24",
+  "split_policy": "All presentation3/5 images are train-only development adaptation; no same-scene validation/test claim",
+  "dataset_root": "data/reviewed_pilot/ppe_current_hard_heads",
+  "training_list": "train.txt",
+  "training_items": 519,
+  "base_training_items": 510,
+  "external_validation_items": 206,
+  "external_test_items": 108,
+  "duplicate_audit": {
+    "existing_unique_images_checked": 1526,
+    "pixel_exact_duplicates": [],
+    "dhash_nearest": {
+      "video3_f000125_hard_head.png": [
+        18,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/new_task_2654009_011_NVIDIA_video_01108_f00072.jpg"
+      ],
+      "video3_f000175_hard_head.png": [
+        17,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/new_task_2654005_129_NVIDIA_video_00286_f00072.jpg"
+      ],
+      "video5_f000290_hard_head.png": [
+        18,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0018_000357_jpg.rf.3bdf178206d1dc015141f55cccec3f60.jpg"
+      ],
+      "video5_f000870_hard_head.png": [
+        17,
+        "data/reviewed_pilot/ppe_expanded_1577/val/images/hhw5_0374_006534_jpg.rf.087b7153e2b6228bf01316d7a12360c3.jpg"
+      ],
+      "video5_f000090_hard_head.png": [
+        18,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_1141_002622_jpg.rf.21ca5e5c098e5193fdde45ec5561595f.jpg"
+      ],
+      "video5_f003805_hard_head.png": [
+        18,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0130_003371_jpg.rf.1979a4c74f56310fce78925b9f6f0560.jpg"
+      ],
+      "video3_f000050_hard_head.png": [
+        19,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0192_004733_jpg.rf.016d7d0c128bb7383d6b4c397805bea6.jpg"
+      ],
+      "video5_f000740_hard_head.png": [
+        18,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/supplement63_expanded_1076.png"
+      ],
+      "video5_f000690_hard_head.png": [
+        20,
+        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0522_003103_jpg.rf.1e3e11c8080b65c7c64fa016a73cecd1.jpg"
+      ]
+    },
+    "limitations": "Image-level hash screening cannot prove semantic uniqueness or absence of the same scene in differently cropped images; all new video crops remain development-exposed train-only."
+  },
+  "limitations": [
+    "Hash screening does not prove semantic independence from previously cropped same-video examples",
+    "Small native-resolution crops cannot restore missing image detail",
+    "No model training or runtime promotion performed in this step",
+    "One helmet vs eight no-helmet supplement; keep mixed base corpus, do not train only these nine"
+  ],
+  "records": [
+    {
+      "index": 0,
+      "frame_index": 870,
+      "timestamp_seconds": 36.25,
+      "track_id": "0:39",
+      "crop_xyxy": [
+        363,
+        202,
+        419,
+        268
+      ],
+      "person_bbox_xyxy": [
+        369.4687194824219,
+        218.3145751953125,
+        405.8930969238281,
+        340.910888671875
+      ],
+      "source": "data/videos/5_Logistics Warehouse.mp4",
+      "unconfirmed_reason": "conflicting_or_missing_or_low_confidence_head",
+      "image": "images/video5_f000870_hard_head.png",
+      "label": "labels/video5_f000870_hard_head.txt",
+      "manual_head_xyxy": [
+        20,
+        18,
+        35,
+        41
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video5_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "7b904218be8210dcfc2f8eb4f172ee669e8aec8daa1a07391e0fbf5d07e01241",
+      "label_sha256": "43a73fa8f57c1e3ea104facd56d046fd78ea807eb17ef66a5e5dd3d2e5b9b4df",
+      "native_resolution": [
+        56,
+        66
+      ],
+      "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 3,
+      "frame_index": 290,
+      "timestamp_seconds": 12.083333333333334,
+      "track_id": "0:1",
+      "crop_xyxy": [
+        477,
+        171,
+        533,
+        237
+      ],
+      "person_bbox_xyxy": [
+        483.5814208984375,
+        190.28079223632812,
+        519.353515625,
+        281.3591003417969
+      ],
+      "source": "data/videos/5_Logistics Warehouse.mp4",
+      "unconfirmed_reason": "conflicting_or_missing_or_low_confidence_head",
+      "image": "images/video5_f000290_hard_head.png",
+      "label": "labels/video5_f000290_hard_head.txt",
+      "manual_head_xyxy": [
+        28,
+        23,
+        40,
+        41
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video5_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "0eae332135bd0f32a4780939b5e6f94578d9d3e7f0352f06c06fdfdf3b9b400c",
+      "label_sha256": "921773b8095bdff53f964dbba9960f978bb2ac2adeb488dc6964dfd303fa3724",
+      "native_resolution": [
+        56,
+        66
+      ],
+      "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 9,
+      "frame_index": 90,
+      "timestamp_seconds": 3.75,
+      "track_id": "0:4",
+      "crop_xyxy": [
+        366,
+        148,
+        422,
+        214
+      ],
+      "person_bbox_xyxy": [
+        374.76177978515625,
+        166.53173828125,
+        405.94232177734375,
+        268.5347900390625
+      ],
+      "source": "data/videos/5_Logistics Warehouse.mp4",
+      "unconfirmed_reason": "conflicting_or_missing_or_low_confidence_head",
+      "image": "images/video5_f000090_hard_head.png",
+      "label": "labels/video5_f000090_hard_head.txt",
+      "manual_head_xyxy": [
+        23,
+        16,
+        35,
+        33
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video5_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "c00e58c92b5cba5b930c8aaa24aa9196d47c6917c714f43343fde6ddd0b37278",
+      "label_sha256": "ab735027d5d4d5106babec9d3937b893d7d2bf20445446a13634160ced2ba856",
+      "native_resolution": [
+        56,
+        66
+      ],
+      "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 11,
+      "frame_index": 690,
+      "timestamp_seconds": 28.75,
+      "track_id": "0:45",
+      "crop_xyxy": [
+        567,
+        175,
+        623,
+        241
+      ],
+      "person_bbox_xyxy": [
+        573.300537109375,
+        194.7838134765625,
+        610.421630859375,
+        283.9957275390625
+      ],
+      "source": "data/videos/5_Logistics Warehouse.mp4",
+      "unconfirmed_reason": "conflicting_or_missing_or_low_confidence_head",
+      "image": "images/video5_f000690_hard_head.png",
+      "label": "labels/video5_f000690_hard_head.txt",
+      "manual_head_xyxy": [
+        24,
+        16,
+        39,
+        32
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video5_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "5a44bb06dc0b26cb0790e21cb2d62a564626a7f4b4d590ac8be5a272cc4d4bd8",
+      "label_sha256": "9347f69dc7b8fffb45261ffa00aa44724ffc15ef65428c189e79ecc293963a5e",
+      "native_resolution": [
+        56,
+        66
+      ],
+      "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 14,
+      "frame_index": 3805,
+      "timestamp_seconds": 158.54166666666666,
+      "track_id": "0:245",
+      "crop_xyxy": [
+        576,
+        176,
+        632,
+        242
+      ],
+      "person_bbox_xyxy": [
+        583.147705078125,
+        195.14059448242188,
+        618.069091796875,
+        289.9777526855469
+      ],
+      "source": "data/videos/5_Logistics Warehouse.mp4",
+      "unconfirmed_reason": "conflicting_or_missing_or_low_confidence_head",
+      "image": "images/video5_f003805_hard_head.png",
+      "label": "labels/video5_f003805_hard_head.txt",
+      "manual_head_xyxy": [
+        24,
+        24,
+        36,
+        42
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video5_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "e68af1f3e137a39dfcc575a9e9f470f1e5e294a426c1b20f8f8b385894524372",
+      "label_sha256": "981d7d48f33c27b83ccb4b3acf1fa9a2ed1626169cf663d5ce9c804ba5415419",
+      "native_resolution": [
+        56,
+        66
+      ],
+      "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 21,
+      "frame_index": 740,
+      "timestamp_seconds": 30.833333333333332,
+      "track_id": "0:48",
+      "crop_xyxy": [
+        455,
+        172,
+        511,
+        238
+      ],
+      "person_bbox_xyxy": [
+        461.4449768066406,
+        191.9031982421875,
+        496.5680847167969,
+        281.06597900390625
+      ],
+      "source": "data/videos/5_Logistics Warehouse.mp4",
+      "unconfirmed_reason": "conflicting_or_missing_or_low_confidence_head",
+      "image": "images/video5_f000740_hard_head.png",
+      "label": "labels/video5_f000740_hard_head.txt",
+      "manual_head_xyxy": [
+        24,
+        22,
+        38,
+        38
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video5_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "72db1bfa135ea9fe929a8c67b873a2d0c0845b2de9ddd15a32dabc9567a5e33e",
+      "label_sha256": "905b5965118ec73897c54014633b570aad978ebe5070dcd35761e48669200099",
+      "native_resolution": [
+        56,
+        66
+      ],
+      "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 0,
+      "frame_index": 50,
+      "timestamp_seconds": 2.0854166666666667,
+      "track_id": "0:4",
+      "crop_xyxy": [
+        347,
+        591,
+        459,
+        703
+      ],
+      "source": "data/videos/3_PPE_Helmet.mp4",
+      "person_bbox_xyxy": [
+        345.48663330078125,
+        613.022216796875,
+        478.5074462890625,
+        719.9013671875
+      ],
+      "image": "images/video3_f000050_hard_head.png",
+      "label": "labels/video3_f000050_hard_head.txt",
+      "manual_head_xyxy": [
+        24,
+        22,
+        82,
+        89
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video3_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "56a02d35c460b8126f71e6eaca3716c407bb8383c69306f1502baed68a856dcb",
+      "label_sha256": "75e92e937e679c764d8a9f0f34f0802a32a88c19148b39ae7c36bcc7e694a0ac",
+      "native_resolution": [
+        112,
+        112
+      ],
+      "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 1,
+      "frame_index": 125,
+      "timestamp_seconds": 5.213541666666666,
+      "track_id": "0:4",
+      "crop_xyxy": [
+        595,
+        307,
+        667,
+        403
+      ],
+      "source": "data/videos/3_PPE_Helmet.mp4",
+      "person_bbox_xyxy": [
+        598.6910400390625,
+        319.94891357421875,
+        671.4710693359375,
+        513.9549560546875
+      ],
+      "image": "images/video3_f000125_hard_head.png",
+      "label": "labels/video3_f000125_hard_head.txt",
+      "manual_head_xyxy": [
+        24,
+        10,
+        52,
+        50
+      ],
+      "class_id": 1,
+      "class_name": "no_helmet_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video3_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "7c7d40043f0568e808f4e5382695af69ffa66a0ef411faa06e26a90311a88f75",
+      "label_sha256": "bf5debb9be32e1275858da1e9c911994a25c110237dd446c5a25e89b4b516e68",
+      "native_resolution": [
+        72,
+        96
+      ],
+      "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    },
+    {
+      "index": 3,
+      "frame_index": 175,
+      "timestamp_seconds": 7.298958333333333,
+      "track_id": "1:4",
+      "crop_xyxy": [
+        428,
+        184,
+        488,
+        248
+      ],
+      "source": "data/videos/3_PPE_Helmet.mp4",
+      "person_bbox_xyxy": [
+        439.8904113769531,
+        199.8044891357422,
+        505.6780090332031,
+        363.27850341796875
+      ],
+      "image": "images/video3_f000175_hard_head.png",
+      "label": "labels/video3_f000175_hard_head.txt",
+      "manual_head_xyxy": [
+        13,
+        15,
+        45,
+        48
+      ],
+      "class_id": 0,
+      "class_name": "helmeted_head",
+      "review_method": "assistant visual inspection of source crop, manual pixel boxes, then overlay reinspection",
+      "split": "train",
+      "group": "presentation_video3_development_exposed",
+      "independent_evaluation_eligible": false,
+      "image_sha256": "c1498185c7fab96a8f8b51365df39eea4c5b26418268e7ae0bdc5af459153f28",
+      "label_sha256": "ae321bdb45e8f88365c62ac11a38d4d8301957d779c6f3b9489d328f9b45954f",
+      "native_resolution": [
+        60,
+        64
+      ],
+      "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+      "review_status": "accepted_after_manual_overlay_reinspection"
+    }
+  ],
+  "validation": {
+    "image_list_counts": {
+      "train": 519,
+      "val": 206,
+      "test": 108
+    },
+    "cross_split_exact_file_overlap": 0,
+    "new_label_bounds_tolerance": 0,
+    "legacy_label_bounds_rounding_tolerance": 1e-05
+  }
+}
