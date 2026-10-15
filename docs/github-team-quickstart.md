@@ -1,10 +1,6 @@
 # GitHub만으로 팀 작업 시작하기
 
-## 점검 결과와 보완
-
-PR #11의 코드·설정·최종 원본 영상 5개는 main에 반영됐다. 그러나 모델 가중치와 최신 생성 영상·전체 이벤트 로그는 Git 제외여서, 그 시점의 clone만으로는 실제 감지 실행이나 최신 로그 연결을 완료할 수 없었다. 이전 ZIP 전달 기록도 별도 작업 브랜치에만 있었다.
-
-현재는 GitHub Releases의 `runtime-2026-10-14`에 필요한 실행 자료를 함께 제공한다. 개인 PC에서 별도로 파일을 전달받을 필요가 없다. 소스 코드는 저장소, 모델·결과·전체 로그는 Release로 나누며 설치 스크립트가 경로를 연결한다. 실행 자료 기준은 main의 PR #11 병합 커밋 `acc38fa`이다.
+현재 코드는 Git 저장소, 모델·최신 리뷰·전체 로그는 GitHub Release `runtime-2026-10-14`에 있습니다. 설치 명령이 약179MB 자료를 다운로드해 연결하므로 ZIP을 직접 전달받지 않아도 됩니다. 실행은 handoff.py로 통일합니다.
 
 ## 공통 준비
 
@@ -16,9 +12,9 @@ cd K_newdeal_visionAI
 python scripts/setup_runtime.py
 ```
 
-`setup_runtime.py`는 Python 표준 라이브러리만 사용한다. 약 179MB의 GitHub Release를 다운로드하고 ZIP·개별 파일 해시를 검사한 뒤, `models/`와 `outputs/`의 정해진 위치에 설치한다. 다른 내용의 기존 파일은 기본적으로 보존하고 오류로 알려준다. 의도적으로 기존 실행 자료를 교체할 때만 `--replace`를 사용한다.
+`setup_runtime.py`는 Python 표준 라이브러리만 사용한다. Release ZIP의 과거 내부 번호를 설치 시 현재 발표 번호(video1/video3/video4/video5)로 배치한다. 기존 설치는 setup_runtime.py를 다시 실행하면 되며, 이전 경로는 해시가 같은 복사본만 제거한다. 수정된 기존 파일은 보존한다. 약 179MB의 GitHub Release를 다운로드하고 ZIP·개별 파일 해시를 검사한 뒤, `models/`와 `outputs/`의 정해진 위치에 설치한다. 다른 내용의 기존 파일은 기본적으로 보존하고 오류로 알려준다. 의도적으로 기존 실행 자료를 교체할 때만 `--replace`를 사용한다.
 
-직접 GitHub [Releases](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-14)에서 ZIP을 받은 경우에도 `python scripts/setup_runtime.py --archive 받은파일.zip`로 설치할 수 있다. 새 버전 안내가 README/스크립트에 보이지 않으면 해당 안내 PR이 main에 병합됐는지 먼저 확인한다.
+직접 GitHub [Releases](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-14)에서 ZIP을 받은 경우에도 `python scripts/setup_runtime.py --archive 받은파일.zip`로 설치할 수 있다.
 
 ## 백엔드·대시보드 담당
 
@@ -69,14 +65,3 @@ python handoff.py run --video 5
 ## GitHub에서 새로 받은 폴더의 검증
 
 GitHub에서 작업 브랜치를 새로 clone한 뒤 공개 Release 다운로드→111개 자료 설치→원본 5개 및 실행 자료 해시 검사→모델 6개 CPU 추론→검사 252+8개→실제 로그 재가져오기→5번 1샘플 재실행을 확인했다. DB는 이벤트 6,139건·관측 4,142건·영상 5개다. 검증 환경은 기존 safety Python 환경을 사용했으며 새 운영체제의 의존성 설치까지 검증한 것은 아니다. 근거는 docs/checkpoints/2026-10-14/github-runtime-verification.json이다.
-
-main 반영 전에는 Release 태그로도 시작할 수 있다:
-
-```sh
-git clone --branch runtime-2026-10-14 --depth 1 https://github.com/Sang-Hyeop/K_newdeal_visionAI.git
-cd K_newdeal_visionAI
-python scripts/setup_runtime.py
-python handoff.py backend --port 8010
-```
-
-태그에서 작업 브랜치를 만들려면 `git switch -c feat/작업이름`을 사용한다.

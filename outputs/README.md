@@ -1,11 +1,12 @@
-# GitHub 실행 자료 설치
+# 현재 결과
 
-저장소 루트에서 `python scripts/setup_runtime.py`를 실행하면 GitHub Releases의 검증된 모델·최신 결과·로그를 설치합니다. [팀 시작 안내](../docs/github-team-quickstart.md)를 우선 확인하세요.
+- reviews/: 확정 리뷰 MP4 5개만 보관합니다.
+- events/presentation1~5/: 확정 리뷰와 같은 버전의 전체 이벤트·관측 JSONL.
+- diagnostics/: 확정 결과와 재실행에 필요한 실제 검출 캐시. 별도 실행 대상이 아닙니다.
+- backend/: 위 로그의 조회용 SQLite DB.
+- handoff_runs/: 새 실행 결과. 검수 전이며 확정 리뷰를 대체하지 않습니다.
+- runtime/: 실행 도중 라이브러리가 만드는 설정/캐시.
 
-# 실행 결과
+`python handoff.py list`로 현재 영상별 경로를 확인합니다. 과거 리뷰·비교·학습 출력은 삭제했습니다. 최신 파일 이름과 연결 기준은 configs/team-runtime-index.json입니다.
 
-최신 재생용 리뷰는 reviews/, 검출·추적·판정 근거는 diagnostics/, 발표 사진은 presentation/, 팀 연동 자료는 handoff/에 있다.
-각 diagnostic/video번호/의 detections.jsonl·summary.json과 기능별 events_v1.jsonl·observations_v1.jsonl이 재처리 근거다. 최신 결과 목록은 docs/workspace-guide.md를 참고한다.
-
-2026-10-14 대체된 진단폴더44개와 임시 캐시를 삭제했다. 과거 작은 평가요약은 docs/history/cleanup-2026-10-14/diagnostic-summaries에 보존했다. 파일별 삭제목록은 cleanup-2026-10-14/deletion-manifest.json에 있다.
-유지한 기본실행 캐시는 코드/설정에서 참조하므로 임의 삭제하지 않는다.
+현재 diagnostics의 하위 video 번호는 발표 번호입니다. 내부 판정 시나리오 번호는 코드에서만 사용합니다. 설치 시 Release의 과거 경로를 자동 변환합니다.

@@ -1,0 +1,19 @@
+{
+  "deleted_files": 1722,
+  "deleted_bytes": 3448446286,
+  "models_remaining": 6,
+  "approved_reviews_remaining": 5,
+  "runtime_hashes_verified": 111,
+  "source_videos_verified": 5,
+  "tests": {
+    "detection_and_install": 252,
+    "backend": 8
+  },
+  "manual_cvat_files_preserved_hash_match": 317,
+  "database": {
+    "events": 6139,
+    "observations": 4142
+  },
+  "validation_scope": "Video2 full fresh input; videos1/3/4/5 cached one sample and fresh one sample; video5 fresh includes recovery/review/rider chain. No new full-clip accuracy claim.",
+  "preserved": "All data/, src/, tests/, backend_v1/, historical docs and 124KB nested historical Git metadata."
+}

@@ -1,70 +1,46 @@
-# 시선 — 기존 CCTV 기반 AI 안전관제
+# 시선 — 현재 발표 영상 1~5 실행 안내
 
-작업자·지게차·안전모를 검출하고, 근접 위험·구역 침범·체류를 판정해 이벤트와 관제 화면으로 연결하는 팀 프로젝트입니다. 최종 발표는 기능별 4개와 종합 1개, 총 5개 영상 구성입니다. 화면상 거리는 미터 거리가 아니며 독립 현장 정확도와 전 프레임 미탐 0을 증명한 상태는 아닙니다.
+**현재 실행 입구는 `handoff.py` 하나입니다.** 과거 실험 실행기와 이전 리뷰 결과는 2026-10-14 정리에서 삭제했습니다. 아래 명령은 프로젝트 최상위 폴더에서 실행합니다.
 
-## 팀원이 처음 받았을 때
-
-Python 3.11을 준비하고 GitHub에서 코드와 실행 자료를 받습니다. 개인 ZIP 전달 없이 진행할 수 있습니다.
+## 실행
 
 ```sh
-git clone https://github.com/Sang-Hyeop/K_newdeal_visionAI.git
-cd K_newdeal_visionAI
-python scripts/setup_runtime.py
-python handoff.py check
+python handoff.py list
+python handoff.py check --models
+python handoff.py run --video 1
 ```
 
-코드·설정·원본 5개는 Git, 모델 6개·최신 결과 5개·전체 이벤트 로그·조회 DB는 [GitHub Releases](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-14)로 제공합니다. 설치 스크립트가 약 179MB의 자료를 검증해 프로젝트 안에 배치합니다.
+`--video`를 1~5로 바꿉니다. `list`는 영상별 원본·모델·설정·구현 코드·최신 결과·이벤트 경로를 출력합니다. 개발은 safety 환경을 사용합니다.
 
-- **백엔드/대시보드:** `python handoff.py backend --port 8010` (표준 라이브러리만 필요)
-- **감지:** `python -m pip install -r requirements-runtime.txt` → `python handoff.py run --video 1`
-- **발표/검수:** `outputs/reviews/`의 MP4 재생
-- [역할별 실행·로그·검증 안내](docs/github-team-quickstart.md)
+- 1: 지게차–작업자 충돌 위험
+- 2: 위험구역 ROI 침범
+- 3: 안전모 착용/미착용
+- 4: 위험구역 체류
+- 5: 물류창고 통합 시연 — 차량 복구·탑승자 분리·밑면 중앙 거리 실험
 
-## 시작하기
+1·3·4·5의 기본 실행은 저장된 실제 관측을 재사용합니다. 원본부터 새 추론하려면 `python handoff.py run --video 5 --fresh`처럼 실행합니다. 2번은 항상 원본 전체를 새로 추론합니다. 새 결과는 `outputs/handoff_runs/`에 생성되며 확정 리뷰를 덮어쓰지 않습니다. 이 폴더의 결과는 검수 전 결과입니다.
 
-- [10/14 작업 정리·최신 결과·발표 번호별 실행](docs/progress-2026-10-14.md)
-- [폴더·현재 모델·결과 위치](docs/workspace-guide.md)
-- [최종 원본 영상 구성](data/videos/README.md)
-- [감지 담당 목표](docs/detection-goal.md)
-- [영상별 기준과 변경 이력](docs/demo-feature-show-plan-2026-10-07.md)
-- [백엔드·대시보드 공통 이벤트 계약](docs/team-integration-pack-2026-10-07.md)
-- [샘플 기반 백엔드 API 및 대시보드 전달물](backend_v1/HANDOFF_KO.md)
-- [개발 도구 안내](scripts/README.md)
+## 최신 확정 결과
 
-## 감지 실행
+`outputs/reviews/`에는 영상별 결과 1개씩, 총 5개만 있습니다. `outputs/events/presentation1`~`presentation5`에는 같은 버전의 전체 이벤트·관측 기록이 있습니다. `outputs/diagnostics/`는 기본 실행의 재현 캐시이므로 임의로 삭제하지 않습니다.
+
+실제 모델 6개와 영상별 연결 관계는 `configs/team-runtime-index.json`이 기준입니다. 파일명에서 v16/v2 같은 이름을 보고 최신 여부를 판단하지 않습니다. 기존 학습 데이터와 수동 라벨은 `data/`에 보존했습니다. `src/`는 공통 모듈, `tests/`는 회귀 검증 코드이며 개별 실행 대상이 아닙니다.
+
+## 백엔드·검증
 
 ```sh
-conda activate safety
-python -m pip install -r requirements.txt
-python scripts/run_demo_scenarios.py --videos 2 --ppe-final --sample-fps 5 --output outputs/diagnostics/beta_presentation1
+python handoff.py backend --port 8010
+python handoff.py test
 ```
 
-위 명령은 최종 발표 1번 영상을 기존 내부 시나리오 2로 실행합니다. 발표 3/4/5는 내부 5/4/7이며 발표 2번 ROI는 `scripts/run_intrusion_review.py`를 사용합니다. 필요한 모델은 `python scripts/setup_runtime.py`로 `models/`에 설치하고, 출력은 아직 없는 새 디렉터리를 지정합니다. [현재 5번 차량 복구·탑승자 실험 재현](docs/video5-vehicle-rider-recovery-2026-10-14.md)은 별도 추가 추론과 명시적 실험 옵션을 사용합니다.
+이벤트 API는 `http://127.0.0.1:8010/events?limit=5`입니다. API·대시보드 연결은 `docs/github-team-quickstart.md`와 `backend_v1/API_SPEC.md`를 참조합니다.
 
-최종 PPE는 `models/ppe_final/ppe_helmet_v6_960.pt`입니다. 객체 기본 모델과 카메라별 보완 모델은 `configs/`에 정의돼 있습니다. 여러 모델을 연결하는 구조이며 단일 `.pt` 통합이 완료된 상태는 아닙니다.
+## 새 PC 설치
 
-## 백엔드
+Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`를 실행합니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
 
-`backend_v1/`에는 공통 이벤트 계약의 샘플 JSONL을 SQLite로 가져와 조회하는 API가 있습니다. 실행·검증은 [백엔드 README](backend_v1/README.md)를 따릅니다. 오늘 새 감지 결과의 실시간 연결까지 완료했다고 의미하지는 않습니다.
+## 한계와 과거 기록
 
-## 구조와 결과 보관
+거리 값은 보정되지 않은 화면상 상대 거리이며 실제 m가 아닙니다. 가림·최초 등장·미탐은 미확인으로 남습니다. 2번은 AI 생성 시연 영상입니다. 시연 적응 결과를 독립 현장 정확도로 설명하지 않습니다.
 
-- `src/`, `scripts/`, `configs/`: 감지·후처리·실행·설정.
-- `tests/`, `docs/`: 회귀 검사·기준·검증·인계 기록.
-- `data/videos/`: Git으로 공유하는 최종 원본 MP4 5개.
-- `models/`: Git 제외 가중치.
-- `outputs/reviews/`: workspace에 보관하는 최신 재생 결과.
-- `outputs/diagnostics/`: 이벤트 로그·추론 캐시·검증 결과.
-- `outputs/handoff/`: 팀 연동 전달자료.
-- `docs/history/`, `docs/checkpoints/`: 과거 해설·작은 검증 증거.
-
-모델·최신 생성 영상·현재 전체 로그는 GitHub Releases에서 설치합니다. 재학습용 데이터셋과 과거 실험 전체는 별도로 관리합니다. 최신 파일명은 [작업 정리](docs/progress-2026-10-14.md)를 확인합니다.
-
-## 검증과 협업
-
-```sh
-python -m unittest discover -s tests -q
-python -m unittest discover -s backend_v1 -p 'test_*.py' -q
-```
-
-작업 브랜치 → PR → 리뷰 → 병합은 [협업 안내](docs/CONTRIBUTING.md)를 따릅니다. 시연에 노출된 결과는 시연 환경 적응 성능이며 미확인을 현장 전체 안전으로 해석하지 않습니다.
+현재 문서는 `docs/README.md`에서 시작합니다. 과거 리뷰·학습 실험·초안은 docs에서 삭제했고 Git 이력에서 확인합니다. 현재 사용자는 발표 번호1~5와 handoff.py를 사용합니다. 파일 정리·실행 검증 기록은 `docs/checkpoints/2026-10-14/five-video-cleanup/`에 있습니다.

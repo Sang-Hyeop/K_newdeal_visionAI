@@ -5,3 +5,8 @@ def review_video_numbers(requested,manifest):
     disabled=[n for n in requested if any(q['video_number']==n and not q.get('review_enabled',True)for q in scenarios)]
     if disabled:raise ValueError(f'Videos {disabled} excluded by user from active review/demo')
     return requested
+
+
+def scenario_directory(spec):
+    """Filesystem folders use public presentation IDs, not legacy rule IDs."""
+    return f"video{spec.get('presentation_video_number') or spec['video_number']}"

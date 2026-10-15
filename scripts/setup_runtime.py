@@ -6,15 +6,25 @@ ROOT=Path(__file__).resolve().parents[1]
 def digest(path):
     with Path(path).open('rb')as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 
+def asset_path(root,name):
+    p=PurePosixPath(name)
+    if p.is_absolute() or '..'in p.parts or '\\'in name or not p.parts or p.parts[0]not in {'models','outputs'} or name in {'models/README.md','outputs/README.md'}:
+        raise ValueError('Invalid runtime asset path: '+name)
+    target=root.joinpath(*p.parts)
+    if not target.resolve().is_relative_to(root.resolve()):raise ValueError('Asset escapes repository: '+name)
+    return target
+
 def targets(root,config):
-    result={}
+    result={};destinations=set()
     for item in config['files']:
-        p=PurePosixPath(item['path'])
-        if p.is_absolute() or '..'in p.parts or '\\'in item['path'] or not p.parts or p.parts[0]not in {'models','outputs'} or item['path']in {'models/README.md','outputs/README.md'}:raise ValueError('Invalid runtime asset path: '+item['path'])
-        target=root.joinpath(*p.parts)
-        if not target.resolve().is_relative_to(root.resolve()):raise ValueError('Asset escapes repository: '+item['path'])
-        if item['path']in result:raise ValueError('Duplicate asset: '+item['path'])
-        result[item['path']]=(target,item)
+        name=item.get('archive_path',item['path'])
+        asset_path(root,name)
+        target=asset_path(root,item['path'])
+        if name in result or target.resolve() in destinations:raise ValueError('Duplicate asset: '+name)
+        result[name]=(target,item);destinations.add(target.resolve())
+    # Never delete another member's destination while migrating old paths.
+    for name,(target,item)in result.items():
+        if name!=item['path'] and asset_path(root,name).resolve() in destinations:raise ValueError('Archive path overlaps another destination: '+name)
     return result
 
 def install_archive(root,config,archive,replace=False):
@@ -22,7 +32,7 @@ def install_archive(root,config,archive,replace=False):
     selected=targets(root,config);pending=[]
     for name,(target,item)in selected.items():
         same=target.is_file()and target.stat().st_size==item['bytes']and digest(target)==item['sha256']
-        if target.exists()and not same and not replace:raise ValueError('Existing file differs; preserved: '+name+' (use --replace only if intended)')
+        if target.exists()and not same and not replace:raise ValueError('Existing file differs; preserved: '+item['path']+' (use --replace only if intended)')
         if not same:pending.append(name)
     with zipfile.ZipFile(archive)as z:
         if len(z.namelist())!=len(set(z.namelist())) or set(z.namelist())!=set(selected):raise ValueError('Release ZIP member list differs from manifest')
@@ -37,6 +47,16 @@ def install_archive(root,config,archive,replace=False):
                 os.replace(temp,target)
             finally:
                 if Path(temp).exists():Path(temp).unlink()
+    # Migrate only verified duplicates after every required asset installed.
+    for name,(target,item)in selected.items():
+        if name==item['path']:continue
+        legacy=asset_path(root,name)
+        if legacy.is_file() and not legacy.is_symlink():
+            if legacy.stat().st_size==item['bytes'] and digest(legacy)==item['sha256']:
+                legacy.unlink();parent=legacy.parent
+                while parent!=root and parent.is_dir() and not any(parent.iterdir()):
+                    previous=parent;parent=parent.parent;previous.rmdir()
+            else:print('Preserved different legacy file:',name)
     return len(pending),len(selected)-len(pending)
 
 def main():

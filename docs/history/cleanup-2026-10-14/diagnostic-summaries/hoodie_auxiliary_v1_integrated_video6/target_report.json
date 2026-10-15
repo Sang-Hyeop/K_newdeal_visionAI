@@ -1,9 +1,0 @@
-{
-  "target_samples": 29,
-  "hood_evidence_samples": 29,
-  "ppe_states": {
-    "UNKNOWN": 19,
-    "WARNING": 10
-  },
-  "scope": "scene1 track1:1 sampled observed person; not general zero misses"
-}
