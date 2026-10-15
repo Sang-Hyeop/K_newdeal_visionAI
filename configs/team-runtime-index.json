@@ -1,7 +1,7 @@
 {
   "name": "Siseon team runtime handoff",
   "date": "2026-10-15",
-  "source_commit": "8bc465b",
+  "source_commit": "6050fe4",
   "source_branch": "data/hoodie-ppe-candidates (local integrated runtime; not republished yet)",
   "python_tested": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
   "runtime_versions": {
@@ -159,7 +159,7 @@
     "models/experiments/forklift_real_context_v2/weights/best.pt": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa",
     "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
   },
-  "source_summary_transform": "One validated current result per video; no retained alternative PPE experiments",
+  "source_summary_transform": "Current local runtime includes dashboard merge and guarded fixed-context PPE on video5; not yet republished",
   "excluded": "Training image datasets/raw ZIPs, obsolete experiments, .git, virtual environments, credentials; current inference models and all latest per-frame/event logs are included.",
   "internet_required": "Python environment dependencies need initial installation; model weights, inputs, results and logs are already included.",
   "scope": "Runtime asset metadata; Python sources come from the current repository checkout.",
