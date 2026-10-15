@@ -21,7 +21,7 @@
     "Small repeatedly used development evaluation; no independent-site generalization claim",
     "Temporal pending and person rejection experiments not promoted"
   ],
-  "integration": "Standalone final detector provided; historical ensemble demo runner remains unchanged",
+  "integration": "Active src/ppe_runtime.py through handoff.py and current video runners; no alternative PPE model",
   "annotation_amendment": {
     "date": "2026-10-13",
     "status": "training_annotations_corrected_model_weights_not_retrained",

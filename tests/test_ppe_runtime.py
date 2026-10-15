@@ -1,10 +1,9 @@
 import importlib.util,json,unittest
 from pathlib import Path
 from src.ppe_events import PPEEvents
-spec=importlib.util.spec_from_file_location('ppe_comparison',Path(__file__).resolve().parents[1]/'scripts/compare_ppe_video1.py')
-m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+from src import ppe_runtime as m
 
-class ComparisonCacheTests(unittest.TestCase):
+class RuntimeCacheTests(unittest.TestCase):
  def test_saved_tracks_replay_new_heads_instead_of_cached_old_class(self):
   old={'class':'helmeted_head','confidence':.9,'bbox_xyxy':[30,0,50,30],'model_sources':['baseline']}
   fresh={'class':'no_helmet_head','confidence':.8,'bbox_xyxy':[30,0,50,30],'model_sources':['baseline']}
@@ -39,11 +38,11 @@ class ConservativeHelmetGuardTests(unittest.TestCase):
   bare={'class':'no_helmet_head','confidence':.8,'source':'experimental_v6_upper_body','bbox_xyxy':[30,10,40,20]}
   kept,blocked=m.conservative_extra_heads([original],[original,bare]);self.assertEqual(kept,[original,bare]);self.assertEqual(blocked,[])
 
-class ComparisonPresentationDisplayTests(unittest.TestCase):
+class RuntimePresentationDisplayTests(unittest.TestCase):
  def test_ppe_video_hides_legacy_cached_forklift_boxes(self):
   objects=[{'class':'person'},{'class':'forklift'}]
-  self.assertEqual(m.comparison_display_detections(3,objects),[{'class':'person'}])
+  self.assertEqual(m.display_detections(3,objects),[{'class':'person'}])
   self.assertEqual(objects,[{'class':'person'},{'class':'forklift'}])
  def test_integrated_video_keeps_people_and_vehicles(self):
   objects=[{'class':'person'},{'class':'forklift'}]
-  self.assertEqual(m.comparison_display_detections(5,objects),objects)
+  self.assertEqual(m.display_detections(5,objects),objects)

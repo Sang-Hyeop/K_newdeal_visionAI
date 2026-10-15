@@ -1,13 +1,23 @@
 {
-  "status": "current_five_video_final_ppe",
+  "status": "current_default_v6",
   "weights": {
     "objects": "models/pretrained/yolo26n.pt",
     "ppe_baseline": "models/ppe_final/ppe_helmet_v6_960.pt"
   },
-  "policy": "configs/ppe-recall-review-policy.json",
-  "scope": "Final PPE route for presentation videos 1-5; historical three-network ensemble removed.",
+  "policy": "configs/ppe-user-approved-policy-2026-10-15.json",
+  "scope": "Current PPE for videos2/3/5 only; one active v6 model and approved policy",
   "limitations": [
     "Development-video adaptation; not independent-site accuracy",
     "Missing or occluded heads remain unconfirmed"
-  ]
+  ],
+  "runtime": {
+    "version": "v6-approved-window-stable-tracking-guarded-upper-body-v1",
+    "policy": "configs/ppe-user-approved-policy-2026-10-15.json",
+    "tracker_fuse_score": false,
+    "guarded_upper_body_videos": [
+      5
+    ],
+    "helmet_guard": "Additional crop-only helmet evidence is review-only and cannot create SAFE",
+    "integration": "Current default; no experimental alternative runner"
+  }
 }

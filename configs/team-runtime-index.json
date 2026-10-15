@@ -57,7 +57,7 @@
         "models/pretrained/yolo26n.pt",
         "models/ppe_final/ppe_helmet_v6_960.pt"
       ],
-      "mode": "full_fresh_inference",
+      "mode": "current_default; cached observations or --fresh; replaces this review in place",
       "enabled_features": [
         "zone_access",
         "ppe"
@@ -80,7 +80,7 @@
         "models/pretrained/yolo26n.pt",
         "models/ppe_final/ppe_helmet_v6_960.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference",
+      "mode": "current_default; cached observations or --fresh; replaces this review in place",
       "enabled_features": [
         "ppe"
       ],
@@ -90,7 +90,7 @@
     },
     {
       "presentation_video_number": 4,
-      "review_video": "outputs/reviews/4_hazard_zone_dwell_worker_fixed.mp4",
+      "review_video": "outputs/reviews/4_hazard_zone_dwell_latest.mp4",
       "event_root": "outputs/events/presentation4",
       "diagnostic_root": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4",
       "samples": 92,
@@ -117,7 +117,7 @@
     },
     {
       "presentation_video_number": 5,
-      "review_video": "outputs/reviews/5_Logistics_Warehouse_vehicle_rider_review_v2.mp4",
+      "review_video": "outputs/reviews/5_Logistics_Warehouse_latest.mp4",
       "event_root": "outputs/events/presentation5",
       "diagnostic_root": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5",
       "samples": 870,
@@ -138,7 +138,7 @@
         "models/experiments/forklift_real_context_v2/weights/best.pt",
         "models/nvidia_object_adaptation_v1/best.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference",
+      "mode": "current_default; cached observations or --fresh; replaces this review in place",
       "enabled_features": [
         "proximity",
         "zone_access",
@@ -159,11 +159,13 @@
     "models/experiments/forklift_real_context_v2/weights/best.pt": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa",
     "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
   },
-  "source_summary_transform": "Current presentation feature selection applied; retained rule verdicts unchanged; disabled feature logs removed.",
+  "source_summary_transform": "One validated current result per video; no retained alternative PPE experiments",
   "excluded": "Training image datasets/raw ZIPs, obsolete experiments, .git, virtual environments, credentials; current inference models and all latest per-frame/event logs are included.",
   "internet_required": "Python environment dependencies need initial installation; model weights, inputs, results and logs are already included.",
   "scope": "Runtime asset metadata; Python sources come from the current repository checkout.",
   "current_entrypoint": "handoff.py",
   "cleanup_date": "2026-10-14",
-  "diagnostic_directory_numbering": "presentation_video_number equals data/videos filename number (1-5)"
+  "diagnostic_directory_numbering": "presentation_video_number equals data/videos filename number (1-5)",
+  "current_results_policy": "One current review/event/cache per video; run replaces current results after validation; no retained experimental outputs",
+  "integration": "Current v6 + user-approved PPE window + stable PPE tracking; video5 guarded upper-body search. Rejected PPE candidates removed."
 }

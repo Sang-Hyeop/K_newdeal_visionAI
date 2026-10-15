@@ -34,7 +34,7 @@ class FinalPPEDetector:
         return self.filter(heads,cover=.8,overlap=.7)
 
     def predict_upper_body_context(self,frame,boxes):
-        """Experimental current upper-body crop; production callers stay unchanged."""
+        """Current guarded upper-body search; crop-only helmets cannot certify SAFE."""
         h,w=frame.shape[:2];heads=[]
         for box in boxes:
             bw,bh=box[2]-box[0],box[3]-box[1]

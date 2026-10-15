@@ -1,6 +1,7 @@
 # 1번, 3번, 4번, 5번 영상 분석
 """One saved-video workflow: independent user-selected presentation features, real detections only."""
 from pathlib import Path
+import copy
 import argparse, json, sys, os, hashlib, math
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -9,9 +10,7 @@ import torch, cv2, numpy as np
 from ultralytics import YOLO
 from src.object_recall_ensemble import ObjectRecallEnsemble
 from src.ppe_final_detector import FinalPPEDetector
-from src.ppe_person_crop import head_owner
 from src.ppe_events import PPEEvents
-from src.ppe_unassigned_heads import UnassignedHeadEvents
 from src.person_tracker import PersonTracker
 from src.tracked_proximity import TrackedProximity
 from src.tracked_zone import TrackedZone
@@ -22,6 +21,7 @@ from src.scenario_render import exclude_driver_overlap_pairs, render
 from src.feature_status import feature_status
 from src.detection_review_profile import predict_review_objects, select_review_objects, build_review_models, exclude_confirmed_equipment, refine_reused_vehicle_support
 from src.event_contract import export_events
+from src.ppe_runtime import load_policy, runtime_version, runtime_config, infer_runtime_heads, assign_head_observations
 from src.scenario_selection import review_video_numbers, scenario_directory, presentation_groups, presentation_detections
 
 def sha(p):
@@ -64,7 +64,7 @@ def main():
     manifest = json.load(open(ROOT / 'configs/demo-scenarios.json'))
     obj = json.load(open(ROOT / 'configs/demo-object-model.json'))
     profile = json.load(open(a.ppe_profile))
-    policy = json.load(open(ROOT / 'configs/ppe-recall-review-policy.json'))
+    policy = load_policy()
     profile = {**profile, 'weights': {'objects': profile['weights']['objects'], 'ppe_baseline': 'models/ppe_final/ppe_helmet_v6_960.pt'}}
     paths = [obj['baseline_weights'], obj['supplement_weights'], *profile['weights'].values()]
     hashes = {s: sha(ROOT / s) for s in paths}
@@ -111,7 +111,7 @@ def main():
             cache = a.reuse_run / folder
             cs = json.load(open(cache / 'summary.json'))
             assert cs['source_sha256'] == spec['source_sha256'] and all((cs['model_hashes'].get(k) == hashes[k] for k in cs['model_hashes'] if k in hashes and 'hoodie' not in k)) and (abs(cs['processed_fps'] - rate) < 1e-09)
-            cached = {r['frame_index']: {'events': r['feature_events'].get('ppe', []), 'tracks': r.get('ppe_tracks', []), 'head_detections': r.get('head_detections', []), 'object_detections': r['object_detections'], 'rejected_object_proposals': r.get('rejected_object_proposals', [])} for r in map(json.loads, (cache / 'detections.jsonl').read_text().splitlines())}
+            cached = {r['frame_index']: {'events': r['feature_events'].get('ppe', []), 'tracks': r.get('ppe_tracks', []), 'head_detections': r.get('head_detections', []), 'object_detections': r.get('movement_input_detections',r['object_detections']), 'ppe_input_detections':r.get('ppe_input_detections'), 'ppe_runtime_version':r.get('ppe_runtime_version'), 'ppe_blocked_helmet_candidates':r.get('ppe_blocked_helmet_candidates',[]), 'rejected_object_proposals': r.get('rejected_object_proposals', [])} for r in map(json.loads, (cache / 'detections.jsonl').read_text().splitlines())}
             if a.reuse_objects:
                 ignored = {'vehicle_support_person_context_scale'} if a.refine_reused_vehicles else set()
                 assert {k: v for k, v in cs.get('object_review_profile', {}).items() if k not in ignored} == {k: v for k, v in review.items() if k not in ignored}, 'Object review profile changed; fresh inference required'
@@ -131,9 +131,8 @@ def main():
         prox = TrackedProximity(pcfg, rate) if n == 1 else TrackedProximity({**json.load(open(ROOT / 'configs/cameras/forward-proximity.json')), **pcfg, 'camera_id': 'warehouse-conditional', 'warning_ratio': 1.0, 'critical_ratio': pcfg.get('critical_ratio', 0.3), 'distance_geometry': pcfg.get('distance_geometry', 'box_boundary'), 'associate_riders': True, 'tracker_fuse_score': pcfg.get('tracker_fuse_score', True), 'forklift_tracker_fuse_score': pcfg.get('forklift_tracker_fuse_score', True), 'forklift_tracker_high_threshold': pcfg.get('forklift_tracker_high_threshold', 0.25)}, rate) if n == 5 else None
         vehicle_tracker = None
         pair = None
-        pt = PersonTracker(rate, expose_current_candidates=True)
+        pt = PersonTracker(rate, expose_current_candidates=True, fuse_score=runtime_config()['tracker_fuse_score'])
         prule = PPEEvents(policy) if ppe_enabled else None
-        hrule = UnassignedHeadEvents(rate, policy) if ppe_enabled else None
         rows = []
         feature_rows = {}
         laststate = {}
@@ -185,6 +184,7 @@ def main():
                     if reuse_vehicle_model is None:
                         reuse_vehicle_model = YOLO(ROOT / review['vehicle_support_weights'])
                     detections, rejected_objects = refine_reused_vehicle_support(frame, detections, rejected_objects, review, reuse_vehicle_model)
+                movement_inputs=copy.deepcopy(detections)
                 if a.temporal_riders:
                     from src.vehicle_person_cleanup import separate_merged_vehicle_people
                     detections, merged = separate_merged_vehicle_people(detections)
@@ -209,59 +209,36 @@ def main():
                         pair.reset()
                     groups['forklift_proximity'] = pair.update(t, vehicles, (h, w))
                 suppressed_ppe = []
+                ppe_inputs=[];blocked_helmets=[]
                 if ppe_enabled:
                     if idx in cached:
-                        ppe_tracks = cached[idx]['tracks']
-                        heads = cached[idx]['head_detections']
-                        current = {v['track_id'] for v in ppe_tracks}
-                        missing = [{'track_id': e['track_id']} for e in cached[idx]['events'] if e.get('track_id') not in current and e.get('reason') == 'person_not_observed']
-                        ppe_events, _ = prule.update(t, ppe_tracks, missing, cut)
-                        proposals = heads + [q for tr in ppe_tracks for q in tr['ppe']['head_candidates']]
-                        extra, _ = hrule.update(t, proposals, [tr['detected_bbox_xyxy'] for tr in ppe_tracks], (h, w), cut, body_events=ppe_events)
-                        ppe_events += extra
+                        entry=cached[idx]
+                        if entry['ppe_runtime_version']!=runtime_version() or entry['ppe_input_detections'] is None:
+                            raise ValueError('PPE cache is not current; install the latest runtime or run --fresh')
+                        ppe_inputs=entry['ppe_input_detections'];heads=entry['head_detections'];blocked_helmets=entry['ppe_blocked_helmet_candidates']
+                        ppe_tracks,_=pt.update(t,ppe_inputs,(h,w),cut)
                     else:
-                        pp = person_model.predict(frame, classes=[0], conf=0.1, imgsz=1280, device='cpu', verbose=False)[0]
-                        people = [{'class': 'person', 'confidence': float(b.conf.item()), 'bbox_xyxy': b.xyxy[0].tolist()} for b in pp.boxes]
-                        if review:
-                            people = [dict(d) for d in detections if d['class'] == 'person']
-                        ppe_tracks, missing = pt.update(t, people, (h, w), cut)
-                        heads = [{'class': ppe.model.names[q['class']], 'confidence': q['confidence'], 'bbox_xyxy': q['box'], 'source': 'final_v6_full_frame', 'model_sources': ['baseline', 'final_v6']} for q in ppe.predict(frame)]
-                        boxes = [v['detected_bbox_xyxy'] for v in ppe_tracks]
-                        if review and review.get('ppe_person_context'):
-                            heads += [{'class': ppe.model.names[q['class']], 'confidence': q['confidence'], 'bbox_xyxy': q['box'], 'source': 'final_v6_person_context', 'model_sources': ['baseline', 'final_v6']} for q in ppe.predict_person_context(frame, boxes)]
-                        proposals = heads
-                        observations = [{'head_candidates': [], 'rejected_candidates': [], 'state': 'unknown'} for _ in boxes]
-                        if review:
-                            proposals, equipment_heads = exclude_confirmed_equipment(proposals, (h, w), review, frame)
-                            heads, _ = exclude_confirmed_equipment(heads, (h, w), review, frame)
-                            rejected_objects += equipment_heads
-                        for i, (track, obs) in enumerate(zip(ppe_tracks, observations)):
-                            selected = [q for q in proposals if head_owner(q['bbox_xyxy'], boxes, h, upper_fraction=review.get('ppe_person_upper_fraction', 0.35)) == i]
-                            classes = {q['class'] for q in selected}
-                            if review and review.get('ppe_one_head_per_class_per_person'):
-                                selected = [max((q for q in selected if q['class'] == cls), key=lambda q: q['confidence']) for cls in sorted(classes)]
-                            obs.update(head_candidates=selected, state='helmet_detected' if classes == {'helmeted_head'} else 'no_helmet_candidate' if classes == {'no_helmet_head'} else 'conflicting_evidence' if len(classes) > 1 else 'unknown')
-                            track['ppe'] = obs
-                        ppe_events, _ = prule.update(t, ppe_tracks, missing, cut)
-                        extra, _ = hrule.update(t, proposals, boxes, (h, w), cut, body_events=ppe_events)
-                        ppe_events += extra
-                    suppressed_ppe = []
-                    if review and review.get('ppe_requires_observed_person'):
-                        observed_ids = {tr['track_id'] for tr in ppe_tracks}
-                        suppressed_ppe = [e for e in ppe_events if e.get('track_id') not in observed_ids]
-                        ppe_events = [e for e in ppe_events if e.get('track_id') in observed_ids]
-                    vehicle_boxes = [d['bbox_xyxy'] for d in detections if d.get('class') == 'forklift']
-                    ppe_events = apply_ppe_vehicle_guard(ppe_events, vehicle_boxes)
-                    groups['ppe'] = ppe_events
+                        ppe_inputs=[dict(d)for d in detections if d['class']=='person']
+                        if not review:
+                            pp=person_model.predict(frame,classes=[0],conf=.1,imgsz=1280,device='cpu',verbose=False)[0]
+                            ppe_inputs=[{'class':'person','confidence':float(b.conf.item()),'bbox_xyxy':b.xyxy[0].tolist()}for b in pp.boxes]
+                        ppe_tracks,_=pt.update(t,ppe_inputs,(h,w),cut)
+                        heads,blocked_helmets=infer_runtime_heads(ppe,frame,[tr['detected_bbox_xyxy']for tr in ppe_tracks],policy,review,n)
+                    ppe_tracks=assign_head_observations(ppe_tracks,heads,h)
+                    ppe_events,_=prule.update(t,ppe_tracks,(),cut)
+                    ppe_events=apply_ppe_vehicle_guard(ppe_events,[d['bbox_xyxy']for d in detections if d.get('class')=='forklift'])
+                    groups['ppe']=ppe_events
                 else:
-                    ppe_tracks, heads = [], []
+                    ppe_tracks,heads=[],[]
                 groups = presentation_groups(groups, spec)
                 if spec.get('enabled_features') == ['ppe']:
                     detections = presentation_detections(detections, spec)
                 if zrow:
                     zrow['events'] = [e for e in zrow['events'] if e['event_type'] in groups]
                     zrow['transitions'] = [e for e in zrow.get('transitions', []) if e['event_type'] in groups]
-                record = {'frame_index': idx, 'timestamp_seconds': t, 'scene_cut': cut, 'object_detections': detections, 'ppe_tracks': ppe_tracks, 'head_detections': heads, 'features': {k: feature_status(v) for k, v in groups.items()}, 'feature_events': groups, 'zone': zrow, 'global_safety_status': 'not_evaluated'}
+                record = {'frame_index': idx, 'timestamp_seconds': t, 'scene_cut': cut, 'object_detections': detections, 'ppe_tracks': ppe_tracks, 'head_detections': heads, 'features': {k: feature_status(v) for k, v in groups.items()}, 'feature_events': groups, 'zone': zrow, 'global_safety_status': 'not_evaluated','movement_input_detections':movement_inputs}
+                if ppe_enabled:
+                    record.update(ppe_input_detections=ppe_inputs,ppe_runtime_version=runtime_version(),ppe_blocked_helmet_candidates=blocked_helmets)
                 if prox:
                     record['proximity_tracking'] = proximity
                 if review:
@@ -310,8 +287,9 @@ def main():
             counts[feature] = {state: sum((feature_status(r['events'])['display_state'] == state for r in records)) for state in ['SAFE', 'WARNING', 'CRITICAL', 'UNKNOWN']}
         summary = {'source': str(source), 'source_sha256': spec['source_sha256'], 'video_number': n, 'presentation_video_number': spec.get('presentation_video_number') or n, 'samples': len(rows), 'processed_fps': rate, 'ppe_enabled': ppe_enabled, 'ppe_final_selected': ppe_enabled, 'review_max_seconds': a.max_seconds, 'forklift_geometric_association': False, 'ppe_cache_reused': bool(cached), 'all_real_inference_reused_from': str(a.reuse_run) if a.reuse_objects else None, 'ppe_reused_from': str(a.reuse_run) if a.reuse_run else None, 'reused_vehicle_context_refinement': a.refine_reused_vehicles, 'ppe_search': 'full_recall', 'features': counts, 'context': context, 'model_hashes': hashes, 'camera_config': pcfg, 'geometry_comparison_override': a.proximity_geometry, 'temporal_riders': a.temporal_riders, 'vehicle_recovery_provenance': cs.get('vehicle_recovery_provenance') if a.reuse_run else None, 'limitations': ['Sampled frames; zero misses not proven for unseen scenes', 'No calibrated meter distance', 'Hood-only follows user bare-head labeling policy; missing or uncertain detections remain UNKNOWN', 'PPE WARNING is review candidate, not verified violation', 'ROI floor proxies and geometry require review; scene cuts disable ROI']}
         summary['enabled_features'] = sorted(groups)
+        if ppe_enabled:summary['ppe_runtime_version']=runtime_version()
         if a.temporal_riders:
-            summary.update(status='experimental_not_promoted', rider_confirmation_observations=3, role_pending_policy='unconfirmed_no_distance_or_lane_alert', ppe_body_cache_note='PPE observations preserved from validated original cache; body cleanup applies to movement rules and display objects')
+            summary.update(status='current_default', rider_confirmation_observations=3, role_pending_policy='unconfirmed_no_distance_or_lane_alert', ppe_body_cache_note='PPE observations preserved from validated original cache; body cleanup applies to movement rules and display objects')
         if review:
             summary.update(object_review_profile=review, object_review_cache=str(a.object_review_cache) if a.object_review_cache else None)
         (dest / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')

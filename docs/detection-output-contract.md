@@ -24,7 +24,7 @@
 
 관측에는 feature, camera_id, video, timestamp_seconds, frame_index, scene_id, events, feature_status, observation_status와 global_safety_status=not_evaluated가 들어갑니다. feature_status의 display_state 및 dashboard_state, assessment_counts, risk_alert_count 등을 사용합니다. CRITICAL/WARNING을 미확인이 덮지 않으며, 위험이 없어도 미확인 대상이 있으면 임의 SAFE로 만들지 않습니다. 기능별 상태를 현장 전체 안전으로 확대하지 않습니다.
 
-PPE 머리 클래스는 작업자 전체 미착용 이벤트와 동일하지 않습니다. 사람 연결·시간적 확인·충돌 근거를 고려한 결과를 사용하며 WARNING은 검토 후보입니다. 실제 위반 확정으로 설명하지 않습니다. 구체 임계값은 `configs/ppe-recall-review-policy.json`과 카메라 설정을 따릅니다.
+PPE 머리 클래스는 작업자 전체 미착용 이벤트와 동일하지 않습니다. 사람 연결·시간적 확인·충돌 근거를 고려한 결과를 사용하며 WARNING은 검토 후보입니다. 실제 위반 확정으로 설명하지 않습니다. 구체 임계값은 `configs/ppe-user-approved-policy-2026-10-15.json`과 카메라 설정을 따릅니다.
 
 ## 현재 백엔드의 범위
 

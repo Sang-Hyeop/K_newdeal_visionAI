@@ -7,7 +7,7 @@
 - 차량 복구: vehicle_recovery.
 - 근접: proximity, tracked_proximity. forklift_proximity는 기존 차량쌍 이벤트·렌더링 호환과 회귀 검사에 남긴 공통 기능이며 현재 발표의 핵심 기능은 아닙니다.
 - 구역·체류: zone_access, zone_dwell, lane_hazard, tracked_zone, scenario_zone.
-- PPE: ppe_final_detector, ppe_person_crop, ppe_events, ppe_unassigned_heads, ppe_vehicle_guard. ppe_tiled_inference의 공통 박스 겹침 계산 등은 객체/머리 검수 모듈에서도 사용합니다.
+- PPE: ppe_runtime, ppe_final_detector, ppe_person_crop, ppe_events, ppe_window_events, ppe_vehicle_guard. ppe_unassigned_heads는 현재 기본 경로에서 호출하지 않는 공통 회귀 검증 모듈입니다. ppe_tiled_inference의 공통 박스 겹침 계산 등은 객체/머리 검수 모듈에서도 사용합니다.
 - 이벤트·표시·번호 연결: event_contract, feature_status, observation_display, scenario_render, scenario_selection.
 
 2026-10-15 정리에서 현재 사용하지 않는 별도 사람 소스 라우팅, 지게차 타일/전문모델 비교, 과거 PPE 앙상블·머리 재검수·후드 보조 모듈과 해당 실험 전용 테스트를 삭제했습니다. 현재 객체 앙상블에서 사용하던 IoU 계산은 값이 달라지지 않도록 해당 모듈로 옮겼습니다. 빈 dashboard/detection/events 틀도 제거했습니다.
