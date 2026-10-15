@@ -1,3 +1,4 @@
+# 모델·결과·로그 다운로드 및 설치
 """Download verified GitHub Release runtime assets; Python standard library only."""
 import argparse,hashlib,json,os,shutil,sys,tempfile,urllib.request,zipfile
 from pathlib import Path,PurePosixPath
@@ -35,7 +36,9 @@ def install_archive(root,config,archive,replace=False):
         if override.get('disabled_by_presentation_selection') and not target.exists():continue
         if override.get('sha256') and target.is_file() and target.stat().st_size==override['bytes'] and digest(target)==override['sha256']:continue
         same=target.is_file()and target.stat().st_size==item['bytes']and digest(target)==item['sha256']
-        if target.exists()and not same and not replace:raise ValueError('Existing file differs; preserved: '+item['path']+' (use --replace only if intended)')
+        previous=config.get('previous_file_versions',{}).get(item['path'],[])
+        known_previous=target.is_file() and any(target.stat().st_size==old['bytes'] and digest(target)==old['sha256'] for old in previous)
+        if target.exists()and not same and not known_previous and not replace:raise ValueError('Existing file differs; preserved: '+item['path']+' (use --replace only if intended)')
         if not same:pending.append(name)
     with zipfile.ZipFile(archive)as z:
         if len(z.namelist())!=len(set(z.namelist())) or set(z.namelist())!=set(selected):raise ValueError('Release ZIP member list differs from manifest')
@@ -60,6 +63,14 @@ def install_archive(root,config,archive,replace=False):
                 while parent!=root and parent.is_dir() and not any(parent.iterdir()):
                     previous=parent;parent=parent.parent;previous.rmdir()
             else:print('Preserved different legacy file:',name)
+    # Remove only unchanged files from retired published runtimes; retain user edits.
+    for item in config.get('retired_files',[]):
+        retired=asset_path(root,item['path'])
+        if retired.resolve() in {target.resolve() for target,_ in selected.values()}:raise ValueError('Retired asset is still active: '+item['path'])
+        if retired.is_file() and not retired.is_symlink() and retired.stat().st_size==item['bytes'] and digest(retired)==item['sha256']:
+            retired.unlink();parent=retired.parent
+            while parent!=root and parent.is_dir() and not any(parent.iterdir()):
+                previous_parent=parent;parent=parent.parent;previous_parent.rmdir()
     return len(pending),len(selected)-len(pending)
 
 def main():
@@ -79,8 +90,8 @@ def main():
     installed,existing=install_archive(ROOT,config,archive,a.replace)
     print(f'PASS: installed {installed} assets; {existing} matching existing assets preserved.')
     print('Next: python -m pip install -r requirements-runtime.txt')
-    print('Then: python handoff.py refresh')
-    print('Finally: python handoff.py check --models')
+    print('Then: python handoff.py check')
+    print('Detection team: python handoff.py check --models')
     return 0
 if __name__=='__main__':
     try:sys.exit(main())

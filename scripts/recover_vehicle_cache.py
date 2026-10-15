@@ -1,3 +1,4 @@
+# 5번 신규 분석에서 놓친 차량 추가 탐지
 """Supplement a hash-validated real-inference cache using current source images."""
 import argparse,hashlib,json,sys
 from pathlib import Path

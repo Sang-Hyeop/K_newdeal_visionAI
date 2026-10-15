@@ -1,3 +1,4 @@
+# 1번, 3번, 4번, 5번 영상 분석
 """One saved-video workflow: independent user-selected presentation features, real detections only."""
 from pathlib import Path
 import argparse, json, sys, os, hashlib, math
