@@ -25,3 +25,16 @@ class ComparisonCacheTests(unittest.TestCase):
  def test_missing_ppe_tracks_can_be_rebuilt_from_observed_events(self):
   row={'ppe_tracks':[],'feature_events':{'ppe':[{'track_id':'present','person_bbox_xyxy':[0,0,10,20],'head_candidates':[]},{'track_id':'missing','reason':'person_not_observed'}]}}
   self.assertEqual([t['track_id']for t in m.tracks_from_row(row)],['present'])
+
+class ConservativeHelmetGuardTests(unittest.TestCase):
+ def test_upper_crop_helmet_alone_cannot_create_safe(self):
+  head={'class':'helmeted_head','confidence':.95,'bbox_xyxy':[30,0,50,30],'source':'experimental_v6_upper_body','model_sources':['baseline']}
+  kept,blocked=m.conservative_extra_heads([],[head]);self.assertEqual(kept,[]);self.assertEqual(blocked,[head])
+  policy=json.loads((Path(__file__).resolve().parents[1]/'configs/ppe-user-approved-policy-2026-10-15.json').read_text());rule=PPEEvents(policy)
+  tracks=m.assign_head_observations([{'track_id':'hood','detected_bbox_xyxy':[0,0,100,200],'bbox_xyxy':[0,0,100,200]}],kept,300)
+  for t in [0,.2,.4,.6]:events,_=rule.update(t,tracks)
+  self.assertIsNone(events[0]['severity'])
+ def test_existing_helmet_and_new_bare_head_evidence_are_preserved(self):
+  original={'class':'helmeted_head','confidence':.8,'source':'final_v6_full_frame','bbox_xyxy':[10,10,20,20]}
+  bare={'class':'no_helmet_head','confidence':.8,'source':'experimental_v6_upper_body','bbox_xyxy':[30,10,40,20]}
+  kept,blocked=m.conservative_extra_heads([original],[original,bare]);self.assertEqual(kept,[original,bare]);self.assertEqual(blocked,[])

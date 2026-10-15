@@ -1644,5 +1644,217 @@
       }
     },
     "decision": "Reject video3 adoption due hood false-safe risk. Video5 coverage improves but requires correctness review. Investigate ID instability; do not merge IDs from IoU alone."
+  },
+  "stability_guard_recheck": {
+    "status": "experimental_not_promoted",
+    "trials": {
+      "3": {
+        "status": "experimental_not_promoted",
+        "video": 3,
+        "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+        "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
+        "body_observations_identical": true,
+        "model_weights_changed": false,
+        "PPE_thresholds_changed": false,
+        "helmet_guard": "Experimental crop-only helmet evidence is retained as blocked diagnostics, never used to create SAFE. Original source helmet evidence remains available.",
+        "blocked_crop_helmet_proposals": 7,
+        "arms": {
+          "score_fused_baseline": {
+            "counts": {
+              "total": 246,
+              "unconfirmed": 57,
+              "SAFE": 126,
+              "WARNING": 63
+            },
+            "unconfirmed_fraction": 0.23170731707317074,
+            "unconfirmed_reasons": {
+              "pending_temporal_confirmation": 42,
+              "conflicting_or_missing_or_low_confidence_head": 15
+            },
+            "held_person_samples": 7,
+            "warning_episode_starts": 5,
+            "state_changes_between_adjacent_observations": 17,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 28
+          },
+          "geometry_tracking_only": {
+            "counts": {
+              "total": 246,
+              "unconfirmed": 46,
+              "SAFE": 137,
+              "WARNING": 63
+            },
+            "unconfirmed_fraction": 0.18699186991869918,
+            "unconfirmed_reasons": {
+              "pending_temporal_confirmation": 31,
+              "conflicting_or_missing_or_low_confidence_head": 15
+            },
+            "held_person_samples": 7,
+            "warning_episode_starts": 5,
+            "state_changes_between_adjacent_observations": 16,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 17
+          },
+          "guarded_crop_only": {
+            "counts": {
+              "total": 246,
+              "unconfirmed": 57,
+              "SAFE": 126,
+              "WARNING": 63
+            },
+            "unconfirmed_fraction": 0.23170731707317074,
+            "unconfirmed_reasons": {
+              "pending_temporal_confirmation": 42,
+              "conflicting_or_missing_or_low_confidence_head": 15
+            },
+            "held_person_samples": 7,
+            "warning_episode_starts": 5,
+            "state_changes_between_adjacent_observations": 17,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 28
+          },
+          "geometry_tracking_guarded_crop": {
+            "counts": {
+              "total": 246,
+              "unconfirmed": 46,
+              "SAFE": 137,
+              "WARNING": 63
+            },
+            "unconfirmed_fraction": 0.18699186991869918,
+            "unconfirmed_reasons": {
+              "pending_temporal_confirmation": 31,
+              "conflicting_or_missing_or_low_confidence_head": 15
+            },
+            "held_person_samples": 7,
+            "warning_episode_starts": 5,
+            "state_changes_between_adjacent_observations": 16,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 17
+          }
+        },
+        "limitations": [
+          "Lower ID count is continuity evidence, not IDF1/identity accuracy. Tracking association can still swap nearby people.",
+          "No transfer or merge of stored PPE states between IDs. Every arm replays the original timeline and resets normally.",
+          "Fixed observed person boxes and all proposals reused; candidate geometry and source times do not change."
+        ],
+        "new_safe": 11,
+        "new_warning": 0,
+        "coverage_loss": 0,
+        "confirmed_class_change": 0,
+        "review": {
+          "new_safe_checked": 11,
+          "reviewed_coverage_losses": 0,
+          "reviewed_coverage_gains": 11,
+          "sampling": "all newly SAFE observations and all losses inspected; warning gains sampled; no independent labelled correctness/identity GT",
+          "decision": "experimental; production unchanged",
+          "all_new_safe_visible_external_hard_hats": true,
+          "hood_at_5_839_seconds": "unconfirmed; forbidden SAFE avoided"
+        },
+        "tests_passed": 258
+      },
+      "5": {
+        "status": "experimental_not_promoted",
+        "video": 5,
+        "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+        "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
+        "body_observations_identical": true,
+        "model_weights_changed": false,
+        "PPE_thresholds_changed": false,
+        "helmet_guard": "Experimental crop-only helmet evidence is retained as blocked diagnostics, never used to create SAFE. Original source helmet evidence remains available.",
+        "blocked_crop_helmet_proposals": 41,
+        "arms": {
+          "score_fused_baseline": {
+            "counts": {
+              "total": 4241,
+              "unconfirmed": 2907,
+              "WARNING": 1334
+            },
+            "unconfirmed_fraction": 0.6854515444470644,
+            "unconfirmed_reasons": {
+              "conflicting_or_missing_or_low_confidence_head": 2144,
+              "pending_temporal_confirmation": 763
+            },
+            "held_person_samples": 197,
+            "warning_episode_starts": 115,
+            "state_changes_between_adjacent_observations": 164,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 678
+          },
+          "geometry_tracking_only": {
+            "counts": {
+              "total": 4241,
+              "unconfirmed": 2811,
+              "WARNING": 1430
+            },
+            "unconfirmed_fraction": 0.6628153737326102,
+            "unconfirmed_reasons": {
+              "conflicting_or_missing_or_low_confidence_head": 2085,
+              "pending_temporal_confirmation": 726
+            },
+            "held_person_samples": 236,
+            "warning_episode_starts": 121,
+            "state_changes_between_adjacent_observations": 182,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 301
+          },
+          "guarded_crop_only": {
+            "counts": {
+              "total": 4241,
+              "unconfirmed": 2572,
+              "WARNING": 1669
+            },
+            "unconfirmed_fraction": 0.6064607403914171,
+            "unconfirmed_reasons": {
+              "conflicting_or_missing_or_low_confidence_head": 1796,
+              "pending_temporal_confirmation": 776
+            },
+            "held_person_samples": 209,
+            "warning_episode_starts": 130,
+            "state_changes_between_adjacent_observations": 181,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 678
+          },
+          "geometry_tracking_guarded_crop": {
+            "counts": {
+              "total": 4241,
+              "unconfirmed": 2451,
+              "WARNING": 1790
+            },
+            "unconfirmed_fraction": 0.5779297335534073,
+            "unconfirmed_reasons": {
+              "conflicting_or_missing_or_low_confidence_head": 1738,
+              "pending_temporal_confirmation": 713
+            },
+            "held_person_samples": 255,
+            "warning_episode_starts": 138,
+            "state_changes_between_adjacent_observations": 198,
+            "denominator": "repeated person-time records, not unique people or actual violations",
+            "unique_track_ids": 301
+          }
+        },
+        "limitations": [
+          "Lower ID count is continuity evidence, not IDF1/identity accuracy. Tracking association can still swap nearby people.",
+          "No transfer or merge of stored PPE states between IDs. Every arm replays the original timeline and resets normally.",
+          "Fixed observed person boxes and all proposals reused; candidate geometry and source times do not change."
+        ],
+        "new_safe": 0,
+        "new_warning": 471,
+        "coverage_loss": 15,
+        "confirmed_class_change": 0,
+        "review": {
+          "new_safe_checked": 0,
+          "reviewed_coverage_losses": 15,
+          "reviewed_coverage_gains": 3,
+          "sampling": "all newly SAFE observations and all losses inspected; warning gains sampled; no independent labelled correctness/identity GT",
+          "decision": "experimental; production unchanged"
+        },
+        "tests_passed": 258
+      }
+    },
+    "body_boxes_and_counts_unchanged": true,
+    "PPE_policy_unchanged": true,
+    "hood_false_safe_regression_blocked": true,
+    "production_assets_unchanged": true,
+    "limitations": "ID counts are not identity accuracy. All11 new SAFE and15 losses reviewed; warning gains sampled. Production promotion requires correctness/identity validation."
   }
 }

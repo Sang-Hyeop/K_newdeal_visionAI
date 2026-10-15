@@ -227,6 +227,17 @@ def matched_existing(args):
  (dest/'comparison.json').write_text(json.dumps(report,indent=2)+'\n');(d/'comparison_complete.json').write_text(json.dumps(report['matched_search_audit'],indent=2)+'\n');print(json.dumps({fresh_name:report['arms'][fresh_name],args.candidate_arm:report['arms'][args.candidate_arm]},indent=2),flush=True)
 
 
+def conservative_extra_heads(original_heads, extended_heads):
+ # Extra crops may add reviewable no-helmet evidence, but cannot alone certify a helmet.
+ kept=copy.deepcopy(original_heads);blocked=[]
+ for head in extended_heads:
+  if head in original_heads:continue
+  if head.get('source')!='experimental_v6_upper_body':continue
+  if head['class']=='helmeted_head':blocked.append(copy.deepcopy(head))
+  else:kept.append(copy.deepcopy(head))
+ return kept,blocked
+
+
 def upper_body_audit(args):
  if args.video not in (3,5):raise ValueError('Current PPE improvement audit is restricted to videos3/5')
  spec=VIDEO_SPECS[args.video];base=ROOT/f'outputs/diagnostics/ppe_compare_expanded1577_2026-10-15/video{args.video}';comparison=json.loads((base/'comparison.json').read_text());source=spec['source'];policy_file=ROOT/'configs/ppe-user-approved-policy-2026-10-15.json';policy=json.loads(policy_file.read_text());policy['require_baseline_helmet_confirmation']=True
@@ -284,15 +295,58 @@ def upper_body_audit(args):
  print(json.dumps(report,indent=2),flush=True)
 
 
+def stability_audit(args):
+ from src.person_tracker import PersonTracker
+ if args.video not in (3,5):raise ValueError('Stability audit uses current PPE videos3/5')
+ spec=VIDEO_SPECS[args.video];base=ROOT/f'outputs/diagnostics/ppe_compare_expanded1577_2026-10-15/video{args.video}';source=spec['source'];original=[json.loads(l)for l in(base/'old_model_fresh_new_policy/detections.jsonl').read_text().splitlines()];upper=[json.loads(l)for l in(base/'upper_body_recheck_v6/detections.jsonl').read_text().splitlines()];summary=json.loads((base/'comparison.json').read_text());policy_file=ROOT/'configs/ppe-user-approved-policy-2026-10-15.json';policy=json.loads(policy_file.read_text());policy['require_baseline_helmet_confirmation']=True
+ assert sha(policy_file)==summary['policy_file_sha256']and sha(source)==summary['source_sha256'];assert len(original)==len(upper)
+ dest=args.output or base/'stability_guard_v6';dest.mkdir(exist_ok=False);cap=cv2.VideoCapture(str(source));h,w=int(cap.get(4)),int(cap.get(3));rate=summary['processed_fps'];torch.set_num_threads(4)
+ arms={'score_fused_baseline':(True,False),'geometry_tracking_only':(False,False),'guarded_crop_only':(True,True),'geometry_tracking_guarded_crop':(False,True)}
+ trackers={k:PersonTracker(rate,expose_current_candidates=True,fuse_score=fuse)for k,(fuse,_)in arms.items()};rules={k:PPEEvents(policy)for k in arms};rows={k:[]for k in arms};ids={k:set()for k in arms};associations=[];blocked_count=0;frames={row['frame_index']:i for i,row in enumerate(original)};idx=0;writer=cv2.VideoWriter(str(dest/'review_raw.mp4'),cv2.VideoWriter_fourcc(*'mp4v'),rate,(1280,360));assert writer.isOpened()
+ try:
+  while True:
+   ok,frame=cap.read()
+   if not ok:break
+   if idx not in frames:idx+=1;continue
+   i=frames[idx];old=original[i];t=old['timestamp_seconds'];people=[{'class':'person','confidence':tr.get('confidence',1.),'bbox_xyxy':tr['detected_bbox_xyxy']}for tr in old['ppe_tracks']];guarded,blocked=conservative_extra_heads(old['head_detections'],upper[i]['head_detections']);blocked_count+=len(blocked)
+   for arm,(_,use_crop)in arms.items():
+    tracks,_=trackers[arm].update(t,people,(h,w),old.get('scene_cut',False));assert sorted(tr['detected_bbox_xyxy']for tr in tracks)==sorted(tr['bbox_xyxy']for tr in people),'Tracking changed observed bodies'
+    heads=guarded if use_crop else old['head_detections'];tracks=assign_head_observations(tracks,heads,h);events,_=rules[arm].update(t,tracks,(),old.get('scene_cut',False));events=apply_ppe_vehicle_guard(events,[d['bbox_xyxy']for d in old['object_detections']if d['class']=='forklift']);row=copy.deepcopy(old);save_ppe_observations(row,tracks,heads);row['feature_events']['ppe']=events;row['features']['ppe']=feature_status(events);rows[arm].append(row);ids[arm].update(tr['track_id']for tr in tracks)
+    associations.extend({'frame_index':idx,'timestamp_seconds':t,'arm':arm,'old_track_id':p['track_id'],'new_track_id':q['track_id'],'bbox_xyxy':p['detected_bbox_xyxy']}for p in old['ppe_tracks']for q in tracks if p['detected_bbox_xyxy']==q['detected_bbox_xyxy'])
+   left=render(frame.copy(),{'ppe':rows['score_fused_baseline'][-1]['feature_events']['ppe']},detections=old['object_detections']);right=render(frame.copy(),{'ppe':rows['geometry_tracking_guarded_crop'][-1]['feature_events']['ppe']},detections=old['object_detections']);canvas=__import__('numpy').hstack([cv2.resize(left,(640,360)),cv2.resize(right,(640,360))]);cv2.rectangle(canvas,(0,0),(1280,27),(15,15,15),-1);cv2.putText(canvas,f'v6 CONTROL / t={t:.2f}',(8,19),0,.5,(255,255,255),1);cv2.putText(canvas,'GEOMETRY TRACKING + GUARDED CROP',(648,19),0,.5,(255,255,255),1);writer.write(canvas)
+   if i%200==0:print(f'video{args.video}: stability {i}/{len(original)}',flush=True)
+   idx+=1
+ finally:cap.release();writer.release()
+ assert stats(rows['score_fused_baseline'])==stats(original),'Control replay differs from original baseline'
+ changes=[]
+ for old,new in zip(rows['score_fused_baseline'],rows['geometry_tracking_guarded_crop']):
+  by={tuple(e['person_bbox_xyxy']):e for e in new['feature_events']['ppe']}
+  for e in old['feature_events']['ppe']:
+   q=by[tuple(e['person_bbox_xyxy'])]
+   if(e['severity'],e['observation_status'])!=(q['severity'],q['observation_status']):changes.append({'frame_index':old['frame_index'],'timestamp_seconds':old['timestamp_seconds'],'baseline':e,'combined':q})
+ (dest/'changes.json').write_text(json.dumps(changes,indent=2)+'\n');(dest/'id_associations.jsonl').write_text(''.join(json.dumps(x)+'\n'for x in associations))
+ report={'status':'experimental_not_promoted','video':args.video,'policy_sha256':sha(policy_file),'source_sha256':sha(source),'body_observations_identical':True,'model_weights_changed':False,'PPE_thresholds_changed':False,'helmet_guard':'Experimental crop-only helmet evidence is retained as blocked diagnostics, never used to create SAFE. Original source helmet evidence remains available.','blocked_crop_helmet_proposals':blocked_count,'arms':{},'limitations':['Lower ID count is continuity evidence, not IDF1/identity accuracy. Tracking association can still swap nearby people.','No transfer or merge of stored PPE states between IDs. Every arm replays the original timeline and resets normally.','Fixed observed person boxes and all proposals reused; candidate geometry and source times do not change.']}
+ for arm,arm_rows in rows.items():
+  d=dest/arm;d.mkdir();(d/'detections.jsonl').write_text(''.join(json.dumps(row)+'\n'for row in arm_rows));report['arms'][arm]={**stats(arm_rows),'unique_track_ids':len(ids[arm])}
+ for name in ['new_safe','new_warning','coverage_loss','confirmed_class_change']:report[name]=sum((c['combined']['severity']=='SAFE'and c['baseline']['severity']!='SAFE')if name=='new_safe'else(c['combined']['severity']=='WARNING'and c['baseline']['severity']!='WARNING')if name=='new_warning'else(c['combined']['observation_status']!='confirmed'and c['baseline']['observation_status']=='confirmed')if name=='coverage_loss'else(c['combined']['observation_status']=='confirmed'and c['baseline']['observation_status']=='confirmed'and c['combined']['severity']!=c['baseline']['severity'])for c in changes)
+ (dest/'comparison.json').write_text(json.dumps(report,indent=2)+'\n');ff=shutil.which('ffmpeg')
+ if ff:
+  subprocess.run([ff,'-y','-loglevel','error','-i',str(dest/'review_raw.mp4'),'-c:v','libx264','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(dest/'review.mp4')],check=True);(dest/'review_raw.mp4').unlink()
+ else:(dest/'review_raw.mp4').replace(dest/'review.mp4')
+ print(json.dumps(report,indent=2),flush=True)
+
+
 def main():
  parser=argparse.ArgumentParser(description=__doc__)
  parser.add_argument('--video',type=int,choices=sorted(VIDEO_SPECS),default=1)
  parser.add_argument('--output',type=Path,default=None)
  parser.add_argument('--weights',type=Path,default=ROOT/'models/experiments/ppe_expanded_1577/weights/best.pt')
  parser.add_argument('--candidate-arm',default='expanded1577_new_policy')
+ parser.add_argument('--stability-audit',action='store_true',help='Four-arm controlled tracking continuity and crop-only helmet guard audit')
  parser.add_argument('--upper-body-audit',action='store_true',help='Experimental v6 upper-body recheck with locked policy, fixed bodies and unchanged head assignment')
  parser.add_argument('--matched-existing',action='store_true',help='Repair saved candidate observations, verify fresh candidate samples and add a fully re-inferred baseline to the existing comparison')
  args=parser.parse_args()
+ if args.stability_audit:return stability_audit(args)
  if args.upper_body_audit:return upper_body_audit(args)
  if args.matched_existing:return matched_existing(args)
  if args.video in (1,4):parser.error('PPE is disabled in current presentation videos 1/4; use --matched-existing for the preserved diagnostic comparison')
