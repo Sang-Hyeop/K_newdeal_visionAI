@@ -1,3 +1,4 @@
+# 2번 영상 ROI 침범 분석
 """Saved-video ROI entry review with current detections and the shared event contract."""
 from pathlib import Path
 import argparse, hashlib, json, sys, os

@@ -46,7 +46,7 @@
   "roi_review_status": "business_rule_confirmed_by_user; floor_geometry_manually_reviewed",
   "vehicle_conditioned": true,
   "vehicle_missing_hold_seconds": 1.0,
-  "access_enabled": true,
+  "access_enabled": false,
   "approach_margin_ratio": 0.005,
   "policy_version": "user_vehicle_lane_3_seconds_v3",
   "roi_alpha_safe": 0.15,

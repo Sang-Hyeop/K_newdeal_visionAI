@@ -1,58 +1,43 @@
 {
   "policy_version": "user_vehicle_lane_3_seconds_v3",
+  "presentation_policy": "2026-10-15: video numbers match data/videos filenames 1-5; video1 proximity; video2 intrusion+PPE; video3 PPE; video4 dwell; video5 all",
   "scenarios": [
     {
       "video_number": 1,
-      "source_name": "1_forklift_forward.mp4",
-      "source_sha256": "14460304571e9f011fb3c7146aad76736d596cb5520edf7d7b8665851d932c26",
-      "ppe_enabled": true,
-      "primary_features": [
-        "person_forklift_proximity"
-      ],
-      "camera_config": "configs/cameras/forward-proximity.json",
-      "distance_meters": null,
-      "review_enabled": false,
-      "exclusion_reason": "2026-10-14 final presentation uses five selected inputs; historical source removed from active data/videos"
-    },
-    {
-      "video_number": 2,
+      "presentation_video_number": 1,
       "source_name": "1_forklift_worker_collision_risk.mp4",
       "source_sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc",
-      "ppe_enabled": true,
+      "ppe_enabled": false,
       "primary_features": [
         "person_forklift_proximity"
       ],
       "camera_config": "configs/cameras/reverse-proximity.json",
       "distance_meters": null,
-      "presentation_video_number": 1
+      "enabled_features": [
+        "proximity"
+      ]
     },
     {
-      "video_number": 3,
-      "source_name": "3_forklift_crush.mp4",
-      "source_sha256": "45d88a410f60c27a593889f6e1988fa2f5b773a881cd97805cbcfa385ae119e7",
-      "ppe_enabled": true,
-      "primary_features": [
-        "forklift_forklift_proximity"
-      ],
-      "camera_config": "configs/cameras/forklift-pair-review.json",
-      "distance_meters": null,
-      "review_enabled": false,
-      "exclusion_reason": "2026-10-14 final presentation uses five selected inputs; historical source removed from active data/videos"
-    },
-    {
-      "video_number": 4,
-      "source_name": "4_hazard_zone_dwell.mp4",
-      "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "video_number": 2,
+      "presentation_video_number": 2,
+      "source_name": "2_restricted_zone_intrusion.mp4",
+      "source_sha256": "f656df46a9f5943b06a29a3adbce03da974c087c3af70692a695a1b1b7bb79b9",
       "ppe_enabled": true,
       "primary_features": [
         "zone_access",
-        "zone_dwell"
+        "ppe"
       ],
-      "camera_config": "configs/cameras/dwell-demo.json",
-      "distance_meters": null
+      "camera_config": "configs/cameras/robot-intrusion.json",
+      "distance_meters": null,
+      "enabled_features": [
+        "zone_access",
+        "ppe"
+      ],
+      "runner": "scripts/run_intrusion_review.py"
     },
     {
-      "video_number": 5,
+      "video_number": 3,
+      "presentation_video_number": 3,
       "source_name": "3_PPE_Helmet.mp4",
       "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
       "ppe_enabled": true,
@@ -61,36 +46,49 @@
       ],
       "camera_config": "configs/cameras/ppe-warehouse-review.json",
       "distance_meters": null,
-      "presentation_video_number": 3
-    },
-    {
-      "video_number": 6,
-      "source_name": "6_Helmet_forklift.mp4",
-      "source_sha256": "3152346c98f4dd49c99f1bfc27c256beecb62dad48b51c8d183651ebdf62b83e",
-      "ppe_enabled": true,
-      "primary_features": [
+      "enabled_features": [
         "ppe"
-      ],
-      "camera_config": null,
-      "distance_meters": null,
-      "review_enabled": false,
-      "exclusion_reason": "User2026-10-13: similar tovideo5; no longer used in presentation/review"
+      ]
     },
     {
-      "video_number": 7,
+      "video_number": 4,
+      "presentation_video_number": 4,
+      "source_name": "4_hazard_zone_dwell.mp4",
+      "source_sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f",
+      "ppe_enabled": false,
+      "primary_features": [
+        "zone_access",
+        "zone_dwell"
+      ],
+      "camera_config": "configs/cameras/dwell-demo.json",
+      "distance_meters": null,
+      "enabled_features": [
+        "zone_dwell"
+      ]
+    },
+    {
+      "video_number": 5,
+      "presentation_video_number": 5,
       "source_name": "5_Logistics Warehouse.mp4",
       "source_sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d",
       "ppe_enabled": true,
       "primary_features": [
         "zone_access",
         "zone_dwell",
-        "conditional_person_forklift_proximity"
+        "conditional_person_forklift_proximity",
+        "ppe"
       ],
       "camera_config": "configs/cameras/warehouse-summary.json",
       "distance_meters": null,
-      "presentation_video_number": 5
+      "enabled_features": [
+        "proximity",
+        "zone_access",
+        "zone_dwell",
+        "ppe"
+      ]
     }
   ],
+  "historical_excluded_note": "Former 7-video IDs (old 1_forklift_forward, 3_forklift_crush, 6_Helmet_forklift, and pre-renumber collision/PPE/warehouse IDs) are retired. Active IDs are only 1-5 matching data/videos filenames.",
   "forklift_pair_warning_ratio": 1,
   "forklift_pair_critical_ratio": 0.15,
   "scene_cut_threshold": 0.18

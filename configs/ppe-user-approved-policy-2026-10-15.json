@@ -1,0 +1,27 @@
+{
+  "status": "user_approved_locked",
+  "approved_date": "2026-10-15",
+  "change_requires_user_instruction": true,
+  "execution_order": [
+    "63_head_retraining",
+    "implement_locked_policy",
+    "full_video_comparison"
+  ],
+  "head_proposal_confidence": 0.15,
+  "helmet_evidence_confidence": 0.4,
+  "no_helmet_evidence_confidence": 0.3,
+  "window_seconds": 1.0,
+  "minimum_valid_observations": 3,
+  "minimum_class_fraction": 0.75,
+  "reset_on_single_missed_head": false,
+  "maximum_state_hold_seconds": 0.6,
+  "opposite_evidence": "stop_hold_and_return_pending",
+  "reset_on": [
+    "track_identity_change",
+    "scene_cut"
+  ],
+  "person_head_geometry": "keep_current_until_user_authorizes_change",
+  "person_context_recheck": "recheck_people_without_sufficient_head_evidence",
+  "dashboard": "pending_without_alarm;unassessable_current_people_and_duration;merge_same_person_violation_episode;retain_raw_observations",
+  "runtime_implementation_status": "not_yet_applied_retraining_first"
+}

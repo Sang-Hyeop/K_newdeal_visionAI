@@ -1,8 +1,8 @@
 {
   "name": "Siseon team runtime handoff",
-  "date": "2026-10-14",
-  "source_commit": "acc38fa1459d287de1a4bd7949ffd43c4a8c5e32",
-  "source_branch": "main (PR #11 merged)",
+  "date": "2026-10-15",
+  "source_commit": "b12db8997e101921476527c6eb12ef95ee7993de",
+  "source_branch": "data/hoodie-ppe-candidates (current runtime update; PR required for main)",
   "python_tested": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
   "runtime_versions": {
     "ultralytics": "8.4.153",
@@ -18,22 +18,27 @@
       "event_root": "outputs/events/presentation1",
       "diagnostic_root": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1",
       "samples": 106,
-      "legacy_scenario_number": 2,
       "source_video": "data/videos/1_forklift_worker_collision_risk.mp4",
       "entrypoint": "python handoff.py run --video 1",
       "implementation": [
         "scripts/run_demo_scenarios.py"
       ],
       "camera_config": "configs/cameras/reverse-proximity.json",
-      "object_review_profile": "configs/video2-object-review.json",
+      "object_review_profile": "configs/video1-object-review.json",
       "models": [
         "models/pilot_v16_related/person_forklift.pt",
         "models/demo_object_adaptation_v1/best.pt",
         "models/pretrained/yolo26n.pt",
-        "models/ppe_final/ppe_helmet_v6_960.pt",
         "models/experiments/forklift_real_context_v2/weights/best.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference"
+      "mode": "cached_observations_default; --fresh for new inference",
+      "enabled_features": [
+        "proximity"
+      ],
+      "display_objects": [
+        "person",
+        "forklift"
+      ]
     },
     {
       "presentation_video_number": 2,
@@ -41,7 +46,6 @@
       "event_root": "outputs/events/presentation2",
       "diagnostic_root": "outputs/diagnostics/presentation2_intrusion_review_2026-10-14",
       "samples": 58,
-      "legacy_scenario_number": null,
       "source_video": "data/videos/2_restricted_zone_intrusion.mp4",
       "entrypoint": "python handoff.py run --video 2",
       "implementation": [
@@ -53,7 +57,11 @@
         "models/pretrained/yolo26n.pt",
         "models/ppe_final/ppe_helmet_v6_960.pt"
       ],
-      "mode": "full_fresh_inference"
+      "mode": "full_fresh_inference",
+      "enabled_features": [
+        "zone_access",
+        "ppe"
+      ]
     },
     {
       "presentation_video_number": 3,
@@ -61,22 +69,24 @@
       "event_root": "outputs/events/presentation3",
       "diagnostic_root": "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3",
       "samples": 58,
-      "legacy_scenario_number": 5,
       "source_video": "data/videos/3_PPE_Helmet.mp4",
       "entrypoint": "python handoff.py run --video 3",
       "implementation": [
         "scripts/run_demo_scenarios.py"
       ],
       "camera_config": "configs/cameras/ppe-warehouse-review.json",
-      "object_review_profile": "configs/video5-object-review.json",
+      "object_review_profile": "configs/video3-object-review.json",
       "models": [
-        "models/pilot_v16_related/person_forklift.pt",
-        "models/demo_object_adaptation_v1/best.pt",
         "models/pretrained/yolo26n.pt",
-        "models/ppe_final/ppe_helmet_v6_960.pt",
-        "models/experiments/forklift_real_context_v2/weights/best.pt"
+        "models/ppe_final/ppe_helmet_v6_960.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference"
+      "mode": "cached_observations_default; --fresh for new inference",
+      "enabled_features": [
+        "ppe"
+      ],
+      "display_objects": [
+        "person"
+      ]
     },
     {
       "presentation_video_number": 4,
@@ -84,7 +94,6 @@
       "event_root": "outputs/events/presentation4",
       "diagnostic_root": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4",
       "samples": 92,
-      "legacy_scenario_number": 4,
       "source_video": "data/videos/4_hazard_zone_dwell.mp4",
       "entrypoint": "python handoff.py run --video 4",
       "implementation": [
@@ -96,10 +105,15 @@
         "models/pilot_v16_related/person_forklift.pt",
         "models/demo_object_adaptation_v1/best.pt",
         "models/pretrained/yolo26n.pt",
-        "models/ppe_final/ppe_helmet_v6_960.pt",
         "models/experiments/forklift_real_context_v2/weights/best.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference"
+      "mode": "cached_observations_default; --fresh for new inference",
+      "enabled_features": [
+        "zone_dwell"
+      ],
+      "display_objects": [
+        "person"
+      ]
     },
     {
       "presentation_video_number": 5,
@@ -107,7 +121,6 @@
       "event_root": "outputs/events/presentation5",
       "diagnostic_root": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5",
       "samples": 870,
-      "legacy_scenario_number": 7,
       "source_video": "data/videos/5_Logistics Warehouse.mp4",
       "entrypoint": "python handoff.py run --video 5",
       "implementation": [
@@ -116,7 +129,7 @@
         "scripts/review_vehicle_recovery_cache.py"
       ],
       "camera_config": "configs/cameras/warehouse-summary.json",
-      "object_review_profile": "configs/video7-object-review.json",
+      "object_review_profile": "configs/video5-object-review.json",
       "models": [
         "models/pilot_v16_related/person_forklift.pt",
         "models/demo_object_adaptation_v1/best.pt",
@@ -125,7 +138,17 @@
         "models/experiments/forklift_real_context_v2/weights/best.pt",
         "models/nvidia_object_adaptation_v1/best.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference"
+      "mode": "cached_observations_default; --fresh for new inference",
+      "enabled_features": [
+        "proximity",
+        "zone_access",
+        "zone_dwell",
+        "ppe"
+      ],
+      "display_objects": [
+        "person",
+        "forklift"
+      ]
     }
   ],
   "model_hashes": {
@@ -136,11 +159,11 @@
     "models/experiments/forklift_real_context_v2/weights/best.pt": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa",
     "models/nvidia_object_adaptation_v1/best.pt": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
   },
-  "source_summary_transform": "Only source paths in copied run summaries are relocated to package-relative data/videos paths; original_source_location preserves original provenance. Detection and event JSONL remain byte-identical.",
+  "source_summary_transform": "Current presentation feature selection applied; retained rule verdicts unchanged; disabled feature logs removed.",
   "excluded": "Training image datasets/raw ZIPs, obsolete experiments, .git, virtual environments, credentials; current inference models and all latest per-frame/event logs are included.",
   "internet_required": "Python environment dependencies need initial installation; model weights, inputs, results and logs are already included.",
   "scope": "Runtime asset metadata; Python sources come from the current repository checkout.",
   "current_entrypoint": "handoff.py",
   "cleanup_date": "2026-10-14",
-  "diagnostic_directory_numbering": "presentation_video_number; internal scenario IDs are implementation only"
+  "diagnostic_directory_numbering": "presentation_video_number equals data/videos filename number (1-5)"
 }

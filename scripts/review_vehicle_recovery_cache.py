@@ -1,3 +1,4 @@
+# 추가 차량 후보의 오탐·중복 검수
 """Review supplementary vehicle observations without reusing inferred safety events."""
 import argparse,hashlib,json,sys
 import cv2

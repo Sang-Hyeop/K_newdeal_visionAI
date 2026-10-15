@@ -13,7 +13,7 @@ python handoff.py run --video 1
 `--video`를 1~5로 바꿉니다. `list`는 영상별 원본·모델·설정·구현 코드·최신 결과·이벤트 경로를 출력합니다. 개발은 safety 환경을 사용합니다.
 
 - 1: 지게차–작업자 충돌 위험
-- 2: 위험구역 ROI 침범
+- 2: 사람 탐지 + 위험구역 ROI 침범 + 안전모 PPE
 - 3: 안전모 착용/미착용
 - 4: 위험구역 체류
 - 5: 물류창고 통합 시연 — 차량 복구·탑승자 분리·밑면 중앙 거리 실험
@@ -35,12 +35,14 @@ python handoff.py test
 
 이벤트 API는 `http://127.0.0.1:8010/events?limit=5`입니다. API·대시보드 연결은 `docs/github-team-quickstart.md`와 `backend_v1/API_SPEC.md`를 참조합니다.
 
-## 새 PC 설치
+## 업데이트 및 새 PC 설치
 
-Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`를 실행합니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
+기존 팀원은 이번 PR 병합 후 `git pull --ff-only origin main`을 먼저 실행합니다. 병합 전 작업 브랜치와 역할별 안내는 `docs/github-team-quickstart.md`를 참고합니다.
+
+Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`, `python handoff.py check`를 순서대로 실행합니다. 최신 Release에는 영상별 기능 구성이 적용된 결과가 포함돼 있습니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
 
 ## 한계와 과거 기록
 
 거리 값은 보정되지 않은 화면상 상대 거리이며 실제 m가 아닙니다. 가림·최초 등장·미탐은 미확인으로 남습니다. 2번은 AI 생성 시연 영상입니다. 시연 적응 결과를 독립 현장 정확도로 설명하지 않습니다.
 
-현재 문서는 `docs/README.md`에서 시작합니다. 과거 리뷰·학습 실험·초안은 docs에서 삭제했고 Git 이력에서 확인합니다. 현재 사용자는 발표 번호1~5와 handoff.py를 사용합니다. 파일 정리·실행 검증 기록은 `docs/checkpoints/2026-10-14/five-video-cleanup/`에 있습니다.
+현재 문서는 `docs/README.md`에서 시작합니다. 과거 리뷰·학습 실험·초안은 docs에서 삭제했고 Git 이력에서 확인합니다. 현재 사용자는 발표 번호1~5와 handoff.py를 사용합니다. 파일 정리·실행 검증 기록은 `docs/progress-2026-10-14.md`의 최신 항목에 있습니다.

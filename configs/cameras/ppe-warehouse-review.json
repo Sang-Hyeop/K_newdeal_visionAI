@@ -1,8 +1,8 @@
 {
-  "camera_id": "video5-ppe-warehouse-review",
-  "source_name": "5_PPE_Helmet.mp4",
+  "camera_id": "video3-ppe-warehouse-review",
+  "source_name": "3_PPE_Helmet.mp4",
   "source_sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6",
-  "object_review_profile": "configs/video5-object-review.json",
+  "object_review_profile": "configs/video3-object-review.json",
   "zone_roi_used": false,
   "distance_mode": "not_used_ppe_review"
 }

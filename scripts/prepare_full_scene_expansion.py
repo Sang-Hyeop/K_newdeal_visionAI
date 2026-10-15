@@ -1,3 +1,4 @@
+# 학습용 수동 정답 준비 코드
 """전체 CCTV 프레임의 수동 검수 라벨. 애매한 원거리 영역은 일부 이미지에서 명시적으로 마스크."""
 from pathlib import Path
 import json,cv2,hashlib,shutil
