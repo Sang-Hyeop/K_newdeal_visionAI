@@ -24,6 +24,8 @@ python handoff.py backend --port 8010
 python handoff.py test
 ```
 
+대시보드는 `python team7.py`로 실행합니다. 현재 safety 환경에서 Gradio 6.28.0·pandas 3.0.5를 확인했습니다. 신규 환경은 감지 의존성 외에 `python -m pip install gradio==6.28.0 pandas==3.0.5`가 필요합니다. 브라우저 영상 변환에는 ffmpeg 또는 imageio-ffmpeg가 필요합니다. 대시보드는 현재 runtime index의 최신 리뷰 5개와 outputs/events를 읽고 로컬 API를 자동 시작합니다.
+
 backend_v1/API_SPEC.md와 docs/github-team-quickstart.md가 팀원 연동 안내입니다. 신규 PC의 모델 설치는 `python scripts/setup_runtime.py`, 감지 라이브러리는 `python -m pip install -r requirements-runtime.txt`입니다.
 
 현재 로컬 통합 결과는 아직 GitHub/Release에 다시 게시하지 않았습니다. 기존 runtime-2026-10-15 Release가 자동 갱신되는 것은 아닙니다. 팀원 전달 전 새 배포 자료와 설치 검증을 함께 갱신해야 합니다.
