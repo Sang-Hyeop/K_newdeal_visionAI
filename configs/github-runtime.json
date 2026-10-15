@@ -1697,5 +1697,6 @@
       "sha256": "9ba5c08d833cda68cafc54361900df6c69cca9d98fb8e3e8d3a73a25f0c6b22d"
     }
   },
-  "local_runtime_status": "Current local results; remote Release changes only after an explicit publish request"
+  "local_runtime_status": "Current local results; remote Release changes only after an explicit publish request",
+  "local_source_commit": "8bc465b"
 }
