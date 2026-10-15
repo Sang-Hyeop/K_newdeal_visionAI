@@ -1,7 +1,11 @@
 {
-  "status": "experimental_not_promoted_comparison_only",
+  "status": "experimental_not_promoted_matched_recheck_complete",
   "date": "2026-10-15",
-  "evaluation_checklist_items": [2, 3, 6],
+  "evaluation_checklist_items": [
+    2,
+    3,
+    6
+  ],
   "candidate_model": {
     "path": "models/experiments/ppe_expanded_1577/weights/best.pt",
     "sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9"
@@ -33,11 +37,37 @@
     "1": {
       "samples": 106,
       "old_run": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1",
-      "preserve": ["proximity"],
+      "preserve": [
+        "proximity"
+      ],
       "arms": {
-        "original": {"total": 209, "unconfirmed": 185, "WARNING": 24, "SAFE": 0, "unconfirmed_fraction": 0.8851674641148325, "warning_episode_starts": 7, "state_changes": 14},
-        "old_model_new_policy": {"total": 209, "unconfirmed": 148, "WARNING": 61, "SAFE": 0, "unconfirmed_fraction": 0.7081339712918661, "warning_episode_starts": 8, "state_changes": 16},
-        "expanded1577_new_policy": {"total": 209, "unconfirmed": 99, "WARNING": 110, "SAFE": 0, "unconfirmed_fraction": 0.47368421052631576, "warning_episode_starts": 3, "state_changes": 6}
+        "original": {
+          "total": 209,
+          "unconfirmed": 185,
+          "WARNING": 24,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.8851674641148325,
+          "warning_episode_starts": 7,
+          "state_changes": 14
+        },
+        "old_model_new_policy": {
+          "total": 209,
+          "unconfirmed": 148,
+          "WARNING": 61,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.7081339712918661,
+          "warning_episode_starts": 8,
+          "state_changes": 16
+        },
+        "expanded1577_new_policy": {
+          "total": 209,
+          "unconfirmed": 99,
+          "WARNING": 110,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.47368421052631576,
+          "warning_episode_starts": 3,
+          "state_changes": 6
+        }
       },
       "comparison_sha256": "8fb956b10be3a904f55d920923481fe28201fa490f459c7ca66b691ba5545d12",
       "expanded1577_review_sha256": "fe5e416663304084958502ff61f40c7d18ff9c255634e03bfb6905bd9e175b29"
@@ -45,12 +75,38 @@
     "2": {
       "samples": 58,
       "old_run": "outputs/diagnostics/presentation2_intrusion_review_2026-10-14",
-      "preserve": ["zone_access"],
+      "preserve": [
+        "zone_access"
+      ],
       "note": "AI-generated demo; reconstruct tracks from PPE events",
       "arms": {
-        "original": {"total": 58, "unconfirmed": 7, "WARNING": 0, "SAFE": 51, "unconfirmed_fraction": 0.1206896551724138, "warning_episode_starts": 0, "state_changes": 3},
-        "old_model_new_policy": {"total": 58, "unconfirmed": 2, "WARNING": 0, "SAFE": 56, "unconfirmed_fraction": 0.034482758620689655, "warning_episode_starts": 0, "state_changes": 1},
-        "expanded1577_new_policy": {"total": 58, "unconfirmed": 2, "WARNING": 0, "SAFE": 56, "unconfirmed_fraction": 0.034482758620689655, "warning_episode_starts": 0, "state_changes": 1}
+        "original": {
+          "total": 58,
+          "unconfirmed": 7,
+          "WARNING": 0,
+          "SAFE": 51,
+          "unconfirmed_fraction": 0.1206896551724138,
+          "warning_episode_starts": 0,
+          "state_changes": 3
+        },
+        "old_model_new_policy": {
+          "total": 58,
+          "unconfirmed": 2,
+          "WARNING": 0,
+          "SAFE": 56,
+          "unconfirmed_fraction": 0.034482758620689655,
+          "warning_episode_starts": 0,
+          "state_changes": 1
+        },
+        "expanded1577_new_policy": {
+          "total": 58,
+          "unconfirmed": 2,
+          "WARNING": 0,
+          "SAFE": 56,
+          "unconfirmed_fraction": 0.034482758620689655,
+          "warning_episode_starts": 0,
+          "state_changes": 1
+        }
       },
       "comparison_sha256": "1649a6835869f60bc1d67248ad4cebb8828fec1ce1763a9048f384d515be03f3",
       "expanded1577_review_sha256": "7c3ad7250b1c30aa599511ce5c2bd153cf4959f0ea98465c298ef0a1ecb88713"
@@ -60,9 +116,33 @@
       "old_run": "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3",
       "preserve": [],
       "arms": {
-        "original": {"total": 246, "unconfirmed": 78, "WARNING": 53, "SAFE": 115, "unconfirmed_fraction": 0.3170731707317073, "warning_episode_starts": 8, "state_changes": 29},
-        "old_model_new_policy": {"total": 246, "unconfirmed": 65, "WARNING": 57, "SAFE": 124, "unconfirmed_fraction": 0.26422764227642276, "warning_episode_starts": 7, "state_changes": 23},
-        "expanded1577_new_policy": {"total": 246, "unconfirmed": 72, "WARNING": 48, "SAFE": 126, "unconfirmed_fraction": 0.2926829268292683, "warning_episode_starts": 3, "state_changes": 14}
+        "original": {
+          "total": 246,
+          "unconfirmed": 78,
+          "WARNING": 53,
+          "SAFE": 115,
+          "unconfirmed_fraction": 0.3170731707317073,
+          "warning_episode_starts": 8,
+          "state_changes": 29
+        },
+        "old_model_new_policy": {
+          "total": 246,
+          "unconfirmed": 65,
+          "WARNING": 57,
+          "SAFE": 124,
+          "unconfirmed_fraction": 0.26422764227642276,
+          "warning_episode_starts": 7,
+          "state_changes": 23
+        },
+        "expanded1577_new_policy": {
+          "total": 246,
+          "unconfirmed": 72,
+          "WARNING": 48,
+          "SAFE": 126,
+          "unconfirmed_fraction": 0.2926829268292683,
+          "warning_episode_starts": 3,
+          "state_changes": 14
+        }
       },
       "comparison_sha256": "b005401e03624b5d15ab164f0e0b77dabd20a14bfb74ded0db39cdf6d5cab9dd",
       "expanded1577_review_sha256": "50c7882336c62111c7d42f7016166b8fa4a4acd6cbf7c0b3400833e8cae042c6"
@@ -70,12 +150,39 @@
     "4": {
       "samples": 92,
       "old_run": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4",
-      "preserve": ["zone_access", "zone_dwell"],
+      "preserve": [
+        "zone_access",
+        "zone_dwell"
+      ],
       "regression_note": "expanded1577 unconfirmed rose vs old_model_new_policy; pairwise conf->unc 40 vs unc->conf 8; mainly missing heads or conf<0.30",
       "arms": {
-        "original": {"total": 319, "unconfirmed": 125, "WARNING": 194, "SAFE": 0, "unconfirmed_fraction": 0.39184952978056425, "warning_episode_starts": 14, "state_changes": 23},
-        "old_model_new_policy": {"total": 319, "unconfirmed": 102, "WARNING": 217, "SAFE": 0, "unconfirmed_fraction": 0.31974921630094044, "warning_episode_starts": 9, "state_changes": 11},
-        "expanded1577_new_policy": {"total": 319, "unconfirmed": 134, "WARNING": 185, "SAFE": 0, "unconfirmed_fraction": 0.4200626959247649, "warning_episode_starts": 9, "state_changes": 12}
+        "original": {
+          "total": 319,
+          "unconfirmed": 125,
+          "WARNING": 194,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.39184952978056425,
+          "warning_episode_starts": 14,
+          "state_changes": 23
+        },
+        "old_model_new_policy": {
+          "total": 319,
+          "unconfirmed": 102,
+          "WARNING": 217,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.31974921630094044,
+          "warning_episode_starts": 9,
+          "state_changes": 11
+        },
+        "expanded1577_new_policy": {
+          "total": 319,
+          "unconfirmed": 134,
+          "WARNING": 185,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.4200626959247649,
+          "warning_episode_starts": 9,
+          "state_changes": 12
+        }
       },
       "comparison_sha256": "1f335c092c97127a7b250ca76abfbf7a6ff2aa2db090f5fc1f4b08d2c9ffc695",
       "expanded1577_review_sha256": "5c0f816751238c549b23d5a876e3216aa2bb2ddf697c46311611fd9f9caac173"
@@ -83,11 +190,39 @@
     "5": {
       "samples": 870,
       "old_run": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5",
-      "preserve": ["zone_access", "zone_dwell", "proximity"],
+      "preserve": [
+        "zone_access",
+        "zone_dwell",
+        "proximity"
+      ],
       "arms": {
-        "original": {"total": 4241, "unconfirmed": 3135, "WARNING": 1106, "SAFE": 0, "unconfirmed_fraction": 0.7392124498938929, "warning_episode_starts": 140, "state_changes": 233},
-        "old_model_new_policy": {"total": 4241, "unconfirmed": 2904, "WARNING": 1337, "SAFE": 0, "unconfirmed_fraction": 0.6847441641122377, "warning_episode_starts": 116, "state_changes": 166},
-        "expanded1577_new_policy": {"total": 4241, "unconfirmed": 2984, "WARNING": 1257, "SAFE": 0, "unconfirmed_fraction": 0.7036076397076161, "warning_episode_starts": 100, "state_changes": 148}
+        "original": {
+          "total": 4241,
+          "unconfirmed": 3135,
+          "WARNING": 1106,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.7392124498938929,
+          "warning_episode_starts": 140,
+          "state_changes": 233
+        },
+        "old_model_new_policy": {
+          "total": 4241,
+          "unconfirmed": 2904,
+          "WARNING": 1337,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.6847441641122377,
+          "warning_episode_starts": 116,
+          "state_changes": 166
+        },
+        "expanded1577_new_policy": {
+          "total": 4241,
+          "unconfirmed": 2984,
+          "WARNING": 1257,
+          "SAFE": 0,
+          "unconfirmed_fraction": 0.7036076397076161,
+          "warning_episode_starts": 100,
+          "state_changes": 148
+        }
       },
       "comparison_sha256": "10ba73b206ca02d6fce382ffb57fc91c1eb779a14b43792916c6c6fbc13d793e",
       "expanded1577_review_sha256": "3550fdcbfce68de382217c68374c1ed0159caa675288b8051fd9dcbcfb1c1243"
@@ -110,5 +245,328 @@
     "training_checkpoint": "docs/checkpoints/2026-10-15/ppe-expanded1577-training.json",
     "prior_head63_video1_comparison": "docs/checkpoints/2026-10-15/ppe-video1-comparison.json",
     "training_commit": "2bb5584"
-  }
+  },
+  "matched_recheck": {
+    "date": "2026-10-15",
+    "script_sha256": "466e83dbfe4b520850784bb51be9ebb5c04ebc98caea7c7f6d05b622747cf8b9",
+    "method": "Baseline PPE freshly re-inferred on all original sampled frames. Candidate previous fresh inference cache repaired from event observations, replayed in full, and re-inferred identically at beginning/middle/end of each video. Body geometry and non-PPE events fixed to pre-feature-split comparison.",
+    "candidate_track_observations_repaired": 3036,
+    "candidate_events_and_old_review_videos_changed": false,
+    "candidate_cache_replay_samples": 1184,
+    "candidate_fresh_spotcheck_samples": 15,
+    "production_reviews_models_policy_unchanged": true,
+    "limitations": [
+      "Unknown coverage, not accuracy. Selected failure/gain images are non-random diagnostics, not a labelled test set.",
+      "Fixed body/object observations predate feature split. Videos1/4 are diagnostic only. Video3 current display no longer includes vehicles.",
+      "A previously valid temporal state may remain held without a current head; no_assigned_head counts do not prove visual absence."
+    ],
+    "videos": {
+      "1": {
+        "role": "diagnostic_only_PPE_disabled",
+        "fresh_baseline": {
+          "counts": {
+            "total": 209,
+            "unconfirmed": 148,
+            "WARNING": 61
+          },
+          "unconfirmed_fraction": 0.7081339712918661,
+          "unconfirmed_reasons": {
+            "conflicting_or_missing_or_low_confidence_head": 107,
+            "pending_temporal_confirmation": 41
+          },
+          "held_person_samples": 29,
+          "warning_episode_starts": 8,
+          "state_changes_between_adjacent_observations": 16,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "candidate": {
+          "counts": {
+            "total": 209,
+            "unconfirmed": 99,
+            "WARNING": 110
+          },
+          "unconfirmed_fraction": 0.47368421052631576,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 22,
+            "conflicting_or_missing_or_low_confidence_head": 77
+          },
+          "held_person_samples": 16,
+          "warning_episode_starts": 3,
+          "state_changes_between_adjacent_observations": 6,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "audit": {
+          "baseline": "fresh original frames, full-frame + conditional person context",
+          "candidate": "previous fresh inference cache; all frames replayed; fresh beginning/middle/end inference identical",
+          "candidate_cache_tracks_repaired": 0,
+          "candidate_replay_rows": 106,
+          "candidate_fresh_verified_frames": [
+            0,
+            265,
+            525
+          ],
+          "baseline_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+          "candidate_sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+          "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+          "non_ppe_events_preserved": true,
+          "candidate_cache_sha256": "117efadff8cd8f8da4ddcbca42808faaa5024013c956761c18e7435bbe1523d1",
+          "baseline_cache_sha256": "a05c118859e64eba5b812ad8244dc6467c08b74ce563aae7412d4d6a37161aee",
+          "scope": "fixed pre-feature-split observed people; no correctness ground truth; videos1/4 diagnostic only"
+        },
+        "comparison_sha256": "40deee2284bf7f6164a0cf18f4d585ff7f2517734f96b0a7165c697311e56aa0"
+      },
+      "2": {
+        "role": "PPE_enabled_presentation",
+        "fresh_baseline": {
+          "counts": {
+            "total": 58,
+            "unconfirmed": 2,
+            "SAFE": 56
+          },
+          "unconfirmed_fraction": 0.034482758620689655,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 2
+          },
+          "held_person_samples": 1,
+          "warning_episode_starts": 0,
+          "state_changes_between_adjacent_observations": 1,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "candidate": {
+          "counts": {
+            "total": 58,
+            "unconfirmed": 2,
+            "SAFE": 56
+          },
+          "unconfirmed_fraction": 0.034482758620689655,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 2
+          },
+          "held_person_samples": 0,
+          "warning_episode_starts": 0,
+          "state_changes_between_adjacent_observations": 1,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "audit": {
+          "baseline": "fresh original frames, full-frame + conditional person context",
+          "candidate": "previous fresh inference cache; all frames replayed; fresh beginning/middle/end inference identical",
+          "candidate_cache_tracks_repaired": 0,
+          "candidate_replay_rows": 58,
+          "candidate_fresh_verified_frames": [
+            0,
+            145,
+            285
+          ],
+          "baseline_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+          "candidate_sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+          "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+          "non_ppe_events_preserved": true,
+          "candidate_cache_sha256": "030eacd788670b26559d5857790b6ccac4fe25aef53f0525e20ebfd4e2dcd4bd",
+          "baseline_cache_sha256": "5ce0f3caaa153387c40c8f724410a7e808bd933b64df4df9d3037a3e7fbd64c5",
+          "scope": "fixed pre-feature-split observed people; no correctness ground truth; videos1/4 diagnostic only"
+        },
+        "comparison_sha256": "b8a829911a97d409435019e436edf97ad685ca4a522f5b5598e0834dee04157b"
+      },
+      "3": {
+        "role": "PPE_enabled_presentation",
+        "fresh_baseline": {
+          "counts": {
+            "total": 246,
+            "unconfirmed": 57,
+            "SAFE": 126,
+            "WARNING": 63
+          },
+          "unconfirmed_fraction": 0.23170731707317074,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 42,
+            "conflicting_or_missing_or_low_confidence_head": 15
+          },
+          "held_person_samples": 7,
+          "warning_episode_starts": 5,
+          "state_changes_between_adjacent_observations": 17,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "candidate": {
+          "counts": {
+            "total": 246,
+            "unconfirmed": 72,
+            "SAFE": 126,
+            "WARNING": 48
+          },
+          "unconfirmed_fraction": 0.2926829268292683,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 49,
+            "conflicting_or_missing_or_low_confidence_head": 23
+          },
+          "held_person_samples": 4,
+          "warning_episode_starts": 3,
+          "state_changes_between_adjacent_observations": 14,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "audit": {
+          "baseline": "fresh original frames, full-frame + conditional person context",
+          "candidate": "previous fresh inference cache; all frames replayed; fresh beginning/middle/end inference identical",
+          "candidate_cache_tracks_repaired": 238,
+          "candidate_replay_rows": 58,
+          "candidate_fresh_verified_frames": [
+            0,
+            145,
+            285
+          ],
+          "baseline_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+          "candidate_sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+          "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+          "non_ppe_events_preserved": true,
+          "candidate_cache_sha256": "33a536768429b2b8684627e1847c68e836ee7836d67437ea520b90df1e9ced5a",
+          "baseline_cache_sha256": "6e315335e5cd471dbc9d621133294e78a53b839616954f29702e20a7e81442f1",
+          "scope": "fixed pre-feature-split observed people; no correctness ground truth; videos1/4 diagnostic only"
+        },
+        "comparison_sha256": "fc01f25640df7b1f75131dadc376a98750e77d3044ea4069f5998e2a5b37102f",
+        "head_and_temporal_diagnosis": {
+          "confirmed_to_unconfirmed": 18,
+          "loss_reasons": {
+            "temporal_pending_with_valid_current_head": 4,
+            "below_threshold": 6,
+            "no_assigned_head": 8
+          },
+          "unconfirmed_to_confirmed": 3,
+          "both_confirmed": 171,
+          "both_confirmed_class_disagreements": 0
+        }
+      },
+      "4": {
+        "role": "diagnostic_only_PPE_disabled",
+        "fresh_baseline": {
+          "counts": {
+            "total": 319,
+            "unconfirmed": 105,
+            "WARNING": 214
+          },
+          "unconfirmed_fraction": 0.329153605015674,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 25,
+            "conflicting_or_missing_or_low_confidence_head": 80
+          },
+          "held_person_samples": 18,
+          "warning_episode_starts": 9,
+          "state_changes_between_adjacent_observations": 12,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "candidate": {
+          "counts": {
+            "total": 319,
+            "unconfirmed": 134,
+            "WARNING": 185
+          },
+          "unconfirmed_fraction": 0.4200626959247649,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 36,
+            "conflicting_or_missing_or_low_confidence_head": 98
+          },
+          "held_person_samples": 28,
+          "warning_episode_starts": 9,
+          "state_changes_between_adjacent_observations": 12,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "audit": {
+          "baseline": "fresh original frames, full-frame + conditional person context",
+          "candidate": "previous fresh inference cache; all frames replayed; fresh beginning/middle/end inference identical",
+          "candidate_cache_tracks_repaired": 254,
+          "candidate_replay_rows": 92,
+          "candidate_fresh_verified_frames": [
+            0,
+            230,
+            455
+          ],
+          "baseline_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+          "candidate_sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+          "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+          "non_ppe_events_preserved": true,
+          "candidate_cache_sha256": "7149a2d2d31f08d6daf380d1133caba0d7a6db6c7fbe577747a54f55c352d831",
+          "baseline_cache_sha256": "29fcfba89c342516a475789b9b201bc53edf79eacaac1b440c58aab37612beab",
+          "scope": "fixed pre-feature-split observed people; no correctness ground truth; videos1/4 diagnostic only"
+        },
+        "comparison_sha256": "c0a8b5074fb66a83a26215b9c8cd73ed20d29be5e78ee3330b3a5a8eb7ce4fd7",
+        "head_and_temporal_diagnosis": {
+          "confirmed_to_unconfirmed": 39,
+          "loss_reasons": {
+            "below_threshold": 5,
+            "no_assigned_head": 25,
+            "temporal_pending_with_valid_current_head": 9
+          },
+          "unconfirmed_to_confirmed": 10,
+          "both_confirmed": 175,
+          "both_confirmed_class_disagreements": 0
+        }
+      },
+      "5": {
+        "role": "PPE_enabled_presentation",
+        "fresh_baseline": {
+          "counts": {
+            "total": 4241,
+            "unconfirmed": 2907,
+            "WARNING": 1334
+          },
+          "unconfirmed_fraction": 0.6854515444470644,
+          "unconfirmed_reasons": {
+            "conflicting_or_missing_or_low_confidence_head": 2144,
+            "pending_temporal_confirmation": 763
+          },
+          "held_person_samples": 197,
+          "warning_episode_starts": 115,
+          "state_changes_between_adjacent_observations": 164,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "candidate": {
+          "counts": {
+            "total": 4241,
+            "unconfirmed": 2984,
+            "WARNING": 1257
+          },
+          "unconfirmed_fraction": 0.7036076397076161,
+          "unconfirmed_reasons": {
+            "pending_temporal_confirmation": 668,
+            "conflicting_or_missing_or_low_confidence_head": 2316
+          },
+          "held_person_samples": 170,
+          "warning_episode_starts": 100,
+          "state_changes_between_adjacent_observations": 148,
+          "denominator": "repeated person-time records, not unique people or actual violations"
+        },
+        "audit": {
+          "baseline": "fresh original frames, full-frame + conditional person context",
+          "candidate": "previous fresh inference cache; all frames replayed; fresh beginning/middle/end inference identical",
+          "candidate_cache_tracks_repaired": 2544,
+          "candidate_replay_rows": 870,
+          "candidate_fresh_verified_frames": [
+            0,
+            2175,
+            4345
+          ],
+          "baseline_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+          "candidate_sha256": "5e77cd429820ba2389fc709dd9eb2db7281234689a493dc5d9d3cbd2d49c2df9",
+          "policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea",
+          "non_ppe_events_preserved": true,
+          "candidate_cache_sha256": "ad90e262edf31b0e2f8151a77f507332bff8cb9d76ac36333c68f2662061a6d7",
+          "baseline_cache_sha256": "e24d6fdb252bd1eb909ae6fdaaf1ee2cdf424e3b365859f85bbec2bcca893f7a",
+          "scope": "fixed pre-feature-split observed people; no correctness ground truth; videos1/4 diagnostic only"
+        },
+        "comparison_sha256": "71d112e3ed913062f65f44cc3d998ce65f7d952a97531edcd6c7afacdd558319",
+        "head_and_temporal_diagnosis": {
+          "confirmed_to_unconfirmed": 208,
+          "loss_reasons": {
+            "below_threshold": 91,
+            "temporal_pending_with_valid_current_head": 60,
+            "no_assigned_head": 56,
+            "class_conflict": 1
+          },
+          "unconfirmed_to_confirmed": 131,
+          "both_confirmed": 1126,
+          "both_confirmed_class_disagreements": 0
+        }
+      }
+    },
+    "decision": "Keep current production v6 and locked policy. No global candidate promotion; prioritise current PPE video3/5 small-head/side-back/occlusion failure examples for future reviewed data."
+  },
+  "current_results_field": "matched_recheck.videos"
 }
