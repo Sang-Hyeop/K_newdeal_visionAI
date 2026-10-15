@@ -25,6 +25,6 @@
 - [현재 작업 상태·남은 과제](progress-2026-10-14.md)
 - [5번 차량·탑승자 처리 방법과 한계](video5-vehicle-rider-recovery-2026-10-14.md)
 - [GitHub 설치 검증](checkpoints/2026-10-14/github-runtime-verification.json)
-- [정리 후 실행 검증](checkpoints/2026-10-14/five-video-cleanup/verification.json)
+- 정리 후 실행 검증과 삭제 내역은 [현재 작업 상태](progress-2026-10-14.md)의 최신 정리 항목에서 확인합니다.
 
 모델·원본·설정·결과의 실제 경로는 [실행 인덱스](../configs/team-runtime-index.json)가 기준입니다. `python handoff.py list`로 영상별 연결을 확인합니다. 날짜가 포함된 문서라도 위 목록에 남긴 문서는 현재 참조 문서입니다. 날짜별 진행 일지·실패 실험을 계속 새 문서로 추가하지 말고 해당 문서를 갱신합니다.

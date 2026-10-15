@@ -767,6 +767,51 @@
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/summary.json": {
       "bytes": 1950,
       "sha256": "b9866b256cb9b5a761b9ef25801b56c35ff3b2aae971d0550b9012221e821266"
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/detections.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/full_review_verification.json": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/ppe/events_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/ppe/observations_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/preview_0.jpg": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/preview_25.jpg": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/preview_50.jpg": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/preview_75.jpg": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/proximity/events_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/proximity/observations_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/summary.json": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/zone_access/events_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/zone_access/observations_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/zone_dwell/events_v1.jsonl": {
+      "disabled_by_presentation_selection": true
+    },
+    "outputs/diagnostics/presentation5_bottom_center_comparison_2026-10-14/video5/zone_dwell/observations_v1.jsonl": {
+      "disabled_by_presentation_selection": true
     }
   }
 }

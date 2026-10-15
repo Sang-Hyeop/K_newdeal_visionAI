@@ -93,5 +93,14 @@
       "bytes": 5382917
     }
   },
-  "next": "Implement approved policy unchanged, then compare full video outputs. Do not silently promote candidate based on small reused test."
+  "next": "Implement approved policy unchanged, then compare full video outputs. Do not silently promote candidate based on small reused test.",
+  "artifact_retirement": {
+    "date": "2026-10-15",
+    "reason": "superseded by expanded1577 candidate; not promoted",
+    "deleted": [
+      "models/experiments/ppe_head63_finetune",
+      "outputs/diagnostics/ppe_compare_2026-10-15"
+    ],
+    "metrics_and_source_data_preserved": true
+  }
 }
