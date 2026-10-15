@@ -405,5 +405,29 @@
   },
   "destination": "data/annotation_candidates/hoodie_ppe_2026-10-15",
   "all_40_copied_image_label_hashes_verified": true,
-  "selected_manifest_sha256": "25a58026f57f5004d8ce3a678a6eb77da4ad04f224105c02559106b4b9ed878e"
+  "selected_manifest_sha256": "25a58026f57f5004d8ce3a678a6eb77da4ad04f224105c02559106b4b9ed878e",
+  "head_annotation_result": {
+    "directory": "ppe_head_review",
+    "annotated_context_crops": 14,
+    "no_helmet_head_boxes": 14,
+    "helmeted_head_boxes": 0,
+    "held_originals": 6,
+    "training_started": false,
+    "review_status": "assistant_visual_annotations_for_user_review",
+    "manifest_sha256": "f43d1082ed67d43e2ae033ffa3c2293b63ce680f5f203b2b7071bd71cd2d920e"
+  },
+  "head_annotation_validation": {
+    "input_images": 20,
+    "annotated_context_crops": 14,
+    "boxes_by_class": {
+      "helmeted_head": 0,
+      "no_helmet_head": 14
+    },
+    "held_originals": 6,
+    "source_images_and_body_labels_unchanged": true,
+    "crop_pixels_match_source": true,
+    "yolo_coordinates_checked": true,
+    "training_started": false,
+    "github_upload": false
+  }
 }
