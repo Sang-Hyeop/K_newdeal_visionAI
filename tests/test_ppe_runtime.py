@@ -75,3 +75,32 @@ class RuntimeVersionScopeTests(unittest.TestCase):
   self.assertEqual(m.runtime_version(2),m.runtime_version())
   self.assertEqual(m.runtime_version(3),m.runtime_version())
   self.assertNotEqual(m.runtime_version(5),m.runtime_version())
+
+class ContextSearchCascadeTests(unittest.TestCase):
+ def run_search(self,first,requires_head_candidate=False):
+  import numpy as np
+  from types import SimpleNamespace
+  from unittest.mock import Mock,patch
+  bare={'class':1,'confidence':.8,'box':[130,100,150,125]}
+  model=SimpleNamespace(model=SimpleNamespace(names={0:'helmeted_head',1:'no_helmet_head'}),predict_upper_body_context=Mock(return_value=[]),predict_fixed_context=Mock(side_effect=[first,[bare]]))
+  cfg={'guarded_upper_body_videos':[5],'fixed_context_videos':[5],'fixed_context_search':[{'context_size':320,'imgsz':640,'source':'v6_fixed_context'},{'context_size':480,'imgsz':960,'source':'v6_wide_context','requires_head_candidate':requires_head_candidate}]}
+  with patch.object(m,'runtime_config',return_value=cfg),patch.object(m,'detect_current_heads',return_value=[]):
+   heads,blocked=m.infer_runtime_heads(model,np.zeros((600,600,3),dtype=np.uint8),[[100,100,200,300]],{'helmet_evidence_confidence':.4,'no_helmet_evidence_confidence':.3},None,5)
+  return heads,blocked,model
+ def test_valid_first_pass_skips_more_expensive_second_pass(self):
+  heads,_,model=self.run_search([{'class':1,'confidence':.8,'box':[130,100,150,125]}])
+  self.assertEqual(model.predict_fixed_context.call_count,1);self.assertEqual(heads[0]['source'],'v6_fixed_context')
+ def test_unresolved_first_pass_uses_wider_context(self):
+  heads,_,model=self.run_search([])
+  self.assertEqual(model.predict_fixed_context.call_count,2);self.assertEqual(heads[0]['source'],'v6_wide_context')
+  self.assertEqual(model.predict_fixed_context.call_args.kwargs,{'context_size':480,'imgsz':960})
+ def test_crop_only_helmet_cannot_skip_search_as_safe(self):
+  heads,blocked,model=self.run_search([{'class':0,'confidence':.99,'box':[130,100,150,125]}])
+  self.assertEqual(model.predict_fixed_context.call_count,2);self.assertEqual(blocked[0]['class'],'helmeted_head');self.assertEqual(heads[0]['class'],'no_helmet_head')
+
+ def test_wide_search_skips_people_with_no_head_evidence(self):
+  heads,blocked,model=self.run_search([],requires_head_candidate=True)
+  self.assertEqual(model.predict_fixed_context.call_count,1);self.assertEqual(heads,[])
+ def test_wide_search_rechecks_low_confidence_head(self):
+  heads,blocked,model=self.run_search([{'class':1,'confidence':.2,'box':[130,100,150,125]}],requires_head_candidate=True)
+  self.assertEqual(model.predict_fixed_context.call_count,2);self.assertEqual(heads[-1]['source'],'v6_wide_context')

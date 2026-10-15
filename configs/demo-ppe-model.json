@@ -22,7 +22,20 @@
     "fixed_context_videos": [
       5
     ],
-    "fixed_context_version": "v6-approved-window-stable-tracking-guarded-fixed-context-v2",
-    "fixed_context_policy": "320-pixel current-image context only for insufficient heads; unchanged head ownership and evidence thresholds; crop-only helmets blocked"
+    "fixed_context_version": "v6-approved-window-stable-tracking-guarded-context-v3",
+    "fixed_context_policy": "320px context for insufficient heads; 480px/960 recheck only low-confidence heads left unresolved; unchanged head ownership/evidence thresholds; crop-only helmets blocked",
+    "fixed_context_search": [
+      {
+        "context_size": 320,
+        "imgsz": 640,
+        "source": "v6_fixed_context"
+      },
+      {
+        "context_size": 480,
+        "imgsz": 960,
+        "source": "v6_wide_context",
+        "requires_head_candidate": true
+      }
+    ]
   }
 }

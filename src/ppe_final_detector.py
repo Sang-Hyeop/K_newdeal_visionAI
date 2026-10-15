@@ -49,15 +49,16 @@ class FinalPPEDetector:
                 heads.append({'class':int(b.cls.item()),'confidence':float(b.conf.item()),'box':[q[0]+x0,q[1]+y0,q[2]+x0,q[3]+y0]})
         return self.filter(heads,cover=.8,overlap=.7)
 
-    def predict_fixed_context(self,frame,boxes):
+    def predict_fixed_context(self,frame,boxes,context_size=320,imgsz=640):
         """Fixed-size surrounding pixels recover small heads without changing ownership geometry."""
         h,w=frame.shape[:2];heads=[]
+        if not isinstance(context_size,int) or context_size<32 or not isinstance(imgsz,int) or imgsz<32:raise ValueError('Positive supported context and inference sizes required')
         for box in boxes:
             if box[2]<=box[0] or box[3]<=box[1]:raise ValueError('Positive person box required')
-            size=min(320,h,w)
+            size=min(context_size,h,w)
             cx=(box[0]+box[2])/2;cy=box[1]+.1*(box[3]-box[1])
             x0=max(0,min(w-size,int(cx-size/2)));y0=max(0,min(h-size,int(cy-size/2)))
-            result=self.model.predict(frame[y0:y0+size,x0:x0+size],imgsz=640,conf=.15,device='cpu',verbose=False)[0]
+            result=self.model.predict(frame[y0:y0+size,x0:x0+size],imgsz=imgsz,conf=.15,device='cpu',verbose=False)[0]
             for b in result.boxes:
                 q=b.xyxy[0].tolist()
                 if min(q[:2])<=3 or max(q[2:])>=size-3:continue

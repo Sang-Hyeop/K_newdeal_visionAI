@@ -77,18 +77,22 @@ def infer_runtime_heads(model,frame,boxes,policy,review,video):
  if review:extra,_=exclude_confirmed_equipment(extra,frame.shape[:2],review,frame)
  kept,blocked=conservative_extra_heads(heads,heads+extra)
  if video in runtime_config().get('fixed_context_videos',[]):
-  missing=[]
-  for i,box in enumerate(boxes):
-   current=[q for q in kept if head_owner(q['bbox_xyxy'],boxes,frame.shape[0],upper_fraction=.35)==i]
-   if not any(q['confidence']>=policy['helmet_evidence_confidence'if q['class']=='helmeted_head'else'no_helmet_evidence_confidence']for q in current):missing.append(box)
-  fixed=[]
-  for box in missing:
-   owner=boxes.index(box)
-   for q in model.predict_fixed_context(frame,[box]):
-    if head_owner(q['box'],boxes,frame.shape[0],upper_fraction=.35)!=owner:continue
-    fixed.append({'class':model.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':'v6_fixed_context','model_sources':['baseline','final_v6']})
-  if review:fixed,_=exclude_confirmed_equipment(fixed,frame.shape[:2],review,frame)
-  # As with upper-body search, new context alone must never certify helmet wearing.
-  blocked.extend(q for q in fixed if q['class']=='helmeted_head')
-  kept.extend(q for q in fixed if q['class']=='no_helmet_head')
+  # Recheck only people still lacking valid evidence after the preceding scale.
+  searches=runtime_config().get('fixed_context_search',[{'context_size':320,'imgsz':640,'source':'v6_fixed_context'}])
+  for search in searches:
+   missing=[]
+   for i,box in enumerate(boxes):
+    current=[q for q in kept if head_owner(q['bbox_xyxy'],boxes,frame.shape[0],upper_fraction=.35)==i]
+    if search.get('requires_head_candidate') and not current:continue
+    if not any(q['confidence']>=policy['helmet_evidence_confidence'if q['class']=='helmeted_head'else'no_helmet_evidence_confidence']for q in current):missing.append(box)
+   fixed=[]
+   for box in missing:
+    owner=boxes.index(box)
+    for q in model.predict_fixed_context(frame,[box],context_size=search['context_size'],imgsz=search['imgsz']):
+     if head_owner(q['box'],boxes,frame.shape[0],upper_fraction=.35)!=owner:continue
+     fixed.append({'class':model.model.names[q['class']],'confidence':q['confidence'],'bbox_xyxy':q['box'],'source':search['source'],'model_sources':['baseline','final_v6']})
+   if review:fixed,_=exclude_confirmed_equipment(fixed,frame.shape[:2],review,frame)
+   # New context alone must never certify helmet wearing.
+   blocked.extend(q for q in fixed if q['class']=='helmeted_head')
+   kept.extend(q for q in fixed if q['class']=='no_helmet_head')
  return kept,blocked
