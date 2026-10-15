@@ -1,4 +1,4 @@
-"""Observed ROI approach/occupancy; authorization cannot be inferred from video."""
+"""ROI 접근/점유를 관측한다. 영상만으로 출입 권한·무단 여부는 판단하지 않는다."""
 import math
 import cv2
 import numpy as np

@@ -1,4 +1,4 @@
-"""Full-frame proximity; fixed forbidden-area ROIs belong to TrackedZone."""
+"""추적된 사람/지게차로 전체 화면 근접 이벤트를 만든다. 고정 금지 ROI는 TrackedZone 담당."""
 from .person_tracker import PersonTracker
 from .proximity import Proximity
 from .operator_association import OperatorAssociation, TemporalOperatorAssociation

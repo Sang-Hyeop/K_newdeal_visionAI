@@ -1,4 +1,4 @@
-"""Preserve established detections and supplement missing object proposals."""
+"""기본 검출 박스를 유지하면서 보조 모델로 놓친 사람/지게차 후보를 보충한다."""
 import hashlib,json
 from types import SimpleNamespace
 import torch

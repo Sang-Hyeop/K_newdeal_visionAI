@@ -1,4 +1,4 @@
-"""Independent feature banners and faint configured ROI fills."""
+"""기능별 배너·박스·ROI를 영상에 그려 시연용 demo.mp4를 만든다."""
 import cv2,numpy as np
 from src.feature_status import feature_status
 from src.observation_display import display_label, event_display, LABELS

@@ -1,4 +1,4 @@
-"""Fixed-camera empty-equipment reference check; changed pixels never prove a person."""
+"""고정 카메라의 빈 설비 참조 이미지와 비교해 사람처럼 보이는 고정 오탐을 걸러낸다."""
 from functools import lru_cache
 from pathlib import Path
 import cv2,numpy as np

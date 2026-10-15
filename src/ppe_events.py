@@ -1,4 +1,4 @@
-"""Temporal PPE evidence per observed track; candidates are not proven violations."""
+"""사람 트랙별 안전모 관측을 시간에 걸쳐 모아 PPE 이벤트(착용/미착용 후보)를 만든다."""
 import math
 
 class PPEEvents:

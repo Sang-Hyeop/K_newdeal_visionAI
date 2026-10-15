@@ -1,4 +1,4 @@
-"""Camera 7: monitored floor minus reviewed safe polygons, with timed lane policy."""
+"""물류창고(5번)용: 감시 바닥에서 안전지대를 뺀 ROI + timed 통로 규칙."""
 import cv2,numpy as np
 from src.person_tracker import PersonTracker
 from src.zone_dwell import ZoneDwell

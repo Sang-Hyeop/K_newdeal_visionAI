@@ -1,4 +1,4 @@
-"""Camera-reviewed object routing; rejected proposals remain available for diagnostics."""
+"""카메라별 검수 프로필로 객체 후보를 고르고, 설비 오탐 등은 거절 목록으로 남긴다."""
 from .ppe_tiled_inference import iou
 from types import SimpleNamespace
 

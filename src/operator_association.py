@@ -1,4 +1,4 @@
-"""Camera-local probable rider association; overlap alone never proves a role."""
+"""사람과 지게차 겹침으로 탑승자(라이더) 후보를 추정한다. 역할 확정은 아니다."""
 def probable_rider(person, vehicle):
     p=person.get('detected_bbox_xyxy',person['bbox_xyxy'])
     f=vehicle.get('detected_bbox_xyxy',vehicle['bbox_xyxy'])

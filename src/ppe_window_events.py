@@ -1,4 +1,4 @@
-"""User-approved rolling evidence policy; no stale body boxes or invented heads."""
+"""최근 구간 창(window)으로 PPE 근거를 모아 깜빡임을 줄이는 대안 정책이다."""
 import math
 from collections import deque
 

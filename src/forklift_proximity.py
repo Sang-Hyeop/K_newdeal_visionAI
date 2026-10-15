@@ -1,4 +1,4 @@
-"""Symmetric observed forklift footprint distance; uncalibrated, no orientation claim."""
+"""지게차–지게차 화면상 거리로 근접 판정한다. (현재 5영상 시연 경로에서는 미사용)"""
 import math,itertools
 
 def _area(box):return max(0,box[2]-box[0])*max(0,box[3]-box[1])

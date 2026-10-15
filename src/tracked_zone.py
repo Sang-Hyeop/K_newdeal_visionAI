@@ -1,4 +1,4 @@
-"""Connect observed person tracks to a camera-specific demonstration dwell rule."""
+"""추적된 사람을 카메라 ROI 체류/접근 규칙에 연결하고(필요 시) 통로 조건부 위험을 적용한다."""
 from .person_tracker import PersonTracker
 from .zone_dwell import ZoneDwell
 from .zone_access import ZoneAccess

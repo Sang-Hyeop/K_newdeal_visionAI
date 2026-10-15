@@ -1,4 +1,4 @@
-"""Selected PPE detector. Outputs current observed head boxes; no event/ROI rules."""
+"""최종 PPE 검출기. 현재 프레임의 머리 박스만 출력하고 이벤트/ROI 규칙은 없다."""
 from pathlib import Path
 from ultralytics import YOLO
 import importlib.util
