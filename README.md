@@ -35,6 +35,16 @@ python handoff.py test
 
 이벤트 API는 `http://127.0.0.1:8010/events?limit=5`입니다. API·대시보드 연결은 `docs/github-team-quickstart.md`와 `backend_v1/API_SPEC.md`를 참조합니다.
 
+## 시선 대시보드 (team7)
+
+발표 이벤트 API 위에 로그인·구역 CCTV·알람을 띄웁니다.
+
+```sh
+python team7.py
+```
+
+브라우저 `http://127.0.0.1:7860` · 로그인 `qwer1` / `1234` (또는 `qwer2` / `1234`). 데스크톱 창은 `python team7_desktop.py` 입니다. 부품은 `team7_app/` 에 있습니다.
+
 ## 새 PC 설치
 
 Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`를 실행합니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
