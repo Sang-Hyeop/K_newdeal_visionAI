@@ -1,7 +1,7 @@
 {
   "name": "Siseon team runtime handoff",
   "date": "2026-10-15",
-  "source_commit": "844914b",
+  "source_commit": "9a89ac5",
   "source_branch": "data/hoodie-ppe-candidates (local integrated runtime; not republished yet)",
   "python_tested": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
   "runtime_versions": {
