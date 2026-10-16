@@ -1,4 +1,4 @@
-"""Common event envelopes for observed rule transitions, never global safety."""
+"""기능별 관측을 공통 events_v1/observations_v1 JSON 형식으로 감싼다."""
 import hashlib,json,math
 from .feature_status import feature_status
 from .observation_display import event_display

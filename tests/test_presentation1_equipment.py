@@ -4,7 +4,7 @@ from src.detection_review_profile import exclude_confirmed_equipment
 
 class PresentationEquipmentTests(unittest.TestCase):
  def setUp(self):
-  self.profile=json.loads((Path(__file__).resolve().parents[1]/'configs/video2-object-review.json').read_text())
+  self.profile=json.loads((Path(__file__).resolve().parents[1]/'configs/video1-object-review.json').read_text())
  def proposal(self,cls,box):return {'class':cls,'confidence':.9,'bbox_xyxy':box}
  def test_machine_person_and_head_rejected(self):
   for cls,box in [('person',[1113,138,1193,391]),('no_helmet_head',[1130,145,1170,178])]:

@@ -4,7 +4,7 @@
 
 ## 현재 범위
 
-발표 원본은 1~5번입니다. [영상별 시연 기준](demo-feature-show-plan-2026-10-07.md), `configs/team-runtime-index.json`, `handoff.py`를 기준으로 실행합니다. 사람–차량 근접과 고정 ROI 침범·체류를 분리하며 PPE는 전 영상에서 함께 사용합니다.
+발표 원본은 1~5번입니다. [영상별 시연 기준](demo-feature-show-plan-2026-10-07.md), `configs/team-runtime-index.json`, `handoff.py`를 기준으로 실행합니다. 사람–차량 근접과 고정 ROI 침범·체류를 분리하며 PPE는 2·3·5번에서 사람 탐지와 함께 사용하며, 1번은 근접만, 4번은 체류시간만 표시·기록합니다.
 
 - 관측이 없거나 불확실하면 미확인입니다. 기능별 SAFE를 현장 전체 안전으로 표현하지 않습니다.
 - 현재 거리는 보정되지 않은 화면상 상대 거리입니다. 실제 m는 제공하지 않고 distance_meters=null을 유지합니다.

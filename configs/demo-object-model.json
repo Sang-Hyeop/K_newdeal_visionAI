@@ -1,6 +1,5 @@
 {
   "status": "selected_recall_first_demo_bundle",
-  "general_baseline_kept": "configs/selected-object-model.json",
   "baseline_weights": "models/pilot_v16_related/person_forklift.pt",
   "baseline_sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125",
   "supplement_weights": "models/demo_object_adaptation_v1/best.pt",

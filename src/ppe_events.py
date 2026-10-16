@@ -1,8 +1,13 @@
-"""Temporal PPE evidence per observed track; candidates are not proven violations."""
+"""사람 트랙별 안전모 관측을 시간에 걸쳐 모아 PPE 이벤트(착용/미착용 후보)를 만든다."""
 import math
 
 class PPEEvents:
     def __init__(self,config):
+        self.window_rule = None
+        if 'window_seconds' in config:
+            from .ppe_window_events import WindowPPEEvents
+            self.window_rule = WindowPPEEvents(config)
+            return
         self.frames=config['minimum_consecutive_frames'];self.duration=config['minimum_confirmed_seconds'];self.gap=config['maximum_observation_gap_seconds'];self.conf=config['minimum_head_confidence']
         if self.frames<1 or not all(math.isfinite(v) for v in [self.duration,self.gap,self.conf]) or self.duration<0 or self.gap<=0 or not 0<self.conf<=1:raise ValueError('Invalid PPE policy')
         self.bare_conf=config.get('minimum_no_helmet_candidate_confidence',self.conf)
@@ -10,8 +15,11 @@ class PPEEvents:
         self.conflict_warning=config.get('conflicting_bare_head_policy','unknown')=='warning_candidate'
         self.require_baseline=config.get('require_baseline_helmet_confirmation',False)
         self.history={};self.previous={};self.last=None
-    def reset(self):self.history.clear();self.previous.clear();self.last=None
+    def reset(self):
+        if self.window_rule is not None:return self.window_rule.reset()
+        self.history.clear();self.previous.clear();self.last=None
     def update(self,timestamp,tracks,missing=(),scene_cut=False):
+        if self.window_rule is not None:return self.window_rule.update(timestamp,tracks,missing,scene_cut)
         if self.last is not None and timestamp<=self.last or not math.isfinite(timestamp) or timestamp<0:raise ValueError('Increasing source times required')
         if scene_cut:self.reset()
         self.last=timestamp;events=[];seen=set()

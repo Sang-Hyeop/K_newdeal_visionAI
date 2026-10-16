@@ -1,4 +1,4 @@
-"""Optional overlapping head search; predictions only, never safety decisions."""
+"""겹치는 타일로 작은 머리를 추가 탐색한다. 예측만 하고 안전 결정은 하지 않는다."""
 from src.ppe_person_crop import head_owner
 
 

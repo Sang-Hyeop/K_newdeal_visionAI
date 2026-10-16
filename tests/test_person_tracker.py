@@ -49,3 +49,18 @@ class TrackingTests(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
+class GeometryAssociationTests(unittest.TestCase):
+    def test_geometry_matching_keeps_scene_reset_and_current_observation_contract(self):
+        tracker=PersonTracker(5,fuse_score=False,expose_current_candidates=True)
+        first,_=tracker.update(0,[person()],(400,400))
+        missing,records=tracker.update(.2,[],(400,400))
+        self.assertEqual(missing,[]);self.assertTrue(records)
+        second,_=tracker.update(.4,[person()],(400,400),scene_cut=True)
+        self.assertNotEqual(first[0]['track_id'],second[0]['track_id'])
+        self.assertEqual(second[0]['detected_bbox_xyxy'],person()['bbox_xyxy'])
+    def test_two_simultaneously_observed_people_remain_distinct(self):
+        tracker=PersonTracker(5,fuse_score=False,expose_current_candidates=True)
+        for i in range(4):
+            tracks,_=tracker.update(i*.2,[person(100+i),person(200-i)],(400,400))
+            self.assertEqual(len(tracks),2);self.assertEqual(len({t['track_id']for t in tracks}),2)

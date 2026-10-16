@@ -13,8 +13,8 @@
     "purpose": "demo_and_development_validation",
     "size_bytes": 54018399,
     "presentation_video_number": 1,
-    "legacy_scenario_number": 2,
-    "runner": "scripts/run_demo_scenarios.py"
+    "runner": "scripts/run_demo_scenarios.py",
+    "video_number": 1
   },
   {
     "file": "2_restricted_zone_intrusion.mp4",
@@ -30,9 +30,9 @@
     "training_eligible": false,
     "purpose": "demo_and_development_validation",
     "presentation_video_number": 2,
-    "legacy_scenario_number": null,
     "runner": "scripts/run_intrusion_review.py",
-    "source_type": "AI_generated_demo_not_independent_CCTV_validation"
+    "source_type": "AI_generated_demo_not_independent_CCTV_validation",
+    "video_number": 2
   },
   {
     "file": "3_PPE_Helmet.mp4",
@@ -48,8 +48,8 @@
     "purpose": "demo_and_development_validation",
     "size_bytes": 18710180,
     "presentation_video_number": 3,
-    "legacy_scenario_number": 5,
-    "runner": "scripts/run_demo_scenarios.py"
+    "runner": "scripts/run_demo_scenarios.py",
+    "video_number": 3
   },
   {
     "file": "4_hazard_zone_dwell.mp4",
@@ -65,8 +65,8 @@
     "purpose": "demo_and_development_validation",
     "size_bytes": 49104652,
     "presentation_video_number": 4,
-    "legacy_scenario_number": 4,
-    "runner": "scripts/run_demo_scenarios.py"
+    "runner": "scripts/run_demo_scenarios.py",
+    "video_number": 4
   },
   {
     "file": "5_Logistics Warehouse.mp4",
@@ -84,7 +84,7 @@
     "previously_registered_sha256": "772f409b8e001559238cdee38cbb6094c55695076bd018ca1886e0febaaa6d18",
     "metadata_update_note": "Shortened to ~3:01 and recompressed with x264 CRF23; previous upload was 272s / ~26.9 MiB",
     "presentation_video_number": 5,
-    "legacy_scenario_number": 7,
-    "runner": "scripts/run_demo_scenarios.py"
+    "runner": "scripts/run_demo_scenarios.py",
+    "video_number": 5
   }
 ]

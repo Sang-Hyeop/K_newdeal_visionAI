@@ -1,39 +1,30 @@
-# 시선 — 현재 발표 영상 1~5 실행 안내
+# 시선 — 현재 영상 1~5
 
-**현재 실행 입구는 `handoff.py` 하나입니다.** 과거 실험 실행기와 이전 리뷰 결과는 2026-10-14 정리에서 삭제했습니다. 아래 명령은 프로젝트 최상위 폴더에서 실행합니다.
-
-## 실행
+실행 입구는 `handoff.py`입니다. 최신 결과는 `outputs/reviews/`의 영상 5개뿐입니다. 좋은 보완은 기본 실행에 반영하고, 실패하거나 대체된 실험 결과는 삭제합니다.
 
 ```sh
 python handoff.py list
-python handoff.py check --models
-python handoff.py run --video 1
+python handoff.py run --video 3
+python handoff.py check
 ```
 
-`--video`를 1~5로 바꿉니다. `list`는 영상별 원본·모델·설정·구현 코드·최신 결과·이벤트 경로를 출력합니다. 개발은 safety 환경을 사용합니다.
+전체 실행이 성공하면 해당 영상의 기존 최신 MP4·이벤트·캐시·조회 DB를 갱신합니다. 날짜별/실험별 결과 폴더를 계속 만들지 않습니다. 원본부터 신규 AI 추론은 `--fresh`를 붙입니다. `--max-seconds`는 짧은 확인용으로, outputs/runtime/preview_videoN.mp4 하나만 갱신하고 전체 최신 결과는 보존합니다.
 
-- 1: 지게차–작업자 충돌 위험
-- 2: 위험구역 ROI 침범
-- 3: 안전모 착용/미착용
-- 4: 위험구역 체류
-- 5: 물류창고 통합 시연 — 차량 복구·탑승자 분리·밑면 중앙 거리 실험
+- 1번: 사람·지게차 충돌 근접 위험만.
+- 2번: 사람 탐지·ROI 침범·안전모 PPE.
+- 3번: 사람 탐지·안전모 PPE만.
+- 4번: 사람 탐지·체류시간만. 기존 차량 조건은 내부 판정에 유지.
+- 5번: 근접·ROI 침범·체류시간·PPE 전체.
 
-1·3·4·5의 기본 실행은 저장된 실제 관측을 재사용합니다. 원본부터 새 추론하려면 `python handoff.py run --video 5 --fresh`처럼 실행합니다. 2번은 항상 원본 전체를 새로 추론합니다. 새 결과는 `outputs/handoff_runs/`에 생성되며 확정 리뷰를 덮어쓰지 않습니다. 이 폴더의 결과는 검수 전 결과입니다.
-
-## 최신 확정 결과
-
-`outputs/reviews/`에는 영상별 결과 1개씩, 총 5개만 있습니다. `outputs/events/presentation1`~`presentation5`에는 같은 버전의 전체 이벤트·관측 기록이 있습니다. `outputs/diagnostics/`는 기본 실행의 재현 캐시이므로 임의로 삭제하지 않습니다.
-
-실제 모델 6개와 영상별 연결 관계는 `configs/team-runtime-index.json`이 기준입니다. 파일명에서 v16/v2 같은 이름을 보고 최신 여부를 판단하지 않습니다. 기존 학습 데이터와 수동 라벨은 `data/`에 보존했습니다. `src/`는 공통 모듈, `tests/`는 회귀 검증 코드이며 개별 실행 대상이 아닙니다.
-
-## 백엔드·검증
+현재 모델 6개와 원본·코드·결과 연결은 configs/team-runtime-index.json이 기준입니다. PPE는 착용400장·미착용400장(총800장) 보완학습 중 실제 영상 비교로 선택한1회차 가중치에 사용자 확정 1초/3관측/75%·착용0.4/미착용0.3·hold0.6초를 적용했습니다. 사람 ID는 위치 중심 추적으로 연결하며, 5번에서만 추가 상반신 탐지를 사용하며, 그래도 증거가 부족한 사람은 320px 주변 문맥으로 작은 머리를 다시 찾습니다. 그래도 낮은 신뢰도의 머리 후보가 남으면 480px 문맥으로 한 번 더 확인합니다. 추가 크롭 단독의 안전모 후보로 착용 SAFE를 만들지 않습니다.
 
 ```sh
+python handoff.py backend --import-only
 python handoff.py backend --port 8010
 python handoff.py test
 ```
 
-이벤트 API는 `http://127.0.0.1:8010/events?limit=5`입니다. API·대시보드 연결은 `docs/github-team-quickstart.md`와 `backend_v1/API_SPEC.md`를 참조합니다.
+대시보드는 `python team7.py`로 실행합니다. 현재 safety 환경에서 Gradio 6.28.0·pandas 3.0.5를 확인했습니다. 신규 환경은 감지 의존성 외에 `python -m pip install gradio==6.28.0 pandas==3.0.5`가 필요합니다. 브라우저 영상 변환에는 ffmpeg 또는 imageio-ffmpeg가 필요합니다. 대시보드는 현재 runtime index의 최신 리뷰 5개와 outputs/events를 읽고 로컬 API를 자동 시작합니다.
 
 ## 시선 대시보드 (team7)
 
@@ -47,10 +38,8 @@ python team7.py
 
 ## 새 PC 설치
 
-Python 3.11 준비 후 `python scripts/setup_runtime.py`, `python -m pip install -r requirements-runtime.txt`를 실행합니다. 모델·리뷰·로그는 GitHub Release에서 설치합니다. Git clone만으로 모델이 포함되지는 않습니다.
+backend_v1/API_SPEC.md와 docs/github-team-quickstart.md가 팀원 연동 안내입니다. 신규 PC의 모델 설치는 `python scripts/setup_runtime.py`, 감지 라이브러리는 `python -m pip install -r requirements-runtime.txt`입니다.
 
-## 한계와 과거 기록
+2026-10-16 팀 실행 자료는 [runtime-2026-10-16](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-16)에서 받습니다. main 병합 전에는 `data/hoodie-ppe-candidates` 브랜치의 코드와 설정을 사용해야 합니다. Code → Download ZIP도 이 브랜치를 선택한 뒤 받고 `python scripts/setup_runtime.py`를 실행합니다. 10월15일 배포는 오늘 결과로 자동 갱신되지 않습니다.
 
-거리 값은 보정되지 않은 화면상 상대 거리이며 실제 m가 아닙니다. 가림·최초 등장·미탐은 미확인으로 남습니다. 2번은 AI 생성 시연 영상입니다. 시연 적응 결과를 독립 현장 정확도로 설명하지 않습니다.
-
-현재 문서는 `docs/README.md`에서 시작합니다. 과거 리뷰·학습 실험·초안은 docs에서 삭제했고 Git 이력에서 확인합니다. 현재 사용자는 발표 번호1~5와 handoff.py를 사용합니다. 파일 정리·실행 검증 기록은 `docs/checkpoints/2026-10-14/five-video-cleanup/`에 있습니다.
+학습 데이터·수동 라벨은 data/에 보존했습니다. 채택하지 않은 1577장 후보 모델과 비교/실험 출력은 삭제했습니다. 변경·실패 과정은 Git 이력, 현재 상태는 docs/progress-2026-10-14.md를 참고합니다. 거리는 실제 m가 아닌 화면상 상대 거리이며, 2번은 AI 생성 영상입니다. 시연 성과가 독립 현장 정확도를 보장하지 않습니다.

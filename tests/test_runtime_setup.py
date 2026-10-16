@@ -52,3 +52,17 @@ class RuntimePresentationPathTests(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'Duplicate'):m.targets(Path.cwd(),{'files':[{'path':'outputs/current.json','archive_path':'outputs/old1.json'},{'path':'outputs/current.json','archive_path':'outputs/old2.json'}]})
  def test_migration_source_cannot_be_another_install_destination(self):
   with self.assertRaisesRegex(ValueError,'overlaps'):m.targets(Path.cwd(),{'files':[{'path':'outputs/current.json','archive_path':'outputs/old.json'},{'path':'outputs/old.json','archive_path':'outputs/older.json'}]})
+
+class RuntimeUpgradeTests(unittest.TestCase):
+ def test_known_published_version_upgrades_without_replacing_unknown_edits(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);archive,config=RuntimeSetupTests().fixture(root)
+   target=root/'models/demo.pt';target.parent.mkdir();target.write_bytes(b'previous release')
+   config['previous_file_versions']={'models/demo.pt':[{'bytes':target.stat().st_size,'sha256':m.digest(target)}]}
+   self.assertEqual(m.install_archive(root,config,archive),(1,0));self.assertEqual(target.read_bytes(),b'test model')
+ def test_retired_published_files_removed_but_user_edits_preserved(self):
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);archive,config=RuntimeSetupTests().fixture(root)
+   old=root/'outputs/obsolete.json';edited=root/'outputs/edited.json';old.parent.mkdir();old.write_bytes(b'old');edited.write_bytes(b'user edit')
+   config['retired_files']=[{'path':'outputs/obsolete.json','bytes':3,'sha256':hashlib.sha256(b'old').hexdigest()},{'path':'outputs/edited.json','bytes':3,'sha256':hashlib.sha256(b'old').hexdigest()}]
+   m.install_archive(root,config,archive);self.assertFalse(old.exists());self.assertEqual(edited.read_bytes(),b'user edit')

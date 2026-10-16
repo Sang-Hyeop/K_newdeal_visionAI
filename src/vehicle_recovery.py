@@ -1,4 +1,4 @@
-"""Current-image multi-scale vehicle recovery; history guides crops, never creates boxes."""
+"""현재 프레임 다중 스케일로 놓친 지게차를 다시 찾는다. 과거 궤적으로 박스를 만들지 않는다."""
 from .ppe_tiled_inference import iou
 from .detection_review_profile import exclude_confirmed_equipment
 

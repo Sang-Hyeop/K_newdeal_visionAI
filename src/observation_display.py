@@ -1,4 +1,4 @@
-"""Presentation and alert routing, independent of the underlying risk verdict."""
+"""이벤트/배너에 쓸 표시 문구와 라우팅 라벨을 만든다. 위험 판정 자체는 하지 않는다."""
 from collections import Counter
 
 PENDING_REASONS = {'pending_temporal_confirmation', 'person_track_confirmation_pending'}

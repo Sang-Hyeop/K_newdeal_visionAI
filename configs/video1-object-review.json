@@ -1,27 +1,59 @@
 {
-  "policy_version": "video1-background-review-v2",
-  "person_source": "coco_person_1280",
-  "vehicle_sources": [
-    "nvidia_adaptation_640",
-    "nvidia_adaptation_1280"
+  "policy_version": "video2-cvat-person-routing-v1",
+  "person_prediction_keys": [
+    "person_coco",
+    "baseline",
+    "person_adaptation"
   ],
-  "maximum_vehicle_frame_area": 0.35,
-  "ppe_requires_observed_person": true,
-  "renderer": "object_first",
-  "status": "experimental_video1_background_review_not_generalized",
-  "limitation": "Oversized vehicles are retained in diagnostic review proposals, not confirmed as objects. A real vehicle occupying >35% of this image would also require review; do not use this threshold unchanged on a new camera. Confidence gates separate weak proposals from confirmed routing; weak real objects can be missed and must remain UNKNOWN. Thresholds are development-camera settings, not independent calibration.",
-  "vehicle_part_containment_threshold": 0.6,
-  "vehicle_weights": "models/nvidia_object_adaptation_v1/best.pt",
   "vehicle_prediction_keys": [
-    "supplement",
     "supplement_highres"
   ],
+  "vehicle_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
+  "maximum_vehicle_frame_area": 0.35,
+  "vehicle_part_containment_threshold": 0.6,
   "minimum_confidence_by_class": {
     "person": 0.25,
-    "forklift": 0.1
+    "forklift": 0.25
   },
-  "vehicle_support_required": true,
-  "vehicle_support_weights": "models/experiments/forklift_real_context_v2/weights/best.pt",
-  "vehicle_support_minimum_confidence": 0.1,
-  "vehicle_support_minimum_iou": 0.3
+  "ppe_requires_observed_person": true,
+  "renderer": "object_first",
+  "status": "experimental_video2_development_review",
+  "limitation": "Related development-scene model; not independent validation. Loaded vehicle boxes can include cargo; clipped geometry remains UNKNOWN. People combine current COCO and baseline proposals; no held boxes.",
+  "show_safe_pairs_for_other_people": true,
+  "ppe_person_context": true,
+  "confirmed_equipment_regions": [
+    {
+      "region_id": "presentation1_fixed_center_machine",
+      "bbox_normalized": [
+        0.575,
+        0.12,
+        0.625,
+        0.37
+      ],
+      "excluded_classes": [
+        "person",
+        "helmeted_head",
+        "no_helmet_head"
+      ],
+      "minimum_coverage": 0.85,
+      "require_center_inside": true,
+      "review_reason": "user_confirmed_fixed_machine_2026_10_14"
+    },
+    {
+      "region_id": "presentation1_left_storage_boxes",
+      "bbox_normalized": [
+        0,
+        0.06,
+        0.135,
+        0.46
+      ],
+      "excluded_classes": [
+        "forklift"
+      ],
+      "minimum_coverage": 0.9,
+      "require_center_inside": true,
+      "review_reason": "user_confirmed_storage_not_forklift_2026_10_14"
+    }
+  ],
+  "equipment_exclusion_scope": "User-reviewed fixed camera only; review regions again if camera or storage changes. No time-specific suppression."
 }

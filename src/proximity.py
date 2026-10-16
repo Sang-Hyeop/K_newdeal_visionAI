@@ -1,4 +1,4 @@
-"""Image-plane proximity candidates, not calibrated collision prediction."""
+"""화면 좌표 기준 사람–지게차 거리 후보를 계산한다. 미터 보정·충돌 예측이 아니다."""
 import math
 
 

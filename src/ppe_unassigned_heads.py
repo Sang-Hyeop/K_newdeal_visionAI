@@ -1,4 +1,4 @@
-"""Track real head evidence independently of body IDs; never invent a body box."""
+"""몸 트랙에 안 붙은 머리 검출을 따로 추적·이벤트로 남긴다. 몸 박스를 지어내지 않는다."""
 from src.person_tracker import PersonTracker
 from src.ppe_events import PPEEvents
 from src.ppe_tiled_inference import iou

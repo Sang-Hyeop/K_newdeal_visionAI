@@ -1,4 +1,4 @@
-"""Connect observed person tracks to a camera-specific demonstration dwell rule."""
+"""추적된 사람을 카메라 ROI 체류/접근 규칙에 연결하고(필요 시) 통로 조건부 위험을 적용한다."""
 from .person_tracker import PersonTracker
 from .zone_dwell import ZoneDwell
 from .zone_access import ZoneAccess
@@ -20,7 +20,7 @@ class TrackedZone:
             if not 0<ratio<1:raise ValueError('Approach margin must be a normalized image ratio')
             self.access=ZoneAccess(self.polygon,min(w,h)*ratio,config['max_gap_seconds'])
         self.forklift_tracker=PersonTracker(processed_fps,config['max_gap_seconds'],target_class='forklift',namespace='F') if config.get('vehicle_conditioned',False) else None
-        # Demo rule (videos 4/7): no vehicle <safe SAFE / >=safe WARNING; with vehicle immediate WARNING / >=critical CRITICAL.
+        # Demo rule (videos 4/5): no vehicle <safe SAFE / >=safe WARNING; with vehicle immediate WARNING / >=critical CRITICAL.
         self.lane=LaneHazard(self.polygon,config.get('vehicle_missing_hold_seconds',1.0),policy=config.get('lane_policy','timed'),safe_seconds=config['safe_seconds'],critical_seconds=config.get('vehicle_critical_seconds',config['critical_seconds'])) if self.forklift_tracker else None
         self.config=config
         self.previous={}

@@ -1,4 +1,4 @@
-"""Conservative dwell state for externally tracked people; no detector/tracker here."""
+"""외부에서 받은 사람 트랙의 ROI 체류 시간·심각도 구간을 계산한다. 검출기/추적기는 포함하지 않는다."""
 from dataclasses import dataclass
 import math
 import cv2

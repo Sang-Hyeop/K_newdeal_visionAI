@@ -1,4 +1,4 @@
-"""ByteTrack adapter with source-time gap handling and scene-scoped identities."""
+"""ByteTrack 기반 사람/지게차 추적. 끊김·장면 전환을 반영한 track_id를 유지한다."""
 from types import SimpleNamespace
 import math
 import itertools

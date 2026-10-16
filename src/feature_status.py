@@ -1,4 +1,4 @@
-"""Per-feature banner aggregation; never declares the entire site safe."""
+"""기능별 배너 상태(SAFE/WARNING/CRITICAL/UNKNOWN)를 집계한다. 현장 전체 안전은 선언하지 않는다."""
 from .observation_display import display_summary
 
 def feature_status(events):

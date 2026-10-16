@@ -1,3 +1,4 @@
+# 2번 영상 ROI 침범 분석
 """Saved-video ROI entry review with current detections and the shared event contract."""
 from pathlib import Path
 import argparse, hashlib, json, sys, os
@@ -9,6 +10,7 @@ from src.person_tracker import PersonTracker
 from src.zone_access import ZoneAccess
 from src.ppe_final_detector import FinalPPEDetector
 from src.ppe_person_crop import head_owner
+from src.ppe_runtime import load_policy, runtime_version
 from src.ppe_events import PPEEvents
 from src.scenario_render import render, roi_overlay, COLORS
 from src.feature_status import feature_status
@@ -18,7 +20,7 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def main():
  p=argparse.ArgumentParser();p.add_argument('--config',type=Path,default=ROOT/'configs/cameras/robot-intrusion.json');p.add_argument('--output',type=Path,required=True);a=p.parse_args()
  cfg=json.loads(a.config.read_text());source=ROOT/'data/videos'/cfg['source_name'];assert sha(source)==cfg['source_sha256'];a.output.mkdir(parents=True,exist_ok=False)
- torch.set_num_threads(4);model=YOLO(ROOT/cfg['person_weights']);ppe=FinalPPEDetector();policy=json.load(open(ROOT/'configs/ppe-recall-review-policy.json'));prule=PPEEvents(policy)
+ torch.set_num_threads(4);model=YOLO(ROOT/cfg['person_weights']);ppe=FinalPPEDetector();policy=load_policy();prule=PPEEvents(policy)
  cap=cv2.VideoCapture(str(source));fps=cap.get(5);w,h=int(cap.get(3)),int(cap.get(4));stride=max(1,round(fps/5));rate=fps/stride
  tracker=PersonTracker(rate,cfg['max_gap_seconds'],fuse_score=False);polygon=[[x*w,y*h]for x,y in cfg['polygon_normalized']];zone=ZoneAccess(polygon,min(w,h)*cfg['approach_margin_ratio'],cfg['max_gap_seconds'])
  writer=cv2.VideoWriter(str(a.output/'demo.mp4'),cv2.VideoWriter_fourcc(*'mp4v'),rate,(w,h));assert writer.isOpened();records=[];logs={'zone_access':[],'ppe':[]};previous={'zone_access':{},'ppe':{}};idx=0;prev=None
@@ -46,7 +48,7 @@ def main():
     if e.get('anchor_xy'):cv2.circle(canvas,tuple(map(int,e['anchor_xy'])),6,color,-1)
    cv2.rectangle(canvas,(5,40),(min(w-5,1050),100),(20,20,20),-1);cv2.putText(canvas,'ROI ENTRY: '+status['dashboard_state'].upper(),(12,64),0,.7,COLORS[status['severity']],2);cv2.putText(canvas,'INSIDE = IMMEDIATE DANGER / FOOTPOINT RULE / ROI DRAFT',(12,88),0,.5,(230,230,230),1)
    cv2.putText(canvas,f'VIDEO 2 / t={t:.2f}s / AI-GENERATED DEMO',(12,h-14),0,.5,(0,190,255),1);writer.write(canvas)
-   records.append({'frame_index':idx,'timestamp_seconds':t,'object_detections':detections,'head_detections':heads,'feature_events':groups})
+   records.append({'frame_index':idx,'timestamp_seconds':t,'object_detections':detections,'head_detections':heads,'ppe_tracks':tracks,'ppe_input_detections':detections,'ppe_runtime_version':runtime_version(),'feature_events':groups})
    for feature,es in groups.items():
     now={};trans=[]
     for e in es:
@@ -60,5 +62,5 @@ def main():
  hashes={cfg['person_weights']:sha(ROOT/cfg['person_weights']),'models/ppe_final/ppe_helmet_v6_960.pt':sha(ROOT/'models/ppe_final/ppe_helmet_v6_960.pt')};context=dict(camera_id=cfg['camera_id'],video=source.name,source_sha256=cfg['source_sha256'],model_version=hashlib.sha256(json.dumps(hashes,sort_keys=True).encode()).hexdigest(),config_version=hashlib.sha256(json.dumps({'camera':cfg,'ppe_policy':policy,'script_sha256':sha(__file__)},sort_keys=True).encode()).hexdigest())
  for feature,rows in logs.items():
   folder=a.output/feature;folder.mkdir();export_events(rows,folder/'events_v1.jsonl',feature=feature,context=context)
- (a.output/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n'for r in records));critical=[r['timestamp_seconds']for r in records if any(e['severity']=='CRITICAL'for e in r['feature_events']['zone_access'])];summary={'samples':len(records),'processed_fps':rate,'source':str(source),'context':context,'model_hashes':hashes,'camera_config':cfg,'first_critical_seconds':min(critical)if critical else None,'critical_sample_count':len(critical),'review_status':'awaiting_user_review'};(a.output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary,indent=2))
+ (a.output/'detections.jsonl').write_text(''.join(json.dumps(r)+'\n'for r in records));critical=[r['timestamp_seconds']for r in records if any(e['severity']=='CRITICAL'for e in r['feature_events']['zone_access'])];summary={'samples':len(records),'processed_fps':rate,'source':str(source),'context':context,'model_hashes':hashes,'camera_config':cfg,'first_critical_seconds':min(critical)if critical else None,'critical_sample_count':len(critical),'review_status':'awaiting_user_review'};summary.update(video_number=2,presentation_video_number=2,source_sha256=cfg['source_sha256'],ppe_enabled=True,ppe_final_selected=True,ppe_runtime_version=runtime_version(),enabled_features=['zone_access','ppe'],status='current_default');(a.output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary,indent=2))
 if __name__=='__main__':main()

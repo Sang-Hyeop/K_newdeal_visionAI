@@ -1,4 +1,4 @@
-"""Opt-in same-person proposal cleanup and one-body-box review rendering."""
+"""같은 사람으로 보이는 중복 박스를 정리하고 리뷰용 사람 박스를 그린다."""
 import cv2
 from .ppe_tiled_inference import iou
 
@@ -36,7 +36,7 @@ def person_labels(d,groups):
         status='HELMET' if stable and ppe.get('severity')=='SAFE' else 'NO HELMET DETECTED' if stable and ppe.get('severity')=='WARNING' and ppe.get('classification_status')=='observed_candidate' else 'NO HELMET? REVIEW' if ppe.get('severity')=='WARNING' else 'PENDING' if ppe.get('reason')=='pending_temporal_confirmation' else 'CHECK'
         labels.append('PPE: '+status)
         if stable and ppe.get('severity')=='WARNING' and severity!='CRITICAL':severity='WARNING'
-    else:labels.append('PPE: PENDING')
+    elif 'ppe' in groups:labels.append('PPE: PENDING')
     return labels,severity
 
 def draw_compact_people(frame,detections,groups):

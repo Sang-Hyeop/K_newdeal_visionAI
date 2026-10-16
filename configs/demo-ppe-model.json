@@ -1,13 +1,46 @@
 {
-  "status": "current_five_video_final_ppe",
+  "status": "current_balanced800_epoch1",
   "weights": {
     "objects": "models/pretrained/yolo26n.pt",
     "ppe_baseline": "models/ppe_final/ppe_helmet_v6_960.pt"
   },
-  "policy": "configs/ppe-recall-review-policy.json",
-  "scope": "Final PPE route for presentation videos 1-5; historical three-network ensemble removed.",
+  "policy": "configs/ppe-user-approved-policy-2026-10-15.json",
+  "scope": "Current PPE for videos2/3/5 only; one active balanced800 epoch1 model and unchanged approved policy",
   "limitations": [
     "Development-video adaptation; not independent-site accuracy",
     "Missing or occluded heads remain unconfirmed"
-  ]
+  ],
+  "runtime": {
+    "version": "balanced800-epoch1-approved-window-v4",
+    "policy": "configs/ppe-user-approved-policy-2026-10-15.json",
+    "tracker_fuse_score": false,
+    "guarded_upper_body_videos": [
+      5
+    ],
+    "helmet_guard": "Additional crop-only helmet evidence is review-only and cannot create SAFE",
+    "integration": "Current default; no experimental alternative runner",
+    "fixed_context_videos": [
+      5
+    ],
+    "fixed_context_version": "balanced800-epoch1-approved-window-guarded-context-v5",
+    "fixed_context_policy": "320px context, low-candidate480px/960 context, then160px/640 context only while no valid head evidence remains; unchanged ownership/confidence/time policy; extra crop helmets cannot certify SAFE",
+    "fixed_context_search": [
+      {
+        "context_size": 320,
+        "imgsz": 640,
+        "source": "v6_fixed_context"
+      },
+      {
+        "context_size": 480,
+        "imgsz": 960,
+        "source": "v6_wide_context",
+        "requires_head_candidate": true
+      },
+      {
+        "context_size": 160,
+        "imgsz": 640,
+        "source": "v6_small_context"
+      }
+    ]
+  }
 }
