@@ -15,3 +15,5 @@
 승인 파일의 runtime_implementation_status는 승인 당시 기록이며, 실제 적용 상태·상반신 검색 범위는 demo-ppe-model.json의 runtime이 기준입니다. 숫자 임곗값은 변경하지 않았습니다.
 
 review/ppe-balanced-800.json은 현재 PPE의800장 선정·학습·전체영상 비교·선택 가중치SHA 기록입니다. 4회차 학습 후 영상 기준으로1회차를 선택했습니다.
+
+review/ppe-balanced-1200.json은 새원본400장을 추가한600/600 학습 기록입니다. 이미지 지표는 개선됐으나 실제3/5번 회귀로 가중치를 채택하지 않았습니다. 현재 기본 모델은800장 학습 결과입니다.

@@ -11523,10 +11523,12 @@
         }
       ],
       "label_sources_in_existing800": false,
-      "status": "awaiting_user_choice_context_crops_or_additional_original_data",
+      "status": "user_selected_new_originals_1200_dataset_created",
       "no_1200_training_started": true,
       "current_model_and_results_unchanged": true,
-      "limits": "Original-file counts exclude byte/pixel duplicates but not same-scene correlations; provisional crop list was not adopted"
+      "limits": "Original-file counts exclude byte/pixel duplicates but not same-scene correlations; provisional crop list was not adopted",
+      "user_choice": "New full-frame original photos; no context crops added",
+      "continuation_record": "configs/review/ppe-balanced-1200.json"
     }
   }
 }
