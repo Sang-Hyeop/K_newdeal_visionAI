@@ -1506,61 +1506,73 @@
     "models/experiments/ppe_expanded_1577/weights/best.pt": {
       "disabled_by_presentation_selection": true
     },
+    "models/ppe_final/config.json": {
+      "bytes": 1082,
+      "sha256": "a645b77ff758436c7a188f967fa607a88b199f6366ef0651bdadefe73deab457"
+    },
+    "models/ppe_final/ppe_helmet_v6_960.pt": {
+      "bytes": 5448301,
+      "sha256": "e0a96b11c115057988ff7d04750fbb14c2f842338bee3cb068fac4c17299e13b"
+    },
     "outputs/backend/full_review.sqlite3": {
-      "bytes": 175378432,
-      "sha256": "bb60ec37978d88529265ef8536b1fa063403c7de3af02bf8f26f1bbcf9be7261"
+      "bytes": 175472640,
+      "sha256": "639ddb0a6bd0453f9693b072a855c4588674588a5cb225a19888c6a0b2b0edcf"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/detections.jsonl": {
-      "bytes": 176917,
-      "sha256": "050a389625b8acaccf341787f429cc9333fd4b2d03be36430e9192374b0c13cb"
+      "bytes": 176709,
+      "sha256": "878d7edb2f83b4b9b22f08b8a9b4afdb804194f202602ac5cede78cb9acb23d9"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/ppe/events_v1.jsonl": {
-      "bytes": 5818,
-      "sha256": "4cbe882dab4ec8b978ca1a38c8f4f9f777475bf7850d229316c8d7032abac180"
+      "bytes": 5807,
+      "sha256": "f6a256fbfb5d04b6c620e8bb479550697be3a70df42a8dbc3874abe93c4f54df"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/ppe/observations_v1.jsonl": {
-      "bytes": 126023,
-      "sha256": "9ec7e0e5c4d93bf280d11f844056a1fcffe0c275975b7d5c62c8e4f58ad490f5"
+      "bytes": 126041,
+      "sha256": "7e6ff07a69be92943f2007a3737ed63acab7d675e131ab264263258d10413ba4"
+    },
+    "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/review_verification.json": {
+      "bytes": 1422,
+      "sha256": "9e2adf62654dbbb478aab5b04f8a62c8154970baed1a8a3bcfff5d12e8fa2e86"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/summary.json": {
-      "bytes": 2187,
-      "sha256": "fa76aca30e0d3bc13364cbf2ae49a58c9cf65586adcb17ae7bfaa1d10e2b51e4"
+      "bytes": 2168,
+      "sha256": "4dcfe4173a39a89a07ed160901cae95c3bab8a6e209404ac12e88460491c549c"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/zone_access/events_v1.jsonl": {
       "bytes": 2807,
-      "sha256": "85f3184ec60c10332493a31e7845ad22c48417c6ddc0546df270d38c783728f5"
+      "sha256": "35ddc029257241ff30876c590fbde9419a22142efc8c91409e126e45bf8c1d03"
     },
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/zone_access/observations_v1.jsonl": {
       "bytes": 124056,
-      "sha256": "c9124a3eb4e28b8866ef735cf034ce5565f2a44c1e4e033340eb2242ffc3c6f0"
+      "sha256": "1685085c80020fe66bea3e749269d2fc5e7fae5d037fbccc55defc488d6228e6"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/detections.jsonl": {
-      "bytes": 617641,
-      "sha256": "395947b8c04e70d5bae6165d1785b44f9b7c30b2d0cd44d5bfb5199f05704781"
+      "bytes": 622167,
+      "sha256": "2bed4c21bfd2a805e494481ffaf8a1c357c2e9124ce8cfeaf67e35d9c0443c77"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/ppe/events_v1.jsonl": {
-      "bytes": 74296,
-      "sha256": "321884d8ffe0fae28fbcb26cd2194ac5ae67d5ed5aaf5e9bc15592aa4f2cc803"
+      "bytes": 71873,
+      "sha256": "0db9b927493c8b736709e5fb8c017178d0ad805b8be1aca64ea3b51be5f95624"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/ppe/observations_v1.jsonl": {
-      "bytes": 406697,
-      "sha256": "1a7ed117accb99c848b013354b4234cbd7cfe5e811e62f46ff358af8725cf986"
+      "bytes": 407807,
+      "sha256": "a6838eabc474067cbab9557a90d34222a2779fcedf22b8e1a203b39e96fc2790"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/preview_25.jpg": {
-      "bytes": 292990,
-      "sha256": "620fa5e13f0ea51f6973ac00755558a953d78a728b3724ec0d8d7bf9467a6eb9"
+      "bytes": 295252,
+      "sha256": "d0ec441aaf0a2c2963b2c7a1b2e365b743c23519bde22d7a0f7fddfdd2008978"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/preview_50.jpg": {
-      "bytes": 280782,
-      "sha256": "88c47363524b7be32839e8c7dac71791fbe787ea2da6091a439c7bb631e0a65e"
+      "bytes": 279940,
+      "sha256": "eaca0128751d030bfc05124f866b8c1fd13285d390e6206f5cac98fb459e7069"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/review_verification.json": {
-      "bytes": 4159,
-      "sha256": "a88a22f808ab3d08b901c89872111092d290fd86fab749be7d3cfa9de06be1d0"
+      "bytes": 5156,
+      "sha256": "f6c8c39736f8e1f592c93542f9b52f3e5d706a77427cc8b7f2489c355ee06028"
     },
     "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/summary.json": {
-      "bytes": 3759,
-      "sha256": "8cf589d80585c5dd30a42afe3f73fac28fb0dc98c8339144818df024e33710b2"
+      "bytes": 3606,
+      "sha256": "3a3659a7d877c1a467e642fdb6a9d3d9043dc36b7d13ffc07de4ae4e81b6c89a"
     },
     "outputs/diagnostics/presentation5_vehicle_recovery_review_cache_v2_2026-10-14/video5/detections.jsonl": {
       "disabled_by_presentation_selection": true
@@ -1569,132 +1581,132 @@
       "disabled_by_presentation_selection": true
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl": {
-      "bytes": 117747878,
-      "sha256": "802729318b6f151af50f6605f5d368c45529dfdbed0672ce8dcc47e886b9396d"
+      "bytes": 118226175,
+      "sha256": "cd1341438e6fb61d041c7e9ae9ba8c54f65b3b6874ddd9ff3927b05d488867b5"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/events_v1.jsonl": {
-      "bytes": 2096862,
-      "sha256": "de8c6162725b625c816f75258db14b49958d5d9adaae1a28fdf7967674bcae0d"
+      "bytes": 2054112,
+      "sha256": "f2e57833abc1cf7fc020fffb141971a5bf80fb6bf5b7b4bb7860576c2913dfc5"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/observations_v1.jsonl": {
-      "bytes": 7008625,
-      "sha256": "bfaaf1e43c74a62c0a45b10e01def3a30af82e5ea644cbb4bdf7b0d839b12093"
+      "bytes": 7137184,
+      "sha256": "e32b7d55addcd21a1496292c39cce090c19d08afefa3d694011712dcb88dc497"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_0.jpg": {
-      "bytes": 365391,
-      "sha256": "e58f5d31d27b66bdad433cb9a763b6f6f7fa8ea87e721e42e9a4b789a94603f1"
+      "bytes": 365689,
+      "sha256": "a460184766ee8719ba1c6bbd81f353b991eb576075a19a9ea263ee80e6ef104f"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_25.jpg": {
-      "bytes": 411902,
-      "sha256": "1da975794a077ccf8ad6290b98811aeb43ca68f468cd5ba2265cd7e0344002ca"
+      "bytes": 413255,
+      "sha256": "bb2f31546370f8d43527fa60e9eb6531e6ab0c762473c59c97cf6f5cf667f34a"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_50.jpg": {
-      "bytes": 386295,
-      "sha256": "5ab9c48756235276e140cd243035a397cd66a82f5e4d00d7111b8b0282dfc5e8"
+      "bytes": 386796,
+      "sha256": "1ceafc708b99f4707a343516673b753bfb78339a0ee5282f5d0accb245d9fdfb"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_75.jpg": {
-      "bytes": 411994,
-      "sha256": "e829197cbdd43659a5f402d9dfe436a09040d984bcd8c43cd9e2c03c562dc2ce"
+      "bytes": 412588,
+      "sha256": "dd16e47c5ec15b3e526a408ed81e14a285b654930c9d38c594c9a87a4eeb5582"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/events_v1.jsonl": {
       "bytes": 3567311,
-      "sha256": "ab6ff8b261fc79f913046c7150432543519aa52d79548370f34727d2fda9f16e"
+      "sha256": "f3724c8a768095eaa77ff8e7cd9ae86cdfec68fba0ab4057b1e8628e764d44c6"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/observations_v1.jsonl": {
       "bytes": 18298727,
-      "sha256": "67326eac5eb1e5a87eba8e053abf4170b0f269bec2e203ee4f58418b722449c7"
+      "sha256": "717fa48970c808e6e1286f75012537f4dcfb52c1ac008faa2a3b087c9480d00f"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/summary.json": {
-      "bytes": 9129,
-      "sha256": "c0902fb0feaaf06073afd56b780c7f6a67647ce1efe861f60c05f114b00f9c4e"
+      "bytes": 9131,
+      "sha256": "ffe5047d5c9bbd98b0c55be7e40cadb6701464fa997b9579030e27233ecfbc2f"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/verification.json": {
-      "bytes": 5337,
-      "sha256": "99fd38b81015e2e0d7546f5edefe16661f7bf11efcdf4fa6c49723b1f623c292"
+      "bytes": 6535,
+      "sha256": "31e43c4d0f43b6b5f62cc3e7b1c26091b7353d0c8bd9ba5e9174b08919829335"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/events_v1.jsonl": {
       "bytes": 4080241,
-      "sha256": "815762269dcaacb588607a918ac3ad1eb3caa5e32a475e628b44b198f05c01c0"
+      "sha256": "d7f8dcb2b1b83b12a42b15524c85af788a6a6490705197530fee557afd99be9c"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/observations_v1.jsonl": {
       "bytes": 18800718,
-      "sha256": "0916b52f01d8d4b1c10f1872b6e1acb37da190f99b03e81808be93de10d79475"
+      "sha256": "e4639b343b104eb411e14ae4f7a981646e4ceb2dc32206240be7c6460d2d1300"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/events_v1.jsonl": {
       "bytes": 3999849,
-      "sha256": "f48e2a49abdb6162a4b797accc33b93af867c55970db1d02b92be5735a1a44eb"
+      "sha256": "63c5bc482618ab3de10a7459c40252bff436381c4f98e0bb892f4e2b0699796f"
     },
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/observations_v1.jsonl": {
       "bytes": 18458098,
-      "sha256": "9c6ba278050c5c68721a5bfd62450ebe82fddfc9e17707b0c47190d324da588e"
+      "sha256": "c9445a994d004606b2dad057f67ef238e661181b2b439d4c87faa175c20b2617"
     },
     "outputs/events/presentation2/ppe/events_v1.jsonl": {
-      "bytes": 5818,
-      "sha256": "4cbe882dab4ec8b978ca1a38c8f4f9f777475bf7850d229316c8d7032abac180"
+      "bytes": 5807,
+      "sha256": "f6a256fbfb5d04b6c620e8bb479550697be3a70df42a8dbc3874abe93c4f54df"
     },
     "outputs/events/presentation2/ppe/observations_v1.jsonl": {
-      "bytes": 126023,
-      "sha256": "9ec7e0e5c4d93bf280d11f844056a1fcffe0c275975b7d5c62c8e4f58ad490f5"
+      "bytes": 126041,
+      "sha256": "7e6ff07a69be92943f2007a3737ed63acab7d675e131ab264263258d10413ba4"
     },
     "outputs/events/presentation2/zone_access/events_v1.jsonl": {
       "bytes": 2807,
-      "sha256": "85f3184ec60c10332493a31e7845ad22c48417c6ddc0546df270d38c783728f5"
+      "sha256": "35ddc029257241ff30876c590fbde9419a22142efc8c91409e126e45bf8c1d03"
     },
     "outputs/events/presentation2/zone_access/observations_v1.jsonl": {
       "bytes": 124056,
-      "sha256": "c9124a3eb4e28b8866ef735cf034ce5565f2a44c1e4e033340eb2242ffc3c6f0"
+      "sha256": "1685085c80020fe66bea3e749269d2fc5e7fae5d037fbccc55defc488d6228e6"
     },
     "outputs/events/presentation3/ppe/events_v1.jsonl": {
-      "bytes": 74296,
-      "sha256": "321884d8ffe0fae28fbcb26cd2194ac5ae67d5ed5aaf5e9bc15592aa4f2cc803"
+      "bytes": 71873,
+      "sha256": "0db9b927493c8b736709e5fb8c017178d0ad805b8be1aca64ea3b51be5f95624"
     },
     "outputs/events/presentation3/ppe/observations_v1.jsonl": {
-      "bytes": 406697,
-      "sha256": "1a7ed117accb99c848b013354b4234cbd7cfe5e811e62f46ff358af8725cf986"
+      "bytes": 407807,
+      "sha256": "a6838eabc474067cbab9557a90d34222a2779fcedf22b8e1a203b39e96fc2790"
     },
     "outputs/events/presentation5/ppe/events_v1.jsonl": {
-      "bytes": 2096862,
-      "sha256": "de8c6162725b625c816f75258db14b49958d5d9adaae1a28fdf7967674bcae0d"
+      "bytes": 2054112,
+      "sha256": "f2e57833abc1cf7fc020fffb141971a5bf80fb6bf5b7b4bb7860576c2913dfc5"
     },
     "outputs/events/presentation5/ppe/observations_v1.jsonl": {
-      "bytes": 7008625,
-      "sha256": "bfaaf1e43c74a62c0a45b10e01def3a30af82e5ea644cbb4bdf7b0d839b12093"
+      "bytes": 7137184,
+      "sha256": "e32b7d55addcd21a1496292c39cce090c19d08afefa3d694011712dcb88dc497"
     },
     "outputs/events/presentation5/proximity/events_v1.jsonl": {
       "bytes": 3567311,
-      "sha256": "ab6ff8b261fc79f913046c7150432543519aa52d79548370f34727d2fda9f16e"
+      "sha256": "f3724c8a768095eaa77ff8e7cd9ae86cdfec68fba0ab4057b1e8628e764d44c6"
     },
     "outputs/events/presentation5/proximity/observations_v1.jsonl": {
       "bytes": 18298727,
-      "sha256": "67326eac5eb1e5a87eba8e053abf4170b0f269bec2e203ee4f58418b722449c7"
+      "sha256": "717fa48970c808e6e1286f75012537f4dcfb52c1ac008faa2a3b087c9480d00f"
     },
     "outputs/events/presentation5/zone_access/events_v1.jsonl": {
       "bytes": 4080241,
-      "sha256": "815762269dcaacb588607a918ac3ad1eb3caa5e32a475e628b44b198f05c01c0"
+      "sha256": "d7f8dcb2b1b83b12a42b15524c85af788a6a6490705197530fee557afd99be9c"
     },
     "outputs/events/presentation5/zone_access/observations_v1.jsonl": {
       "bytes": 18800718,
-      "sha256": "0916b52f01d8d4b1c10f1872b6e1acb37da190f99b03e81808be93de10d79475"
+      "sha256": "e4639b343b104eb411e14ae4f7a981646e4ceb2dc32206240be7c6460d2d1300"
     },
     "outputs/events/presentation5/zone_dwell/events_v1.jsonl": {
       "bytes": 3999849,
-      "sha256": "f48e2a49abdb6162a4b797accc33b93af867c55970db1d02b92be5735a1a44eb"
+      "sha256": "63c5bc482618ab3de10a7459c40252bff436381c4f98e0bb892f4e2b0699796f"
     },
     "outputs/events/presentation5/zone_dwell/observations_v1.jsonl": {
       "bytes": 18458098,
-      "sha256": "9c6ba278050c5c68721a5bfd62450ebe82fddfc9e17707b0c47190d324da588e"
+      "sha256": "c9445a994d004606b2dad057f67ef238e661181b2b439d4c87faa175c20b2617"
     },
     "outputs/reviews/2_restricted_zone_intrusion_latest.mp4": {
-      "bytes": 1815909,
-      "sha256": "26ed92fe92b24b7d8352593b88e80a04fa2d82ac93d70406b47b05246cd43afb"
+      "bytes": 1826927,
+      "sha256": "c8edc830a5e9f14048b2238c637fb0a60e177c8ede940550f4c516d45d7ad186"
     },
     "outputs/reviews/3_PPE_Helmet_latest.mp4": {
-      "bytes": 2992447,
-      "sha256": "871fc36de28341b92a753bb0d9aba0f2fd2e37bb7d0fb6948991b2b32c31f795"
+      "bytes": 2998755,
+      "sha256": "aac3707788a0aec32829d048ecc55c95de7fa9376c83e830d0484cb339794f71"
     },
     "outputs/reviews/5_Logistics_Warehouse_latest.mp4": {
-      "bytes": 28744633,
-      "sha256": "4dc74e001f30e847243b5383bfae9ffccc0c034794d9c4feeca108735ac1ba7a"
+      "bytes": 28826703,
+      "sha256": "74944530182b383a50cbd5932479a091035390d707354ca587a19d44371822c9"
     }
   },
   "local_runtime_status": "Current local results; remote Release changes only after an explicit publish request",

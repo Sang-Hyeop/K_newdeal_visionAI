@@ -1,17 +1,17 @@
 {
-  "status": "current_default_v6",
+  "status": "current_balanced800_epoch1",
   "weights": {
     "objects": "models/pretrained/yolo26n.pt",
     "ppe_baseline": "models/ppe_final/ppe_helmet_v6_960.pt"
   },
   "policy": "configs/ppe-user-approved-policy-2026-10-15.json",
-  "scope": "Current PPE for videos2/3/5 only; one active v6 model and approved policy",
+  "scope": "Current PPE for videos2/3/5 only; one active balanced800 epoch1 model and unchanged approved policy",
   "limitations": [
     "Development-video adaptation; not independent-site accuracy",
     "Missing or occluded heads remain unconfirmed"
   ],
   "runtime": {
-    "version": "v6-approved-window-stable-tracking-guarded-upper-body-v1",
+    "version": "balanced800-epoch1-approved-window-v4",
     "policy": "configs/ppe-user-approved-policy-2026-10-15.json",
     "tracker_fuse_score": false,
     "guarded_upper_body_videos": [
@@ -22,7 +22,7 @@
     "fixed_context_videos": [
       5
     ],
-    "fixed_context_version": "v6-approved-window-stable-tracking-guarded-context-v3",
+    "fixed_context_version": "balanced800-epoch1-approved-window-guarded-context-v4",
     "fixed_context_policy": "320px context for insufficient heads; 480px/960 recheck only low-confidence heads left unresolved; unchanged head ownership/evidence thresholds; crop-only helmets blocked",
     "fixed_context_search": [
       {

@@ -1,7 +1,7 @@
 {
-  "status": "selected_final_ppe",
+  "status": "current_balanced800_epoch1",
   "weights": "models/ppe_final/ppe_helmet_v6_960.pt",
-  "sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+  "sha256": "e0a96b11c115057988ff7d04750fbb14c2f842338bee3cb068fac4c17299e13b",
   "imgsz": 960,
   "confidence_by_class": {
     "0": 0.15,
@@ -15,18 +15,24 @@
     "cover": 0.8,
     "overlap": 0.7
   },
-  "training_items": 510,
+  "training_items": 800,
   "hood_policy": "hood-only is no_helmet_head per user policy",
   "limitations": [
     "Small repeatedly used development evaluation; no independent-site generalization claim",
     "Temporal pending and person rejection experiments not promoted"
   ],
-  "integration": "Active src/ppe_runtime.py through handoff.py and current video runners; no alternative PPE model",
+  "integration": "Current default via src/ppe_runtime.py and handoff.py; legacy v6 filename retained in place; balanced800 epoch1 weights",
   "annotation_amendment": {
     "date": "2026-10-13",
     "status": "training_annotations_corrected_model_weights_not_retrained",
     "reason": "user-confirmed left dark-blue equipment mislabeled as person/head",
     "weights_unchanged": true,
-    "old_evaluation_status": "historical_pre_correction; reevaluation/retraining required"
-  }
+    "old_evaluation_status": "historical_pre_correction; reevaluation/retraining required",
+    "scope": "Historical 2026-10-13 action only; superseded by balanced800 retraining on 2026-10-16"
+  },
+  "selected_epoch": 1,
+  "completed_training_epochs": 4,
+  "parent_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
+  "dataset": "data/reviewed_pilot/ppe_balanced_800/dataset.yaml",
+  "selection_record": "configs/review/ppe-balanced-800.json"
 }

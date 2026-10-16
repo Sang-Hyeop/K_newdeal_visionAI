@@ -22,7 +22,7 @@ from src.feature_status import feature_status
 from src.detection_review_profile import predict_review_objects, select_review_objects, build_review_models, exclude_confirmed_equipment, refine_reused_vehicle_support
 from src.event_contract import export_events
 from src.ppe_runtime import load_policy, runtime_version, runtime_config, infer_runtime_heads, assign_head_observations
-from src.scenario_selection import review_video_numbers, scenario_directory, presentation_groups, presentation_detections
+from src.scenario_selection import review_video_numbers, scenario_directory, presentation_groups, presentation_detections, cache_model_hashes_match
 
 def sha(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -110,7 +110,7 @@ def main():
         if a.reuse_run:
             cache = a.reuse_run / folder
             cs = json.load(open(cache / 'summary.json'))
-            assert cs['source_sha256'] == spec['source_sha256'] and all((cs['model_hashes'].get(k) == hashes[k] for k in cs['model_hashes'] if k in hashes and 'hoodie' not in k)) and (abs(cs['processed_fps'] - rate) < 1e-09)
+            assert cs['source_sha256'] == spec['source_sha256'] and cache_model_hashes_match(cs['model_hashes'],hashes,ppe_enabled,profile['weights']['ppe_baseline']) and (abs(cs['processed_fps'] - rate) < 1e-09)
             cached = {r['frame_index']: {'events': r['feature_events'].get('ppe', []), 'tracks': r.get('ppe_tracks', []), 'head_detections': r.get('head_detections', []), 'object_detections': r.get('movement_input_detections',r['object_detections']), 'ppe_input_detections':r.get('ppe_input_detections'), 'ppe_runtime_version':r.get('ppe_runtime_version'), 'ppe_blocked_helmet_candidates':r.get('ppe_blocked_helmet_candidates',[]), 'rejected_object_proposals': r.get('rejected_object_proposals', [])} for r in map(json.loads, (cache / 'detections.jsonl').read_text().splitlines())}
             if a.reuse_objects:
                 ignored = {'vehicle_support_person_context_scale'} if a.refine_reused_vehicles else set()

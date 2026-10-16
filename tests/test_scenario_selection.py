@@ -36,3 +36,15 @@ class FeatureSelectionTests(unittest.TestCase):
   objects=[{'class':'person'},{'class':'forklift'}]
   self.assertEqual(presentation_groups(groups,spec),groups)
   self.assertEqual(presentation_detections(objects,spec),objects)
+
+
+class CacheFeatureScopeTests(unittest.TestCase):
+ def test_disabled_ppe_allows_new_ppe_weights(self):
+  from src.scenario_selection import cache_model_hashes_match
+  self.assertTrue(cache_model_hashes_match({'objects':'same','ppe':'old'},{'objects':'same','ppe':'new'},False,'ppe'))
+ def test_enabled_ppe_rejects_old_head_cache(self):
+  from src.scenario_selection import cache_model_hashes_match
+  self.assertFalse(cache_model_hashes_match({'objects':'same','ppe':'old'},{'objects':'same','ppe':'new'},True,'ppe'))
+ def test_disabled_ppe_still_requires_identical_object_model(self):
+  from src.scenario_selection import cache_model_hashes_match
+  self.assertFalse(cache_model_hashes_match({'objects':'old','ppe':'old'},{'objects':'new','ppe':'new'},False,'ppe'))

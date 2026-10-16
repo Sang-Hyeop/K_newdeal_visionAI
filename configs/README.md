@@ -13,3 +13,5 @@
 구 7개 영상의 중복 설정과 미사용 선택 기록은 삭제했습니다. Release ZIP 내부 archive_path는 배포 호환성을 위해 유지하며 현재 로컬 경로와 구분합니다.
 
 승인 파일의 runtime_implementation_status는 승인 당시 기록이며, 실제 적용 상태·상반신 검색 범위는 demo-ppe-model.json의 runtime이 기준입니다. 숫자 임곗값은 변경하지 않았습니다.
+
+review/ppe-balanced-800.json은 현재 PPE의800장 선정·학습·전체영상 비교·선택 가중치SHA 기록입니다. 4회차 학습 후 영상 기준으로1회차를 선택했습니다.

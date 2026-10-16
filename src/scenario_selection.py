@@ -28,3 +28,9 @@ def presentation_detections(detections, spec):
     if enabled in ({'ppe'}, {'zone_dwell'}):
         return [d for d in detections if d['class']=='person']
     return detections
+
+
+def cache_model_hashes_match(cached, current, ppe_enabled, ppe_weights):
+    """A disabled PPE feature must not invalidate cached movement observations."""
+    return all(cached_hash == current[path] for path,cached_hash in cached.items()
+               if path in current and 'hoodie' not in path and (ppe_enabled or path != ppe_weights))
