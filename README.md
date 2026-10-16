@@ -28,6 +28,6 @@ python handoff.py test
 
 backend_v1/API_SPEC.md와 docs/github-team-quickstart.md가 팀원 연동 안내입니다. 신규 PC의 모델 설치는 `python scripts/setup_runtime.py`, 감지 라이브러리는 `python -m pip install -r requirements-runtime.txt`입니다.
 
-현재 로컬 통합 결과는 아직 GitHub/Release에 다시 게시하지 않았습니다. 기존 runtime-2026-10-15 Release가 자동 갱신되는 것은 아닙니다. 팀원 전달 전 새 배포 자료와 설치 검증을 함께 갱신해야 합니다.
+2026-10-16 팀 실행 자료는 [runtime-2026-10-16](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-16)에서 받습니다. main 병합 전에는 `data/hoodie-ppe-candidates` 브랜치의 코드와 설정을 사용해야 합니다. Code → Download ZIP도 이 브랜치를 선택한 뒤 받고 `python scripts/setup_runtime.py`를 실행합니다. 10월15일 배포는 오늘 결과로 자동 갱신되지 않습니다.
 
 학습 데이터·수동 라벨은 data/에 보존했습니다. 채택하지 않은 1577장 후보 모델과 비교/실험 출력은 삭제했습니다. 변경·실패 과정은 Git 이력, 현재 상태는 docs/progress-2026-10-14.md를 참고합니다. 거리는 실제 m가 아닌 화면상 상대 거리이며, 2번은 AI 생성 영상입니다. 시연 성과가 독립 현장 정확도를 보장하지 않습니다.
