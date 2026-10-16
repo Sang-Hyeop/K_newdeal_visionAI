@@ -11449,5 +11449,84 @@
       "cached_video1_4_probes_passed": true,
       "fresh_video5_probe_passed": true
     }
+  },
+  "followup_failure_review_2026_10_16": {
+    "reviewed_representative_crops": 47,
+    "scope": "Current unknown representatives plus known video3 lost-confirmed f220 and f230; not reconstruction of all31 historical video5 losses",
+    "video3_lost_confirmed": [
+      {
+        "frame_index": 220,
+        "track": "1:7",
+        "visible_truth": "bare head",
+        "diagnosis": "current confidence0.648 but2 valid observations, below required3; later f230 confirms WARNING"
+      },
+      {
+        "frame_index": 230,
+        "track": "1:5",
+        "visible_truth": "white hard hat",
+        "diagnosis": "helmet0.784 plus false/misaligned nohelmet0.341 causes conflicting evidence; threshold unchanged"
+      }
+    ],
+    "current_unknown_reasons": {
+      "video3": {
+        "pending_temporal_confirmation": 30,
+        "conflicting_or_missing_or_low_confidence_head": 11
+      },
+      "video5": {
+        "pending_temporal_confirmation": 724,
+        "conflicting_or_missing_or_low_confidence_head": 1276
+      }
+    },
+    "training_priority": [
+      "small heads with surrounding machinery context",
+      "side/rear view heads and ordinary caps/hoods",
+      "small hard hats with nearby false head proposals"
+    ],
+    "unchanged_policy": true,
+    "caution": "Pending can be intentional first appearance or ID reset; not every unknown is a detection error",
+    "expansion_audit": {
+      "unique_pure_originals_before_near_duplicate_filter": {
+        "helmet": 564,
+        "no_helmet": 461
+      },
+      "provisional_1200_composition_before_label_rejections": {
+        "existing800": 800,
+        "additional_original": 190,
+        "context_crops": 210
+      },
+      "visually_checked_context_crops": 210,
+      "visually_checked_additional_original_samples": 24,
+      "rejected_context_source_labels": [
+        {
+          "source": "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0335_004507_jpg.rf.1a23bd23b21c7776ab949532e6320e80.jpg",
+          "source_sha256": "dcdb6817c9b02cd1df771cd45000f24f91b975a608e36217ae0458bb90868704",
+          "label_sha256": "88a2b4d028f3ebd0ee88b792d238a2031dd36dec4cc9d50d6908a101c7899d04",
+          "crop_xyxy": [
+            182,
+            94,
+            294,
+            206
+          ],
+          "reason": "Visible bare head labelled helmeted_head; exclude source from proposed extension until corrected"
+        },
+        {
+          "source": "data/reviewed_pilot/ppe_expanded_1577/train/images/new_task_2654035_110_NVIDIA_video_01048_f00072.jpg",
+          "source_sha256": "03c41ff0a3c8f4193796d6a70f9b034d48931fc4a7ed8bb7c36ed14f31b5bfb3",
+          "label_sha256": "06e6ba471b9e7df01939ea93c5e7f827195f45ec91c1e5f1130cfa42cdb5fa7c",
+          "crop_xyxy": [
+            1005,
+            199,
+            1143,
+            337
+          ],
+          "reason": "Visible bare head labelled helmeted_head; exclude source from proposed extension until corrected"
+        }
+      ],
+      "label_sources_in_existing800": false,
+      "status": "awaiting_user_choice_context_crops_or_additional_original_data",
+      "no_1200_training_started": true,
+      "current_model_and_results_unchanged": true,
+      "limits": "Original-file counts exclude byte/pixel duplicates but not same-scene correlations; provisional crop list was not adopted"
+    }
   }
 }
