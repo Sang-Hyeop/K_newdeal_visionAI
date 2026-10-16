@@ -70,11 +70,13 @@
     "no_helmet_head": "안전모 미착용 머리"
   },
   "cameras": {
-    "demo-video2": "1번 영상 카메라",
+    "demo-video1": "1번 영상 카메라",
     "presentation2-robot-intrusion": "2번 영상 카메라",
-    "demo-video5": "3번 영상 카메라",
+    "demo-video3": "3번 영상 카메라",
     "demo-video4": "4번 영상 카메라",
-    "demo-video7": "5번 영상 카메라"
+    "demo-video5": "5번 영상 카메라",
+    "demo-video2": "과거 1번 영상 카메라",
+    "demo-video7": "과거 5번 영상 카메라"
   },
   "zones": {
     "yellow_line_vehicle_lane": "안전 통로(시연 ROI)",

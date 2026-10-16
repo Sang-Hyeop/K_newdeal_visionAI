@@ -31,7 +31,7 @@
         "models/pretrained/yolo26n.pt",
         "models/experiments/forklift_real_context_v2/weights/best.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference",
+      "mode": "current_default; cached observations or --fresh; replaces this review in place",
       "enabled_features": [
         "proximity"
       ],
@@ -107,7 +107,7 @@
         "models/pretrained/yolo26n.pt",
         "models/experiments/forklift_real_context_v2/weights/best.pt"
       ],
-      "mode": "cached_observations_default; --fresh for new inference",
+      "mode": "current_default; cached observations or --fresh; replaces this review in place",
       "enabled_features": [
         "zone_dwell"
       ],
