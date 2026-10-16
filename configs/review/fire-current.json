@@ -1,0 +1,5343 @@
+{
+  "status": "public_model_initial_review_not_final",
+  "video_number": 6,
+  "camera_id": "parking-P01",
+  "source_video": "data/videos/6_parking_lot_fire.mp4",
+  "source_sha256": "6c9165d6fdb19baaf9a9cc70110edd0ee41c5f7cb27a5965a96a9c70d96ecd67",
+  "weights": "models/fire_public/fire_detection.pt",
+  "model_sha256": "52684ddffd4797f1bc5ff1bd2b72af3ec34eabf0c1646c37f518bb766b27b79f",
+  "repository": "https://huggingface.co/SalahALHaismawi/yolov26-fire-detection",
+  "revision": "5397b43994c39c2ed4ef81a6996c6334e2b7a5fa",
+  "publisher_declared_model_license": "MIT",
+  "publisher_declared_dataset_license": "CC BY 4.0",
+  "implementation": "Existing ultralytics runtime; its license is separate from publisher model declaration",
+  "publisher_training_claim": "YOLO26-S,8939 annotated images,100 epochs; not independently verified",
+  "classes": {
+    "0": "fire",
+    "1": "other",
+    "2": "smoke"
+  },
+  "imgsz": 960,
+  "proposal_confidence": 0.15,
+  "display_confidence": 0.25,
+  "sample_fps": 5,
+  "event_status": "Raw detections only; temporal confirmation and backend/dashboard integration pending",
+  "non_detection_status": "NO CURRENT FIRE/SMOKE DETECTION; not SAFE",
+  "model_metrics": "Publisher image metrics are not project video accuracy",
+  "trained_on_presentation_video": false,
+  "output_root": "outputs/diagnostics/presentation6_fire_review",
+  "review_video": "outputs/reviews/6_parking_lot_fire_latest.mp4",
+  "command": "python scripts/run_fire_review.py",
+  "initial_comparison": {
+    "date": "2026-10-17",
+    "conditions": {
+      "sample_fps": 5,
+      "imgsz": 960,
+      "device": "cpu",
+      "display_confidence": 0.25,
+      "proposal_confidence": 0.15
+    },
+    "candidate1": {
+      "repository": "https://github.com/luminous0219/fire-and-smoke-detection-yolov8",
+      "revision": "c30923f568d915a53fcf85989be9fe5d4e030518",
+      "weights_sha256": "ac0a10257b2bc1f20c9d957f8adeeb61dd6140322fc19d0b4a116cb491776d16",
+      "publisher_license": "AGPL-3.0",
+      "mirror": "https://huggingface.co/mfranzon/fire-smoke-yolov8",
+      "mirror_revision": "f1c6426b069c1849cbf13b1ef5d2a260289286db",
+      "mirror_same_bytes": true,
+      "training_provenance_note": "Mirror claims D-Fire+Domestic while identical original weights cite Roboflow fire-rqbio/fire-and-smoke-yikzn; mirror claim not accepted as independently verified",
+      "counts": {
+        "fire": 5,
+        "smoke": 10
+      },
+      "first4_seconds_counts": {
+        "fire": 0,
+        "smoke": 6
+      },
+      "observations": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "detections": []
+        },
+        {
+          "frame_index": 6,
+          "timestamp_seconds": 0.2,
+          "detections": []
+        },
+        {
+          "frame_index": 12,
+          "timestamp_seconds": 0.4,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.293163537979126,
+              "bbox_xyxy": [
+                305.9615783691406,
+                160.5624542236328,
+                423.4617614746094,
+                399.2592468261719
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 18,
+          "timestamp_seconds": 0.6,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.2687036395072937,
+              "bbox_xyxy": [
+                305.6678161621094,
+                159.6520538330078,
+                423.4523010253906,
+                400.5108947753906
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 24,
+          "timestamp_seconds": 0.8,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.24798205494880676,
+              "bbox_xyxy": [
+                305.8765563964844,
+                160.7669219970703,
+                423.4574279785156,
+                398.3218688964844
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 30,
+          "timestamp_seconds": 1.0,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.25960808992385864,
+              "bbox_xyxy": [
+                305.9097595214844,
+                160.9197540283203,
+                423.5711364746094,
+                399.54052734375
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 36,
+          "timestamp_seconds": 1.2,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.2797433137893677,
+              "bbox_xyxy": [
+                305.9337158203125,
+                160.5104522705078,
+                423.5587158203125,
+                398.812744140625
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 42,
+          "timestamp_seconds": 1.4,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.36654695868492126,
+              "bbox_xyxy": [
+                305.78582763671875,
+                161.4778594970703,
+                423.6614685058594,
+                401.5159912109375
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 48,
+          "timestamp_seconds": 1.6,
+          "detections": []
+        },
+        {
+          "frame_index": 54,
+          "timestamp_seconds": 1.8,
+          "detections": []
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 2.0,
+          "detections": []
+        },
+        {
+          "frame_index": 66,
+          "timestamp_seconds": 2.2,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.17879247665405273,
+              "bbox_xyxy": [
+                1128.25634765625,
+                0.0,
+                1204.3594970703125,
+                80.84893035888672
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 72,
+          "timestamp_seconds": 2.4,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.2522030770778656,
+              "bbox_xyxy": [
+                1096.0380859375,
+                0.0,
+                1222.0084228515625,
+                85.1714859008789
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 78,
+          "timestamp_seconds": 2.6,
+          "detections": []
+        },
+        {
+          "frame_index": 84,
+          "timestamp_seconds": 2.8,
+          "detections": []
+        },
+        {
+          "frame_index": 90,
+          "timestamp_seconds": 3.0,
+          "detections": []
+        },
+        {
+          "frame_index": 96,
+          "timestamp_seconds": 3.2,
+          "detections": []
+        },
+        {
+          "frame_index": 102,
+          "timestamp_seconds": 3.4,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.18659907579421997,
+              "bbox_xyxy": [
+                1116.1131591796875,
+                27.310789108276367,
+                1218.8643798828125,
+                90.46439361572266
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 108,
+          "timestamp_seconds": 3.6,
+          "detections": []
+        },
+        {
+          "frame_index": 114,
+          "timestamp_seconds": 3.8,
+          "detections": []
+        },
+        {
+          "frame_index": 120,
+          "timestamp_seconds": 4.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.23378367722034454,
+              "bbox_xyxy": [
+                1109.9761962890625,
+                32.22560119628906,
+                1244.6441650390625,
+                169.90098571777344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 126,
+          "timestamp_seconds": 4.2,
+          "detections": []
+        },
+        {
+          "frame_index": 132,
+          "timestamp_seconds": 4.4,
+          "detections": []
+        },
+        {
+          "frame_index": 138,
+          "timestamp_seconds": 4.6,
+          "detections": []
+        },
+        {
+          "frame_index": 144,
+          "timestamp_seconds": 4.8,
+          "detections": []
+        },
+        {
+          "frame_index": 150,
+          "timestamp_seconds": 5.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.48992547392845154,
+              "bbox_xyxy": [
+                1050.2911376953125,
+                5.183858394622803,
+                1271.3670654296875,
+                177.92640686035156
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 156,
+          "timestamp_seconds": 5.2,
+          "detections": []
+        },
+        {
+          "frame_index": 162,
+          "timestamp_seconds": 5.4,
+          "detections": []
+        },
+        {
+          "frame_index": 168,
+          "timestamp_seconds": 5.6,
+          "detections": []
+        },
+        {
+          "frame_index": 174,
+          "timestamp_seconds": 5.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3620442748069763,
+              "bbox_xyxy": [
+                1089.9644775390625,
+                28.10467529296875,
+                1273.5966796875,
+                169.0227813720703
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 180,
+          "timestamp_seconds": 6.0,
+          "detections": []
+        },
+        {
+          "frame_index": 186,
+          "timestamp_seconds": 6.2,
+          "detections": []
+        },
+        {
+          "frame_index": 192,
+          "timestamp_seconds": 6.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.15421408414840698,
+              "bbox_xyxy": [
+                1080.9052734375,
+                2.9521687030792236,
+                1253.7083740234375,
+                169.234619140625
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 198,
+          "timestamp_seconds": 6.6,
+          "detections": []
+        },
+        {
+          "frame_index": 204,
+          "timestamp_seconds": 6.8,
+          "detections": []
+        },
+        {
+          "frame_index": 210,
+          "timestamp_seconds": 7.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.198223277926445,
+              "bbox_xyxy": [
+                1114.873046875,
+                38.646942138671875,
+                1242.6041259765625,
+                160.85951232910156
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 216,
+          "timestamp_seconds": 7.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.5549420714378357,
+              "bbox_xyxy": [
+                1109.2574462890625,
+                12.75304126739502,
+                1235.6099853515625,
+                163.16342163085938
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 222,
+          "timestamp_seconds": 7.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.6975286602973938,
+              "bbox_xyxy": [
+                1111.1610107421875,
+                1.70831298828125,
+                1231.0184326171875,
+                163.37879943847656
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.21810691058635712,
+              "bbox_xyxy": [
+                1016.517578125,
+                0.0,
+                1231.0479736328125,
+                160.74180603027344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 228,
+          "timestamp_seconds": 7.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.18159496784210205,
+              "bbox_xyxy": [
+                1138.9892578125,
+                11.015660285949707,
+                1234.4635009765625,
+                167.9932098388672
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 234,
+          "timestamp_seconds": 7.8,
+          "detections": []
+        },
+        {
+          "frame_index": 240,
+          "timestamp_seconds": 8.0,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.38090190291404724,
+              "bbox_xyxy": [
+                1081.6007080078125,
+                1.2900186777114868,
+                1237.1563720703125,
+                79.58769989013672
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 246,
+          "timestamp_seconds": 8.2,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.40760913491249084,
+              "bbox_xyxy": [
+                1105.0654296875,
+                4.338315486907959,
+                1236.1712646484375,
+                80.214599609375
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 252,
+          "timestamp_seconds": 8.4,
+          "detections": []
+        },
+        {
+          "frame_index": 258,
+          "timestamp_seconds": 8.6,
+          "detections": []
+        },
+        {
+          "frame_index": 264,
+          "timestamp_seconds": 8.8,
+          "detections": []
+        },
+        {
+          "frame_index": 270,
+          "timestamp_seconds": 9.0,
+          "detections": []
+        },
+        {
+          "frame_index": 276,
+          "timestamp_seconds": 9.2,
+          "detections": []
+        },
+        {
+          "frame_index": 282,
+          "timestamp_seconds": 9.4,
+          "detections": []
+        },
+        {
+          "frame_index": 288,
+          "timestamp_seconds": 9.6,
+          "detections": []
+        },
+        {
+          "frame_index": 294,
+          "timestamp_seconds": 9.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.5287087559700012,
+              "bbox_xyxy": [
+                1076.6859130859375,
+                8.27880859375,
+                1279.8287353515625,
+                179.1300811767578
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 300,
+          "timestamp_seconds": 10.0,
+          "detections": []
+        },
+        {
+          "frame_index": 306,
+          "timestamp_seconds": 10.2,
+          "detections": []
+        },
+        {
+          "frame_index": 312,
+          "timestamp_seconds": 10.4,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.22249792516231537,
+              "bbox_xyxy": [
+                309.677734375,
+                148.0938720703125,
+                425.271240234375,
+                406.5191345214844
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 318,
+          "timestamp_seconds": 10.6,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.3070845901966095,
+              "bbox_xyxy": [
+                971.2096557617188,
+                0.0,
+                1251.349609375,
+                62.368167877197266
+              ]
+            },
+            {
+              "class": "smoke",
+              "confidence": 0.22260354459285736,
+              "bbox_xyxy": [
+                310.01116943359375,
+                147.6736297607422,
+                425.3052673339844,
+                406.0312805175781
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 324,
+          "timestamp_seconds": 10.8,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.26997074484825134,
+              "bbox_xyxy": [
+                308.618408203125,
+                151.91015625,
+                423.5923767089844,
+                407.4488830566406
+              ]
+            },
+            {
+              "class": "smoke",
+              "confidence": 0.15515422821044922,
+              "bbox_xyxy": [
+                955.1083374023438,
+                4.5304412841796875,
+                1238.3680419921875,
+                73.68436431884766
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 330,
+          "timestamp_seconds": 11.0,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.23446032404899597,
+              "bbox_xyxy": [
+                308.88580322265625,
+                151.46340942382812,
+                423.2461853027344,
+                407.6709289550781
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 336,
+          "timestamp_seconds": 11.2,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.2493453174829483,
+              "bbox_xyxy": [
+                308.4884033203125,
+                152.1266326904297,
+                423.3745422363281,
+                407.8760681152344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 342,
+          "timestamp_seconds": 11.4,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.2005547732114792,
+              "bbox_xyxy": [
+                1033.779052734375,
+                0.0,
+                1280.0,
+                60.05228805541992
+              ]
+            },
+            {
+              "class": "smoke",
+              "confidence": 0.17960260808467865,
+              "bbox_xyxy": [
+                308.6232604980469,
+                152.2678680419922,
+                423.221923828125,
+                408.46142578125
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 348,
+          "timestamp_seconds": 11.6,
+          "detections": [
+            {
+              "class": "smoke",
+              "confidence": 0.18332049250602722,
+              "bbox_xyxy": [
+                308.2478942871094,
+                153.4298858642578,
+                422.9842834472656,
+                409.5235290527344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 354,
+          "timestamp_seconds": 11.8,
+          "detections": []
+        }
+      ],
+      "selected": false,
+      "weight_removed": true
+    },
+    "candidate2": {
+      "repository": "https://huggingface.co/SalahALHaismawi/yolov26-fire-detection",
+      "revision": "5397b43994c39c2ed4ef81a6996c6334e2b7a5fa",
+      "counts": {
+        "fire": 27,
+        "smoke": 0
+      },
+      "first4_seconds_counts": {
+        "fire": 0,
+        "smoke": 0
+      },
+      "fire_segment4to12_samples": 40,
+      "fire_segment4to12_detection_frames": 27,
+      "observations": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "detections": []
+        },
+        {
+          "frame_index": 6,
+          "timestamp_seconds": 0.2,
+          "detections": []
+        },
+        {
+          "frame_index": 12,
+          "timestamp_seconds": 0.4,
+          "detections": []
+        },
+        {
+          "frame_index": 18,
+          "timestamp_seconds": 0.6,
+          "detections": []
+        },
+        {
+          "frame_index": 24,
+          "timestamp_seconds": 0.8,
+          "detections": []
+        },
+        {
+          "frame_index": 30,
+          "timestamp_seconds": 1.0,
+          "detections": []
+        },
+        {
+          "frame_index": 36,
+          "timestamp_seconds": 1.2,
+          "detections": []
+        },
+        {
+          "frame_index": 42,
+          "timestamp_seconds": 1.4,
+          "detections": []
+        },
+        {
+          "frame_index": 48,
+          "timestamp_seconds": 1.6,
+          "detections": []
+        },
+        {
+          "frame_index": 54,
+          "timestamp_seconds": 1.8,
+          "detections": []
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 2.0,
+          "detections": []
+        },
+        {
+          "frame_index": 66,
+          "timestamp_seconds": 2.2,
+          "detections": []
+        },
+        {
+          "frame_index": 72,
+          "timestamp_seconds": 2.4,
+          "detections": []
+        },
+        {
+          "frame_index": 78,
+          "timestamp_seconds": 2.6,
+          "detections": []
+        },
+        {
+          "frame_index": 84,
+          "timestamp_seconds": 2.8,
+          "detections": []
+        },
+        {
+          "frame_index": 90,
+          "timestamp_seconds": 3.0,
+          "detections": []
+        },
+        {
+          "frame_index": 96,
+          "timestamp_seconds": 3.2,
+          "detections": []
+        },
+        {
+          "frame_index": 102,
+          "timestamp_seconds": 3.4,
+          "detections": []
+        },
+        {
+          "frame_index": 108,
+          "timestamp_seconds": 3.6,
+          "detections": []
+        },
+        {
+          "frame_index": 114,
+          "timestamp_seconds": 3.8,
+          "detections": []
+        },
+        {
+          "frame_index": 120,
+          "timestamp_seconds": 4.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3541735112667084,
+              "bbox_xyxy": [
+                1114.4754638671875,
+                49.50384521484375,
+                1219.3504638671875,
+                139.06153869628906
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.2470477819442749,
+              "bbox_xyxy": [
+                1010.2346801757812,
+                16.849573135375977,
+                1238.7119140625,
+                156.4307098388672
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 126,
+          "timestamp_seconds": 4.2,
+          "detections": []
+        },
+        {
+          "frame_index": 132,
+          "timestamp_seconds": 4.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.5798279047012329,
+              "bbox_xyxy": [
+                1111.9638671875,
+                48.21494674682617,
+                1226.2835693359375,
+                133.72666931152344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 138,
+          "timestamp_seconds": 4.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.26650986075401306,
+              "bbox_xyxy": [
+                1055.6895751953125,
+                8.892578125,
+                1280.0,
+                242.0729522705078
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 144,
+          "timestamp_seconds": 4.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.2668619453907013,
+              "bbox_xyxy": [
+                1041.0924072265625,
+                15.236699104309082,
+                1258.8304443359375,
+                170.84765625
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.1745547503232956,
+              "bbox_xyxy": [
+                1050.9923095703125,
+                14.395894050598145,
+                1271.5811767578125,
+                224.9194793701172
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 150,
+          "timestamp_seconds": 5.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.477202445268631,
+              "bbox_xyxy": [
+                1029.4722900390625,
+                15.03875732421875,
+                1259.5660400390625,
+                166.0502166748047
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.32437869906425476,
+              "bbox_xyxy": [
+                1025.6005859375,
+                13.484782218933105,
+                1268.6527099609375,
+                249.7547149658203
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 156,
+          "timestamp_seconds": 5.2,
+          "detections": []
+        },
+        {
+          "frame_index": 162,
+          "timestamp_seconds": 5.4,
+          "detections": []
+        },
+        {
+          "frame_index": 168,
+          "timestamp_seconds": 5.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.4641125202178955,
+              "bbox_xyxy": [
+                1021.5866088867188,
+                8.103657722473145,
+                1223.34619140625,
+                123.55792236328125
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 174,
+          "timestamp_seconds": 5.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3824707269668579,
+              "bbox_xyxy": [
+                1085.0196533203125,
+                32.054931640625,
+                1213.6402587890625,
+                137.60272216796875
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.1871681660413742,
+              "bbox_xyxy": [
+                1074.0760498046875,
+                20.95654296875,
+                1279.09716796875,
+                276.0736389160156
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 180,
+          "timestamp_seconds": 6.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.43370577692985535,
+              "bbox_xyxy": [
+                1082.6322021484375,
+                5.683553218841553,
+                1215.8519287109375,
+                129.5133514404297
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.29643866419792175,
+              "bbox_xyxy": [
+                1061.2630615234375,
+                2.4508464336395264,
+                1277.9541015625,
+                264.48272705078125
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 186,
+          "timestamp_seconds": 6.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.41976574063301086,
+              "bbox_xyxy": [
+                972.4216918945312,
+                4.70226526260376,
+                1258.7950439453125,
+                170.6286163330078
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.17639462649822235,
+              "bbox_xyxy": [
+                972.3063354492188,
+                5.420633792877197,
+                1276.4912109375,
+                303.2767028808594
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 192,
+          "timestamp_seconds": 6.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.33056074380874634,
+              "bbox_xyxy": [
+                1032.7525634765625,
+                13.733195304870605,
+                1237.5771484375,
+                144.44847106933594
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 198,
+          "timestamp_seconds": 6.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.23790337145328522,
+              "bbox_xyxy": [
+                996.7716674804688,
+                8.03515625,
+                1260.15087890625,
+                139.42535400390625
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.18537454307079315,
+              "bbox_xyxy": [
+                992.4092407226562,
+                8.994059562683105,
+                1278.7838134765625,
+                282.2198181152344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 204,
+          "timestamp_seconds": 6.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.41026291251182556,
+              "bbox_xyxy": [
+                1084.9007568359375,
+                52.37599563598633,
+                1220.2579345703125,
+                132.6408233642578
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 210,
+          "timestamp_seconds": 7.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.37010887265205383,
+              "bbox_xyxy": [
+                1096.6466064453125,
+                40.83774948120117,
+                1229.1895751953125,
+                135.98353576660156
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 216,
+          "timestamp_seconds": 7.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.510216474533081,
+              "bbox_xyxy": [
+                1087.2076416015625,
+                9.82452392578125,
+                1276.6878662109375,
+                263.0220642089844
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.1767723113298416,
+              "bbox_xyxy": [
+                1096.6724853515625,
+                14.36407470703125,
+                1228.1702880859375,
+                147.47645568847656
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 222,
+          "timestamp_seconds": 7.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.4309963285923004,
+              "bbox_xyxy": [
+                1001.5681762695312,
+                0.0,
+                1234.1043701171875,
+                144.43252563476562
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 228,
+          "timestamp_seconds": 7.6,
+          "detections": []
+        },
+        {
+          "frame_index": 234,
+          "timestamp_seconds": 7.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.5178816318511963,
+              "bbox_xyxy": [
+                1085.0191650390625,
+                37.56465530395508,
+                1238.859375,
+                151.42872619628906
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 240,
+          "timestamp_seconds": 8.0,
+          "detections": []
+        },
+        {
+          "frame_index": 246,
+          "timestamp_seconds": 8.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3163154125213623,
+              "bbox_xyxy": [
+                1024.44091796875,
+                14.73272705078125,
+                1271.6444091796875,
+                154.00343322753906
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 252,
+          "timestamp_seconds": 8.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.24948295950889587,
+              "bbox_xyxy": [
+                1097.4544677734375,
+                41.78031539916992,
+                1212.426025390625,
+                117.63619232177734
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 258,
+          "timestamp_seconds": 8.6,
+          "detections": []
+        },
+        {
+          "frame_index": 264,
+          "timestamp_seconds": 8.8,
+          "detections": []
+        },
+        {
+          "frame_index": 270,
+          "timestamp_seconds": 9.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.26061180233955383,
+              "bbox_xyxy": [
+                1075.6844482421875,
+                22.27166748046875,
+                1210.855712890625,
+                121.545166015625
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.1542654037475586,
+              "bbox_xyxy": [
+                1011.5791015625,
+                10.965861320495605,
+                1237.0435791015625,
+                138.0285186767578
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 276,
+          "timestamp_seconds": 9.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3079228401184082,
+              "bbox_xyxy": [
+                1064.7169189453125,
+                26.20078468322754,
+                1234.09912109375,
+                138.15318298339844
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 282,
+          "timestamp_seconds": 9.4,
+          "detections": []
+        },
+        {
+          "frame_index": 288,
+          "timestamp_seconds": 9.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.38866955041885376,
+              "bbox_xyxy": [
+                1070.3934326171875,
+                32.67488479614258,
+                1234.2781982421875,
+                142.13233947753906
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 294,
+          "timestamp_seconds": 9.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.4275355637073517,
+              "bbox_xyxy": [
+                1056.66064453125,
+                13.794718742370605,
+                1220.97021484375,
+                134.0480194091797
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 300,
+          "timestamp_seconds": 10.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.18704067170619965,
+              "bbox_xyxy": [
+                1055.8760986328125,
+                43.11561965942383,
+                1206.4132080078125,
+                116.30596923828125
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.18649108707904816,
+              "bbox_xyxy": [
+                1048.8775634765625,
+                31.82131004333496,
+                1277.3994140625,
+                237.8429718017578
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 306,
+          "timestamp_seconds": 10.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3437744379043579,
+              "bbox_xyxy": [
+                1041.3895263671875,
+                25.73899269104004,
+                1277.01611328125,
+                252.1716766357422
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.2700543999671936,
+              "bbox_xyxy": [
+                1047.4073486328125,
+                35.430877685546875,
+                1207.0098876953125,
+                117.85091400146484
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 312,
+          "timestamp_seconds": 10.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.2407643049955368,
+              "bbox_xyxy": [
+                1039.0050048828125,
+                6.963846683502197,
+                1276.06591796875,
+                241.72145080566406
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 318,
+          "timestamp_seconds": 10.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.334976464509964,
+              "bbox_xyxy": [
+                1049.8724365234375,
+                34.97975540161133,
+                1219.3958740234375,
+                136.1446075439453
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 324,
+          "timestamp_seconds": 10.8,
+          "detections": []
+        },
+        {
+          "frame_index": 330,
+          "timestamp_seconds": 11.0,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3860783874988556,
+              "bbox_xyxy": [
+                981.4280395507812,
+                14.112075805664062,
+                1262.0185546875,
+                177.60662841796875
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.24969349801540375,
+              "bbox_xyxy": [
+                1079.7569580078125,
+                38.32132339477539,
+                1240.6221923828125,
+                164.1317138671875
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 336,
+          "timestamp_seconds": 11.2,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3147575557231903,
+              "bbox_xyxy": [
+                1086.95654296875,
+                38.876129150390625,
+                1225.6719970703125,
+                151.85354614257812
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.2572970390319824,
+              "bbox_xyxy": [
+                993.5680541992188,
+                8.857955932617188,
+                1259.2142333984375,
+                173.3234100341797
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 342,
+          "timestamp_seconds": 11.4,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.3695085048675537,
+              "bbox_xyxy": [
+                1007.1951293945312,
+                4.298807621002197,
+                1260.9501953125,
+                165.9902801513672
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.1773896962404251,
+              "bbox_xyxy": [
+                1084.97509765625,
+                6.150187015533447,
+                1235.61376953125,
+                154.79444885253906
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 348,
+          "timestamp_seconds": 11.6,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.5549950003623962,
+              "bbox_xyxy": [
+                1094.42431640625,
+                42.94000244140625,
+                1223.1942138671875,
+                135.92539978027344
+              ]
+            }
+          ]
+        },
+        {
+          "frame_index": 354,
+          "timestamp_seconds": 11.8,
+          "detections": [
+            {
+              "class": "fire",
+              "confidence": 0.4056978225708008,
+              "bbox_xyxy": [
+                1085.8011474609375,
+                39.45003128051758,
+                1220.6385498046875,
+                142.48878479003906
+              ]
+            },
+            {
+              "class": "fire",
+              "confidence": 0.20264014601707458,
+              "bbox_xyxy": [
+                1073.8515625,
+                22.77290916442871,
+                1237.26806640625,
+                170.3880157470703
+              ]
+            }
+          ]
+        }
+      ],
+      "selected_for_next_review": true,
+      "not_final_model": true
+    },
+    "limitations": [
+      "Counts are frame-level candidate coverage, not accuracy/precision/recall",
+      "No exhaustive ground-truth boxes; representative frames visually checked",
+      "Video6 is edited: CCTV clock jumps around4s and8s; reset temporal state on cuts in a future alarm implementation. Source timeline cannot measure physical early-warning delay.",
+      "No retraining and no script-inserted time-based fire detections",
+      "Smoke detection failed to appear in video6 at0.25; do not claim smoke success from this clip",
+      "No temporal event confirmation or dashboard/backend integration yet"
+    ]
+  },
+  "crosscheck": {
+    "method": "Three fixed positions20/50/80 percent per video; no manual per-frame ground truth",
+    "nonfire": {
+      "videos": 5,
+      "sampled_frames": 15,
+      "counts": {
+        "fire": 0,
+        "smoke": 0
+      }
+    },
+    "fire_tagged": {
+      "videos": 29,
+      "sampled_frames": 87,
+      "counts": {
+        "fire": 54,
+        "smoke": 47
+      },
+      "note": "Video-level tags are not frame labels; do not interpret54/87 as recall"
+    },
+    "observations": [
+      {
+        "source": "data/videos/1_forklift_worker_collision_risk.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 105,
+        "timestamp_seconds": 4.2,
+        "detections": []
+      },
+      {
+        "source": "data/videos/1_forklift_worker_collision_risk.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 263,
+        "timestamp_seconds": 10.52,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.35268110036849976,
+            "bbox_xyxy": [
+              304.61181640625,
+              66.75677490234375,
+              656.695556640625,
+              407.2264404296875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2094893753528595,
+            "bbox_xyxy": [
+              1552.55224609375,
+              237.70338439941406,
+              1683.779296875,
+              425.5643310546875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/1_forklift_worker_collision_risk.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 421,
+        "timestamp_seconds": 16.84,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.2582632899284363,
+            "bbox_xyxy": [
+              1551.38330078125,
+              241.35504150390625,
+              1682.02783203125,
+              425.588623046875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.23691220581531525,
+            "bbox_xyxy": [
+              129.61447143554688,
+              23.947509765625,
+              335.6141357421875,
+              279.7143249511719
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/2_restricted_zone_intrusion.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 57,
+        "timestamp_seconds": 2.375,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.5665006637573242,
+            "bbox_xyxy": [
+              211.11058044433594,
+              663.1915893554688,
+              408.169189453125,
+              864.8102416992188
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.15942098200321198,
+            "bbox_xyxy": [
+              487.704345703125,
+              419.221923828125,
+              651.19482421875,
+              1001.2100830078125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/2_restricted_zone_intrusion.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 144,
+        "timestamp_seconds": 6.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.17674332857131958,
+            "bbox_xyxy": [
+              243.68692016601562,
+              352.70989990234375,
+              379.7656555175781,
+              461.01251220703125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/2_restricted_zone_intrusion.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 231,
+        "timestamp_seconds": 9.625,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.26666194200515747,
+            "bbox_xyxy": [
+              252.71820068359375,
+              353.56683349609375,
+              372.70037841796875,
+              450.86029052734375
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.1962859034538269,
+            "bbox_xyxy": [
+              1072.517333984375,
+              416.013427734375,
+              1359.781982421875,
+              479.079833984375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/3_PPE_Helmet.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 57,
+        "timestamp_seconds": 2.377375,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8533535599708557,
+            "bbox_xyxy": [
+              1091.89599609375,
+              3.1357421875,
+              1279.9627685546875,
+              215.5232696533203
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2731681764125824,
+            "bbox_xyxy": [
+              497.8536071777344,
+              358.1292419433594,
+              739.9844360351562,
+              536.0563354492188
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/3_PPE_Helmet.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 144,
+        "timestamp_seconds": 6.005999999999999,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8998739719390869,
+            "bbox_xyxy": [
+              972.9515991210938,
+              5.24688720703125,
+              1279.577392578125,
+              316.0665588378906
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.16993410885334015,
+            "bbox_xyxy": [
+              614.443603515625,
+              121.00445556640625,
+              717.068115234375,
+              210.27012634277344
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/3_PPE_Helmet.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 230,
+        "timestamp_seconds": 9.592916666666666,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.5380869507789612,
+            "bbox_xyxy": [
+              1020.17333984375,
+              38.81331253051758,
+              1280.0,
+              454.9939880371094
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.41323980689048767,
+            "bbox_xyxy": [
+              889.5652465820312,
+              83.38507080078125,
+              975.4054565429688,
+              167.6383514404297
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.3585743010044098,
+            "bbox_xyxy": [
+              473.9131774902344,
+              148.83575439453125,
+              616.0546264648438,
+              312.5030822753906
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/4_hazard_zone_dwell.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 91,
+        "timestamp_seconds": 3.795458333333333,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.5318320989608765,
+            "bbox_xyxy": [
+              819.4652099609375,
+              165.1973876953125,
+              963.0084228515625,
+              287.03948974609375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.3406829833984375,
+            "bbox_xyxy": [
+              1660.11328125,
+              318.868408203125,
+              1733.5966796875,
+              420.7755126953125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/4_hazard_zone_dwell.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 228,
+        "timestamp_seconds": 9.5095,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.6496432423591614,
+            "bbox_xyxy": [
+              819.8726806640625,
+              167.29049682617188,
+              963.2125244140625,
+              285.6151428222656
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.29303836822509766,
+            "bbox_xyxy": [
+              1661.648193359375,
+              320.50518798828125,
+              1733.233642578125,
+              421.73681640625
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/4_hazard_zone_dwell.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 365,
+        "timestamp_seconds": 15.223541666666666,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.5423887372016907,
+            "bbox_xyxy": [
+              821.27294921875,
+              166.24124145507812,
+              967.893798828125,
+              289.0595703125
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.3716646432876587,
+            "bbox_xyxy": [
+              1660.9720458984375,
+              319.0213623046875,
+              1734.2401123046875,
+              420.906494140625
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/5_Logistics Warehouse.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 869,
+        "timestamp_seconds": 36.208333333333336,
+        "detections": []
+      },
+      {
+        "source": "data/videos/5_Logistics Warehouse.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 2174,
+        "timestamp_seconds": 90.58333333333333,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.5676839351654053,
+            "bbox_xyxy": [
+              604.5477905273438,
+              90.27728271484375,
+              813.5924682617188,
+              226.3107147216797
+            ]
+          }
+        ]
+      },
+      {
+        "source": "data/videos/5_Logistics Warehouse.mp4",
+        "kind": "existing_nonfire_presentation",
+        "frame_index": 3479,
+        "timestamp_seconds": 144.95833333333334,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.4835096001625061,
+            "bbox_xyxy": [
+              596.4689331054688,
+              91.3730239868164,
+              811.3972778320312,
+              244.92881774902344
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.19806668162345886,
+            "bbox_xyxy": [
+              278.6462707519531,
+              124.94561767578125,
+              335.6615905761719,
+              173.56605529785156
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.15605612099170685,
+            "bbox_xyxy": [
+              394.4851379394531,
+              141.38177490234375,
+              490.0227355957031,
+              276.42474365234375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00228.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.7894617915153503,
+            "bbox_xyxy": [
+              537.7732543945312,
+              189.328125,
+              764.5494995117188,
+              436.4512023925781
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00228.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.714427649974823,
+            "bbox_xyxy": [
+              548.3025512695312,
+              183.544921875,
+              774.443359375,
+              441.4207458496094
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.1741260439157486,
+            "bbox_xyxy": [
+              796.106201171875,
+              316.6161804199219,
+              891.742431640625,
+              480.7297058105469
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00228.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.45764753222465515,
+            "bbox_xyxy": [
+              371.3634338378906,
+              3.1341145038604736,
+              784.64453125,
+              453.0978088378906
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.34286341071128845,
+            "bbox_xyxy": [
+              394.5215759277344,
+              183.1056365966797,
+              514.336669921875,
+              294.6075134277344
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.2251715064048767,
+            "bbox_xyxy": [
+              417.9689025878906,
+              215.3583221435547,
+              700.3801879882812,
+              449.5940856933594
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.1868937462568283,
+            "bbox_xyxy": [
+              454.6427307128906,
+              515.3434448242188,
+              563.0344848632812,
+              541.1087036132812
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00229.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.782306969165802,
+            "bbox_xyxy": [
+              559.4763793945312,
+              181.8761749267578,
+              680.8567504882812,
+              303.5982666015625
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.7275190949440002,
+            "bbox_xyxy": [
+              88.06219482421875,
+              605.4490356445312,
+              131.6048126220703,
+              714.646484375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00229.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8221377730369568,
+            "bbox_xyxy": [
+              480.738037109375,
+              7.603078365325928,
+              748.4454956054688,
+              336.5705871582031
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.7318928837776184,
+            "bbox_xyxy": [
+              86.2298355102539,
+              604.1970825195312,
+              130.8625030517578,
+              713.2918090820312
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.25713586807250977,
+            "bbox_xyxy": [
+              217.7193603515625,
+              546.1741333007812,
+              252.7965087890625,
+              657.5786743164062
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.23126554489135742,
+            "bbox_xyxy": [
+              688.221435546875,
+              358.486083984375,
+              861.7553100585938,
+              504.487060546875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00229.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.7452542781829834,
+            "bbox_xyxy": [
+              381.3993225097656,
+              209.2122039794922,
+              502.6444396972656,
+              498.7655944824219
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.7358629703521729,
+            "bbox_xyxy": [
+              85.6305160522461,
+              603.1616821289062,
+              132.8673095703125,
+              712.8057250976562
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6388024687767029,
+            "bbox_xyxy": [
+              475.4599609375,
+              7.476857662200928,
+              762.0808715820312,
+              342.9342041015625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6149795651435852,
+            "bbox_xyxy": [
+              766.32177734375,
+              0.0,
+              1243.13037109375,
+              334.1596374511719
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.34238389134407043,
+            "bbox_xyxy": [
+              217.0897674560547,
+              546.0512084960938,
+              253.5023651123047,
+              657.9453735351562
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.30541762709617615,
+            "bbox_xyxy": [
+              479.5892639160156,
+              6.229288578033447,
+              765.371826171875,
+              245.8792724609375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00230.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.6947317719459534,
+            "bbox_xyxy": [
+              674.9317016601562,
+              491.0052185058594,
+              818.311279296875,
+              603.7838745117188
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.4389761686325073,
+            "bbox_xyxy": [
+              469.135986328125,
+              511.4689025878906,
+              582.3145141601562,
+              613.86474609375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.41237860918045044,
+            "bbox_xyxy": [
+              468.06689453125,
+              511.0828857421875,
+              580.3798828125,
+              613.4889526367188
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2903524339199066,
+            "bbox_xyxy": [
+              187.2184295654297,
+              517.9260864257812,
+              220.89501953125,
+              600.6613159179688
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00230.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.7952713370323181,
+            "bbox_xyxy": [
+              671.9639282226562,
+              482.179931640625,
+              792.012451171875,
+              614.6704711914062
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7824448347091675,
+            "bbox_xyxy": [
+              507.3531188964844,
+              462.4039001464844,
+              600.051513671875,
+              611.3345336914062
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00230.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8525421619415283,
+            "bbox_xyxy": [
+              515.8178100585938,
+              498.9364013671875,
+              764.268310546875,
+              620.1740112304688
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.5323404669761658,
+            "bbox_xyxy": [
+              546.4993286132812,
+              63.948150634765625,
+              774.1697387695312,
+              387.919189453125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00250.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.7568777799606323,
+            "bbox_xyxy": [
+              1074.1583251953125,
+              1.9539794921875,
+              1280.0,
+              284.029052734375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2392120212316513,
+            "bbox_xyxy": [
+              913.4678344726562,
+              1.2254638671875,
+              1001.119873046875,
+              98.22903442382812
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00250.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8459587097167969,
+            "bbox_xyxy": [
+              981.2210083007812,
+              1.4429931640625,
+              1133.1044921875,
+              119.95452880859375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.23992659151554108,
+            "bbox_xyxy": [
+              479.359130859375,
+              375.98779296875,
+              573.0602416992188,
+              513.6670532226562
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00250.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8425076603889465,
+            "bbox_xyxy": [
+              1124.6497802734375,
+              2.0308430194854736,
+              1279.7347412109375,
+              174.8986053466797
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.29253852367401123,
+            "bbox_xyxy": [
+              624.005859375,
+              214.6213836669922,
+              673.00244140625,
+              298.7927551269531
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00251.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8312740921974182,
+            "bbox_xyxy": [
+              1160.9976806640625,
+              1.7226969003677368,
+              1279.6104736328125,
+              181.450439453125
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.7935340404510498,
+            "bbox_xyxy": [
+              944.8883666992188,
+              0.0,
+              1057.20166015625,
+              86.99320220947266
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00251.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.5636301040649414,
+            "bbox_xyxy": [
+              421.68994140625,
+              55.70759963989258,
+              695.5842895507812,
+              407.54296875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00251.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.4996345341205597,
+            "bbox_xyxy": [
+              853.5364379882812,
+              43.79105758666992,
+              1280.0,
+              548.3455810546875
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.407103031873703,
+            "bbox_xyxy": [
+              331.2923583984375,
+              18.36580467224121,
+              680.3184814453125,
+              584.6557006835938
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.1532403528690338,
+            "bbox_xyxy": [
+              332.0531311035156,
+              17.54117774963379,
+              689.4853515625,
+              229.3245086669922
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00264.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8910056352615356,
+            "bbox_xyxy": [
+              973.7291870117188,
+              6.228515625,
+              1279.3006591796875,
+              313.4410400390625
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.31150972843170166,
+            "bbox_xyxy": [
+              648.4588012695312,
+              126.94061279296875,
+              706.8142700195312,
+              176.3893585205078
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00264.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.880873441696167,
+            "bbox_xyxy": [
+              972.4323120117188,
+              7.404500484466553,
+              1279.5318603515625,
+              312.9889221191406
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.5733855962753296,
+            "bbox_xyxy": [
+              503.066162109375,
+              434.7611389160156,
+              551.6373901367188,
+              496.2206115722656
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.44542571902275085,
+            "bbox_xyxy": [
+              354.4371643066406,
+              101.81925201416016,
+              552.7399291992188,
+              391.0476379394531
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2708946168422699,
+            "bbox_xyxy": [
+              389.825439453125,
+              343.2987060546875,
+              455.6148376464844,
+              488.8871765136719
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00264.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.884814441204071,
+            "bbox_xyxy": [
+              975.6447143554688,
+              6.3873291015625,
+              1279.56201171875,
+              313.5915222167969
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6809539794921875,
+            "bbox_xyxy": [
+              261.9517517089844,
+              12.968119621276855,
+              505.1897888183594,
+              210.2315673828125
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.35717397928237915,
+            "bbox_xyxy": [
+              432.2153015136719,
+              240.072021484375,
+              584.8697509765625,
+              420.8946838378906
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.3276563584804535,
+            "bbox_xyxy": [
+              518.385498046875,
+              433.58447265625,
+              548.551513671875,
+              474.8595275878906
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.2475278228521347,
+            "bbox_xyxy": [
+              513.327880859375,
+              431.6424865722656,
+              549.3069458007812,
+              481.239501953125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00265.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8953284621238708,
+            "bbox_xyxy": [
+              971.2482299804688,
+              6.64306640625,
+              1279.40185546875,
+              314.6033935546875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00265.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8845138549804688,
+            "bbox_xyxy": [
+              959.615234375,
+              6.280477046966553,
+              1279.5474853515625,
+              315.9805603027344
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.49040529131889343,
+            "bbox_xyxy": [
+              277.7679748535156,
+              7.8876953125,
+              661.4020385742188,
+              273.8377380371094
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00265.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8752613663673401,
+            "bbox_xyxy": [
+              972.732421875,
+              5.787760257720947,
+              1279.4163818359375,
+              315.437744140625
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00283.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8991460204124451,
+            "bbox_xyxy": [
+              976.5037231445312,
+              6.028055667877197,
+              1279.90380859375,
+              318.1737365722656
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.8036860227584839,
+            "bbox_xyxy": [
+              698.2511596679688,
+              210.9976806640625,
+              808.25439453125,
+              321.148681640625
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00283.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8395234942436218,
+            "bbox_xyxy": [
+              892.72314453125,
+              28.27596092224121,
+              1279.9971923828125,
+              651.8549194335938
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.24620042741298676,
+            "bbox_xyxy": [
+              361.9602966308594,
+              24.71211814880371,
+              761.8627319335938,
+              483.2707214355469
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00283.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.7266930341720581,
+            "bbox_xyxy": [
+              381.8975524902344,
+              10.583659172058105,
+              629.3807983398438,
+              338.82470703125
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.5004104971885681,
+            "bbox_xyxy": [
+              630.8595581054688,
+              51.88917922973633,
+              789.8269653320312,
+              260.16986083984375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.26130688190460205,
+            "bbox_xyxy": [
+              791.9746704101562,
+              594.0669555664062,
+              838.5214233398438,
+              685.5289916992188
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00282.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8620688915252686,
+            "bbox_xyxy": [
+              971.35791015625,
+              5.09918212890625,
+              1276.1837158203125,
+              305.3115234375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2502594292163849,
+            "bbox_xyxy": [
+              194.7556915283203,
+              559.7926635742188,
+              273.1185607910156,
+              644.1845703125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00282.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.7095736265182495,
+            "bbox_xyxy": [
+              934.4313354492188,
+              2.1919758319854736,
+              1178.25927734375,
+              267.314697265625
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.19290916621685028,
+            "bbox_xyxy": [
+              360.1419677734375,
+              451.996337890625,
+              415.3761901855469,
+              523.2627563476562
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00282.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.7368170619010925,
+            "bbox_xyxy": [
+              918.9548950195312,
+              0.0,
+              1112.8592529296875,
+              229.1039276123047
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.3800604045391083,
+            "bbox_xyxy": [
+              283.1415100097656,
+              9.961283683776855,
+              552.376220703125,
+              183.50611877441406
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00284.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8933573961257935,
+            "bbox_xyxy": [
+              973.369140625,
+              5.2044677734375,
+              1279.7808837890625,
+              315.6329040527344
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00284.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8983134031295776,
+            "bbox_xyxy": [
+              973.4275512695312,
+              5.1695556640625,
+              1279.7247314453125,
+              316.3345031738281
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_00284.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.8389534950256348,
+            "bbox_xyxy": [
+              977.3264770507812,
+              8.38427734375,
+              1279.8583984375,
+              323.6175537109375
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7935799360275269,
+            "bbox_xyxy": [
+              361.07763671875,
+              433.7660217285156,
+              456.35302734375,
+              528.7333374023438
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7137802243232727,
+            "bbox_xyxy": [
+              1101.8909912109375,
+              364.3262939453125,
+              1279.8897705078125,
+              541.2702026367188
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.41672101616859436,
+            "bbox_xyxy": [
+              632.78369140625,
+              259.7256774902344,
+              692.3154296875,
+              327.6289978027344
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01062.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8649203181266785,
+            "bbox_xyxy": [
+              372.61767578125,
+              16.43707275390625,
+              665.6885375976562,
+              297.8849182128906
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6787669062614441,
+            "bbox_xyxy": [
+              321.926025390625,
+              340.0367736816406,
+              380.8741149902344,
+              393.7503356933594
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.39083725214004517,
+            "bbox_xyxy": [
+              400.090576171875,
+              310.34576416015625,
+              486.674072265625,
+              394.180908203125
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.3040671646595001,
+            "bbox_xyxy": [
+              318.2307434082031,
+              313.80560302734375,
+              490.2936706542969,
+              402.061279296875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01062.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.46827149391174316,
+            "bbox_xyxy": [
+              463.3788146972656,
+              190.0949249267578,
+              795.61279296875,
+              385.0924072265625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.3722195029258728,
+            "bbox_xyxy": [
+              512.612060546875,
+              32.64448165893555,
+              944.797119140625,
+              358.9036865234375
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.3721854090690613,
+            "bbox_xyxy": [
+              408.7190246582031,
+              320.0227966308594,
+              476.0602722167969,
+              412.2682189941406
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.1857897788286209,
+            "bbox_xyxy": [
+              560.7463989257812,
+              34.28007125854492,
+              942.6170043945312,
+              286.6263427734375
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.16031600534915924,
+            "bbox_xyxy": [
+              329.02392578125,
+              337.9392395019531,
+              375.776123046875,
+              389.9560852050781
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01062.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.6509997248649597,
+            "bbox_xyxy": [
+              397.7126159667969,
+              274.445556640625,
+              493.0725402832031,
+              409.8124084472656
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6200364232063293,
+            "bbox_xyxy": [
+              487.8392333984375,
+              81.36483001708984,
+              661.4999389648438,
+              358.2977294921875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01063.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.2108469009399414,
+            "bbox_xyxy": [
+              388.044677734375,
+              636.1246948242188,
+              483.2344665527344,
+              700.6480102539062
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01063.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8309921622276306,
+            "bbox_xyxy": [
+              361.7672424316406,
+              127.69864654541016,
+              940.87890625,
+              474.3146057128906
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.16340668499469757,
+            "bbox_xyxy": [
+              390.0866394042969,
+              196.4532012939453,
+              574.9669189453125,
+              466.4446716308594
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01063.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.5810161828994751,
+            "bbox_xyxy": [
+              233.2996368408203,
+              10.0167236328125,
+              1001.4192504882812,
+              412.9888916015625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.48866572976112366,
+            "bbox_xyxy": [
+              188.0707550048828,
+              41.6786003112793,
+              304.3407897949219,
+              295.9635925292969
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.20980016887187958,
+            "bbox_xyxy": [
+              921.6232299804688,
+              472.353271484375,
+              949.9337768554688,
+              546.572509765625
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01086.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.7271277904510498,
+            "bbox_xyxy": [
+              430.1205139160156,
+              403.9681091308594,
+              577.005615234375,
+              551.2846069335938
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6780967712402344,
+            "bbox_xyxy": [
+              697.7593383789062,
+              339.4781799316406,
+              843.6714477539062,
+              567.2568359375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.1506076455116272,
+            "bbox_xyxy": [
+              591.7033081054688,
+              115.52972412109375,
+              677.08740234375,
+              188.33531188964844
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01086.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.6385499835014343,
+            "bbox_xyxy": [
+              372.949462890625,
+              84.3321533203125,
+              896.2431640625,
+              526.3618774414062
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01086.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.4105905592441559,
+            "bbox_xyxy": [
+              429.5287170410156,
+              101.97415161132812,
+              756.6918334960938,
+              431.4259948730469
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.3048195540904999,
+            "bbox_xyxy": [
+              418.4840393066406,
+              36.21354293823242,
+              841.9047241210938,
+              438.4169006347656
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.19401083886623383,
+            "bbox_xyxy": [
+              944.6539916992188,
+              10.840413093566895,
+              1280.0,
+              194.88909912109375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01109.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.6346485614776611,
+            "bbox_xyxy": [
+              599.8563842773438,
+              251.0023193359375,
+              720.50390625,
+              361.5480041503906
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.4859948754310608,
+            "bbox_xyxy": [
+              446.5765075683594,
+              433.9305114746094,
+              632.0562133789062,
+              620.0540161132812
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01109.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.5338566899299622,
+            "bbox_xyxy": [
+              244.17230224609375,
+              125.3465576171875,
+              627.2914428710938,
+              481.4806823730469
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.36594709753990173,
+            "bbox_xyxy": [
+              562.4602661132812,
+              544.5216674804688,
+              703.9757690429688,
+              689.6217651367188
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01109.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": []
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01110.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 28,
+        "timestamp_seconds": 1.1666666666666667,
+        "detections": [
+          {
+            "class": "other",
+            "confidence": 0.4652230441570282,
+            "bbox_xyxy": [
+              301.6684875488281,
+              547.8756713867188,
+              422.2260437011719,
+              662.1212768554688
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2921558618545532,
+            "bbox_xyxy": [
+              857.6345825195312,
+              563.8369140625,
+              989.92236328125,
+              662.3779296875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01110.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8430221080780029,
+            "bbox_xyxy": [
+              318.9352111816406,
+              66.86190032958984,
+              927.37548828125,
+              454.7430725097656
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.648632287979126,
+            "bbox_xyxy": [
+              432.0215759277344,
+              377.3077087402344,
+              503.142822265625,
+              495.5841369628906
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.37647441029548645,
+            "bbox_xyxy": [
+              1130.6463623046875,
+              586.3427734375,
+              1192.9073486328125,
+              647.9153442382812
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.328998327255249,
+            "bbox_xyxy": [
+              300.5740051269531,
+              558.7003784179688,
+              395.2744445800781,
+              655.8734741210938
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01110.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 115,
+        "timestamp_seconds": 4.791666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.6665535569190979,
+            "bbox_xyxy": [
+              247.37921142578125,
+              66.72794342041016,
+              878.0509643554688,
+              423.3753356933594
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.3700557053089142,
+            "bbox_xyxy": [
+              258.6539611816406,
+              120.08943939208984,
+              580.5492553710938,
+              416.7813415527344
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01292.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8106244206428528,
+            "bbox_xyxy": [
+              715.5740356445312,
+              308.1923828125,
+              761.5643920898438,
+              378.23638916015625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7511209845542908,
+            "bbox_xyxy": [
+              518.2030029296875,
+              150.38902282714844,
+              758.1405639648438,
+              291.34478759765625
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.579999566078186,
+            "bbox_xyxy": [
+              0.07557347416877747,
+              111.50150299072266,
+              43.47547149658203,
+              169.1126251220703
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.4099685847759247,
+            "bbox_xyxy": [
+              476.56573486328125,
+              45.446170806884766,
+              494.1715087890625,
+              75.20880889892578
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.3132849931716919,
+            "bbox_xyxy": [
+              542.2737426757812,
+              50.05418014526367,
+              559.2818603515625,
+              81.4400634765625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.1695515513420105,
+            "bbox_xyxy": [
+              474.1217346191406,
+              330.9518737792969,
+              493.3167419433594,
+              357.73602294921875
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.16572700440883636,
+            "bbox_xyxy": [
+              675.318603515625,
+              67.8423080444336,
+              694.8095092773438,
+              99.10896301269531
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01292.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.809959352016449,
+            "bbox_xyxy": [
+              698.8341674804688,
+              300.0718994140625,
+              763.603515625,
+              381.52777099609375
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6201861500740051,
+            "bbox_xyxy": [
+              513.6776123046875,
+              133.02047729492188,
+              761.1849365234375,
+              272.5660095214844
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.5282819271087646,
+            "bbox_xyxy": [
+              126.91790008544922,
+              1.6238892078399658,
+              564.9405517578125,
+              196.58563232421875
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.49888893961906433,
+            "bbox_xyxy": [
+              199.91099548339844,
+              4.347113132476807,
+              761.6842651367188,
+              273.5339050292969
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.48174989223480225,
+            "bbox_xyxy": [
+              673.3651733398438,
+              67.01793670654297,
+              698.741455078125,
+              101.33869171142578
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.37340888381004333,
+            "bbox_xyxy": [
+              0.012768045999109745,
+              110.9950942993164,
+              43.86887741088867,
+              171.07150268554688
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.25212156772613525,
+            "bbox_xyxy": [
+              475.23870849609375,
+              332.177978515625,
+              491.7356262207031,
+              357.2201843261719
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.1739790141582489,
+            "bbox_xyxy": [
+              596.58935546875,
+              60.156131744384766,
+              619.3082275390625,
+              95.96772766113281
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01292.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8193904161453247,
+            "bbox_xyxy": [
+              708.4267578125,
+              294.1577453613281,
+              763.1507568359375,
+              377.3699035644531
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6204509735107422,
+            "bbox_xyxy": [
+              332.88287353515625,
+              2.165423631668091,
+              737.0840454101562,
+              240.9772186279297
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5570099949836731,
+            "bbox_xyxy": [
+              0.043243408203125,
+              111.26563262939453,
+              42.967681884765625,
+              170.76031494140625
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.1935328245162964,
+            "bbox_xyxy": [
+              71.87824249267578,
+              69.69340515136719,
+              99.18528747558594,
+              105.0391616821289
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.16659392416477203,
+            "bbox_xyxy": [
+              676.9036254882812,
+              65.48853302001953,
+              694.0477294921875,
+              92.74423217773438
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.15437771379947662,
+            "bbox_xyxy": [
+              396.4863586425781,
+              86.15980529785156,
+              739.9666137695312,
+              240.11167907714844
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01417.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8102661967277527,
+            "bbox_xyxy": [
+              322.9786376953125,
+              114.30785369873047,
+              415.41650390625,
+              178.2196044921875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.6278682351112366,
+            "bbox_xyxy": [
+              0.024435169994831085,
+              110.19995880126953,
+              42.560848236083984,
+              169.52561950683594
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.4763396978378296,
+            "bbox_xyxy": [
+              475.6463928222656,
+              44.65337371826172,
+              495.53253173828125,
+              76.07087707519531
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.4028469920158386,
+            "bbox_xyxy": [
+              673.6781005859375,
+              66.69723510742188,
+              696.33056640625,
+              101.81787872314453
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.3648829460144043,
+            "bbox_xyxy": [
+              541.769287109375,
+              49.3304328918457,
+              559.498291015625,
+              82.4500732421875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.28141161799430847,
+            "bbox_xyxy": [
+              574.8555908203125,
+              386.9814758300781,
+              592.0765991210938,
+              410.4555358886719
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.15310180187225342,
+            "bbox_xyxy": [
+              598.8248901367188,
+              58.128509521484375,
+              619.4052734375,
+              94.99151611328125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01417.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8712123036384583,
+            "bbox_xyxy": [
+              281.572509765625,
+              31.963186264038086,
+              423.49749755859375,
+              189.53750610351562
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5888554453849792,
+            "bbox_xyxy": [
+              0.035689037293195724,
+              110.47852325439453,
+              42.38344955444336,
+              169.55282592773438
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.24511872231960297,
+            "bbox_xyxy": [
+              476.1337890625,
+              44.43448257446289,
+              494.3522033691406,
+              74.4442138671875
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.18564710021018982,
+            "bbox_xyxy": [
+              673.2633056640625,
+              66.04927062988281,
+              696.91943359375,
+              102.08203125
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.1628175526857376,
+            "bbox_xyxy": [
+              541.457275390625,
+              48.80558776855469,
+              559.8133544921875,
+              82.61071014404297
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01417.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8719139099121094,
+            "bbox_xyxy": [
+              274.8154296875,
+              9.583929061889648,
+              429.5826110839844,
+              188.1058349609375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5991659164428711,
+            "bbox_xyxy": [
+              0.07545776665210724,
+              110.8089599609375,
+              42.09234619140625,
+              169.8481903076172
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01418.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.6294857859611511,
+            "bbox_xyxy": [
+              187.83444213867188,
+              281.14239501953125,
+              238.63998413085938,
+              323.1627197265625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.5887398719787598,
+            "bbox_xyxy": [
+              249.256591796875,
+              277.3333435058594,
+              279.95782470703125,
+              311.63629150390625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.5587543249130249,
+            "bbox_xyxy": [
+              260.0525817871094,
+              196.81964111328125,
+              329.9093933105469,
+              277.1938781738281
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01418.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8067548871040344,
+            "bbox_xyxy": [
+              183.03408813476562,
+              246.68722534179688,
+              280.83074951171875,
+              330.2575988769531
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.30892202258110046,
+            "bbox_xyxy": [
+              244.23988342285156,
+              12.730463027954102,
+              342.3702087402344,
+              151.47169494628906
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.1515202820301056,
+            "bbox_xyxy": [
+              234.12991333007812,
+              8.068109512329102,
+              337.6944580078125,
+              246.13746643066406
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01418.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8318876624107361,
+            "bbox_xyxy": [
+              188.7422637939453,
+              245.28756713867188,
+              276.1601867675781,
+              331.8997497558594
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6021420955657959,
+            "bbox_xyxy": [
+              244.53221130371094,
+              40.534584045410156,
+              306.00653076171875,
+              148.90895080566406
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01420.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8298071026802063,
+            "bbox_xyxy": [
+              179.69149780273438,
+              221.59446716308594,
+              254.75253295898438,
+              344.74468994140625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7712528705596924,
+            "bbox_xyxy": [
+              357.6466064453125,
+              177.23854064941406,
+              413.5704650878906,
+              231.22181701660156
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7430753707885742,
+            "bbox_xyxy": [
+              151.388671875,
+              29.1341552734375,
+              238.47596740722656,
+              233.81417846679688
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6096912622451782,
+            "bbox_xyxy": [
+              29.9906063079834,
+              161.0234375,
+              76.235107421875,
+              185.64715576171875
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.29354339838027954,
+            "bbox_xyxy": [
+              0.2575363218784332,
+              13.215569496154785,
+              66.90434265136719,
+              156.3035888671875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01420.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.871418833732605,
+            "bbox_xyxy": [
+              172.04554748535156,
+              215.8846435546875,
+              288.8712158203125,
+              345.9883117675781
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.8296674489974976,
+            "bbox_xyxy": [
+              3.619274854660034,
+              100.1203842163086,
+              111.1754150390625,
+              192.38548278808594
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7943031191825867,
+            "bbox_xyxy": [
+              297.31878662109375,
+              215.1389923095703,
+              337.4577941894531,
+              272.8096923828125
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7850934863090515,
+            "bbox_xyxy": [
+              466.7140808105469,
+              105.97132110595703,
+              517.1940307617188,
+              165.7528533935547
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6845916509628296,
+            "bbox_xyxy": [
+              314.0373229980469,
+              18.243494033813477,
+              426.44342041015625,
+              133.7073516845703
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6634224653244019,
+            "bbox_xyxy": [
+              351.69586181640625,
+              170.32420349121094,
+              390.55548095703125,
+              239.90170288085938
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6106723546981812,
+            "bbox_xyxy": [
+              392.5357360839844,
+              165.64442443847656,
+              438.14141845703125,
+              217.37948608398438
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.4019189774990082,
+            "bbox_xyxy": [
+              0.0,
+              9.349026679992676,
+              83.21562957763672,
+              145.21351623535156
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.3844882547855377,
+            "bbox_xyxy": [
+              477.70947265625,
+              13.244318962097168,
+              522.8519287109375,
+              97.44635009765625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.1914825141429901,
+            "bbox_xyxy": [
+              0.0,
+              10.902446746826172,
+              88.7295913696289,
+              102.9976806640625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.19138938188552856,
+            "bbox_xyxy": [
+              352.0821228027344,
+              162.75022888183594,
+              438.26513671875,
+              240.51751708984375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01420.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8073626756668091,
+            "bbox_xyxy": [
+              0.0,
+              72.24241638183594,
+              124.7655258178711,
+              200.2738494873047
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6966381072998047,
+            "bbox_xyxy": [
+              246.67532348632812,
+              193.61268615722656,
+              356.149169921875,
+              317.6674499511719
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6172398924827576,
+            "bbox_xyxy": [
+              456.593994140625,
+              98.6259536743164,
+              521.581298828125,
+              164.63394165039062
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.5626311898231506,
+            "bbox_xyxy": [
+              377.00921630859375,
+              147.28170776367188,
+              460.8970947265625,
+              219.40142822265625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.2227640002965927,
+            "bbox_xyxy": [
+              385.4525451660156,
+              16.20015525817871,
+              544.5524291992188,
+              93.09090423583984
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.19063924252986908,
+            "bbox_xyxy": [
+              177.32232666015625,
+              187.7084197998047,
+              358.3931579589844,
+              349.4937744140625
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01421.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8814710378646851,
+            "bbox_xyxy": [
+              106.08446502685547,
+              61.702762603759766,
+              254.14952087402344,
+              174.71173095703125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01421.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8377920389175415,
+            "bbox_xyxy": [
+              101.90670013427734,
+              64.96276092529297,
+              208.18386840820312,
+              177.53456115722656
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2271963506937027,
+            "bbox_xyxy": [
+              359.4908447265625,
+              72.98184967041016,
+              380.97052001953125,
+              126.35680389404297
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.1678493469953537,
+            "bbox_xyxy": [
+              592.025634765625,
+              90.68773651123047,
+              612.1536254882812,
+              115.97431182861328
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01421.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8615416884422302,
+            "bbox_xyxy": [
+              99.4139633178711,
+              63.91219711303711,
+              209.3175048828125,
+              177.29930114746094
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.16799896955490112,
+            "bbox_xyxy": [
+              591.0697631835938,
+              91.60396575927734,
+              611.9727783203125,
+              116.3812255859375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01422.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8671008944511414,
+            "bbox_xyxy": [
+              38.22446060180664,
+              249.2810821533203,
+              124.2769546508789,
+              420.2042236328125
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.6895979046821594,
+            "bbox_xyxy": [
+              0.04327647015452385,
+              110.44422149658203,
+              45.09223556518555,
+              173.32748413085938
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.38889119029045105,
+            "bbox_xyxy": [
+              475.5329895019531,
+              45.401123046875,
+              494.9842224121094,
+              77.16526794433594
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2255076766014099,
+            "bbox_xyxy": [
+              472.8070983886719,
+              319.50457763671875,
+              492.26983642578125,
+              346.2180480957031
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01422.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8852578997612,
+            "bbox_xyxy": [
+              14.574347496032715,
+              255.10443115234375,
+              125.13140106201172,
+              422.1499328613281
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.34878963232040405,
+            "bbox_xyxy": [
+              1.7499066591262817,
+              117.54946899414062,
+              41.0292854309082,
+              169.6983184814453
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.2907448709011078,
+            "bbox_xyxy": [
+              475.1890563964844,
+              45.622161865234375,
+              495.2427673339844,
+              77.00360107421875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.25419342517852783,
+            "bbox_xyxy": [
+              473.0592041015625,
+              319.97662353515625,
+              491.6761169433594,
+              345.2462158203125
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.22382448613643646,
+            "bbox_xyxy": [
+              574.376220703125,
+              386.7408142089844,
+              592.5194091796875,
+              412.1281433105469
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01422.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8705255389213562,
+            "bbox_xyxy": [
+              10.357483863830566,
+              232.97105407714844,
+              126.28591918945312,
+              425.410888671875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.39917126297950745,
+            "bbox_xyxy": [
+              5.34248161315918,
+              118.055908203125,
+              43.20752716064453,
+              168.15277099609375
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.30763378739356995,
+            "bbox_xyxy": [
+              475.23046875,
+              45.635528564453125,
+              494.9757995605469,
+              77.07222747802734
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.19696037471294403,
+            "bbox_xyxy": [
+              573.1065063476562,
+              385.64007568359375,
+              592.9819946289062,
+              413.0125427246094
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.16836167871952057,
+            "bbox_xyxy": [
+              472.2345275878906,
+              319.2294616699219,
+              492.1621398925781,
+              345.4413146972656
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01423.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.6515848636627197,
+            "bbox_xyxy": [
+              372.0172424316406,
+              3.0631937980651855,
+              426.66656494140625,
+              54.58762741088867
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.49409130215644836,
+            "bbox_xyxy": [
+              354.873779296875,
+              55.370948791503906,
+              392.60772705078125,
+              90.23177337646484
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01423.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.7883632779121399,
+            "bbox_xyxy": [
+              357.6196594238281,
+              22.65703010559082,
+              410.17327880859375,
+              113.94564056396484
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.34456926584243774,
+            "bbox_xyxy": [
+              0.0,
+              91.33496856689453,
+              51.05927276611328,
+              187.9028778076172
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.1702055037021637,
+            "bbox_xyxy": [
+              0.11761347204446793,
+              91.0406494140625,
+              49.520389556884766,
+              190.58787536621094
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01423.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.7876993417739868,
+            "bbox_xyxy": [
+              351.0901794433594,
+              8.264199256896973,
+              414.3074645996094,
+              121.29252624511719
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.474337100982666,
+            "bbox_xyxy": [
+              449.3052062988281,
+              3.0155203342437744,
+              500.6128845214844,
+              64.51860809326172
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.41793978214263916,
+            "bbox_xyxy": [
+              0.0,
+              88.59304809570312,
+              50.60276412963867,
+              187.32391357421875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01424.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8821390867233276,
+            "bbox_xyxy": [
+              188.7257080078125,
+              166.281005859375,
+              446.14031982421875,
+              350.4935302734375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01424.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8522154688835144,
+            "bbox_xyxy": [
+              191.55953979492188,
+              206.60629272460938,
+              379.8920593261719,
+              350.28729248046875
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.6564821004867554,
+            "bbox_xyxy": [
+              395.4490966796875,
+              158.58706665039062,
+              448.44757080078125,
+              238.71131896972656
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01424.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8572458028793335,
+            "bbox_xyxy": [
+              242.90560913085938,
+              162.52395629882812,
+              437.1570129394531,
+              334.3733825683594
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7475855350494385,
+            "bbox_xyxy": [
+              0.0,
+              9.34545612335205,
+              415.2361145019531,
+              155.69223022460938
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.2078995257616043,
+            "bbox_xyxy": [
+              188.74607849121094,
+              305.9929504394531,
+              222.08042907714844,
+              351.4651184082031
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01428.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8499810099601746,
+            "bbox_xyxy": [
+              497.2276916503906,
+              4.207041263580322,
+              648.2320556640625,
+              224.02630615234375
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7404235005378723,
+            "bbox_xyxy": [
+              556.0353393554688,
+              239.56488037109375,
+              644.56640625,
+              302.2889404296875
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5463200807571411,
+            "bbox_xyxy": [
+              0.09819692373275757,
+              114.46551513671875,
+              43.94881057739258,
+              171.89825439453125
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.4396335780620575,
+            "bbox_xyxy": [
+              476.1209716796875,
+              42.24759292602539,
+              495.7851867675781,
+              77.65354919433594
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01428.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8758816719055176,
+            "bbox_xyxy": [
+              486.1636047363281,
+              3.7409913539886475,
+              651.4443359375,
+              215.0338897705078
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.8425916433334351,
+            "bbox_xyxy": [
+              558.0084838867188,
+              227.51910400390625,
+              645.1455078125,
+              302.58001708984375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01428.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8344985246658325,
+            "bbox_xyxy": [
+              556.8106079101562,
+              222.340576171875,
+              644.2896728515625,
+              303.1338195800781
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7670069932937622,
+            "bbox_xyxy": [
+              470.8256530761719,
+              5.19521951675415,
+              650.82275390625,
+              210.28973388671875
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.3995848596096039,
+            "bbox_xyxy": [
+              671.8453979492188,
+              66.87324523925781,
+              698.3499145507812,
+              101.182861328125
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01429.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8692481517791748,
+            "bbox_xyxy": [
+              3.9913532733917236,
+              389.99334716796875,
+              118.53933715820312,
+              478.9403991699219
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.17447593808174133,
+            "bbox_xyxy": [
+              696.3090209960938,
+              4.265820026397705,
+              832.0,
+              113.01339721679688
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01429.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.9000663161277771,
+            "bbox_xyxy": [
+              0.0,
+              265.5960998535156,
+              137.08554077148438,
+              477.90911865234375
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7170505523681641,
+            "bbox_xyxy": [
+              0.0,
+              65.92477416992188,
+              170.75645446777344,
+              243.00962829589844
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.3120085895061493,
+            "bbox_xyxy": [
+              701.6354370117188,
+              9.223329544067383,
+              832.0,
+              119.80169677734375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01429.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.9066112041473389,
+            "bbox_xyxy": [
+              0.0007405598880723119,
+              257.33050537109375,
+              190.24993896484375,
+              477.09869384765625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.2532946467399597,
+            "bbox_xyxy": [
+              0.0,
+              59.40407180786133,
+              170.2742462158203,
+              217.89303588867188
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01431.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.7952619791030884,
+            "bbox_xyxy": [
+              175.5380401611328,
+              183.3125762939453,
+              236.77330017089844,
+              243.71148681640625
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2819494903087616,
+            "bbox_xyxy": [
+              752.9024658203125,
+              61.80371856689453,
+              832.0,
+              97.26188659667969
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.19584906101226807,
+            "bbox_xyxy": [
+              42.1701774597168,
+              196.5922393798828,
+              136.35208129882812,
+              268.4513244628906
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01431.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8194652199745178,
+            "bbox_xyxy": [
+              176.36190795898438,
+              129.59642028808594,
+              245.87086486816406,
+              243.0494842529297
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.390307754278183,
+            "bbox_xyxy": [
+              756.476318359375,
+              62.53524398803711,
+              832.0,
+              99.98148345947266
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.22778476774692535,
+            "bbox_xyxy": [
+              0.23414917290210724,
+              152.13330078125,
+              128.30792236328125,
+              276.270751953125
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.15600281953811646,
+            "bbox_xyxy": [
+              590.7032470703125,
+              85.837890625,
+              611.5028686523438,
+              116.5748519897461
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01431.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8117325305938721,
+            "bbox_xyxy": [
+              174.66831970214844,
+              106.53089141845703,
+              245.82415771484375,
+              241.97882080078125
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5928575396537781,
+            "bbox_xyxy": [
+              0.07330220937728882,
+              138.69235229492188,
+              126.50725555419922,
+              274.7956237792969
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5529739856719971,
+            "bbox_xyxy": [
+              756.7352294921875,
+              62.623313903808594,
+              832.0,
+              99.4308090209961
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.32393380999565125,
+            "bbox_xyxy": [
+              320.3723449707031,
+              64.83119201660156,
+              378.3668518066406,
+              130.00173950195312
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01432.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8988091349601746,
+            "bbox_xyxy": [
+              702.7286987304688,
+              199.66329956054688,
+              832.0,
+              324.13958740234375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.6518970131874084,
+            "bbox_xyxy": [
+              0.036859385669231415,
+              110.22300720214844,
+              43.7281608581543,
+              170.20175170898438
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.497892826795578,
+            "bbox_xyxy": [
+              475.8327941894531,
+              45.911930084228516,
+              495.2669982910156,
+              76.50149536132812
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.47946783900260925,
+            "bbox_xyxy": [
+              526.6697998046875,
+              351.7971496582031,
+              546.79736328125,
+              382.2156677246094
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.471329003572464,
+            "bbox_xyxy": [
+              472.78265380859375,
+              306.317626953125,
+              491.5626220703125,
+              340.77008056640625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.24019289016723633,
+            "bbox_xyxy": [
+              673.6107177734375,
+              66.86624145507812,
+              695.826171875,
+              101.55783081054688
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.2045900523662567,
+            "bbox_xyxy": [
+              577.11865234375,
+              384.4427490234375,
+              594.972412109375,
+              412.3157043457031
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.15160591900348663,
+            "bbox_xyxy": [
+              541.9093017578125,
+              50.28518295288086,
+              559.1707153320312,
+              82.9448013305664
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01432.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8795889616012573,
+            "bbox_xyxy": [
+              607.81591796875,
+              132.1429443359375,
+              776.9496459960938,
+              275.1676025390625
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6657958626747131,
+            "bbox_xyxy": [
+              512.6315307617188,
+              5.306825637817383,
+              769.5155639648438,
+              128.10150146484375
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5608988404273987,
+            "bbox_xyxy": [
+              0.02570800855755806,
+              109.2197036743164,
+              42.13666915893555,
+              170.66644287109375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01432.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.7978029847145081,
+            "bbox_xyxy": [
+              594.7093505859375,
+              152.54222106933594,
+              752.7903442382812,
+              262.3571472167969
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.5837897658348083,
+            "bbox_xyxy": [
+              0.004192098043859005,
+              109.78633880615234,
+              42.001495361328125,
+              169.6820068359375
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.4551362097263336,
+            "bbox_xyxy": [
+              395.1910705566406,
+              5.783967971801758,
+              479.5357666015625,
+              96.06472778320312
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.23579956591129303,
+            "bbox_xyxy": [
+              596.4534912109375,
+              59.09545135498047,
+              622.7838134765625,
+              95.9951171875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01433.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8585419058799744,
+            "bbox_xyxy": [
+              304.4698181152344,
+              233.6628875732422,
+              407.68463134765625,
+              350.4925537109375
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.6112902760505676,
+            "bbox_xyxy": [
+              180.7411346435547,
+              32.807701110839844,
+              342.39764404296875,
+              231.75537109375
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.1981811225414276,
+            "bbox_xyxy": [
+              222.42620849609375,
+              143.42605590820312,
+              348.0616760253906,
+              233.5079803466797
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.1715477854013443,
+            "bbox_xyxy": [
+              180.0252227783203,
+              34.41807556152344,
+              276.3016052246094,
+              178.40145874023438
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01433.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8685658574104309,
+            "bbox_xyxy": [
+              300.68048095703125,
+              223.31588745117188,
+              415.3015441894531,
+              353.8026428222656
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01433.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8898022174835205,
+            "bbox_xyxy": [
+              288.38323974609375,
+              224.6026153564453,
+              418.6659240722656,
+              353.1529235839844
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.5593553781509399,
+            "bbox_xyxy": [
+              303.6961975097656,
+              38.15622329711914,
+              393.9747009277344,
+              164.29037475585938
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.20286352932453156,
+            "bbox_xyxy": [
+              657.988525390625,
+              0.7147130370140076,
+              701.9506225585938,
+              33.97614288330078
+            ]
+          },
+          {
+            "class": "other",
+            "confidence": 0.17393611371517181,
+            "bbox_xyxy": [
+              690.095947265625,
+              82.83644104003906,
+              708.397705078125,
+              267.5262451171875
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01434.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 37,
+        "timestamp_seconds": 1.5416666666666667,
+        "detections": [
+          {
+            "class": "smoke",
+            "confidence": 0.8209418654441833,
+            "bbox_xyxy": [
+              714.7824096679688,
+              2.878767967224121,
+              831.9666748046875,
+              131.155029296875
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7619724273681641,
+            "bbox_xyxy": [
+              635.4549560546875,
+              87.48834991455078,
+              710.5722045898438,
+              147.49020385742188
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.49692249298095703,
+            "bbox_xyxy": [
+              279.0010681152344,
+              44.52132034301758,
+              338.0108947753906,
+              110.2054443359375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01434.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 94,
+        "timestamp_seconds": 3.9166666666666665,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8758153915405273,
+            "bbox_xyxy": [
+              340.9134826660156,
+              144.71730041503906,
+              463.7725830078125,
+              377.9549560546875
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.7561507225036621,
+            "bbox_xyxy": [
+              528.944091796875,
+              156.85458374023438,
+              621.7734375,
+              329.9119567871094
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.21354223787784576,
+            "bbox_xyxy": [
+              533.6764526367188,
+              156.63377380371094,
+              614.62548828125,
+              284.22113037109375
+            ]
+          }
+        ]
+      },
+      {
+        "source": "/Users/sanghyeopkim/Desktop/비전AI안전관제(26_7 ~ 11)/datasets/nvidia_physicalai_event/videos/video_01434.mp4",
+        "kind": "fire_tagged_video_not_frame_ground_truth",
+        "frame_index": 151,
+        "timestamp_seconds": 6.291666666666667,
+        "detections": [
+          {
+            "class": "fire",
+            "confidence": 0.8376654386520386,
+            "bbox_xyxy": [
+              534.4326171875,
+              154.13365173339844,
+              619.6654663085938,
+              332.10552978515625
+            ]
+          },
+          {
+            "class": "fire",
+            "confidence": 0.8238905668258667,
+            "bbox_xyxy": [
+              361.5030517578125,
+              209.63209533691406,
+              460.3445129394531,
+              376.6280212402344
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.7690756916999817,
+            "bbox_xyxy": [
+              297.1995544433594,
+              7.9958319664001465,
+              451.3043518066406,
+              198.56484985351562
+            ]
+          },
+          {
+            "class": "smoke",
+            "confidence": 0.17698563635349274,
+            "bbox_xyxy": [
+              345.19219970703125,
+              16.285799026489258,
+              450.9909362792969,
+              195.63482666015625
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "initial_result": {
+    "video_number": 6,
+    "source_sha256": "6c9165d6fdb19baaf9a9cc70110edd0ee41c5f7cb27a5965a96a9c70d96ecd67",
+    "model_sha256": "52684ddffd4797f1bc5ff1bd2b72af3ec34eabf0c1646c37f518bb766b27b79f",
+    "samples": 60,
+    "decoded_source_frames": 360,
+    "source_fps": 30.0,
+    "processed_fps": 5.0,
+    "wall_seconds": 12.608711083070375,
+    "display_confidence": 0.25,
+    "frames_with_detection": {
+      "fire": 27,
+      "smoke": 0
+    },
+    "first_fire_detection_seconds": 4.0,
+    "review_sha256": "d83921d03f76098ac096d49244159ed32edc64f67d9016c3a7473950c29a32f9",
+    "scope": "Raw detections only; temporal confirmation and backend/dashboard integration pending"
+  },
+  "preservation_checks": {
+    "review1_to5_sha256": {
+      "1": "591cf716ded94b51855c480fc1fb0ffd81c5031c4dd3535d095b21247b221a53",
+      "2": "c8edc830a5e9f14048b2238c637fb0a60e177c8ede940550f4c516d45d7ad186",
+      "3": "aac3707788a0aec32829d048ecc55c95de7fa9376c83e830d0484cb339794f71",
+      "4": "266854b636d75741f1e93c2cb1977666c8a174cbbedfa0b6cbe582b1fd60824e",
+      "5": "c54050a2d907bc0d63073d96a8c20c888164d65a650612939c34a15d4828085a"
+    },
+    "all_six_production_models_unchanged": true,
+    "ppe_policy_sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea"
+  },
+  "verification": {
+    "review_decoded_frames": 60,
+    "source_frames_decoded": 360,
+    "representative_rendered_frames_visually_checked": 6,
+    "crosscheck_sample_frames": 102,
+    "github_pushed": false,
+    "detection_tests": 281,
+    "backend_tests": 22,
+    "previous_runtime_assets_checked": 82,
+    "previous_source_video_hashes_checked": 5
+  },
+  "publisher_model_card_text": "---\nlicense: mit\nlibrary_name: ultralytics\npipeline_tag: object-detection\ntags:\n  - yolo\n  - yolov26\n  - fire-detection\n  - smoke-detection\n  - computer-vision\n  - pytorch\n  - ultralytics\n  - real-time\n  - safety\ndatasets:\n  - custom\nmetrics:\n  - mAP\n  - precision\n  - recall\nmodel-index:\n  - name: yolov26-fire-detection\n    results:\n      - task:\n          type: object-detection\n        metrics:\n          - name: mAP@50\n            type: mAP\n            value: 94.9\n          - name: mAP@50-95\n            type: mAP\n            value: 68.0\n          - name: Precision\n            type: precision\n            value: 89.6\n          - name: Recall\n            type: recall\n            value: 88.8\n---\n\n# YOLOv26 Fire Detection\n\nReal-time fire and smoke detection model based on YOLOv26 (Ultralytics). Achieves **94.9% mAP@50** on fire/smoke detection tasks.\n\n## Model Description\n\nThis model detects fire, smoke, and related fire indicators in images and videos. Built on YOLOv26-S architecture and trained on 8,939 annotated images.\n\n### Classes\n- **fire** - Active flames\n- **smoke** - Smoke plumes\n- **other** - Related fire indicators\n\n## Performance\n\n| Metric | Score |\n|--------|-------|\n| mAP@50 | **94.9%** |\n| mAP@50-95 | 68.0% |\n| Precision | 89.6% |\n| Recall | 88.8% |\n\n## Training Details\n\n| Parameter | Value |\n|-----------|-------|\n| Base Model | YOLOv26-S |\n| Epochs | 100 |\n| Batch Size | 16 |\n| Image Size | 640x640 |\n| Optimizer | AdamW |\n| Learning Rate | 0.01 |\n\n## Usage\n\n### Installation\n\n```bash\npip install ultralytics\n```\n\n### Inference\n\n```python\nfrom ultralytics import YOLO\n\n# Load model\nmodel = YOLO(\"path/to/best.pt\")\n\n# Run inference\nresults = model.predict(\"image.jpg\", conf=0.25)\n\n# Process results\nfor result in results:\n    boxes = result.boxes\n    for box in boxes:\n        cls = int(box.cls[0])\n        conf = float(box.conf[0])\n        label = model.names[cls]\n        print(f\"Detected: {label} ({conf:.2f})\")\n```\n\n### Video Inference\n\n```python\nfrom ultralytics import YOLO\n\nmodel = YOLO(\"path/to/best.pt\")\nresults = model.predict(\"video.mp4\", save=True, conf=0.25)\n```\n\n### Webcam (Real-time)\n\n```python\nfrom ultralytics import YOLO\n\nmodel = YOLO(\"path/to/best.pt\")\nresults = model.predict(source=0, show=True, conf=0.25)\n```\n\n## Detection Samples\n\n![Detection Sample](detection_sample.jpg)\n\n## Training Curves\n\n![Training Results](results.png)\n\n## Use Cases\n\n- Building fire safety monitoring\n- Wildfire early detection systems\n- Industrial safety surveillance\n- Smart home fire detection\n- Drone-based fire monitoring\n\n## Limitations\n\n- May have reduced accuracy in low-light conditions\n- Smoke detection can be affected by fog/steam\n- Best performance on images similar to training data\n\n## Dataset\n\nTrained on fire detection dataset from [Roboflow Universe](https://universe.roboflow.com/personal-bodxv/fire-detection-sejra-fognw/dataset/1):\n- 8,939 images\n- License: CC BY 4.0\n\n## Citation\n\n```bibtex\n@misc{yolov26-fire-detection,\n  author = {Salah AL-Haismawi},\n  title = {YOLOv26 Fire Detection},\n  year = {2026},\n  publisher = {Hugging Face},\n  howpublished = {\\url{https://huggingface.co/SalahALHaismawi/yolov26-fire-detection}}\n}\n```\n\n## License\n\nMIT License\n\n## Acknowledgments\n\n- [Ultralytics](https://github.com/ultralytics/ultralytics) for YOLO implementation\n- [Roboflow](https://roboflow.com) for the dataset\n"
+}

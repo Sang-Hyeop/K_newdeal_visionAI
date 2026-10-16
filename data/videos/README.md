@@ -34,3 +34,10 @@ python handoff.py run --video 1   # … ~ --video 5
 - 2번 ROI 침범: `scripts/run_intrusion_review.py`
 
 설정 기준: `configs/demo-scenarios.json`, `configs/team-runtime-index.json`
+
+
+## 6번 — 주차장 화재 추가 기능 검수
+
+원본: `6_parking_lot_fire.mp4` (1280×720,30fps,12초). 기존1~5번 확정 시연과 분리한 공개 모델 초기검수이며 학습에는 사용하지 않았습니다. 실행: `python scripts/run_fire_review.py` (`safety` 환경). 현재 출력은 `outputs/reviews/6_parking_lot_fire_latest.mp4`, 원시 검출/요약은 `outputs/diagnostics/presentation6_fire_review/`, 모델/출처/비교기록은 `configs/review/fire-current.json`입니다. `handoff.py`의 기존1~5번 및 배포 manifest에는 아직 통합하지 않았습니다.
+
+현재는 불꽃·연기 후보만 표시하며 시간적 확정/알림/백엔드 연결 전 단계입니다. 검출 없음은 안전 판정이 아닙니다. 영상 내 CCTV 시계가 편집으로 도약하므로 재생4초의 첫 검출을 실제 화재 발생 후4초 탐지로 표현하지 않습니다.
