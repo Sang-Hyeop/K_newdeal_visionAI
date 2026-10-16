@@ -1,4 +1,4 @@
-"""Conditional pedestrian-lane severity using observed vehicle entry/exit evidence."""
+"""통로 ROI에서 지게차 유무·체류시간에 따라 보행자 위험도(SAFE/WARNING/CRITICAL)를 정한다."""
 import math
 import cv2
 import numpy as np

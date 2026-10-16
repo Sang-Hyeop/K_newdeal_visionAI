@@ -1,4 +1,4 @@
-"""PPE on boxes that mostly sit inside a forklift cannot prove helmet status."""
+"""지게차 박스와 크게 겹친 사람은 PPE 확정을 보류(운전자/가림 가능)한다."""
 import math
 
 def _overlap_ratio(person,vehicle):

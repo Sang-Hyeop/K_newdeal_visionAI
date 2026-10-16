@@ -1,12 +1,9 @@
 # 현재 결과
 
-- reviews/: 확정 리뷰 MP4 5개만 보관합니다.
-- events/presentation1~5/: 확정 리뷰와 같은 버전의 전체 이벤트·관측 JSONL.
-- diagnostics/: 확정 결과와 재실행에 필요한 실제 검출 캐시. 별도 실행 대상이 아닙니다.
-- backend/: 위 로그의 조회용 SQLite DB.
-- handoff_runs/: 새 실행 결과. 검수 전이며 확정 리뷰를 대체하지 않습니다.
-- runtime/: 실행 도중 라이브러리가 만드는 설정/캐시.
+- reviews/: 영상별 최신 결과 1개씩, 총 5개.
+- events/presentation1~5/: 최신 영상과 일치하는 이벤트·관측.
+- diagnostics/: 영상별 현재 재현 캐시 하나씩. 변경 이력을 쌓는 폴더가 아닙니다.
+- backend/full_review.sqlite3: 현재 로그 전체를 재구성한 조회 DB.
+- runtime/: 실행 중 임시 파일과 영상별 단일 짧은 미리보기. 전체 실행의 임시 폴더는 제거됩니다.
 
-`python handoff.py list`로 현재 영상별 경로를 확인합니다. 대체된 5번 거리 비교와 미채택 63장 PPE 비교 출력은 삭제했습니다. `diagnostics/ppe_compare_expanded1577_2026-10-15/`는 후속 후보 모델 판단에 필요해 보존합니다. 최신 파일 이름과 연결 기준은 configs/team-runtime-index.json입니다.
-
-현재 diagnostics의 하위 video 번호는 발표 번호입니다. JSON과 Python 실행 번호도 모두 1~5입니다. 설치 시 Release의 과거 경로를 자동 변환합니다.
+`python handoff.py run --video N`은 전체 실행 성공 후 현재 결과를 갱신합니다. 최신 MP4는 모두 *_latest.mp4입니다. PPE 비교·확대·추적 실험 폴더와 별도 5번 복구 캐시·handoff_runs는 삭제하고 필요한 관측을 현재 캐시에 통합했습니다. raw 검출/PPE 입력과 최종 이벤트는 현재 detections.jsonl에 함께 보관합니다.

@@ -16,7 +16,7 @@
 
 ## 3번 — 안전모 착용/미착용
 
-원본 `3_PPE_Helmet.mp4`. 지게차 탐지와 다른 위험 기능을 제외하고 사람과 머리를 연결해 착용/미착용 후보·판정 중·판정 불가를 표시합니다. 미검출만으로 미착용을 만들지 않습니다. 후드가 안전모가 아님을 확인할 수 있으면 현재 라벨 정책의 미착용 머리에 포함하되, 흐림·가림으로 분류할 수 없으면 보류합니다. `configs/cameras/ppe-warehouse-review.json` 및 `configs/ppe-recall-review-policy.json`을 사용합니다.
+원본 `3_PPE_Helmet.mp4`. 지게차 탐지와 다른 위험 기능을 제외하고 사람과 머리를 연결해 착용/미착용 후보·판정 중·판정 불가를 표시합니다. 미검출만으로 미착용을 만들지 않습니다. 후드가 안전모가 아님을 확인할 수 있으면 현재 라벨 정책의 미착용 머리에 포함하되, 흐림·가림으로 분류할 수 없으면 보류합니다. `configs/cameras/ppe-warehouse-review.json` 및 `configs/ppe-user-approved-policy-2026-10-15.json`을 사용합니다.
 
 ## 4번 — 통로 체류
 

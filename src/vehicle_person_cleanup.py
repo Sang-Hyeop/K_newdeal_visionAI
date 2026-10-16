@@ -1,4 +1,4 @@
-"""Retain separate pedestrian detections when another body box merges vehicle and people."""
+"""지게차와 사람이 한 박스에 합쳐진 경우 보행자 박스를 분리·보존한다."""
 def separate_merged_vehicle_people(detections):
     vehicles=[d for d in detections if d['class']=='forklift'];people=[d for d in detections if d['class']=='person'];rejected=[];blocked=set()
     def area(b):return max(1,(b[2]-b[0])*(b[3]-b[1]))

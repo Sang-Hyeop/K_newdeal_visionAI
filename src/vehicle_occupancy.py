@@ -1,4 +1,4 @@
-"""Observed rider gate and lane-aware proximity presentation for a reviewed camera."""
+"""관측된 탑승자 게이트와 차로 인식에 맞는 근접 표시를 제어한다."""
 import cv2
 import numpy as np
 

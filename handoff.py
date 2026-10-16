@@ -12,6 +12,7 @@ def call(*args):
 def check(models=False):
     index=json.loads((ROOT/'configs/team-runtime-index.json').read_text(encoding='utf-8'))
     manifest=json.loads((ROOT/'configs/github-runtime.json').read_text(encoding='utf-8'))
+    verified_assets=0
     for i,item in enumerate(manifest['files'],1):
         override=manifest.get('local_presentation_overrides',{}).get(item['path'],{})
         p=ROOT/item['path']
@@ -23,11 +24,12 @@ def check(models=False):
         with p.open('rb')as stream:
             digest=hashlib.file_digest(stream,'sha256').hexdigest()
         if digest!=item['sha256']:raise ValueError('Checksum mismatch: '+item['path'])
+        verified_assets+=1
     for item in json.loads((ROOT/'configs/demo-videos.json').read_text(encoding='utf-8')):
         p=ROOT/'data/videos'/item['file']
         with p.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
         if digest!=item['sha256']:raise ValueError('Input video checksum mismatch: '+item['file'])
-    print('PASS:',len(manifest['files']),'runtime asset hashes and 5 source video hashes match; asset source',index['source_commit'])
+    print('PASS:',verified_assets,'current runtime asset hashes and 5 source video hashes match; asset source',index['source_commit'])
     if models:
         import cv2,torch
         from ultralytics import YOLO
@@ -42,30 +44,90 @@ def check(models=False):
         print('PASS PPE helper:',len(FinalPPEDetector().predict(frame)),'head observations')
     return 0
 
-def run_video(n,fresh=False,max_seconds=None):
-    if max_seconds is not None and max_seconds<=0:raise ValueError('max-seconds must be positive')
-    stamp=datetime.now().strftime('%Y%m%d_%H%M%S_%f')
-    dest=Path('outputs/handoff_runs')/f'presentation{n}_{stamp}'
-    if n==2:
-        if max_seconds is not None:raise ValueError('Video2 runner processes the full 12-second input; omit --max-seconds')
-        call('scripts/run_intrusion_review.py','--output',dest);print('Result:',ROOT/dest);return
-    # Presentation IDs match data/videos filenames and configs/demo-scenarios.json video_number.
-    common=['scripts/run_demo_scenarios.py','--videos',n,'--sample-fps','5']
-    limit=['--max-seconds',max_seconds]if max_seconds is not None else[]
-    if n==5 and fresh:
-        baseline=dest/'baseline';candidates=dest/'candidates';reviewed=dest/'reviewed_cache'
-        call(*common,'--proximity-geometry','bottom_center',*limit,'--output',baseline)
-        call('scripts/recover_vehicle_cache.py','--input',baseline/'video5','--output',candidates/'video5','--candidates-only')
-        call('scripts/review_vehicle_recovery_cache.py','--input',candidates/'video5','--output',reviewed/'video5')
-        call(*common,'--reuse-run',reviewed,'--reuse-objects','--proximity-geometry','bottom_center','--temporal-riders',*limit,'--output',dest/'result')
-    else:
-        caches={1:'presentation1_equipment_corrected_2026-10-14',3:'presentation3_ppe_review_2026-10-14',4:'presentation4_worker_corrected_final_2026-10-14',5:'presentation5_vehicle_recovery_review_cache_v2_2026-10-14'}
-        reuse=[]if fresh else['--reuse-run',Path('outputs/diagnostics')/caches[n],'--reuse-objects']
-        geometry=['--proximity-geometry','bottom_center','--temporal-riders']if n==5 else[]
-        call(*common,*reuse,*geometry,*limit,'--output',dest)
-    print('Result:',ROOT/dest)
+def update_runtime_hashes():
+    path=ROOT/'configs/github-runtime.json';assets=json.loads(path.read_text());overrides={}
+    for item in assets['files']:
+        p=ROOT/item['path']
+        if not p.exists():overrides[item['path']]={'disabled_by_presentation_selection':True}
+        elif p.stat().st_size!=item['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']:
+            overrides[item['path']]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+    assets['local_presentation_overrides']=overrides
+    assets['local_runtime_status']='Current local results; remote Release changes only after an explicit publish request'
+    path.write_text(json.dumps(assets,indent=2)+'\n')
 
-def refresh_presentations():
+
+def rebuild_backend():
+    import tempfile
+    from backend_v1.backend import Store
+    db=ROOT/'outputs/backend/full_review.sqlite3';db.parent.mkdir(parents=True,exist_ok=True)
+    fd,temp=tempfile.mkstemp(prefix='.backend-refresh-',suffix='.sqlite3',dir=db.parent);os.close(fd)
+    try:
+        result=Store(temp).ingest(ROOT/'outputs/events')
+        if any(result['conflicts'].values()):raise ValueError('Conflicting canonical event logs')
+        os.replace(temp,db)
+        return result
+    finally:
+        if Path(temp).exists():Path(temp).unlink()
+
+
+def promote_current(n,result):
+    import shutil
+    index=json.loads((ROOT/'configs/team-runtime-index.json').read_text());video=next(v for v in index['videos']if v['presentation_video_number']==n)
+    summary=json.loads((result/'summary.json').read_text());assert summary['samples']>0
+    dest=ROOT/video['diagnostic_root'];dest.mkdir(parents=True,exist_ok=True)
+    movie=result/'demo.mp4';assert movie.is_file()
+    encoded=result/'.current-review.mp4';ff=shutil.which('ffmpeg')
+    if ff:subprocess.run([ff,'-y','-loglevel','error','-i',str(movie),'-c:v','libx264','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(encoded)],check=True)
+    else:shutil.copy2(movie,encoded)
+    spec=next(x for x in json.loads((ROOT/'configs/demo-scenarios.json').read_text())['scenarios']if x['video_number']==n)
+    rows=[json.loads(line)for line in(result/'detections.jsonl').read_text().splitlines()]
+    assert all(set(row['feature_events'])==set(spec['enabled_features'])for row in rows)
+    if n==3:assert all(d['class']=='person'for row in rows for d in row['object_detections'])
+    for name in ['summary.json','detections.jsonl']:shutil.copy2(result/name,dest/name)
+    for p in dest.glob('preview_*.jpg'):p.unlink()
+    for p in result.glob('preview_*.jpg'):shutil.copy2(p,dest/p.name)
+    for root in [dest,ROOT/video['event_root']]:
+        root.mkdir(parents=True,exist_ok=True)
+        for name in ['ppe','proximity','zone_access','zone_dwell','forklift_proximity']:
+            if (root/name).is_dir():shutil.rmtree(root/name)
+            if (result/name).is_dir() and name in spec['enabled_features']:shutil.copytree(result/name,root/name)
+    review=ROOT/video['review_video'];shutil.copy2(encoded,review)
+    if (dest/'demo.mp4').exists():shutil.copy2(encoded,dest/'demo.mp4')
+    video.update(samples=summary['samples'],enabled_features=spec['enabled_features'],mode='current_default; cached observations or --fresh; replaces this review in place')
+    index['current_results_policy']='One current review/event/cache per video; run replaces current results after validation; no retained experimental outputs'
+    (ROOT/'configs/team-runtime-index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n')
+    rebuild_backend();update_runtime_hashes();print('Updated current result:',review,flush=True)
+
+
+def run_video(n,fresh=False,max_seconds=None):
+    import tempfile,shutil
+    if max_seconds is not None and max_seconds<=0:raise ValueError('max-seconds must be positive')
+    if n==2 and max_seconds is not None:raise ValueError('Video2 requires the complete input; omit --max-seconds')
+    runtime=ROOT/'outputs/runtime';runtime.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='current-build-',dir=runtime)as temp:
+        dest=Path(temp)
+        if n==2:
+            result=dest/'result';call('scripts/run_intrusion_review.py','--output',result)
+        else:
+            common=['scripts/run_demo_scenarios.py','--videos',n,'--sample-fps','5'];limit=['--max-seconds',max_seconds]if max_seconds is not None else[]
+            if n==5 and fresh:
+                baseline=dest/'baseline';candidates=dest/'candidates';reviewed=dest/'reviewed_cache'
+                call(*common,'--proximity-geometry','bottom_center',*limit,'--output',baseline)
+                call('scripts/recover_vehicle_cache.py','--input',baseline/'video5','--output',candidates/'video5','--candidates-only')
+                call('scripts/review_vehicle_recovery_cache.py','--input',candidates/'video5','--output',reviewed/'video5')
+                call(*common,'--reuse-run',reviewed,'--reuse-objects','--proximity-geometry','bottom_center','--temporal-riders',*limit,'--output',dest/'result')
+            else:
+                index=json.loads((ROOT/'configs/team-runtime-index.json').read_text());entry=next(v for v in index['videos']if v['presentation_video_number']==n)
+                reuse=[]if fresh else['--reuse-run',(ROOT/entry['diagnostic_root']).parent,'--reuse-objects']
+                geometry=['--proximity-geometry','bottom_center','--temporal-riders']if n==5 else[]
+                call(*common,*reuse,*geometry,*limit,'--output',dest/'result')
+            result=dest/'result'/f'video{n}'
+        if max_seconds is None:promote_current(n,result)
+        else:
+            preview=runtime/f'preview_video{n}.mp4';shutil.copy2(result/'demo.mp4',preview);print('Short preview only; full current result unchanged:',preview)
+
+
+def refresh_presentations(numbers=None):
     """Update existing presentation views/events in place from observed caches."""
     import copy, types, sqlite3, shutil
     import cv2, numpy as np
@@ -78,7 +140,7 @@ def refresh_presentations():
     audit=[]
     for video in index['videos']:
         n=video['presentation_video_number']
-        if n==2:continue  # intrusion + PPE already matches the user selection
+        if n==2 or numbers is not None and n not in numbers:continue  # intrusion + PPE already matches the user selection
         spec=specs[n];dest=ROOT/video['diagnostic_root'];summary=json.loads((dest/'summary.json').read_text())
         rows=[json.loads(line) for line in (dest/'detections.jsonl').read_text().splitlines()]
         before={k:hashlib.sha256(json.dumps([r['feature_events'].get(k,[]) for r in rows],sort_keys=True).encode()).hexdigest() for k in spec['enabled_features']}
@@ -142,27 +204,8 @@ def refresh_presentations():
     index['videos'][1]['enabled_features']=['zone_access','ppe']
     index['source_summary_transform']='Current presentation feature selection applied; retained rule verdicts unchanged; disabled feature logs removed.'
     (ROOT/'configs/team-runtime-index.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n')
-    db=ROOT/'outputs/backend/full_review.sqlite3'
-    if db.exists():
-        con=sqlite3.connect(db)
-        with con:
-            for video in index['videos']:
-                enabled=video.get('enabled_features')
-                if not enabled:continue
-                name=Path(video['source_video']).name;marks=','.join('?' for _ in enabled)
-                con.execute(f"DELETE FROM events WHERE video=? AND event_type NOT IN ({marks}) AND NOT (event_type='status' AND COALESCE(json_extract(evidence,'$.feature'),'') IN ({marks}))",[name,*enabled,*enabled])
-                con.execute(f'DELETE FROM observations WHERE video=? AND feature NOT IN ({marks})',[name,*enabled])
-        con.close()
-        from backend_v1.backend import Store
-        Store(db).ingest(ROOT/'outputs/events')
-    release=ROOT/'configs/github-runtime.json';assets=json.loads(release.read_text());overrides={}
-    for item in assets['files']:
-        p=ROOT/item['path']
-        if not p.exists():overrides[item['path']]={'disabled_by_presentation_selection':True}
-        elif p.stat().st_size!=item['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']:
-            overrides[item['path']]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
-    assets['local_presentation_overrides']=overrides
-    release.write_text(json.dumps(assets,indent=2)+'\n')
+    rebuild_backend()
+    update_runtime_hashes()
     return audit
 
 def main():
@@ -170,7 +213,7 @@ def main():
     q=subs.add_parser('check',help='Verify bundled SHA-256; optionally run CPU model inference');q.add_argument('--models',action='store_true')
     subs.add_parser('refresh',help='Update existing presentation videos and logs in place from saved observations')
     subs.add_parser('list',help='Print current review videos and event log locations')
-    q=subs.add_parser('run',help='Rebuild current review; cached real observations by default');q.add_argument('--video',type=int,choices=range(1,6),required=True);q.add_argument('--fresh',action='store_true');q.add_argument('--max-seconds',type=float)
+    q=subs.add_parser('run',help='Update the one current review/events in place; cached observations by default');q.add_argument('--video',type=int,choices=range(1,6),required=True);q.add_argument('--fresh',action='store_true');q.add_argument('--max-seconds',type=float)
     q=subs.add_parser('backend',help='Import the five complete event logs and optionally serve APIs');q.add_argument('--import-only',action='store_true');q.add_argument('--port',type=int,default=8010)
     subs.add_parser('test',help='Run detection and backend unit suites')
     a=p.parse_args()

@@ -1,4 +1,4 @@
-"""Opt-in same-person proposal cleanup and one-body-box review rendering."""
+"""같은 사람으로 보이는 중복 박스를 정리하고 리뷰용 사람 박스를 그린다."""
 import cv2
 from .ppe_tiled_inference import iou
 

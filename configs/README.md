@@ -6,8 +6,14 @@
 - video1·3·4·5-object-review.json: 해당 영상의 객체 검수 설정. 2번은 전용 실행기를 사용합니다.
 - demo-scenarios.json: 영상별 활성 기능.
 - demo-object-model.json: 현재 객체 모델 묶음과 해시.
-- demo-ppe-model.json, ppe-final-model.json, ppe-recall-review-policy.json: 현재 PPE 실행 모델·정책.
-- ppe-user-approved-policy-2026-10-15.json: 후속 비교에서 사용할 사용자 확정 PPE 정책. 임의 변경하지 않습니다.
+- demo-ppe-model.json, ppe-final-model.json: 현재 PPE 실행 모델·정책.
+- ppe-user-approved-policy-2026-10-15.json: 현재 기본 실행에서 사용하는 사용자 확정 PPE 정책. 임의 변경하지 않습니다.
 - review/demo-adaptation-v1.json, review/full-scene-v1.json: 학습 정답·설비 오라벨 회귀 검증 원천이므로 보존합니다.
 
 구 7개 영상의 중복 설정과 미사용 선택 기록은 삭제했습니다. Release ZIP 내부 archive_path는 배포 호환성을 위해 유지하며 현재 로컬 경로와 구분합니다.
+
+승인 파일의 runtime_implementation_status는 승인 당시 기록이며, 실제 적용 상태·상반신 검색 범위는 demo-ppe-model.json의 runtime이 기준입니다. 숫자 임곗값은 변경하지 않았습니다.
+
+review/ppe-balanced-800.json은 현재 PPE의800장 선정·학습·전체영상 비교·선택 가중치SHA 기록입니다. 4회차 학습 후 영상 기준으로1회차를 선택했습니다.
+
+review/ppe-balanced-1200.json은 새원본400장을 추가한600/600 학습 기록입니다. 이미지 지표는 개선됐으나 실제3/5번 회귀로 가중치를 채택하지 않았습니다. 현재 기본 모델은800장 학습 결과입니다.

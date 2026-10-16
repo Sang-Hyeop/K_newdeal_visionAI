@@ -1,4 +1,4 @@
-"""Person-guided PPE inference. Per-frame observations, never safety decisions."""
+"""사람 박스 기준으로 머리 후보를 연결·추론한다. 프레임 관측만 하며 안전 결정을 내리지 않는다."""
 import math
 
 
