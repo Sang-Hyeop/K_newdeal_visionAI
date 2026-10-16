@@ -2134,5 +2134,100 @@
       "bytes": 38966738,
       "sha256": "928e0407d90dd03d1057831951e5aed837eeb92aa4f5ceb2e15673d0625bc207"
     }
-  ]
+  ],
+  "local_presentation_overrides": {
+    "outputs/backend/full_review.sqlite3": {
+      "bytes": 170065920,
+      "sha256": "4ae1e15ac7006966ede6357744bbc493bba18323e9f1f36c8a2276391470f01f"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl": {
+      "bytes": 114291281,
+      "sha256": "3188d90863a70f4463da97bf3c04dafd5104d752476ae74ea0da75c1a533ddcd"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/events_v1.jsonl": {
+      "bytes": 2045645,
+      "sha256": "6f7a2ad7179c2528d117c6439660154833f997ebc2f6a494c7a1031433b94dbc"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/observations_v1.jsonl": {
+      "bytes": 7152934,
+      "sha256": "3a12108c5b55447309098d0f729ac418105c44426ece2e63212df94cea51df59"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_25.jpg": {
+      "bytes": 413263,
+      "sha256": "fd710a73d8c7523c9d653e9504c904d7c2d9f8ba158472a03d8ca73752f05ed2"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_50.jpg": {
+      "bytes": 387024,
+      "sha256": "19302a467fa0a78ea82137a42df53446969bee2c8e4af4a73a1a3ff11c2dfac7"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/events_v1.jsonl": {
+      "bytes": 3488571,
+      "sha256": "a293f85bca88c72635e3ccd7b92edf0da57063b7203925e264a78172d03b5034"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/observations_v1.jsonl": {
+      "bytes": 17649231,
+      "sha256": "1395991fd1b534a2447b6ef9b441c03d44386f7b307192ed68c6566669b66dd0"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/summary.json": {
+      "bytes": 9629,
+      "sha256": "715e9b035736b30b7c0e3baa3680b748b64c13461ffd46642ed415bef17004b0"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/verification.json": {
+      "bytes": 8032,
+      "sha256": "359473d457cd13cf76fa119ed93e48076b766680c42dc03b5c2161c4bb4011e4"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/events_v1.jsonl": {
+      "bytes": 3934335,
+      "sha256": "805188b6151551695906c5111ce46242f16a52bc219f2202a0075804a4f2b885"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/observations_v1.jsonl": {
+      "bytes": 18050159,
+      "sha256": "d529376627e31a8fedc45baf6675bb7b01e73379c6fc086a1673cf2842e8f77c"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/events_v1.jsonl": {
+      "bytes": 3853763,
+      "sha256": "ee4effb1c521d5efce648ba72ed1e4b2321eb4df0cf531532e58274b8cd0b67b"
+    },
+    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/observations_v1.jsonl": {
+      "bytes": 17707539,
+      "sha256": "de9045a1e3d72c102a8ec2fa803877c4d9bd9db351f231890e3dc4bf141dac72"
+    },
+    "outputs/events/presentation5/ppe/events_v1.jsonl": {
+      "bytes": 2045645,
+      "sha256": "6f7a2ad7179c2528d117c6439660154833f997ebc2f6a494c7a1031433b94dbc"
+    },
+    "outputs/events/presentation5/ppe/observations_v1.jsonl": {
+      "bytes": 7152934,
+      "sha256": "3a12108c5b55447309098d0f729ac418105c44426ece2e63212df94cea51df59"
+    },
+    "outputs/events/presentation5/proximity/events_v1.jsonl": {
+      "bytes": 3488571,
+      "sha256": "a293f85bca88c72635e3ccd7b92edf0da57063b7203925e264a78172d03b5034"
+    },
+    "outputs/events/presentation5/proximity/observations_v1.jsonl": {
+      "bytes": 17649231,
+      "sha256": "1395991fd1b534a2447b6ef9b441c03d44386f7b307192ed68c6566669b66dd0"
+    },
+    "outputs/events/presentation5/zone_access/events_v1.jsonl": {
+      "bytes": 3934335,
+      "sha256": "805188b6151551695906c5111ce46242f16a52bc219f2202a0075804a4f2b885"
+    },
+    "outputs/events/presentation5/zone_access/observations_v1.jsonl": {
+      "bytes": 18050159,
+      "sha256": "d529376627e31a8fedc45baf6675bb7b01e73379c6fc086a1673cf2842e8f77c"
+    },
+    "outputs/events/presentation5/zone_dwell/events_v1.jsonl": {
+      "bytes": 3853763,
+      "sha256": "ee4effb1c521d5efce648ba72ed1e4b2321eb4df0cf531532e58274b8cd0b67b"
+    },
+    "outputs/events/presentation5/zone_dwell/observations_v1.jsonl": {
+      "bytes": 17707539,
+      "sha256": "de9045a1e3d72c102a8ec2fa803877c4d9bd9db351f231890e3dc4bf141dac72"
+    },
+    "outputs/reviews/5_Logistics_Warehouse_latest.mp4": {
+      "bytes": 28764874,
+      "sha256": "c54050a2d907bc0d63073d96a8c20c888164d65a650612939c34a15d4828085a"
+    }
+  },
+  "local_runtime_status": "Current local results; remote Release changes only after an explicit publish request"
 }

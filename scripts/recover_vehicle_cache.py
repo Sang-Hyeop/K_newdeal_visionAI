@@ -23,7 +23,7 @@ def main():
    ds,diag=engine.update(frame,row['object_detections'],row['timestamp_seconds'],row['scene_cut'])
    if not a.candidates_only:
     ds,rejected=review_recovered_vehicles(ds,frame.shape[:2]);diag['consensus_rejected']=rejected
-   row.update(object_detections=ds,vehicle_recovery=diag);dst.write(json.dumps(row)+'\n');count+=1;added+=sum(d.get('model_source')=='vehicle_recovery_current_image'for d in ds)
+   row.update(object_detections=ds,movement_input_detections=ds,vehicle_recovery=diag);dst.write(json.dumps(row)+'\n');count+=1;added+=sum(d.get('model_source')=='vehicle_recovery_current_image'for d in ds)
    if count%25==0:print('samples',count,'added',added,flush=True)
  cap.release();summary.update(status='current_vehicle_recovery',vehicle_recovery_provenance={'source_run':str(a.input),'source_log_sha256':sha(a.input/'detections.jsonl'),'method':'960_full_and_square_person_history_context_dual_model_current_image','code_sha256':sha(ROOT/'src/vehicle_recovery.py'),'history_is_search_only':True,'added_observations':added,'no_new_training':True});(a.output/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 if __name__=='__main__':main()
