@@ -22,8 +22,8 @@
     "fixed_context_videos": [
       5
     ],
-    "fixed_context_version": "balanced800-epoch1-approved-window-guarded-context-v4",
-    "fixed_context_policy": "320px context for insufficient heads; 480px/960 recheck only low-confidence heads left unresolved; unchanged head ownership/evidence thresholds; crop-only helmets blocked",
+    "fixed_context_version": "balanced800-epoch1-approved-window-guarded-context-v5",
+    "fixed_context_policy": "320px context, low-candidate480px/960 context, then160px/640 context only while no valid head evidence remains; unchanged ownership/confidence/time policy; extra crop helmets cannot certify SAFE",
     "fixed_context_search": [
       {
         "context_size": 320,
@@ -35,6 +35,11 @@
         "imgsz": 960,
         "source": "v6_wide_context",
         "requires_head_candidate": true
+      },
+      {
+        "context_size": 160,
+        "imgsz": 640,
+        "source": "v6_small_context"
       }
     ]
   }
