@@ -26,6 +26,18 @@ python handoff.py test
 
 대시보드는 `python team7.py`로 실행합니다. 현재 safety 환경에서 Gradio 6.28.0·pandas 3.0.5를 확인했습니다. 신규 환경은 감지 의존성 외에 `python -m pip install gradio==6.28.0 pandas==3.0.5`가 필요합니다. 브라우저 영상 변환에는 ffmpeg 또는 imageio-ffmpeg가 필요합니다. 대시보드는 현재 runtime index의 최신 리뷰 5개와 outputs/events를 읽고 로컬 API를 자동 시작합니다.
 
+## 시선 대시보드 (team7)
+
+발표 이벤트 API 위에 로그인·구역 CCTV·알람을 띄웁니다.
+
+```sh
+python team7.py
+```
+
+브라우저 `http://127.0.0.1:7860` · 로그인 `qwer1` / `1234` (또는 `qwer2` / `1234`). 데스크톱 창은 `python team7_desktop.py` 입니다. 부품은 `team7_app/` 에 있습니다.
+
+## 새 PC 설치
+
 backend_v1/API_SPEC.md와 docs/github-team-quickstart.md가 팀원 연동 안내입니다. 신규 PC의 모델 설치는 `python scripts/setup_runtime.py`, 감지 라이브러리는 `python -m pip install -r requirements-runtime.txt`입니다.
 
 2026-10-16 팀 실행 자료는 [runtime-2026-10-16](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-16)에서 받습니다. main 병합 전에는 `data/hoodie-ppe-candidates` 브랜치의 코드와 설정을 사용해야 합니다. Code → Download ZIP도 이 브랜치를 선택한 뒤 받고 `python scripts/setup_runtime.py`를 실행합니다. 10월15일 배포는 오늘 결과로 자동 갱신되지 않습니다.
