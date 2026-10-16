@@ -11879,8 +11879,8 @@
     },
     {
       "class_id": 0,
-      "sha256": "3dac6ad2d2ec56cc840384a62c2781abc227666eee2091c23767ff77a7a21ed6",
-      "pixel_sha256": "1f0148e0a6fde96a4023c5f873117e8fd54137b44cb18cec081a74f57362a4d4",
+      "sha256": "a51a3ff56431ea953cfa3680f0acdf50d931107e9f286f9bb6f299a5fbd5c836",
+      "pixel_sha256": "7fc88c0accc3b50982382233605fd734f66b391a16c209b578001d820b34b6fd",
       "dhash": 7197441958331406237,
       "nearest_retained_dhash": 16,
       "resolution": [
@@ -11897,7 +11897,12 @@
       "source_annotation": "data/reviewed_pilot/ppe_balanced_1200/source_labels/shwd_000512.xml",
       "source_annotation_sha256": "422b1b8120a55d1ba7a291ddb5328380e74ee661dbb3256e1f790648804d9fc6",
       "origin": "new_original_full_frame",
-      "head_boxes": 4
+      "head_boxes": 4,
+      "downloaded_sha256": "3dac6ad2d2ec56cc840384a62c2781abc227666eee2091c23767ff77a7a21ed6",
+      "downloaded_pixel_sha256": "1f0148e0a6fde96a4023c5f873117e8fd54137b44cb18cec081a74f57362a4d4",
+      "training_loader_repair": "JPEG end-marker repair; same dimensions/coordinates",
+      "downloaded_dhash": 7197441958331406237,
+      "nearest_retained_dhash_scope": "Downloaded image before JPEG repair; same geometry, mean RGB delta <=0.205/255"
     },
     {
       "class_id": 0,
@@ -12495,8 +12500,8 @@
     },
     {
       "class_id": 0,
-      "sha256": "422c9ad8023fd085d1e4c51100a2fa6a7a72d0c86fb59d45c5acb3ba55b2e52c",
-      "pixel_sha256": "34a56595a3d784720e2cadb9704e8c266cba314b0848aaed5a1e2fa7a38d88b7",
+      "sha256": "f668f4601ee380c5521797d2691a1713aef99ee54ba3cc2581492f54b9030a98",
+      "pixel_sha256": "1ebfbf4cb75f8d0d8253d73d3515c82f2be85c69e91c4882c1e7d2b9ece5c2d8",
       "dhash": 6974062497973768296,
       "nearest_retained_dhash": 18,
       "resolution": [
@@ -12513,7 +12518,12 @@
       "source_annotation": "data/reviewed_pilot/ppe_balanced_1200/source_labels/shwd_000799.xml",
       "source_annotation_sha256": "45129badaba44eb2f06c1bd9f4f7c8f1160d991f68923355d3dce1c7afac1720",
       "origin": "new_original_full_frame",
-      "head_boxes": 1
+      "head_boxes": 1,
+      "downloaded_sha256": "422c9ad8023fd085d1e4c51100a2fa6a7a72d0c86fb59d45c5acb3ba55b2e52c",
+      "downloaded_pixel_sha256": "34a56595a3d784720e2cadb9704e8c266cba314b0848aaed5a1e2fa7a38d88b7",
+      "training_loader_repair": "JPEG end-marker repair; same dimensions/coordinates",
+      "downloaded_dhash": 6974062497973768296,
+      "nearest_retained_dhash_scope": "Downloaded image before JPEG repair; same geometry, mean RGB delta <=0.205/255"
     },
     {
       "class_id": 0,
@@ -12781,8 +12791,8 @@
     },
     {
       "class_id": 0,
-      "sha256": "ce5d29bc40ed08b8752139ec73643bdfd3504f3213d8edda3c6de3930552ce8f",
-      "pixel_sha256": "88df9153df1e166d6bc82d6e07afca37f477858c7e88f6c8815579670a21fb84",
+      "sha256": "815f545543c5c2aff114ed8d768115012929078ec077d250a2ac147e7b95eec2",
+      "pixel_sha256": "a523e80db369d47b2f8b779e7c921f5fb6fffc1bbccdaae31f029598ba1f2e51",
       "dhash": 1952054282707871493,
       "nearest_retained_dhash": 12,
       "resolution": [
@@ -12799,7 +12809,12 @@
       "source_annotation": "data/reviewed_pilot/ppe_balanced_1200/source_labels/shwd_000158.xml",
       "source_annotation_sha256": "920b9874b67d191f26c5d8de88e6f7c51784991cd56e79eccab449176072cc51",
       "origin": "new_original_full_frame",
-      "head_boxes": 3
+      "head_boxes": 3,
+      "downloaded_sha256": "ce5d29bc40ed08b8752139ec73643bdfd3504f3213d8edda3c6de3930552ce8f",
+      "downloaded_pixel_sha256": "88df9153df1e166d6bc82d6e07afca37f477858c7e88f6c8815579670a21fb84",
+      "training_loader_repair": "JPEG end-marker repair; same dimensions/coordinates",
+      "downloaded_dhash": 1952054282707871493,
+      "nearest_retained_dhash_scope": "Downloaded image before JPEG repair; same geometry, mean RGB delta <=0.205/255"
     },
     {
       "class_id": 0,
@@ -13353,8 +13368,8 @@
     },
     {
       "class_id": 0,
-      "sha256": "8db90298921e95b23ac3d513f3e44668000ee33a903a7c658cd60873d0971251",
-      "pixel_sha256": "37ed90aa3309e3bac4f7a99c88fec2fac64fb544c476a867afe7c3508b18964a",
+      "sha256": "ded3ad207558905413fbc19d490f5113db0c471d05049a0de55b0a562ca38133",
+      "pixel_sha256": "84681c2e466e1c03ca534b64111bc8c9b0db475288bed93167e7b7fa2e0b5451",
       "dhash": 11595666290847792,
       "nearest_retained_dhash": 11,
       "resolution": [
@@ -13371,7 +13386,12 @@
       "source_annotation": "data/reviewed_pilot/ppe_balanced_1200/source_labels/shwd_000268.xml",
       "source_annotation_sha256": "57527724554b37aac73139c39a09f24d9b35216ea8a2ef655656ff181bb7b795",
       "origin": "new_original_full_frame",
-      "head_boxes": 1
+      "head_boxes": 1,
+      "downloaded_sha256": "8db90298921e95b23ac3d513f3e44668000ee33a903a7c658cd60873d0971251",
+      "downloaded_pixel_sha256": "37ed90aa3309e3bac4f7a99c88fec2fac64fb544c476a867afe7c3508b18964a",
+      "training_loader_repair": "JPEG end-marker repair; same dimensions/coordinates",
+      "downloaded_dhash": 11595666290847792,
+      "nearest_retained_dhash_scope": "Downloaded image before JPEG repair; same geometry, mean RGB delta <=0.205/255"
     },
     {
       "class_id": 0,
@@ -15113,8 +15133,8 @@
     },
     {
       "class_id": 0,
-      "sha256": "cc891c95d5433fdec4e82930e727e25f7b95f0111ca4f1c65048f08b8c7ae8b2",
-      "pixel_sha256": "8246733dddbc5c97bd498c4324b16041f9c3cb1b577e7412709e7c61e7000dd0",
+      "sha256": "1504b43eae07817637394f904a66f41112ed003c0d5a76972513f3d8648f4703",
+      "pixel_sha256": "4fee55a483a03f20cb7f426c7b580ae7102ac9bdbddd12ff29867e5523e22ccc",
       "dhash": 13290069226170754724,
       "nearest_retained_dhash": 20,
       "resolution": [
@@ -15131,7 +15151,12 @@
       "source_annotation": "data/reviewed_pilot/ppe_balanced_1200/source_labels/shwd_000738.xml",
       "source_annotation_sha256": "4db60038f182e446b1a41efa3faf34454eca5e9c70e00488c547b09f81454e88",
       "origin": "new_original_full_frame",
-      "head_boxes": 5
+      "head_boxes": 5,
+      "downloaded_sha256": "cc891c95d5433fdec4e82930e727e25f7b95f0111ca4f1c65048f08b8c7ae8b2",
+      "downloaded_pixel_sha256": "8246733dddbc5c97bd498c4324b16041f9c3cb1b577e7412709e7c61e7000dd0",
+      "training_loader_repair": "JPEG end-marker repair; same dimensions/coordinates",
+      "downloaded_dhash": 13290069226170754724,
+      "nearest_retained_dhash_scope": "Downloaded image before JPEG repair; same geometry, mean RGB delta <=0.205/255"
     },
     {
       "class_id": 0,
@@ -15971,8 +15996,8 @@
     },
     {
       "class_id": 0,
-      "sha256": "1a7572df98d7c5dffe3e924867ac0187c45cfe461577329a346804dd518c286d",
-      "pixel_sha256": "33cfc002e3636949ff553ca8d30adf7fa7f74edf012d562257b61ff4e44e2155",
+      "sha256": "07449a3b05c77b4cb73850d043f1f67f148820fcbd6df9487c23a82c3cbcd184",
+      "pixel_sha256": "415587903512dcde526b73b8eb6fb8131db13b496406c94429ad05288cf1d9c4",
       "dhash": 10634005414136583021,
       "nearest_retained_dhash": 14,
       "resolution": [
@@ -15989,7 +16014,12 @@
       "source_annotation": "data/reviewed_pilot/ppe_balanced_1200/source_labels/shwd_000797.xml",
       "source_annotation_sha256": "e8f2f0e4d932c93d4c94c0e1cdb31ba4ab7ec88c9cb26f70617bc47b61d28a14",
       "origin": "new_original_full_frame",
-      "head_boxes": 1
+      "head_boxes": 1,
+      "downloaded_sha256": "1a7572df98d7c5dffe3e924867ac0187c45cfe461577329a346804dd518c286d",
+      "downloaded_pixel_sha256": "33cfc002e3636949ff553ca8d30adf7fa7f74edf012d562257b61ff4e44e2155",
+      "training_loader_repair": "JPEG end-marker repair; same dimensions/coordinates",
+      "downloaded_dhash": 10634005414136583021,
+      "nearest_retained_dhash_scope": "Downloaded image before JPEG repair; same geometry, mean RGB delta <=0.205/255"
     },
     {
       "class_id": 0,
@@ -42982,8 +43012,96 @@
     },
     "current_model_sha256": "e0a96b11c115057988ff7d04750fbb14c2f842338bee3cb068fac4c17299e13b",
     "current_results_unchanged": true,
-    "candidate_weights_deleted": false,
+    "candidate_weights_deleted": true,
     "github_pushed": false,
-    "test_interpretation": "Reused public-source holdouts, not independent-site accuracy. Image-best4 fair metrics must not be attributed to active800 model."
+    "test_interpretation": "Reused public-source holdouts, not independent-site accuracy. Image-best4 fair metrics must not be attributed to active800 model.",
+    "loader_image_repairs": [
+      {
+        "image": "data/reviewed_pilot/ppe_balanced_1200/images/shwd_000512.jpg",
+        "before_sha256": "3dac6ad2d2ec56cc840384a62c2781abc227666eee2091c23767ff77a7a21ed6",
+        "after_sha256": "a51a3ff56431ea953cfa3680f0acdf50d931107e9f286f9bb6f299a5fbd5c836",
+        "mean_absolute_RGB_difference": [
+          0.14028512239001253,
+          0.11470315651747261,
+          0.15068418470261136
+        ],
+        "dimensions_unchanged": true,
+        "exif_orientation": 1,
+        "method": "Ultralytics loader detected missing JPEG end marker; re-encoded JPEG quality100/subsampling0 before first batch; no crop or label change"
+      },
+      {
+        "image": "data/reviewed_pilot/ppe_balanced_1200/images/shwd_000799.jpg",
+        "before_sha256": "422c9ad8023fd085d1e4c51100a2fa6a7a72d0c86fb59d45c5acb3ba55b2e52c",
+        "after_sha256": "f668f4601ee380c5521797d2691a1713aef99ee54ba3cc2581492f54b9030a98",
+        "mean_absolute_RGB_difference": [
+          0.14931495405179615,
+          0.12618212197159565,
+          0.1678404344193818
+        ],
+        "dimensions_unchanged": true,
+        "exif_orientation": 1,
+        "method": "Ultralytics loader detected missing JPEG end marker; re-encoded JPEG quality100/subsampling0 before first batch; no crop or label change"
+      },
+      {
+        "image": "data/reviewed_pilot/ppe_balanced_1200/images/shwd_000158.jpg",
+        "before_sha256": "ce5d29bc40ed08b8752139ec73643bdfd3504f3213d8edda3c6de3930552ce8f",
+        "after_sha256": "815f545543c5c2aff114ed8d768115012929078ec077d250a2ac147e7b95eec2",
+        "mean_absolute_RGB_difference": [
+          0.1618291814946619,
+          0.1361067615658363,
+          0.20454092526690393
+        ],
+        "dimensions_unchanged": true,
+        "exif_orientation": 1,
+        "method": "Ultralytics loader detected missing JPEG end marker; re-encoded JPEG quality100/subsampling0 before first batch; no crop or label change"
+      },
+      {
+        "image": "data/reviewed_pilot/ppe_balanced_1200/images/shwd_000268.jpg",
+        "before_sha256": "8db90298921e95b23ac3d513f3e44668000ee33a903a7c658cd60873d0971251",
+        "after_sha256": "ded3ad207558905413fbc19d490f5113db0c471d05049a0de55b0a562ca38133",
+        "mean_absolute_RGB_difference": [
+          0.12129678279848032,
+          0.10150755799854498,
+          0.14424864602699863
+        ],
+        "dimensions_unchanged": true,
+        "exif_orientation": 1,
+        "method": "Ultralytics loader detected missing JPEG end marker; re-encoded JPEG quality100/subsampling0 before first batch; no crop or label change"
+      },
+      {
+        "image": "data/reviewed_pilot/ppe_balanced_1200/images/shwd_000738.jpg",
+        "before_sha256": "cc891c95d5433fdec4e82930e727e25f7b95f0111ca4f1c65048f08b8c7ae8b2",
+        "after_sha256": "1504b43eae07817637394f904a66f41112ed003c0d5a76972513f3d8648f4703",
+        "mean_absolute_RGB_difference": [
+          0.0873976023976024,
+          0.07713286713286713,
+          0.09644355644355644
+        ],
+        "dimensions_unchanged": true,
+        "exif_orientation": 1,
+        "method": "Ultralytics loader detected missing JPEG end marker; re-encoded JPEG quality100/subsampling0 before first batch; no crop or label change"
+      },
+      {
+        "image": "data/reviewed_pilot/ppe_balanced_1200/images/shwd_000797.jpg",
+        "before_sha256": "1a7572df98d7c5dffe3e924867ac0187c45cfe461577329a346804dd518c286d",
+        "after_sha256": "07449a3b05c77b4cb73850d043f1f67f148820fcbd6df9487c23a82c3cbcd184",
+        "mean_absolute_RGB_difference": [
+          0.13984,
+          0.12145454545454545,
+          0.1739781818181818
+        ],
+        "dimensions_unchanged": true,
+        "exif_orientation": 1,
+        "method": "Ultralytics loader detected missing JPEG end marker; re-encoded JPEG quality100/subsampling0 before first batch; no crop or label change"
+      }
+    ],
+    "final_integrity_check": {
+      "training_images_and_label_hashes": 1200,
+      "current_runtime_assets": 82,
+      "source_video_hashes": 5,
+      "active_models": 6,
+      "canonical_reviews": 5,
+      "jpeg_repairs_dimensions_and_overlays_checked": 6
+    }
   }
 }
