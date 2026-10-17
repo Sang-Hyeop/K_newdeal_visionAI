@@ -1,11 +1,14 @@
-# 로컬 데이터
+# 학습·검수 데이터 — 최종 정리
 
-시연 입력은 videos/의 6개 MP4입니다. 최신 구성은 videos/README.md와 configs/team-runtime-index.json을 따릅니다. 학습 이미지·수동 라벨·출처·검수 분할은 모델 제작 및 선정 근거이므로 보존하며 실행에는 필요하지 않습니다. Git에서는 학습 데이터를 제외합니다.
+모델 작업은 종료했습니다. 이 폴더는 최종 모델에 사용한 자료와 선정 근거를 보존하며 실행 가중치는 models/에 있습니다. 데이터 폴더가 많다는 것이 현재 모델을 여러 버전으로 실행한다는 뜻은 아닙니다.
 
-- reviewed_pilot/: 최종 모델 학습 자료, 비교 후보 학습 자료, 수동 정답·선정 이력. 이름에 v1/v2/1200/1600이 있어도 실행 모델이라는 뜻은 아닙니다.
-- pilot_v1/, training_review/, label_review/, annotation_candidates/, external/: 원천·라벨·검수·출처 자료. 파일 경로가 configs/review/의 선정 기록에서 참조되므로 일괄 삭제하지 않습니다.
-- 현재 PPE 학습셋: reviewed_pilot/ppe_balanced_800/ (착용400장·미착용400장).
-- 현재 지게차 주력 학습셋: reviewed_pilot/forklift_real_context_v2/ (690장). 마지막1000장 후보는 비채택.
-- fire_current/: 화재 보완 검증390장. 추가 학습 후보는 비채택, 실행은 공개 모델 유지.
+- `ppe/`: 안전모 착용/미착용 자료. `selected/`는 채택800장 학습 목록, `history/`는 이전/미채택 학습과 참조 원본, `annotations/`는 CVAT 수동 라벨, `sources/`는 확보 원본, `review/`는 검수·후보 자료입니다.
+- `forklift/`: 사람·지게차 자료. `selected/`는 현재 주력690장 및 기존 보조 모델 학습 자료, 나머지는 `history/`·`annotations/`·`review/`에 구분했습니다.
+- `fire/dfire_comparison_390/`: 화재 보완 시도에 사용한390장(train240/val60/test90). 해당 추가 학습 모델은 비채택이며 현재 화재 실행은 공개 모델입니다.
+- `shared/`: 안전모·지게차가 섞인 초기 자료와 라벨 검수, 선정 기록입니다.
+- `videos/`: 확정 원본 영상1~6입니다. 학습 데이터와 구분합니다.
+- `reviewed_pilot/ppe_balanced_800`: 확정된 모델 보조 설정의 기존 경로를 유지하는 **호환 링크 한 개**입니다. 실제 자료는 `ppe/selected/ppe_balanced_800/`에 있으며 복사본이 아닙니다.
 
-같은 이름·이미지 수와 같은 사진/라벨을 동일시하지 않습니다. 학습 자료 삭제는 최종 실행 파일 정리와 구분합니다.
+학습 목록이 다른 폴더의 사진을 참조하기 때문에 history/를 임의로 지우지 않습니다. 예를 들어 최종 PPE800장 학습 목록도 history/의 원본을 참조합니다. 선정 당시의 원본·라벨·비채택 근거를 보존하며 중복 사진도 라벨·분할을 확인하지 않고 일괄 삭제하지 않습니다.
+
+전체 폴더별 수량·구분과 이전→현재 경로는 `configs/data-catalog.json`을 참고합니다. 원본 바이트 해시를 포함한 상세 이동 기록은 `shared/selection_records/data-reorganization.json`에 있습니다. 학습 이미지·라벨은 Git 제외 대상이며 별도 전달이 필요합니다. 이번 정리는 재학습·가중치·승인 정책·시연 결과를 변경하지 않습니다.

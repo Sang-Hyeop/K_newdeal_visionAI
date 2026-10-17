@@ -240,7 +240,7 @@
   "duplicate_policy": "Exact file hashes and normalized64RGB plus full-image64-bit dHash distance<=5 against prior train/val/test and within import; original filename .rf frame groups also deduplicated. Does not prove all resized/cropped/semantic duplicates removed.",
   "review_limits": "Head-context visual screening, not exhaustive full-image annotation repair. Publicity portraits and general bare-head photos remain; not independent industrial CCTV validation. All selected full frames and source labels copied before source deletion. Source validation/test assignments are provenance only, future scene/source grouping required.",
   "manifest_sha256": "5c97ef601c5496a62eb3ffea8e44f8d9b2b3d179567613f48c8816fd41ddc6da",
-  "selection_manifest_path": "/Users/sanghyeopkim/Desktop/workspace/data/annotation_candidates/hard_hat_workers_v5_2026-10-15/manifest.json",
+  "selection_manifest_path": "/Users/sanghyeopkim/Desktop/workspace/data/ppe/review/hard_hat_workers_v5_2026-10-15/manifest.json",
   "selected_file_index": [
     {
       "image": "images/hhw5_0000_000037_jpg.rf.64c426a868c82554ce1a4495f9e608a6.jpg",

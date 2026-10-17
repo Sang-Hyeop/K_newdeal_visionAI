@@ -403,7 +403,7 @@
     "images_with_polygons": 615,
     "unrecognized_or_invalid_images": 0
   },
-  "destination": "data/annotation_candidates/hoodie_ppe_2026-10-15",
+  "destination": "data/ppe/review/hoodie_ppe_2026-10-15",
   "all_40_copied_image_label_hashes_verified": true,
   "selected_manifest_sha256": "25a58026f57f5004d8ce3a678a6eb77da4ad04f224105c02559106b4b9ed878e",
   "head_annotation_result": {
@@ -436,7 +436,7 @@
     "source_files_scanned": 3959,
     "visual_candidates_reviewed": 1530,
     "head_annotations_added": 0,
-    "manifest": "data/annotation_candidates/hoodie_ppe_2026-10-15/expanded_selection/manifest.json",
+    "manifest": "data/ppe/review/hoodie_ppe_2026-10-15/expanded_selection/manifest.json",
     "source_retained": true,
     "github_uploaded": false
   },
@@ -453,7 +453,7 @@
     "merged_into_existing_dataset": false,
     "split_policy": "unassigned; correlated scene grouping required before train/val/test split",
     "source_dataset_retained": true,
-    "path": "/Users/sanghyeopkim/Desktop/workspace/data/annotation_candidates/hoodie_ppe_2026-10-15/confirmed_heads",
+    "path": "/Users/sanghyeopkim/Desktop/workspace/data/ppe/review/hoodie_ppe_2026-10-15/confirmed_heads",
     "items": [
       {
         "id": "original_01",

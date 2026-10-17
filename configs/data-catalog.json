@@ -1,0 +1,883 @@
+{
+  "date": "2026-10-17",
+  "status": "organized_no_model_changes",
+  "roots": [
+    "data/ppe",
+    "data/forklift",
+    "data/fire",
+    "data/shared",
+    "data/videos"
+  ],
+  "selected": {
+    "ppe": "data/ppe/selected/ppe_balanced_800/dataset.yaml",
+    "forklift_primary": "data/forklift/selected/forklift_real_context_v2/dataset.yaml",
+    "fire": "Public model retained; data/fire/dfire_comparison_390 is rejected fine-tuning comparison evidence"
+  },
+  "folders": [
+    {
+      "old_path": "data/reviewed_pilot/cvat_forklift_merged_4_tasks",
+      "path": "data/forklift/annotations/cvat_forklift_merged_4_tasks",
+      "files": 318,
+      "bytes": 195311736,
+      "images": 157,
+      "labels": 155,
+      "group": "annotations"
+    },
+    {
+      "old_path": "data/reviewed_pilot/cvat_helmet_merged",
+      "path": "data/ppe/annotations/cvat_helmet_merged",
+      "files": 118,
+      "bytes": 21761960,
+      "images": 57,
+      "labels": 57,
+      "group": "annotations"
+    },
+    {
+      "old_path": "data/reviewed_pilot/cvat_helmet_training_v1",
+      "path": "data/ppe/annotations/cvat_helmet_training_v1",
+      "files": 725,
+      "bytes": 36404426,
+      "images": 362,
+      "labels": 362,
+      "group": "annotations"
+    },
+    {
+      "old_path": "data/reviewed_pilot/cvat_helmet_training_v2",
+      "path": "data/ppe/annotations/cvat_helmet_training_v2",
+      "files": 581,
+      "bytes": 31680503,
+      "images": 290,
+      "labels": 290,
+      "group": "annotations"
+    },
+    {
+      "old_path": "data/reviewed_pilot/expansion_v3",
+      "path": "data/forklift/history/expansion_v3",
+      "files": 258,
+      "bytes": 62801796,
+      "images": 125,
+      "labels": 120,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/fire_current",
+      "path": "data/fire/dfire_comparison_390",
+      "files": 786,
+      "bytes": 51517419,
+      "images": 390,
+      "labels": 390,
+      "group": "comparison"
+    },
+    {
+      "old_path": "data/reviewed_pilot/forklift_current",
+      "path": "data/forklift/history/forklift_current",
+      "files": 821,
+      "bytes": 123121043,
+      "images": 478,
+      "labels": 335,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/forklift_cvat_combined_v1",
+      "path": "data/forklift/history/forklift_cvat_combined_v1",
+      "files": 6,
+      "bytes": 473650,
+      "images": 0,
+      "labels": 0,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/forklift_cvat_prepared_v1",
+      "path": "data/forklift/history/forklift_cvat_prepared_v1",
+      "files": 6,
+      "bytes": 165346,
+      "images": 0,
+      "labels": 0,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/forklift_demo_far_v5",
+      "path": "data/forklift/history/forklift_demo_far_v5",
+      "files": 788,
+      "bytes": 243838618,
+      "images": 391,
+      "labels": 391,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/forklift_far_v4",
+      "path": "data/forklift/history/forklift_far_v4",
+      "files": 1272,
+      "bytes": 416604063,
+      "images": 633,
+      "labels": 633,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/forklift_real_context_v2",
+      "path": "data/forklift/selected/forklift_real_context_v2",
+      "files": 134,
+      "bytes": 16706413,
+      "images": 64,
+      "labels": 64,
+      "group": "selected"
+    },
+    {
+      "old_path": "data/reviewed_pilot/hoodie_context_v2",
+      "path": "data/ppe/history/hoodie_context_v2",
+      "files": 950,
+      "bytes": 24399870,
+      "images": 472,
+      "labels": 472,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/hoodie_context_v2_clean",
+      "path": "data/ppe/history/hoodie_context_v2_clean",
+      "files": 1093,
+      "bytes": 27857876,
+      "images": 543,
+      "labels": 543,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/hoodie_roboflow_v1",
+      "path": "data/ppe/history/hoodie_roboflow_v1",
+      "files": 1472,
+      "bytes": 44992516,
+      "images": 732,
+      "labels": 732,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics",
+      "path": "data/forklift/history/logistics",
+      "files": 68,
+      "bytes": 36035463,
+      "images": 31,
+      "labels": 31,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics-pool-disposition.json",
+      "path": "data/shared/selection_records/logistics-pool-disposition.json",
+      "files": 1,
+      "bytes": 81883,
+      "images": 0,
+      "labels": 0,
+      "group": "selection_records"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_demo_adaptation_v1",
+      "path": "data/forklift/selected/logistics_demo_adaptation_v1",
+      "files": 1397,
+      "bytes": 670851619,
+      "images": 696,
+      "labels": 696,
+      "group": "selected"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_error_focus_v1",
+      "path": "data/forklift/history/logistics_error_focus_v1",
+      "files": 274,
+      "bytes": 108825130,
+      "images": 135,
+      "labels": 134,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_multisite_v1",
+      "path": "data/forklift/history/logistics_multisite_v1",
+      "files": 228,
+      "bytes": 95747201,
+      "images": 112,
+      "labels": 111,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_related_v16",
+      "path": "data/forklift/selected/logistics_related_v16",
+      "files": 1181,
+      "bytes": 623035986,
+      "images": 588,
+      "labels": 588,
+      "group": "selected"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_scaled_filtered_v1",
+      "path": "data/forklift/history/logistics_scaled_filtered_v1",
+      "files": 1153,
+      "bytes": 621043953,
+      "images": 573,
+      "labels": 573,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_scaled_v1",
+      "path": "data/forklift/history/logistics_scaled_v1",
+      "files": 1532,
+      "bytes": 829674987,
+      "images": 765,
+      "labels": 765,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_targeted_v17",
+      "path": "data/forklift/history/logistics_targeted_v17",
+      "files": 1284,
+      "bytes": 628487701,
+      "images": 639,
+      "labels": 639,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_v2",
+      "path": "data/forklift/history/logistics_v2",
+      "files": 68,
+      "bytes": 36035561,
+      "images": 31,
+      "labels": 31,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_v4",
+      "path": "data/forklift/history/logistics_v4",
+      "files": 123,
+      "bytes": 66935463,
+      "images": 59,
+      "labels": 58,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_v5_train_sources",
+      "path": "data/forklift/history/logistics_v5_train_sources",
+      "files": 337,
+      "bytes": 120802684,
+      "images": 166,
+      "labels": 165,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_v6_corrected_forklift",
+      "path": "data/forklift/history/logistics_v6_corrected_forklift",
+      "files": 139,
+      "bytes": 72179386,
+      "images": 67,
+      "labels": 66,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_v7_full_scene",
+      "path": "data/forklift/history/logistics_v7_full_scene",
+      "files": 158,
+      "bytes": 77107103,
+      "images": 77,
+      "labels": 76,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/logistics_v9_hard_examples",
+      "path": "data/forklift/history/logistics_v9_hard_examples",
+      "files": 176,
+      "bytes": 81781213,
+      "images": 86,
+      "labels": 85,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/nvidia_object_adaptation_v1",
+      "path": "data/forklift/selected/nvidia_object_adaptation_v1",
+      "files": 660,
+      "bytes": 286573043,
+      "images": 327,
+      "labels": 327,
+      "group": "selected"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe",
+      "path": "data/ppe/history/ppe",
+      "files": 112,
+      "bytes": 3565102,
+      "images": 53,
+      "labels": 53,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_balanced_1200",
+      "path": "data/ppe/history/ppe_balanced_1200",
+      "files": 1205,
+      "bytes": 98049032,
+      "images": 400,
+      "labels": 400,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_balanced_1600",
+      "path": "data/ppe/history/ppe_balanced_1600",
+      "files": 1205,
+      "bytes": 154620507,
+      "images": 400,
+      "labels": 400,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_balanced_800",
+      "path": "data/ppe/selected/ppe_balanced_800",
+      "files": 5,
+      "bytes": 117287,
+      "images": 0,
+      "labels": 0,
+      "group": "selected"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_color_expansion_v1",
+      "path": "data/ppe/history/ppe_color_expansion_v1",
+      "files": 735,
+      "bytes": 19870545,
+      "images": 365,
+      "labels": 365,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_color_expansion_v2",
+      "path": "data/ppe/history/ppe_color_expansion_v2",
+      "files": 696,
+      "bytes": 19186132,
+      "images": 345,
+      "labels": 345,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_color_expansion_v3",
+      "path": "data/ppe/history/ppe_color_expansion_v3",
+      "files": 670,
+      "bytes": 18314017,
+      "images": 332,
+      "labels": 332,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_current_hard_heads",
+      "path": "data/ppe/history/ppe_current_hard_heads",
+      "files": 24,
+      "bytes": 524628,
+      "images": 9,
+      "labels": 9,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_demo_adaptation_v1",
+      "path": "data/ppe/history/ppe_demo_adaptation_v1",
+      "files": 218,
+      "bytes": 11717432,
+      "images": 106,
+      "labels": 106,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_expanded_1577",
+      "path": "data/ppe/history/ppe_expanded_1577",
+      "files": 3202,
+      "bytes": 283070793,
+      "images": 1598,
+      "labels": 1598,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_failure_context_v3",
+      "path": "data/ppe/history/ppe_failure_context_v3",
+      "files": 637,
+      "bytes": 16707417,
+      "images": 317,
+      "labels": 314,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_final_510",
+      "path": "data/ppe/history/ppe_final_510",
+      "files": 1065,
+      "bytes": 241499012,
+      "images": 531,
+      "labels": 531,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_head63_finetune",
+      "path": "data/ppe/history/ppe_head63_finetune",
+      "files": 1193,
+      "bytes": 245963297,
+      "images": 594,
+      "labels": 594,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_remaining_v2",
+      "path": "data/ppe/history/ppe_remaining_v2",
+      "files": 558,
+      "bytes": 15646836,
+      "images": 276,
+      "labels": 276,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_remaining_v2_rejected_draft",
+      "path": "data/ppe/history/ppe_remaining_v2_rejected_draft",
+      "files": 558,
+      "bytes": 15612885,
+      "images": 276,
+      "labels": 276,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/ppe_video_frame_candidates_v1",
+      "path": "data/ppe/history/ppe_video_frame_candidates_v1",
+      "files": 120,
+      "bytes": 45000579,
+      "images": 118,
+      "labels": 0,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/safe_carrying_envelope_v2",
+      "path": "data/forklift/history/safe_carrying_envelope_v2",
+      "files": 1740,
+      "bytes": 715857484,
+      "images": 867,
+      "labels": 867,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/safe_carrying_specialist_v1",
+      "path": "data/forklift/history/safe_carrying_specialist_v1",
+      "files": 1676,
+      "bytes": 692999262,
+      "images": 835,
+      "labels": 835,
+      "group": "history"
+    },
+    {
+      "old_path": "data/reviewed_pilot/validation.json",
+      "path": "data/shared/selection_records/validation.json",
+      "files": 1,
+      "bytes": 282,
+      "images": 0,
+      "labels": 0,
+      "group": "selection_records"
+    },
+    {
+      "old_path": "data/training_review/demo_adaptation_v1",
+      "path": "data/forklift/review/demo_adaptation_v1",
+      "files": 57,
+      "bytes": 10783953,
+      "images": 55,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/demo_ppe_adaptation_v1",
+      "path": "data/ppe/review/demo_ppe_adaptation_v1",
+      "files": 28,
+      "bytes": 4916312,
+      "images": 27,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/error_focus_v1",
+      "path": "data/forklift/review/error_focus_v1",
+      "files": 95,
+      "bytes": 22492481,
+      "images": 93,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/expansion_v3",
+      "path": "data/forklift/review/expansion_v3",
+      "files": 64,
+      "bytes": 7447987,
+      "images": 62,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/expansion_v4",
+      "path": "data/forklift/review/expansion_v4",
+      "files": 3,
+      "bytes": 635508,
+      "images": 3,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/forklift_demo_far_v5",
+      "path": "data/forklift/review/forklift_demo_far_v5",
+      "files": 9,
+      "bytes": 4289507,
+      "images": 8,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/forklift_far_v4",
+      "path": "data/forklift/review/forklift_far_v4",
+      "files": 24,
+      "bytes": 12751787,
+      "images": 23,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/full_audit",
+      "path": "data/forklift/review/full_audit",
+      "files": 21,
+      "bytes": 59453102,
+      "images": 16,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/full_scene_v1",
+      "path": "data/forklift/review/full_scene_v1",
+      "files": 35,
+      "bytes": 11132783,
+      "images": 34,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/hard_examples_v1",
+      "path": "data/forklift/review/hard_examples_v1",
+      "files": 12,
+      "bytes": 5347374,
+      "images": 12,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/logistics",
+      "path": "data/forklift/review/logistics",
+      "files": 49,
+      "bytes": 22885203,
+      "images": 25,
+      "labels": 12,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/manifest.json",
+      "path": "data/shared/review/manifest.json",
+      "files": 1,
+      "bytes": 21147,
+      "images": 0,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/multisite_v1",
+      "path": "data/forklift/review/multisite_v1",
+      "files": 32,
+      "bytes": 17734823,
+      "images": 32,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/nvidia52_v1",
+      "path": "data/forklift/review/nvidia52_v1",
+      "files": 253,
+      "bytes": 67514306,
+      "images": 251,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/ppe",
+      "path": "data/ppe/review/ppe",
+      "files": 16,
+      "bytes": 2165574,
+      "images": 14,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/ppe_color_expansion_v1",
+      "path": "data/ppe/review/ppe_color_expansion_v1",
+      "files": 7,
+      "bytes": 210473,
+      "images": 6,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/ppe_color_expansion_v2",
+      "path": "data/ppe/review/ppe_color_expansion_v2",
+      "files": 483,
+      "bytes": 27228166,
+      "images": 482,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/ppe_color_expansion_v3",
+      "path": "data/ppe/review/ppe_color_expansion_v3",
+      "files": 46,
+      "bytes": 4315074,
+      "images": 45,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/ppe_remaining_v2",
+      "path": "data/ppe/review/ppe_remaining_v2",
+      "files": 278,
+      "bytes": 17364809,
+      "images": 269,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/related_forklift_v1",
+      "path": "data/forklift/review/related_forklift_v1",
+      "files": 224,
+      "bytes": 128300999,
+      "images": 218,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/safe_carrying_v1",
+      "path": "data/forklift/review/safe_carrying_v1",
+      "files": 187,
+      "bytes": 98976810,
+      "images": 185,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/scaled_v1",
+      "path": "data/forklift/review/scaled_v1",
+      "files": 88,
+      "bytes": 19540413,
+      "images": 84,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/small_workers_v1",
+      "path": "data/forklift/review/small_workers_v1",
+      "files": 18,
+      "bytes": 3348547,
+      "images": 16,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/train_archives_v1",
+      "path": "data/forklift/review/train_archives_v1",
+      "files": 29,
+      "bytes": 5868686,
+      "images": 27,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/training_review/train_videos_v1",
+      "path": "data/forklift/review/train_videos_v1",
+      "files": 9,
+      "bytes": 477451,
+      "images": 8,
+      "labels": 0,
+      "group": "review"
+    },
+    {
+      "old_path": "data/external/hoodie_detection_roboflow_v1",
+      "path": "data/ppe/sources/hoodie_detection_roboflow_v1",
+      "files": 7923,
+      "bytes": 243806729,
+      "images": 3959,
+      "labels": 3959,
+      "group": "sources"
+    },
+    {
+      "old_path": "data/annotation_candidates/README.md",
+      "path": "data/shared/selection_records/annotation-candidates-README.md",
+      "files": 1,
+      "bytes": 943,
+      "images": 0,
+      "labels": 0,
+      "group": "selection_records"
+    },
+    {
+      "old_path": "data/annotation_candidates/hard_hat_workers_v5_2026-10-15",
+      "path": "data/ppe/review/hard_hat_workers_v5_2026-10-15",
+      "files": 3037,
+      "bytes": 47865755,
+      "images": 1022,
+      "labels": 1004,
+      "group": "review"
+    },
+    {
+      "old_path": "data/annotation_candidates/hoodie_ppe_2026-10-15",
+      "path": "data/ppe/review/hoodie_ppe_2026-10-15",
+      "files": 261,
+      "bytes": 8742996,
+      "images": 128,
+      "labels": 63,
+      "group": "review"
+    },
+    {
+      "old_path": "data/pilot_v1",
+      "path": "data/shared/initial_pilot",
+      "files": 1033,
+      "bytes": 504307396,
+      "images": 514,
+      "labels": 512,
+      "group": "comparison"
+    },
+    {
+      "old_path": "data/label_review",
+      "path": "data/shared/label_review",
+      "files": 362,
+      "bytes": 418193176,
+      "images": 353,
+      "labels": 2,
+      "group": "comparison"
+    }
+  ],
+  "validation": {
+    "preserved_image_video_payloads": 24445,
+    "image_list_entries_checked": 9293,
+    "missing_image_list_entries": [],
+    "fire_splits": {
+      "train": {
+        "images": 240,
+        "labels": 240
+      },
+      "val": {
+        "images": 60,
+        "labels": 60
+      },
+      "test": {
+        "images": 90,
+        "labels": 90
+      }
+    },
+    "fire_missing_label_pairs": [],
+    "exact_duplicate_image_video_copies_preserved": 12702,
+    "note": "Duplicates may have different annotations or split roles and were not deleted.",
+    "selected_image_label_pairs_checked": 1964,
+    "all_dataset_yaml_parsed": 56
+  },
+  "path_compatibility": {
+    "data/reviewed_pilot/ppe_balanced_800": "data/ppe/selected/ppe_balanced_800"
+  },
+  "full_local_record": {
+    "path": "data/shared/selection_records/data-reorganization.json",
+    "sha256": "c8e981dcde5c80dff5abe50491226c98d2aba27beeea400faa0fe8302e750908"
+  },
+  "rewritten_metadata_files": [
+    "data/ppe/annotations/cvat_helmet_training_v1/dataset.yaml",
+    "data/ppe/annotations/cvat_helmet_training_v2/dataset.yaml",
+    "data/ppe/selected/ppe_balanced_800/train.txt",
+    "data/ppe/selected/ppe_balanced_800/test.txt",
+    "data/ppe/selected/ppe_balanced_800/val.txt",
+    "data/ppe/review/hard_hat_workers_v5_2026-10-15/README.md",
+    "data/ppe/review/hard_hat_workers_v5_2026-10-15/manifest.json",
+    "data/ppe/review/hard_hat_workers_v5_2026-10-15/selection_result.txt",
+    "data/ppe/history/ppe_color_expansion_v2/build_report.json",
+    "data/ppe/history/ppe_color_expansion_v2/dataset.yaml",
+    "data/ppe/history/hoodie_roboflow_v1/train.txt",
+    "data/ppe/history/hoodie_roboflow_v1/valid.txt",
+    "data/ppe/history/hoodie_roboflow_v1/manifest.json",
+    "data/ppe/history/hoodie_roboflow_v1/test.txt",
+    "data/ppe/history/hoodie_roboflow_v1/dataset.yaml",
+    "data/ppe/history/ppe_color_expansion_v3/build_report.json",
+    "data/ppe/history/ppe_color_expansion_v3/dataset.yaml",
+    "data/ppe/history/ppe_balanced_1600/train.txt",
+    "data/ppe/history/ppe/dataset.yaml",
+    "data/ppe/history/ppe_demo_adaptation_v1/dataset.yaml",
+    "data/ppe/history/ppe_video_frame_candidates_v1/candidate_manifest.csv",
+    "data/ppe/history/ppe_color_expansion_v1/build_report.json",
+    "data/ppe/history/ppe_color_expansion_v1/dataset.yaml",
+    "data/ppe/history/ppe_head63_finetune/dataset.yaml",
+    "data/ppe/history/ppe_failure_context_v3/dataset.yaml",
+    "data/ppe/history/hoodie_context_v2/context_test.yaml",
+    "data/ppe/history/hoodie_context_v2/manifest.json",
+    "data/ppe/history/hoodie_context_v2/dataset.yaml",
+    "data/ppe/history/ppe_remaining_v2_rejected_draft/dataset.yaml",
+    "data/ppe/history/ppe_remaining_v2/dataset.yaml",
+    "data/ppe/history/ppe_final_510/dataset.yaml",
+    "data/ppe/history/ppe_expanded_1577/dataset.yaml",
+    "data/ppe/history/hoodie_context_v2_clean/context_test.yaml",
+    "data/ppe/history/hoodie_context_v2_clean/manifest.json",
+    "data/ppe/history/hoodie_context_v2_clean/dataset.yaml",
+    "data/forklift/annotations/cvat_forklift_merged_4_tasks/train.txt",
+    "data/forklift/selected/logistics_related_v16/dataset.yaml",
+    "data/forklift/selected/nvidia_object_adaptation_v1/manifest.json",
+    "data/forklift/selected/nvidia_object_adaptation_v1/dataset.yaml",
+    "data/forklift/selected/logistics_demo_adaptation_v1/dataset.yaml",
+    "data/forklift/selected/forklift_real_context_v2/train.txt",
+    "data/forklift/selected/forklift_real_context_v2/manifest.json",
+    "data/forklift/selected/forklift_real_context_v2/test.txt",
+    "data/forklift/selected/forklift_real_context_v2/dataset.yaml",
+    "data/forklift/selected/forklift_real_context_v2/val.txt",
+    "data/forklift/history/logistics_v7_full_scene/dataset.yaml",
+    "data/forklift/history/forklift_cvat_combined_v1/train.txt",
+    "data/forklift/history/forklift_cvat_combined_v1/manifest.json",
+    "data/forklift/history/forklift_cvat_combined_v1/test.txt",
+    "data/forklift/history/forklift_cvat_combined_v1/dataset.yaml",
+    "data/forklift/history/forklift_cvat_combined_v1/val.txt",
+    "data/forklift/history/logistics_scaled_v1/dataset.yaml",
+    "data/forklift/history/safe_carrying_envelope_v2/manifest.json",
+    "data/forklift/history/safe_carrying_envelope_v2/dataset.yaml",
+    "data/forklift/history/forklift_demo_far_v5/manifest.json",
+    "data/forklift/history/forklift_demo_far_v5/dataset.yaml",
+    "data/forklift/history/forklift_far_v4/manifest.json",
+    "data/forklift/history/forklift_far_v4/dataset.yaml",
+    "data/forklift/history/logistics_v4/dataset.yaml",
+    "data/forklift/history/logistics_v2/dataset.yaml",
+    "data/forklift/history/logistics_v6_corrected_forklift/dataset.yaml",
+    "data/forklift/history/expansion_v3/ppe/dataset.yaml",
+    "data/forklift/history/expansion_v3/logistics/dataset.yaml",
+    "data/forklift/history/logistics_v9_hard_examples/dataset.yaml",
+    "data/forklift/history/forklift_cvat_prepared_v1/train.txt",
+    "data/forklift/history/forklift_cvat_prepared_v1/training_plan.json",
+    "data/forklift/history/forklift_cvat_prepared_v1/manifest.json",
+    "data/forklift/history/forklift_cvat_prepared_v1/test.txt",
+    "data/forklift/history/forklift_cvat_prepared_v1/dataset.yaml",
+    "data/forklift/history/forklift_cvat_prepared_v1/val.txt",
+    "data/forklift/history/logistics_targeted_v17/dataset.yaml",
+    "data/forklift/history/logistics_error_focus_v1/manifest.json",
+    "data/forklift/history/logistics_error_focus_v1/dataset.yaml",
+    "data/forklift/history/logistics_multisite_v1/manifest.json",
+    "data/forklift/history/logistics_multisite_v1/dataset.yaml",
+    "data/forklift/history/logistics_scaled_filtered_v1/dataset.yaml",
+    "data/forklift/history/safe_carrying_specialist_v1/manifest.json",
+    "data/forklift/history/safe_carrying_specialist_v1/dataset.yaml",
+    "data/forklift/history/logistics/dataset.yaml",
+    "data/forklift/history/forklift_current/train.txt",
+    "data/forklift/history/forklift_current/manifest.json",
+    "data/forklift/history/forklift_current/test.txt",
+    "data/forklift/history/forklift_current/dataset.yaml",
+    "data/forklift/history/forklift_current/val.txt",
+    "data/forklift/history/logistics_v5_train_sources/dataset.yaml",
+    "data/shared/label_review/manifest.json",
+    "data/shared/initial_pilot/ppe/dataset.yaml",
+    "data/shared/initial_pilot/logistics/dataset.yaml",
+    "data/fire/dfire_comparison_390/manifest.json",
+    "data/fire/dfire_comparison_390/dataset.yaml",
+    "configs/ppe-final-model.json",
+    "configs/review/forklift-current.json",
+    "configs/review/ppe-balanced-1200.json",
+    "configs/review/ppe-balanced-800.json",
+    "configs/review/ppe-balanced-1600.json",
+    "configs/review/ppe-current-hard-heads.json",
+    "configs/review/fire-current.json",
+    "docs/progress-2026-10-14.md",
+    "docs/labeling-policy-v2.md",
+    "docs/checkpoints/2026-10-15/hardhat-workers-v5-selection.json",
+    "docs/checkpoints/2026-10-15/hoodie-selection.json",
+    "scripts/prepare_full_scene_expansion.py"
+  ],
+  "no_github_push": true
+}

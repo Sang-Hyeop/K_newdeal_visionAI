@@ -14,7 +14,7 @@
   "rejected_candidates": 21,
   "video5_initial_reinspection_note": "Two preliminary accepted candidates rejected during overlay review for very small/occluded heads; final video5 acceptance6/24",
   "split_policy": "All presentation3/5 images are train-only development adaptation; no same-scene validation/test claim",
-  "dataset_root": "data/reviewed_pilot/ppe_current_hard_heads",
+  "dataset_root": "data/ppe/history/ppe_current_hard_heads",
   "training_list": "train.txt",
   "training_items": 519,
   "base_training_items": 510,
@@ -26,39 +26,39 @@
     "dhash_nearest": {
       "video3_f000125_hard_head.png": [
         18,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/new_task_2654009_011_NVIDIA_video_01108_f00072.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/new_task_2654009_011_NVIDIA_video_01108_f00072.jpg"
       ],
       "video3_f000175_hard_head.png": [
         17,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/new_task_2654005_129_NVIDIA_video_00286_f00072.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/new_task_2654005_129_NVIDIA_video_00286_f00072.jpg"
       ],
       "video5_f000290_hard_head.png": [
         18,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0018_000357_jpg.rf.3bdf178206d1dc015141f55cccec3f60.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/hhw5_0018_000357_jpg.rf.3bdf178206d1dc015141f55cccec3f60.jpg"
       ],
       "video5_f000870_hard_head.png": [
         17,
-        "data/reviewed_pilot/ppe_expanded_1577/val/images/hhw5_0374_006534_jpg.rf.087b7153e2b6228bf01316d7a12360c3.jpg"
+        "data/ppe/history/ppe_expanded_1577/val/images/hhw5_0374_006534_jpg.rf.087b7153e2b6228bf01316d7a12360c3.jpg"
       ],
       "video5_f000090_hard_head.png": [
         18,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_1141_002622_jpg.rf.21ca5e5c098e5193fdde45ec5561595f.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/hhw5_1141_002622_jpg.rf.21ca5e5c098e5193fdde45ec5561595f.jpg"
       ],
       "video5_f003805_hard_head.png": [
         18,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0130_003371_jpg.rf.1979a4c74f56310fce78925b9f6f0560.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/hhw5_0130_003371_jpg.rf.1979a4c74f56310fce78925b9f6f0560.jpg"
       ],
       "video3_f000050_hard_head.png": [
         19,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0192_004733_jpg.rf.016d7d0c128bb7383d6b4c397805bea6.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/hhw5_0192_004733_jpg.rf.016d7d0c128bb7383d6b4c397805bea6.jpg"
       ],
       "video5_f000740_hard_head.png": [
         18,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/supplement63_expanded_1076.png"
+        "data/ppe/history/ppe_expanded_1577/train/images/supplement63_expanded_1076.png"
       ],
       "video5_f000690_hard_head.png": [
         20,
-        "data/reviewed_pilot/ppe_expanded_1577/train/images/hhw5_0522_003103_jpg.rf.1e3e11c8080b65c7c64fa016a73cecd1.jpg"
+        "data/ppe/history/ppe_expanded_1577/train/images/hhw5_0522_003103_jpg.rf.1e3e11c8080b65c7c64fa016a73cecd1.jpg"
       ]
     },
     "limitations": "Image-level hash screening cannot prove semantic uniqueness or absence of the same scene in differently cropped images; all new video crops remain development-exposed train-only."
@@ -471,7 +471,7 @@
     "best_epoch": 1,
     "early_stop_reason": "No validation fitness improvement for 3 epochs",
     "settings": {
-      "data": "/Users/sanghyeopkim/Desktop/workspace/data/reviewed_pilot/ppe_current_hard_heads/dataset.yaml",
+      "data": "/Users/sanghyeopkim/Desktop/workspace/data/ppe/history/ppe_current_hard_heads/dataset.yaml",
       "epochs": 6,
       "patience": 3,
       "batch": 4,

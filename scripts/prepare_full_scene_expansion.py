@@ -18,7 +18,7 @@ MANUAL={
 'source8_45':[[1,167,52,293,211],[0,766,210,850,309]],
 }
 def main():
- base=ROOT/'data/reviewed_pilot/logistics_v6_corrected_forklift';dest=ROOT/'data/reviewed_pilot/logistics_v7_full_scene';review=ROOT/'data/training_review/full_scene_v1';assert not dest.exists()
+ base=ROOT/'data/forklift/history/logistics_v6_corrected_forklift';dest=ROOT/'data/forklift/history/logistics_v7_full_scene';review=ROOT/'data/forklift/review/full_scene_v1';assert not dest.exists()
  rows=json.loads((base/'manifest.json').read_text());candidates=json.loads((review/'candidates.json').read_text());shutil.copytree(base,dest);added=[]
  demos={hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'data/videos').glob('*.mp4')};hashes={}
  for item in candidates:
