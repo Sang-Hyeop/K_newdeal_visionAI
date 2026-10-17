@@ -1,6 +1,6 @@
-# 현재 발표 영상 1~5 — 사용자 확정 시연 기준
+# 현재 발표 영상 1~6 — 사용자 확정 시연 기준
 
-원본 파일명·JSON의 video_number·발표 번호는 모두 1~5번으로 같습니다. 2번은 별도 실행기를 사용합니다. 실행은 `python handoff.py run --video N`을 사용합니다. 이 문서는 기존 파일명을 유지하면서 현재 기준으로 통합했습니다.
+원본 파일명·발표·실행 번호는 모두 1~6번으로 같습니다. 기존 demo-scenarios.json은1~5번, 화재6번은 별도 fire-current.json을 사용합니다. 2번은 별도 실행기를 사용합니다. 실행은 `python handoff.py run --video N`을 사용합니다. 이 문서는 기존 파일명을 유지하면서 현재 기준으로 통합했습니다.
 
 ## 공통
 
@@ -37,7 +37,7 @@
 
 ## 현재 파일과 검증
 
-최신 확정 영상은 `outputs/reviews/`의 5개이며 이벤트는 `outputs/events/presentation1`~`presentation5`입니다. 모델6개와 실제 연결은 `configs/team-runtime-index.json`이 기준입니다. 원본별 전체 리뷰와 개발 영상에서 확인한 결과를 독립 현장 정확도로 설명하지 않습니다.
+최신 확정 영상은 `outputs/reviews/`의 6개이며 이벤트는 `outputs/events/presentation1`~`presentation6`입니다. 모델7개와 실제 연결은 `configs/team-runtime-index.json`이 기준입니다. 원본별 전체 리뷰와 개발 영상에서 확인한 결과를 독립 현장 정확도로 설명하지 않습니다.
 
 
 ## 6번 추가 — 주차장 화재 의심 (2026-10-17)

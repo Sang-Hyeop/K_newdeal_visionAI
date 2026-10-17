@@ -1,4 +1,6 @@
-# GitHub에서 최신 팀 실행 자료 사용하기
+# GitHub 팀 실행 자료 사용하기
+
+> 배포 안내의 기준: 아래 runtime-2026-10-16은 기존 1~5번 배포본입니다. 2026-10-17 현재 로컬 확정본은 6번 화재와 모델 잠금 기록을 포함하며 아직 새 Release로 발행하지 않았습니다. 아래 브랜치·PR·테스트 수는 당시 배포 기록으로 현재 원격 상태를 재확인한 결과가 아닙니다. 최신 로컬 구성은 README.md·configs/team-runtime-index.json·configs/final-model-lock.json을 따릅니다. 기존 설치기를 실행해도 미발행 6번 자산은 받지 못합니다.
 
 2026-10-16 업데이트 배포는 `runtime-2026-10-16`입니다. main 병합 전 검증용 Pre-release이며, 아래 작업 브랜치의 코드/설정과 함께 사용합니다. 코드·설정·원본 영상은 Git 저장소, 현재 결과·모델·이벤트·캐시는 [GitHub Release](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-16)에서 받습니다. 학습 이미지 데이터셋은 배포에 포함하지 않습니다.
 

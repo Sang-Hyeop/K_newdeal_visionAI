@@ -193,5 +193,13 @@
   "cleanup_date": "2026-10-14",
   "diagnostic_directory_numbering": "presentation_video_number equals data/videos filename number (1-5)",
   "current_results_policy": "One current review/event/cache per video; run replaces current results after validation; no retained experimental outputs",
-  "integration": "Current v6 + user-approved PPE window + stable PPE tracking; video5 guarded upper-body search. Rejected PPE candidates removed."
+  "integration": "Current v6 + user-approved PPE window + stable PPE tracking; video5 guarded upper-body search. Rejected PPE candidates removed.",
+  "final_model_status": {
+    "date": "2026-10-17",
+    "status": "user_finalized_no_further_training_or_replacement",
+    "lock": "configs/final-model-lock.json",
+    "summary": "models/README.md",
+    "source_commit_note": "source_commit/source_branch above identify earlier handoff provenance, not the current branch HEAD",
+    "publication": "Current local final snapshot; no new GitHub push or Release in this step"
+  }
 }

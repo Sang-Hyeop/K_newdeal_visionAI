@@ -1,4 +1,4 @@
-"""Portable entry point for the five-video team handoff (Python 3.11+)."""
+"""Portable entry point for the six-video team handoff (Python 3.11+)."""
 import argparse,hashlib,json,os,subprocess,sys
 from datetime import datetime
 from pathlib import Path
@@ -9,7 +9,24 @@ def call(*args):
     print('RUN:', ' '.join(str(a) for a in args),flush=True)
     subprocess.run([sys.executable,*map(str,args)],cwd=ROOT,check=True)
 
+def check_final_models():
+    """Verify the user-frozen weights and approved PPE policy without rewriting them."""
+    path=ROOT/'configs/final-model-lock.json'
+    if not path.exists():
+        raise ValueError('Missing final model lock: '+str(path))
+    lock=json.loads(path.read_text(encoding='utf-8'))
+    for item in lock['models']+lock['support_and_approved_policy']:
+        asset=ROOT/item['path']
+        if not asset.is_file() or asset.stat().st_size!=item['bytes']:
+            raise ValueError('Final model/policy missing or changed: '+item['path'])
+        with asset.open('rb') as stream:
+            digest=hashlib.file_digest(stream,'sha256').hexdigest()
+        if digest!=item['sha256']:
+            raise ValueError('Final model/policy checksum mismatch: '+item['path'])
+    print('PASS: frozen',len(lock['models']),'models and approved policy/support hashes')
+
 def check(models=False):
+    check_final_models()
     index=json.loads((ROOT/'configs/team-runtime-index.json').read_text(encoding='utf-8'))
     manifest=json.loads((ROOT/'configs/github-runtime.json').read_text(encoding='utf-8'))
     verified_assets=0

@@ -1,17 +1,37 @@
-# 기존 확정 모델 6개 + 추가 화재 모델 1개
+# 최종 확정 모델 — 2026-10-17
 
-현재 실행에 필요한 아래 모델만 유지합니다. 연결·해시는 configs/team-runtime-index.json이 기준입니다.
+사용자 결정으로 모델 학습·교체·병합 작업을 종료했습니다. 현재 실행 가중치는 아래 7개뿐입니다. 정확한 바이트·SHA-256·영상별 연결은 `configs/final-model-lock.json`과 `configs/team-runtime-index.json`에 있습니다. 변경하려면 사용자의 새 명시 요청이 필요합니다.
 
-- pilot_v16_related/person_forklift.pt: 사람·지게차 기본.
-- demo_object_adaptation_v1/best.pt: 시연 장면 보완.
-- pretrained/yolo26n.pt: 사람 검출.
-- ppe_final/ppe_helmet_v6_960.pt: 현재 PPE(800장 균형 보완학습, 영상 검증으로 선택한1회차; v6는 호환용 기존 파일명). 같은 폴더 config.json과 ppe_duplicate_filter.py도 필요합니다.
-- experiments/forklift_real_context_v2/weights/best.pt: 현재 사용하는 차량 보완 모델. experiments라는 경로명과 달리 대체 후보가 아니라 기본 실행의 구성원입니다.
-- nvidia_object_adaptation_v1/best.pt: 차량 교차 확인.
+## PPE: 균형800장 1회차 채택
 
-성능이 떨어졌던 1577장 PPE 후보는 채택하지 않고 삭제했습니다. 라벨·학습 데이터는 data/에 보존하며 실패 과정은 Git 이력에 있습니다. 현재 로컬 보완은 아직 공개 Release에 반영하지 않았습니다.
+`ppe_final/ppe_helmet_v6_960.pt`는 착용400장/미착용400장, 총800장으로 보완한 모델입니다. 사진 수와 머리 박스 수는 다릅니다(착용608/미착용1600박스). 4회차 학습 중 실제 영상 비교로 1회차를 채택했습니다. 206장 검증·108장 테스트 분할과 출처/중복 제거/선정 규칙은 `configs/review/ppe-balanced-800.json`에 있습니다. 기반 모델의 선행 학습량과 이번800장은 구분합니다.
 
+초기 머리 미탐·후드·작은 머리·가림을 보완했지만, 1577장/1200장/1600장 후보는 이미지 지표 개선이 실제 영상 개선으로 이어지지 않아 제외했습니다. 별도 실험 가중치는 남기지 않습니다. 작은 머리의 현재 프레임 문맥 검색은 기본 코드에 통합했습니다. 기존 v6 파일명은 호환용이며 모델6개를 뜻하지 않습니다. 같은 폴더의 config.json과 ppe_duplicate_filter.py는 필수 보조 파일입니다.
 
-## 추가 화재 검수 모델 (2026-10-17)
+판정은 `configs/ppe-user-approved-policy-2026-10-15.json`을 유지합니다. 미탐을 미착용으로 강제하지 않고 추가 crop 단독의 착용 후보로 SAFE를 만들지 않습니다. 미확정 감소는 정확도 향상과 구분합니다. 사람 탐지는 별도 pretrained/yolo26n.pt를 사용합니다. 적용 영상은2/3/5번입니다.
 
-기존 확정6개는 유지하며6번 전용 `fire_public/fire_detection.pt` 한 개를 추가합니다. 공개 YOLO26-S 가중치를 재학습 없이 사용합니다. 출처/게시자 MIT 선언/학습자료 CC BY4.0 선언/정확한revision·SHA 및 한계는 `configs/review/fire-current.json`과 동봉MODEL_CARD.md에 기록했습니다. Ultralytics 구현 라이선스는 별도로 적용됩니다. 불꽃 반복관측 기반 화재 의심이며 연기만으로 알리지 않습니다. 아직 기존 GitHub Release에는 포함하지 않았습니다.
+## 사람·지게차: 기존 주력690장 모델과 보조 모델 유지
+
+- `experiments/forklift_real_context_v2/weights/best.pt`: 주력 차량 보완. 학습690장. experiments는 기존 호환 경로명이며 현재 확정 구성원입니다.
+- `pilot_v16_related/person_forklift.pt`: 사람·지게차 기본 검출.
+- `demo_object_adaptation_v1/best.pt`: 시연 장면 보완.
+- `pretrained/yolo26n.pt`: 사람 검출.
+- `nvidia_object_adaptation_v1/best.pt`: 차량 복구 교차 확인.
+
+위 파일들을 단일690장/1000장 모델이라고 합산하지 않습니다. 경로별 역할은 실행 인덱스를 따릅니다. 서로 다른 역할의 가중치를 단순 병합하지 않았습니다. 일부 시연 장면이 학습에 노출됐으므로 독립 현장 정확도로 주장하지 않습니다.
+
+작거나 지붕 없는 차량을 대상으로 마지막1000장 후보까지 비교했으나, 같은 연속 장면에서 기존10/10 관측 대비 후보6/7/7/6 관측으로 퇴행해 기존 주력·보조 조합을 선택했습니다. 기존파일의 현재 프레임 재검출·탑승자/보행자 구분·문맥 검수는 유지합니다. 남은 차량 오탐/가림은 존재하며 실제 m 거리는 제공하지 않습니다. 학습·실패·최종5개 영상 검수 근거는 `configs/review/forklift-current.json`에 통합했습니다.
+
+## 화재: 공개 YOLO26-S 유지
+
+`fire_public/fire_detection.pt`는 공개 모델을 재학습 없이 채택한6번 전용 가중치입니다. 출처는 SalahALHaismawi/yolov26-fire-detection, 게시자 revision과 라이선스 선언 및 원 학습8939장/100회차 주장은 `configs/review/fire-current.json`과 동봉MODEL_CARD.md에 기록했습니다. 원 학습 주장은 게시자 설명이며 직접 재현한 결과가 아닙니다.
+
+D-Fire390장(train240/val60/test90)으로 Detect head를2회차 보완하고 검증으로1회차를 선택했습니다. 별도90장 평가에서 비화재/연기 오탐 이미지10/60→7/60으로 줄었지만 불꽃 정탐 박스37/68→35/68, 주차장 영상 검출35→32로 감소해 비채택했습니다. 후보 가중치는 삭제했습니다. 추가13개 합성 장면에서 경보를 확인했지만 실제13개 현장 검증을 의미하지 않습니다. 기존1~5번1184샘플에서는 확정 화재 경보0건이며 지게차가 일시 불꽃으로 오탐된2샘플은 남습니다.
+
+6번은 불꽃 반복 관측 기반 화재 의심입니다. 연기만으로 경보하지 않으며 편집 장면의 시간 도약을 초기화합니다. 미관측은 안전·진화완료가 아닙니다. 전체 범위의 실화재 재현율·실제 현장 검증 완료를 주장하지 않습니다.
+
+## 파일·실행·배포
+
+실행은 `python handoff.py run --video N`, 무결성 점검은 `python handoff.py check`입니다. 최신 결과는 outputs/reviews/의6개 *_latest.mp4입니다. 사람·PPE·지게차·화재는 기능별 실행 범위를 유지합니다. 실패 가중치와 실험 실행기는 현재 실행에 포함하지 않습니다. 학습 원본·수동 라벨·선정 JSON은 선정 이유를 재현할 근거이므로 보존합니다.
+
+현재 로컬 확정과 GitHub 배포는 별개입니다. 기존 runtime-2026-10-16 Release에는6번 화재가 없으며 사용자의 업로드 요청 전에는 새 Release나 push를 수행하지 않습니다.

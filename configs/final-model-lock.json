@@ -1,0 +1,319 @@
+{
+  "date": "2026-10-17",
+  "status": "user_finalized_no_further_model_changes",
+  "policy": "No training, replacement, merging or threshold changes without renewed explicit user request. System integration and reproducible bug fixes remain allowed.",
+  "models": [
+    {
+      "path": "models/pilot_v16_related/person_forklift.pt",
+      "bytes": 5359045,
+      "sha256": "45d121e6001edc4e405e27c2b7bc730bf634c22b318e5f96319a89b2a3b3d125"
+    },
+    {
+      "path": "models/demo_object_adaptation_v1/best.pt",
+      "bytes": 5358789,
+      "sha256": "20157a9ba119c45e48511ab937d77d36c1decf7e1a0305f474135ea83d764e16"
+    },
+    {
+      "path": "models/pretrained/yolo26n.pt",
+      "bytes": 5544453,
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "path": "models/ppe_final/ppe_helmet_v6_960.pt",
+      "bytes": 5448301,
+      "sha256": "e0a96b11c115057988ff7d04750fbb14c2f842338bee3cb068fac4c17299e13b"
+    },
+    {
+      "path": "models/experiments/forklift_real_context_v2/weights/best.pt",
+      "bytes": 5444869,
+      "sha256": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa"
+    },
+    {
+      "path": "models/nvidia_object_adaptation_v1/best.pt",
+      "bytes": 5358789,
+      "sha256": "4d1c592c277f35c37ded52f302101e59c7e32c2e9be0804de249af025ddd255b"
+    },
+    {
+      "path": "models/fire_public/fire_detection.pt",
+      "bytes": 20301317,
+      "sha256": "52684ddffd4797f1bc5ff1bd2b72af3ec34eabf0c1646c37f518bb766b27b79f"
+    }
+  ],
+  "support_and_approved_policy": [
+    {
+      "path": "models/ppe_final/config.json",
+      "bytes": 1082,
+      "sha256": "a645b77ff758436c7a188f967fa607a88b199f6366ef0651bdadefe73deab457"
+    },
+    {
+      "path": "models/ppe_final/ppe_duplicate_filter.py",
+      "bytes": 689,
+      "sha256": "cc617d9aee38ff189d2439015abac713f79630bdf87572b90332fab8d404c96f"
+    },
+    {
+      "path": "configs/ppe-user-approved-policy-2026-10-15.json",
+      "bytes": 996,
+      "sha256": "c4e33e527c120f424c6e1adab6eff517a624f1ad49560ff6493eb0258f7675ea"
+    }
+  ],
+  "videos": [
+    {
+      "number": 1,
+      "features": [
+        "proximity"
+      ],
+      "models": [
+        "models/pilot_v16_related/person_forklift.pt",
+        "models/demo_object_adaptation_v1/best.pt",
+        "models/pretrained/yolo26n.pt",
+        "models/experiments/forklift_real_context_v2/weights/best.pt"
+      ],
+      "source": {
+        "path": "data/videos/1_forklift_worker_collision_risk.mp4",
+        "sha256": "0830242e7c27490141bc0cd9ca964338c306016191f924882c6ec21ae03571dc"
+      },
+      "review": {
+        "path": "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4",
+        "sha256": "591cf716ded94b51855c480fc1fb0ffd81c5031c4dd3535d095b21247b221a53"
+      },
+      "events": "outputs/events/presentation1",
+      "diagnostics": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1"
+    },
+    {
+      "number": 2,
+      "features": [
+        "zone_access",
+        "ppe"
+      ],
+      "models": [
+        "models/pretrained/yolo26n.pt",
+        "models/ppe_final/ppe_helmet_v6_960.pt"
+      ],
+      "source": {
+        "path": "data/videos/2_restricted_zone_intrusion.mp4",
+        "sha256": "f656df46a9f5943b06a29a3adbce03da974c087c3af70692a695a1b1b7bb79b9"
+      },
+      "review": {
+        "path": "outputs/reviews/2_restricted_zone_intrusion_latest.mp4",
+        "sha256": "c8edc830a5e9f14048b2238c637fb0a60e177c8ede940550f4c516d45d7ad186"
+      },
+      "events": "outputs/events/presentation2",
+      "diagnostics": "outputs/diagnostics/presentation2_intrusion_review_2026-10-14"
+    },
+    {
+      "number": 3,
+      "features": [
+        "ppe"
+      ],
+      "models": [
+        "models/pretrained/yolo26n.pt",
+        "models/ppe_final/ppe_helmet_v6_960.pt"
+      ],
+      "source": {
+        "path": "data/videos/3_PPE_Helmet.mp4",
+        "sha256": "483be4232b74b8ddb5a56954f4a1b94d0eded226367ea211532158e2003fa6e6"
+      },
+      "review": {
+        "path": "outputs/reviews/3_PPE_Helmet_latest.mp4",
+        "sha256": "aac3707788a0aec32829d048ecc55c95de7fa9376c83e830d0484cb339794f71"
+      },
+      "events": "outputs/events/presentation3",
+      "diagnostics": "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3"
+    },
+    {
+      "number": 4,
+      "features": [
+        "zone_dwell"
+      ],
+      "models": [
+        "models/pilot_v16_related/person_forklift.pt",
+        "models/demo_object_adaptation_v1/best.pt",
+        "models/pretrained/yolo26n.pt",
+        "models/experiments/forklift_real_context_v2/weights/best.pt"
+      ],
+      "source": {
+        "path": "data/videos/4_hazard_zone_dwell.mp4",
+        "sha256": "aeed18e8518a1304a5fa36969b0c93560b146e912f8b0a285ee179c01a1a8b6f"
+      },
+      "review": {
+        "path": "outputs/reviews/4_hazard_zone_dwell_latest.mp4",
+        "sha256": "266854b636d75741f1e93c2cb1977666c8a174cbbedfa0b6cbe582b1fd60824e"
+      },
+      "events": "outputs/events/presentation4",
+      "diagnostics": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4"
+    },
+    {
+      "number": 5,
+      "features": [
+        "proximity",
+        "zone_access",
+        "zone_dwell",
+        "ppe"
+      ],
+      "models": [
+        "models/pilot_v16_related/person_forklift.pt",
+        "models/demo_object_adaptation_v1/best.pt",
+        "models/pretrained/yolo26n.pt",
+        "models/ppe_final/ppe_helmet_v6_960.pt",
+        "models/experiments/forklift_real_context_v2/weights/best.pt",
+        "models/nvidia_object_adaptation_v1/best.pt"
+      ],
+      "source": {
+        "path": "data/videos/5_Logistics Warehouse.mp4",
+        "sha256": "4f8ecff97461519c019bcebdc9be36bb249b56d98e5d294bde147c35a93c6a1d"
+      },
+      "review": {
+        "path": "outputs/reviews/5_Logistics_Warehouse_latest.mp4",
+        "sha256": "c54050a2d907bc0d63073d96a8c20c888164d65a650612939c34a15d4828085a"
+      },
+      "events": "outputs/events/presentation5",
+      "diagnostics": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5"
+    },
+    {
+      "number": 6,
+      "features": [
+        "fire"
+      ],
+      "models": [
+        "models/fire_public/fire_detection.pt"
+      ],
+      "source": {
+        "path": "data/videos/6_parking_lot_fire.mp4",
+        "sha256": "6c9165d6fdb19baaf9a9cc70110edd0ee41c5f7cb27a5965a96a9c70d96ecd67"
+      },
+      "review": {
+        "path": "outputs/reviews/6_parking_lot_fire_latest.mp4",
+        "sha256": "eca5e58c6a39b712c9a9073b6db7ad96b7f54242b48cc0750e0260d96a6fba19"
+      },
+      "events": "outputs/events/presentation6",
+      "diagnostics": "outputs/diagnostics/presentation6_fire_review"
+    }
+  ],
+  "selection_records": [
+    "configs/ppe-final-model.json",
+    "configs/review/ppe-balanced-800.json",
+    "configs/review/ppe-balanced-1200.json",
+    "configs/review/ppe-balanced-1600.json",
+    "configs/review/forklift-current.json",
+    "configs/review/fire-current.json"
+  ],
+  "cleanup": {
+    "removed": [
+      {
+        "path": "src/__pycache__",
+        "bytes": 311183
+      },
+      {
+        "path": "scripts/__pycache__",
+        "bytes": 174056
+      },
+      {
+        "path": "tests/__pycache__",
+        "bytes": 337685
+      },
+      {
+        "path": "models/ppe_final/__pycache__",
+        "bytes": 2771
+      },
+      {
+        "path": "backend_v1/__pycache__",
+        "bytes": 110246
+      },
+      {
+        "path": "dashboard/__pycache__",
+        "bytes": 226680
+      },
+      {
+        "path": "data/.DS_Store",
+        "bytes": 12292
+      },
+      {
+        "path": "data/annotation_candidates/.DS_Store",
+        "bytes": 8196
+      },
+      {
+        "path": "data/annotation_candidates/hoodie_ppe_2026-10-15/.DS_Store",
+        "bytes": 8196
+      },
+      {
+        "path": "data/annotation_candidates/hoodie_ppe_2026-10-15/confirmed_heads/.DS_Store",
+        "bytes": 8196
+      },
+      {
+        "path": "outputs/.DS_Store",
+        "bytes": 16388
+      },
+      {
+        "path": "outputs/diagnostics/.DS_Store",
+        "bytes": 43012
+      },
+      {
+        "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/.DS_Store",
+        "bytes": 6148
+      },
+      {
+        "path": "outputs/events/.DS_Store",
+        "bytes": 8196
+      },
+      {
+        "path": "outputs/events/presentation1/.DS_Store",
+        "bytes": 8196
+      },
+      {
+        "path": "__pycache__",
+        "bytes": 59505
+      }
+    ],
+    "reclaimed_bytes": 1340946,
+    "preserved": "Source data and manual annotations, current outputs, validation/selection evidence, app profiles and historical Release download cache."
+  },
+  "deployment": "Local final snapshot only; no GitHub push, Release publication or merge performed.",
+  "workspace_audit": {
+    "python_files_syntax_checked": 95,
+    "config_json_files_parsed": 28,
+    "syntax_errors": [],
+    "missing_index_paths": [],
+    "folders": {
+      "src": {
+        "files": 32,
+        "bytes": 149381
+      },
+      "scripts": {
+        "files": 9,
+        "bytes": 59688
+      },
+      "tests": {
+        "files": 40,
+        "bytes": 129338
+      },
+      "backend_v1": {
+        "files": 31,
+        "bytes": 346108
+      },
+      "dashboard": {
+        "files": 1874,
+        "bytes": 772965789
+      },
+      "configs": {
+        "files": 31,
+        "bytes": 9182728
+      },
+      "docs": {
+        "files": 23,
+        "bytes": 788849
+      },
+      "models": {
+        "files": 11,
+        "bytes": 52825824
+      },
+      "outputs": {
+        "files": 84,
+        "bytes": 618460935
+      },
+      "data": {
+        "files": 48420,
+        "bytes": 10187083413
+      }
+    }
+  }
+}
