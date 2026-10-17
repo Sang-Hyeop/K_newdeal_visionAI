@@ -30,6 +30,16 @@ def check(models=False):
         with p.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
         if digest!=item['sha256']:raise ValueError('Input video checksum mismatch: '+item['file'])
     print('PASS:',verified_assets,'current runtime asset hashes and 5 source video hashes match; asset source',index['source_commit'])
+    fire_config=ROOT/'configs/review/fire-current.json'
+    if any(v['presentation_video_number']==6 for v in index['videos']):
+        fire=json.loads(fire_config.read_text())
+        for key,hash_key in [('source_video','source_sha256'),('weights','model_sha256')]:
+            with (ROOT/fire[key]).open('rb')as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+            if digest!=fire[hash_key]:raise ValueError('Video6 checksum mismatch: '+key)
+        summary=json.loads((ROOT/fire['output_root']/'summary.json').read_text())
+        with (ROOT/fire['review_video']).open('rb')as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+        if digest!=summary['review_sha256']:raise ValueError('Video6 review checksum mismatch')
+        print('PASS: local video6 source, model and review hashes; fire assets not yet published')
     if models:
         import cv2,torch
         from ultralytics import YOLO
@@ -101,6 +111,11 @@ def promote_current(n,result):
 
 def run_video(n,fresh=False,max_seconds=None):
     import tempfile,shutil
+    if n==6:
+        if max_seconds is not None:raise ValueError('Video6 requires full input')
+        call('scripts/run_fire_review.py')
+        rebuild_backend();update_runtime_hashes()
+        return
     if max_seconds is not None and max_seconds<=0:raise ValueError('max-seconds must be positive')
     if n==2 and max_seconds is not None:raise ValueError('Video2 requires the complete input; omit --max-seconds')
     runtime=ROOT/'outputs/runtime';runtime.mkdir(parents=True,exist_ok=True)
@@ -140,7 +155,7 @@ def refresh_presentations(numbers=None):
     audit=[]
     for video in index['videos']:
         n=video['presentation_video_number']
-        if n==2 or numbers is not None and n not in numbers:continue  # intrusion + PPE already matches the user selection
+        if n in (2,6) or numbers is not None and n not in numbers:continue  # intrusion + PPE already matches the user selection
         spec=specs[n];dest=ROOT/video['diagnostic_root'];summary=json.loads((dest/'summary.json').read_text())
         rows=[json.loads(line) for line in (dest/'detections.jsonl').read_text().splitlines()]
         before={k:hashlib.sha256(json.dumps([r['feature_events'].get(k,[]) for r in rows],sort_keys=True).encode()).hexdigest() for k in spec['enabled_features']}
@@ -213,7 +228,7 @@ def main():
     q=subs.add_parser('check',help='Verify bundled SHA-256; optionally run CPU model inference');q.add_argument('--models',action='store_true')
     subs.add_parser('refresh',help='Update existing presentation videos and logs in place from saved observations')
     subs.add_parser('list',help='Print current review videos and event log locations')
-    q=subs.add_parser('run',help='Update the one current review/events in place; cached observations by default');q.add_argument('--video',type=int,choices=range(1,6),required=True);q.add_argument('--fresh',action='store_true');q.add_argument('--max-seconds',type=float)
+    q=subs.add_parser('run',help='Update the one current review/events in place; cached observations by default');q.add_argument('--video',type=int,choices=range(1,7),required=True);q.add_argument('--fresh',action='store_true');q.add_argument('--max-seconds',type=float)
     q=subs.add_parser('backend',help='Import the five complete event logs and optionally serve APIs');q.add_argument('--import-only',action='store_true');q.add_argument('--port',type=int,default=8010)
     subs.add_parser('test',help='Run detection and backend unit suites')
     a=p.parse_args()

@@ -41,3 +41,5 @@ python handoff.py run --video 1   # … ~ --video 5
 원본: `6_parking_lot_fire.mp4` (1280×720,30fps,12초). 기존1~5번 확정 시연과 분리한 공개 모델 초기검수이며 학습에는 사용하지 않았습니다. 실행: `python scripts/run_fire_review.py` (`safety` 환경). 현재 출력은 `outputs/reviews/6_parking_lot_fire_latest.mp4`, 원시 검출/요약은 `outputs/diagnostics/presentation6_fire_review/`, 모델/출처/비교기록은 `configs/review/fire-current.json`입니다. `handoff.py`의 기존1~5번 및 배포 manifest에는 아직 통합하지 않았습니다.
 
 현재는 불꽃·연기 후보만 표시하며 시간적 확정/알림/백엔드 연결 전 단계입니다. 검출 없음은 안전 판정이 아닙니다. 영상 내 CCTV 시계가 편집으로 도약하므로 재생4초의 첫 검출을 실제 화재 발생 후4초 탐지로 표현하지 않습니다.
+
+2026-10-17 후속: `python handoff.py run --video 6`에 연결했습니다. 현재 결과는 반복 관측 기반 화재 의심, 장면 초기화와 현재 영상 문맥 재탐지를 적용합니다. 이벤트는 `outputs/events/presentation6/fire/`, 백엔드와 주차장CAM06 화면에 연결합니다. 원시 후보만 표시하던 초기 단계 설명은 위 이력으로 남깁니다. 공개 Release 갱신은 아직 하지 않았습니다.

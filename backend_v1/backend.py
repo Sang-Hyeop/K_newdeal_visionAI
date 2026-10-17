@@ -101,8 +101,8 @@ def normalize_event(record):
     for key in ('event_id', 'event_type'):
         if not isinstance(record.get(key), str) or not record[key]:
             raise ValueError(f'Missing or invalid {key}')
-    if record['event_type'] not in ('proximity', 'zone_access', 'zone_dwell', 'ppe', 'status'):
-        raise ValueError('event_type must be proximity, zone_access, zone_dwell, ppe, or status')
+    if record['event_type'] not in ('proximity', 'zone_access', 'zone_dwell', 'ppe', 'fire', 'status'):
+        raise ValueError('event_type must be proximity, zone_access, zone_dwell, ppe, fire, or status')
     if not isinstance(record.get('evidence'), dict):
         raise ValueError('evidence must be an object')
     # source_sha256, scope, track_ids, model_version, and config_version are preserved

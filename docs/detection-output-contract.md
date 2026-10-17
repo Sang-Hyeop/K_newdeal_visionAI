@@ -12,7 +12,7 @@
 
 `schema_version`, `event_id`, `camera_id`, `video`, `source_sha256`, `timestamp_seconds`, `event_type`, `severity`, `observation_status`, `track_ids`, `evidence`, `model_version`, `config_version`, `scope`를 포함합니다. 표시용 `assessment_state`, `alert_eligible`, `notification_category`, `status_reason`도 전달합니다.
 
-- event_type: proximity / zone_access / zone_dwell / ppe / status. 공통 모듈은 forklift_proximity도 지원하지만 현재 발표의 필수 기능은 아닙니다.
+- event_type: proximity / zone_access / zone_dwell / ppe / fire / status. 공통 모듈은 forklift_proximity도 지원하지만 현재 발표의 필수 기능은 아닙니다.
 - severity: SAFE / WARNING / CRITICAL / null. observation_status가 unconfirmed이면 severity는 null입니다.
 - timestamp_seconds는 원본 영상 내 초입니다. 영상별 시간이므로 서로 다른 영상의 초를 하나의 실시간 시계로 비교하지 않습니다.
 - event_id는 입력·버전·내용에 기반한 해시로, 같은 이벤트 재가져오기 중복 방지에 사용합니다.
@@ -29,3 +29,6 @@ PPE 머리 클래스는 작업자 전체 미착용 이벤트와 동일하지 않
 ## 현재 백엔드의 범위
 
 JSONL 가져오기→SQLite 저장→GET 조회가 구현돼 있습니다. `/feature-status`는 선택한 영상의 마지막 관측이며 재생 중인 특정 시각을 자동 조회하는 기능이 아닙니다. 영상 재생 시각별 상태 조회와 신규 이벤트 실시간 수신·푸시는 후속 구현입니다. 최신 설치·실행은 [팀 시작 안내](github-team-quickstart.md)를 따릅니다.
+
+
+6번 확장: `fire`는 현재 화재 의심 판정입니다. 같은 영역의 반복 불꽃 관측으로 CRITICAL을 만들며 실제 화재 확정을 의미하지 않습니다. `current_detection=false`인 최대0.6초 유지에는 `fire_bbox_xyxy=null`을 기록합니다. 미관측은 SAFE/진화 완료가 아니며 장면·시계 오버레이 변화 때 관측을 초기화합니다. 관측 스냅샷과 상태 전이 이벤트를 분리하므로 같은 에피소드의 매 프레임을 별도 알람으로 저장하지 않습니다.

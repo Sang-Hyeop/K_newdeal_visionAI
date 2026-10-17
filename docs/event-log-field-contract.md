@@ -17,7 +17,7 @@ API 영문 필드·enum은 변경하지 않습니다. 한글은 표시/내보내
 
 | 주제 | 실제 구현/로그 | 초안·주의 |
 | --- | --- | --- |
-| `event_type` | 백엔드 허용: proximity, zone_access, zone_dwell, ppe, status | `forklift_proximity`는 생성기 별칭일 수 있으나 **ingest 미지원** |
+| `event_type` | 백엔드 허용: proximity, zone_access, zone_dwell, ppe, fire, status | `forklift_proximity`는 생성기 별칭일 수 있으나 **ingest 미지원** |
 | `evidence.region` | 계약: outside/approach/inside/unknown | 발표 1~5 로그 실측: outside/inside/unknown (approach 희박·없음) |
 | `camera_id` | demo-video2/4/5/7, presentation2-robot-intrusion | demo-video 번호 ≠ 발표 번호 |
 | 운영 상태(조치 완료 등) | API에 없음 | 새로 만들지 않음 |

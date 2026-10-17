@@ -16,7 +16,8 @@
     "zone_access": "구역 접근·진입",
     "zone_dwell": "구역 체류",
     "ppe": "안전모 착용 상태",
-    "status": "상태 정보"
+    "status": "상태 정보",
+    "fire": "화재 의심"
   },
   "severities": {
     "SAFE": "안전",
@@ -76,7 +77,8 @@
     "demo-video4": "4번 영상 카메라",
     "demo-video5": "5번 영상 카메라",
     "demo-video2": "과거 1번 영상 카메라",
-    "demo-video7": "과거 5번 영상 카메라"
+    "demo-video7": "과거 5번 영상 카메라",
+    "parking-P01": "주차장 카메라"
   },
   "zones": {
     "yellow_line_vehicle_lane": "안전 통로(시연 ROI)",
@@ -103,6 +105,10 @@
     "5_Logistics Warehouse.mp4": {
       "presentation_video_number": 5,
       "label": "5. 물류창고 종합"
+    },
+    "6_parking_lot_fire.mp4": {
+      "presentation_video_number": 6,
+      "label": "6. 주차장 화재 의심 감지"
     }
   },
   "columns": {
