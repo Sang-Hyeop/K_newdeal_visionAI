@@ -71,16 +71,38 @@ def check(models=False):
         print('PASS PPE helper:',len(FinalPPEDetector().predict(frame)),'head observations')
     return 0
 
+def file_sha256(path):
+    """Hash large assets without loading the entire video/log into memory."""
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
 def update_runtime_hashes():
-    path=ROOT/'configs/github-runtime.json';assets=json.loads(path.read_text());overrides={}
+    path = ROOT / 'configs/github-runtime.json'
+    assets = json.loads(path.read_text())
+    overrides = {}
     for item in assets['files']:
-        p=ROOT/item['path']
-        if not p.exists():overrides[item['path']]={'disabled_by_presentation_selection':True}
-        elif p.stat().st_size!=item['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']:
-            overrides[item['path']]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
-    assets['local_presentation_overrides']=overrides
-    assets['local_runtime_status']='Current local results; remote Release changes only after an explicit publish request'
-    path.write_text(json.dumps(assets,indent=2)+'\n')
+        asset = ROOT / item['path']
+        if not asset.exists():
+            overrides[item['path']] = {'disabled_by_presentation_selection': True}
+            continue
+        size = asset.stat().st_size
+        digest = file_sha256(asset)
+        if size != item['bytes'] or digest != item['sha256']:
+            overrides[item['path']] = {'bytes': size, 'sha256': digest}
+    assets['local_presentation_overrides'] = overrides
+    assets['local_runtime_status'] = 'Current local results; remote Release changes only after an explicit publish request'
+    path.write_text(json.dumps(assets, indent=2) + '\n')
+
+
+def validate_current_records(path, enabled_features, video_number):
+    """Validate the same feature contract while retaining only one frame at a time."""
+    with path.open(encoding='utf-8') as stream:
+        for line in stream:
+            row = json.loads(line)
+            assert set(row['feature_events']) == set(enabled_features)
+            if video_number == 3:
+                assert all(d['class'] == 'person' for d in row['object_detections'])
 
 
 def rebuild_backend():
@@ -107,9 +129,7 @@ def promote_current(n,result):
     if ff:subprocess.run([ff,'-y','-loglevel','error','-i',str(movie),'-c:v','libx264','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(encoded)],check=True)
     else:shutil.copy2(movie,encoded)
     spec=next(x for x in json.loads((ROOT/'configs/demo-scenarios.json').read_text())['scenarios']if x['video_number']==n)
-    rows=[json.loads(line)for line in(result/'detections.jsonl').read_text().splitlines()]
-    assert all(set(row['feature_events'])==set(spec['enabled_features'])for row in rows)
-    if n==3:assert all(d['class']=='person'for row in rows for d in row['object_detections'])
+    validate_current_records(result/'detections.jsonl', spec['enabled_features'], n)
     for name in ['summary.json','detections.jsonl']:shutil.copy2(result/name,dest/name)
     for p in dest.glob('preview_*.jpg'):p.unlink()
     for p in result.glob('preview_*.jpg'):shutil.copy2(p,dest/p.name)
@@ -231,7 +251,7 @@ def refresh_presentations(numbers=None):
             entries=json.loads(parent.read_text())
             if isinstance(entries,list):
                 entries=[summary if e.get('presentation_video_number',e.get('video_number')) in (n,spec['video_number']) else e for e in entries];parent.write_text(json.dumps(entries,indent=2)+'\n')
-        audit.append(dict(video=n,samples=count,enabled_features=spec['enabled_features'],retained_verdict_hashes=after,review_sha256=hashlib.sha256(review.read_bytes()).hexdigest()))
+        audit.append(dict(video=n,samples=count,enabled_features=spec['enabled_features'],retained_verdict_hashes=after,review_sha256=file_sha256(review)))
         print(f'Updated existing video {n}: {spec["enabled_features"]}',flush=True)
     index['videos'][1]['enabled_features']=['zone_access','ppe']
     index['source_summary_transform']='Current presentation feature selection applied; retained rule verdicts unchanged; disabled feature logs removed.'

@@ -1,0 +1,11 @@
+#!/bin/bash
+# packaging/macos/시선.app 진입점 → 같은 폴더의 run_sisun.sh 로 위임
+# MacOS → Contents → 시선.app → macos 이므로 ../../../run_sisun.sh
+set -euo pipefail
+DIR="$(cd "$(dirname "$0")" && pwd)"
+RUN="$DIR/../../../run_sisun.sh"
+if [ ! -f "$RUN" ]; then
+  osascript -e 'display alert "시선" message "run_sisun.sh 를 찾지 못했습니다.\n프로젝트 dashboard/packaging/macos/ 를 확인하세요."' 2>/dev/null || true
+  exit 1
+fi
+exec /bin/bash "$RUN"
