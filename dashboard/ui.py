@@ -5,6 +5,7 @@ import gradio as gr
 import pandas as pd
 
 from .events import part_area, part_of
+from .timeline import event_seconds, event_timestamps
 from .config import (
     ADMINS,
     CAMERAS,
@@ -29,9 +30,7 @@ def live_flash_html(part, elapsed, window=2.5):
     if part is None or len(part) == 0:
         return ""
     col = "grade" if "grade" in part.columns else "status"
-    start = pd.Timestamp(clock_start())
-    ts = pd.to_datetime(part["timestamp"], errors="coerce")
-    sec = (ts - start).dt.total_seconds().fillna(0)
+    sec = event_seconds(part)
     now = part[(sec <= float(elapsed)) & (sec >= float(elapsed) - window)]
     if now is None or len(now) == 0:
         return ""
@@ -341,13 +340,13 @@ def _ppe_wear(st, grade):
 
 
 def _time_bin_labels(d):
-    ts = pd.to_datetime(d["timestamp"])
+    ts = event_timestamps(d)
     hours = ts.dt.floor("h").nunique()
     if hours >= 3:
-        return ts.dt.strftime("%H:00")
+        return ts.dt.strftime("%H:00").fillna("시각 미상")
     base = pd.Timestamp(clock_start())
-    slot = ((ts - base).dt.total_seconds() // 10 * 10).astype(int)
-    return slot.map(lambda s: (base + pd.Timedelta(seconds=int(s))).strftime("%H:%M:%S"))
+    slot = (ts - base).dt.total_seconds() // 10 * 10
+    return slot.map(lambda s: (base + pd.Timedelta(seconds=int(s))).strftime("%H:%M:%S") if pd.notna(s) else "시각 미상")
 
 
 def _grouped_time_html(d):

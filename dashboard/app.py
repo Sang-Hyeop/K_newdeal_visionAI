@@ -1,7 +1,6 @@
 # 탭 화면 조립·로그인 후 대시보드 실행
 import os
 import threading
-import time
 
 import gradio as gr
 
@@ -20,8 +19,9 @@ from .config import (
     cam_side_label,
     cam_tag,
 )
-from .events import get_df, live_part, load_df, peek_df
+from .events import get_df, live_part, live_positions, load_df, peek_df
 from .media import camera_detect, camera_origin
+from .timeline import playback_inputs
 from .sound import beep_html, notify
 from .style import BOOT_JS, CSS, make_theme
 from .ui import (
@@ -185,6 +185,7 @@ def _cam_wall(cams, dest_key, wall_id="sisun-wall", captions=False, expandable=T
                                     show_label=False,
                                     height=vid_h,
                                     elem_classes="sisun-cam-vid",
+                                    elem_id=f"sisun-video-{wall_id}-{cam['id']}",
                                     buttons=[],
                                 )
                             )
@@ -222,20 +223,66 @@ def _attach_vid_timer(demo, vids, dests, cams, dest_key):
 
 
 def make_main(cams):
-    """메인 관제: 전 카메라 원본 영상 + 소제목(창고 A cam01)."""
+    """메인 관제: 전 카메라 원본 영상 + KPI는 0부터 실시간 증가."""
     with gr.Blocks() as demo:
-        kpis = gr.HTML()
+        kpis = gr.HTML(kpi_html(None))
         sound = gr.HTML(elem_classes="t2-sound")
+        playing = gr.State(False)
+        playheads = gr.JSON(value={}, visible=False)
+        ready = gr.State(False)
         vids, dests, cam_refs = _cam_wall(cams, "origin", wall_id="sisun-wall", captions=True)
         btn = gr.Button("새로고침", elem_classes="t2-refresh")
-        outs = [sound, kpis]
-        _attach_boot(demo, outs, lambda view: (beep_html(notify(view)), kpi_html(view)))
-        btn.click(
-            lambda: (lambda v: (beep_html(notify(v)), kpi_html(v)))(load_df(force=True)),
-            outputs=outs,
+        timer = gr.Timer(0.4, active=False)
+
+        def _paths():
+            out = []
+            for cam, dest in zip(cam_refs, dests):
+                path = _ensure_clip(cam, "origin") if dest == cam["origin"] else _existing(dest)
+                out.append(path if path else gr.update())
+            return out
+
+        def _start(force):
+            if force:
+                load_df(force=True)
+            paths = _paths()
+            return (
+                tuple(paths)
+                + (True, {}, True, "", kpi_html(None), gr.update(active=True))
+            )
+
+        def begin():
+            return _start(False)
+
+        def refresh():
+            return _start(True)
+
+        def stop():
+            n = len(vids)
+            return tuple(gr.update() for _ in range(n)) + (
+                False, {}, False, "", kpi_html(None), gr.update(active=False),
+            )
+
+        def tick(on, positions, is_ready):
+            if not on or not is_ready:
+                return gr.update(), gr.update()
+            view = get_df()
+            if view is None:
+                view = peek_df()
+            if view is None:
+                return gr.update(), kpi_html(None)
+            part = live_positions(view, positions)
+            return beep_html(notify(part)), kpi_html(part)
+
+        outs = vids + [playing, playheads, ready, sound, kpis, timer]
+        timer.tick(
+            tick, inputs=[playing, playheads, ready], outputs=[sound, kpis],
+            js=playback_inputs("sisun-wall", cams), concurrency_limit=1,
         )
+        btn.click(refresh, outputs=outs)
         _attach_vid_timer(demo, vids, dests, cam_refs, "origin")
-        demo._kpi_outs = outs
+        demo._live_begin = begin
+        demo._live_stop = stop
+        demo._live_outs = outs
     return demo
 
 
@@ -246,7 +293,7 @@ def make_camera(cam):
     with gr.Blocks() as demo:
         gr.HTML(title_html(f"{title} · 감지 관제"), elem_classes="t2-title-block")
         playing = gr.State(False)
-        started_at = gr.State(0.0)
+        playheads = gr.JSON(value={}, visible=False)
         ready = gr.State(False)
         banner = gr.HTML()
         vids, dests, _cams = _cam_wall(
@@ -270,7 +317,7 @@ def make_camera(cam):
             paths = _paths()
             return (
                 tuple(paths)
-                + (True, time.time(), True, "", "", table_html(empty, allow_empty=True), gr.update(active=True))
+                + (True, {}, True, "", "", table_html(empty, allow_empty=True), gr.update(active=True))
             )
 
         def begin():
@@ -282,16 +329,16 @@ def make_camera(cam):
         def stop():
             n = len(vids)
             return tuple(gr.update() for _ in range(n)) + (
-                False, 0.0, False, "", "", "", gr.update(active=False),
+                False, {}, False, "", "", "", gr.update(active=False),
             )
 
-        def tick(on, t0, is_ready):
+        def tick(on, positions, is_ready):
             if not on or not is_ready:
                 return gr.update(), gr.update(), gr.update()
-            elapsed = time.time() - t0
             view = get_df()
             if view is None:
                 view = load_df()
+            elapsed = float((positions or {}).get(cam_id, 0.0))
             part = live_part(view, cam_id, None, elapsed)
             return (
                 beep_html(notify(part)),
@@ -299,10 +346,10 @@ def make_camera(cam):
                 table_html(part, allow_empty=True),
             )
 
-        outs = vids + [playing, started_at, ready, sound, banner, log, timer]
+        outs = vids + [playing, playheads, ready, sound, banner, log, timer]
         timer.tick(
-            tick, inputs=[playing, started_at, ready], outputs=[sound, banner, log],
-            concurrency_limit=None,
+            tick, inputs=[playing, playheads, ready], outputs=[sound, banner, log],
+            js=playback_inputs(f"sisun-wall-{cam_id}", [cam]), concurrency_limit=1,
         )
         btn.click(refresh, outputs=outs)
         demo._live_begin = begin
@@ -471,6 +518,15 @@ def launch():
                     packed.extend(block._live_begin() if i == idx else block._live_stop())
                 return vis + btns + packed + [header_html(uid, TABS[idx]["name"])]
 
+            def start_home_live(user):
+                """로그인 직후 #1 메인 KPI·라이브 시계 시작."""
+                if not user:
+                    return tuple(gr.update() for _ in live_outs)
+                packed = []
+                for i, block in lives:
+                    packed.extend(block._live_begin() if i == 0 else block._live_stop())
+                return packed
+
             side_outs = panels + side_btns + live_outs + [head]
             for idx, btn in enumerate(side_btns):
                 btn.click(
@@ -499,11 +555,15 @@ def launch():
             _login_flow, inputs=[uid, pw], outputs=login_outs, concurrency_limit=1,
         ).then(
             _after_login, inputs=[user_st], outputs=_BOOT_TIMERS, concurrency_limit=1,
+        ).then(
+            start_home_live, inputs=[user_st], outputs=live_outs, concurrency_limit=1,
         ).then(None, js=hide_js)
         pw.submit(
             _login_flow, inputs=[uid, pw], outputs=login_outs, concurrency_limit=1,
         ).then(
             _after_login, inputs=[user_st], outputs=_BOOT_TIMERS, concurrency_limit=1,
+        ).then(
+            start_home_live, inputs=[user_st], outputs=live_outs, concurrency_limit=1,
         ).then(None, js=hide_js)
         logout_btn.click(
             do_logout,

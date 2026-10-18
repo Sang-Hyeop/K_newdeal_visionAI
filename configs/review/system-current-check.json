@@ -1,9 +1,9 @@
 {
   "date": "2026-10-18",
-  "status": "issues_reproduced_no_runtime_code_changes",
-  "scope": "Actual local dashboard/API launched on isolated ports17862/18012; login and tab navigation; fire history; statistics; review decoding; model smoke inference; existing tests. Existing user edits in dashboard/app.py and events.py preserved.",
+  "status": "three_reported_defects_fixed_and_verified",
+  "scope": "Three time/statistics/playback defects repaired; browser exercised on isolated UI17863/API18013; final models and canonical detection outputs unchanged.",
   "tests": {
-    "detection_dashboard": 302,
+    "detection_dashboard": 305,
     "backend": 22,
     "model_weight_inference": 7,
     "review_frames_decoded": {
@@ -28,7 +28,9 @@
       "line": 344,
       "reproduction": "Login then #10 종합 데이터; actual UI shows 오류. stats_html(current_262_rows) raises ValueError: unconverted data remains .0",
       "cause": "Integer-second and fractional-second strings are parsed with one inferred pandas format",
-      "recommended_fix": "Preserve numeric source seconds or normalize timestamp parsing in one shared helper; add mixed-timestamp statistics regression."
+      "recommended_fix": "Preserve numeric source seconds or normalize timestamp parsing in one shared helper; add mixed-timestamp statistics regression.",
+      "status": "resolved",
+      "resolution": "Shared ISO8601 parsing handles integer/fractional seconds; invalid timestamps remain unknown, including statistical bins."
     },
     {
       "priority": 1,
@@ -37,7 +39,9 @@
       "line": 1038,
       "reproduction": "live_until(current_rows,0.1) includes all four fire rows at4.0/4.6/8.2/8.8",
       "cause": "Mixed timestamp parse errors coerce fractional fire rows to NaT, then fillna(0) treats them as immediate events",
-      "recommended_fix": "Use normalized source seconds; do not convert invalid timestamps to zero."
+      "recommended_fix": "Use normalized source seconds; do not convert invalid timestamps to zero.",
+      "status": "resolved",
+      "resolution": "KPI filters use validated source-relative seconds; no NaT-to-zero fallback."
     },
     {
       "priority": 2,
@@ -46,7 +50,9 @@
       "line": 338,
       "reproduction": "Actual parking video loop enabled and pausable; event clock uses time.time()-tab-entry. Saw current video position6sec with8.8sec row already visible after elapsed wall clock exceeded duration.",
       "cause": "No video currentTime/pause/seek/loop synchronization; wall clock continues across pause and loop",
-      "recommended_fix": "Choose explicitly between cumulative-session history and current-playback history; live camera table should follow actual playhead if intended as synchronized demo."
+      "recommended_fix": "Choose explicitly between cumulative-session history and current-playback history; live camera table should follow actual playhead if intended as synchronized demo.",
+      "status": "resolved",
+      "resolution": "Gradio timer receives actual DOM HTMLMediaElement.currentTime per camera; pause/seek/loop follow playhead; no time.time fallback."
     }
   ],
   "limits": [
@@ -57,8 +63,18 @@
   ],
   "evidence_screenshot": {
     "path": "outputs/diagnostics/system-current-check.png",
-    "sha256": "21997d62867a697039c4df97af765507b792800797e7b92abd577139089edfec"
+    "sha256": "8e43494c41b2fdad24cadfe1d4b0a8c198dd1df558d125ba8d81977b6ac2c7c1"
   },
   "models_changed": false,
-  "github_pushed": false
+  "github_pushed": false,
+  "browser_verification": {
+    "statistics": "Actual #10 statistics cards and time chart render, no prior error panel.",
+    "main": "All six paused at0; KPI remains0 instead of following wall clock.",
+    "camera_pause": "Parking video paused at6.0 sec; only4.6-sec alert remains despite later wall time.",
+    "camera_seek": "Native fullscreen scrubber Home sets0; table clears. Seeking to6.0 shows only first alert after next tick.",
+    "camera_loop": "Natural12-sec loop observed at2.46sec playing; no previous-cycle alert rows.",
+    "history": "All raw logs retained; only live table/KPI are playhead-filtered.",
+    "probe_note": "An offscreen/native scrubber automation attempt produced one Gradio non-finite currentTime browser-console error; subsequent visible fullscreen native seeking worked. Not presented as proof of a completely error-free browser console."
+  },
+  "runtime_code_changed": true
 }

@@ -25,6 +25,7 @@ from .config import (
     _clock_fields,
 )
 from .records import iter_jsonl, jsonl_snapshot, read_jsonl as _read_jsonl
+from .timeline import event_seconds
 from .sound import write_beep
 
 _DF_LOCK = threading.Lock()
@@ -1028,15 +1029,31 @@ def part_site(d, site_id, sids=None):
     return view.sort_values(["timestamp", "event_id"], ascending=False)
 
 
+def live_until(d, elapsed):
+    """영상 시작(09:00:00) 기준 elapsed초까지 나온 로그만. 시작 직후(0초)는 비움."""
+    if d is None or len(d) == 0:
+        return d
+    if float(elapsed) <= 0:
+        return d.iloc[0:0]
+    sec = event_seconds(d)
+    return d[sec <= float(elapsed)]
+
+
+def live_positions(d, positions):
+    """Each camera follows its own real playhead, including pause/seek/loop."""
+    if d is None or len(d) == 0:
+        return d
+    if not isinstance(positions, dict):
+        return d.iloc[0:0]
+    limits = pd.to_numeric(d["area"].map(positions), errors="coerce")
+    sec = event_seconds(d)
+    return d[(limits > 0) & (sec >= 0) & (sec <= limits)]
+
+
 def live_part(d, area_id, sids, elapsed, site_id=None):
     """탭을 연 뒤 elapsed초까지 나온 로그만. 영상 시작=09:00:00."""
     if site_id:
         part = part_site(d, site_id, sids)
     else:
         part = part_area(d, area_id, sids)
-    if part is None or len(part) == 0:
-        return part
-    start = pd.Timestamp(clock_start())
-    ts = pd.to_datetime(part["timestamp"], errors="coerce")
-    sec = (ts - start).dt.total_seconds().fillna(0)
-    return part[sec <= float(elapsed)]
+    return live_until(part, elapsed)
