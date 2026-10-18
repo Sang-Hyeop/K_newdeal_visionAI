@@ -19,11 +19,55 @@ from .config import (
     SCENARIOS,
     STATUS_FG,
     ZONES,
+    cam_side_label,
     cam_tag,
     clock_start,
     ko,
     sc_of,
 )
+
+def cam_danger_overlay_html(active, place=""):
+    """메인 영상 위 위험 반투명 박스. active=False면 숨김."""
+    if not active:
+        return "<div class='sisun-cam-alert-inner sisun-cam-alert-off' aria-hidden='true'></div>"
+    place_html = (
+        f"<div class='sisun-cam-alert-place'>{_esc(place)}</div>" if place else ""
+    )
+    return (
+        "<div class='sisun-cam-alert-inner sisun-cam-alert-on' role='alert'>"
+        "<div class='sisun-cam-alert-kicker'>위험 알림</div>"
+        "<div class='sisun-cam-alert-msg'>확인 바랍니다</div>"
+        f"{place_html}</div>"
+    )
+
+
+def danger_overlay_updates(view, cams, positions, window=12.0):
+    """재생 위치 기준 최근 window초 안에 위험이 있는 카메라만 오버레이 ON."""
+    idle = [cam_danger_overlay_html(False) for _ in cams]
+    if view is None or len(view) == 0 or not cams:
+        return idle
+    if not isinstance(positions, dict):
+        return idle
+    col = "grade" if "grade" in view.columns else "status"
+    hot = view[view[col] == "위험"]
+    if len(hot) == 0:
+        return idle
+    sec = event_seconds(hot)
+    areas = hot["area"].astype(str)
+    out = []
+    for cam in cams:
+        cid = str(cam.get("id") or "")
+        try:
+            t = float(positions.get(cid, 0.0))
+        except (TypeError, ValueError):
+            t = 0.0
+        on = False
+        if t > 0 and cid:
+            mask = (areas == cid) & (sec <= t) & (sec >= t - float(window))
+            on = bool(mask.any())
+        out.append(cam_danger_overlay_html(on, cam_side_label(cam) if on else ""))
+    return out
+
 
 def live_flash_html(part, elapsed, window=2.5):
     """지금 시각 근처의 주의·위험만 큰 경고로 띄움."""

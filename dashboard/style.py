@@ -18,7 +18,32 @@ html.sisun-light {
   --sisun-line: #cbd5e1; --sisun-accent: #2563eb;
 }
 footer { display: none !important; }
-.gradio-container { max-width: 100% !important; padding: 0 18px 28px 18px !important; }
+/* 전체화면: Gradio Soft 기본 가운데 고정폭(잘린 느낌) 제거 */
+html, body {
+  width: 100% !important; max-width: 100% !important;
+  margin: 0 !important; padding: 0 !important;
+  overflow-x: hidden !important;
+}
+html .gradio-container,
+.gradio-container,
+.gradio-container.gradio-container,
+main,
+.main,
+.app,
+.wrap,
+.contain,
+.fillable,
+[class*="svelte"] > .main {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+.gradio-container {
+  padding: 0 12px 20px 12px !important;
+}
 .t2-refresh, .t2-refresh button {
   background: #fbbf24 !important; color: #111827 !important;
   border: 2px solid #111827 !important; font-weight: 800 !important;
@@ -87,6 +112,170 @@ html, body, .gradio-container { background: var(--sisun-page) !important; color:
   font-size: 48px; line-height: 1.1;
   box-shadow: 0 0 0 6px rgba(245,158,11,.5), 0 0 48px #f59e0b;
 }
+
+/* Gradio 기본 Warning 토스트는 라이트모드 글자색이 깨져서 숨기고 커스텀 스택 사용 */
+.toast-wrap,
+div.toast-wrap,
+.toastify {
+  display: none !important;
+}
+
+/* 우측 상단 종: 클릭으로 알림창 열기/닫기. 음소거는 창 안 버튼 */
+#sisun-bell-wrap {
+  position: fixed; top: 10px; right: 28px; z-index: 99999;
+  width: auto; pointer-events: none;
+  padding: 6px; /* 배지·원형이 잘리지 않게 */
+  box-sizing: content-box;
+}
+.sisun-bell-btn {
+  pointer-events: auto;
+  position: relative;
+  width: 42px; height: 42px; padding: 0; margin: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, .4);
+  background: #0f172a;
+  color: #f8fafc;
+  box-shadow: 0 8px 22px rgba(2, 6, 23, .35);
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.sisun-bell-btn:hover { border-color: rgba(147, 197, 253, .8); }
+.sisun-bell-btn svg { width: 20px; height: 20px; display: block; }
+.sisun-bell-btn .sisun-bell-slash { display: none; }
+.sisun-bell-btn.is-muted .sisun-bell-on { display: none; }
+.sisun-bell-btn.is-muted .sisun-bell-slash { display: block; }
+.sisun-bell-badge {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 999px; font-size: 11px; font-weight: 800;
+  display: none; align-items: center; justify-content: center;
+  background: #ef4444; color: #fff !important;
+  border: 2px solid #0f172a;
+  pointer-events: none;
+}
+.sisun-bell-badge.has-items { display: inline-flex; }
+.sisun-bell-badge.is-warn { background: #d97706; }
+
+/* 알림창: 기본 숨김. 종 클릭 시에만 표시 */
+#sisun-alert-rail {
+  position: fixed;
+  top: 64px;
+  right: 10px;
+  width: 220px;
+  max-height: min(70vh, 560px);
+  bottom: auto;
+  z-index: 99990;
+  display: none;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, .28);
+  background: rgba(15, 23, 42, .96);
+  color: #f8fafc !important;
+  box-shadow: 0 12px 32px rgba(2, 6, 23, .4);
+  overflow: hidden;
+  pointer-events: auto;
+}
+#sisun-alert-rail.is-open { display: flex; }
+.sisun-rail-head {
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 8px 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, .22);
+  font-size: 12px; font-weight: 800;
+}
+.sisun-rail-actions {
+  display: flex; align-items: center; gap: 4px; flex: 0 0 auto;
+}
+.sisun-rail-mute-btn,
+.sisun-rail-read-btn {
+  flex: 0 0 auto;
+  margin: 0; padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, .4);
+  background: rgba(30, 41, 59, .9);
+  color: #e2e8f0 !important;
+  font-size: 10px; font-weight: 700;
+  line-height: 1.2; white-space: nowrap;
+  cursor: pointer;
+}
+.sisun-rail-mute-btn:hover,
+.sisun-rail-read-btn:hover {
+  border-color: rgba(147, 197, 253, .75);
+  color: #fff !important;
+}
+.sisun-rail-mute-btn.is-muted {
+  border-color: rgba(248, 113, 113, .55);
+  color: #fecaca !important;
+}
+.sisun-bell-list,
+.sisun-rail-list {
+  flex: 1 1 auto; min-height: 0;
+  display: flex; flex-direction: column; gap: 6px;
+  overflow-x: hidden; overflow-y: auto;
+  padding: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+.sisun-bell-empty,
+.sisun-rail-empty {
+  padding: 14px 6px; text-align: center;
+  font-size: 11px; font-weight: 700; opacity: .7; line-height: 1.35;
+}
+.sisun-toast {
+  border-radius: 8px;
+  padding: 7px 8px;
+  border: 1px solid rgba(148, 163, 184, .25);
+  background: rgba(2, 6, 23, .55);
+  color: #f8fafc !important;
+}
+.sisun-toast * { color: inherit !important; }
+.sisun-toast-head {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 800; margin-bottom: 2px;
+}
+.sisun-toast-ico {
+  width: 14px; height: 14px; border-radius: 3px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 900; flex: 0 0 auto;
+}
+.sisun-toast-warn .sisun-toast-ico { background: #fbbf24; color: #111827 !important; }
+.sisun-toast-hot .sisun-toast-ico { background: #ef4444; color: #ffffff !important; }
+.sisun-toast-text {
+  font-size: 11px; font-weight: 700; line-height: 1.3;
+  color: #f8fafc !important;
+}
+html.sisun-light .sisun-bell-btn {
+  background: #ffffff; color: #0f172a;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, .12);
+}
+html.sisun-light .sisun-bell-badge { border-color: #ffffff; }
+html.sisun-light #sisun-alert-rail {
+  background: rgba(255, 255, 255, .98);
+  color: #0f172a !important;
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, .14);
+}
+html.sisun-light .sisun-rail-mute-btn,
+html.sisun-light .sisun-rail-read-btn {
+  background: #f8fafc;
+  color: #334155 !important;
+  border-color: #cbd5e1;
+}
+html.sisun-light .sisun-rail-mute-btn:hover,
+html.sisun-light .sisun-rail-read-btn:hover {
+  color: #0f172a !important;
+  border-color: #94a3b8;
+}
+html.sisun-light .sisun-rail-mute-btn.is-muted {
+  border-color: #fca5a5;
+  color: #b91c1c !important;
+}
+html.sisun-light .sisun-toast {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0;
+}
+html.sisun-light .sisun-toast-text { color: #0f172a !important; }
 
 /* #7 통합 알람, #8 이벤트 이력만 흰 바탕 */
 .sisun-paper {
@@ -244,12 +433,27 @@ html, body, .gradio-container { background: var(--sisun-page) !important; color:
   border: none !important; background: transparent !important;
 }
 
+:root {
+  --sisun-side-w: 200px;
+  --sisun-side-gap: 38px; /* 사이드바↔본문 약 1cm */
+}
 .sisun-header {
-  display: grid; grid-template-columns: minmax(160px,1fr) auto minmax(160px,1fr);
-  align-items: center; gap: 10px 16px;
-  min-height: 56px; padding: 8px 16px; margin: 0 -18px 12px -18px;
+  display: grid; grid-template-columns: minmax(160px,1fr) auto minmax(200px,1fr);
+  align-items: center; gap: 10px 20px;
+  min-height: 56px; padding: 8px 12px; margin: 0 -12px 12px -12px;
   background: var(--sisun-header-bg) !important;
   border-bottom: 1px solid var(--sisun-line) !important; color: var(--sisun-card-fg);
+  box-sizing: border-box !important;
+  width: calc(100% + 24px) !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+}
+/* 왼쪽은 끝에 붙이고, 오른쪽은 종 아이콘 공간 넉넉히 */
+html .sisun-header,
+html.sisun-side-closed .sisun-header,
+html:not(.sisun-side-closed) .sisun-header {
+  padding-left: 12px !important;
+  padding-right: 88px !important;
 }
 .sisun-h-left, .sisun-h-right { display: flex; align-items: center; gap: 12px; min-width: 0; }
 /* 사이드바 토글 — 둥근 다크 칩 + CSS-only 햄버거/접기 (빈 태그 없이) */
@@ -319,7 +523,16 @@ html.sisun-side-closed .sisun-side {
 }
 .sisun-h-right {
   flex-direction: column; align-items: flex-end; justify-content: center;
-  gap: 2px; font-size: 13px; text-align: right; line-height: 1.35;
+  gap: 4px; font-size: 13px; text-align: right; line-height: 1.4;
+  padding-right: 8px;
+  margin-right: 0;
+  overflow: visible !important;
+}
+.sisun-h-right .sisun-hello,
+.sisun-h-right .sisun-clock,
+.sisun-h-right .sisun-notice {
+  white-space: nowrap;
+  padding-right: 2px;
 }
 .sisun-h-center { text-align: center; }
 .sisun-h-title { font-size: 1.35rem; font-weight: 800; line-height: 1.15; color: var(--sisun-title); letter-spacing: .02em; }
@@ -348,26 +561,41 @@ html.sisun-side-closed .sisun-side {
   display: flex !important; flex-direction: row !important;
   flex-wrap: nowrap !important; align-items: flex-start !important;
   width: 100% !important; min-width: 0 !important;
+  gap: 0 !important;
 }
-/* 사이드 fixed 공간 확보 (본문이 밑으로 들어가지 않게) */
+/* Gradio 래퍼가 사이드 칸을 또 차지하지 않게 */
+.sisun-dash-row > .gap > *:has(#sisun-side),
+.sisun-dash-row > .form > *:has(#sisun-side),
+.sisun-dash-row > *:has(#sisun-side) {
+  flex: 0 0 0 !important;
+  width: 0 !important; min-width: 0 !important; max-width: 0 !important;
+  padding: 0 !important; margin: 0 !important; border: none !important;
+  overflow: visible !important; background: transparent !important;
+}
+/* 사이드는 fixed라 flex 공간을 안 먹고, 본문만 왼쪽 여백으로 피함 */
 html:not(.sisun-side-closed) .sisun-dash-row {
-  padding-left: 214px !important; /* 200 사이드 + 14 간격 */
+  padding-left: calc(var(--sisun-side-w) + var(--sisun-side-gap)) !important; /* 200 + 38 ≈ 1cm */
   box-sizing: border-box !important;
 }
 html.sisun-side-closed .sisun-dash-row { padding-left: 0 !important; }
-.sisun-body { min-width: 0 !important; flex: 1 1 auto !important; width: 100% !important; }
+.sisun-body {
+  min-width: 0 !important; flex: 1 1 auto !important;
+  width: 100% !important; max-width: 100% !important;
+}
 .sisun-body .tab-nav, .sisun-tabs .tab-nav, .sisun-body [role="tablist"] {
   display: none !important; height: 0 !important; overflow: hidden !important;
   padding: 0 !important; margin: 0 !important; border: none !important;
 }
 #sisun-side, .sisun-side {
-  /* 본문 스크롤과 분리 — 화면 왼쪽 고정, 메뉴만 안쪽 스크롤 */
+  /* 본문 스크롤과 분리 — 화면 왼쪽 고정. flex 칸은 0으로 두어 이중 여백 방지 */
   position: fixed !important;
   top: 72px !important;
   left: 18px !important;
   z-index: 40 !important;
-  width: 200px !important;
-  flex: 0 0 200px !important; min-width: 200px !important; max-width: 200px !important;
+  width: var(--sisun-side-w) !important;
+  flex: 0 0 0 !important;
+  min-width: 0 !important;
+  max-width: none !important;
   background: var(--sisun-side-bg) !important; border: 1px solid var(--sisun-line) !important;
   border-radius: 10px !important; padding: 10px 8px 8px 8px !important; margin: 0 !important;
   height: calc(100vh - 84px) !important;
@@ -580,11 +808,65 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   border: none !important; background: transparent !important;
 }
 /* 소제목만 있는 메인 칸도 비디오 박스가 꽉 차게 */
-.sisun-cam-slot .sisun-cam > .block:not(:has(.sisun-cam-tag)) {
+.sisun-cam-slot .sisun-cam > .block:not(:has(.sisun-cam-tag)):not(:has(.sisun-cam-alert-inner)) {
   height: 100% !important; min-height: 100% !important;
   padding: 0 !important; margin: 0 !important;
   border: none !important; background: transparent !important;
 }
+/* 메인 영상 하단: 위험 알림 반투명 박스 (~절반). 영상은 위에 그대로 보이게 */
+.sisun-cam > .block:has(.sisun-cam-alert-inner),
+.sisun-cam-alert {
+  position: absolute !important;
+  left: 0 !important; right: 0 !important; bottom: 0 !important;
+  top: auto !important;
+  width: 100% !important; height: 50% !important;
+  z-index: 6 !important;
+  padding: 0 !important; margin: 0 !important;
+  border: none !important; background: transparent !important;
+  box-shadow: none !important; min-height: 0 !important;
+  max-height: 50% !important;
+  pointer-events: none !important;
+}
+/* 꺼진 위험 박스는 컨테이너까지 숨겨 옆 목록 영상을 가리지 않음 */
+.sisun-cam > .block:has(.sisun-cam-alert-off),
+.sisun-cam-alert:has(.sisun-cam-alert-off) {
+  display: none !important;
+  height: 0 !important; min-height: 0 !important; max-height: 0 !important;
+}
+.sisun-cam-alert .html-container,
+.sisun-cam-alert .prose {
+  height: 100% !important; padding: 0 !important; margin: 0 !important;
+  background: transparent !important;
+}
+.sisun-cam-alert-inner {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; gap: 4px;
+  box-sizing: border-box; padding: 8px 10px;
+}
+.sisun-cam-alert-off { display: none !important; }
+.sisun-cam-alert-on {
+  background: rgba(185, 28, 28, .82);
+  border-top: 2px solid rgba(254, 202, 202, .55);
+  color: #fff;
+  animation: sisunPulse .9s ease-in-out infinite;
+}
+.sisun-cam-alert-kicker {
+  font-size: 15px; font-weight: 900; letter-spacing: .08em;
+  line-height: 1.15;
+}
+.sisun-cam-alert-msg {
+  font-size: 13px; font-weight: 800; opacity: .95;
+}
+.sisun-cam-alert-place {
+  font-size: 11px; font-weight: 700; opacity: .88;
+  margin-top: 2px; max-width: 100%;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sisun-theater-rail-list .sisun-cam-alert-kicker { font-size: 11px; }
+.sisun-theater-rail-list .sisun-cam-alert-msg { font-size: 10px; }
+.sisun-theater-rail-list .sisun-cam-alert-place { font-size: 9px; }
 /* #1 메인 시어터: 큰 화면 + 옆 목록 */
 .sisun-theater-chrome {
   display: none; width: 100%; min-height: 68vh;
@@ -628,18 +910,20 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   font-size: 11px; font-weight: 800; line-height: 1.2;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-/* 옆 목록: 글 + 작은 영상 썸네일 */
+/* 옆 목록: 글 + 작은 영상 썸네일 (위험 박스가 영상을 통째로 덮지 않게) */
 .sisun-theater-rail-list .sisun-cam {
   width: 100% !important; min-height: 110px !important; height: auto !important;
   aspect-ratio: 16 / 9 !important;
   cursor: pointer !important;
   border-color: rgba(186, 198, 220, .35) !important;
   pointer-events: auto !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 .sisun-theater-rail-list .sisun-cam:hover {
   border-color: rgba(147, 197, 253, .75) !important;
 }
-.sisun-theater-rail-list .sisun-cam .block,
+.sisun-theater-rail-list .sisun-cam .block:not(:has(.sisun-cam-alert-inner)),
 .sisun-theater-rail-list .sisun-cam .video-container,
 .sisun-theater-rail-list .sisun-cam .wrap,
 .sisun-theater-rail-list .sisun-cam .container,
@@ -649,10 +933,28 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   padding: 0 !important; margin: 0 !important;
   border: none !important; background: #000 !important;
 }
+.sisun-theater-rail-list .sisun-cam > .block:has(.sisun-cam-alert-inner),
+.sisun-theater-rail-list .sisun-cam-alert {
+  position: absolute !important;
+  left: 0 !important; right: 0 !important; bottom: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: 40% !important;
+  min-height: 0 !important;
+  max-height: 44% !important;
+  z-index: 6 !important;
+  background: transparent !important;
+  pointer-events: none !important;
+}
+.sisun-theater-rail-list .sisun-cam > .block:has(.sisun-cam-alert-off),
+.sisun-theater-rail-list .sisun-cam-alert:has(.sisun-cam-alert-off) {
+  display: none !important;
+}
 .sisun-theater-rail-list .sisun-cam video {
   width: 100% !important; height: 100% !important; min-height: 110px !important;
   object-fit: cover !important; display: block !important;
   opacity: 1 !important; visibility: visible !important;
+  position: relative !important; z-index: 1 !important;
 }
 html.sisun-light .sisun-theater-rail {
   background: rgba(255,255,255,.92); border-color: #cbd5e1;
@@ -683,8 +985,63 @@ BOOT_JS = """
     collect(document, sel, out);
     return out;
   };
-  window.__sisunSound = true;
+  if (typeof window.__sisunSound !== "boolean") window.__sisunSound = true;
   var seenOn = new WeakMap();
+  var soundOff = function() {
+    return !!window.__sisunBellMuted || window.__sisunSound === false;
+  };
+  var killBeepEl = function(a) {
+    if (!a) return;
+    try {
+      a.autoplay = false;
+      a.removeAttribute("autoplay");
+      a.muted = true;
+      a.defaultMuted = true;
+      a.volume = 0;
+      try { a.pause(); } catch (e1) {}
+      try { a.removeAttribute("src"); a.src = ""; a.load(); } catch (e2) {}
+      try { a.remove(); } catch (e3) {}
+    } catch (e0) {}
+  };
+  var silenceBeeps = function() {
+    // Gradio Soft 섀도우 DOM 안 audio까지 포함
+    allOf("audio.sisun-beep").forEach(killBeepEl);
+    allOf(".sisun-alert-bundle audio").forEach(killBeepEl);
+  };
+  // autoplay/play()가 폴링보다 먼저 울리는 경우 차단
+  if (!window.__sisunBeepPlayPatch) {
+    window.__sisunBeepPlayPatch = true;
+    var _origPlay = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function() {
+      try {
+        if (this && this.classList && this.classList.contains("sisun-beep") && soundOff()) {
+          killBeepEl(this);
+          return Promise.resolve();
+        }
+      } catch (ePlay) {}
+      return _origPlay.apply(this, arguments);
+    };
+  }
+  if (!window.__sisunBeepObs) {
+    window.__sisunBeepObs = true;
+    var watchBeepNode = function(node) {
+      if (!soundOff() || !node || node.nodeType !== 1) return;
+      if (node.matches && (node.matches("audio.sisun-beep") || node.matches(".sisun-alert-bundle audio"))) {
+        killBeepEl(node);
+      }
+      if (node.querySelectorAll) {
+        node.querySelectorAll("audio.sisun-beep, .sisun-alert-bundle audio").forEach(killBeepEl);
+      }
+      if (node.shadowRoot) watchBeepNode(node.shadowRoot);
+    };
+    new MutationObserver(function(muts) {
+      if (!soundOff()) return;
+      muts.forEach(function(m) {
+        m.addedNodes.forEach(watchBeepNode);
+      });
+      silenceBeeps();
+    }).observe(document.documentElement, { childList: true, subtree: true });
+  }
   var gateOn = function() {
     var g = document.getElementById("sisun-gate");
     if (!g) return false;
@@ -1035,9 +1392,11 @@ BOOT_JS = """
       side.style.setProperty("display", "flex", "important");
       side.style.setProperty("position", "fixed", "important");
       side.style.setProperty("z-index", "40", "important");
+      // flex 흐름에서는 자리 안 차지하고, 보이는 폭만 200
+      side.style.setProperty("flex", "0 0 0", "important");
       side.style.setProperty("width", "200px", "important");
-      side.style.setProperty("min-width", "200px", "important");
-      side.style.setProperty("max-width", "200px", "important");
+      side.style.setProperty("min-width", "0", "important");
+      side.style.setProperty("max-width", "none", "important");
       side.style.setProperty("margin", "0", "important");
       side.style.setProperty("overflow", "hidden", "important");
       // 헤더 아래·컨테이너 왼쪽 패딩에 맞춤
@@ -1048,7 +1407,7 @@ BOOT_JS = """
         var hr = head.getBoundingClientRect();
         top = Math.max(12, Math.round(hr.bottom + 8));
       }
-      var left = 18;
+      var left = 12;
       if (box) left = Math.max(8, Math.round(box.getBoundingClientRect().left));
       side.style.setProperty("top", top + "px", "important");
       side.style.setProperty("left", left + "px", "important");
@@ -1090,18 +1449,327 @@ BOOT_JS = """
     document.documentElement.classList.remove("sisun-side-closed");
   }
   syncSideToggle();
-  setInterval(function() {
-    if (gateOn()) {
-      paintWx();
+  var __sisunNotices = window.__sisunNotices || (window.__sisunNotices = []);
+  var __sisunToastSeen = window.__sisunToastSeen || (window.__sisunToastSeen = {});
+  var BELL_SVG_ON =
+    '<svg class="sisun-bell-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>' +
+    '<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>';
+  var BELL_SVG_OFF =
+    '<svg class="sisun-bell-slash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M8.7 3.7A6 6 0 0 1 18 8c0 2.2.4 4.1 1.1 5.6"/>' +
+    '<path d="M17 17H3s3-2 3-9a4.7 4.7 0 0 1 .4-1.9"/>' +
+    '<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>' +
+    '<path d="M2 2l20 20"/></svg>';
+  // 기본은 알림·소리 켜짐. 음소거는 현재 페이지에서만 유지, 로그인/새로고침 시 다시 켜짐.
+  if (!window.__sisunBellMuteInit) {
+    window.__sisunBellMuteInit = true;
+    window.__sisunBellMuted = false;
+    window.__sisunSound = true;
+    try { sessionStorage.removeItem("sisun-bell-muted"); } catch (eMute) {}
+  }
+  var isBellMuted = function() {
+    return !!window.__sisunBellMuted;
+  };
+  var isRailOpen = function() {
+    return !!window.__sisunRailOpen;
+  };
+  var syncMuteButton = function() {
+    var rail = document.getElementById("sisun-alert-rail");
+    var muteBtn = rail && rail.querySelector(".sisun-rail-mute-btn");
+    if (!muteBtn) return;
+    var muted = isBellMuted();
+    muteBtn.textContent = muted ? "알림 켜기" : "알림 끄기";
+    muteBtn.classList.toggle("is-muted", muted);
+    muteBtn.setAttribute("aria-pressed", muted ? "true" : "false");
+  };
+  var setBellMuted = function(on) {
+    window.__sisunBellMuted = !!on;
+    // 알림 끄기 = 소리 끔, 알림 켜기 = 소리 다시 켬
+    window.__sisunSound = !on;
+    try { sessionStorage.removeItem("sisun-bell-muted"); } catch (e) {}
+    var wrap = document.getElementById("sisun-bell-wrap");
+    var btn = wrap && wrap.querySelector(".sisun-bell-btn");
+    if (btn) {
+      btn.classList.toggle("is-muted", !!on);
+      btn.title = on ? "알림 목록 (꺼짐)" : "알림 목록";
+      btn.setAttribute("aria-label", on ? "알림 목록 (꺼짐)" : "알림 목록");
+    }
+    syncMuteButton();
+    if (on) {
+      // 이미 재생 중·직후 주입되는 autoplay까지 연속 차단
+      silenceBeeps();
+      try { requestAnimationFrame(silenceBeeps); } catch (eRaf) {}
+      setTimeout(silenceBeeps, 0);
+      setTimeout(silenceBeeps, 40);
+      setTimeout(silenceBeeps, 120);
+    }
+  };
+  var setRailOpen = function(open) {
+    window.__sisunRailOpen = !!open;
+    var rail = document.getElementById("sisun-alert-rail");
+    if (rail) rail.classList.toggle("is-open", !!open);
+    var wrap = document.getElementById("sisun-bell-wrap");
+    var btn = wrap && wrap.querySelector(".sisun-bell-btn");
+    if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) placeAlertRail();
+  };
+  var noticeItemHtml = function(item) {
+    var level = item.level === "hot" ? "hot" : "warn";
+    var title = String(item.title || (level === "hot" ? "Danger" : "Warning")).replace(/</g, "&lt;");
+    var text = String(item.text || "").replace(/</g, "&lt;");
+    return "<div class='sisun-toast sisun-toast-" + level + "'>" +
+      "<div class='sisun-toast-head'><span class='sisun-toast-ico'>!</span><span>" + title + "</span></div>" +
+      "<div class='sisun-toast-text'>" + text + "</div></div>";
+  };
+  var renderBellList = function() {
+    var wrap = document.getElementById("sisun-bell-wrap");
+    var rail = document.getElementById("sisun-alert-rail");
+    var badge = wrap && wrap.querySelector(".sisun-bell-badge");
+    var list = rail && rail.querySelector(".sisun-rail-list");
+    var html;
+    if (!__sisunNotices.length) {
+      html = "<div class='sisun-rail-empty'>새 알림이 없습니다</div>";
+    } else {
+      // 최신이 위로
+      html = __sisunNotices.slice().reverse().map(noticeItemHtml).join("");
+    }
+    if (list) {
+      list.innerHTML = html;
+      list.scrollTop = 0;
+    }
+    if (badge) {
+      var n = __sisunNotices.length;
+      badge.textContent = n >= 40 ? "40+" : String(n);
+      badge.classList.toggle("has-items", n > 0);
+      badge.classList.toggle("is-warn", n > 0 && !__sisunNotices.some(function(x){ return x.level === "hot"; }));
+    }
+  };
+  var placeAlertRail = function() {
+    var rail = document.getElementById("sisun-alert-rail");
+    if (!rail) return;
+    var head = document.querySelector(".sisun-header");
+    var top = 64;
+    if (head) {
+      var hr = head.getBoundingClientRect();
+      top = Math.max(56, Math.round(hr.bottom + 8));
+    }
+    rail.style.top = top + "px";
+    rail.classList.toggle("is-open", isRailOpen());
+  };
+  var ensureBell = function() {
+    var wrap = document.getElementById("sisun-bell-wrap");
+    if (!wrap) {
+      wrap = document.createElement("div");
+      wrap.id = "sisun-bell-wrap";
+      wrap.innerHTML =
+        "<button type='button' class='sisun-bell-btn' aria-label='알림 목록' title='알림 목록' aria-expanded='false'>" +
+        BELL_SVG_ON + BELL_SVG_OFF +
+        "<span class='sisun-bell-badge'>0</span></button>";
+      document.body.appendChild(wrap);
+    }
+    var rail = document.getElementById("sisun-alert-rail");
+    if (!rail) {
+      rail = document.createElement("div");
+      rail.id = "sisun-alert-rail";
+      rail.innerHTML =
+        "<div class='sisun-rail-head'><span>알림</span>" +
+        "<div class='sisun-rail-actions'>" +
+        "<button type='button' class='sisun-rail-mute-btn'>알림 끄기</button>" +
+        "<button type='button' class='sisun-rail-read-btn'>모두 읽음</button>" +
+        "</div></div>" +
+        "<div class='sisun-rail-list'></div>";
+      document.body.appendChild(rail);
+    } else if (!rail.querySelector(".sisun-rail-actions")) {
+      var head = rail.querySelector(".sisun-rail-head");
+      if (head) {
+        var actions = document.createElement("div");
+        actions.className = "sisun-rail-actions";
+        actions.innerHTML =
+          "<button type='button' class='sisun-rail-mute-btn'>알림 끄기</button>" +
+          "<button type='button' class='sisun-rail-read-btn'>모두 읽음</button>";
+        head.appendChild(actions);
+      }
+    }
+    var btn = wrap.querySelector(".sisun-bell-btn");
+    if (btn && !btn.__sisunBound) {
+      btn.__sisunBound = true;
+      btn.addEventListener("click", function(ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        setRailOpen(!isRailOpen());
+      });
+    }
+    // 버튼 위임: 탭 전환·DOM 갱신 후에도 끄기/켜기·모두 읽음이 죽지 않게
+    if (!rail.__sisunDelegated) {
+      rail.__sisunDelegated = true;
+      rail.addEventListener("click", function(ev) {
+        var t = ev.target && ev.target.closest
+          ? ev.target.closest(".sisun-rail-mute-btn, .sisun-rail-read-btn")
+          : null;
+        if (!t || !rail.contains(t)) return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (t.classList.contains("sisun-rail-mute-btn")) {
+          if (window.__sisunMuteLock) return;
+          window.__sisunMuteLock = true;
+          setBellMuted(!isBellMuted());
+          setTimeout(function() { window.__sisunMuteLock = false; }, 120);
+          return;
+        }
+        if (t.classList.contains("sisun-rail-read-btn")) {
+          window.sisunClearToasts && window.sisunClearToasts();
+        }
+      });
+    }
+    if (!window.__sisunRailOutsideBound) {
+      window.__sisunRailOutsideBound = true;
+      document.addEventListener("click", function(ev) {
+        if (!isRailOpen()) return;
+        var t = ev.target;
+        var r = document.getElementById("sisun-alert-rail");
+        var w = document.getElementById("sisun-bell-wrap");
+        if ((r && r.contains(t)) || (w && w.contains(t))) return;
+        setRailOpen(false);
+      }, true);
+    }
+    // 아이콘/버튼 표시만 동기화 (상태 토글 금지 — 탭 폴링마다 깨지던 원인)
+    syncMuteButton();
+    var wrapBtn = wrap.querySelector(".sisun-bell-btn");
+    if (wrapBtn) {
+      wrapBtn.classList.toggle("is-muted", isBellMuted());
+      wrapBtn.title = isBellMuted() ? "알림 목록 (꺼짐)" : "알림 목록";
+    }
+    if (isBellMuted()) silenceBeeps();
+    setRailOpen(isRailOpen());
+    renderBellList();
+    placeAlertRail();
+    return wrap;
+  };
+  window.sisunPushToasts = function(items) {
+    if (!items || !items.length) return;
+    ensureBell();
+    // 알림 꺼져도 목록·배지는 쌓음. 소리만 막음.
+    items.forEach(function(item) {
+      __sisunNotices.push({
+        level: (item && item.level) === "hot" ? "hot" : "warn",
+        title: (item && item.title) || "",
+        text: (item && item.text) || ""
+      });
+    });
+    while (__sisunNotices.length > 40) __sisunNotices.shift();
+    renderBellList();
+    placeAlertRail();
+  };
+  window.sisunClearToasts = function() {
+    // 배지·알림창 목록 함께 비움. 이후 새 알림만 다시 쌓임.
+    __sisunNotices.length = 0;
+    try {
+      if (window.__sisunNotices && window.__sisunNotices !== __sisunNotices) {
+        window.__sisunNotices.length = 0;
+      }
+    } catch (e0) {}
+    document.querySelectorAll(".sisun-toast-payload").forEach(function(node) {
+      var seq = node.getAttribute("data-seq") || "";
+      if (seq) __sisunToastSeen[seq] = 1;
+      try { node.remove(); } catch (e1) {}
+    });
+    var rail = document.getElementById("sisun-alert-rail");
+    var list = rail && rail.querySelector(".sisun-rail-list");
+    if (list) {
+      list.innerHTML = "<div class='sisun-rail-empty'>새 알림이 없습니다</div>";
+      list.scrollTop = 0;
+    }
+    var wrap = document.getElementById("sisun-bell-wrap");
+    var badge = wrap && wrap.querySelector(".sisun-bell-badge");
+    if (badge) {
+      badge.textContent = "0";
+      badge.classList.remove("has-items", "is-warn");
+    }
+    renderBellList();
+  };
+  window.sisunRestartMainVideos = function() {
+    var wall = document.getElementById("sisun-wall") || document.querySelector(".sisun-wall-main");
+    var root = wall || document;
+    root.querySelectorAll("video").forEach(function(v) {
+      try {
+        v.pause();
+        if (v.fastSeek) {
+          try { v.fastSeek(0); } catch (e0) { v.currentTime = 0; }
+        } else {
+          v.currentTime = 0;
+        }
+        // load()까지 하면 같은 src도 확실히 처음으로 감
+        try { v.load(); } catch (e1) {}
+        v.currentTime = 0;
+        var p = v.play();
+        if (p && p.catch) p.catch(function() {});
+      } catch (e) {}
+    });
+    document.querySelectorAll(".sisun-restart-videos").forEach(function(m) {
+      try { m.remove(); } catch (e2) {}
+    });
+    try { setBellMuted(false); } catch (e2b) {}
+    try { window.sisunClearToasts && window.sisunClearToasts(); } catch (e3) {}
+  };
+  var drainToastPayloads = function() {
+    if (document.querySelector(".sisun-restart-videos")) {
+      window.sisunRestartMainVideos();
+    }
+    ensureBell();
+    var nodes = document.querySelectorAll(".sisun-toast-payload");
+    if (nodes && nodes.length) {
+      nodes.forEach(function(node) {
+        var seq = node.getAttribute("data-seq") || "";
+        if (seq && __sisunToastSeen[seq]) {
+          node.remove();
+          return;
+        }
+        if (seq) __sisunToastSeen[seq] = 1;
+        var raw = node.getAttribute("data-items") || "[]";
+        try {
+          var items = JSON.parse(raw);
+          window.sisunPushToasts(items);
+        } catch (e) {}
+        try { node.remove(); } catch (e2) {}
+      });
+    }
+    // 알림 끄기 / 소리 끔이면 beep 즉시 제거
+    if (soundOff()) {
+      silenceBeeps();
       return;
     }
-    hideGate();
-    syncSide();
-    bindTheme();
-    paintWx();
-    syncCctv();
-    syncSideToggle();
-  }, 2000);
+    allOf("audio.sisun-beep").forEach(function(a) {
+      try { a.play && a.play().catch(function(){}); } catch (e4) {}
+    });
+  };
+  ensureBell();
+  if (!window.__sisunToastPoll) {
+    window.__sisunToastPoll = true;
+    setInterval(drainToastPayloads, 300);
+    // 음소거 중엔 더 자주 훑어 autoplay 잔향 제거
+    setInterval(function() {
+      if (soundOff()) silenceBeeps();
+    }, 80);
+  }
+  if (!window.__sisunUiPoll) {
+    window.__sisunUiPoll = true;
+    setInterval(function() {
+      if (gateOn()) {
+        paintWx();
+        return;
+      }
+      hideGate();
+      syncSide();
+      bindTheme();
+      paintWx();
+      syncCctv();
+      syncSideToggle();
+      ensureBell();
+      placeAlertRail();
+      drainToastPayloads();
+    }, 2000);
+  }
 }
 """
 

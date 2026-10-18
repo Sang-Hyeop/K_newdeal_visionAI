@@ -1,18 +1,37 @@
-# 알람 wav 만들기·새 사건만 소리
+# 알람 wav · 종(벨) 알림함 페이로드
 import base64
+import html
+import json
 import math
 import os
+import re
 import struct
 import wave
 
-import gradio as gr
-
 from .config import ALARM_PATH, LOCAL, WARN_PATH
 
+
+def _camera_no(row):
+    """CAM03 / 3 / A3 등에서 카메라 번호만 뽑음."""
+    for key in ("camera", "cam", "video"):
+        raw = str(row.get(key) or "")
+        m = re.search(r"(\d+)", raw)
+        if m:
+            return str(int(m.group(1)))
+    return "?"
+
 SEEN_IDS = set()
-SOUND_READY = False
 _BEEP_HTML = {}
 _WAV_READY = False
+_PENDING_TOASTS = []
+_TOAST_SEQ = 0
+
+
+def reset_notify_state():
+    """로그인·새로고침 시 알림 이력 초기화."""
+    global _PENDING_TOASTS
+    SEEN_IDS.clear()
+    _PENDING_TOASTS = []
 
 
 def write_tone(path, pattern, vol=14000):
@@ -46,7 +65,8 @@ def write_beep():
     _BEEP_HTML.clear()
 
 
-def beep_html(kind):
+def _sound_html(kind):
+    """스크립트 없이 audio 태그만 — Gradio sanitize에도 재생 가능."""
     if not kind:
         return ""
     cached = _BEEP_HTML.get(kind)
@@ -57,35 +77,79 @@ def beep_html(kind):
         return ""
     with open(path, "rb") as f:
         b64 = base64.b64encode(f.read()).decode("ascii")
-    html = (
-        f"<audio autoplay style='display:none'><source src='data:audio/wav;base64,{b64}' type='audio/wav'></audio>"
-        f"<script>(function(){{var a=new Audio('data:audio/wav;base64,{b64}');a.play().catch(function(){{}});}})();</script>"
+    # 매번 다른 id → 같은 kind여도 DOM이 바뀌어 autoplay가 다시 시도됨
+    html_out = (
+        f"<audio class='sisun-beep' autoplay playsinline "
+        f"src='data:audio/wav;base64,{b64}'></audio>"
     )
-    _BEEP_HTML[kind] = html
-    return html
+    _BEEP_HTML[kind] = html_out
+    return html_out
+
+
+def _toast_payload_html(toasts):
+    """script 대신 data 속성 — BOOT_JS가 폴링으로 읽어 스택에 푸시."""
+    global _TOAST_SEQ
+    if not toasts:
+        return ""
+    _TOAST_SEQ += 1
+    payload = html.escape(json.dumps(toasts, ensure_ascii=False), quote=True)
+    return (
+        f"<div class='sisun-toast-payload' data-seq='{_TOAST_SEQ}' "
+        f"data-items=\"{payload}\" hidden></div>"
+    )
+
+
+def beep_html(kind):
+    """소리 HTML + 대기 중이던 토스트 페이로드."""
+    global _PENDING_TOASTS
+    toasts = list(_PENDING_TOASTS)
+    _PENDING_TOASTS = []
+    # kind가 같아도 토스트 seq가 바뀌도록 토스트를 뒤에 붙임
+    body = _sound_html(kind) + _toast_payload_html(toasts)
+    if not body:
+        return ""
+    # Gradio가 동일 문자열이면 DOM 갱신을 건너뛸 수 있어 seq 마커 포함
+    return f"<div class='sisun-alert-bundle' data-kind='{kind or ''}'>{body}</div>"
 
 
 def notify(d):
-    """이미 있는 기록은 안 울림. 주의=약한 소리, 위험=빠른 소리. 미확인은 안 울림."""
-    global SOUND_READY
+    """이미 본 event_id는 제외. 주의/위험만 토스트·소리. 미확인 제외.
+    라이브로 새로 들어온 건 종(벨) 알림함에 쌓음. 화면 떠다니는 토스트는 쓰지 않음.
+    """
     if d is None or len(d) == 0:
-        SOUND_READY = True
         return None
     col = "grade" if "grade" in d.columns else "status"
     danger = d[d[col].isin(["주의", "위험"])]
-    ids = set(danger["event_id"].astype(str).tolist())
-    if not SOUND_READY:
-        SEEN_IDS.update(ids)
-        SOUND_READY = True
+    if len(danger) == 0:
         return None
+    ids = set(danger["event_id"].astype(str).tolist())
     new_ids = ids - SEEN_IDS
     SEEN_IDS.update(ids)
     if not new_ids:
         return None
-    fresh = danger[danger["event_id"].astype(str).isin(new_ids)]
+    fresh = danger[danger["event_id"].astype(str).isin(new_ids)].copy()
+    if "timestamp" in fresh.columns:
+        fresh = fresh.sort_values(["timestamp", "event_id"], kind="mergesort")
     gcol = "grade" if "grade" in fresh.columns else "status"
+    for _, row in fresh.iterrows():
+        grade = str(row.get(gcol) or "")
+        cam_no = _camera_no(row)
+        if grade == "위험":
+            _PENDING_TOASTS.append(
+                {
+                    "level": "hot",
+                    "title": "Danger",
+                    "text": f"위험 알람 {cam_no}번 카메라 확인 요망",
+                }
+            )
+        else:
+            _PENDING_TOASTS.append(
+                {
+                    "level": "warn",
+                    "title": "Warning",
+                    "text": f"주의 알람 {cam_no}번 카메라 확인 요망",
+                }
+            )
     if int((fresh[gcol] == "위험").sum()):
-        gr.Warning("위험 상황이 발생했습니다.")
         return "hot"
-    gr.Warning("주의 상황이 발생했습니다.")
     return "warn"

@@ -25,3 +25,4 @@ def playback_inputs(wall_id, cameras):
       }
       return [on, positions, ready];
     }""".replace("IDS", json.dumps(ids))
+
