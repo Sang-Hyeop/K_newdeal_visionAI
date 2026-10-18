@@ -33,6 +33,6 @@
   "selected_epoch": 1,
   "completed_training_epochs": 4,
   "parent_sha256": "6fe56f3507cfc470d4e399703568805d883d66b4215e142aa5957e50e090533b",
-  "dataset": "data/reviewed_pilot/ppe_balanced_800/dataset.yaml",
+  "dataset": "data/ppe/selected/ppe_balanced_800/dataset.yaml",
   "selection_record": "configs/review/ppe-balanced-800.json"
 }

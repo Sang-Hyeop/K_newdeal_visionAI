@@ -1,4 +1,4 @@
-"""Portable entry point for the five-video team handoff (Python 3.11+)."""
+"""Portable entry point for the six-video team handoff (Python 3.11+)."""
 import argparse,hashlib,json,os,subprocess,sys
 from datetime import datetime
 from pathlib import Path
@@ -9,7 +9,24 @@ def call(*args):
     print('RUN:', ' '.join(str(a) for a in args),flush=True)
     subprocess.run([sys.executable,*map(str,args)],cwd=ROOT,check=True)
 
+def check_final_models():
+    """Verify the user-frozen weights and approved PPE policy without rewriting them."""
+    path=ROOT/'configs/final-model-lock.json'
+    if not path.exists():
+        raise ValueError('Missing final model lock: '+str(path))
+    lock=json.loads(path.read_text(encoding='utf-8'))
+    for item in lock['models']+lock['support_and_approved_policy']:
+        asset=ROOT/item['path']
+        if not asset.is_file() or asset.stat().st_size!=item['bytes']:
+            raise ValueError('Final model/policy missing or changed: '+item['path'])
+        with asset.open('rb') as stream:
+            digest=hashlib.file_digest(stream,'sha256').hexdigest()
+        if digest!=item['sha256']:
+            raise ValueError('Final model/policy checksum mismatch: '+item['path'])
+    print('PASS: frozen',len(lock['models']),'models and approved policy/support hashes')
+
 def check(models=False):
+    check_final_models()
     index=json.loads((ROOT/'configs/team-runtime-index.json').read_text(encoding='utf-8'))
     manifest=json.loads((ROOT/'configs/github-runtime.json').read_text(encoding='utf-8'))
     verified_assets=0
@@ -30,6 +47,16 @@ def check(models=False):
         with p.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
         if digest!=item['sha256']:raise ValueError('Input video checksum mismatch: '+item['file'])
     print('PASS:',verified_assets,'current runtime asset hashes and 5 source video hashes match; asset source',index['source_commit'])
+    fire_config=ROOT/'configs/review/fire-current.json'
+    if any(v['presentation_video_number']==6 for v in index['videos']):
+        fire=json.loads(fire_config.read_text())
+        for key,hash_key in [('source_video','source_sha256'),('weights','model_sha256')]:
+            with (ROOT/fire[key]).open('rb')as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+            if digest!=fire[hash_key]:raise ValueError('Video6 checksum mismatch: '+key)
+        summary=json.loads((ROOT/fire['output_root']/'summary.json').read_text())
+        with (ROOT/fire['review_video']).open('rb')as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+        if digest!=summary['review_sha256']:raise ValueError('Video6 review checksum mismatch')
+        print('PASS: local video6 source, model and review hashes; fire assets not yet published')
     if models:
         import cv2,torch
         from ultralytics import YOLO
@@ -44,16 +71,38 @@ def check(models=False):
         print('PASS PPE helper:',len(FinalPPEDetector().predict(frame)),'head observations')
     return 0
 
+def file_sha256(path):
+    """Hash large assets without loading the entire video/log into memory."""
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
 def update_runtime_hashes():
-    path=ROOT/'configs/github-runtime.json';assets=json.loads(path.read_text());overrides={}
+    path = ROOT / 'configs/github-runtime.json'
+    assets = json.loads(path.read_text())
+    overrides = {}
     for item in assets['files']:
-        p=ROOT/item['path']
-        if not p.exists():overrides[item['path']]={'disabled_by_presentation_selection':True}
-        elif p.stat().st_size!=item['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']:
-            overrides[item['path']]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
-    assets['local_presentation_overrides']=overrides
-    assets['local_runtime_status']='Current local results; remote Release changes only after an explicit publish request'
-    path.write_text(json.dumps(assets,indent=2)+'\n')
+        asset = ROOT / item['path']
+        if not asset.exists():
+            overrides[item['path']] = {'disabled_by_presentation_selection': True}
+            continue
+        size = asset.stat().st_size
+        digest = file_sha256(asset)
+        if size != item['bytes'] or digest != item['sha256']:
+            overrides[item['path']] = {'bytes': size, 'sha256': digest}
+    assets['local_presentation_overrides'] = overrides
+    assets['local_runtime_status'] = 'Current local results; remote Release changes only after an explicit publish request'
+    path.write_text(json.dumps(assets, indent=2) + '\n')
+
+
+def validate_current_records(path, enabled_features, video_number):
+    """Validate the same feature contract while retaining only one frame at a time."""
+    with path.open(encoding='utf-8') as stream:
+        for line in stream:
+            row = json.loads(line)
+            assert set(row['feature_events']) == set(enabled_features)
+            if video_number == 3:
+                assert all(d['class'] == 'person' for d in row['object_detections'])
 
 
 def rebuild_backend():
@@ -80,9 +129,7 @@ def promote_current(n,result):
     if ff:subprocess.run([ff,'-y','-loglevel','error','-i',str(movie),'-c:v','libx264','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(encoded)],check=True)
     else:shutil.copy2(movie,encoded)
     spec=next(x for x in json.loads((ROOT/'configs/demo-scenarios.json').read_text())['scenarios']if x['video_number']==n)
-    rows=[json.loads(line)for line in(result/'detections.jsonl').read_text().splitlines()]
-    assert all(set(row['feature_events'])==set(spec['enabled_features'])for row in rows)
-    if n==3:assert all(d['class']=='person'for row in rows for d in row['object_detections'])
+    validate_current_records(result/'detections.jsonl', spec['enabled_features'], n)
     for name in ['summary.json','detections.jsonl']:shutil.copy2(result/name,dest/name)
     for p in dest.glob('preview_*.jpg'):p.unlink()
     for p in result.glob('preview_*.jpg'):shutil.copy2(p,dest/p.name)
@@ -101,6 +148,11 @@ def promote_current(n,result):
 
 def run_video(n,fresh=False,max_seconds=None):
     import tempfile,shutil
+    if n==6:
+        if max_seconds is not None:raise ValueError('Video6 requires full input')
+        call('scripts/run_fire_review.py')
+        rebuild_backend();update_runtime_hashes()
+        return
     if max_seconds is not None and max_seconds<=0:raise ValueError('max-seconds must be positive')
     if n==2 and max_seconds is not None:raise ValueError('Video2 requires the complete input; omit --max-seconds')
     runtime=ROOT/'outputs/runtime';runtime.mkdir(parents=True,exist_ok=True)
@@ -140,7 +192,7 @@ def refresh_presentations(numbers=None):
     audit=[]
     for video in index['videos']:
         n=video['presentation_video_number']
-        if n==2 or numbers is not None and n not in numbers:continue  # intrusion + PPE already matches the user selection
+        if n in (2,6) or numbers is not None and n not in numbers:continue  # intrusion + PPE already matches the user selection
         spec=specs[n];dest=ROOT/video['diagnostic_root'];summary=json.loads((dest/'summary.json').read_text())
         rows=[json.loads(line) for line in (dest/'detections.jsonl').read_text().splitlines()]
         before={k:hashlib.sha256(json.dumps([r['feature_events'].get(k,[]) for r in rows],sort_keys=True).encode()).hexdigest() for k in spec['enabled_features']}
@@ -199,7 +251,7 @@ def refresh_presentations(numbers=None):
             entries=json.loads(parent.read_text())
             if isinstance(entries,list):
                 entries=[summary if e.get('presentation_video_number',e.get('video_number')) in (n,spec['video_number']) else e for e in entries];parent.write_text(json.dumps(entries,indent=2)+'\n')
-        audit.append(dict(video=n,samples=count,enabled_features=spec['enabled_features'],retained_verdict_hashes=after,review_sha256=hashlib.sha256(review.read_bytes()).hexdigest()))
+        audit.append(dict(video=n,samples=count,enabled_features=spec['enabled_features'],retained_verdict_hashes=after,review_sha256=file_sha256(review)))
         print(f'Updated existing video {n}: {spec["enabled_features"]}',flush=True)
     index['videos'][1]['enabled_features']=['zone_access','ppe']
     index['source_summary_transform']='Current presentation feature selection applied; retained rule verdicts unchanged; disabled feature logs removed.'
@@ -213,7 +265,7 @@ def main():
     q=subs.add_parser('check',help='Verify bundled SHA-256; optionally run CPU model inference');q.add_argument('--models',action='store_true')
     subs.add_parser('refresh',help='Update existing presentation videos and logs in place from saved observations')
     subs.add_parser('list',help='Print current review videos and event log locations')
-    q=subs.add_parser('run',help='Update the one current review/events in place; cached observations by default');q.add_argument('--video',type=int,choices=range(1,6),required=True);q.add_argument('--fresh',action='store_true');q.add_argument('--max-seconds',type=float)
+    q=subs.add_parser('run',help='Update the one current review/events in place; cached observations by default');q.add_argument('--video',type=int,choices=range(1,7),required=True);q.add_argument('--fresh',action='store_true');q.add_argument('--max-seconds',type=float)
     q=subs.add_parser('backend',help='Import the five complete event logs and optionally serve APIs');q.add_argument('--import-only',action='store_true');q.add_argument('--port',type=int,default=8010)
     subs.add_parser('test',help='Run detection and backend unit suites')
     a=p.parse_args()

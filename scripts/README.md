@@ -10,3 +10,8 @@
 - inventory_backend_logs.py: 현재 로그 인계 목록 점검.
 
 PPE의 실제 구현은 src/ppe_runtime.py입니다. 별도 비교 실행기와 실패한 후보 전용 학습 실행기는 삭제했습니다.
+
+
+6번 주차장 화재: `python handoff.py run --video 6` (내부 `run_fire_review.py`). 현재프레임 불꽃 탐지·문맥 복구·공간/시간 확인·편집 초기화 후 기존6번 리뷰/이벤트/백엔드를 갱신합니다. 기존1~5번은 변경하지 않습니다. 상세 설정과 검증은 `configs/review/fire-current.json`입니다.
+
+현재 handoff는 자산 SHA와 프레임 계약을 순차 읽기로 검사해 전체 진단 파일을 메모리에 올리지 않습니다. 모델·기능별 활성 범위는 그대로 유지합니다.

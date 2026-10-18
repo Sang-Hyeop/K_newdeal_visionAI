@@ -73,11 +73,11 @@ class DashboardLabelTests(unittest.TestCase):
         self.assertEqual(object_class_label('no_helmet_head'), '안전모 미착용 머리')
 
     def test_camera_video_zone_mapping(self):
-        self.assertEqual(camera_label('demo-video2'), '1번 영상 카메라')
+        self.assertEqual(camera_label('demo-video1'), '1번 영상 카메라')
         self.assertEqual(camera_label('presentation2-robot-intrusion'), '2번 영상 카메라')
-        self.assertEqual(camera_label('demo-video5'), '3번 영상 카메라')
+        self.assertEqual(camera_label('demo-video3'), '3번 영상 카메라')
         self.assertEqual(camera_label('demo-video4'), '4번 영상 카메라')
-        self.assertEqual(camera_label('demo-video7'), '5번 영상 카메라')
+        self.assertEqual(camera_label('demo-video5'), '5번 영상 카메라')
         self.assertEqual(presentation_video(1), '1_forklift_worker_collision_risk.mp4')
         self.assertEqual(presentation_video(5), '5_Logistics Warehouse.mp4')
         self.assertIn('시연', zone_label('yellow_line_vehicle_lane'))

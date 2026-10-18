@@ -1,6 +1,6 @@
-# 시선 — 현재 영상 1~5
+# 시선 — 확정 영상 1~6
 
-실행 입구는 `handoff.py`입니다. 최신 결과는 `outputs/reviews/`의 영상 5개뿐입니다. 좋은 보완은 기본 실행에 반영하고, 실패하거나 대체된 실험 결과는 삭제합니다.
+실행 입구는 `handoff.py`입니다. 최신 결과는 `outputs/reviews/`의 영상 6개입니다. 좋은 보완은 기본 실행에 반영하고, 실패하거나 대체된 실험 결과는 삭제합니다.
 
 ```sh
 python handoff.py list
@@ -15,8 +15,11 @@ python handoff.py check
 - 3번: 사람 탐지·안전모 PPE만.
 - 4번: 사람 탐지·체류시간만. 기존 차량 조건은 내부 판정에 유지.
 - 5번: 근접·ROI 침범·체류시간·PPE 전체.
+- 6번: 주차장 불꽃 감지·반복 관측 기반 화재 의심만.
 
-현재 모델 6개와 원본·코드·결과 연결은 configs/team-runtime-index.json이 기준입니다. PPE는 착용400장·미착용400장(총800장) 보완학습 중 실제 영상 비교로 선택한1회차 가중치에 사용자 확정 1초/3관측/75%·착용0.4/미착용0.3·hold0.6초를 적용했습니다. 사람 ID는 위치 중심 추적으로 연결하며, 5번에서만 추가 상반신 탐지를 사용하며, 그래도 증거가 부족한 사람은 320px 주변 문맥으로 작은 머리를 다시 찾습니다. 그래도 낮은 신뢰도의 머리 후보가 남으면 480px 문맥으로 한 번 더 확인합니다. 추가 크롭 단독의 안전모 후보로 착용 SAFE를 만들지 않습니다.
+2026-10-17 모델 작업을 종료했습니다. [최종 모델·선정 이유](models/README.md), [확정 해시 목록](configs/final-model-lock.json)을 기준으로 시스템 완성에 집중합니다. 현재 로컬에는 6번 화재가 연결돼 있지만 기존 공개 Release에는 포함하지 않았습니다.
+
+현재 확정 모델 7개와 원본·코드·결과 연결은 configs/team-runtime-index.json이 기준입니다. PPE는 착용400장·미착용400장(총800장) 보완학습 중 실제 영상 비교로 선택한1회차 가중치에 사용자 확정 1초/3관측/75%·착용0.4/미착용0.3·hold0.6초를 적용했습니다. 사람 ID는 위치 중심 추적으로 연결하며, 5번에서만 추가 상반신 탐지를 사용하며, 그래도 증거가 부족한 사람은 320px 주변 문맥으로 작은 머리를 다시 찾습니다. 그래도 낮은 신뢰도의 머리 후보가 남으면 480px 문맥으로 한 번 더 확인합니다. 추가 크롭 단독의 안전모 후보로 착용 SAFE를 만들지 않습니다.
 
 ```sh
 python handoff.py backend --import-only
@@ -24,17 +27,19 @@ python handoff.py backend --port 8010
 python handoff.py test
 ```
 
-대시보드는 `python team7.py`로 실행합니다. 현재 safety 환경에서 Gradio 6.28.0·pandas 3.0.5를 확인했습니다. 신규 환경은 감지 의존성 외에 `python -m pip install gradio==6.28.0 pandas==3.0.5`가 필요합니다. 브라우저 영상 변환에는 ffmpeg 또는 imageio-ffmpeg가 필요합니다. 대시보드는 현재 runtime index의 최신 리뷰 5개와 outputs/events를 읽고 로컬 API를 자동 시작합니다.
+대시보드는 `python dashboard.py`로 실행합니다. 현재 safety 환경에서 Gradio 6.28.0·pandas 3.0.5를 확인했습니다. 신규 환경은 감지 의존성 외에 `python -m pip install gradio==6.28.0 pandas==3.0.5`가 필요합니다. 브라우저 영상 변환에는 ffmpeg 또는 imageio-ffmpeg가 필요합니다. 대시보드는 현재 runtime index의 최신 리뷰 6개와 outputs/events를 읽고 로컬 API를 자동 시작합니다.
 
-## 시선 대시보드 (team7)
+## 시선 대시보드
 
 발표 이벤트 API 위에 로그인·구역 CCTV·알람을 띄웁니다.
 
 ```sh
-python team7.py
+python dashboard.py
 ```
 
-브라우저 `http://127.0.0.1:7860` · 로그인 `qwer1` / `1234` (또는 `qwer2` / `1234`). 데스크톱 창은 `python team7_desktop.py` 입니다. 부품은 `team7_app/` 에 있습니다.
+브라우저 `http://127.0.0.1:7860` · 로그인 `김상협`·`이수민`·`박회승`·`최인승` / `1234`.
+ZIP/clone 후 **한 번만** 설치(어느 PC든 동일): macOS는 `macOS용_시선설치.command` → 바탕화면 `시선.app`, Windows는 `Windows용_시선설치.vbs` → 바탕화면 「시선」.
+그다음 바탕화면 아이콘으로 실행. 구현은 `dashboard/` · 안내는 `dashboard/packaging/실행방법.md`.
 
 ## 새 PC 설치
 

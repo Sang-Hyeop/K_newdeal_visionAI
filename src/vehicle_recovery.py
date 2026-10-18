@@ -2,6 +2,21 @@
 from .ppe_tiled_inference import iou
 from .detection_review_profile import exclude_confirmed_equipment
 
+def body_ambiguous_recovery(detection, people):
+    """Both current vehicle models must resemble the same person's full body."""
+    if detection.get('model_source') != 'vehicle_recovery_current_image':
+        return False
+    boxes = [detection.get('primary_bbox_xyxy', detection['bbox_xyxy']),
+             detection['recovery_support']['bbox_xyxy']]
+    for person in people:
+        if person['class'] != 'person' or person.get('confidence', 0) < .25:
+            continue
+        pb = person['bbox_xyxy']
+        if all(iou(b, pb) >= .65 and pb[3] >= b[3] - .1 * (b[3] - b[1])
+               and pb[2] - pb[0] >= .75 * (b[2] - b[0]) for b in boxes):
+            return True
+    return False
+
 class VehicleRecovery:
     def __init__(self, primary, support, profile, max_gap=1.):
         self.primary=primary;self.support=support;self.profile=profile;self.gap=max_gap;self.history=[]
@@ -10,6 +25,38 @@ class VehicleRecovery:
     def predict(model,image,offset=(0,0),size=960):
         result=model.predict(image,conf=.12,imgsz=size,device='cpu',verbose=False)[0]
         return [{'class':'forklift','confidence':float(b.conf.item()),'bbox_xyxy':[float(v)+offset[i%2] for i,v in enumerate(b.xyxy[0].tolist())]} for b in result.boxes if result.names[int(b.cls.item())]=='forklift']
+
+    def verify_body_context(self, frame, detections):
+        """A veto only: larger current-image context cannot create a vehicle.
+
+        Keep existing dual-model acceptance thresholds. Either model's .12
+        proposal in the wider view prevents this veto, to protect occluded riders.
+        Absence here means insufficient evidence, never proof of safety.
+        """
+        h, w = frame.shape[:2]
+        result = []
+        for detection in detections:
+            if not body_ambiguous_recovery(detection, detections):
+                result.append(detection)
+                continue
+            b = detection['bbox_xyxy']
+            # Use the same geometry selected by the subsequent consensus review.
+            evidence = detection['recovery_support']
+            if evidence['confidence'] > detection['confidence']:
+                b = evidence['bbox_xyxy']
+            cx, cy = (b[0] + b[2]) / 2, (b[1] + b[3]) / 2
+            side = max(400, (b[2] - b[0]) * 4, (b[3] - b[1]) * 3)
+            x, y = max(0, int(cx - side / 2)), max(0, int(cy - side / 2))
+            a, z = min(w, int(cx + side / 2)), min(h, int(cy + side / 2))
+            predictions = [self.predict(model, frame[y:z, x:a], (x, y))
+                           for model in (self.primary, self.support)]
+            observed = any(iou(p['bbox_xyxy'], b) >= .35
+                           for group in predictions for p in group)
+            result.append({**detection, 'recovery_context_verification': {
+                'version': 'body-context-v1', 'crop_xyxy': [x, y, a, z],
+                'predictions': predictions, 'observed': observed,
+                'proposal_minimum_confidence': .12, 'minimum_iou': .35}})
+        return result
 
     def update(self,frame,detections,timestamp,scene_cut=False,full_scan=True):
         if scene_cut:self.history=[]
@@ -48,6 +95,8 @@ class VehicleRecovery:
             if (b[2]-b[0])*(b[3]-b[1])>w*h*self.profile.get('maximum_vehicle_frame_area',.35):continue
             accepted.append({**q,'model_source':'vehicle_recovery_current_image','recovery_support':max(evidence,key=lambda s:s['confidence']),'observation_status':'confirmed'})
         accepted,rejected=exclude_confirmed_equipment(accepted,(h,w),self.profile,frame)
+        verified = self.verify_body_context(frame, detections + accepted)
+        accepted = verified[len(detections):]
         # Short history only seeds future image searches; it is never rendered or used for distance.
         self.history=[(t,b)for t,b in self.history if timestamp-t<=self.gap]
         self.history += [(timestamp,v['bbox_xyxy'])for v in vehicles+accepted]
@@ -58,11 +107,14 @@ def review_recovered_vehicles(detections,shape):
     from math import sqrt
     original=[d for d in detections if d.get('model_source')!='vehicle_recovery_current_image'];recovered=[];rejected=[]
     for d in sorted((d for d in detections if d.get('model_source')=='vehicle_recovery_current_image'),key=lambda d:-d['confidence']):
-        evidence=d['recovery_support'];b=d['bbox_xyxy']
+        verification = d.get('recovery_context_verification')
+        if verification and verification['version'] == 'body-context-v1' and not verification['observed']:
+            rejected.append({**d, 'review_reason': 'recovery_body_without_wider_context'});continue
+        evidence=d['recovery_support'];b=d.get('primary_bbox_xyxy',d['bbox_xyxy'])
         if sqrt(d['confidence']*evidence['confidence'])<.3 or b[3]-b[1]<shape[0]*.08:
             rejected.append({**d,'review_reason':'recovery_weak_consensus_or_too_small'});continue
         # Both boxes are current model observations; prefer the stronger model's geometry.
-        q={**d,'primary_bbox_xyxy':b,'bbox_xyxy':evidence['bbox_xyxy'] if evidence['confidence']>d['confidence'] else b}
+        q={**d,'primary_bbox_xyxy':d.get('primary_bbox_xyxy',b),'bbox_xyxy':evidence['bbox_xyxy'] if evidence['confidence']>d['confidence'] else b}
         vb=q['bbox_xyxy'];vw=vb[2]-vb[0];vh=vb[3]-vb[1]
         def person_context(person):
             if person['class']!='person' or person.get('confidence',0)<.25:return False

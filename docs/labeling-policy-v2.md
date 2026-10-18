@@ -10,6 +10,6 @@
 
 누락 라벨·기계 오라벨·겹친 머리의 상반 클래스·좌표 범위를 확인합니다. 무라벨 사진을 배경 정답으로 자동 간주하지 않습니다. 동일 원본 영상·현장과 인접 프레임은 같은 그룹으로 분할해 누출을 막습니다. 사용자가 승인한 시연 적응 학습은 독립 평가와 구분합니다. train 폴더라는 이름만으로 학습/검증/시험 분리가 끝났다고 해석하지 않습니다.
 
-직접 라벨링한 지게차 원본은 `data/reviewed_pilot/cvat_forklift_merged_4_tasks`입니다. 안전모 합본은 `data/reviewed_pilot/cvat_helmet_merged`입니다. 각 폴더의 README·manifest·merge_check 기록을 확인합니다. 최종 PPE 학습셋 `ppe_final_510` 등 파생 학습셋과 원본 라벨 합본을 구분합니다. 데이터 정리·삭제는 이번 docs 정리 범위가 아닙니다.
+직접 라벨링한 지게차 원본은 `data/forklift/annotations/cvat_forklift_merged_4_tasks`입니다. 안전모 합본은 `data/ppe/annotations/cvat_helmet_merged`입니다. 각 폴더의 README·manifest·merge_check 기록을 확인합니다. 최종 PPE 학습셋 `ppe_final_510` 등 파생 학습셋과 원본 라벨 합본을 구분합니다. 데이터 정리·삭제는 이번 docs 정리 범위가 아닙니다.
 
 [사용자 확인 설비 오라벨 수정](equipment-annotation-correction-2026-10-13.md)은 이미 라벨에 반영됐지만 기존 가중치가 자동 갱신된 것은 아닙니다. 수정 전 정확도 수치를 최신 정답 기준 성능으로 재사용하지 않습니다.

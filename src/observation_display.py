@@ -2,7 +2,7 @@
 from collections import Counter
 
 PENDING_REASONS = {'pending_temporal_confirmation', 'person_track_confirmation_pending'}
-LOST_REASONS = {'person_not_observed', 'pair_not_observed'}
+LOST_REASONS = {'person_not_observed', 'pair_not_observed', 'fire_not_observed'}
 LABELS = {'pending': 'PENDING', 'unassessable': 'UNASSESSABLE',
           'observation_lost': 'NOT OBSERVED', 'no_observed_subjects': 'NO OBSERVED TARGET',
           'observed': 'OBSERVED'}

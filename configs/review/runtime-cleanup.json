@@ -1,0 +1,269 @@
+{
+  "date": "2026-10-17",
+  "status": "behavior_preserving_runtime_cleanup",
+  "scope": "Existing dashboard refactor preserved; no model, decision-policy or canonical inference-output changes",
+  "changes": [
+    "Single-pass streaming of largest dashboard diagnostic log",
+    "Refresh-scoped reuse only for duplicated dwell log; release at refresh end",
+    "Remove unused _group_key/_object_role/_event_dwell/_unique_people_rows helper chain",
+    "Serialize conversion per destination; atomic replacement on success; no encoding setting changes",
+    "Stream handoff hashing and frame-contract validation",
+    "Remove redundant desktop exception rethrow",
+    "Ignore legacy private browser profile; preserve its files"
+  ],
+  "deleted_preview_cache_files": [
+    {
+      "path": "dashboard/data/main_E.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_zone.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_zone.mp4",
+      "bytes": 1685017,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_5.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_C.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_zone.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_ppe.mp4",
+      "bytes": 3669181,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_ppe.mp4",
+      "bytes": 2783660,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_D.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_dwell.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_B.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/_icon_preview.png",
+      "bytes": 34850,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_5.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_dwell.mp4",
+      "bytes": 15801953,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_ppe.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_collision.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_ppe.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_dwell.mp4",
+      "bytes": 9926843,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_5.mp4",
+      "bytes": 27952291,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_dwell.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_A.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_B.mp4",
+      "bytes": 15260589,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_C.mp4",
+      "bytes": 2469658,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_A.mp4",
+      "bytes": 20201886,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/demo_collision.mp4",
+      "bytes": 9843081,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_zone.mp4",
+      "bytes": 2469658,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_collision.mp4.stamp",
+      "bytes": 2,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_D.mp4",
+      "bytes": 15801953,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_5.mp4",
+      "bytes": 20201886,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/main_E.mp4",
+      "bytes": 3669181,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    },
+    {
+      "path": "dashboard/data/raw_collision.mp4",
+      "bytes": 15260589,
+      "reason": "old preview cache; current cameras use origin_/detect_ files"
+    }
+  ],
+  "deleted_preview_bytes": 167032306,
+  "removed_python_cache_directories": 6,
+  "removed_python_cache_bytes": 1056985,
+  "benchmark": {
+    "method": "Isolated processes on same canonical event/diagnostic files; mocked API transport and sound write; actual row-building unchanged. One before/after measurement, not full application startup/FPS benchmark.",
+    "before": {
+      "seconds": 2.098573041963391,
+      "peak_rss_bytes_macos": 595394560,
+      "rows": 262,
+      "sha256": "ba805578bdeac5affdbedb4c90e87c7e9cfbd894639e63ba8ac005bc5435c08e",
+      "physical_read_calls": [
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation2_intrusion_review_2026-10-14/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/detections.jsonl"
+      ],
+      "physical_read_bytes": 118510007
+    },
+    "after": {
+      "seconds": 1.3015527080278844,
+      "peak_rss_bytes_macos": 255295488,
+      "rows": 262,
+      "sha256": "ba805578bdeac5affdbedb4c90e87c7e9cfbd894639e63ba8ac005bc5435c08e",
+      "physical_read_calls": [
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation2_intrusion_review_2026-10-14/detections.jsonl",
+        "/Users/sanghyeopkim/Desktop/workspace/outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/detections.jsonl"
+      ],
+      "physical_read_bytes": 117174393
+    },
+    "identical_output": true,
+    "peak_memory_reduction_percent": 57.1
+  },
+  "validation": {
+    "detection_and_dashboard_tests": 302,
+    "backend_tests": 22,
+    "python_files_syntax_checked": 101,
+    "dashboard_component_build": true,
+    "browser_gui_manually_retested": false,
+    "windows_installer_end_to_end_tested": false,
+    "frozen_models_and_policy_hashes": "PASS",
+    "canonical_runtime_hashes": "PASS"
+  },
+  "preserved": [
+    "Seven final weights and approved PPE policy",
+    "Six input and latest review videos",
+    "Canonical event/diagnostic logs and backend database",
+    "Source training data and manual labels",
+    "Current origin_/detect_ browser videos",
+    "Desktop browser profiles and active app lock/log files",
+    "Historical release archive for offline installation"
+  ],
+  "github_pushed": false,
+  "followup_load_diagnosis_2026_10_18": {
+    "code_changed": false,
+    "user_app_edits_preserved": true,
+    "measurements": {
+      "live_config_request_seconds": 0.026,
+      "components": 195,
+      "video_component_definitions": 12,
+      "timer_definitions": 11,
+      "all_timers_simultaneously_active_claimed": false,
+      "largest_navigation_output_count": 81,
+      "row_build_seconds_excluding_http": 1.232,
+      "row_count": 262,
+      "main_render_average_ms": 1.295,
+      "camera5_120sec_render_average_ms": 5.389,
+      "camera5_120sec_html_bytes": 171324,
+      "statistics_render_average_ms": 45.877,
+      "cached_component_build_seconds": 2.557,
+      "event_fetch_requests": 11,
+      "event_fetch_count": 5212,
+      "event_fetch_bytes": 13626525,
+      "event_fetch_seconds": 1.283
+    },
+    "observations": [
+      "Actual main page played six videos concurrently: three1920x1080 and three1280x720, roughly24-30fps.",
+      "Active camera timer requests updates every0.4s; table_html constructs the entire current event table even if rows are unchanged.",
+      "Force refresh fetches all events and rebuilds rows from diagnostics.",
+      "All tab definitions are constructed before application launch; missing browser caches can also trigger synchronous ffmpeg from _ensure_clip.",
+      "Before login, no video DOM elements were present in the inspected browser; do not claim all12 videos buffer/play in browser simultaneously."
+    ],
+    "limitations": [
+      "Process CPU/RSS inspection via ps was denied by sandbox; no live process CPU attribution.",
+      "No supported browser dropped-frame counter was available; no dropped-frame percentage claimed.",
+      "Measurements are local samples; cached build time is not complete cold start or inference FPS."
+    ],
+    "recommended_order": [
+      "Avoid unchanged full-table HTML updates; keep actual playhead polling.",
+      "Use lightweight main-grid preview while preserving original/detailed review quality, subject to user preference.",
+      "Avoid forced complete event/diagnostic reload when source files did not change.",
+      "Initialize/load tab-specific heavy content only when needed."
+    ]
+  }
+}
