@@ -224,5 +224,46 @@
     "Desktop browser profiles and active app lock/log files",
     "Historical release archive for offline installation"
   ],
-  "github_pushed": false
+  "github_pushed": false,
+  "followup_load_diagnosis_2026_10_18": {
+    "code_changed": false,
+    "user_app_edits_preserved": true,
+    "measurements": {
+      "live_config_request_seconds": 0.026,
+      "components": 195,
+      "video_component_definitions": 12,
+      "timer_definitions": 11,
+      "all_timers_simultaneously_active_claimed": false,
+      "largest_navigation_output_count": 81,
+      "row_build_seconds_excluding_http": 1.232,
+      "row_count": 262,
+      "main_render_average_ms": 1.295,
+      "camera5_120sec_render_average_ms": 5.389,
+      "camera5_120sec_html_bytes": 171324,
+      "statistics_render_average_ms": 45.877,
+      "cached_component_build_seconds": 2.557,
+      "event_fetch_requests": 11,
+      "event_fetch_count": 5212,
+      "event_fetch_bytes": 13626525,
+      "event_fetch_seconds": 1.283
+    },
+    "observations": [
+      "Actual main page played six videos concurrently: three1920x1080 and three1280x720, roughly24-30fps.",
+      "Active camera timer requests updates every0.4s; table_html constructs the entire current event table even if rows are unchanged.",
+      "Force refresh fetches all events and rebuilds rows from diagnostics.",
+      "All tab definitions are constructed before application launch; missing browser caches can also trigger synchronous ffmpeg from _ensure_clip.",
+      "Before login, no video DOM elements were present in the inspected browser; do not claim all12 videos buffer/play in browser simultaneously."
+    ],
+    "limitations": [
+      "Process CPU/RSS inspection via ps was denied by sandbox; no live process CPU attribution.",
+      "No supported browser dropped-frame counter was available; no dropped-frame percentage claimed.",
+      "Measurements are local samples; cached build time is not complete cold start or inference FPS."
+    ],
+    "recommended_order": [
+      "Avoid unchanged full-table HTML updates; keep actual playhead polling.",
+      "Use lightweight main-grid preview while preserving original/detailed review quality, subject to user preference.",
+      "Avoid forced complete event/diagnostic reload when source files did not change.",
+      "Initialize/load tab-specific heavy content only when needed."
+    ]
+  }
 }
