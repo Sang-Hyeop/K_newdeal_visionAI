@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-18",
+  "status": "issues_reproduced_no_runtime_code_changes",
+  "scope": "Actual local dashboard/API launched on isolated ports17862/18012; login and tab navigation; fire history; statistics; review decoding; model smoke inference; existing tests. Existing user edits in dashboard/app.py and events.py preserved.",
+  "tests": {
+    "detection_dashboard": 302,
+    "backend": 22,
+    "model_weight_inference": 7,
+    "review_frames_decoded": {
+      "1": 106,
+      "2": 58,
+      "3": 58,
+      "4": 92,
+      "5": 870,
+      "6": 60
+    },
+    "frozen_hash_check": "PASS",
+    "http_events": "PASS",
+    "http_fire_events": "PASS",
+    "http_latest_fire_status": "PASS",
+    "ingestion": "5212 events and3912 observations; zero new duplicates inserted; zero conflicts"
+  },
+  "findings": [
+    {
+      "priority": 1,
+      "title": "Statistics tab errors on mixed timestamp precision",
+      "file": "dashboard/ui.py",
+      "line": 344,
+      "reproduction": "Login then #10 종합 데이터; actual UI shows 오류. stats_html(current_262_rows) raises ValueError: unconverted data remains .0",
+      "cause": "Integer-second and fractional-second strings are parsed with one inferred pandas format",
+      "recommended_fix": "Preserve numeric source seconds or normalize timestamp parsing in one shared helper; add mixed-timestamp statistics regression."
+    },
+    {
+      "priority": 1,
+      "title": "Main KPI includes future fire events",
+      "file": "dashboard/events.py",
+      "line": 1038,
+      "reproduction": "live_until(current_rows,0.1) includes all four fire rows at4.0/4.6/8.2/8.8",
+      "cause": "Mixed timestamp parse errors coerce fractional fire rows to NaT, then fillna(0) treats them as immediate events",
+      "recommended_fix": "Use normalized source seconds; do not convert invalid timestamps to zero."
+    },
+    {
+      "priority": 2,
+      "title": "Playback and event clock are independent",
+      "file": "dashboard/app.py",
+      "line": 338,
+      "reproduction": "Actual parking video loop enabled and pausable; event clock uses time.time()-tab-entry. Saw current video position6sec with8.8sec row already visible after elapsed wall clock exceeded duration.",
+      "cause": "No video currentTime/pause/seek/loop synchronization; wall clock continues across pause and loop",
+      "recommended_fix": "Choose explicitly between cumulative-session history and current-playback history; live camera table should follow actual playhead if intended as synchronized demo."
+    }
+  ],
+  "limits": [
+    "Not a complete fresh re-inference of all six source videos",
+    "No Windows installer execution",
+    "No audible-alarm certification",
+    "OS cache write warnings came from isolated sandbox; not treated as confirmed normal-user launch defect"
+  ],
+  "evidence_screenshot": {
+    "path": "outputs/diagnostics/system-current-check.png",
+    "sha256": "21997d62867a697039c4df97af765507b792800797e7b92abd577139089edfec"
+  },
+  "models_changed": false,
+  "github_pushed": false
+}
