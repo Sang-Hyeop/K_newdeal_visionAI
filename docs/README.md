@@ -5,6 +5,7 @@
 ## 먼저 읽을 문서
 
 - [설치·실행·팀원 연동](github-team-quickstart.md)
+- [대시보드 운영·시연 매뉴얼](dashboard-ops-manual.md)
 - [영상 1~6 기능과 판정 기준](demo-feature-show-plan-2026-10-07.md)
 - [이벤트·관측 출력 계약](detection-output-contract.md)
 - [백엔드 API 명세](../backend_v1/API_SPEC.md)

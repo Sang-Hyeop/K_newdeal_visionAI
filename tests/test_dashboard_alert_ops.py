@@ -1,8 +1,11 @@
 """운영 경보 묶음·재알림·확인 상태 분리 회귀."""
+import tempfile
 import unittest
+from unittest import mock
 
 import pandas as pd
 
+from dashboard import alert_response as ar
 from dashboard.alert_ops import process_alerts, reset_alert_ops, subject_key
 from dashboard.sound import notify, reset_notify_state
 
@@ -34,6 +37,16 @@ def _row(**kw):
 
 class AlertOpsTests(unittest.TestCase):
     def setUp(self):
+        reset_notify_state()
+        self._tmp = tempfile.TemporaryDirectory()
+        self._patch = mock.patch.object(ar, "LOCAL", self._tmp.name)
+        self._patch.start()
+        ar.reset_response_memory()
+
+    def tearDown(self):
+        self._patch.stop()
+        self._tmp.cleanup()
+        ar.reset_response_memory()
         reset_notify_state()
 
     def test_same_event_id_not_duplicated(self):
@@ -69,12 +82,25 @@ class AlertOpsTests(unittest.TestCase):
         w = _row(event_id="BC02W", grade="주의", status="주의", timestamp="2026-10-19 09:00:07", distance_px=162)
         d = _row(event_id="BC02D", grade="위험", status="위험", timestamp="2026-10-19 09:00:08")
         k1, ops1 = process_alerts(pd.DataFrame([w]))
-        self.assertEqual(k1, "warn")
+        # 주의는 목록만 — 소리 kind 없음
+        self.assertIsNone(k1)
         self.assertEqual(ops1[0]["op"], "new")
+        self.assertEqual(ops1[0]["level"], "warn")
         k2, ops2 = process_alerts(pd.DataFrame([w, d]))
         self.assertEqual(k2, "hot")
         self.assertEqual(ops2[0]["op"], "upgrade")
         self.assertTrue(ops2[0]["ack_reset"])
+
+    def test_warn_only_notify_has_no_sound_kind(self):
+        w = _row(event_id="W1", grade="주의", status="주의", timestamp="2026-10-19 09:00:07")
+        self.assertEqual(notify(pd.DataFrame([w])), "")
+
+    def test_batch_multiple_hot_one_sound_kind(self):
+        a = _row(event_id="H1", person_no=1, worker="작업자 A", track_id="P0:1", timestamp="2026-10-19 09:00:01")
+        b = _row(event_id="H2", person_no=2, worker="작업자 B", track_id="P0:9", timestamp="2026-10-19 09:00:08")
+        k, ops = process_alerts(pd.DataFrame([a, b]))
+        self.assertEqual(k, "hot")
+        self.assertEqual(len(ops), 2)
 
     def test_different_subjects_separate(self):
         a = _row(event_id="A", person_no=1, worker="작업자 A", track_id="P0:1", timestamp="2026-10-19 09:00:01")
@@ -143,6 +169,58 @@ class AlertOpsTests(unittest.TestCase):
         self.assertEqual(ops1[0]["op"], "new")
         self.assertEqual(ops2[0]["op"], "new")
         self.assertNotEqual(ops1[0]["episode_id"], ops2[0]["episode_id"])
+
+    def test_idle_split_then_update_binds_to_latest(self):
+        """1초 new → 8초(>5s) new → 9초 update(8초 묶음)."""
+        r1 = _row(event_id="t1", timestamp="2026-10-19 09:00:01")
+        r8 = _row(event_id="t8", timestamp="2026-10-19 09:00:08")
+        r9 = _row(event_id="t9", timestamp="2026-10-19 09:00:09")
+        _, ops1 = process_alerts(pd.DataFrame([r1]))
+        self.assertEqual(ops1[0]["op"], "new")
+        ep1 = ops1[0]["episode_id"]
+        _, ops8 = process_alerts(pd.DataFrame([r1, r8]))
+        self.assertEqual(ops8[0]["op"], "new")
+        ep8 = ops8[0]["episode_id"]
+        self.assertNotEqual(ep1, ep8)
+        _, ops9 = process_alerts(pd.DataFrame([r1, r8, r9]))
+        self.assertEqual(len(ops9), 1)
+        self.assertEqual(ops9[0]["op"], "update")
+        self.assertEqual(ops9[0]["episode_id"], ep8)
+        self.assertEqual(ops9[0]["related_count"], 2)
+
+    def test_vehicle_pair_separates_collision(self):
+        a = _row(
+            event_id="v1", person_no=1, track_id="P0:1",
+            vehicle_track_id="F0:3", timestamp="2026-10-19 09:00:01",
+        )
+        b = _row(
+            event_id="v2", person_no=1, track_id="P0:1",
+            vehicle_track_id="F0:9", timestamp="2026-10-19 09:00:02",
+        )
+        _, ops = process_alerts(pd.DataFrame([a, b]))
+        self.assertEqual(len(ops), 2)
+        self.assertNotEqual(ops[0]["episode_id"], ops[1]["episode_id"])
+        self.assertIn("link_key", ops[0])
+        self.assertTrue(ops[0]["link_key"])
+
+    def test_ops_include_stable_link_fields(self):
+        _, ops = process_alerts(pd.DataFrame([_row(event_id="L1")]))
+        self.assertIn("anchor_event_id", ops[0])
+        self.assertEqual(ops[0]["anchor_event_id"], "L1")
+        self.assertIn("event_ids", ops[0])
+
+    def test_new_episode_assigns_demo_assignee_once(self):
+        _, ops1 = process_alerts(pd.DataFrame([_row(event_id="AS1", timestamp="2026-10-19 09:00:01")]))
+        self.assertIn(ops1[0].get("assigned_to"), ar.DEMO_ASSIGNEES)
+        a1 = ops1[0]["assigned_to"]
+        link = ops1[0]["link_key"]
+        _, ops2 = process_alerts(pd.DataFrame([
+            _row(event_id="AS1", timestamp="2026-10-19 09:00:01"),
+            _row(event_id="AS2", timestamp="2026-10-19 09:00:02"),
+        ]))
+        self.assertEqual(ops2[0]["op"], "update")
+        st = ar.get_state_by_link(link)
+        self.assertEqual(st["state"]["assigned_to"], a1)
 
 
 if __name__ == "__main__":

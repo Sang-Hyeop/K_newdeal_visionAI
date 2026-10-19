@@ -23,7 +23,7 @@ from .config import (
 from .events import get_df, live_part, live_positions, load_df, peek_df
 from .media import camera_detect, camera_origin
 from .timeline import playback_inputs
-from .sound import beep_html, notify, reset_notify_state
+from .sound import beep_html, notify, reset_notify_state, write_beep
 from .style import BOOT_JS, CSS, make_theme
 from .ui import (
     cam_danger_overlay_html,
@@ -34,12 +34,9 @@ from .ui import (
     header_html,
     kpi_html,
     live_flash_html,
-    live_judgment_html,
     login_foot,
     login_html,
-    recent_alert_html,
     side_brand_html,
-    stats_html,
     table_html,
     theme_foot_html,
     title_html,
@@ -120,6 +117,17 @@ def _start_data_boot():
     def _run():
         try:
             load_df()
+        except Exception:
+            pass
+        # 첫 판정 패널·첫 위험음 지연 완화 (백그라운드 1회)
+        try:
+            from .criteria_runtime import criteria_cache
+
+            criteria_cache()
+        except Exception:
+            pass
+        try:
+            write_beep()
         except Exception:
             pass
         for cam in CAMERAS:
@@ -219,14 +227,22 @@ def _cam_wall(cams, dest_key, wall_id="sisun-wall", captions=False, expandable=T
             groups = [cams]
         else:
             groups = [cams[:3], cams[3:]]
-        vid_h = 240 if len(cams) > 1 else (680 if not expandable else 420)
+        # 메인 6칸은 CSS로 남은 세로를 채움(고정 height 제거). 단일은 큰 높이.
+        if captions and len(cams) > 1:
+            vid_h = None
+        elif len(cams) > 1:
+            vid_h = 240
+        else:
+            vid_h = 680 if not expandable else 420
         for group in groups:
             with gr.Row(elem_classes="sisun-wall-row"):
                 for cam in group:
                     with gr.Column(elem_classes="sisun-cam-slot", scale=1):
                         if captions:
                             gr.HTML(
-                                f"<div class='sisun-cam-cap'>{cam_main_label(cam)}</div>"
+                                f"<div class='sisun-cam-cap' data-cam='{cam['id']}'>"
+                                f"<span class='sisun-cam-cap-label'>{cam_main_label(cam)}</span>"
+                                f"</div>"
                             )
                         with gr.Column(elem_classes="sisun-cam"):
                             if not captions:
@@ -240,19 +256,19 @@ def _cam_wall(cams, dest_key, wall_id="sisun-wall", captions=False, expandable=T
                                 )
                             # 파일이 있으면 처음부터 넣고, 없어도 타이머/탭 진입 시 채움
                             initial = _ensure_clip(cam, dest_key)
-                            vids.append(
-                                gr.Video(
-                                    value=initial,
-                                    autoplay=False,
-                                    loop=True,
-                                    include_audio=False,
-                                    show_label=False,
-                                    height=vid_h,
-                                    elem_classes="sisun-cam-vid",
-                                    elem_id=f"sisun-video-{wall_id}-{cam['id']}",
-                                    buttons=[],
-                                )
+                            vid_kw = dict(
+                                value=initial,
+                                autoplay=False,
+                                loop=True,
+                                include_audio=False,
+                                show_label=False,
+                                elem_classes="sisun-cam-vid",
+                                elem_id=f"sisun-video-{wall_id}-{cam['id']}",
+                                buttons=[],
                             )
+                            if vid_h is not None:
+                                vid_kw["height"] = vid_h
+                            vids.append(gr.Video(**vid_kw))
                             dests.append(cam[dest_key])
                             cam_refs.append(cam)
     return vids, dests, cam_refs, alert_boxes
@@ -472,12 +488,6 @@ def make_camera(cam):
         playheads = gr.JSON(value={}, visible=False)
         ready = gr.State(False)
         banner = gr.HTML()
-        with gr.Accordion(
-            "판정 기준 및 관측 근거",
-            open=False,
-            elem_classes="sisun-judgment-acc",
-        ):
-            judgment = gr.HTML()
         vids, dests, _cams, _alerts = _cam_wall(
             [cam], "detect", wall_id=f"sisun-wall-{cam_id}", expandable=False,
         )
@@ -498,7 +508,7 @@ def make_camera(cam):
             paths = _paths()
             return (
                 tuple(paths)
-                + (True, {}, True, "", "", table_html(empty, allow_empty=True), gr.update(active=True))
+                + (True, {}, True, "", table_html(empty, allow_empty=True), gr.update(active=True))
             )
 
         def begin():
@@ -510,12 +520,12 @@ def make_camera(cam):
         def stop():
             n = len(vids)
             return tuple(gr.update() for _ in range(n)) + (
-                False, {}, False, "", "", "", gr.update(active=False),
+                False, {}, False, "", "", gr.update(active=False),
             )
 
         def tick(on, positions, is_ready):
             if not on or not is_ready:
-                return gr.update(), gr.update(), gr.update()
+                return gr.update(), gr.update()
             view = get_df()
             if view is None:
                 view = load_df()
@@ -523,14 +533,13 @@ def make_camera(cam):
             part = live_part(view, cam_id, None, elapsed)
             return (
                 live_flash_html(part, elapsed, cam=cam),
-                live_judgment_html(part, elapsed, cam=cam),
                 table_html(part, allow_empty=True),
             )
 
-        outs = vids + [playing, playheads, ready, banner, judgment, log, timer]
+        outs = vids + [playing, playheads, ready, banner, log, timer]
         timer.tick(
             tick, inputs=[playing, playheads, ready],
-            outputs=[banner, judgment, log],
+            outputs=[banner, log],
             js=playback_inputs(f"sisun-wall-{cam_id}", [cam]), concurrency_limit=1,
         )
         btn.click(refresh, outputs=outs)
@@ -541,37 +550,28 @@ def make_camera(cam):
 
 
 def make_data():
+    """운영 통계는 저장 사건 기준. 원본 관측 행을 사고 건수로 세지 않는다."""
+    from .operations import operations_html
+
     with gr.Blocks() as demo:
-        gr.HTML(title_html("종합 데이터"), elem_classes="t2-title-block")
+        gr.HTML(title_html("운영 통계"), elem_classes="t2-title-block")
+        period = gr.Dropdown(["전체", "오늘 등록"], value="전체", label="사건 등록 기간")
         stats = gr.HTML()
         btn = gr.Button("새로고침", elem_classes="t2-refresh")
-
-        def _load():
-            return stats_html(load_df(force=True))
-
-        outs = [stats]
-        _attach_boot(demo, outs, lambda view: (stats_html(view),))
-        btn.click(_load, outputs=outs)
+        _attach_boot(demo, [stats], lambda _view: (operations_html(),))
+        period.change(operations_html, inputs=[period], outputs=[stats])
+        btn.click(operations_html, inputs=[period], outputs=[stats])
     return demo
 
 
-def make_alerts():
+def make_cases():
+    """경보·조치 관리: 사건 목록·상세·단계 처리 (데이터는 API)."""
+    from .case_ui import cases_shell_html
+
     with gr.Blocks() as demo:
-        gr.HTML(title_html("통합 알람 · 창고 · 카메라 · 시각"), elem_classes="t2-title-block")
-        box = gr.HTML()
-        btn = gr.Button("새로고침", elem_classes="t2-refresh")
-
-        def _from(view):
-            col = "grade" if "grade" in view.columns else "status"
-            danger = view[view[col].isin(["주의", "위험"])]
-            return recent_alert_html(danger, limit=30)
-
-        def _load(force=False):
-            return _from(load_df(force=force))
-
-        _attach_boot(demo, [box], lambda view: (_from(view),))
-        btn.click(lambda: _load(True), outputs=[box])
+        gr.HTML(cases_shell_html())
     return demo
+
 
 
 def make_history():
@@ -624,8 +624,8 @@ def launch():
         elif kind == "camera":
             cam = CAM_BY_ID[tab["camera_id"]]
             demos.append((tab["name"], make_camera(cam)))
-        elif kind == "alerts":
-            demos.append((tab["name"], make_alerts()))
+        elif kind == "cases":
+            demos.append((tab["name"], make_cases()))
         elif kind == "history":
             demos.append((tab["name"], make_history()))
         elif kind == "data":
@@ -640,7 +640,7 @@ def launch():
     allowed = [str(DATA_ROOT), str(VIDEO_DIR), LOCAL, str(DATA_ROOT / "outputs")]
     os.makedirs(LOCAL, exist_ok=True)
     theme = make_theme()
-    paper_idx = {i for i, t in enumerate(TABS) if t.get("kind") in ("alerts", "history")}
+    paper_idx = {i for i, t in enumerate(TABS) if t.get("kind") in ("history", "cases", "data")}
     with gr.Blocks(title=TITLE, fill_width=True, fill_height=True) as app:
         with gr.Column(visible=True, elem_id="sisun-gate", elem_classes="sisun-login-on") as login_box:
             with gr.Column(elem_classes="sisun-login-card"):
@@ -784,4 +784,93 @@ def launch():
     )
     if _FAVICON:
         launch_kw["favicon_path"] = _FAVICON
+
+    # Gradio launch 가 FastAPI 앱을 교체하므로, HTTP 응답이 뜬 뒤에 라우트를 붙인다.
+    def _mount_response_route():
+        import time as _time
+        import urllib.error
+        import urllib.request
+
+        from fastapi import Request
+
+        from .alert_response import (
+            apply_transition,
+            case_detail,
+            get_state_by_link,
+            get_states_for_event_ids,
+            history_for_link,
+            list_cases,
+            load_logs_into_memory,
+            migrate_missing_assignees,
+        )
+
+        url = f"http://127.0.0.1:{port}/"
+        for _ in range(120):
+            try:
+                urllib.request.urlopen(url, timeout=0.5)
+                break
+            except (urllib.error.URLError, TimeoutError, OSError):
+                _time.sleep(0.25)
+        _time.sleep(0.3)
+        fastapi_app = getattr(app, "app", None)
+        if fastapi_app is None:
+            return
+        if any(getattr(r, "path", "") == "/sisun/alert-response" for r in fastapi_app.routes):
+            return
+
+        # 기동 시 조치 이력 1회 적재(폴링마다 재조회하지 않음)
+        load_logs_into_memory()
+        migrate_missing_assignees()
+
+        @fastapi_app.post("/sisun/alert-response")
+        async def _sisun_alert_response(request: Request):
+            try:
+                data = await request.json()
+                result = apply_transition(data if isinstance(data, dict) else {})
+                return result
+            except Exception as exc:
+                return {"ok": False, "error": str(exc)}
+
+        @fastapi_app.get("/sisun/alert-response/state")
+        async def _sisun_alert_response_state(request: Request):
+            q = request.query_params
+            link = str(q.get("link_key") or "").strip()
+            eids = [x for x in str(q.get("event_ids") or "").split(",") if x.strip()]
+            if link:
+                return get_state_by_link(link)
+            if eids:
+                return get_states_for_event_ids(eids)
+            return {"ok": False, "error": "link_key or event_ids required", "state": None}
+
+        @fastapi_app.get("/sisun/alert-response/history")
+        async def _sisun_alert_response_history(request: Request):
+            q = request.query_params
+            link = str(q.get("link_key") or "").strip()
+            eids = [x for x in str(q.get("event_ids") or "").split(",") if x.strip()]
+            return history_for_link(link_key=link, event_ids=eids or None)
+
+        @fastapi_app.get("/sisun/alert-cases")
+        async def _sisun_alert_cases(request: Request):
+            q = request.query_params
+            open_only = str(q.get("open_only") or "1") not in ("0", "false", "False")
+            filters = {
+                "open_only": open_only,
+                "status": str(q.get("status") or "all"),
+                "cam_id": str(q.get("cam_id") or "all"),
+                "scenario": str(q.get("scenario") or "all"),
+                "severity": str(q.get("severity") or "all"),
+                "assigned_to": str(q.get("assigned_to") or "all"),
+                "date_from": str(q.get("date_from") or ""),
+                "date_to": str(q.get("date_to") or ""),
+            }
+            return list_cases(filters)
+
+        @fastapi_app.get("/sisun/alert-cases/detail")
+        async def _sisun_alert_cases_detail(request: Request):
+            link = str(request.query_params.get("link_key") or "").strip()
+            if not link:
+                return {"ok": False, "error": "link_key required"}
+            return case_detail(link)
+
+    threading.Thread(target=_mount_response_route, daemon=True).start()
     app.launch(**launch_kw)

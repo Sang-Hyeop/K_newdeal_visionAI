@@ -3,7 +3,8 @@ import unittest
 import pandas as pd
 from dashboard.config import clock_start
 from dashboard.events import live_until, live_positions
-from dashboard.ui import stats_html, _time_bin_labels
+from dashboard.ui import _time_bin_labels
+from dashboard.timeline import event_seconds
 
 
 class DashboardTimelineTests(unittest.TestCase):
@@ -38,4 +39,4 @@ class DashboardTimelineTests(unittest.TestCase):
     def test_statistics_accept_mixed_precision_and_unknown_time(self):
         d=self.fixture()
         self.assertEqual(_time_bin_labels(d).iloc[-1],'시각 미상')
-        self.assertIn('시간대별',stats_html(d))
+        self.assertTrue(pd.isna(event_seconds(d).iloc[-1]))

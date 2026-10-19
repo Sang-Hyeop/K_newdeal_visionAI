@@ -119,13 +119,21 @@ def pick_representative_alert(slice_df):
     """같은 카메라 다중 위험 → 심각도 높은 것, 동률이면 최신. (대표행, 추가건수)."""
     if slice_df is None or len(slice_df) == 0:
         return None, 0
-    work = slice_df.copy()
-    work["_rank"] = [_severity_rank(r) for _, r in work.iterrows()]
-    if "timestamp" in work.columns:
-        work = work.sort_values(["_rank", "timestamp"], ascending=[False, False])
+    n = len(slice_df)
+    if n == 1:
+        return slice_df.iloc[0], 0
+    ranks = [_severity_rank(r) for _, r in slice_df.iterrows()]
+    if "timestamp" in slice_df.columns:
+        ts = slice_df["timestamp"].tolist()
+        # 심각도 desc, 시각 desc — 복사 열 없이 인덱스 선택
+        order = sorted(
+            range(n),
+            key=lambda i: (ranks[i], ts[i]),
+            reverse=True,
+        )
     else:
-        work = work.sort_values("_rank", ascending=False)
-    return work.iloc[0], max(0, len(work) - 1)
+        order = sorted(range(n), key=lambda i: ranks[i], reverse=True)
+    return slice_df.iloc[order[0]], n - 1
 
 
 def evidence_lines_for_row(row):
@@ -452,7 +460,7 @@ def header_html(uid="", tab_name=""):
     <div class="sisun-h-sub">{sub}</div>
   </div>
   <div class="sisun-h-right">
-    <div class="sisun-hello">{hello}</div>
+    <div class="sisun-hello" data-operator="{who}">{hello}</div>
     <div id="sisun-clock" class="sisun-clock">--</div>
     <div class="sisun-notice">[공지] 작업 중 안전에 유의하세요</div>
   </div>
@@ -463,8 +471,8 @@ def header_html(uid="", tab_name=""):
 def theme_foot_html():
     return """
 <div class="sisun-theme" id="sisun-theme-row" role="button" tabindex="0">
-  <span class="sisun-theme-ico" aria-hidden="true">☽</span>
-  <span class="sisun-theme-label">Dark Mode</span>
+  <span class="sisun-theme-ico" aria-hidden="true">☀</span>
+  <span class="sisun-theme-label">Light Mode</span>
   <span class="sisun-theme-sw" aria-hidden="true"><span class="sisun-theme-knob"></span></span>
 </div>
 """
@@ -488,17 +496,38 @@ def status_html(st):
     return f"<span style='color:{fg} !important;font-weight:800'>{st}</span>"
 
 
+def _event_link_meta_html(d):
+    """이벤트 조회 신호(파일 재생과 별개). KPI에 숨겨 넣고 클라이언트 배지가 읽는다."""
+    from datetime import datetime
+
+    if d is None:
+        state, rows, err = "loading", 0, ""
+    else:
+        try:
+            rows = int(len(d))
+        except Exception:
+            rows = 0
+        state, err = ("empty" if rows == 0 else "ok"), ""
+    at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return (
+        f"<div class='sisun-event-bus-meta' hidden "
+        f"data-state='{state}' data-at='{at}' data-rows='{rows}' "
+        f"data-error='{err}'></div>"
+    )
+
+
 def kpi_html(d):
     total, hot, warn, safe, unknown = _stat_bucket(d)
     cams = len(CAMERAS)
     # 테마 따라가는 값만 t2-kpi-ink (라이트에서 흰글씨 방지). 위험/주의 등은 고정색.
+    # '구성 카메라' = 배치된 카메라 수. 재생·이벤트 연결 정상 수를 뜻하지 않음.
     cells = [
         ("전체 사건", str(total), "var(--sisun-card-fg)", "t2-kpi-ink"),
         ("위험", str(hot), "#ef4444", ""),
         ("주의", str(warn), "#d97706", ""),
         ("안전", str(safe), "#16a34a", ""),
         ("미확인", str(unknown), "var(--sisun-muted)", "t2-kpi-ink"),
-        ("카메라", f"{cams}(작동중)", "#0284c7", "t2-kpi-cam"),
+        ("구성 카메라", str(cams), "#0284c7", "t2-kpi-cam"),
     ]
     boxes = []
     for title, val, color, cls in cells:
@@ -507,37 +536,11 @@ def kpi_html(d):
             f"<div class='t2-muted' style='font-size:13px;{INK_MUTED}'>{title}</div>"
             f"<div class='{cls}' style='font-size:32px;font-weight:800;color:{color};margin-top:6px'>{val}</div></div>"
         )
-    return "<div style='display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px'>" + "".join(boxes) + "</div>"
-
-
-def recent_alert_html(d, limit=8):
-    col = "grade" if "grade" in d.columns else "status"
-    view = d[d[col].isin(["주의", "위험"])].sort_values("timestamp", ascending=False).head(limit)
-    if len(view) == 0:
-        return card("최근 알람이 없습니다.")
-    rows = []
-    for _, r in view.iterrows():
-        color = sc_of(r["scenario"])["color"]
-        rows.append(
-            f"<tr><td style='padding:8px;{INK_CELL}'><span style='display:inline-block;width:8px;height:8px;"
-            f"border-radius:50%;background:{color}'></span></td>"
-            f"<td style='padding:8px;{INK_CELL}'>{r['timestamp']}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{r.get('zone') or ''}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{r['camera']}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{r.get('worker') or ''}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{sc_of(r['scenario'])['name']}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{status_html(r['status'])}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{_esc(operator_message_for_row(r))}</td></tr>"
-        )
-    return card(
-        f"<b style='{INK_FG}'>실시간 알람</b>"
-        "<table class='t2-table'>"
-        f"<thead><tr style='text-align:left'><th style='{INK_HEAD}'></th><th style='{INK_HEAD}'>시각</th>"
-        f"<th style='{INK_HEAD}'>창고</th><th style='{INK_HEAD}'>카메라</th>"
-        f"<th style='{INK_HEAD}'>작업자</th>"
-        f"<th style='{INK_HEAD}'>유형</th>"
-        f"<th style='{INK_HEAD}'>단계</th><th style='{INK_HEAD}'>내용</th></tr></thead>"
-        f"<tbody>{''.join(rows)}</tbody></table>"
+    return (
+        "<div class='sisun-kpi-grid'>"
+        + "".join(boxes)
+        + "</div>"
+        + _event_link_meta_html(d)
     )
 
 
@@ -595,18 +598,6 @@ def table_html(d, sid=None, newest_first=False, allow_empty=False, include_fire_
     )
 
 
-def _stat_bar(label, n, max_n, color):
-    pct = 0 if max_n <= 0 or n <= 0 else max(4.0, 100.0 * n / max_n)
-    return (
-        f"<div style='display:flex;align-items:center;gap:12px;margin:12px 0'>"
-        f"<div style='width:84px;flex:0 0 84px;font-weight:700;{INK_FG}'>{label}</div>"
-        f"<div class='t2-stat-track'>"
-        f"<div style='height:100%;width:{pct:.1f}%;background:{color};border-radius:8px'></div>"
-        f"</div>"
-        f"<b style='width:88px;flex:0 0 88px;text-align:right;font-size:20px;{INK_FG}'>{n}</b></div>"
-    )
-
-
 def _stat_grade(g):
     """메인 KPI 집계. 가림·미확인은 안전으로 넣지 않음."""
     if g in ("위험", "주의", "안전", "미확인"):
@@ -631,16 +622,6 @@ def _stat_bucket(part):
     )
 
 
-def _ppe_wear(st, grade):
-    g = str(grade or "")
-    s = str(st or "")
-    if g == "미확인" or s == "미확인":
-        return "착용"
-    if "미착용" in s or g in ("주의", "위험"):
-        return "미착용"
-    return "착용"
-
-
 def _time_bin_labels(d):
     ts = event_timestamps(d)
     hours = ts.dt.floor("h").nunique()
@@ -649,88 +630,3 @@ def _time_bin_labels(d):
     base = pd.Timestamp(clock_start())
     slot = (ts - base).dt.total_seconds() // 10 * 10
     return slot.map(lambda s: (base + pd.Timedelta(seconds=int(s))).strftime("%H:%M:%S") if pd.notna(s) else "시각 미상")
-
-
-def _grouped_time_html(d):
-    if d is None or len(d) == 0:
-        return f"<div class='t2-muted' style='margin-top:8px;{INK_MUTED}'>시간 데이터 없음</div>"
-    view = d.copy()
-    view["_bin"] = _time_bin_labels(view)
-    bins = sorted(view["_bin"].unique())
-    series = {sc["id"]: [] for sc in SCENARIOS}
-    max_n = 1
-    for b in bins:
-        chunk = view[view["_bin"] == b]
-        for sc in SCENARIOS:
-            n = int((chunk["scenario"] == sc["id"]).sum())
-            series[sc["id"]].append(n)
-            max_n = max(max_n, n)
-    cols = []
-    for i, b in enumerate(bins):
-        bars = []
-        for sc in SCENARIOS:
-            n = series[sc["id"]][i]
-            h = 6 if n <= 0 else max(8, int(240 * n / max_n))
-            bars.append(
-                f"<div title='{sc['name']} {n}' "
-                f"style='width:16px;height:{h}px;background:{sc['color']};border-radius:4px 4px 0 0'></div>"
-            )
-        cols.append(
-            f"<div class='t2-time-col'>"
-            f"<div style='display:flex;align-items:flex-end;gap:2px;height:240px'>{''.join(bars)}</div>"
-            f"<div style='margin-top:8px;font-size:12px;font-weight:700;{INK_MUTED}'>{b}</div></div>"
-        )
-    legend = "".join(
-        f"<span style='display:inline-flex;align-items:center;gap:6px;margin-right:16px'>"
-        f"<span style='width:12px;height:12px;background:{sc['color']};border-radius:2px'></span>"
-        f"<span style='{INK_FG}'>{'안전모' if sc['id'] == 'ppe' else sc['name']}</span></span>"
-        for sc in SCENARIOS
-    )
-    return (
-        f"<div style='margin:8px 0 14px 0'>{legend}</div>"
-        f"<div style='display:flex;align-items:flex-end;gap:8px;overflow-x:auto;"
-        f"min-height:300px;padding-bottom:8px'>{''.join(cols)}</div>"
-    )
-
-
-def stats_html(d):
-    type_cards = []
-    for z in ZONES:
-        total, danger, warn, safe, unknown = _stat_bucket(part_area(d, z["id"]))
-        max_n = max(total, danger, warn, safe, unknown, 1)
-        type_cards.append(
-            card(
-                f"<b style='font-size:18px;{INK_FG}'>{cam_tag(z)}</b>"
-                f"<div class='t2-muted' style='margin:6px 0 4px 0;{INK_MUTED}'>"
-                "총 · 위험 · 주의 · 안전 · 미확인</div>"
-                + _stat_bar("총 건수", total, max_n, z["color"])
-                + _stat_bar("위험", danger, max_n, "#ef4444")
-                + _stat_bar("주의", warn, max_n, "#f59e0b")
-                + _stat_bar("안전", safe, max_n, "#10b981")
-                + _stat_bar("미확인", unknown, max_n, "#64748b")
-            )
-        )
-    ppe = part_of(d, "ppe")
-    if len(ppe):
-        wear = [_ppe_wear(st, g) for st, g in zip(ppe["status"], ppe["grade"])]
-        worn = wear.count("착용")
-        missing = wear.count("미착용")
-    else:
-        worn = missing = 0
-    ppe_max = max(worn, missing, 1)
-    ppe_card = card(
-        f"<b style='font-size:18px;{INK_FG}'>안전모 착용</b>"
-        f"<div class='t2-muted' style='margin:6px 0 4px 0;{INK_MUTED}'>"
-        "두 장면 · 사람 1명 = 1줄 (미확인=착용)</div>"
-        + _stat_bar("착용", worn, ppe_max, "#10b981")
-        + _stat_bar("미착용", missing, ppe_max, "#ef4444")
-    )
-    return (
-        "<div class='t2-stats-wrap'>"
-        "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px'>"
-        + "".join(type_cards)
-        + "</div>"
-        + f"<div style='margin-bottom:12px'>{ppe_card}</div>"
-        + card(f"<b style='font-size:18px;{INK_FG}'>시간대별 유형</b>" + _grouped_time_html(d))
-        + "</div>"
-    )

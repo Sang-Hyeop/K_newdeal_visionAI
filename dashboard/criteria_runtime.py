@@ -21,13 +21,74 @@ _CAM_CONFIG = {
     "P1": "configs/review/fire-current.json",
 }
 
+# fire-current.json 은 리뷰 로그가 커서 temporal 블록만 추출한다.
+_FIRE_REL = "configs/review/fire-current.json"
 
-def _read_json(rel: str):
+
+def _resolve(rel: str):
     for root in (Path(DATA_ROOT), Path(REPO_ROOT)):
         path = root / rel
         if path.is_file():
-            return json.loads(path.read_text(encoding="utf-8")), str(path.relative_to(root))
+            return path, str(path.relative_to(root))
     return None, rel
+
+
+def _read_json(rel: str):
+    path, label = _resolve(rel)
+    if path is None:
+        return None, label
+    return json.loads(path.read_text(encoding="utf-8")), label
+
+
+def _extract_json_object_after(text: str, key: str):
+    """텍스트에서 \"key\": { ... } 객체만 raw_decode. 실패 시 None."""
+    token = f'"{key}"'
+    pos = 0
+    decoder = json.JSONDecoder()
+    while True:
+        idx = text.find(token, pos)
+        if idx < 0:
+            return None
+        colon = text.find(":", idx + len(token))
+        if colon < 0:
+            return None
+        j = colon + 1
+        while j < len(text) and text[j].isspace():
+            j += 1
+        if j >= len(text) or text[j] != "{":
+            pos = idx + len(token)
+            continue
+        try:
+            obj, _end = decoder.raw_decode(text, j)
+        except json.JSONDecodeError:
+            pos = idx + len(token)
+            continue
+        if isinstance(obj, dict):
+            return obj
+        pos = idx + len(token)
+
+
+def _read_fire_slim(rel: str):
+    """거대한 fire-current.json 전체 파싱을 피하고 temporal만 담는다."""
+    path, label = _resolve(rel)
+    if path is None:
+        return None, label
+    # temporal 은 ~150KB 부근 — 앞부분만 읽어 전체 1.4MB 로드 회피
+    with path.open("r", encoding="utf-8") as fh:
+        text = fh.read(320_000)
+    follow_idx = text.find('"runtime_followup"')
+    temporal = None
+    if follow_idx >= 0:
+        chunk = text[follow_idx : follow_idx + 4000]
+        temporal = _extract_json_object_after(chunk, "temporal")
+    if temporal is None:
+        temporal = _extract_json_object_after(text, "temporal")
+    if temporal is None:
+        # 잘린 구간 밖이면 전체 로드 (비정상 파일 대비)
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        temporal = _fire_temporal(doc)
+        return {"temporal": temporal} if temporal else doc, label
+    return {"temporal": temporal, "runtime_followup": {"temporal": temporal}}, label
 
 
 def _ppe_policy():
@@ -60,7 +121,10 @@ def _fire_temporal(doc):
 def _load():
     out = {"by_cam": {}, "ppe": None, "ppe_source": "", "files": {}}
     for cam_id, rel in _CAM_CONFIG.items():
-        doc, path = _read_json(rel)
+        if rel == _FIRE_REL or cam_id == "P1":
+            doc, path = _read_fire_slim(rel)
+        else:
+            doc, path = _read_json(rel)
         out["files"][cam_id] = path
         out["by_cam"][cam_id] = doc
     policy, src = _ppe_policy()

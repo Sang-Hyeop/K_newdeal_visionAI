@@ -217,8 +217,10 @@ def build_tabs():
         "id": cam["id"], "name": cam_sidebar_label(cam),
         "kind": "camera", "camera_id": cam["id"],
     } for cam in CAMERAS)
+    # CAM06 바로 아래: 경보·조치 관리 (카메라 id 와 겹치지 않는 안정 id)
+    tabs.append({"id": "cases", "name": "경보·조치 관리", "kind": "cases"})
     tabs.extend({"id": key, "name": name, "kind": key} for key, name in (
-        ("alerts", "통합 알람"), ("history", "이벤트 이력"), ("data", "종합 데이터"),
+        ("history", "이벤트 이력"), ("data", "운영 통계"),
     ))
     return tabs
 
