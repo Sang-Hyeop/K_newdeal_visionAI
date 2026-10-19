@@ -175,48 +175,51 @@ def area_of_video(name):
     return by_file.get(text)
 
 
+def cam_location_label(cam):
+    """Keep existing site/zone names; outdoor uses its existing zone name."""
+    zone = str(cam.get("zone") or "").strip()
+    site = str(cam.get("name") or "").strip()
+    if cam.get("site") in ("outdoor", "parking") or site == "옥외 구역":
+        return zone or "옥외 주차장"
+    return " ".join(part for part in (site, zone) if part)
+
+
 def cam_main_label(cam):
-    """메인 그리드 소제목: 창고 A cam01"""
-    return f"{cam['name']} {str(cam.get('cam') or '').lower()}"
+    """One camera label shared by grid, detail header and tags."""
+    camera = str(cam.get("cam") or "").upper()
+    location = cam_location_label(cam)
+    return " · ".join(part for part in (camera, location) if part)
 
 
 def cam_side_label(cam):
-    """사이드바·상세 제목: 창고 A 하역장 진입로 / 옥외는 구역명만"""
-    zone = str(cam.get("zone") or "").strip()
-    if cam.get("site") in ("outdoor", "parking") or cam.get("name") == "옥외 구역":
-        return zone or "옥외 주차장"
-    site = str(cam.get("name") or "").strip()
-    if site and zone:
-        return f"{site} {zone}"
-    return site or zone or str(cam.get("cam") or "")
+    return cam_main_label(cam)
 
 
 def cam_tag(cam):
-    """영상 위 태그·표: 창고 A · 하역장 진입로"""
-    zone = str(cam.get("zone") or "").strip()
+    return cam_main_label(cam)
+
+
+def cam_sidebar_label(cam):
+    """Two lines in the narrow sidebar, without introducing a second numbering."""
+    camera = str(cam.get("cam") or "").upper()
+    location = cam_location_label(cam)
+    if cam.get("site") in ("outdoor", "parking") or cam.get("name") == "옥외 구역":
+        return f"{camera} · {location}"
     site = str(cam.get("name") or "").strip()
-    if zone and site and site != zone:
-        return f"{site} · {zone}"
-    return zone or site or cam_main_label(cam)
+    zone = str(cam.get("zone") or "").strip()
+    return " · ".join(part for part in (camera, site) if part) + (f"\n{zone}" if zone else "")
 
 
 def build_tabs():
-    """#1 메인 → #2~ 카메라별 → 통합알람·이력·종합데이터."""
-    tabs = [{"id": "main", "name": "#1 메인 관제", "kind": "main"}]
-    n = 2
-    for cam in CAMERAS:
-        tabs.append({
-            "id": cam["id"],
-            "name": f"#{n} {cam_side_label(cam)}",
-            "kind": "camera",
-            "camera_id": cam["id"],
-        })
-        n += 1
-    tabs.append({"id": "alerts", "name": f"#{n} 통합 알람", "kind": "alerts"})
-    n += 1
-    tabs.append({"id": "history", "name": f"#{n} 이벤트 이력", "kind": "history"})
-    n += 1
-    tabs.append({"id": "data", "name": f"#{n} 종합 데이터", "kind": "data"})
+    """Camera numbers identify cameras; ordinary menus have names only."""
+    tabs = [{"id": "main", "name": "메인 관제", "kind": "main"}]
+    tabs.extend({
+        "id": cam["id"], "name": cam_sidebar_label(cam),
+        "kind": "camera", "camera_id": cam["id"],
+    } for cam in CAMERAS)
+    tabs.extend({"id": key, "name": name, "kind": key} for key, name in (
+        ("alerts", "통합 알람"), ("history", "이벤트 이력"), ("data", "종합 데이터"),
+    ))
     return tabs
 
 

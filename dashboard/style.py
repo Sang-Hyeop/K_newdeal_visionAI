@@ -634,6 +634,7 @@ html.sisun-side-closed .sisun-dash-row { padding-left: 0 !important; }
   width: 100% !important; min-height: 40px !important; border-radius: 10px !important;
   font-size: 13px !important; font-weight: 700 !important;
   text-align: left !important; justify-content: flex-start !important;
+  white-space: pre-line !important; line-height: 1.4 !important;
   background: #1a2230 !important;
   background-image: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0) 55%) !important;
   color: #e8eef8 !important;

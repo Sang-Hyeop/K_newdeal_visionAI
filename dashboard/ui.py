@@ -128,7 +128,8 @@ def login_error(msg):
 
 
 def tab_caption(name):
-    return re.sub(r"^#\d+\s*", "", str(name or "")).strip() or str(name or "")
+    caption = re.sub(r"^#\d+\s*", "", str(name or "")).strip()
+    return re.sub(r"\s+", " ", caption)
 
 
 def _esc(text):
