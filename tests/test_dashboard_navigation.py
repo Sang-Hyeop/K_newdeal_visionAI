@@ -64,3 +64,18 @@ armBeepOnce(tag('3'));const second=window.__sisunActiveBeep;assert.ok(second);ol
 silenceBeeps();assert.equal(window.__sisunActiveBeep,null);armBeepOnce(tag('3'));assert.equal(window.__sisunActiveBeep,null);
 window.__sisunBellMuted=true;armBeepOnce(tag('4'));window.__sisunBellMuted=false;armBeepOnce(tag('4'));assert.equal(window.__sisunActiveBeep,null);
 ''')
+
+    def test_filters_rebuild_after_gradio_recreates_empty_container(self):
+        from dashboard.style import BOOT_JS
+        start=BOOT_JS.index('  var bindCasesScope =')
+        end=BOOT_JS.index('  var casesQuery =',start)
+        self.run_js('''
+const assert=require('node:assert/strict');const __cases={filtersReady:true,filterValues:{'cf-cam':'A2'}};
+const box={innerHTML:'',querySelector(){return this.innerHTML.includes("id='cf-st'")?{}:null}};
+const els={};const document={getElementById(id){if(id==='sisun-cases-filters')return box;return els[id]||(els[id]={value:'all'})}};
+const window={sisunCasesRefresh(){}};
+''' + BOOT_JS[start:end] + '''
+ensureCasesFilters();assert.ok(box.innerHTML.includes("id='cf-st'"));assert.equal(els['cf-cam'].value,'A2');
+box.innerHTML='';ensureCasesFilters();assert.ok(box.innerHTML.includes("id='cf-st'"));
+assert.equal(typeof els['cases-all'].onclick,'function');els['cases-all'].onclick();assert.equal(els['cf-st'].value,'__all_incl_done');
+''')

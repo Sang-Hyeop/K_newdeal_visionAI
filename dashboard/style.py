@@ -2751,10 +2751,21 @@ BOOT_JS = """
     filtersReady: false, selected: "", draft: "", dirty: false, saving: false, lastLoad: 0
   });
   var caseEsc = escText;
+  var bindCasesScope = function() {
+    var setScope = function(all) {
+      var st = document.getElementById("cf-st");
+      if (st) st.value = all ? "__all_incl_done" : "all";
+      window.sisunCasesRefresh(true);
+    };
+    var open = document.getElementById("cases-open"), all = document.getElementById("cases-all");
+    if (open) open.onclick = function() { setScope(false); };
+    if (all) all.onclick = function() { setScope(true); };
+  };
   var ensureCasesFilters = function() {
     var box = document.getElementById("sisun-cases-filters");
-    if (!box || __cases.filtersReady) return;
-    __cases.filtersReady = true;
+    if (!box) return;
+    bindCasesScope();
+    if (box.querySelector("#cf-st")) return;
     box.innerHTML =
       "<label>사건 등록일(부터)<input type='date' id='cf-from'/></label>" +
       "<label>사건 등록일(까지)<input type='date' id='cf-to'/></label>" +
@@ -2774,13 +2785,9 @@ BOOT_JS = """
       "<option value='__all_incl_done'>전체(완료 포함)</option></select></label>" +
       "<button type='button' id='cf-apply'>조회</button>" +
       "<button type='button' class='is-secondary' id='cf-reset'>필터 초기화</button>";
-    var setScope = function(all) {
-      var st = document.getElementById("cf-st");
-      if (st) st.value = all ? "__all_incl_done" : "all";
-      window.sisunCasesRefresh(true);
-    };
-    document.getElementById("cases-open").onclick = function() { setScope(false); };
-    document.getElementById("cases-all").onclick = function() { setScope(true); };
+    Object.entries(__cases.filterValues || {}).forEach(function(pair) {
+      var el = document.getElementById(pair[0]); if (el) el.value = pair[1];
+    });
     var apply = document.getElementById("cf-apply");
     var reset = document.getElementById("cf-reset");
     if (apply) apply.onclick = function() { window.sisunCasesRefresh(true); };
@@ -2809,6 +2816,10 @@ BOOT_JS = """
     ["cases-open", "cases-all"].forEach(function(id, i) {
       var b = document.getElementById(id);
       if (b) b.setAttribute("aria-pressed", String(i === 1 ? st === "__all_incl_done" : st !== "__all_incl_done"));
+    });
+    __cases.filterValues = {};
+    ["cf-from","cf-to","cf-cam","cf-scen","cf-sev","cf-asg","cf-st"].forEach(function(id) {
+      var el = document.getElementById(id); if (el) __cases.filterValues[id] = el.value;
     });
     return q.join("&");
   };
@@ -2880,8 +2891,8 @@ BOOT_JS = """
     return caseEsc(at + " · " + who + " — " + phrase);
   };
   window.sisunCasesLoadDetail = function(linkKey, version) {
-    if (version && __cases.detailVersion === version && __cases.detailLink === linkKey) return;
     var box = document.getElementById("sisun-cases-detail");
+    if (box && box.querySelector(".sisun-cases-kv") && version && __cases.detailVersion === version && __cases.detailLink === linkKey) return;
     if (!box) return;
     if (!linkKey) {
       box.innerHTML = "<div class='sisun-cases-empty'>사건을 선택하면 상세·조치가 표시됩니다</div>";
