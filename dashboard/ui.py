@@ -4,10 +4,16 @@ import re
 import gradio as gr
 import pandas as pd
 
+from .display_text import (
+    fire_evidence_lines,
+    fire_reason_label,
+    operator_message_for_row,
+)
 from .events import part_area, part_of
 from .timeline import event_seconds, event_timestamps
 from .config import (
     ADMINS,
+    CAM_BY_ID,
     CAMERAS,
     TABS,
     INK_CARD,
@@ -26,23 +32,187 @@ from .config import (
     sc_of,
 )
 
-def cam_danger_overlay_html(active, place=""):
-    """메인 영상 위 위험 반투명 박스. active=False면 숨김."""
+# 관제 오버레이·상세 요약: 위치(zone) + 발생 이유. 모델/임계값과 무관한 표시 문구만.
+_REASON_BY_SCENARIO = {
+    "collision": "작업자–지게차 근접 위험",
+    "zone": "위험구역 침범",
+    "ppe": "안전모 미착용",
+    "dwell": "위험구역 장시간 체류",
+}
+_EVIDENCE_BY_SCENARIO = {
+    "collision": (
+        "작업자와 지게차의 근접 위험이 관측됨",
+        "영상에서 간격·접촉 위험 여부 확인",
+    ),
+    "zone": (
+        "위험구역 진입이 관측됨",
+        "영상에서 실제 침범 여부 확인",
+    ),
+    "ppe": (
+        "안전모 미착용 상태가 관측됨",
+        "영상에서 안전모 착용 여부 확인",
+    ),
+    "dwell": (
+        "위험구역 장시간 체류가 관측됨",
+        "영상에서 체류 지속 여부 확인",
+    ),
+}
+_SEVERITY_RANK = {
+    "위험": 4,
+    "화재 의심": 4,
+    "주의": 2,
+    "확인 중": 1,
+}
+_FIRE_STATUS = ("화재 의심", "확인 중", "관측 소실", "판정 불가")
+
+
+def place_label_for_cam(cam):
+    """메인 문구용 위치. 창고명 없이 구역명만 (예: 옥외 주차장)."""
+    if not cam:
+        return ""
+    zone = str(cam.get("zone") or "").strip()
+    if zone:
+        return zone
+    site = str(cam.get("name") or "").strip()
+    return site
+
+
+def _cell(row, key, default=""):
+    if row is None:
+        return default
+    try:
+        value = row[key] if key in row.index else default
+    except Exception:
+        try:
+            value = row.get(key, default)
+        except Exception:
+            return default
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return default
+    return value
+
+
+def reason_label_for_row(row):
+    """이벤트 행 → 발생 이유 한 줄. 화재는 저장 status와 일치."""
+    sid = str(_cell(row, "scenario") or "")
+    status = str(_cell(row, "status") or "")
+    if sid == "fire":
+        return fire_reason_label(status)
+    if sid == "ppe" and "미착용" in status:
+        return "안전모 미착용"
+    mapped = _REASON_BY_SCENARIO.get(sid)
+    if mapped:
+        return mapped
+    try:
+        return sc_of(sid)["name"]
+    except Exception:
+        return status or "위험"
+
+
+def _severity_rank(row):
+    grade = str(_cell(row, "grade") or "")
+    status = str(_cell(row, "status") or "")
+    return max(_SEVERITY_RANK.get(grade, 0), _SEVERITY_RANK.get(status, 0))
+
+
+def pick_representative_alert(slice_df):
+    """같은 카메라 다중 위험 → 심각도 높은 것, 동률이면 최신. (대표행, 추가건수)."""
+    if slice_df is None or len(slice_df) == 0:
+        return None, 0
+    work = slice_df.copy()
+    work["_rank"] = [_severity_rank(r) for _, r in work.iterrows()]
+    if "timestamp" in work.columns:
+        work = work.sort_values(["_rank", "timestamp"], ascending=[False, False])
+    else:
+        work = work.sort_values("_rank", ascending=False)
+    return work.iloc[0], max(0, len(work) - 1)
+
+
+def evidence_lines_for_row(row):
+    sid = str(_cell(row, "scenario") or "")
+    status = str(_cell(row, "status") or "")
+    if sid == "fire":
+        return fire_evidence_lines(status)
+    default = _EVIDENCE_BY_SCENARIO.get(sid, ("이벤트 조건 충족", "영상에서 실제 상황 확인"))
+    msg = operator_message_for_row(row)
+    if msg and len(msg) <= 64:
+        return msg, default[1]
+    return default
+
+
+def pick_latest_fire_row(part, elapsed, window=12.0):
+    """재생 위치 기준 구간 안 최신 불꽃 상태 행(알림 여부와 무관)."""
+    if part is None or len(part) == 0 or "scenario" not in part.columns:
+        return None
+    try:
+        t = float(elapsed)
+    except (TypeError, ValueError):
+        return None
+    if t <= 0:
+        return None
+    sec = event_seconds(part)
+    now = part[(sec <= t) & (sec >= t - float(window))]
+    fire = now[now["scenario"] == "fire"]
+    if len(fire) == 0:
+        return None
+    if "timestamp" in fire.columns:
+        fire = fire.sort_values("timestamp", ascending=False)
+    else:
+        fire = fire.iloc[::-1]
+    return fire.iloc[0]
+
+
+def format_event_clock(row):
+    """상세 요약용 시:분:초."""
+    ts = str(_cell(row, "timestamp") or "")
+    if " " in ts:
+        time_part = ts.split(" ", 1)[1]
+        return time_part[:8] if len(time_part) >= 8 else time_part
+    return ts[:8] if ts else "—"
+
+
+def alert_lines_for_row(row, cam=None):
+    """메인·종 알림 공통: (위치 · 이유, CAM · 상세 보기)."""
+    cid = str(_cell(row, "area") or "")
+    cam_meta = cam if cam is not None else CAM_BY_ID.get(cid, {})
+    place = place_label_for_cam(cam_meta)
+    if not place:
+        place = str(_cell(row, "zone") or "").strip()
+    reason = reason_label_for_row(row)
+    headline = " · ".join(part for part in (place, reason) if part) or "위험"
+    cam_code = str((cam_meta or {}).get("cam") or _cell(row, "camera") or "").upper()
+    sub = f"{cam_code} · 상세 보기" if cam_code else "상세 보기"
+    return headline, sub
+
+
+def cam_danger_overlay_html(
+    active, place="", reason="", cam_code="", cam_id="", extra=0,
+):
+    """메인 영상 위 위험 박스: 위치·이유 / CAM · 상세 보기.
+    클릭 시 해당 카메라 탭(#2~)으로 이동 (data-cam-id).
+    """
     if not active:
         return "<div class='sisun-cam-alert-inner sisun-cam-alert-off' aria-hidden='true'></div>"
-    place_html = (
-        f"<div class='sisun-cam-alert-place'>{_esc(place)}</div>" if place else ""
+    headline = " · ".join(part for part in (place, reason) if part) or "위험"
+    sub = f"{cam_code} · 상세 보기" if cam_code else "상세 보기"
+    # 행 수−1 = 대표를 제외한 최근 구간 기록 수 (별도 사건 ID로 묶지 않음)
+    extra_html = (
+        f"<div class='sisun-cam-alert-extra'>추가 기록 {int(extra)}건</div>"
+        if extra and int(extra) > 0
+        else ""
     )
+    cam_attr = f" data-cam-id='{_esc(cam_id)}'" if cam_id else ""
     return (
-        "<div class='sisun-cam-alert-inner sisun-cam-alert-on' role='alert'>"
-        "<div class='sisun-cam-alert-kicker'>위험 알림</div>"
-        "<div class='sisun-cam-alert-msg'>확인 바랍니다</div>"
-        f"{place_html}</div>"
+        f"<div class='sisun-cam-alert-inner sisun-cam-alert-on' role='button' "
+        f"tabindex='0' title='해당 구역 화면으로 이동'{cam_attr}>"
+        f"<div class='sisun-cam-alert-kicker'>{_esc(headline)}</div>"
+        f"<div class='sisun-cam-alert-msg'>{_esc(sub)}</div>"
+        f"{extra_html}</div>"
     )
 
 
 def danger_overlay_updates(view, cams, positions, window=12.0):
-    """재생 위치 기준 최근 window초 안에 위험이 있는 카메라만 오버레이 ON."""
+    """재생 위치 기준 최근 window초 위험 → 카메라당 대표 문구 1개."""
     idle = [cam_danger_overlay_html(False) for _ in cams]
     if view is None or len(view) == 0 or not cams:
         return idle
@@ -61,43 +231,130 @@ def danger_overlay_updates(view, cams, positions, window=12.0):
             t = float(positions.get(cid, 0.0))
         except (TypeError, ValueError):
             t = 0.0
-        on = False
-        if t > 0 and cid:
-            mask = (areas == cid) & (sec <= t) & (sec >= t - float(window))
-            on = bool(mask.any())
-        out.append(cam_danger_overlay_html(on, cam_side_label(cam) if on else ""))
+        if not (t > 0 and cid):
+            out.append(cam_danger_overlay_html(False))
+            continue
+        mask = (areas == cid) & (sec <= t) & (sec >= t - float(window))
+        hit = hot.loc[mask]
+        if len(hit) == 0:
+            out.append(cam_danger_overlay_html(False))
+            continue
+        best, extra = pick_representative_alert(hit)
+        out.append(
+            cam_danger_overlay_html(
+                True,
+                place=place_label_for_cam(cam),
+                reason=reason_label_for_row(best),
+                cam_code=str(cam.get("cam") or "").upper(),
+                cam_id=cid,
+                extra=extra,
+            )
+        )
     return out
 
 
-def live_flash_html(part, elapsed, window=2.5):
-    """지금 시각 근처의 주의·위험만 큰 경고로 띄움."""
+def pick_live_alert_row(part, elapsed, window=12.0):
+    """재생 위치 기준 최근 구간 대표 위험/주의 행. 없으면 (None, 0)."""
     if part is None or len(part) == 0:
-        return ""
+        return None, 0
+    try:
+        t = float(elapsed)
+    except (TypeError, ValueError):
+        return None, 0
+    if t <= 0:
+        return None, 0
     col = "grade" if "grade" in part.columns else "status"
     sec = event_seconds(part)
-    now = part[(sec <= float(elapsed)) & (sec >= float(elapsed) - window)]
+    now = part[(sec <= t) & (sec >= t - float(window))]
     if now is None or len(now) == 0:
+        return None, 0
+    hot = now[now[col] == "위험"]
+    if len(hot) == 0:
+        hot = now[now[col] == "주의"]
+    if len(hot) == 0:
+        # 화재 확인 중·관측 소실 등 grade가 위험이 아닌 상태도 상세에서 설명(신규 알림 아님)
+        if "status" in now.columns:
+            fireish = now[now["status"].isin(list(_FIRE_STATUS))]
+            if len(fireish):
+                return pick_representative_alert(fireish)
+        return None, 0
+    return pick_representative_alert(hot)
+
+
+def _latest_fire_note_html(best, part, elapsed, window):
+    """대표 위험 기록과 최신 관측 상태가 다르면 시각을 구분해 안내."""
+    if str(_cell(best, "scenario") or "") != "fire":
         return ""
-    if (now[col] == "위험").any():
-        css, level, en = "sisun-flash-hot", "위험", "DANGER"
-        hit = now[now[col] == "위험"]
-    elif (now[col] == "주의").any():
-        css, level, en = "sisun-flash-warn", "주의", "WARNING"
-        hit = now[now[col] == "주의"]
-    else:
+    latest = pick_latest_fire_row(part, elapsed, window=window)
+    if latest is None:
         return ""
-    names = []
-    for _, r in hit.iterrows():
-        try:
-            names.append(sc_of(r["scenario"])["name"])
-        except Exception:
-            pass
-    sub = " · ".join(dict.fromkeys(names))
-    extra = f"<div style='font-size:18px;font-weight:800;margin-top:8px;letter-spacing:0'>{sub}</div>" if sub else ""
+    best_status = str(_cell(best, "status") or "")
+    latest_status = str(_cell(latest, "status") or "")
+    best_ts = str(_cell(best, "timestamp") or "")
+    latest_ts = str(_cell(latest, "timestamp") or "")
+    if latest_status == best_status:
+        return ""
+    if latest_ts and best_ts and latest_ts < best_ts:
+        return ""
+    when = format_event_clock(latest)
+    label = fire_reason_label(latest_status)
     return (
-        f"<div class='sisun-flash {css}'>{level}"
-        f"<div style='font-size:20px;letter-spacing:.28em;margin-top:6px'>{en}</div>{extra}</div>"
+        f"<div class='sisun-detail-line'><span>최신 관측 상태</span> "
+        f"{_esc(label)} · 발생 시각 {_esc(when)} "
+        f"(위 최근 위험 기록과 별개 · 현재 불꽃 확정이 아님)</div>"
     )
+
+
+def live_detail_summary_html(part, elapsed, cam=None, window=12.0):
+    """카메라 상세 상단: 위치·이유 + 시각/CAM + 근거·확인 사항."""
+    best, extra = pick_live_alert_row(part, elapsed, window=window)
+    if best is None:
+        return ""
+    cam_meta = cam or CAM_BY_ID.get(str(_cell(best, "area") or ""), {})
+    place = place_label_for_cam(cam_meta) or str(_cell(best, "zone") or "")
+    reason = reason_label_for_row(best)
+    headline = " · ".join(part for part in (place, reason) if part)
+    cam_code = str((cam_meta or {}).get("cam") or _cell(best, "camera") or "").upper()
+    when = format_event_clock(best)
+    evidence, check = evidence_lines_for_row(best)
+    status = str(_cell(best, "status") or "")
+    level = str(_cell(best, "grade") or status or "")
+    css = (
+        "sisun-detail-hot"
+        if level == "위험" or status == "화재 의심"
+        else "sisun-detail-warn"
+    )
+    extra_bit = (
+        f"<div class='sisun-detail-extra'>같은 카메라 추가 기록 {int(extra)}건</div>"
+        if extra
+        else ""
+    )
+    fire_note = _latest_fire_note_html(best, part, elapsed, window)
+    return (
+        f"<div class='sisun-detail-summary {css}'>"
+        f"<div class='sisun-detail-headline'>{_esc(headline)}</div>"
+        f"<div class='sisun-detail-meta'>발생 시각: {_esc(when)} / {_esc(cam_code)}"
+        f" · 최근 기록</div>"
+        f"<div class='sisun-detail-line'><span>감지 근거</span> {_esc(evidence)}</div>"
+        f"<div class='sisun-detail-line'><span>확인 사항</span> {_esc(check)}</div>"
+        f"{fire_note}"
+        f"{extra_bit}</div>"
+    )
+
+
+def live_judgment_html(part, elapsed, cam=None, window=12.0):
+    """요약과 동일한 대표 행의 판정 기준·관측 근거. 알림 없으면 빈 문자열."""
+    from .judgment import judgment_panel_html
+
+    best, _extra = pick_live_alert_row(part, elapsed, window=window)
+    if best is None:
+        return ""
+    return judgment_panel_html(best, cam=cam)
+
+
+def live_flash_html(part, elapsed, window=2.5, cam=None):
+    """카메라 상세 상단 요약(위치·이유·근거). 구 flash 자리 재사용."""
+    return live_detail_summary_html(part, elapsed, cam=cam, window=max(float(window), 12.0))
 
 def login_html():
     return """
@@ -270,7 +527,7 @@ def recent_alert_html(d, limit=8):
             f"<td style='padding:8px;{INK_CELL}'>{r.get('worker') or ''}</td>"
             f"<td style='padding:8px;{INK_CELL}'>{sc_of(r['scenario'])['name']}</td>"
             f"<td style='padding:8px;{INK_CELL}'>{status_html(r['status'])}</td>"
-            f"<td style='padding:8px;{INK_CELL}'>{r['message']}</td></tr>"
+            f"<td style='padding:8px;{INK_CELL}'>{_esc(operator_message_for_row(r))}</td></tr>"
         )
     return card(
         f"<b style='{INK_FG}'>실시간 알람</b>"
@@ -322,7 +579,7 @@ def table_html(d, sid=None, newest_first=False, allow_empty=False, include_fire_
                 f"<td style='{INK_CELL}'>{status_html(r['status'])}</td>"
                 f"<td style='{INK_CELL}'>{r['camera']}</td>"
                 f"<td style='{INK_CELL}'>{r['zone']}</td>"
-                f"<td style='{INK_CELL}'>{r['message']}</td>"
+                f"<td style='{INK_CELL}'>{_esc(operator_message_for_row(r))}</td>"
                 "</tr>"
             )
     return card(

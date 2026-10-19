@@ -34,6 +34,7 @@ from .ui import (
     header_html,
     kpi_html,
     live_flash_html,
+    live_judgment_html,
     login_foot,
     login_html,
     recent_alert_html,
@@ -88,7 +89,11 @@ def _alert_bus_tick():
         return gr.update()
     positions = {cam["id"]: elapsed for cam in CAMERAS}
     part = live_positions(view, positions)
-    return beep_html(notify(part))
+    kind = notify(part)
+    # None = 변경 없음. "" = 목록 갱신만(소리 없음). hot/warn = 소리+목록.
+    if kind is None:
+        return gr.update()
+    return beep_html(kind)
 
 
 _ICON_DIR = os.path.join(os.path.dirname(__file__), "packaging", "icons")
@@ -467,6 +472,12 @@ def make_camera(cam):
         playheads = gr.JSON(value={}, visible=False)
         ready = gr.State(False)
         banner = gr.HTML()
+        with gr.Accordion(
+            "판정 기준 및 관측 근거",
+            open=False,
+            elem_classes="sisun-judgment-acc",
+        ):
+            judgment = gr.HTML()
         vids, dests, _cams, _alerts = _cam_wall(
             [cam], "detect", wall_id=f"sisun-wall-{cam_id}", expandable=False,
         )
@@ -487,7 +498,7 @@ def make_camera(cam):
             paths = _paths()
             return (
                 tuple(paths)
-                + (True, {}, True, "", table_html(empty, allow_empty=True), gr.update(active=True))
+                + (True, {}, True, "", "", table_html(empty, allow_empty=True), gr.update(active=True))
             )
 
         def begin():
@@ -499,25 +510,27 @@ def make_camera(cam):
         def stop():
             n = len(vids)
             return tuple(gr.update() for _ in range(n)) + (
-                False, {}, False, "", "", gr.update(active=False),
+                False, {}, False, "", "", "", gr.update(active=False),
             )
 
         def tick(on, positions, is_ready):
             if not on or not is_ready:
-                return gr.update(), gr.update()
+                return gr.update(), gr.update(), gr.update()
             view = get_df()
             if view is None:
                 view = load_df()
             elapsed = float((positions or {}).get(cam_id, 0.0))
             part = live_part(view, cam_id, None, elapsed)
             return (
-                live_flash_html(part, elapsed),
+                live_flash_html(part, elapsed, cam=cam),
+                live_judgment_html(part, elapsed, cam=cam),
                 table_html(part, allow_empty=True),
             )
 
-        outs = vids + [playing, playheads, ready, banner, log, timer]
+        outs = vids + [playing, playheads, ready, banner, judgment, log, timer]
         timer.tick(
-            tick, inputs=[playing, playheads, ready], outputs=[banner, log],
+            tick, inputs=[playing, playheads, ready],
+            outputs=[banner, judgment, log],
             js=playback_inputs(f"sisun-wall-{cam_id}", [cam]), concurrency_limit=1,
         )
         btn.click(refresh, outputs=outs)
@@ -648,9 +661,11 @@ def launch():
                     gr.HTML(side_brand_html())
                     with gr.Column(elem_classes="sisun-side-nav"):
                         for i, (name, _block) in enumerate(demos):
+                            tab = TABS[i] if i < len(TABS) else {}
                             side_btns.append(
                                 gr.Button(
                                     name,
+                                    elem_id=f"sisun-side-{tab.get('id') or i}",
                                     elem_classes="sisun-side-btn",
                                     variant="primary" if i == 0 else "secondary",
                                 )

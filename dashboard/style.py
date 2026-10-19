@@ -229,8 +229,12 @@ div.toast-wrap,
 }
 .sisun-toast * { color: inherit !important; }
 .sisun-toast-head {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; font-weight: 800; margin-bottom: 2px;
+  display: flex; align-items: flex-start; gap: 6px;
+  font-size: 12px; font-weight: 800; margin-bottom: 3px;
+  line-height: 1.3; word-break: keep-all;
+}
+.sisun-toast-head > span:last-child {
+  flex: 1 1 auto; min-width: 0;
 }
 .sisun-toast-ico {
   width: 14px; height: 14px; border-radius: 3px;
@@ -242,6 +246,41 @@ div.toast-wrap,
 .sisun-toast-text {
   font-size: 11px; font-weight: 700; line-height: 1.3;
   color: #f8fafc !important;
+}
+.sisun-toast-meta {
+  margin-top: 3px;
+  font-size: 10px; font-weight: 700; line-height: 1.35;
+  opacity: .9;
+}
+.sisun-toast-ack {
+  display: inline-block; margin-top: 4px; padding: 1px 6px;
+  border-radius: 4px; font-size: 10px; font-weight: 800;
+  border: 1px solid rgba(148, 163, 184, .45);
+}
+.sisun-toast-ack.is-pending {
+  color: #fde68a !important;
+  border-color: rgba(251, 191, 36, .55);
+}
+.sisun-toast-ack.is-done {
+  color: #94a3b8 !important;
+  border-color: rgba(148, 163, 184, .35);
+}
+.sisun-toast.is-acked { opacity: .72; }
+.sisun-toast-actions {
+  display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap;
+}
+.sisun-toast-actions button {
+  margin: 0; padding: 2px 7px;
+  border-radius: 5px;
+  border: 1px solid rgba(148, 163, 184, .4);
+  background: rgba(30, 41, 59, .85);
+  color: #e2e8f0 !important;
+  font-size: 10px; font-weight: 700; cursor: pointer;
+}
+.sisun-rail-note {
+  padding: 4px 10px 0;
+  font-size: 9px; font-weight: 700; line-height: 1.3;
+  opacity: .65;
 }
 html.sisun-light .sisun-bell-btn {
   background: #ffffff; color: #0f172a;
@@ -631,6 +670,7 @@ html.sisun-side-closed .sisun-dash-row { padding-left: 0 !important; }
 }
 #sisun-side button.sisun-side-btn,
 #sisun-side .sisun-side-nav button.sisun-side-btn {
+  position: relative !important;
   width: 100% !important; min-height: 40px !important; border-radius: 10px !important;
   font-size: 13px !important; font-weight: 700 !important;
   text-align: left !important; justify-content: flex-start !important;
@@ -639,8 +679,22 @@ html.sisun-side-closed .sisun-dash-row { padding-left: 0 !important; }
   background-image: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0) 55%) !important;
   color: #e8eef8 !important;
   border: 1px solid rgba(186, 198, 220, .28) !important;
-  padding: 8px 12px !important;
+  padding: 8px 28px 8px 12px !important;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 2px 6px rgba(0,0,0,.22) !important;
+}
+/* 사이드바 확인 필요 표시 (위험 구역) */
+.sisun-side-need {
+  position: absolute; top: 50%; right: 8px; transform: translateY(-50%);
+  width: 18px; height: 18px; border-radius: 999px;
+  background: #ef4444; color: #fff !important;
+  font-size: 10px; font-weight: 900; line-height: 1;
+  display: none; align-items: center; justify-content: center;
+  pointer-events: none; z-index: 2;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, .35);
+}
+.sisun-side-need.is-on { display: inline-flex; }
+html.sisun-light .sisun-side-need {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .9);
 }
 #sisun-side button.sisun-side-btn:hover {
   border-color: rgba(186, 198, 220, .5) !important;
@@ -814,19 +868,35 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   padding: 0 !important; margin: 0 !important;
   border: none !important; background: transparent !important;
 }
-/* 메인 영상 하단: 위험 알림 반투명 박스 (~절반). 영상은 위에 그대로 보이게 */
+/* 메인 영상 하단 위험 알림.
+   Gradio .block/.html-container 가 height:0 으로 접히면 문구가 카메라 밖으로
+   밀려 .sisun-cam{overflow:hidden} 에 잘림 → ON일 때 fit-content 로 위로 확장. */
 .sisun-cam > .block:has(.sisun-cam-alert-inner),
 .sisun-cam-alert {
   position: absolute !important;
   left: 0 !important; right: 0 !important; bottom: 0 !important;
   top: auto !important;
-  width: 100% !important; height: 50% !important;
+  width: 100% !important;
+  height: fit-content !important;
   z-index: 6 !important;
   padding: 0 !important; margin: 0 !important;
   border: none !important; background: transparent !important;
-  box-shadow: none !important; min-height: 0 !important;
-  max-height: 50% !important;
+  box-shadow: none !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
   pointer-events: none !important;
+}
+/* 위험 박스만 클릭 가능 → 해당 구역 탭으로 이동 (영상 클릭 시어터는 유지) */
+.sisun-cam > .block:has(.sisun-cam-alert-on),
+.sisun-cam-alert:has(.sisun-cam-alert-on) {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  /* .sisun-cam .block { height:100% } 보다 우선 */
+  height: fit-content !important;
+  min-height: 64px !important;
+  max-height: 46% !important;
+  overflow: hidden !important;
 }
 /* 꺼진 위험 박스는 컨테이너까지 숨겨 옆 목록 영상을 가리지 않음 */
 .sisun-cam > .block:has(.sisun-cam-alert-off),
@@ -834,40 +904,188 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   display: none !important;
   height: 0 !important; min-height: 0 !important; max-height: 0 !important;
 }
-.sisun-cam-alert .html-container,
-.sisun-cam-alert .prose {
-  height: 100% !important; padding: 0 !important; margin: 0 !important;
+.sisun-cam-alert:has(.sisun-cam-alert-on) .html-container,
+.sisun-cam-alert:has(.sisun-cam-alert-on) .prose {
+  height: fit-content !important;
+  min-height: 64px !important;
+  max-height: none !important;
+  padding: 0 !important; margin: 0 !important;
   background: transparent !important;
+  overflow: visible !important;
+  display: block !important;
+  width: 100% !important;
 }
+.sisun-cam-alert .prose > :first-child { margin: 0 !important; }
 .sisun-cam-alert-inner {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  text-align: center; gap: 4px;
-  box-sizing: border-box; padding: 8px 10px;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  text-align: center;
+  gap: 3px;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: visible;
 }
 .sisun-cam-alert-off { display: none !important; }
 .sisun-cam-alert-on {
-  background: rgba(185, 28, 28, .82);
+  background: rgba(185, 28, 28, .86);
   border-top: 2px solid rgba(254, 202, 202, .55);
   color: #fff;
   animation: sisunPulse .9s ease-in-out infinite;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  box-sizing: border-box;
+  padding: 8px 10px 7px;
+  min-height: 64px;
+  width: 100% !important;
+  overflow: visible;
+}
+.sisun-cam-alert-on:hover {
+  background: rgba(185, 28, 28, .94);
+}
+.sisun-cam-alert-kicker,
+.sisun-cam-alert-msg,
+.sisun-cam-alert-extra {
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  min-height: 1.2em;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .sisun-cam-alert-kicker {
-  font-size: 15px; font-weight: 900; letter-spacing: .08em;
-  line-height: 1.15;
+  display: block !important;
+  font-size: 13px; font-weight: 900; letter-spacing: .01em;
+  line-height: 1.3;
+  white-space: normal;
+  overflow: visible;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .sisun-cam-alert-msg {
-  font-size: 13px; font-weight: 800; opacity: .95;
+  display: block !important;
+  font-size: 12px; font-weight: 800; opacity: .95;
+  letter-spacing: .02em;
+  line-height: 1.25;
+}
+.sisun-cam-alert-extra {
+  display: block !important;
+  font-size: 11px; font-weight: 700; opacity: .9;
+  line-height: 1.2;
 }
 .sisun-cam-alert-place {
   font-size: 11px; font-weight: 700; opacity: .88;
   margin-top: 2px; max-width: 100%;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.sisun-theater-rail-list .sisun-cam-alert-kicker { font-size: 11px; }
-.sisun-theater-rail-list .sisun-cam-alert-msg { font-size: 10px; }
+.sisun-theater-rail-list .sisun-cam-alert-on {
+  min-height: 0;
+  height: auto;
+  padding: 5px 6px 4px;
+  overflow: visible;
+}
+.sisun-theater-rail-list .sisun-cam-alert-kicker { font-size: 10px; line-height: 1.25; }
+.sisun-theater-rail-list .sisun-cam-alert-msg { font-size: 9px; line-height: 1.25; }
+.sisun-theater-rail-list .sisun-cam-alert-extra { font-size: 8px; line-height: 1.2; }
 .sisun-theater-rail-list .sisun-cam-alert-place { font-size: 9px; }
+
+/* 카메라 상세 상단: 위치·이유·근거 요약 */
+.sisun-detail-summary {
+  border-radius: 10px;
+  padding: 14px 16px 12px;
+  margin: 0 0 12px;
+  color: #fff;
+  box-sizing: border-box;
+}
+.sisun-detail-hot {
+  background: linear-gradient(135deg, rgba(185, 28, 28, .92), rgba(127, 29, 29, .88));
+  border: 1px solid rgba(254, 202, 202, .35);
+}
+.sisun-detail-warn {
+  background: linear-gradient(135deg, rgba(180, 83, 9, .92), rgba(146, 64, 14, .88));
+  border: 1px solid rgba(253, 230, 138, .35);
+}
+.sisun-detail-headline {
+  font-size: 20px; font-weight: 900; letter-spacing: .01em; line-height: 1.3;
+}
+.sisun-detail-meta {
+  margin-top: 6px; font-size: 13px; font-weight: 700; opacity: .92;
+}
+.sisun-detail-line {
+  margin-top: 8px; font-size: 13px; font-weight: 600; line-height: 1.4;
+  opacity: .95;
+}
+.sisun-detail-line span {
+  display: inline-block; min-width: 4.5em; font-weight: 800; opacity: .8;
+  margin-right: 6px;
+}
+.sisun-detail-extra {
+  margin-top: 8px; font-size: 12px; font-weight: 700; opacity: .85;
+}
+
+/* 카메라 상세: 판정 기준·관측 근거 (접힘 Accordion) */
+.sisun-judgment-acc {
+  margin: 0 0 10px !important;
+  border: 1px solid var(--sisun-line) !important;
+  border-radius: 10px !important;
+  background: rgba(15, 23, 42, .55) !important;
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.sisun-judgment-acc > .label-wrap,
+.sisun-judgment-acc .label-wrap {
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: var(--sisun-title) !important;
+}
+/* Gradio hide-container 가 펼친 본문 높이를 0으로 접지 않게 */
+.sisun-judgment-acc [data-testid="accordion-content"],
+.sisun-judgment-acc .label-wrap.open + div,
+.sisun-judgment-acc .column,
+.sisun-judgment-acc .block,
+.sisun-judgment-acc .html-container,
+.sisun-judgment-acc .prose {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  display: block !important;
+}
+.sisun-judgment-acc .html-container,
+.sisun-judgment-acc .prose {
+  padding: 0 12px 10px !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+.sisun-judgment {
+  font-size: 12.5px; line-height: 1.45;
+  color: var(--sisun-card-fg, #e2e8f0);
+}
+.sisun-judgment-row { margin: 0 0 8px; }
+.sisun-judgment-row > span {
+  display: block; font-size: 11px; font-weight: 800;
+  letter-spacing: .04em; opacity: .72; margin-bottom: 3px;
+}
+.sisun-judgment-row b { font-weight: 800; }
+.sisun-judgment-row ul {
+  margin: 0; padding-left: 1.15em;
+}
+.sisun-judgment-row li { margin: 1px 0; }
+.sisun-judgment-row p { margin: 0; }
+.sisun-judgment-note {
+  font-size: 11px; font-weight: 700; opacity: .75; margin-bottom: 2px;
+}
+html.sisun-light .sisun-judgment-acc {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+html.sisun-light .sisun-judgment { color: #0f172a; }
 /* #1 메인 시어터: 큰 화면 + 옆 목록 */
 .sisun-theater-chrome {
   display: none; width: 100%; min-height: 68vh;
@@ -940,12 +1158,38 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   left: 0 !important; right: 0 !important; bottom: 0 !important;
   top: auto !important;
   width: 100% !important;
-  height: 40% !important;
+  height: fit-content !important;
   min-height: 0 !important;
-  max-height: 44% !important;
+  max-height: none !important;
   z-index: 6 !important;
   background: transparent !important;
+  overflow: visible !important;
   pointer-events: none !important;
+}
+/* Gradio가 .prose에도 sisun-cam-alert 를 붙여 absolute+bottom:0 으로 씀.
+   예전 min-height:48px + overflow:hidden 이 3줄(~52px)을 잘랐음 → 내용만큼 확장 */
+.sisun-theater-rail-list .sisun-cam > .block:has(.sisun-cam-alert-on),
+.sisun-theater-rail-list .sisun-cam-alert:has(.sisun-cam-alert-on),
+.sisun-theater-rail-list .prose.sisun-cam-alert:has(.sisun-cam-alert-on) {
+  height: fit-content !important;
+  min-height: 0 !important;
+  max-height: 70% !important;
+  overflow: visible !important;
+  bottom: 0 !important;
+  top: auto !important;
+}
+.sisun-theater-rail-list .sisun-cam-alert:has(.sisun-cam-alert-on) .html-container,
+.sisun-theater-rail-list .block.sisun-cam-alert:has(.sisun-cam-alert-on) .html-container,
+.sisun-theater-rail-list .sisun-cam-alert:has(.sisun-cam-alert-on) .prose {
+  height: fit-content !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  background: transparent !important;
 }
 .sisun-theater-rail-list .sisun-cam > .block:has(.sisun-cam-alert-off),
 .sisun-theater-rail-list .sisun-cam-alert:has(.sisun-cam-alert-off) {
@@ -1322,7 +1566,123 @@ BOOT_JS = """
     placeTheaterSlots(wall, activeSlot);
     syncCctv();
   };
+  var camIdFromAlert = function(node) {
+    var on = node && node.closest ? node.closest(".sisun-cam-alert-on") : null;
+    if (!on) return "";
+    var id = on.getAttribute("data-cam-id") || "";
+    if (id) return id;
+    var slot = on.closest(".sisun-cam-slot");
+    var host = slot && slot.querySelector("[id^='sisun-video-sisun-wall-']");
+    if (host && host.id) {
+      var m = host.id.match(/^sisun-video-sisun-wall-(.+)$/);
+      if (m) return m[1];
+    }
+    return "";
+  };
+  var goCameraTab = function(camId) {
+    if (!camId) return false;
+    var btn = document.getElementById("sisun-side-" + camId);
+    if (!btn) {
+      // Gradio가 id를 감싸는 경우
+      btn = document.querySelector("#sisun-side-" + camId + " button, button#sisun-side-" + camId);
+    }
+    if (!btn) return false;
+    try { btn.click(); } catch (err) { return false; }
+    return true;
+  };
+  // 사이드바 확인 필요(N): 위험 나면 표시. 사이드바로 그 구역을 보기 전에는 절대 안 지움.
+  // 확인 후에야 사라지고, 이후 새 위험/새로고침이면 다시 뜸.
+  var __sisunSideNeed = window.__sisunSideNeed || (window.__sisunSideNeed = {});
+  var sideBtnForCam = function(camId) {
+    if (!camId || camId === "main" || camId === "alerts" || camId === "history" || camId === "data") {
+      return null;
+    }
+    var btn = document.querySelector("button#sisun-side-" + camId);
+    if (btn) return btn;
+    var host = document.getElementById("sisun-side-" + camId);
+    return host ? (host.querySelector("button") || host) : null;
+  };
+  var ensureSideNeedBadge = function(btn) {
+    if (!btn || !btn.querySelector) return null;
+    var mark = btn.querySelector(".sisun-side-need");
+    if (!mark) {
+      mark = document.createElement("span");
+      mark.className = "sisun-side-need";
+      mark.textContent = "N";
+      mark.title = "사이드 미방문(위험) · 운영자 확인함과 별개";
+      mark.setAttribute("aria-label", "사이드 미방문");
+      btn.appendChild(mark);
+    }
+    return mark;
+  };
+  var paintSideNeed = function(camId) {
+    var btn = sideBtnForCam(camId);
+    if (!btn) return;
+    var mark = ensureSideNeedBadge(btn);
+    if (!mark) return;
+    mark.classList.toggle("is-on", !!__sisunSideNeed[camId]);
+  };
+  var markSideNeed = function(camId) {
+    if (!camId) return;
+    if (!sideBtnForCam(camId)) return;
+    __sisunSideNeed[camId] = true;
+    paintSideNeed(camId);
+  };
+  var clearSideNeed = function(camId) {
+    if (!camId) return;
+    __sisunSideNeed[camId] = false;
+    paintSideNeed(camId);
+  };
+  var resetSideNeeds = function() {
+    Object.keys(__sisunSideNeed).forEach(function(k) { delete __sisunSideNeed[k]; });
+    document.querySelectorAll(".sisun-side-need").forEach(function(el) {
+      el.classList.remove("is-on");
+    });
+  };
+  var syncSideNeedsFromOverlays = function() {
+    // 켜질 때만 표시. 오버레이가 꺼져도 N은 유지(사이드바 확인 전).
+    document.querySelectorAll(".sisun-wall-main .sisun-cam-alert-on[data-cam-id]").forEach(function(el) {
+      var id = el.getAttribute("data-cam-id") || "";
+      if (id) markSideNeed(id);
+    });
+  };
+  if (!window.__sisunSideNeedBound) {
+    window.__sisunSideNeedBound = true;
+    document.addEventListener("click", function(ev) {
+      var t = ev.target && ev.target.closest
+        ? ev.target.closest("#sisun-side button.sisun-side-btn, #sisun-side .sisun-side-btn button")
+        : null;
+      if (!t) return;
+      var id = (t.id || "").replace(/^sisun-side-/, "");
+      if (!id && t.closest) {
+        var host = t.closest("[id^='sisun-side-']");
+        if (host && host.id) id = host.id.replace(/^sisun-side-/, "");
+      }
+      // 해당 구역 사이드바를 눌렀을 때만 해제
+      if (id) clearSideNeed(id);
+    }, true);
+  }
   var wallClick = function(e) {
+    // 위험 알림 박스 클릭 → #2~ 해당 구역 탭 (시어터 동작과 분리)
+    var alertOn = e.target && e.target.closest
+      ? e.target.closest(".sisun-cam-alert-on")
+      : null;
+    if (alertOn) {
+      var mainWall = alertOn.closest(".sisun-wall-main");
+      if (mainWall) {
+        var camId = camIdFromAlert(alertOn);
+        if (camId) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (mainWall.classList.contains("sisun-theater")) {
+            try { exitTheater(mainWall); } catch (e0) {}
+          }
+          clearSideNeed(camId);
+          goCameraTab(camId);
+          return;
+        }
+      }
+    }
     var path = e.composedPath ? e.composedPath() : [];
     var hitCam = null, wall = null;
     path.forEach(function(n) {
@@ -1337,7 +1697,7 @@ BOOT_JS = """
     if (!wall || !hitCam) return;
     // #2~#7 단독 벽은 클릭 확대 없음
     if (wall.classList.contains("sisun-wall-solo")) return;
-    // #1 메인 시어터
+    // #1 메인 시어터 (영상 영역 클릭 — 기존 동작 유지)
     if (wall.classList.contains("sisun-wall-main")) {
       e.preventDefault();
       e.stopPropagation();
@@ -1515,13 +1875,43 @@ BOOT_JS = """
     if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
     if (open) placeAlertRail();
   };
+  var escText = function(s) {
+    return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  };
+  var noticeSortKey = function(item) {
+    // 확인 전 위험 > 확인 전 주의 > 확인함, 최근 갱신 우선
+    var pending = item.ack === "done" ? 0 : 1;
+    var hot = item.level === "hot" ? 1 : 0;
+    var t = item._seq || 0;
+    return pending * 1e9 + hot * 1e6 + t;
+  };
   var noticeItemHtml = function(item) {
     var level = item.level === "hot" ? "hot" : "warn";
-    var title = String(item.title || (level === "hot" ? "Danger" : "Warning")).replace(/</g, "&lt;");
-    var text = String(item.text || "").replace(/</g, "&lt;");
-    return "<div class='sisun-toast sisun-toast-" + level + "'>" +
+    var sev = escText(item.severity_label || (level === "hot" ? "위험" : "주의"));
+    var title = escText(item.title || sev);
+    var text = escText(item.text || "");
+    var action = escText(item.action || "");
+    var ackPending = item.ack !== "done";
+    var ackLabel = ackPending ? "확인 전" : "확인함";
+    var ackCls = ackPending ? "is-pending" : "is-done";
+    var ep = escText(item.episode_id || "");
+    var cam = escText(item.cam_id || "");
+    var ackedCls = ackPending ? "" : " is-acked";
+    var actions = "<div class='sisun-toast-actions'>";
+    if (cam) {
+      actions += "<button type='button' class='sisun-toast-goto' data-cam='" + cam + "'>해당 카메라 상세</button>";
+    }
+    if (ackPending && ep) {
+      actions += "<button type='button' class='sisun-toast-ack-btn' data-episode='" + ep + "'>확인함</button>";
+    }
+    actions += "</div>";
+    return "<div class='sisun-toast sisun-toast-" + level + ackedCls + "' data-episode='" + ep + "'>" +
       "<div class='sisun-toast-head'><span class='sisun-toast-ico'>!</span><span>" + title + "</span></div>" +
-      "<div class='sisun-toast-text'>" + text + "</div></div>";
+      "<div class='sisun-toast-text'>" + text + "</div>" +
+      (action ? "<div class='sisun-toast-meta'>" + action + "</div>" : "") +
+      "<span class='sisun-toast-ack " + ackCls + "'>" + ackLabel + "</span>" +
+      actions +
+      "</div>";
   };
   var renderBellList = function() {
     var wrap = document.getElementById("sisun-bell-wrap");
@@ -1530,20 +1920,21 @@ BOOT_JS = """
     var list = rail && rail.querySelector(".sisun-rail-list");
     var html;
     if (!__sisunNotices.length) {
-      html = "<div class='sisun-rail-empty'>새 알림이 없습니다</div>";
+      html = "<div class='sisun-rail-empty'>확인 전 경보가 없습니다</div>";
     } else {
-      // 최신이 위로
-      html = __sisunNotices.slice().reverse().map(noticeItemHtml).join("");
+      html = __sisunNotices.slice().sort(function(a, b) {
+        return noticeSortKey(b) - noticeSortKey(a);
+      }).map(noticeItemHtml).join("");
     }
     if (list) {
       list.innerHTML = html;
-      list.scrollTop = 0;
     }
     if (badge) {
-      var n = __sisunNotices.length;
+      var pending = __sisunNotices.filter(function(x) { return x.ack !== "done"; });
+      var n = pending.length;
       badge.textContent = n >= 40 ? "40+" : String(n);
       badge.classList.toggle("has-items", n > 0);
-      badge.classList.toggle("is-warn", n > 0 && !__sisunNotices.some(function(x){ return x.level === "hot"; }));
+      badge.classList.toggle("is-warn", n > 0 && !pending.some(function(x){ return x.level === "hot"; }));
     }
   };
   var placeAlertRail = function() {
@@ -1574,11 +1965,12 @@ BOOT_JS = """
       rail = document.createElement("div");
       rail.id = "sisun-alert-rail";
       rail.innerHTML =
-        "<div class='sisun-rail-head'><span>알림</span>" +
+        "<div class='sisun-rail-head'><span>운영 경보</span>" +
         "<div class='sisun-rail-actions'>" +
         "<button type='button' class='sisun-rail-mute-btn'>알림 끄기</button>" +
-        "<button type='button' class='sisun-rail-read-btn'>모두 읽음</button>" +
+        "<button type='button' class='sisun-rail-read-btn' title='운영자 확인 상태만 변경 · 위험 종료 아님'>모두 확인함</button>" +
         "</div></div>" +
+        "<div class='sisun-rail-note'>확인함 ≠ 안전·종료 · 브라우저 세션 기준 · 관련 기록은 같은 경보 갱신</div>" +
         "<div class='sisun-rail-list'></div>";
       document.body.appendChild(rail);
     } else if (!rail.querySelector(".sisun-rail-actions")) {
@@ -1606,7 +1998,9 @@ BOOT_JS = """
       rail.__sisunDelegated = true;
       rail.addEventListener("click", function(ev) {
         var t = ev.target && ev.target.closest
-          ? ev.target.closest(".sisun-rail-mute-btn, .sisun-rail-read-btn")
+          ? ev.target.closest(
+              ".sisun-rail-mute-btn, .sisun-rail-read-btn, .sisun-toast-ack-btn, .sisun-toast-goto"
+            )
           : null;
         if (!t || !rail.contains(t)) return;
         ev.preventDefault();
@@ -1619,7 +2013,22 @@ BOOT_JS = """
           return;
         }
         if (t.classList.contains("sisun-rail-read-btn")) {
-          window.sisunClearToasts && window.sisunClearToasts();
+          // 운영자 확인함만 변경. 목록·원본·위험 판정은 유지.
+          window.sisunAckAllNotices && window.sisunAckAllNotices();
+          return;
+        }
+        if (t.classList.contains("sisun-toast-ack-btn")) {
+          var ep = t.getAttribute("data-episode") || "";
+          window.sisunAckNotice && window.sisunAckNotice(ep);
+          return;
+        }
+        if (t.classList.contains("sisun-toast-goto")) {
+          var cam = t.getAttribute("data-cam") || "";
+          if (cam) {
+            // 화면 이동만. 확인함으로 자동 처리하지 않음.
+            goCameraTab(cam);
+            setRailOpen(false);
+          }
         }
       });
     }
@@ -1647,23 +2056,77 @@ BOOT_JS = """
     placeAlertRail();
     return wrap;
   };
+  window.__sisunNoticeSeq = window.__sisunNoticeSeq || 0;
   window.sisunPushToasts = function(items) {
     if (!items || !items.length) return;
     ensureBell();
-    // 알림 꺼져도 목록·배지는 쌓음. 소리만 막음.
+    // 알림 꺼져도 목록·배지는 갱신. 소리만 막음.
     items.forEach(function(item) {
-      __sisunNotices.push({
-        level: (item && item.level) === "hot" ? "hot" : "warn",
-        title: (item && item.title) || "",
-        text: (item && item.text) || ""
-      });
+      if (!item) return;
+      var ep = String(item.episode_id || item.event_id || ("tmp-" + (++window.__sisunNoticeSeq)));
+      var op = String(item.op || "new");
+      var found = null;
+      for (var i = 0; i < __sisunNotices.length; i++) {
+        if (__sisunNotices[i].episode_id === ep) { found = __sisunNotices[i]; break; }
+      }
+      var level = (item.level === "hot") ? "hot" : "warn";
+      if (!found) {
+        found = {
+          episode_id: ep,
+          level: level,
+          severity_label: item.severity_label || (level === "hot" ? "위험" : "주의"),
+          title: item.title || "",
+          text: item.text || "",
+          action: item.action || "",
+          cam_id: item.cam_id || "",
+          cam_code: item.cam_code || "",
+          first_clock: item.first_clock || "",
+          last_clock: item.last_clock || "",
+          related_count: item.related_count || 1,
+          ack: "pending",
+          _seq: ++window.__sisunNoticeSeq
+        };
+        __sisunNotices.push(found);
+      } else {
+        found.level = level;
+        found.severity_label = item.severity_label || found.severity_label;
+        found.title = item.title || found.title;
+        found.text = item.text || found.text;
+        found.action = item.action || found.action;
+        found.cam_id = item.cam_id || found.cam_id;
+        found.cam_code = item.cam_code || found.cam_code;
+        if (item.first_clock) found.first_clock = item.first_clock;
+        found.last_clock = item.last_clock || found.last_clock;
+        found.related_count = item.related_count || found.related_count;
+        found._seq = ++window.__sisunNoticeSeq;
+        // 중요도 상승 시 다시 확인 전
+        if (item.ack_reset || op === "upgrade") {
+          found.ack = "pending";
+        }
+      }
+      // 위험 + 확인 전만 사이드바 N (화면 방문 표시, 확인함과 별개)
+      if (found.level === "hot" && found.ack !== "done" && found.cam_id) {
+        markSideNeed(String(found.cam_id));
+      }
     });
     while (__sisunNotices.length > 40) __sisunNotices.shift();
     renderBellList();
     placeAlertRail();
   };
+  window.sisunAckNotice = function(episodeId) {
+    if (!episodeId) return;
+    __sisunNotices.forEach(function(n) {
+      if (n.episode_id === episodeId) n.ack = "done";
+    });
+    renderBellList();
+  };
+  window.sisunAckAllNotices = function() {
+    // 운영자 확인함만. 경보 삭제·안전 전환·사이드 N 일괄 해제 아님.
+    __sisunNotices.forEach(function(n) { n.ack = "done"; });
+    renderBellList();
+  };
   window.sisunClearToasts = function() {
-    // 배지·알림창 목록 함께 비움. 이후 새 알림만 다시 쌓임.
+    // 세션 리셋(새로고침)용: 목록 비움. 모두 확인함과 구분.
     __sisunNotices.length = 0;
     try {
       if (window.__sisunNotices && window.__sisunNotices !== __sisunNotices) {
@@ -1675,18 +2138,6 @@ BOOT_JS = """
       if (seq) __sisunToastSeen[seq] = 1;
       try { node.remove(); } catch (e1) {}
     });
-    var rail = document.getElementById("sisun-alert-rail");
-    var list = rail && rail.querySelector(".sisun-rail-list");
-    if (list) {
-      list.innerHTML = "<div class='sisun-rail-empty'>새 알림이 없습니다</div>";
-      list.scrollTop = 0;
-    }
-    var wrap = document.getElementById("sisun-bell-wrap");
-    var badge = wrap && wrap.querySelector(".sisun-bell-badge");
-    if (badge) {
-      badge.textContent = "0";
-      badge.classList.remove("has-items", "is-warn");
-    }
     renderBellList();
   };
   window.sisunRestartMainVideos = function() {
@@ -1712,6 +2163,7 @@ BOOT_JS = """
     });
     try { setBellMuted(false); } catch (e2b) {}
     try { window.sisunClearToasts && window.sisunClearToasts(); } catch (e3) {}
+    try { resetSideNeeds(); } catch (e4) {}
   };
   var drainToastPayloads = function() {
     if (document.querySelector(".sisun-restart-videos")) {
@@ -1769,6 +2221,7 @@ BOOT_JS = """
       ensureBell();
       placeAlertRail();
       drainToastPayloads();
+      syncSideNeedsFromOverlays();
     }, 2000);
   }
 }
