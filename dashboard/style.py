@@ -369,30 +369,59 @@ html.sisun-light .sisun-toast {
 }
 html.sisun-light .sisun-toast-text { color: #0f172a !important; }
 
-/* #7 통합 알람, #8 이벤트 이력만 흰 바탕 */
+/* 운영 페이지는 전역 테마와 같은 색 토큰을 사용한다. */
 .sisun-paper {
-  --sisun-title: #111827; --sisun-card-bg: #ffffff; --sisun-card-fg: #111827;
-  --sisun-table-fg: #111827; --sisun-table-bg: #ffffff; --sisun-th-bg: #e2e8f0; --sisun-muted: #334155;
-  background: #ffffff !important; color: #111827 !important;
+  color-scheme: dark;
+  --body-text-color: var(--sisun-card-fg);
+  --body-text-color-subdued: var(--sisun-muted);
+  --block-background-fill: var(--sisun-card-bg);
+  --block-label-text-color: var(--sisun-muted);
+  --block-title-text-color: var(--sisun-title);
+  --block-info-text-color: var(--sisun-muted);
+  --input-background-fill: var(--sisun-card-bg);
+  --input-text-color: var(--sisun-card-fg);
+  --input-placeholder-color: var(--sisun-muted);
+  --background-fill-primary: var(--sisun-card-bg);
+  --background-fill-secondary: var(--sisun-th-bg);
+  --border-color-primary: var(--sisun-line);
 }
+html.sisun-light .sisun-paper { color-scheme: light; }
 .sisun-paper, .sisun-paper .block, .sisun-paper .column, .sisun-paper .form,
 .sisun-paper .panel, .sisun-paper .html-container, .sisun-paper .prose {
-  background: #ffffff !important; color: #111827 !important;
+  background: var(--sisun-card-bg) !important; color: var(--sisun-card-fg) !important;
 }
-.sisun-paper .t2-page-title, .sisun-paper .t2-pick-label { color: #111827 !important; }
+.sisun-paper .t2-page-title, .sisun-paper .t2-pick-label { color: var(--sisun-title) !important; }
 .sisun-paper .t2-card, .sisun-paper .t2-kpi {
-  background: #ffffff !important; color: #111827 !important; border: 1px solid #475569 !important;
+  background: var(--sisun-card-bg) !important; color: var(--sisun-card-fg) !important;
+  border: 1px solid var(--sisun-line) !important;
 }
-.sisun-paper .t2-muted { color: #334155 !important; }
+.sisun-paper .t2-muted { color: var(--sisun-muted) !important; }
 .sisun-paper .t2-table th, .sisun-paper .t2-table td {
-  background: #ffffff !important; color: #111827 !important; border: 1px solid #475569 !important;
+  background: var(--sisun-table-bg) !important; color: var(--sisun-table-fg) !important;
+  border: 1px solid var(--sisun-line) !important;
 }
-.sisun-paper .t2-table th { background: #e2e8f0 !important; color: #111827 !important; }
+.sisun-paper .t2-table th { background: var(--sisun-th-bg) !important; }
 .sisun-paper .t2-pick-btn, .sisun-paper .t2-pick-btn button {
-  background: #e2e8f0 !important; color: #111827 !important; border: 1px solid #475569 !important;
+  background: var(--sisun-th-bg) !important; color: var(--sisun-card-fg) !important;
+  border: 1px solid var(--sisun-line) !important;
 }
 .sisun-paper .label-wrap, .sisun-paper .block-label, .sisun-paper .block-title, .sisun-paper .block-info {
-  color: #334155 !important;
+  color: var(--sisun-muted) !important;
+}
+.sisun-paper input, .sisun-paper select, .sisun-paper textarea,
+.sisun-paper [role="listbox"], .sisun-paper [role="option"],
+.sisun-paper .options, .sisun-paper .options li {
+  background: var(--sisun-card-bg) !important; color: var(--sisun-card-fg) !important;
+}
+.sisun-paper .secondary-wrap, .sisun-paper .wrap:has(input[role="combobox"]) {
+  background: var(--sisun-card-bg) !important; color: var(--sisun-card-fg) !important;
+}
+.sisun-paper [data-testid="block-info"], .sisun-paper .label-wrap span, .sisun-paper label > span {
+  background: var(--sisun-th-bg) !important; color: var(--sisun-card-fg) !important;
+}
+.sisun-paper option { background: var(--sisun-card-bg); color: var(--sisun-card-fg); }
+.sisun-paper [role="option"]:hover, .sisun-paper .options li:hover {
+  background: var(--sisun-th-bg) !important;
 }
 #sisun-gate.sisun-login-on:not(.hide), .sisun-login-on:not(.hide) {
   --body-text-color: #f8fafc !important;
@@ -1035,7 +1064,7 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
   border-radius: 4px; padding: 2px 6px; cursor: pointer;
 }
 /* —— 경보·조치 관리 —— */
-.sisun-cases-root { padding: 4px 2px 16px; }
+.sisun-cases-root { color: var(--sisun-card-fg); padding: 4px 2px 16px; }
 .sisun-cases-title { font-size: 1.35rem; font-weight: 800; color: var(--sisun-title); margin: 0 0 4px; }
 .sisun-cases-demo {
   font-size: 12px; font-weight: 700; color: var(--sisun-muted); margin-bottom: 12px;
@@ -1085,7 +1114,7 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
 }
 .sisun-case-row:hover { background: rgba(37,99,235,.06); }
 .sisun-case-row.is-on { background: rgba(37,99,235,.12); outline: 1px solid #2563eb; }
-.sisun-case-row .r1 { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-weight: 800; font-size: 13px; }
+.sisun-case-row .r1 { color: var(--sisun-card-fg); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-weight: 800; font-size: 13px; }
 .sisun-case-row .r2 { font-size: 12px; color: var(--sisun-muted); margin-top: 4px; font-weight: 600; }
 .sisun-case-badge {
   font-size: 11px; font-weight: 800; padding: 1px 7px; border-radius: 999px;
@@ -1096,6 +1125,14 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
 .sisun-case-badge.st-acked { background: rgba(14,165,233,.12); color: #0369a1; }
 .sisun-case-badge.st-acting { background: rgba(245,158,11,.15); color: #b45309; }
 .sisun-case-badge.st-done { background: rgba(22,163,74,.12); color: #15803d; }
+html:not(.sisun-light) .sisun-case-badge.hot { color: #fca5a5 !important; }
+html:not(.sisun-light) .sisun-case-badge.warn,
+html:not(.sisun-light) .sisun-case-badge.st-acting { color: #fcd34d !important; }
+html:not(.sisun-light) .sisun-case-badge.st-new { color: #bfdbfe !important; }
+html:not(.sisun-light) .sisun-case-badge.st-acked { color: #7dd3fc !important; }
+html:not(.sisun-light) .sisun-case-badge.st-done { color: #86efac !important; }
+html:not(.sisun-light) .sisun-cases-err { color: #fca5a5 !important; }
+html:not(.sisun-light) .sisun-cases-warn { color: #fcd34d !important; }
 .sisun-cases-detail {
   background: var(--sisun-card-bg); border: 1px solid var(--sisun-line);
   border-radius: 12px; padding: 14px 16px; min-height: 280px;
@@ -1103,8 +1140,8 @@ html.sisun-light .sisun-cam-cap { color: #0f172a !important; }
 .sisun-cases-empty { color: var(--sisun-muted); font-weight: 700; font-size: 13px; padding: 20px 8px; }
 .sisun-cases-detail h3 { margin: 0 0 10px; font-size: 1.05rem; font-weight: 800; color: var(--sisun-title); }
 .sisun-cases-kv { display: grid; grid-template-columns: 110px 1fr; gap: 4px 10px; font-size: 13px; margin-bottom: 12px; }
-.sisun-cases-kv span:first-child { color: var(--sisun-muted); font-weight: 700; }
-.sisun-cases-kv span:last-child { font-weight: 700; color: var(--sisun-card-fg); }
+.sisun-cases-kv span:nth-child(odd) { color: var(--sisun-muted); font-weight: 700; }
+.sisun-cases-kv span:nth-child(even) { font-weight: 700; color: var(--sisun-card-fg); }
 .sisun-cases-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
 .sisun-cases-actions button {
   padding: 7px 12px; border-radius: 8px; border: 1px solid #334155;
