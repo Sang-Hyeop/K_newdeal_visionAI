@@ -20,7 +20,7 @@ def owned_launcher(process):
     """PID만 믿지 않고 실제 실행 파일의 프로젝트 경로까지 확인합니다."""
     try:
         args = [arg for arg in process.cmdline()[1:] if not arg.startswith('-')]
-        return bool(args) and Path(args[0]).resolve() == ENTRY
+        return bool(args) and Path(args[0]).resolve() == ENTRY.resolve()
     except (psutil.Error, OSError, ValueError):
         return False
 
