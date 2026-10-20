@@ -1,4 +1,5 @@
-"""Mixed precision and pause/seek/loop timeline regressions."""
+# 역할: 시각 정밀도·일시정지·탐색·반복 재생 동작을 회귀 검증합니다.
+"""시각 정밀도·일시정지·탐색·반복 재생 동작을 회귀 검증합니다."""
 import unittest
 import pandas as pd
 from dashboard.config import clock_start

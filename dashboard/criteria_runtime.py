@@ -1,3 +1,4 @@
+# 역할: 카메라별 확정 설정을 읽어 관제 화면의 판정 기준 문구를 만듭니다.
 # 판정 기준 표시용: demo-scenarios·승인 정책·화재 temporal을 시작 시 1회 읽어 캐시한다.
 # UI에서 임계값을 재정의하지 않으며, 파일 값만 확인한 경우 출처를 ‘현재 설정 파일 기준’으로 표기한다.
 """설정 파일 → 관제용 기준 문구. 모델·판정 로직은 변경하지 않는다."""
@@ -147,7 +148,9 @@ def criteria_bundle(sid: str, cam_id: str):
     cam_id = str(cam_id or "")
     doc = cache["by_cam"].get(cam_id)
     file_note = cache["files"].get(cam_id) or ""
-    source = f"현재 설정 파일 기준 ({file_note})" if file_note else "현재 설정 파일 기준"
+    source = (
+        f"현재 설정 파일 기준 ({file_note})" if file_note else "현재 설정 파일 기준"
+    )
 
     if sid == "collision":
         return _collision_lines(doc, cam_id, source)
@@ -190,7 +193,9 @@ def _zone_lines(doc, source):
     margin = doc.get("approach_margin_ratio")
     if margin is not None:
         try:
-            lines.append(f"접근대 여유 비율 {float(margin):.3f} (설정 파일 값 · 화면 비율)")
+            lines.append(
+                f"접근대 여유 비율 {float(margin):.3f} (설정 파일 값 · 화면 비율)"
+            )
         except (TypeError, ValueError):
             pass
     lines.append("표시 ROI와 판정 ROI는 동일 구역 설정을 사용")
@@ -233,11 +238,15 @@ def _dwell_lines(doc, cam_id, source):
             f"≥ {safe_f:.0f}초는 주의 (이 경로에서는 위험 단계로 올리지 않음)"
         )
     else:
-        lines.append(f"체류 단계: 안전 밴드 < {safe_f:.0f}초 · 그 이상은 주의/위험 정책에 따름")
+        lines.append(
+            f"체류 단계: 안전 밴드 < {safe_f:.0f}초 · 그 이상은 주의/위험 정책에 따름"
+        )
     if hold_f is not None:
         lines.append(f"차량 관측이 끊긴 뒤 약 {hold_f:.0f}초는 최근 차량 관측으로 유지")
     if gap_f is not None:
-        lines.append(f"사람 관측이 약 {gap_f:.0f}초 이상 끊기면 해당 체류 누적은 초기화")
+        lines.append(
+            f"사람 관측이 약 {gap_f:.0f}초 이상 끊기면 해당 체류 누적은 초기화"
+        )
     # critical_seconds(5)는 ZoneDwell 밴드용이며 LaneHazard 위험 임계(vehicle_critical)와 다름 → 노출하지 않음
     if cam_id == "B1":
         lines.append("창고 통합 영상용 체류·차량 동시 관측 설정")

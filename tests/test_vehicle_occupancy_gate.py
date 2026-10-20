@@ -1,3 +1,4 @@
+# 역할: 탑승 역할에 따른 위험 표시 제외 동작을 회귀 검증합니다.
 import unittest
 from src.vehicle_occupancy import gate_proximity,VehicleOccupancy
 CFG={'monitor_floor_normalized':[[0,0],[.5,0],[.5,1],[0,1]],'safe_polygons_normalized':[]}

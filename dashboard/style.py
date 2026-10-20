@@ -1,3 +1,4 @@
+# 역할: 대시보드의 테마·스타일과 브라우저 알림·탐색 동작을 정의합니다.
 # 화면 색·로그인 CSS·시계 JS·Gradio 테마
 import gradio as gr
 
@@ -2284,7 +2285,7 @@ BOOT_JS = """
       if (op) return op;
     }
     var t = ((document.querySelector(".sisun-hello") || {}).textContent || "");
-    var m = t.match(/안녕하세요,\s*(.+?)님/);
+    var m = t.match(/안녕하세요,\\s*(.+?)님/);
     return m ? String(m[1]).trim() : "";
   };
   var wallClockNow = function() {
@@ -2467,7 +2468,7 @@ BOOT_JS = """
     var level = item.level === "hot" ? "hot" : "warn";
     var sev = escText(item.severity_label || (level === "hot" ? "위험" : "주의"));
     var place = escText(item.cam_code || item.cam_id || "");
-    var reason = escText((item.title || "").replace(/^(위험|주의)\s*·\s*/, "") || item.text || "경보");
+    var reason = escText((item.title || "").replace(/^(위험|주의)\\s*·\\s*/, "") || item.text || "경보");
     var whereWhy = [place, reason].filter(Boolean).join(" · ") || reason;
     var ep = escText(item.episode_id || "");
     var link = escText(item.link_key || "");
@@ -2921,7 +2922,7 @@ BOOT_JS = """
         "<div class='r1'><span class='sisun-case-badge " + (hot ? "hot" : "warn") + "'>" + sev + "</span>" +
         "<span class='sisun-case-badge st-" + caseEsc(st) + "'>" + caseEsc(RESP_LABEL[st] || st) + "</span>" +
         "<span>" + caseEsc(c.cam_code || c.cam_id || "") + "</span>" +
-        "<span>" + caseEsc(String(c.title || "").replace(/^(위험|주의)\s*·\s*/, "")) + "</span></div>" +
+        "<span>" + caseEsc(String(c.title || "").replace(/^(위험|주의)\\s*·\\s*/, "")) + "</span></div>" +
         "<div class='r2'>최초 " + caseEsc(c.event_first_clock || "—") +
         " · 담당 " + caseEsc(c.assigned_to || "—") +
         " · 처리 " + caseEsc(c.operator_at || "—") +
@@ -3168,6 +3169,7 @@ BOOT_JS = """
   }
 }
 """
+
 
 def make_theme():
     return gr.themes.Soft(primary_hue="blue").set(

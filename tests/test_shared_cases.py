@@ -1,4 +1,5 @@
-"""Shared storage integration uses disposable DBs; never production action records."""
+# 역할: 임시 공용 DB의 상태 공유·동시 조치·연결 실패 동작을 회귀 검증합니다.
+"""임시 공용 DB의 상태 공유·동시 조치·연결 실패 동작을 회귀 검증합니다."""
 import json
 import os
 from pathlib import Path

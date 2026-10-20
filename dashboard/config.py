@@ -1,3 +1,4 @@
+# 역할: 경로·카메라·구역·로그인·화면 구성의 공통 설정을 제공합니다.
 # 경로·구역·탭 이름. GitHub 한글 라벨도 여기서 연다.
 import os
 import sys
@@ -56,11 +57,13 @@ def pick_data_root():
             return p
     return None
 
+
 DATA_ROOT = pick_data_root()
 if DATA_ROOT is None:
     raise FileNotFoundError("GitHub main 발표 영상 1~5 저장소가 없습니다.")
 sys.path.insert(0, str(DATA_ROOT / "backend_v1"))
 import dashboard_labels as ko  # GitHub 한글 표시. API 원본은 안 바꿈.
+
 API_PORT = int(os.environ.get("SISUN_API_PORT", "8010"))
 API_BASE = os.environ.get("SISUN_API", f"http://127.0.0.1:{API_PORT}")
 SID_TO_VIDEO = {"collision": 1, "zone": 2, "ppe": 3, "dwell": 4}
@@ -98,13 +101,16 @@ def _clock_fields(ts):
 
 
 def _src_video(n):
-    return ko.presentation_video(n) or {
-        1: "1_forklift_worker_collision_risk.mp4",
-        2: "2_restricted_zone_intrusion.mp4",
-        3: "3_PPE_Helmet.mp4",
-        4: "4_hazard_zone_dwell.mp4",
-        5: "5_Logistics Warehouse.mp4",
-    }[n]
+    return (
+        ko.presentation_video(n)
+        or {
+            1: "1_forklift_worker_collision_risk.mp4",
+            2: "2_restricted_zone_intrusion.mp4",
+            3: "3_PPE_Helmet.mp4",
+            4: "4_hazard_zone_dwell.mp4",
+            5: "5_Logistics Warehouse.mp4",
+        }[n]
+    )
 
 
 VIDEO_FILES = {sid: _src_video(n) for sid, n in SID_TO_VIDEO.items()}
@@ -118,29 +124,69 @@ SITES = [
 ]
 CAMERAS = [
     {
-        "id": "A1", "site": "wh_a", "name": "창고 A", "zone": "하역장 진입로", "cam": "CAM01",
-        "color": "#ef4444", "video_num": 1, "scenario": "collision",
-        "src": _src_video(1), "origin": "origin_A1.mp4", "detect": "detect_A1.mp4",
+        "id": "A1",
+        "site": "wh_a",
+        "name": "창고 A",
+        "zone": "하역장 진입로",
+        "cam": "CAM01",
+        "color": "#ef4444",
+        "video_num": 1,
+        "scenario": "collision",
+        "src": _src_video(1),
+        "origin": "origin_A1.mp4",
+        "detect": "detect_A1.mp4",
     },
     {
-        "id": "A2", "site": "wh_a", "name": "창고 A", "zone": "자동화 설비구역", "cam": "CAM02",
-        "color": "#f59e0b", "video_num": 2, "scenario": "zone",
-        "src": _src_video(2), "origin": "origin_A2.mp4", "detect": "detect_A2.mp4",
+        "id": "A2",
+        "site": "wh_a",
+        "name": "창고 A",
+        "zone": "자동화 설비구역",
+        "cam": "CAM02",
+        "color": "#f59e0b",
+        "video_num": 2,
+        "scenario": "zone",
+        "src": _src_video(2),
+        "origin": "origin_A2.mp4",
+        "detect": "detect_A2.mp4",
     },
     {
-        "id": "A3", "site": "wh_a", "name": "창고 A", "zone": "포장 작업구역", "cam": "CAM03",
-        "color": "#3b82f6", "video_num": 3, "scenario": "ppe",
-        "src": _src_video(3), "origin": "origin_A3.mp4", "detect": "detect_A3.mp4",
+        "id": "A3",
+        "site": "wh_a",
+        "name": "창고 A",
+        "zone": "포장 작업구역",
+        "cam": "CAM03",
+        "color": "#3b82f6",
+        "video_num": 3,
+        "scenario": "ppe",
+        "src": _src_video(3),
+        "origin": "origin_A3.mp4",
+        "detect": "detect_A3.mp4",
     },
     {
-        "id": "A4", "site": "wh_a", "name": "창고 A", "zone": "작업자 교차통로", "cam": "CAM04",
-        "color": "#8b5cf6", "video_num": 4, "scenario": "dwell",
-        "src": _src_video(4), "origin": "origin_A4.mp4", "detect": "detect_A4.mp4",
+        "id": "A4",
+        "site": "wh_a",
+        "name": "창고 A",
+        "zone": "작업자 교차통로",
+        "cam": "CAM04",
+        "color": "#8b5cf6",
+        "video_num": 4,
+        "scenario": "dwell",
+        "src": _src_video(4),
+        "origin": "origin_A4.mp4",
+        "detect": "detect_A4.mp4",
     },
     {
-        "id": "B1", "site": "wh_b", "name": "창고 B", "zone": "물류 적재구역", "cam": "CAM05",
-        "color": "#22c55e", "video_num": 5, "scenario": None,
-        "src": _src_video(5), "origin": "origin_B1.mp4", "detect": "detect_B1.mp4",
+        "id": "B1",
+        "site": "wh_b",
+        "name": "창고 B",
+        "zone": "물류 적재구역",
+        "cam": "CAM05",
+        "color": "#22c55e",
+        "video_num": 5,
+        "scenario": None,
+        "src": _src_video(5),
+        "origin": "origin_B1.mp4",
+        "detect": "detect_B1.mp4",
     },
 ]
 # events.py 등 기존 ZONES 참조 호환 (카메라 = 관제 위치)
@@ -207,21 +253,32 @@ def cam_sidebar_label(cam):
         return f"{camera} · {location}"
     site = str(cam.get("name") or "").strip()
     zone = str(cam.get("zone") or "").strip()
-    return " · ".join(part for part in (camera, site) if part) + (f"\n{zone}" if zone else "")
+    return " · ".join(part for part in (camera, site) if part) + (
+        f"\n{zone}" if zone else ""
+    )
 
 
 def build_tabs():
     """Camera numbers identify cameras; ordinary menus have names only."""
     tabs = [{"id": "main", "name": "메인 관제", "kind": "main"}]
-    tabs.extend({
-        "id": cam["id"], "name": cam_sidebar_label(cam),
-        "kind": "camera", "camera_id": cam["id"],
-    } for cam in CAMERAS)
+    tabs.extend(
+        {
+            "id": cam["id"],
+            "name": cam_sidebar_label(cam),
+            "kind": "camera",
+            "camera_id": cam["id"],
+        }
+        for cam in CAMERAS
+    )
     # CAM06 바로 아래: 경보·조치 관리 (카메라 id 와 겹치지 않는 안정 id)
     tabs.append({"id": "cases", "name": "경보·조치 관리", "kind": "cases"})
-    tabs.extend({"id": key, "name": name, "kind": key} for key, name in (
-        ("history", "이벤트 이력"), ("data", "운영 통계"),
-    ))
+    tabs.extend(
+        {"id": key, "name": name, "kind": key}
+        for key, name in (
+            ("history", "이벤트 이력"),
+            ("data", "운영 통계"),
+        )
+    )
     return tabs
 
 
@@ -257,10 +314,16 @@ for _sc in SCENARIOS:
     _sc["name"] = ko.event_type_label(SID_TO_EVENT_TYPE[_sc["id"]])
 SC_BY_ID = {s["id"]: s for s in SCENARIOS}
 STATUS_FG = {
-    "안전": "#22c55e", "주의": "#eab308", "위험": "#ef4444",
-    "없음": "#94a3b8", "대기": "#22c55e", "미확인": "#94a3b8",
-    "착용": "#22c55e", "미착용": "#ef4444",
-    "안전모 착용 감지": "#22c55e", "안전모 미착용 감지": "#ef4444",
+    "안전": "#22c55e",
+    "주의": "#eab308",
+    "위험": "#ef4444",
+    "없음": "#94a3b8",
+    "대기": "#22c55e",
+    "미확인": "#94a3b8",
+    "착용": "#22c55e",
+    "미착용": "#ef4444",
+    "안전모 착용 감지": "#22c55e",
+    "안전모 미착용 감지": "#ef4444",
 }
 PPE_SPLIT_SEC = 6.0
 INK_TITLE = "color:var(--sisun-title,#f8fafc)!important"
@@ -270,11 +333,29 @@ INK_HEAD = "color:var(--sisun-table-fg,#f8fafc)!important;background:var(--sisun
 INK_MUTED = "color:var(--sisun-muted,#cbd5e1)!important"
 INK_FG = "color:var(--sisun-card-fg,#f8fafc)!important"
 ROW_COLS = [
-    "event_id", "scenario", "event_type", "status", "grade",
-    "year", "month", "day", "hour", "minute",
-    "timestamp", "camera", "zone", "area", "dwell_sec",
-    "distance_px", "message", "frame", "video", "person_no",
-    "worker", "obj_x", "track_id",
+    "event_id",
+    "scenario",
+    "event_type",
+    "status",
+    "grade",
+    "year",
+    "month",
+    "day",
+    "hour",
+    "minute",
+    "timestamp",
+    "camera",
+    "zone",
+    "area",
+    "dwell_sec",
+    "distance_px",
+    "message",
+    "frame",
+    "video",
+    "person_no",
+    "worker",
+    "obj_x",
+    "track_id",
 ]
 
 
@@ -284,4 +365,5 @@ def sc_of(sid):
 
 # Optional sixth camera; warehouse settings above stay intact.
 from .fire_integration import register as _register_fire
+
 _register_fire(globals())

@@ -1,3 +1,4 @@
+# 역할: 트랙별 안전모 시간 누적 판정 동작을 회귀 검증합니다.
 import unittest
 from src.ppe_events import PPEEvents
 CFG=dict(minimum_consecutive_frames=3,minimum_confirmed_seconds=.4,maximum_observation_gap_seconds=.45,minimum_head_confidence=.5)

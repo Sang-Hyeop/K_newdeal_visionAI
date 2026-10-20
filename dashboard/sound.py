@@ -1,3 +1,4 @@
+# 역할: 경보 알림음 생성과 중복·반복 재생 제어를 연결합니다.
 # 알람 wav · 종(벨) 알림함 페이로드
 import base64
 import html
@@ -98,7 +99,7 @@ def _toast_payload_html(toasts):
     payload = html.escape(json.dumps(toasts, ensure_ascii=False), quote=True)
     return (
         f"<div class='sisun-toast-payload' data-seq='{_TOAST_SEQ}' "
-        f"data-items=\"{payload}\" hidden></div>"
+        f'data-items="{payload}" hidden></div>'
     )
 
 

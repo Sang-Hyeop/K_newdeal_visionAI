@@ -1,3 +1,4 @@
+# 역할: 사람 박스 중복 표시 정리 동작을 회귀 검증합니다.
 import unittest
 from unittest.mock import patch
 import numpy as np

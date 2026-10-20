@@ -1,3 +1,4 @@
+# 역할: 시간에 따른 탑승 역할 확정과 해제 동작을 회귀 검증합니다.
 import unittest
 from src.operator_association import TemporalOperatorAssociation
 from src.tracked_proximity import TrackedProximity

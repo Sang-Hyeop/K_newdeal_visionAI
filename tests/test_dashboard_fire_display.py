@@ -1,4 +1,5 @@
-"""Fire status history must remain visible without becoming camera alarm rows."""
+# 역할: 화재 상태 표시와 경보 분리 동작을 회귀 검증합니다.
+"""화재 상태 표시와 경보 분리 동작을 회귀 검증합니다."""
 import unittest
 import pandas as pd
 from dashboard.events import event_to_row

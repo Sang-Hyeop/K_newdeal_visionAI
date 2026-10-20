@@ -1,3 +1,4 @@
+# 역할: 내부 감지 값을 운영자가 이해할 한글 표시 문구로 변환합니다.
 # 관제 화면용 표시 문구 (원본 이벤트·message 저장값은 바꾸지 않음)
 """구조화 필드를 우선하고, 레거시 CRIT/WARN 등은 제한적으로만 해석한다."""
 
@@ -50,7 +51,11 @@ def _cell(row, key, default=""):
     if row is None:
         return default
     try:
-        value = row[key] if hasattr(row, "index") and key in row.index else row.get(key, default)
+        value = (
+            row[key]
+            if hasattr(row, "index") and key in row.index
+            else row.get(key, default)
+        )
     except Exception:
         try:
             value = row.get(key, default)

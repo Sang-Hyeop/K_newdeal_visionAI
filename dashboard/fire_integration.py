@@ -1,3 +1,4 @@
+# 역할: 6번 주차장 화재 영상과 이벤트를 기존 카메라 구성에 연결합니다.
 """Add video6 (옥외 주차장) when the source file exists."""
 
 

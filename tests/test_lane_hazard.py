@@ -1,3 +1,4 @@
+# 역할: 통로 차량 관측과 체류 위험 동작을 회귀 검증합니다.
 import unittest
 from src.lane_hazard import LaneHazard
 from src.tracked_zone import TrackedZone

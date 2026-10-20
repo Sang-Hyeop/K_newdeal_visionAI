@@ -1,3 +1,4 @@
+# 역할: 운전석 사람 중복 제거 동작을 회귀 검증합니다.
 import unittest
 from src.detection_review_profile import select_review_objects
 class CabinDedupTests(unittest.TestCase):

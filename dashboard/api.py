@@ -1,3 +1,4 @@
+# 역할: 영상 이벤트 API 서버의 연결·실행·이벤트 조회를 관리합니다.
 # 이벤트 API 켜기·읽기
 import json
 import os
@@ -29,7 +30,13 @@ def api_up():
     try:
         api_get("/events", {"limit": 1})
         return True
-    except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError, ValueError):
+    except (
+        urllib.error.URLError,
+        TimeoutError,
+        OSError,
+        json.JSONDecodeError,
+        ValueError,
+    ):
         return False
 
 
@@ -129,17 +136,27 @@ def ensure_api():
         raise FileNotFoundError(f"백엔드가 없습니다: {backend}")
     log_path = os.path.join(LOCAL, "api.log")
     cmd = [
-        sys.executable, str(backend),
-        "--host", "127.0.0.1", "--port", str(API_PORT),
-        "--samples", str(sample_root()),
-        "--db", str(DATA_ROOT / "outputs" / "backend" / "full_review.sqlite3"),
+        sys.executable,
+        str(backend),
+        "--host",
+        "127.0.0.1",
+        "--port",
+        str(API_PORT),
+        "--samples",
+        str(sample_root()),
+        "--db",
+        str(DATA_ROOT / "outputs" / "backend" / "full_review.sqlite3"),
     ]
     cwd = str(backend.parent)
     print("API 시작", " ".join(cmd))
     log = open(log_path, "w", encoding="utf-8")
     flags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
     API_PROC = subprocess.Popen(
-        cmd, cwd=cwd, stdout=log, stderr=subprocess.STDOUT, creationflags=flags,
+        cmd,
+        cwd=cwd,
+        stdout=log,
+        stderr=subprocess.STDOUT,
+        creationflags=flags,
     )
     for _ in range(80):
         time.sleep(0.5)

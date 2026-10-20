@@ -1,3 +1,4 @@
+# 역할: 사람과 지게차 탑승 관계 동작을 회귀 검증합니다.
 import unittest
 from src.tracked_proximity import TrackedProximity
 from src.person_tracker import PersonTracker

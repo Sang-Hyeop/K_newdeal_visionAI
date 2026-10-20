@@ -1,3 +1,4 @@
+# 역할: 영상 번호·캐시·기능 선택 동작을 회귀 검증합니다.
 import unittest
 from src.scenario_selection import review_video_numbers
 

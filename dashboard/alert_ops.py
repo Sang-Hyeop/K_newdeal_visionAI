@@ -1,3 +1,4 @@
+# 역할: 반복 감지를 사건으로 묶고 운영 경보와 재알림을 관리합니다.
 # 운영 경보 계층: 원본 이벤트와 분리된 에피소드 묶음·알림음 결정
 """감지 판정은 바꾸지 않는다. notify()가 이 모듈의 process_alerts()를 사용한다.
 
@@ -15,7 +16,13 @@ from typing import Any
 import pandas as pd
 
 from .alert_policy import EPISODE_IDLE_GAP_SECONDS, MAX_OPERATOR_ALERTS
-from .alert_response import record_observation_day, ensure_case, make_link_key, reopen_case, touch_case_observation
+from .alert_response import (
+    record_observation_day,
+    ensure_case,
+    make_link_key,
+    reopen_case,
+    touch_case_observation,
+)
 from .config import CAM_BY_ID
 from .timeline import event_seconds
 
@@ -53,7 +60,11 @@ def snapshot_episodes() -> list[dict]:
 
 def _cell(row, key, default=""):
     try:
-        value = row[key] if hasattr(row, "index") and key in row.index else row.get(key, default)
+        value = (
+            row[key]
+            if hasattr(row, "index") and key in row.index
+            else row.get(key, default)
+        )
     except Exception:
         return default
     if value is None or (isinstance(value, float) and pd.isna(value)):
@@ -187,14 +198,29 @@ def process_alerts(frame) -> tuple[str | None, list[dict]]:
     if not mask.any():
         return None, []
     want = (
-        "event_id", col, "status", "grade", "timestamp", "scenario",
-        "area", "camera", "zone", "person_no", "worker", "track_id",
-        "vehicle_track_id", "distance_px", "dwell_sec", "message",
+        "event_id",
+        col,
+        "status",
+        "grade",
+        "timestamp",
+        "scenario",
+        "area",
+        "camera",
+        "zone",
+        "person_no",
+        "worker",
+        "track_id",
+        "vehicle_track_id",
+        "distance_px",
+        "dwell_sec",
+        "message",
     )
     cols = list(dict.fromkeys(c for c in want if c in frame.columns))
     danger = frame.loc[mask, cols]
     if "timestamp" in danger.columns:
-        sort_cols = ["timestamp"] + (["event_id"] if "event_id" in danger.columns else [])
+        sort_cols = ["timestamp"] + (
+            ["event_id"] if "event_id" in danger.columns else []
+        )
         danger = danger.sort_values(sort_cols, kind="mergesort")
 
     secs = event_seconds(danger)
@@ -337,7 +363,9 @@ def process_alerts(frame) -> tuple[str | None, list[dict]]:
             )
 
         if len(episodes) > MAX_OPERATOR_ALERTS * 2:
-            ordered = sorted(episodes.items(), key=lambda kv: kv[1].get("last_sec") or 0)
+            ordered = sorted(
+                episodes.items(), key=lambda kv: kv[1].get("last_sec") or 0
+            )
             drop_n = max(0, len(ordered) - MAX_OPERATOR_ALERTS)
             for key, _ in ordered[:drop_n]:
                 ep_old = episodes.pop(key, None)
@@ -348,14 +376,15 @@ def process_alerts(frame) -> tuple[str | None, list[dict]]:
                     active_by_base.pop(b, None)
 
     from . import shared_cases
+
     if shared_cases.enabled():
         if case_hooks:
             try:
-                states = shared_cases.call('observations', case_hooks)
+                states = shared_cases.call("observations", case_hooks)
                 for item in ops:
-                    state = states.get(item.get('link_key'), {})
-                    if state.get('assigned_to'):
-                        item['assigned_to'] = state['assigned_to']
+                    state = states.get(item.get("link_key"), {})
+                    if state.get("assigned_to"):
+                        item["assigned_to"] = state["assigned_to"]
             except ValueError:
                 # Detection/sound stay live; the case page exposes connection failure.
                 pass

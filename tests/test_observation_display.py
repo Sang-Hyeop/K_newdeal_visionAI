@@ -1,3 +1,4 @@
+# 역할: 관측 근거와 배너 표시 동작을 회귀 검증합니다.
 import unittest
 from src.observation_display import event_display, display_summary
 from src.feature_status import feature_status

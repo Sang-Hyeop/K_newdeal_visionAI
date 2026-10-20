@@ -1,3 +1,4 @@
+# 역할: 실행 자산 설치·경로·해시 검증 동작을 회귀 검증합니다.
 import hashlib,importlib.util,json,tempfile,unittest,zipfile
 from pathlib import Path
 spec=importlib.util.spec_from_file_location('setup_runtime',Path(__file__).resolve().parents[1]/'scripts/setup_runtime.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)

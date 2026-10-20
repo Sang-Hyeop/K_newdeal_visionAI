@@ -1,4 +1,5 @@
-"""Operational reports count cases, preserve unknowns and use operator clocks."""
+# 역할: 고유 사건·일별 감지·처리 통계 동작을 회귀 검증합니다.
+"""고유 사건·일별 감지·처리 통계 동작을 회귀 검증합니다."""
 import unittest
 from datetime import datetime
 from dashboard.config import build_tabs

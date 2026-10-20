@@ -1,3 +1,4 @@
+# 역할: 반복 경보 묶음과 재알림 동작을 회귀 검증합니다.
 """운영 경보 묶음·재알림·확인 상태 분리 회귀."""
 import tempfile
 import unittest

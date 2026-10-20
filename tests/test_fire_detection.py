@@ -1,3 +1,4 @@
+# 역할: 불꽃 재탐지·시간 판정·장면 초기화 동작을 회귀 검증합니다.
 import unittest
 from src.fire_detection import FireTemporal, deduplicate
 from src.event_contract import normalize_event

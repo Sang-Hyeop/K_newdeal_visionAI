@@ -1,3 +1,4 @@
+# 역할: 로그인·영상 안내·위험 설명·KPI·이력 표의 화면 요소를 만듭니다.
 # 로그인·표·KPI·통계 HTML
 import re
 
@@ -141,7 +142,9 @@ def evidence_lines_for_row(row):
     status = str(_cell(row, "status") or "")
     if sid == "fire":
         return fire_evidence_lines(status)
-    default = _EVIDENCE_BY_SCENARIO.get(sid, ("이벤트 조건 충족", "영상에서 실제 상황 확인"))
+    default = _EVIDENCE_BY_SCENARIO.get(
+        sid, ("이벤트 조건 충족", "영상에서 실제 상황 확인")
+    )
     msg = operator_message_for_row(row)
     if msg and len(msg) <= 64:
         return msg, default[1]
@@ -194,7 +197,12 @@ def alert_lines_for_row(row, cam=None):
 
 
 def cam_danger_overlay_html(
-    active, place="", reason="", cam_code="", cam_id="", extra=0,
+    active,
+    place="",
+    reason="",
+    cam_code="",
+    cam_id="",
+    extra=0,
 ):
     """메인 영상 위 위험 박스: 위치·이유 / CAM · 상세 보기.
     클릭 시 해당 카메라 탭(#2~)으로 이동 (data-cam-id).
@@ -362,7 +370,10 @@ def live_judgment_html(part, elapsed, cam=None, window=12.0):
 
 def live_flash_html(part, elapsed, window=2.5, cam=None):
     """카메라 상세 상단 요약(위치·이유·근거). 구 flash 자리 재사용."""
-    return live_detail_summary_html(part, elapsed, cam=cam, window=max(float(window), 12.0))
+    return live_detail_summary_html(
+        part, elapsed, cam=cam, window=max(float(window), 12.0)
+    )
+
 
 def login_html():
     return """
@@ -415,7 +426,9 @@ def do_login(uid, pw):
         return (
             gr.update(),
             gr.update(),
-            login_error("아이디 또는 비밀번호가 올바르지 않습니다. 입력한 정보를 다시 확인해 주세요."),
+            login_error(
+                "아이디 또는 비밀번호가 올바르지 않습니다. 입력한 정보를 다시 확인해 주세요."
+            ),
             gr.update(),
             "",
         )
@@ -544,7 +557,9 @@ def kpi_html(d):
     )
 
 
-def table_html(d, sid=None, newest_first=False, allow_empty=False, include_fire_status=False):
+def table_html(
+    d, sid=None, newest_first=False, allow_empty=False, include_fire_status=False
+):
     """CCTV 탭은 시간순(위=처음), #8은 최신 위. 번호는 1부터."""
     if sid:
         view = d[d["scenario"] == sid] if d is not None and len(d) else d
@@ -612,7 +627,11 @@ def _stat_grade(g):
 def _stat_bucket(part):
     if part is None or len(part) == 0:
         return 0, 0, 0, 0, 0
-    mapped = part["grade"].map(_stat_grade) if "grade" in part.columns else part["status"].map(_stat_grade)
+    mapped = (
+        part["grade"].map(_stat_grade)
+        if "grade" in part.columns
+        else part["status"].map(_stat_grade)
+    )
     return (
         int(len(part)),
         int((mapped == "위험").sum()),
@@ -629,4 +648,10 @@ def _time_bin_labels(d):
         return ts.dt.strftime("%H:00").fillna("시각 미상")
     base = pd.Timestamp(clock_start())
     slot = (ts - base).dt.total_seconds() // 10 * 10
-    return slot.map(lambda s: (base + pd.Timedelta(seconds=int(s))).strftime("%H:%M:%S") if pd.notna(s) else "시각 미상")
+    return slot.map(
+        lambda s: (
+            (base + pd.Timedelta(seconds=int(s))).strftime("%H:%M:%S")
+            if pd.notna(s)
+            else "시각 미상"
+        )
+    )

@@ -1,4 +1,6 @@
-"""Shared display timestamp parsing and browser playhead input collection."""
+# 역할: 이벤트 시각을 해석하고 브라우저 영상의 재생 위치를 수집합니다.
+"""이벤트 시각을 해석하고 브라우저 영상의 재생 위치를 수집합니다."""
+
 import json
 import pandas as pd
 from .config import clock_start
@@ -29,4 +31,3 @@ def playback_inputs(wall_id, cameras):
       }
       return [on, positions, ready];
     }""".replace("IDS", json.dumps(ids))
-

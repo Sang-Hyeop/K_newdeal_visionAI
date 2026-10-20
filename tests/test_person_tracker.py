@@ -1,3 +1,4 @@
+# 역할: 사람·차량 추적 식별자 동작을 회귀 검증합니다.
 import unittest
 from src.person_tracker import PersonTracker
 

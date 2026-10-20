@@ -1,3 +1,4 @@
+# 역할: 감지 로그를 관제용 기록으로 읽고 재생 위치에 맞게 조회·집계합니다.
 # API 이벤트를 표 한 줄로. 사람·지게차 단위로 접음
 import threading
 from datetime import timedelta
@@ -67,20 +68,30 @@ def event_message(ev):
         bits.append(view["region_label"])
     if view.get("observation_status_label"):
         bits.append(view["observation_status_label"])
-    stay = evid.get("observed_dwell_seconds") or evid.get("dwell_seconds") or evid.get("stay_seconds")
+    stay = (
+        evid.get("observed_dwell_seconds")
+        or evid.get("dwell_seconds")
+        or evid.get("stay_seconds")
+    )
     if stay not in (None, ""):
         bits.append(ko.format_dwell_seconds(stay))
     gap = evid.get("image_gap_pixels")
     if gap not in (None, ""):
         bits.append(f"화면상 간격 {float(gap):.0f}px")
-    bits.append(ko.format_distance_meters(evid.get("distance_meters", ev.get("distance_meters"))))
+    bits.append(
+        ko.format_distance_meters(
+            evid.get("distance_meters", ev.get("distance_meters"))
+        )
+    )
     return " · ".join(bits)
 
 
 def _person_tid(ev):
     evid = ev.get("evidence") if isinstance(ev.get("evidence"), dict) else {}
     ids = ev.get("track_ids") or []
-    tid = str(evid.get("person_track_id") or evid.get("track_id") or (ids[0] if ids else ""))
+    tid = str(
+        evid.get("person_track_id") or evid.get("track_id") or (ids[0] if ids else "")
+    )
     if not tid or tid[:1] in "FH":
         return ""
     return tid
@@ -92,7 +103,12 @@ def _object_ids(ev):
     person = str(evid.get("person_track_id") or evid.get("track_id") or "")
     fork = str(evid.get("forklift_track_id") or "")
     if not fork:
-        extra = evid.get("vehicle_track_ids") or ev.get("vehicle_track_ids") or evid.get("forklift_track_ids") or []
+        extra = (
+            evid.get("vehicle_track_ids")
+            or ev.get("vehicle_track_ids")
+            or evid.get("forklift_track_ids")
+            or []
+        )
         if extra:
             fork = str(extra[0])
     if not person:
@@ -102,26 +118,39 @@ def _object_ids(ev):
     return person, fork
 
 
-
-
 def _object_x(ev):
     evid = ev.get("evidence") if isinstance(ev.get("evidence"), dict) else {}
-    box = evid.get("person_bbox_xyxy") or evid.get("forklift_bbox_xyxy") or evid.get("head_bbox_xyxy") or [0]
+    box = (
+        evid.get("person_bbox_xyxy")
+        or evid.get("forklift_bbox_xyxy")
+        or evid.get("head_bbox_xyxy")
+        or [0]
+    )
     try:
         return float(box[0])
     except (TypeError, IndexError, ValueError):
         return 0.0
 
 
-
-
-
-
 def _log_row(
-    event_id, scenario, event_type, status, grade, ts,
-    camera, zone, area, message, video, person_no,
-    dwell_sec="", distance_px="", frame="", track_id=None,
-    obj_x="", worker="",
+    event_id,
+    scenario,
+    event_type,
+    status,
+    grade,
+    ts,
+    camera,
+    zone,
+    area,
+    message,
+    video,
+    person_no,
+    dwell_sec="",
+    distance_px="",
+    frame="",
+    track_id=None,
+    obj_x="",
+    worker="",
 ):
     row = {
         "event_id": event_id,
@@ -154,20 +183,36 @@ def event_to_row(ev):
             evidence = ev.get("evidence") or {}
             reason = evidence.get("reason") or ev.get("status_reason")
             if ev.get("alert_eligible"):
-                row["status"], row["message"] = "화재 의심", "반복 관측에 따른 화재 의심"
+                row["status"], row["message"] = (
+                    "화재 의심",
+                    "반복 관측에 따른 화재 의심",
+                )
             elif reason == "pending_temporal_confirmation":
-                row["status"], row["message"] = "확인 중", "불꽃 감지 · 반복 관측 확인 중"
+                row["status"], row["message"] = (
+                    "확인 중",
+                    "불꽃 감지 · 반복 관측 확인 중",
+                )
             elif reason == "fire_not_observed":
-                row["status"], row["message"] = "관측 소실", "현재 불꽃 관측 소실 · 진화 여부 확인 필요"
+                row["status"], row["message"] = (
+                    "관측 소실",
+                    "현재 불꽃 관측 소실 · 진화 여부 확인 필요",
+                )
             else:
                 row["status"], row["message"] = "판정 불가", "불꽃 판정 근거 부족"
             row["worker"] = "불꽃"
             row["track_id"] = ",".join(ev.get("track_ids") or [])
             # Keep subsecond transitions distinguishable in the history table.
             sec = float(ev.get("timestamp_seconds") or 0)
-            row["timestamp"] = (clock_start() + timedelta(seconds=sec)).strftime("%Y-%m-%d %H:%M:%S.%f")[:-5]
+            row["timestamp"] = (clock_start() + timedelta(seconds=sec)).strftime(
+                "%Y-%m-%d %H:%M:%S.%f"
+            )[:-5]
         return row
-    if kind == "ppe" or kind in COLLISION_KINDS or kind in DWELL_KINDS or kind in ZONE_KINDS:
+    if (
+        kind == "ppe"
+        or kind in COLLISION_KINDS
+        or kind in DWELL_KINDS
+        or kind in ZONE_KINDS
+    ):
         return None
     return _row_fields(ev)
 
@@ -185,21 +230,34 @@ def _row_fields(ev):
     evid = ev.get("evidence") if isinstance(ev.get("evidence"), dict) else {}
     sec = float(ev.get("timestamp_seconds") or 0)
     ts = clock_start() + timedelta(seconds=sec)
-    stay = evid.get("observed_dwell_seconds") or evid.get("dwell_seconds") or evid.get("stay_seconds")
+    stay = (
+        evid.get("observed_dwell_seconds")
+        or evid.get("dwell_seconds")
+        or evid.get("stay_seconds")
+    )
     gap = evid.get("image_gap_pixels")
     grade = event_status(ev)
     st = grade
     if kind == "ppe" and grade != "미확인" and view.get("ppe_state_label"):
         st = view["ppe_state_label"]
     return _log_row(
-        str(ev.get("event_id", ""))[:12], sid, kind, st, grade, ts,
-        area["cam"], area["name"], area["id"], event_message(ev), video, 0,
+        str(ev.get("event_id", ""))[:12],
+        sid,
+        kind,
+        st,
+        grade,
+        ts,
+        area["cam"],
+        area["name"],
+        area["id"],
+        event_message(ev),
+        video,
+        0,
         dwell_sec="" if stay in (None, "") else float(stay),
         distance_px="" if gap in (None, "") else float(gap),
         track_id=_person_tid(ev),
         obj_x=_object_x(ev),
     )
-
 
 
 def detections_path(sid):
@@ -210,7 +268,11 @@ def detections_path(sid):
         path = DATA_ROOT / rel / "detections.jsonl"
         if path.is_file():
             return path
-    found = list((DATA_ROOT / "outputs" / "diagnostics").glob(f"presentation{num}*/**/detections.jsonl"))
+    found = list(
+        (DATA_ROOT / "outputs" / "diagnostics").glob(
+            f"presentation{num}*/**/detections.jsonl"
+        )
+    )
     return found[0] if found else None
 
 
@@ -221,14 +283,16 @@ def warehouse_detections_path():
         path = DATA_ROOT / rel / "detections.jsonl"
         if path.is_file():
             return path
-    found = list((DATA_ROOT / "outputs" / "diagnostics").glob("presentation5*/**/detections.jsonl"))
+    found = list(
+        (DATA_ROOT / "outputs" / "diagnostics").glob(
+            "presentation5*/**/detections.jsonl"
+        )
+    )
     return found[0] if found else None
 
 
 def ppe_detections_path():
     return detections_path("ppe")
-
-
 
 
 def _ppe_track_x(tr):
@@ -300,13 +364,24 @@ def _ppe_appear_rows(recs, t0, t1, video, area, start_idx):
             n = len(active) + 1
             tag = "WORN" if wear == "착용" else "NOT WORN"
             ts = clock_start() + timedelta(seconds=t)
-            rows.append(_log_row(
-                f"P{idx:02d}", "ppe", "ppe", wear,
-                "안전" if wear == "착용" else "주의",
-                ts, area["cam"], area["name"], area["id"],
-                f"{n} {tag}", video, n,
-                track_id=tid, obj_x=x,
-            ))
+            rows.append(
+                _log_row(
+                    f"P{idx:02d}",
+                    "ppe",
+                    "ppe",
+                    wear,
+                    "안전" if wear == "착용" else "주의",
+                    ts,
+                    area["cam"],
+                    area["name"],
+                    area["id"],
+                    f"{n} {tag}",
+                    video,
+                    n,
+                    track_id=tid,
+                    obj_x=x,
+                )
+            )
             active.append({"x": x, "tid": tid})
     return rows, idx
 
@@ -390,12 +465,23 @@ def d_zone_ppe_rows():
             if n > 4:
                 continue
             ts = clock_start() + timedelta(seconds=t)
-            rows.append(_log_row(
-                f"DH{n:02d}", "ppe", "ppe", "미착용", "주의",
-                ts, area["cam"], area["name"], area["id"],
-                f"{n} NOT WORN", video, n,
-                obj_x=x,
-            ))
+            rows.append(
+                _log_row(
+                    f"DH{n:02d}",
+                    "ppe",
+                    "ppe",
+                    "미착용",
+                    "주의",
+                    ts,
+                    area["cam"],
+                    area["name"],
+                    area["id"],
+                    f"{n} NOT WORN",
+                    video,
+                    n,
+                    obj_x=x,
+                )
+            )
             active.append({"x": x})
     return rows
 
@@ -411,7 +497,7 @@ def d_zone_dwell_rows():
     active = []
     for rec in recs:
         t = float(rec.get("timestamp_seconds") or 0)
-        evs = ((rec.get("zone") or {}).get("events") or [])
+        evs = (rec.get("zone") or {}).get("events") or []
         now = []
         for ev in evs:
             if ev.get("inside") is None and ev.get("severity") is None:
@@ -447,7 +533,11 @@ def d_zone_dwell_rows():
             if h < 100 and not any(p.get("tid") == tid for p in active if tid):
                 continue
             person = {
-                "x": x, "tid": tid, "first_t": t, "last_t": t, "first_x": x,
+                "x": x,
+                "tid": tid,
+                "first_t": t,
+                "last_t": t,
+                "first_x": x,
                 "warn_t": t if str(sev or "").upper() == "WARNING" else None,
                 "stay": float(stay) if stay not in (None, "") else 0.0,
                 "warn_stay": None,
@@ -456,7 +546,7 @@ def d_zone_dwell_rows():
                 person["warn_stay"] = person["stay"]
             active.append(person)
     # 오래 보인 사람 4명
-    active.sort(key=lambda p: (p["last_t"] - p["first_t"]), reverse=True)
+    active.sort(key=lambda p: p["last_t"] - p["first_t"], reverse=True)
     chosen = active[:4]
     chosen.sort(key=lambda p: p["first_t"])
     rows = []
@@ -472,11 +562,21 @@ def d_zone_dwell_rows():
         tag = GRADE_EN.get(grade, "UNKNOWN")
         bits = [f"{i} 사람 {tag}"]
         row = _log_row(
-            f"DD{i:02d}", "dwell", "zone_dwell", grade, grade,
-            ts, area["cam"], area["name"], area["id"],
-            " · ".join(bits), video, i,
+            f"DD{i:02d}",
+            "dwell",
+            "zone_dwell",
+            grade,
+            grade,
+            ts,
+            area["cam"],
+            area["name"],
+            area["id"],
+            " · ".join(bits),
+            video,
+            i,
             dwell_sec=stay if stay not in ("", None) and float(stay or 0) > 0 else "",
-            track_id=person.get("tid"), obj_x=person.get("first_x", person.get("x")),
+            track_id=person.get("tid"),
+            obj_x=person.get("first_x", person.get("x")),
         )
         rows.append(row)
     return rows
@@ -493,7 +593,7 @@ def c_zone_access_rows():
     active = []
     for rec in recs:
         t = float(rec.get("timestamp_seconds") or 0)
-        evs = ((rec.get("feature_events") or {}).get("zone_access") or [])
+        evs = (rec.get("feature_events") or {}).get("zone_access") or []
         now = []
         for ev in evs:
             box = ev.get("person_bbox_xyxy") or ev.get("bbox_xyxy") or [0, 0, 0, 0]
@@ -521,10 +621,15 @@ def c_zone_access_rows():
                 continue
             if h < 80 and not any(p.get("tid") == tid for p in active if tid):
                 continue
-            active.append({
-                "x": x, "tid": tid, "first_t": t, "last_t": t,
-                "enter_t": t if hot else None,
-            })
+            active.append(
+                {
+                    "x": x,
+                    "tid": tid,
+                    "first_t": t,
+                    "last_t": t,
+                    "enter_t": t if hot else None,
+                }
+            )
     active.sort(key=lambda p: p["first_t"])
     rows = []
     for i, person in enumerate(active, 1):
@@ -533,21 +638,45 @@ def c_zone_access_rows():
         if enter is None or enter > first + 0.05:
             ts = clock_start() + timedelta(seconds=first)
             tag = GRADE_EN["안전"]
-            rows.append(_log_row(
-                f"CZ{i:02d}S", "zone", "zone_access", "안전", "안전",
-                ts, area["cam"], area["name"], area["id"],
-                f"{i} 사람 {tag}", video, i,
-                track_id=person.get("tid"), obj_x=person.get("x"),
-            ))
+            rows.append(
+                _log_row(
+                    f"CZ{i:02d}S",
+                    "zone",
+                    "zone_access",
+                    "안전",
+                    "안전",
+                    ts,
+                    area["cam"],
+                    area["name"],
+                    area["id"],
+                    f"{i} 사람 {tag}",
+                    video,
+                    i,
+                    track_id=person.get("tid"),
+                    obj_x=person.get("x"),
+                )
+            )
         if enter is not None:
             ts = clock_start() + timedelta(seconds=enter)
             tag = GRADE_EN["위험"]
-            rows.append(_log_row(
-                f"CZ{i:02d}D", "zone", "zone_access", "위험", "위험",
-                ts, area["cam"], area["name"], area["id"],
-                f"{i} 사람 {tag}", video, i,
-                track_id=person.get("tid"), obj_x=person.get("x"),
-            ))
+            rows.append(
+                _log_row(
+                    f"CZ{i:02d}D",
+                    "zone",
+                    "zone_access",
+                    "위험",
+                    "위험",
+                    ts,
+                    area["cam"],
+                    area["name"],
+                    area["id"],
+                    f"{i} 사람 {tag}",
+                    video,
+                    i,
+                    track_id=person.get("tid"),
+                    obj_x=person.get("x"),
+                )
+            )
     return rows
 
 
@@ -632,19 +761,21 @@ def b_zone_collision_rows():
                 continue
             people.append({"x": box[0], "box": box, "on_fork": _on_forklift(box, fbox)})
         confirmed = []
-        for ev in ((rec.get("feature_events") or {}).get("proximity") or []):
+        for ev in (rec.get("feature_events") or {}).get("proximity") or []:
             if ev.get("observation_status") == "unconfirmed":
                 continue
             grade = _prox_grade(ev.get("severity"))
             if not grade:
                 continue
             box = ev.get("person_bbox_xyxy") or [0]
-            confirmed.append((
-                float(box[0] or 0),
-                str(ev.get("person_track_id") or ""),
-                grade,
-                ev.get("image_gap_pixels"),
-            ))
+            confirmed.append(
+                (
+                    float(box[0] or 0),
+                    str(ev.get("person_track_id") or ""),
+                    grade,
+                    ev.get("image_gap_pixels"),
+                )
+            )
         used = set()
         for person in active:
             hit = None
@@ -686,7 +817,11 @@ def b_zone_collision_rows():
             for person in active:
                 if person.get("rear"):
                     continue
-                last = (person.get("logs") or [{}])[-1].get("grade") if person.get("logs") else None
+                last = (
+                    (person.get("logs") or [{}])[-1].get("grade")
+                    if person.get("logs")
+                    else None
+                )
                 if last in ("위험", "미확인"):
                     _b_record_grade(person, "안전", None, t)
         elif fbox is not None:
@@ -735,15 +870,25 @@ def b_zone_collision_rows():
             key = suffix.get(grade, "X")
             seen[key] = seen.get(key, 0) + 1
             extra = "" if seen[key] == 1 else str(seen[key])
-            rows.append(_log_row(
-                f"BC{i:02d}{key}{extra}",
-                "collision", "proximity", grade, grade,
-                ts, area["cam"], area["name"], area["id"],
-                " · ".join(bits), video, i,
-                distance_px="" if gap in (None, "") else float(gap),
-                track_id=person.get("tid"),
-                obj_x=item.get("x", person.get("x")),
-            ))
+            rows.append(
+                _log_row(
+                    f"BC{i:02d}{key}{extra}",
+                    "collision",
+                    "proximity",
+                    grade,
+                    grade,
+                    ts,
+                    area["cam"],
+                    area["name"],
+                    area["id"],
+                    " · ".join(bits),
+                    video,
+                    i,
+                    distance_px="" if gap in (None, "") else float(gap),
+                    track_id=person.get("tid"),
+                    obj_x=item.get("x", person.get("x")),
+                )
+            )
     return rows
 
 
@@ -768,7 +913,9 @@ def _a_record(person, grade, t, extra=None):
 def _a_update_tracks(active, now, t, match_px=55.0):
     used = set()
     for person in active:
-        hit = _match_person(now, used, person["x"], person.get("tid"), match_px=match_px)
+        hit = _match_person(
+            now, used, person["x"], person.get("tid"), match_px=match_px
+        )
         if hit is None:
             continue
         x, h, tid, grade, gap, stay = now[hit]
@@ -793,7 +940,11 @@ def _a_update_tracks(active, now, t, match_px=55.0):
         if stay not in (None, ""):
             extra["stay"] = stay
         person = {
-            "x": x, "tid": tid or "", "first_t": t, "last_t": t, "logs": [],
+            "x": x,
+            "tid": tid or "",
+            "first_t": t,
+            "last_t": t,
+            "logs": [],
         }
         _a_record(person, grade, t, extra)
         active.append(person)
@@ -803,8 +954,12 @@ def _a_emit_rows(active, prefix, scenario, kind, area, video, ppe=False):
     active.sort(key=lambda p: p["first_t"])
     rows = []
     suffix = {
-        "안전": "S", "주의": "W", "위험": "D", "미확인": "U",
-        "착용": "H", "미착용": "N",
+        "안전": "S",
+        "주의": "W",
+        "위험": "D",
+        "미확인": "U",
+        "착용": "H",
+        "미착용": "N",
     }
     for i, person in enumerate(active, 1):
         seen = {}
@@ -828,16 +983,28 @@ def _a_emit_rows(active, prefix, scenario, kind, area, video, ppe=False):
             key = suffix.get(grade, "X")
             seen[key] = seen.get(key, 0) + 1
             extra = "" if seen[key] == 1 else str(seen[key])
-            rows.append(_log_row(
-                f"{prefix}{i:02d}{key}{extra}",
-                scenario, kind, status, g, ts,
-                area["cam"], area["name"], area["id"],
-                " · ".join(bits), video, i,
-                dwell_sec="" if stay in (None, "") or float(stay or 0) <= 0 else float(stay),
-                distance_px="" if gap in (None, "") else float(gap),
-                track_id=person.get("tid"),
-                obj_x=item.get("x", person.get("x")),
-            ))
+            rows.append(
+                _log_row(
+                    f"{prefix}{i:02d}{key}{extra}",
+                    scenario,
+                    kind,
+                    status,
+                    g,
+                    ts,
+                    area["cam"],
+                    area["name"],
+                    area["id"],
+                    " · ".join(bits),
+                    video,
+                    i,
+                    dwell_sec=""
+                    if stay in (None, "") or float(stay or 0) <= 0
+                    else float(stay),
+                    distance_px="" if gap in (None, "") else float(gap),
+                    track_id=person.get("tid"),
+                    obj_x=item.get("x", person.get("x")),
+                )
+            )
     return rows
 
 
@@ -888,7 +1055,12 @@ def a_zone_rows():
             wear = _ppe_track_wear(tr)
             if not wear:
                 continue
-            box = [float(v) for v in (tr.get("detected_bbox_xyxy") or tr.get("bbox_xyxy") or [0, 0, 0, 0])[:4]]
+            box = [
+                float(v)
+                for v in (
+                    tr.get("detected_bbox_xyxy") or tr.get("bbox_xyxy") or [0, 0, 0, 0]
+                )[:4]
+            ]
             tid = _tid_core(tr.get("track_id") or "")
             h = box[3] - box[1]
             if h < 40:
@@ -939,7 +1111,9 @@ def assign_workers(rows):
     for area, items in groups.items():
         match_px = match_of.get(area, 80.0)
         clusters = []
-        items.sort(key=lambda r: (str(r.get("timestamp") or ""), float(r.get("obj_x") or 0)))
+        items.sort(
+            key=lambda r: (str(r.get("timestamp") or ""), float(r.get("obj_x") or 0))
+        )
         for row in items:
             tid = _tid_core(row.get("track_id") or "")
             try:
@@ -999,13 +1173,17 @@ def load_df(force=False):
         if not rows:
             _DF_CACHE = pd.DataFrame(columns=ROW_COLS)
         else:
-            _DF_CACHE = pd.DataFrame(rows).sort_values(["timestamp", "worker", "event_id"])
+            _DF_CACHE = pd.DataFrame(rows).sort_values(
+                ["timestamp", "worker", "event_id"]
+            )
         _DF_READY = True
         return _DF_CACHE.copy()
 
 
 def part_of(d, sid):
-    return d[d["scenario"] == sid].sort_values(["timestamp", "event_id"], ascending=False)
+    return d[d["scenario"] == sid].sort_values(
+        ["timestamp", "event_id"], ascending=False
+    )
 
 
 def part_area(d, area_id, sids=None):
@@ -1022,6 +1200,7 @@ def part_site(d, site_id, sids=None):
     if d is None or len(d) == 0:
         return d
     from .config import cameras_of
+
     ids = {c["id"] for c in cameras_of(site_id)}
     view = d[d["area"].isin(ids)] if "area" in d.columns else d.iloc[0:0]
     if sids:

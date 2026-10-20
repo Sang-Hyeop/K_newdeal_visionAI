@@ -1,3 +1,4 @@
+# 역할: 구역 기능의 객체 표시 동작을 회귀 검증합니다.
 import unittest
 from unittest.mock import patch
 import numpy as np

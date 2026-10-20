@@ -1,3 +1,4 @@
+# 역할: 감지 상태와 구분된 담당자·확인·조치 상태 및 처리 이력을 관리합니다.
 # 운영 경보 대응 상태·조치 기록 (감지 상태와 분리)
 """감지 grade/status 는 바꾸지 않는다. 운영자 대응 단계와 로그만 다룬다.
 
@@ -85,7 +86,9 @@ def log_path() -> str:
     return os.path.join(LOCAL, _LOG_NAME)
 
 
-def make_link_key(cam_id: str, scenario: str, subject: str, anchor_event_id: str) -> str:
+def make_link_key(
+    cam_id: str, scenario: str, subject: str, anchor_event_id: str
+) -> str:
     """epoch 없는 영속 연결 키. anchor=에피소드 최초 event_id."""
     return "|".join(
         [
@@ -146,9 +149,18 @@ def _blank_case(link: str) -> dict[str, Any]:
 
 def _merge_meta(cur: dict[str, Any], row: dict[str, Any]):
     for key in (
-        "cam_id", "cam_code", "scenario", "subject", "anchor_event_id",
-        "title", "action", "grade", "level", "detection_status",
-        "event_first_clock", "event_last_clock",
+        "cam_id",
+        "cam_code",
+        "scenario",
+        "subject",
+        "anchor_event_id",
+        "title",
+        "action",
+        "grade",
+        "level",
+        "detection_status",
+        "event_first_clock",
+        "event_last_clock",
     ):
         val = row.get(key)
         if val not in (None, ""):
@@ -160,7 +172,9 @@ def _merge_meta(cur: dict[str, Any], row: dict[str, Any]):
             pass
     eids = row.get("event_ids") or []
     if isinstance(eids, list) and eids:
-        merged = list(dict.fromkeys([*(cur.get("event_ids") or []), *[str(x) for x in eids if x]]))
+        merged = list(
+            dict.fromkeys([*(cur.get("event_ids") or []), *[str(x) for x in eids if x]])
+        )
         cur["event_ids"] = merged
         for eid in merged:
             _EVENT_INDEX[str(eid)] = cur["link_key"]
@@ -207,7 +221,9 @@ def _apply_row_to_memory(row: dict[str, Any]):
     if kind == "reopen":
         cur["status"] = "new"
         cur["operator_at"] = str(row.get("operator_at") or cur.get("operator_at") or "")
-        cur["last_operator"] = str(row.get("operator") or cur.get("last_operator") or "")
+        cur["last_operator"] = str(
+            row.get("operator") or cur.get("last_operator") or ""
+        )
         _CURRENT[link] = cur
         return
 
@@ -289,18 +305,21 @@ def load_logs_into_memory(force: bool = False) -> dict[str, Any]:
     global _REMOTE_ROWS, _LOADED, _LOG_READ_ERROR
     if shared_cases.enabled():
         try:
-            rows = shared_cases.snapshot(force=force)['rows']
+            rows = shared_cases.snapshot(force=force)["rows"]
             with _LOCK:
                 reset = list(rows)
-                _CURRENT.clear(); _SEEN_REQUESTS.clear(); _EVENT_INDEX.clear()
+                _CURRENT.clear()
+                _SEEN_REQUESTS.clear()
+                _EVENT_INDEX.clear()
                 for row in reset:
                     _apply_row_to_memory(row)
                 _REMOTE_ROWS = reset
-                _LOADED = True; _LOG_READ_ERROR = None
-                return {'ok': True, 'count': len(_CURRENT), 'error': None}
+                _LOADED = True
+                _LOG_READ_ERROR = None
+                return {"ok": True, "count": len(_CURRENT), "error": None}
         except ValueError as exc:
             _LOG_READ_ERROR = str(exc)
-            return {'ok': False, 'error': str(exc), 'count': 0}
+            return {"ok": False, "error": str(exc), "count": 0}
     with _LOCK:
         return _load_unlocked(force=force)
 
@@ -309,7 +328,7 @@ def migrate_missing_assignees() -> dict[str, Any]:
     """유효 배정 없는 기존 사건에 A~D를 한 번만 배정·저장. 유효 값은 덮지 않음."""
     global _MIGRATED_ASSIGN
     if shared_cases.enabled():
-        return {'ok': True, 'migrated': 0}
+        return {"ok": True, "migrated": 0}
     with _LOCK:
         _load_unlocked()
         if _MIGRATED_ASSIGN:
@@ -344,7 +363,7 @@ def migrate_missing_assignees() -> dict[str, Any]:
 def ensure_case(meta: dict[str, Any]) -> dict[str, Any]:
     """사건 최초 생성 시 담당자 A~D 1회 배정·저장. 이미 있으면 재배정하지 않음."""
     if shared_cases.enabled():
-        return shared_cases.call('ensure_case', meta)
+        return shared_cases.call("ensure_case", meta)
     if not isinstance(meta, dict):
         raise ValueError("object required")
     with _LOCK:
@@ -388,8 +407,12 @@ def ensure_case(meta: dict[str, Any]) -> dict[str, Any]:
             "grade": str(meta.get("grade") or meta.get("detection_grade") or ""),
             "level": str(meta.get("level") or ""),
             "detection_status": str(meta.get("detection_status") or ""),
-            "event_first_clock": str(meta.get("first_clock") or meta.get("event_first_clock") or ""),
-            "event_last_clock": str(meta.get("last_clock") or meta.get("event_last_clock") or ""),
+            "event_first_clock": str(
+                meta.get("first_clock") or meta.get("event_first_clock") or ""
+            ),
+            "event_last_clock": str(
+                meta.get("last_clock") or meta.get("event_last_clock") or ""
+            ),
             "related_count": int(meta.get("related_count") or 1),
             "operator_at": _now(),
             "opened_at": _now(),
@@ -400,28 +423,38 @@ def ensure_case(meta: dict[str, Any]) -> dict[str, Any]:
             st = _CURRENT.get(link) or {}
             return {"ok": True, "created": False, "duplicate": True, "state": dict(st)}
         _append_line_unlocked(row)
-        _SEEN_REQUESTS[row["request_id"]] = {"ok": True, "entry": row, "state": dict(_CURRENT[link])}
+        _SEEN_REQUESTS[row["request_id"]] = {
+            "ok": True,
+            "entry": row,
+            "state": dict(_CURRENT[link]),
+        }
         return {"ok": True, "created": True, "state": dict(_CURRENT[link])}
 
 
 def record_observation_day(link: str):
     """실제 재생 감지 경로에서 사건당 하루 한 줄만 저장한다."""
     if shared_cases.enabled():
-        return shared_cases.call('record_observation_day', link)
+        return shared_cases.call("record_observation_day", link)
     with _LOCK:
         _load_unlocked()
         cur = _CURRENT.get(link)
         day = _now()[:10]
         if not cur or day in (cur.get("observed_dates") or []):
             return
-        _append_line_unlocked({"kind": "observation_day", "link_key": link,
-                               "observed_date": day, "operator_at": _now()})
+        _append_line_unlocked(
+            {
+                "kind": "observation_day",
+                "link_key": link,
+                "observed_date": day,
+                "operator_at": _now(),
+            }
+        )
 
 
 def touch_case_observation(meta: dict[str, Any]) -> dict[str, Any]:
     """반복 관측: 메모리 메타만 갱신(JSONL 전체 재기록·재배정 없음)."""
     if shared_cases.enabled():
-        return shared_cases.call('touch_case_observation', meta)
+        return shared_cases.call("touch_case_observation", meta)
     with _LOCK:
         _load_unlocked()
         link = resolve_link_key_unlocked(meta or {})
@@ -440,8 +473,31 @@ def touch_case_observation(meta: dict[str, Any]) -> dict[str, Any]:
             except (TypeError, ValueError):
                 pass
         if _STORE is not None and cur != before:
-            _append_line_unlocked({'kind': 'case_observation', 'link_key': link,
-                                   **{key: cur.get(key) for key in ('cam_id', 'cam_code', 'scenario', 'subject', 'anchor_event_id', 'title', 'action', 'grade', 'level', 'detection_status', 'event_first_clock', 'event_last_clock', 'related_count', 'event_ids')}})
+            _append_line_unlocked(
+                {
+                    "kind": "case_observation",
+                    "link_key": link,
+                    **{
+                        key: cur.get(key)
+                        for key in (
+                            "cam_id",
+                            "cam_code",
+                            "scenario",
+                            "subject",
+                            "anchor_event_id",
+                            "title",
+                            "action",
+                            "grade",
+                            "level",
+                            "detection_status",
+                            "event_first_clock",
+                            "event_last_clock",
+                            "related_count",
+                            "event_ids",
+                        )
+                    },
+                }
+            )
         _CURRENT[link] = cur
         return {"ok": True, "state": dict(cur)}
 
@@ -449,7 +505,7 @@ def touch_case_observation(meta: dict[str, Any]) -> dict[str, Any]:
 def reopen_case(meta: dict[str, Any]) -> dict[str, Any]:
     """중요도 상승 등 재확인: 이력을 지우지 않고 확인 전으로 되돌림. 배정 유지."""
     if shared_cases.enabled():
-        return shared_cases.call('reopen_case', meta)
+        return shared_cases.call("reopen_case", meta)
     with _LOCK:
         _load_unlocked()
         link = resolve_link_key_unlocked(meta or {})
@@ -483,9 +539,15 @@ def reopen_case(meta: dict[str, Any]) -> dict[str, Any]:
             "subject": cur.get("subject") or "",
             "anchor_event_id": cur.get("anchor_event_id") or "",
             "event_ids": list(cur.get("event_ids") or []),
-            "detection_status": str(meta.get("detection_status") or cur.get("detection_status") or ""),
-            "event_last_clock": str(meta.get("last_clock") or cur.get("event_last_clock") or ""),
-            "related_count": int(meta.get("related_count") or cur.get("related_count") or 0),
+            "detection_status": str(
+                meta.get("detection_status") or cur.get("detection_status") or ""
+            ),
+            "event_last_clock": str(
+                meta.get("last_clock") or cur.get("event_last_clock") or ""
+            ),
+            "related_count": int(
+                meta.get("related_count") or cur.get("related_count") or 0
+            ),
             "grade": str(meta.get("grade") or cur.get("grade") or ""),
             "level": str(meta.get("level") or cur.get("level") or ""),
             "title": str(meta.get("title") or cur.get("title") or ""),
@@ -538,7 +600,7 @@ def resolve_link_key(data: dict[str, Any]) -> str | None:
 def apply_transition(data: dict[str, Any]) -> dict[str, Any]:
     """서버 권위 전이. 배정 담당자는 처리 사용자로 덮지 않음."""
     if shared_cases.enabled():
-        return shared_cases.call('apply_transition', data)
+        return shared_cases.call("apply_transition", data)
     if not isinstance(data, dict):
         raise ValueError("object required")
 
@@ -609,7 +671,11 @@ def apply_transition(data: dict[str, Any]) -> dict[str, Any]:
                     "state": dict(cur),
                     "warning": "already_in_target_status",
                 }
-                _SEEN_REQUESTS[request_id] = {"ok": True, "entry": None, "state": dict(cur)}
+                _SEEN_REQUESTS[request_id] = {
+                    "ok": True,
+                    "entry": None,
+                    "state": dict(cur),
+                }
                 return out
             raise ValueError(
                 f"invalid transition server={server_status} client_prev={client_prev} → {nxt}"
@@ -635,7 +701,9 @@ def apply_transition(data: dict[str, Any]) -> dict[str, Any]:
             "scenario": str(data.get("scenario") or (cur or {}).get("scenario") or ""),
             "subject": str(data.get("subject") or (cur or {}).get("subject") or ""),
             "anchor_event_id": anchor or str((cur or {}).get("anchor_event_id") or ""),
-            "event_ids": list(dict.fromkeys([*(((cur or {}).get("event_ids")) or []), *eids])),
+            "event_ids": list(
+                dict.fromkeys([*(((cur or {}).get("event_ids")) or []), *eids])
+            ),
             "assigned_to": str((cur or {}).get("assigned_to") or ""),
             "operator": operator,
             "prev_status": server_status,
@@ -645,19 +713,30 @@ def apply_transition(data: dict[str, Any]) -> dict[str, Any]:
             "note": note,
             "operator_at": _now(),  # 서버 시각 권위
             "event_first_clock": str(
-                data.get("event_first_clock") or (cur or {}).get("event_first_clock") or ""
+                data.get("event_first_clock")
+                or (cur or {}).get("event_first_clock")
+                or ""
             ),
             "event_last_clock": str(
-                data.get("event_last_clock") or (cur or {}).get("event_last_clock") or ""
+                data.get("event_last_clock")
+                or (cur or {}).get("event_last_clock")
+                or ""
             ),
             "detection_status": str(
-                data.get("detection_status") or (cur or {}).get("detection_status") or ""
+                data.get("detection_status")
+                or (cur or {}).get("detection_status")
+                or ""
             ),
             "related_count": int(
                 data.get("related_count") or (cur or {}).get("related_count") or 0
             ),
             "title": str(data.get("title") or (cur or {}).get("title") or ""),
-            "grade": str(data.get("detection_grade") or data.get("grade") or (cur or {}).get("grade") or ""),
+            "grade": str(
+                data.get("detection_grade")
+                or data.get("grade")
+                or (cur or {}).get("grade")
+                or ""
+            ),
             "level": str(data.get("level") or (cur or {}).get("level") or ""),
             "disclaimer": "조치 완료는 현장 안전 보증이 아님",
         }
@@ -701,20 +780,38 @@ def get_state_by_link(link_key: str) -> dict[str, Any]:
         }
 
 
-def history_for_link(link_key: str = "", event_ids: list[str] | None = None) -> dict[str, Any]:
+def history_for_link(
+    link_key: str = "", event_ids: list[str] | None = None
+) -> dict[str, Any]:
     if shared_cases.enabled() or _STORE is not None:
         load_logs_into_memory()
-        link = str(link_key or '').strip()
+        link = str(link_key or "").strip()
         if not link and event_ids:
             with _LOCK:
-                link = next((_EVENT_INDEX[e] for e in event_ids if e in _EVENT_INDEX), '')
+                link = next(
+                    (_EVENT_INDEX[e] for e in event_ids if e in _EVENT_INDEX), ""
+                )
         if not link:
-            return {'ok': False, 'error': '이력을 연결할 link_key/event_id 가 없습니다(추정 연결 안 함)', 'history': []}
+            return {
+                "ok": False,
+                "error": "이력을 연결할 link_key/event_id 가 없습니다(추정 연결 안 함)",
+                "history": [],
+            }
         try:
-            rows = [row for row in iter_history() if str(row.get('link_key') or '') == link and row.get('kind') not in ('observation_day', 'case_observation')]
+            rows = [
+                row
+                for row in iter_history()
+                if str(row.get("link_key") or "") == link
+                and row.get("kind") not in ("observation_day", "case_observation")
+            ]
         except (OSError, ValueError) as exc:
-            return {'ok': False, 'error': f'조치 이력 읽기 실패: {exc}', 'history': [], 'link_key': link}
-        return {'ok': True, 'error': None, 'history': rows, 'link_key': link}
+            return {
+                "ok": False,
+                "error": f"조치 이력 읽기 실패: {exc}",
+                "history": [],
+                "link_key": link,
+            }
+        return {"ok": True, "error": None, "history": rows, "link_key": link}
     load_logs_into_memory()
     link = str(link_key or "").strip()
     if not link and event_ids:
@@ -739,10 +836,18 @@ def history_for_link(link_key: str = "", event_ids: list[str] | None = None) -> 
                 row = _parse_line(line)
                 if row is None:
                     continue
-                if str(row.get("link_key") or "") == link and row.get("kind") != "observation_day":
+                if (
+                    str(row.get("link_key") or "") == link
+                    and row.get("kind") != "observation_day"
+                ):
                     rows.append(row)
     except OSError as exc:
-        return {"ok": False, "error": f"조치 이력 읽기 실패: {exc}", "history": [], "link_key": link}
+        return {
+            "ok": False,
+            "error": f"조치 이력 읽기 실패: {exc}",
+            "history": [],
+            "link_key": link,
+        }
     return {"ok": True, "error": None, "history": rows, "link_key": link}
 
 
@@ -760,7 +865,16 @@ def _merge_live_episode(cur: dict[str, Any], ep: dict[str, Any]) -> dict[str, An
             out["related_count"] = int(ep.get("related_count"))
         except (TypeError, ValueError):
             pass
-    for key in ("title", "action", "cam_code", "grade", "level", "cam_id", "scenario", "subject"):
+    for key in (
+        "title",
+        "action",
+        "cam_code",
+        "grade",
+        "level",
+        "cam_id",
+        "scenario",
+        "subject",
+    ):
         if ep.get(key):
             out[key] = ep.get(key)
     if ep.get("event_ids"):
@@ -786,7 +900,11 @@ def _enrich_case_display(item: dict[str, Any]) -> dict[str, Any]:
         place = str(out.get("cam_code") or out.get("cam_id") or "").strip()
         grade = str(out.get("grade") or "")
         if not grade:
-            grade = "위험" if out.get("level") == "hot" else ("주의" if out.get("level") == "warn" else "")
+            grade = (
+                "위험"
+                if out.get("level") == "hot"
+                else ("주의" if out.get("level") == "warn" else "")
+            )
         out["title"] = " · ".join(p for p in (grade, place, reason) if p)
     if not out.get("cam_code") and out.get("cam_id"):
         try:
@@ -810,7 +928,11 @@ def list_cases(filters: dict[str, Any] | None = None) -> dict[str, Any]:
     load_logs_into_memory()
     migrate_missing_assignees()
     filters = filters or {}
-    live = {str(ep.get("link_key") or ""): ep for ep in snapshot_episodes() if ep.get("link_key")}
+    live = {
+        str(ep.get("link_key") or ""): ep
+        for ep in snapshot_episodes()
+        if ep.get("link_key")
+    }
 
     with _LOCK:
         cases = []
@@ -855,7 +977,11 @@ def list_cases(filters: dict[str, Any] | None = None) -> dict[str, Any]:
             if sev == "주의" and grade != "주의" and level != "warn":
                 return False
         assignee = str(filters.get("assigned_to") or "").strip()
-        if assignee and assignee != "all" and str(c.get("assigned_to") or "") != assignee:
+        if (
+            assignee
+            and assignee != "all"
+            and str(c.get("assigned_to") or "") != assignee
+        ):
             return False
         # 영상 발생 기간: first_clock 문자열 HH:MM:SS 또는 전체 일시 — 단순 포함 필터
         date_from = str(filters.get("date_from") or "").strip()
@@ -889,7 +1015,10 @@ def list_cases(filters: dict[str, Any] | None = None) -> dict[str, Any]:
     filtered.sort(key=lambda c: (sort_key(c)[0], sort_key(c)[1]))
     for _, group in groupby(filtered, key=lambda c: (sort_key(c)[0], sort_key(c)[1])):
         chunk = list(group)
-        chunk.sort(key=lambda c: str(c.get("event_last_clock") or c.get("operator_at") or ""), reverse=True)
+        chunk.sort(
+            key=lambda c: str(c.get("event_last_clock") or c.get("operator_at") or ""),
+            reverse=True,
+        )
         ordered.extend(chunk)
     filtered = ordered
 
@@ -905,7 +1034,8 @@ def list_cases(filters: dict[str, Any] | None = None) -> dict[str, Any]:
         "done_today": sum(
             1
             for c in all_cases
-            if c.get("status") == "done" and str(c.get("done_at") or "").startswith(today)
+            if c.get("status") == "done"
+            and str(c.get("done_at") or "").startswith(today)
         ),
         "source": summary_source,
     }
@@ -925,13 +1055,22 @@ def case_detail(link_key: str) -> dict[str, Any]:
     migrate_missing_assignees()
     from .alert_ops import snapshot_episodes
 
-    live = {str(ep.get("link_key") or ""): ep for ep in snapshot_episodes() if ep.get("link_key")}
+    live = {
+        str(ep.get("link_key") or ""): ep
+        for ep in snapshot_episodes()
+        if ep.get("link_key")
+    }
     st = get_state_by_link(link_key)
     state = st.get("state")
     if not st.get("ok"):
         return {"ok": False, "error": st.get("error"), "state": None, "history": []}
     if not state:
-        return {"ok": False, "error": "사건을 찾을 수 없습니다", "state": None, "history": []}
+        return {
+            "ok": False,
+            "error": "사건을 찾을 수 없습니다",
+            "state": None,
+            "history": [],
+        }
     if link_key in live:
         state = _merge_live_episode(state, live[link_key])
         state["detection_fresh"] = True
@@ -951,8 +1090,8 @@ def iter_history():
     """Stream the audit log on explicit report load; never mutate source records."""
     if shared_cases.enabled():
         result = load_logs_into_memory()
-        if not result.get('ok'):
-            raise ValueError(result.get('error'))
+        if not result.get("ok"):
+            raise ValueError(result.get("error"))
         yield from list(_REMOTE_ROWS)
     elif _STORE is not None:
         yield from _STORE.rows()
@@ -963,5 +1102,7 @@ def iter_history():
                     continue
                 row = _parse_line(line)
                 if row is None:
-                    raise ValueError("손상된 조치 이력이 있어 통계를 계산하지 못했습니다")
+                    raise ValueError(
+                        "손상된 조치 이력이 있어 통계를 계산하지 못했습니다"
+                    )
                 yield row

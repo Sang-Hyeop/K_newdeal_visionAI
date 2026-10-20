@@ -1,3 +1,4 @@
+# 역할: 밑면 중앙 기준 사람·차량 거리 동작을 회귀 검증합니다.
 import unittest
 from src.proximity import Proximity
 class BottomCenterTests(unittest.TestCase):

@@ -1,3 +1,4 @@
+# 역할: 감지 기록과 설정을 연결해 위험 이유·근거·확인 행동을 설명합니다.
 # 카메라 상세: 판정 기준·관측 근거 표시 (모델/임계값 변경 없음, 표시만)
 """관제용 판정 설명. 이벤트 행 + 설정 파일 캐시를 연결한다.
 
@@ -44,13 +45,18 @@ def _cell(row, key, default=""):
     if row is None:
         return default
     try:
-        value = row[key] if hasattr(row, "index") and key in row.index else row.get(key, default)
+        value = (
+            row[key]
+            if hasattr(row, "index") and key in row.index
+            else row.get(key, default)
+        )
     except Exception:
         return default
     if value is None:
         return default
     try:
         import math
+
         if isinstance(value, float) and math.isnan(value):
             return default
     except Exception:
@@ -90,7 +96,11 @@ def _gap_display(row):
         value = float(gap)
     except (TypeError, ValueError):
         return "간격 확인 불가"
-    if value == 0.0 and grade in ("미확인", "") and status in ("미확인", "", "판정 불가"):
+    if (
+        value == 0.0
+        and grade in ("미확인", "")
+        and status in ("미확인", "", "판정 불가")
+    ):
         return "간격 확인 불가"
     return f"화면상 간격 {value:.0f}px (상대 판정용 · m 아님)"
 
@@ -222,7 +232,9 @@ def _check_lines(sid, status=""):
         return "영상에서 안전모 착용 상태를 확인"
     if sid == "fire":
         if status == "관측 소실":
-            return "영상에서 불꽃 재출현 여부를 확인(관측 끊김을 현장 안전으로 보지 말 것)"
+            return (
+                "영상에서 불꽃 재출현 여부를 확인(관측 끊김을 현장 안전으로 보지 말 것)"
+            )
         if status == "확인 중":
             return "영상에서 불꽃 후보가 반복되는지 확인"
         if status == "화재 의심":
@@ -243,18 +255,28 @@ def _limit_lines(sid, cam_id, criteria_source=""):
         if cam_id == "A2":
             limits.append("시연용 AI 생성 영상이며 독립 CCTV 일반화 평가가 아님")
     if sid == "dwell":
-        limits.append("표시된 체류시간은 해당 기록 시점의 관측값이며 현재 실시간 체류가 아닐 수 있음")
+        limits.append(
+            "표시된 체류시간은 해당 기록 시점의 관측값이며 현재 실시간 체류가 아닐 수 있음"
+        )
         limits.append("차량 조건·관측 끊김에 따라 단계가 달라질 수 있음")
     if sid == "ppe":
-        limits.append("상세 표의 착용/미착용은 요약 표시이며, 판정 대기·판단 불가 상태는 이 행에 없을 수 있음")
-        limits.append("머리 가림·작은 크기 등은 이 행에 근거가 없어 원인으로 단정하지 않음")
+        limits.append(
+            "상세 표의 착용/미착용은 요약 표시이며, 판정 대기·판단 불가 상태는 이 행에 없을 수 있음"
+        )
+        limits.append(
+            "머리 가림·작은 크기 등은 이 행에 근거가 없어 원인으로 단정하지 않음"
+        )
     if sid == "fire":
         limits.append("차량 주변 화재로 단정하지 않음")
-        limits.append("화재 확정·자동 진압·신고 기능 없음 · 관측이 끊겨도 현장 안전으로 보지 않음")
+        limits.append(
+            "화재 확정·자동 진압·신고 기능 없음 · 관측이 끊겨도 현장 안전으로 보지 않음"
+        )
     if criteria_source:
         limits.append(f"아래 단계 임계는 사건 당시 스냅샷이 아니라 {criteria_source}")
     else:
-        limits.append("아래 단계 임계는 사건 당시 스냅샷이 아니라 현재 설정 파일 기준임")
+        limits.append(
+            "아래 단계 임계는 사건 당시 스냅샷이 아니라 현재 설정 파일 기준임"
+        )
     return limits
 
 
@@ -277,7 +299,9 @@ def judgment_sections(row, cam=None):
             "criteria": ["적용 기준 확인 불가"],
             "why": "카메라별 기능 범위와 기록이 일치하지 않음",
             "check": "영상과 이벤트 표를 함께 확인",
-            "limits": ["기능 범위: " + ", ".join(FEATURE_NAME.get(s, s) for s in allowed)],
+            "limits": [
+                "기능 범위: " + ", ".join(FEATURE_NAME.get(s, s) for s in allowed)
+            ],
             "criteria_source": "적용 기준 확인 불가",
         }
 

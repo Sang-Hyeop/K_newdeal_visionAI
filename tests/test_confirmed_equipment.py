@@ -1,3 +1,4 @@
+# 역할: 확정 설비 오탐 제외 동작을 회귀 검증합니다.
 import unittest
 from src.detection_review_profile import exclude_confirmed_equipment
 class ConfirmedEquipmentTests(unittest.TestCase):

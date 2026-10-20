@@ -1,3 +1,4 @@
+# 역할: 보조 모델의 사람·차량 관측 보충 동작을 회귀 검증합니다.
 import unittest
 from types import SimpleNamespace
 import torch

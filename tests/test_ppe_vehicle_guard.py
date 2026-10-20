@@ -1,3 +1,4 @@
+# 역할: 탑승·가림 가능 대상의 안전모 확정 보류 동작을 회귀 검증합니다.
 import unittest
 from src.ppe_vehicle_guard import apply_ppe_vehicle_guard
 from src.event_contract import normalize_event

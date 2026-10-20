@@ -1,3 +1,4 @@
+# 역할: 로그인·메인·카메라·사건·이력·통계 화면과 갱신 흐름을 연결합니다.
 # 탭 화면 조립·로그인 후 대시보드 실행
 import os
 import uuid
@@ -200,13 +201,17 @@ def _attach_boot(demo, outputs, build):
         return tuple(list(_pack(build(view))) + [True, gr.update(active=False)])
 
     timer.tick(
-        _fill, inputs=[got], outputs=list(outputs) + [got, timer],
+        _fill,
+        inputs=[got],
+        outputs=list(outputs) + [got, timer],
         concurrency_limit=1,
     )
     demo._boot_timer = timer
 
 
-def _cam_wall(cams, dest_key, wall_id="sisun-wall", captions=False, expandable=True, alerts=False):
+def _cam_wall(
+    cams, dest_key, wall_id="sisun-wall", captions=False, expandable=True, alerts=False
+):
     """카메라 그리드. dest_key: origin | detect.
     captions=True: 메인 소제목. expandable=False: 클릭 확대 없이 처음부터 크게.
     alerts=True: 영상 하단 위험 오버레이 칸.
@@ -247,7 +252,9 @@ def _cam_wall(cams, dest_key, wall_id="sisun-wall", captions=False, expandable=T
                             )
                         with gr.Column(elem_classes="sisun-cam"):
                             if not captions:
-                                gr.HTML(f"<div class='sisun-cam-tag'>{cam_tag(cam)}</div>")
+                                gr.HTML(
+                                    f"<div class='sisun-cam-tag'>{cam_tag(cam)}</div>"
+                                )
                             if alerts:
                                 alert_boxes.append(
                                     gr.HTML(
@@ -282,7 +289,10 @@ def _attach_vid_timer(demo, vids, dests, cams, dest_key):
     def _fill_vids(done):
         n = len(vids)
         if done:
-            return tuple(gr.update() for _ in range(n)) + (True, gr.update(active=False))
+            return tuple(gr.update() for _ in range(n)) + (
+                True,
+                gr.update(active=False),
+            )
         values = []
         ready = True
         for cam, dest in zip(cams, dests):
@@ -297,7 +307,9 @@ def _attach_vid_timer(demo, vids, dests, cams, dest_key):
         return tuple(values) + (False, gr.update())
 
     vid_timer.tick(
-        _fill_vids, inputs=[got], outputs=vids + [got, vid_timer],
+        _fill_vids,
+        inputs=[got],
+        outputs=vids + [got, vid_timer],
         concurrency_limit=None,
     )
     demo._vid_timer = vid_timer
@@ -312,20 +324,33 @@ def make_main(cams):
         playheads = gr.JSON(value={}, visible=False)
         ready = gr.State(False)
         vids, dests, cam_refs, alert_boxes = _cam_wall(
-            cams, "origin", wall_id="sisun-wall", captions=True, alerts=True,
+            cams,
+            "origin",
+            wall_id="sisun-wall",
+            captions=True,
+            alerts=True,
         )
         btn = gr.Button("새로고침", elem_classes="t2-refresh")
         timer = gr.Timer(0.4, active=False)
         # 카메라별 재생 위치 최고값. 루프(currentTime 감소)여도 KPI는 유지.
         # await_restart: 새로고침 직후 영상이 아직 중간이면 KPI를 0으로 유지.
         # epoch: 새로고침과 타이머 틱 레이스로 이전 결과가 덮어쓰는 것 방지.
-        kpi_session = {"started": False, "max_pos": {}, "await_restart": False, "epoch": 0}
+        kpi_session = {
+            "started": False,
+            "max_pos": {},
+            "await_restart": False,
+            "epoch": 0,
+        }
         idle_alerts = tuple(cam_danger_overlay_html(False) for _ in alert_boxes)
 
         def _paths():
             out = []
             for cam, dest in zip(cam_refs, dests):
-                path = _ensure_clip(cam, "origin") if dest == cam["origin"] else _existing(dest)
+                path = (
+                    _ensure_clip(cam, "origin")
+                    if dest == cam["origin"]
+                    else _existing(dest)
+                )
                 # 같은 경로여도 Gradio가 갱신을 건너뛰지 않게 update로 보냄
                 out.append(gr.update(value=path) if path else gr.update())
             return out
@@ -422,9 +447,18 @@ def make_main(cams):
         def stop():
             """다른 탭/로그아웃 시 메인 틱만 멈춤. KPI·누적 위치는 유지."""
             n = len(vids)
-            return tuple(gr.update() for _ in range(n)) + (
-                False, gr.update(), True, gr.update(), gr.update(),
-            ) + tuple(gr.update() for _ in alert_boxes) + (gr.update(active=False),)
+            return (
+                tuple(gr.update() for _ in range(n))
+                + (
+                    False,
+                    gr.update(),
+                    True,
+                    gr.update(),
+                    gr.update(),
+                )
+                + tuple(gr.update() for _ in alert_boxes)
+                + (gr.update(active=False),)
+            )
 
         def tick(on, positions, is_ready):
             n_alert = len(alert_boxes)
@@ -458,9 +492,11 @@ def make_main(cams):
         # sound: 새로고침 마커용. 종·소리는 독립 alert_sound 버스.
         outs = vids + [playing, playheads, ready, sound, kpis] + alert_boxes + [timer]
         tick_evt = timer.tick(
-            tick, inputs=[playing, playheads, ready],
+            tick,
+            inputs=[playing, playheads, ready],
             outputs=[kpis] + alert_boxes,
-            js=playback_inputs("sisun-wall", cams), concurrency_limit=1,
+            js=playback_inputs("sisun-wall", cams),
+            concurrency_limit=1,
         )
         # 클릭 즉시 영상 되감기 + 진행 중 틱 취소 → 로딩만 되고 안 바뀌는 레이스 완화
         btn.click(
@@ -489,7 +525,10 @@ def make_camera(cam):
         ready = gr.State(False)
         banner = gr.HTML()
         vids, dests, _cams, _alerts = _cam_wall(
-            [cam], "detect", wall_id=f"sisun-wall-{cam_id}", expandable=False,
+            [cam],
+            "detect",
+            wall_id=f"sisun-wall-{cam_id}",
+            expandable=False,
         )
         log = gr.HTML()
         btn = gr.Button("새로고침", elem_classes="t2-refresh")
@@ -498,7 +537,11 @@ def make_camera(cam):
         def _paths():
             out = []
             for dest in dests:
-                path = _ensure_clip(cam, "detect") if dest == cam["detect"] else _existing(dest)
+                path = (
+                    _ensure_clip(cam, "detect")
+                    if dest == cam["detect"]
+                    else _existing(dest)
+                )
                 out.append(path if path else gr.update())
             return out
 
@@ -506,9 +549,13 @@ def make_camera(cam):
             view = peek_df() if not force else load_df(force=True)
             empty = view.iloc[0:0] if view is not None and len(view) else view
             paths = _paths()
-            return (
-                tuple(paths)
-                + (True, {}, True, "", table_html(empty, allow_empty=True), gr.update(active=True))
+            return tuple(paths) + (
+                True,
+                {},
+                True,
+                "",
+                table_html(empty, allow_empty=True),
+                gr.update(active=True),
             )
 
         def begin():
@@ -520,7 +567,12 @@ def make_camera(cam):
         def stop():
             n = len(vids)
             return tuple(gr.update() for _ in range(n)) + (
-                False, {}, False, "", "", gr.update(active=False),
+                False,
+                {},
+                False,
+                "",
+                "",
+                gr.update(active=False),
             )
 
         def tick(on, positions, is_ready):
@@ -538,9 +590,11 @@ def make_camera(cam):
 
         outs = vids + [playing, playheads, ready, banner, log, timer]
         timer.tick(
-            tick, inputs=[playing, playheads, ready],
+            tick,
+            inputs=[playing, playheads, ready],
             outputs=[banner, log],
-            js=playback_inputs(f"sisun-wall-{cam_id}", [cam]), concurrency_limit=1,
+            js=playback_inputs(f"sisun-wall-{cam_id}", [cam]),
+            concurrency_limit=1,
         )
         btn.click(refresh, outputs=outs)
         demo._live_begin = begin
@@ -555,7 +609,9 @@ def make_data():
 
     with gr.Blocks() as demo:
         gr.HTML(title_html("운영 통계"), elem_classes="t2-title-block")
-        period = gr.Dropdown(["전체", "오늘 등록"], value="전체", label="사건 등록 기간")
+        period = gr.Dropdown(
+            ["전체", "오늘 등록"], value="전체", label="사건 등록 기간"
+        )
         stats = gr.HTML()
         btn = gr.Button("새로고침", elem_classes="t2-refresh")
         _attach_boot(demo, [stats], lambda _view: (operations_html(),))
@@ -573,12 +629,14 @@ def make_cases():
     return demo
 
 
-
 def make_history():
     site_names = [s["name"] for s in SITES]
     picks = ["전체"] + site_names + [s["name"] for s in SCENARIOS]
     with gr.Blocks() as demo:
-        gr.HTML(title_html("이벤트 이력 · 창고·유형으로 찾기"), elem_classes="t2-title-block")
+        gr.HTML(
+            title_html("이벤트 이력 · 창고·유형으로 찾기"),
+            elem_classes="t2-title-block",
+        )
         gr.HTML(
             f"<div class='t2-pick-label' style='{INK_TITLE}'>창고 · 유형 고르기</div>",
             elem_classes="t2-title-block",
@@ -598,11 +656,19 @@ def make_history():
                 return table_html(view, newest_first=True, include_fire_status=True)
             site = next((s for s in SITES if s["name"] == name), None)
             if site is not None:
-                return table_html(part_site(view, site["id"]), newest_first=True, include_fire_status=True)
+                return table_html(
+                    part_site(view, site["id"]),
+                    newest_first=True,
+                    include_fire_status=True,
+                )
             sid = next((s["id"] for s in SCENARIOS if s["name"] == name), None)
             if sid is None:
                 return card("조건을 찾지 못했습니다.")
-            return table_html(view[view["scenario"] == sid], newest_first=True, include_fire_status=True)
+            return table_html(
+                view[view["scenario"] == sid],
+                newest_first=True,
+                include_fire_status=True,
+            )
 
         def _load(name="전체"):
             return _from(load_df(), name)
@@ -640,13 +706,26 @@ def launch():
     allowed = [str(DATA_ROOT), str(VIDEO_DIR), LOCAL, str(DATA_ROOT / "outputs")]
     os.makedirs(LOCAL, exist_ok=True)
     theme = make_theme()
-    paper_idx = {i for i, t in enumerate(TABS) if t.get("kind") in ("history", "cases", "data")}
+    paper_idx = {
+        i for i, t in enumerate(TABS) if t.get("kind") in ("history", "cases", "data")
+    }
     with gr.Blocks(title=TITLE, fill_width=True, fill_height=True) as app:
-        with gr.Column(visible=True, elem_id="sisun-gate", elem_classes="sisun-login-on") as login_box:
+        with gr.Column(
+            visible=True, elem_id="sisun-gate", elem_classes="sisun-login-on"
+        ) as login_box:
             with gr.Column(elem_classes="sisun-login-card"):
                 gr.HTML(login_html())
-                uid = gr.Textbox(show_label=False, placeholder="아이디", elem_classes="sisun-login-input")
-                pw = gr.Textbox(show_label=False, placeholder="비밀번호", type="password", elem_classes="sisun-login-input")
+                uid = gr.Textbox(
+                    show_label=False,
+                    placeholder="아이디",
+                    elem_classes="sisun-login-input",
+                )
+                pw = gr.Textbox(
+                    show_label=False,
+                    placeholder="비밀번호",
+                    type="password",
+                    elem_classes="sisun-login-input",
+                )
                 err = gr.HTML()
                 gr.HTML(login_foot())
                 go = gr.Button("로그인", elem_classes="sisun-login-btn")
@@ -657,7 +736,12 @@ def launch():
             side_btns = []
             panels = []
             with gr.Row(elem_classes="sisun-dash-row"):
-                with gr.Column(elem_id="sisun-side", elem_classes="sisun-side", scale=0, min_width=0):
+                with gr.Column(
+                    elem_id="sisun-side",
+                    elem_classes="sisun-side",
+                    scale=0,
+                    min_width=0,
+                ):
                     gr.HTML(side_brand_html())
                     with gr.Column(elem_classes="sisun-side-nav"):
                         for i, (name, _block) in enumerate(demos):
@@ -674,7 +758,9 @@ def launch():
                     logout_btn = gr.Button("Logout", elem_classes="sisun-logout-btn")
                 with gr.Column(elem_classes="sisun-body", scale=1):
                     for i, (name, block) in enumerate(demos):
-                        with gr.Column(visible=(i == 0), elem_classes="sisun-panel") as panel:
+                        with gr.Column(
+                            visible=(i == 0), elem_classes="sisun-panel"
+                        ) as panel:
                             if i in paper_idx:
                                 with gr.Column(elem_classes="sisun-paper"):
                                     block.render()
@@ -706,7 +792,9 @@ def launch():
                 packed = []
                 for i, block in lives:
                     # 알림은 독립 버스라 탭 전환과 무관. 각 탭 화면 틱만 on/off.
-                    packed.extend(block._live_begin() if i == idx else block._live_stop())
+                    packed.extend(
+                        block._live_begin() if i == idx else block._live_stop()
+                    )
                 return vis + btns + packed + [header_html(uid, TABS[idx]["name"])]
 
             def start_home_live(user):
@@ -746,18 +834,36 @@ def launch():
 }"""
         home_outs = live_outs + [alert_timer]
         go.click(
-            _login_flow, inputs=[uid, pw], outputs=login_outs, concurrency_limit=1,
+            _login_flow,
+            inputs=[uid, pw],
+            outputs=login_outs,
+            concurrency_limit=1,
         ).then(
-            _after_login, inputs=[user_st], outputs=_BOOT_TIMERS, concurrency_limit=1,
+            _after_login,
+            inputs=[user_st],
+            outputs=_BOOT_TIMERS,
+            concurrency_limit=1,
         ).then(
-            start_home_live, inputs=[user_st], outputs=home_outs, concurrency_limit=1,
+            start_home_live,
+            inputs=[user_st],
+            outputs=home_outs,
+            concurrency_limit=1,
         ).then(None, js=hide_js)
         pw.submit(
-            _login_flow, inputs=[uid, pw], outputs=login_outs, concurrency_limit=1,
+            _login_flow,
+            inputs=[uid, pw],
+            outputs=login_outs,
+            concurrency_limit=1,
         ).then(
-            _after_login, inputs=[user_st], outputs=_BOOT_TIMERS, concurrency_limit=1,
+            _after_login,
+            inputs=[user_st],
+            outputs=_BOOT_TIMERS,
+            concurrency_limit=1,
         ).then(
-            start_home_live, inputs=[user_st], outputs=home_outs, concurrency_limit=1,
+            start_home_live,
+            inputs=[user_st],
+            outputs=home_outs,
+            concurrency_limit=1,
         ).then(None, js=hide_js)
 
         def _logout():
@@ -815,7 +921,10 @@ def launch():
         fastapi_app = getattr(app, "app", None)
         if fastapi_app is None:
             return
-        if any(getattr(r, "path", "") == "/sisun/alert-response" for r in fastapi_app.routes):
+        if any(
+            getattr(r, "path", "") == "/sisun/alert-response"
+            for r in fastapi_app.routes
+        ):
             return
 
         # 기동 시 조치 이력 1회 적재(폴링마다 재조회하지 않음)
@@ -840,7 +949,11 @@ def launch():
                 return get_state_by_link(link)
             if eids:
                 return get_states_for_event_ids(eids)
-            return {"ok": False, "error": "link_key or event_ids required", "state": None}
+            return {
+                "ok": False,
+                "error": "link_key or event_ids required",
+                "state": None,
+            }
 
         @fastapi_app.get("/sisun/alert-response/history")
         async def _sisun_alert_response_history(request: Request):
