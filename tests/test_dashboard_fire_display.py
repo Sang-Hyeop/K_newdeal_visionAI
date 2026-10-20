@@ -20,8 +20,10 @@ class FireDisplayTests(unittest.TestCase):
               event_to_row(self.event('repeated_fire_observations',True,4.6))]
         frame=pd.DataFrame(rows)
         self.assertEqual(rows[0]['status'],'확인 중')
-        self.assertTrue(rows[0]['timestamp'].endswith('04.0'))
-        self.assertTrue(rows[1]['timestamp'].endswith('04.6'))
+        from dashboard.config import clock_start
+        self.assertEqual(pd.Timestamp(rows[0]['timestamp']), pd.Timestamp(clock_start()) + pd.Timedelta(seconds=4))
+        self.assertEqual(pd.Timestamp(rows[1]['timestamp']), pd.Timestamp(clock_start()) + pd.Timedelta(seconds=4.6))
+        self.assertEqual(rows[1]['_video_seconds'], 4.6)
         camera=table_html(frame)
         history=table_html(frame,include_fire_status=True)
         self.assertNotIn('반복 관측 확인 중',camera)

@@ -203,6 +203,7 @@ def event_to_row(ev):
             row["track_id"] = ",".join(ev.get("track_ids") or [])
             # Keep subsecond transitions distinguishable in the history table.
             sec = float(ev.get("timestamp_seconds") or 0)
+            row["_video_seconds"] = sec
             row["timestamp"] = (clock_start() + timedelta(seconds=sec)).strftime(
                 "%Y-%m-%d %H:%M:%S.%f"
             )[:-5]
@@ -1151,6 +1152,27 @@ def assign_workers(rows):
             row["worker"] = names.get(id(cluster), "") if cluster is not None else ""
 
 
+def rebase_display_clock(now=None):
+    """캐시를 재추론하지 않고 현재 세션의 표시 시각만 갱신합니다."""
+    from .config import reset_clock_start
+
+    with _DF_LOCK:
+        base = reset_clock_start(now)
+        if _DF_CACHE is None or _DF_CACHE.empty:
+            return base
+        stamps = pd.Timestamp(base) + pd.to_timedelta(
+            _DF_CACHE["_video_seconds"], unit="s"
+        )
+        _DF_CACHE["timestamp"] = stamps.dt.strftime("%Y-%m-%d %H:%M:%S")
+        fire = _DF_CACHE["scenario"] == "fire"
+        _DF_CACHE.loc[fire, "timestamp"] = (
+            stamps[fire].dt.strftime("%Y-%m-%d %H:%M:%S.%f").str[:-5]
+        )
+        for field in ("year", "month", "day", "hour", "minute"):
+            _DF_CACHE[field] = getattr(stamps.dt, field)
+        return base
+
+
 def load_df(force=False):
     """한 번 가져온 로그는 재사용. 탭 바꿀 때 API를 다시 치지 않음."""
     global _DF_CACHE, _DF_READY
@@ -1209,7 +1231,7 @@ def part_site(d, site_id, sids=None):
 
 
 def live_until(d, elapsed):
-    """영상 시작(09:00:00) 기준 elapsed초까지 나온 로그만. 시작 직후(0초)는 비움."""
+    """영상 경과 elapsed초까지 나온 로그만. 시작 직후(0초)는 비움."""
     if d is None or len(d) == 0:
         return d
     if float(elapsed) <= 0:
@@ -1230,7 +1252,7 @@ def live_positions(d, positions):
 
 
 def live_part(d, area_id, sids, elapsed, site_id=None):
-    """탭을 연 뒤 elapsed초까지 나온 로그만. 영상 시작=09:00:00."""
+    """탭을 연 뒤 elapsed초까지 나온 로그만. 표시 시각과 별개인 영상 경과초를 사용."""
     if site_id:
         part = part_site(d, site_id, sids)
     else:

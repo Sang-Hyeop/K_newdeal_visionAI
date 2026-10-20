@@ -83,14 +83,24 @@ OPERATOR = "안전 당직"
 PAGE_BG = "#0f172a"
 
 
+_DISPLAY_START = datetime.now().replace(microsecond=0)
+
+
 def clock_start():
-    """로그 시각: 오늘 날짜 + 09:00:00 시작."""
-    now = datetime.now()
-    return datetime(now.year, now.month, now.day, 9, 0, 0)
+    """현재 재생 세션의 표시 시작 시각을 고정해 반환합니다."""
+    return _DISPLAY_START
+
+
+def reset_clock_start(now=None):
+    """로그인·명시적 새로고침 시 현재 시각으로 표시 기준을 갱신합니다."""
+    global _DISPLAY_START
+    _DISPLAY_START = (now or datetime.now()).replace(microsecond=0)
+    return _DISPLAY_START
 
 
 def _clock_fields(ts):
     return {
+        "_video_seconds": int((ts - clock_start()).total_seconds()),
         "year": ts.year,
         "month": ts.month,
         "day": ts.day,

@@ -3,7 +3,6 @@
 
 import json
 import pandas as pd
-from .config import clock_start
 
 
 def event_timestamps(frame):
@@ -11,7 +10,10 @@ def event_timestamps(frame):
 
 
 def event_seconds(frame):
-    # Invalid time stays NaN and must never turn into an immediate event.
+    # 표시 시각과 분리된 영상 경과초로 재생·경보를 판정합니다.
+    if "_video_seconds" in frame.columns:
+        return pd.to_numeric(frame["_video_seconds"], errors="coerce")
+    # 명시적 경과초가 없는 과거 기록만 이전 시각 형식으로 읽습니다.
     stamps = event_timestamps(frame)
     # 영상 시각은 각 기록 날짜의 09:00:00 기준이다. 서버를 밤새 켜 두어도
     # 어제 적재한 캐시를 오늘 날짜와 빼서 음수로 만들지 않는다.

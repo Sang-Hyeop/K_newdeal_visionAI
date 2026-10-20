@@ -979,5 +979,20 @@
   "evidence_screenshot": "outputs/diagnostics/system-current-check.png",
   "models_changed": false,
   "runtime_code_changed": false,
-  "github_pushed": false
+  "github_pushed": false,
+  "followup_current_time_display_2026_10_20": {
+    "policy": "로그인 또는 메인 새로고침 시 현재 시각을 시작점으로 고정; 9시 표시 기준 제거",
+    "playback_seconds": "명시적 _video_seconds로 표시 시각과 분리. 과거 명시적 경과초 없는 형식만 호환 읽기.",
+    "tests_passed": 395,
+    "subtests": 16,
+    "real_rows_checked": 262,
+    "rows_except_clock_fields_unchanged": true,
+    "video_seconds_unchanged": true,
+    "five_second_visible_events_unchanged": 31,
+    "browser": "격리17872 로그인 시작15:09:08, 새로고침 시작15:10:44; 화재4.0/4.6초가15:10:48.0/48.6 표시됨. KPI137·알림·6영상 유지. 콘솔 오류 없음.",
+    "screenshot": "outputs/diagnostics/current-time-display.png",
+    "existing_action_records": "과거 저장 조치 이력은 덮어쓰지 않음",
+    "running_7860": "다른 앱 실행 프로세스 PID7965가 사용 중이어서 종료하지 않음; 재실행 후 적용",
+    "github_pushed": false
+  }
 }

@@ -395,6 +395,9 @@ def make_main(cams):
 
         def new_session():
             """로그인 직후 한 번: KPI·알림을 0부터 다시 셈."""
+            from .events import rebase_display_clock
+
+            rebase_display_clock()
             kpi_session["started"] = False
             kpi_session["max_pos"] = {}
             kpi_session["await_restart"] = True
@@ -427,6 +430,9 @@ def make_main(cams):
 
         def refresh():
             """새로고침: 영상을 처음으로 되돌리고 KPI·알림을 0부터 다시 셈."""
+            from .events import rebase_display_clock
+
+            rebase_display_clock()
             load_df(force=True)
             kpi_session["started"] = True
             kpi_session["max_pos"] = {}

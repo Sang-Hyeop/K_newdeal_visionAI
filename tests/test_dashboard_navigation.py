@@ -85,7 +85,7 @@ class DelayedMainStartTests(unittest.TestCase):
     def test_first_playhead_after_initial_window_does_not_freeze_kpi(self):
         from dashboard.config import clock_start
         previous = dict(app._ALERT_BUS)
-        frame = pd.DataFrame([{'area': 'A1', 'timestamp': clock_start() + pd.Timedelta(seconds=4)}])
+        frame = pd.DataFrame([{'area': 'A1', 'timestamp': clock_start() + pd.Timedelta(seconds=4), '_video_seconds': 4}])
         try:
             with patch.object(app, '_ensure_clip', return_value=None), patch.object(app, '_existing', return_value=None), patch.object(app, 'reset_notify_state'), patch.object(app, 'kpi_html', side_effect=lambda d: 0 if d is None else len(d)), patch.object(app, 'get_df', return_value=frame), patch.object(app, 'danger_overlay_updates', return_value=()):
                 demo = app.make_main(CAMERAS)
