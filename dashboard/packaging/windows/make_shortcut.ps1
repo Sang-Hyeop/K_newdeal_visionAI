@@ -10,6 +10,9 @@ if (Test-Path -LiteralPath $Ico -PathType Leaf) {
     Write-Warning "시선 아이콘이 없어 Windows 기본 아이콘을 사용합니다: $Ico"
 }
 $Desktop = [Environment]::GetFolderPath("Desktop")
+if (-not (Test-Path -LiteralPath $Desktop -PathType Container)) {
+    [void][System.IO.Directory]::CreateDirectory($Desktop)
+}
 $Lnk = Join-Path $Desktop "시선.lnk"
 
 $Vbs = Join-Path $Root "시선.vbs"
