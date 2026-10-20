@@ -1,6 +1,6 @@
 ﻿# Windows 공용: 바탕화면에 시선 바로가기 생성 (프로젝트 상대 경로만 사용)
 $ErrorActionPreference = "Stop"
-$Root = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..")).Path
+$Root = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..\..\..")).Path
 $Ico = Join-Path $Root "dashboard\packaging\icons\sisun.ico"
 $IconLocation = Join-Path $env:SystemRoot "System32\shell32.dll"
 $IconLocation += ",0"
@@ -17,20 +17,20 @@ $ExeRoot = Join-Path $Root "Sisun.exe"
 $ExeDist = Join-Path $Root "dist\sisun\sisun.exe"
 $DesktopPy = Join-Path $Root "dashboard_desktop.py"
 
-if (-not (Test-Path $DesktopPy)) {
+if (-not (Test-Path -LiteralPath $DesktopPy)) {
     Write-Error "dashboard_desktop.py 없음: $Root"
 }
 
 $Target = $null
-if (Test-Path $ExeDist) { $Target = $ExeDist }
-elseif (Test-Path $ExeRoot) { $Target = $ExeRoot }
-elseif (Test-Path $Vbs) { $Target = $Vbs }
+if (Test-Path -LiteralPath $ExeDist) { $Target = $ExeDist }
+elseif (Test-Path -LiteralPath $ExeRoot) { $Target = $ExeRoot }
+elseif (Test-Path -LiteralPath $Vbs) { $Target = $Vbs }
 else {
     Write-Error "실행 대상 없음. 루트에 시선.vbs 가 필요합니다: $Root"
 }
 
 $W = New-Object -ComObject WScript.Shell
-if (Test-Path $Lnk) { Remove-Item $Lnk -Force }
+if (Test-Path -LiteralPath $Lnk) { Remove-Item -LiteralPath $Lnk -Force }
 $S = $W.CreateShortcut($Lnk)
 $S.TargetPath = $Target
 $S.WorkingDirectory = $Root

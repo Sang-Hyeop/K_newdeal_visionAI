@@ -1,0 +1,6 @@
+# Windows 설치 파일은 한국어 시스템 코드페이지에 의존하지 않습니다.
+[*.ps1]
+charset = utf-8-bom
+
+[*.vbs]
+charset = utf-16le

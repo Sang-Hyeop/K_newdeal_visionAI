@@ -66,3 +66,5 @@ python dashboard.py
 ## Windows 바로가기 설치 오류
 
 `dashboard/packaging/icons/sisun.ico`는 main에 포함된 파일입니다. 아이콘 폴더가 없다면 새 폴더에 ZIP 전체를 압축 해제했는지 확인합니다. 바로가기 아이콘은 감지 실행에 필수인 파일이 아니므로, 누락 시 Windows 기본 아이콘으로 설치를 계속하도록 수정했습니다. 기존 ZIP의 설치기를 사용 중이라면 의존성과 실행 자료 설치 후 프로젝트 루트에서 `python dashboard.py`로 먼저 실행할 수 있습니다. 실제 Windows에서 바로가기 더블클릭은 별도 확인이 필요합니다.
+
+Windows 설치 파일 인코딩: `make_shortcut.ps1`은 UTF-8 BOM, 루트의 설치/실행 VBS 두 파일은 UTF-16 LE BOM을 유지해야 합니다. 파일을 메모장에 복사해서 재작성하지 말고 최신 ZIP 전체를 새 폴더에 풉니다. PR #21 병합 전에는 `fix/windows-shortcut-icon` 브랜치를 받아야 이번 설치 보완이 포함됩니다. 바로가기 설치는 Python·라이브러리·실행 자료 설치를 대신하지 않습니다.
