@@ -68,14 +68,14 @@ jobs:
         with:
           path: '시선 [test] project'
       - name: Install Python, dependencies, runtime assets and shortcut
-        shell: powershell
-        run: '& ./dashboard/packaging/windows/install.ps1'
+        shell: cmd
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%CD%\dashboard\packaging\windows\install.ps1"
       - name: Install browser verification dependency
-        shell: powershell
-        run: '& ./.sisun/venv/Scripts/python.exe -m pip install playwright==1.55.0'
+        shell: cmd
+        run: '".sisun\venv\Scripts\python.exe" -m pip install playwright==1.55.0'
       - name: Exercise real desktop startup, close, restart and forced parent exit
-        shell: powershell
-        run: '& ./.sisun/venv/Scripts/python.exe tests/windows_desktop_smoke.py'
+        shell: cmd
+        run: '".sisun\venv\Scripts\python.exe" tests\windows_desktop_smoke.py'
       - name: Upload installation and application logs
         if: always()
         uses: actions/upload-artifact@v4
