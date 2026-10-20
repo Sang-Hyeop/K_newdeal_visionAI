@@ -29,7 +29,7 @@ python dashboard.py
 
 브라우저: http://127.0.0.1:7860 · 테스트 로그인: 김상협/이수민/박회승/최인승, 암호1234. 실제 운영 계정·권한 시스템으로 검증된 로그인은 아닙니다.
 
-모델 로딩까지 추가 확인하려면 `python handoff.py check --models`를 실행합니다. 데스크톱 아이콘은 macOS의 `macOS용_시선설치.command`, Windows의 `Windows용_시선설치.vbs`로 설치합니다. 아이콘 설치는 모델·라이브러리 설치와 별도입니다.
+모델 로딩까지 추가 확인하려면 `python handoff.py check --models`를 실행합니다. 데스크톱 아이콘은 macOS의 `macOS용_시선설치.command`, Windows의 `Windows용_시선설치.vbs`로 설치합니다. Windows 설치기는 모델·라이브러리·영상 준비까지 포함합니다. macOS 아이콘 설치는 실행 환경·자료 설치와 별도입니다.
 
 이전 공식 배포와 해시가 일치하는 파일은 안전하게 최신 자료로 교체합니다. 직접 수정한 파일은 보존하며 오류를 표시합니다. 의도적으로 교체할 때만 백업 후 `python scripts/setup_runtime.py --replace`를 사용합니다. 직접 받은 실행 자료 ZIP은 `python scripts/setup_runtime.py --archive 경로.zip`으로 설치할 수 있습니다.
 
@@ -56,4 +56,4 @@ python dashboard.py
 
 `dashboard/packaging/icons/sisun.ico`는 main에 포함된 파일입니다. 아이콘 폴더가 없다면 새 폴더에 ZIP 전체를 압축 해제했는지 확인합니다. 바로가기 아이콘은 감지 실행에 필수인 파일이 아니므로, 누락 시 Windows 기본 아이콘으로 설치를 계속하도록 수정했습니다. 기존 ZIP의 설치기를 사용 중이라면 의존성과 실행 자료 설치 후 프로젝트 루트에서 `python dashboard.py`로 먼저 실행할 수 있습니다. 실제 Windows에서 바로가기 더블클릭은 별도 확인이 필요합니다.
 
-Windows 설치 파일 인코딩: `make_shortcut.ps1`은 UTF-8 BOM, 루트의 설치/실행 VBS 두 파일은 UTF-16 LE BOM을 유지해야 합니다. 파일을 메모장에 복사해서 재작성하지 말고 최신 ZIP 전체를 새 폴더에 풉니다. PR #21 병합 전에는 `fix/windows-shortcut-icon` 브랜치를 받아야 이번 설치 보완이 포함됩니다. 바로가기 설치는 Python·라이브러리·실행 자료 설치를 대신하지 않습니다.
+Windows 설치 파일 인코딩: `make_shortcut.ps1`은 UTF-8 BOM, 루트의 설치/실행 VBS 두 파일은 UTF-16 LE BOM을 유지해야 합니다. 파일을 메모장에 복사해서 재작성하지 말고 최신 ZIP 전체를 새 폴더에 풉니다. 바로가기 설치는 Python·라이브러리·실행 자료 설치를 대신하지 않습니다.
