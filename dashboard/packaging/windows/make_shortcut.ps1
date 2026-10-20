@@ -32,7 +32,8 @@ else {
 $W = New-Object -ComObject WScript.Shell
 if (Test-Path -LiteralPath $Lnk) { Remove-Item -LiteralPath $Lnk -Force }
 $S = $W.CreateShortcut($Lnk)
-$S.TargetPath = $Target
+Write-Host "Shortcut target:" $Target "Type:" $Target.GetType().FullName
+$S.TargetPath = [string]$Target
 $S.WorkingDirectory = $Root
 $S.WindowStyle = 7
 $S.Description = "시선 안전관제"
