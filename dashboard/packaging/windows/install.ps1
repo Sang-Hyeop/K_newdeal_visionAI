@@ -15,11 +15,23 @@ function Invoke-InstallProcess([string]$Executable, [string[]]$ProcessArguments)
     if (-not [IO.File]::Exists($Executable)) { throw "실행 파일이 없습니다: $Executable" }
     $Quoted = ($ProcessArguments | ForEach-Object { '"' + $_.Replace('"', '\"') + '"' }) -join ' '
     $ErrorLog = Join-Path $State "process-error.log"
-    $Running = Start-Process -FilePath $Executable -ArgumentList $Quoted -NoNewWindow -Wait -PassThru -RedirectStandardError $ErrorLog
-    if ([IO.File]::Exists($ErrorLog)) {
-        Get-Content -LiteralPath $ErrorLog -Encoding UTF8 | ForEach-Object { Write-Host $_ }
-    }
-    return $Running.ExitCode
+    $Info = New-Object System.Diagnostics.ProcessStartInfo
+    $Info.FileName = $Executable
+    $Info.Arguments = $Quoted
+    $Info.UseShellExecute = $false
+    $Info.CreateNoWindow = $true
+    $Info.RedirectStandardError = $true
+    $Info.StandardErrorEncoding = [Text.Encoding]::UTF8
+    $Running = New-Object System.Diagnostics.Process
+    $Running.StartInfo = $Info
+    [void]$Running.Start()
+    $ErrorText = $Running.StandardError.ReadToEnd()
+    $Running.WaitForExit()
+    [IO.File]::WriteAllText($ErrorLog, $ErrorText, [Text.Encoding]::UTF8)
+    if ($ErrorText) { Write-Host $ErrorText }
+    $Code = $Running.ExitCode
+    $Running.Dispose()
+    return $Code
 }
 
 try {
