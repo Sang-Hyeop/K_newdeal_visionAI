@@ -1,0 +1,49 @@
+name: Windows launcher
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  shortcut:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Unicode encodings and PowerShell 5.1 syntax
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $files = Get-ChildItem dashboard/packaging/windows -Filter *.ps1
+          foreach ($file in $files) {
+            $bytes = [IO.File]::ReadAllBytes($file.FullName)
+            if ($bytes[0] -ne 239 -or $bytes[1] -ne 187 -or $bytes[2] -ne 191) { throw 'Missing UTF-8 BOM' }
+            $tokens = $null; $parseErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($file.FullName, [ref]$tokens, [ref]$parseErrors)
+            if ($parseErrors.Count) { throw ($parseErrors | Out-String) }
+          }
+          foreach ($file in (Get-ChildItem -LiteralPath . -Filter *.vbs)) {
+            $bytes = [IO.File]::ReadAllBytes($file.FullName)
+            if ($bytes[0] -ne 255 -or $bytes[1] -ne 254) { throw 'Missing UTF-16 LE BOM' }
+          }
+      - name: Create shortcuts from a Unicode path with and without icon
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $root = Join-Path $env:RUNNER_TEMP ([string][char]0xC2DC + [char]0xC120 + ' [test] project')
+          $scripts = Join-Path $root 'dashboard\packaging\windows'
+          $icons = Join-Path $root 'dashboard\packaging\icons'
+          New-Item -ItemType Directory -Path $scripts, $icons -Force | Out-Null
+          Copy-Item dashboard/packaging/windows/make_shortcut.ps1 -Destination $scripts
+          Copy-Item dashboard/packaging/icons/sisun.ico -Destination $icons
+          Copy-Item *.vbs -Destination $root
+          New-Item -ItemType File -Path (Join-Path $root 'dashboard_desktop.py') | Out-Null
+          $script = Join-Path $scripts 'make_shortcut.ps1'
+          foreach ($withIcon in @($true, $false)) {
+            if (-not $withIcon) { Remove-Item -LiteralPath (Join-Path $icons 'sisun.ico') }
+            & $script
+            $desktop = [Environment]::GetFolderPath('Desktop')
+            $link = Join-Path $desktop ([string][char]0xC2DC + [char]0xC120 + '.lnk')
+            if (-not (Test-Path -LiteralPath $link)) { throw 'Shortcut not created' }
+            $vbs = Join-Path $root ([string][char]0xC2DC + [char]0xC120 + '.vbs')
+            [SisunShortcutWriter]::Verify($link, $root, ('"' + $vbs + '"'))
+            Remove-Item -LiteralPath $link
+          }
