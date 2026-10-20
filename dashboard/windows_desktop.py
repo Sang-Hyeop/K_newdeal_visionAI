@@ -56,9 +56,7 @@ class InstanceLock:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         stream = self.path.open('a+b')
         try:
-            if self.path.stat().st_size == 0:
-                stream.write(b' ')
-                stream.flush()
+            # 이전 버전은 빈 파일의 첫 바이트를 잠급니다. 먼저 잠금을 얻고 나서 씁니다.
             stream.seek(0)
             msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)
         except OSError:
@@ -66,10 +64,14 @@ class InstanceLock:
             return False
         self.stream = stream
         metadata = {'pid': os.getpid(), 'created': psutil.Process().create_time()}
-        stream.seek(1)
-        stream.truncate()
-        stream.write(json.dumps(metadata).encode('ascii'))
-        stream.flush()
+        try:
+            stream.seek(1)
+            stream.truncate()
+            stream.write(json.dumps(metadata).encode('ascii'))
+            stream.flush()
+        except OSError:
+            self.release()
+            raise
         return True
 
     def release(self):

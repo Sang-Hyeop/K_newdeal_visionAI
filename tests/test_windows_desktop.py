@@ -71,7 +71,7 @@ class WindowsLockTests(unittest.TestCase):
                 "import msvcrt, pathlib, time\n"
                 "root = pathlib.Path(__file__).parent\n"
                 "stream = (root / 'desktop.lock').open('a+b')\n"
-                "stream.write(b' '); stream.flush(); stream.seek(0)\n"
+                "stream.seek(0)\n"
                 "msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)\n"
                 "(root / 'ready').touch()\n"
                 "time.sleep(300)\n", encoding='utf-8')
