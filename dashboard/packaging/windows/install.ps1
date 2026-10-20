@@ -26,8 +26,13 @@ try {
         if ($Process.ExitCode -notin @(0, 3010)) { throw "Python 설치 실패: $($Process.ExitCode)" }
     }
     $Venv = Join-Path $State "venv\Scripts\python.exe"
-    if (-not (Test-Path -LiteralPath $Venv)) {
-        & $Python -m venv (Join-Path $State "venv")
+    $EnvironmentOK = $false
+    if (Test-Path -LiteralPath $Venv) {
+        & $Venv -c "import sys; assert sys.version_info[:2] == (3,11)" 2>$null
+        $EnvironmentOK = ($LASTEXITCODE -eq 0)
+    }
+    if (-not $EnvironmentOK) {
+        & $Python -m venv --clear (Join-Path $State "venv")
         if ($LASTEXITCODE -ne 0) { throw "전용 환경 생성 실패" }
     }
     & $Venv (Join-Path $Root "scripts\setup_windows.py")

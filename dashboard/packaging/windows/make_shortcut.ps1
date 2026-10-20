@@ -26,12 +26,12 @@ if (-not (Test-Path -LiteralPath $DesktopPy)) {
 
 $Target = $null
 $Arguments = ""
-if (Test-Path -LiteralPath $ExeDist) { $Target = $ExeDist }
-elseif (Test-Path -LiteralPath $ExeRoot) { $Target = $ExeRoot }
-elseif (Test-Path -LiteralPath $Vbs) {
+if (Test-Path -LiteralPath $Vbs) {
     $Target = Join-Path $env:SystemRoot "System32\wscript.exe"
     $Arguments = '"' + $Vbs + '"'
 }
+elseif (Test-Path -LiteralPath $ExeDist) { $Target = $ExeDist }
+elseif (Test-Path -LiteralPath $ExeRoot) { $Target = $ExeRoot }
 else {
     Write-Error "실행 대상 없음. 루트에 시선.vbs 가 필요합니다: $Root"
 }

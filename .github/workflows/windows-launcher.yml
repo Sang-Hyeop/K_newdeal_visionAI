@@ -44,6 +44,7 @@ jobs:
           Copy-Item dashboard/packaging/icons/sisun.ico -Destination $icons
           Copy-Item *.vbs -Destination $root
           New-Item -ItemType File -Path (Join-Path $root 'dashboard_desktop.py') | Out-Null
+          New-Item -ItemType File -Path (Join-Path $root 'Sisun.exe') | Out-Null
           $script = Join-Path $scripts 'make_shortcut.ps1'
           foreach ($withIcon in @($true, $false)) {
             if (-not $withIcon) { Remove-Item -LiteralPath (Join-Path $icons 'sisun.ico') }
