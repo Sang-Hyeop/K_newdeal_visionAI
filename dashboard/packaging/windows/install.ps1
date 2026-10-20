@@ -23,9 +23,11 @@ function Invoke-InstallProcess([string]$Executable, [string[]]$ProcessArguments)
 }
 
 try {
-    $Python = Join-Path $State "python\python.exe"
+    # Python MSI는 대괄호가 포함된 TargetDir을 정상 처리하지 못할 수 있어 사용자 앱 폴더를 씁니다.
+    $PythonHome = Join-Path $env:LOCALAPPDATA "Sisun\Python311"
+    $Python = Join-Path $PythonHome "python.exe"
     if (-not (Test-Path -LiteralPath $Python)) {
-        # 사용자 PC의 기존 Python을 변경하지 않고 프로젝트 안에 설치합니다.
+        # 시스템 PATH를 바꾸지 않고 사용자 전용 런타임을 준비합니다.
         $Installer = Join-Path $State "python-3.11.9-amd64.exe"
         $Expected = "5ee42c4eee1e6b4464bb23722f90b45303f79442df63083f05322f1785f5fdde"
         if (-not (Test-Path -LiteralPath $Installer) -or (Get-FileHash -LiteralPath $Installer -Algorithm SHA256).Hash.ToLower() -ne $Expected) {
@@ -35,10 +37,20 @@ try {
             finally { $Download.Dispose() }
         }
         if ((Get-FileHash -LiteralPath $Installer -Algorithm SHA256).Hash.ToLower() -ne $Expected) { throw "Python 설치 파일 해시가 다릅니다." }
-        $Target = Join-Path $State "python"
+        $Target = $PythonHome
         $Arguments = '/quiet InstallAllUsers=0 Include_pip=1 Include_launcher=0 Include_test=0 Include_doc=0 AssociateFiles=0 Shortcuts=0 PrependPath=0 TargetDir="' + $Target + '"'
         $Process = Start-Process -FilePath $Installer -ArgumentList $Arguments -Wait -PassThru
         if ($Process.ExitCode -notin @(0, 3010)) { throw "Python 설치 실패: $($Process.ExitCode)" }
+        if (-not [IO.File]::Exists($Python)) {
+            # 같은 버전이 이미 등록된 PC에서는 설치기가 기존 위치를 유지할 수 있습니다.
+            foreach ($Key in @("HKCU:\Software\Python\PythonCore\3.11\InstallPath", "HKLM:\Software\Python\PythonCore\3.11\InstallPath")) {
+                $Registered = Get-ItemProperty -LiteralPath $Key -ErrorAction SilentlyContinue
+                if ($Registered -and $Registered.'(default)') {
+                    $Candidate = Join-Path $Registered.'(default)' "python.exe"
+                    if ([IO.File]::Exists($Candidate)) { $Python = $Candidate; break }
+                }
+            }
+        }
     }
     $Venv = Join-Path $State "venv\Scripts\python.exe"
     $EnvironmentOK = $false
