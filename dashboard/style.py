@@ -2037,6 +2037,13 @@ BOOT_JS = """
       if (!t) return;
       var id = (t.id || "").replace(/^sisun-side-/, "");
       __sisunViewingCam = isCameraSideId(id) ? id : "";
+      if (id === "main") {
+        // 메인 복귀는 확인 체크만 해제한다. 미확인 N과 종 목록은 보존한다.
+        Object.keys(__sisunSideReviewed).forEach(function(cam) {
+          delete __sisunSideReviewed[cam];
+          paintSideNeed(cam);
+        });
+      }
       // 비동기 탭 전환 완료 후 실제 해당 영상이 보일 때만 확인 처리한다.
     }, true);
   }

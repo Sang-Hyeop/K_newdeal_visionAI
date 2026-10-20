@@ -118,3 +118,26 @@ assert.equal(resets,1);assert.deepEqual(notices,['A2','B1','P1']);
 assert.equal(need.A2,true);assert.equal(need.B1,true);assert.equal(need.P1,true);
 markers=[marker('refresh-2')];drain();assert.equal(resets,2);
 ''')
+
+
+class MainCheckDismissTests(unittest.TestCase):
+    run_js = BrowserLogicTests.run_js
+
+    def test_main_click_dismisses_checks_but_keeps_unread_and_notices(self):
+        from dashboard.style import BOOT_JS
+        start = BOOT_JS.index('  if (!window.__sisunSideNeedBound)')
+        end = BOOT_JS.index('  var syncReviewedCamera', start)
+        self.run_js('''
+const assert=require('node:assert/strict');let listener;let __sisunViewingCam='A1';
+const __sisunSideNeed={A1:false,A2:true,B1:true,P1:true};
+const __sisunSideReviewed={A1:true};const notices=['A2','B1','P1'];const painted=[];
+const window={};const document={addEventListener(type,fn){listener=fn}};
+const isCameraSideId=id=>/^(A[1-4]|B1|P1)$/.test(id);
+const paintSideNeed=id=>painted.push(id);
+''' + BOOT_JS[start:end] + '''
+listener({target:{closest(){return {id:'sisun-side-main'}}}});
+assert.equal(__sisunViewingCam,'');assert.deepEqual(__sisunSideReviewed,{});
+assert.equal(__sisunSideNeed.A1,false);assert.equal(__sisunSideNeed.A2,true);
+assert.equal(__sisunSideNeed.B1,true);assert.equal(__sisunSideNeed.P1,true);
+assert.deepEqual(notices,['A2','B1','P1']);assert.deepEqual(painted,['A1']);
+''')
