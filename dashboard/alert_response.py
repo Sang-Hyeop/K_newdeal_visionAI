@@ -180,6 +180,13 @@ def _apply_row_to_memory(row: dict[str, Any]):
     if assigned in VALID_ASSIGNEES:
         cur["assigned_to"] = assigned
 
+    if kind == "observation_day":
+        days = set(cur.get("observed_dates") or [])
+        days.add(str(row.get("observed_date") or ""))
+        cur["observed_dates"] = sorted(days - {""})
+        _CURRENT[link] = cur
+        return
+
     if kind == "case_open":
         cur["status"] = str(cur.get("status") or "new")
         if cur["status"] not in RESPONSE_STATES:
@@ -362,6 +369,18 @@ def ensure_case(meta: dict[str, Any]) -> dict[str, Any]:
         _append_line_unlocked(row)
         _SEEN_REQUESTS[row["request_id"]] = {"ok": True, "entry": row, "state": dict(_CURRENT[link])}
         return {"ok": True, "created": True, "state": dict(_CURRENT[link])}
+
+
+def record_observation_day(link: str):
+    """실제 재생 감지 경로에서 사건당 하루 한 줄만 저장한다."""
+    with _LOCK:
+        _load_unlocked()
+        cur = _CURRENT.get(link)
+        day = _now()[:10]
+        if not cur or day in (cur.get("observed_dates") or []):
+            return
+        _append_line_unlocked({"kind": "observation_day", "link_key": link,
+                               "observed_date": day, "operator_at": _now()})
 
 
 def touch_case_observation(meta: dict[str, Any]) -> dict[str, Any]:
@@ -662,7 +681,7 @@ def history_for_link(link_key: str = "", event_ids: list[str] | None = None) -> 
                 row = _parse_line(line)
                 if row is None:
                     continue
-                if str(row.get("link_key") or "") == link:
+                if str(row.get("link_key") or "") == link and row.get("kind") != "observation_day":
                     rows.append(row)
     except OSError as exc:
         return {"ok": False, "error": f"조치 이력 읽기 실패: {exc}", "history": [], "link_key": link}

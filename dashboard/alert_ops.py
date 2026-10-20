@@ -15,7 +15,7 @@ from typing import Any
 import pandas as pd
 
 from .alert_policy import EPISODE_IDLE_GAP_SECONDS, MAX_OPERATOR_ALERTS
-from .alert_response import ensure_case, make_link_key, reopen_case, touch_case_observation
+from .alert_response import record_observation_day, ensure_case, make_link_key, reopen_case, touch_case_observation
 from .config import CAM_BY_ID
 from .timeline import event_seconds
 
@@ -362,6 +362,7 @@ def process_alerts(frame) -> tuple[str | None, list[dict]]:
                 touch_case_observation(ep_snap)
             else:
                 touch_case_observation(ep_snap)
+            record_observation_day(str(ep_snap.get("link_key") or ""))
         except Exception:
             continue
 

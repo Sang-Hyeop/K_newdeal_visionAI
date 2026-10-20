@@ -27,6 +27,26 @@ class OperationsTests(unittest.TestCase):
         self.assertEqual(result['done_samples'],1)
 
     def test_registration_period_is_not_video_date(self):
-        cases=[dict(link_key='one',opened_at='2026-10-18 12:00:00'),dict(link_key='two',opened_at='2026-10-19 12:00:00'),dict(link_key='unknown')]
+        cases=[dict(link_key='one',opened_at='2026-10-18 12:00:00'),dict(link_key='two',opened_at='2026-10-18 12:00:00',observed_dates=['2026-10-19']),dict(link_key='unknown')]
         result=operational_metrics(cases,'오늘 등록',now=datetime(2026,10,19))
         self.assertEqual(result['total'],1)
+
+    def test_today_requires_playback_observation_not_operator_action(self):
+        cases=[dict(link_key='old',opened_at='2026-10-18 09:00:00',observed_dates=['2026-10-20']),
+               dict(link_key='manual',opened_at='2026-10-20 09:00:00')]
+        result=operational_metrics(cases,'오늘 등록',now=datetime(2026,10,20))
+        self.assertEqual(result['total'],1)
+
+    def test_daily_observation_deduplicates_and_survives_reload(self):
+        import tempfile
+        from unittest.mock import patch
+        from dashboard import alert_response as ar
+        with tempfile.TemporaryDirectory() as tmp, patch.object(ar,'LOCAL',tmp), patch.object(ar,'_now',return_value='2026-10-20 10:00:00'):
+            ar.reset_response_memory()
+            st=ar.ensure_case(dict(link_key='camera|case',assigned_to='담당자 A'))
+            ar.record_observation_day('camera|case')
+            ar.record_observation_day('camera|case')
+            self.assertEqual(sum(r.get('kind')=='observation_day' for r in ar.iter_history()),1)
+            ar.reset_response_memory(); ar.load_logs_into_memory()
+            self.assertEqual(ar.get_state_by_link('camera|case')['state']['observed_dates'],['2026-10-20'])
+            ar.reset_response_memory()

@@ -17,7 +17,7 @@ def operational_metrics(cases, period="전체", histories=None, now=None):
     """One unique stored link per case. Elapsed times use operator clocks only."""
     today = (now or datetime.now()).strftime("%Y-%m-%d")
     unique = {c["link_key"]: c for c in cases if c.get("link_key")}
-    selected = [c for c in unique.values() if period != "오늘 등록" or str(c.get("opened_at") or "").startswith(today)]
+    selected = [c for c in unique.values() if period != "오늘 등록" or today in (c.get("observed_dates") or [])]
     ack, done = [], []
     for c in selected:
         rows = (histories or {}).get(c["link_key"], [])
@@ -70,7 +70,7 @@ def operations_html(period="전체"):
         return "기록 없음" if value is None else (f"{value:.1f}초" if value < 60 else f"{value / 60:.1f}분")
     tiles = [("등록 사건", f"{m['total']}건"), ("미완료", f"{m['unfinished']}건"),
              ("평균 최초 확인", elapsed(m["mean_ack_seconds"])), ("평균 최초 완료", elapsed(m["mean_done_seconds"]))]
-    out = '<p>저장된 사건 기준 · 반복 감지 기록은 별도 사건으로 세지 않습니다. 기간은 사건 등록일 기준입니다.</p>'
+    out = '<p>저장된 사건 기준 · 반복 감지 기록은 별도 사건으로 세지 않습니다. 오늘 등록은 오늘 재생 중 감지된 사건이며, 같은 사건은 하루 한 번만 셉니다.</p>'
     out += '<p>집계 갱신: ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ' · 최신 값은 새로고침으로 조회</p>'
     out += '<div class="sisun-cases-summary">' + ''.join(
         '<div class="sisun-cases-sum"><div class="lab">' + escape(k) + '</div><div class="num">' + escape(v) + '</div></div>' for k,v in tiles) + '</div>'
