@@ -979,7 +979,7 @@
   "evidence_screenshot": "outputs/diagnostics/system-current-check.png",
   "models_changed": false,
   "runtime_code_changed": false,
-  "github_pushed": false,
+  "github_pushed": true,
   "followup_current_time_display_2026_10_20": {
     "policy": "로그인 또는 메인 새로고침 시 현재 시각을 시작점으로 고정; 9시 표시 기준 제거",
     "playback_seconds": "명시적 _video_seconds로 표시 시각과 분리. 과거 명시적 경과초 없는 형식만 호환 읽기.",
@@ -1009,6 +1009,12 @@
     "screenshot": "outputs/diagnostics/team-clean-install.png",
     "physical_other_pc_test": "팀원 확인 예정",
     "excluded": "학습 원본, 개인 조치 기록, 브라우저 프로필, 접속키",
-    "main_merge": "PR 작성 후 승인/병합 대기"
+    "main_merge": "PR 작성 후 승인/병합 대기",
+    "pr_url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/pull/20",
+    "pr_state": "OPEN",
+    "mergeable": true,
+    "review_required": true,
+    "main_merged": false,
+    "release_url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-20"
   }
 }
