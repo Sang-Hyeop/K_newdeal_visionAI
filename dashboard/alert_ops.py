@@ -347,6 +347,20 @@ def process_alerts(frame) -> tuple[str | None, list[dict]]:
                 if b and active_by_base.get(b) == key:
                     active_by_base.pop(b, None)
 
+    from . import shared_cases
+    if shared_cases.enabled():
+        if case_hooks:
+            try:
+                states = shared_cases.call('observations', case_hooks)
+                for item in ops:
+                    state = states.get(item.get('link_key'), {})
+                    if state.get('assigned_to'):
+                        item['assigned_to'] = state['assigned_to']
+            except ValueError:
+                # Detection/sound stay live; the case page exposes connection failure.
+                pass
+        return sound, ops
+
     # 사건 배정·관측 갱신·중요도 상승 재오픈 (원본 이벤트는 변경하지 않음)
     for hop, ep_snap in case_hooks:
         try:

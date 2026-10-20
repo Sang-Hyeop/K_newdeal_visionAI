@@ -60,7 +60,7 @@ def operations_html(period="전체"):
     try:
         path = alert_response.log_path()
         from pathlib import Path
-        if Path(path).is_file():
+        if alert_response.shared_cases.enabled() or Path(path).is_file():
             for row in alert_response.iter_history():
                 histories.setdefault(row.get("link_key"), []).append(row)
     except (OSError, ValueError) as exc:

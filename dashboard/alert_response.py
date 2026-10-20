@@ -18,6 +18,7 @@ from datetime import datetime
 from typing import Any
 
 from .config import LOCAL
+from . import shared_cases
 
 RESPONSE_STATES = ("new", "acked", "acting", "done")
 
@@ -37,6 +38,9 @@ ALLOWED_TRANSITIONS = {
 
 DEMO_ASSIGNEES = ("담당자 A", "담당자 B", "담당자 C", "담당자 D")
 VALID_ASSIGNEES = frozenset(DEMO_ASSIGNEES)
+
+_STORE = None  # SQLite journal is supplied only by the standalone shared service.
+_REMOTE_ROWS = []
 
 _LOG_NAME = "alert_response_log.jsonl"
 _LOCK = threading.Lock()
@@ -180,6 +184,10 @@ def _apply_row_to_memory(row: dict[str, Any]):
     if assigned in VALID_ASSIGNEES:
         cur["assigned_to"] = assigned
 
+    if kind == "case_observation":
+        _CURRENT[link] = cur
+        return
+
     if kind == "observation_day":
         days = set(cur.get("observed_dates") or [])
         days.add(str(row.get("observed_date") or ""))
@@ -222,13 +230,16 @@ def _apply_row_to_memory(row: dict[str, Any]):
 
 
 def _append_line_unlocked(row: dict[str, Any]) -> None:
-    os.makedirs(LOCAL, exist_ok=True)
-    line = json.dumps(row, ensure_ascii=False) + "\n"
-    try:
-        with open(log_path(), "a", encoding="utf-8") as fh:
-            fh.write(line)
-    except OSError as exc:
-        raise ValueError(f"조치 이력 저장 실패: {exc}") from exc
+    if _STORE is not None:
+        _STORE.append(row)
+    else:
+        os.makedirs(LOCAL, exist_ok=True)
+        line = json.dumps(row, ensure_ascii=False) + "\n"
+        try:
+            with open(log_path(), "a", encoding="utf-8") as fh:
+                fh.write(line)
+        except OSError as exc:
+            raise ValueError(f"조치 이력 저장 실패: {exc}") from exc
     _apply_row_to_memory(row)
 
 
@@ -245,18 +256,21 @@ def _load_unlocked(force: bool = False) -> dict[str, Any]:
     _EVENT_INDEX.clear()
     _LOG_READ_ERROR = None
     path = log_path()
-    if not os.path.isfile(path):
+    if _STORE is None and not os.path.isfile(path):
         _LOADED = True
         return {"ok": True, "error": None, "count": 0}
     bad = 0
     try:
-        with open(path, encoding="utf-8") as fh:
-            for line in fh:
-                row = _parse_line(line)
-                if row is None:
-                    bad += 1
-                    continue
-                _apply_row_to_memory(row)
+        if _STORE is not None:
+            rows = _STORE.rows()
+        else:
+            with open(path, encoding="utf-8") as fh:
+                rows = [_parse_line(line) for line in fh]
+        for row in rows:
+            if row is None:
+                bad += 1
+                continue
+            _apply_row_to_memory(row)
     except OSError as exc:
         _LOG_READ_ERROR = f"조치 이력 읽기 실패: {exc}"
         _LOADED = True
@@ -272,6 +286,21 @@ def _load_unlocked(force: bool = False) -> dict[str, Any]:
 
 
 def load_logs_into_memory(force: bool = False) -> dict[str, Any]:
+    global _REMOTE_ROWS, _LOADED, _LOG_READ_ERROR
+    if shared_cases.enabled():
+        try:
+            rows = shared_cases.snapshot(force=force)['rows']
+            with _LOCK:
+                reset = list(rows)
+                _CURRENT.clear(); _SEEN_REQUESTS.clear(); _EVENT_INDEX.clear()
+                for row in reset:
+                    _apply_row_to_memory(row)
+                _REMOTE_ROWS = reset
+                _LOADED = True; _LOG_READ_ERROR = None
+                return {'ok': True, 'count': len(_CURRENT), 'error': None}
+        except ValueError as exc:
+            _LOG_READ_ERROR = str(exc)
+            return {'ok': False, 'error': str(exc), 'count': 0}
     with _LOCK:
         return _load_unlocked(force=force)
 
@@ -279,6 +308,8 @@ def load_logs_into_memory(force: bool = False) -> dict[str, Any]:
 def migrate_missing_assignees() -> dict[str, Any]:
     """유효 배정 없는 기존 사건에 A~D를 한 번만 배정·저장. 유효 값은 덮지 않음."""
     global _MIGRATED_ASSIGN
+    if shared_cases.enabled():
+        return {'ok': True, 'migrated': 0}
     with _LOCK:
         _load_unlocked()
         if _MIGRATED_ASSIGN:
@@ -312,6 +343,8 @@ def migrate_missing_assignees() -> dict[str, Any]:
 
 def ensure_case(meta: dict[str, Any]) -> dict[str, Any]:
     """사건 최초 생성 시 담당자 A~D 1회 배정·저장. 이미 있으면 재배정하지 않음."""
+    if shared_cases.enabled():
+        return shared_cases.call('ensure_case', meta)
     if not isinstance(meta, dict):
         raise ValueError("object required")
     with _LOCK:
@@ -373,6 +406,8 @@ def ensure_case(meta: dict[str, Any]) -> dict[str, Any]:
 
 def record_observation_day(link: str):
     """실제 재생 감지 경로에서 사건당 하루 한 줄만 저장한다."""
+    if shared_cases.enabled():
+        return shared_cases.call('record_observation_day', link)
     with _LOCK:
         _load_unlocked()
         cur = _CURRENT.get(link)
@@ -385,12 +420,15 @@ def record_observation_day(link: str):
 
 def touch_case_observation(meta: dict[str, Any]) -> dict[str, Any]:
     """반복 관측: 메모리 메타만 갱신(JSONL 전체 재기록·재배정 없음)."""
+    if shared_cases.enabled():
+        return shared_cases.call('touch_case_observation', meta)
     with _LOCK:
         _load_unlocked()
         link = resolve_link_key_unlocked(meta or {})
         if not link or link not in _CURRENT:
             return {"ok": False, "error": "case not found"}
         cur = _CURRENT[link]
+        before = dict(cur)
         _merge_meta(cur, meta or {})
         if meta.get("last_clock"):
             cur["event_last_clock"] = str(meta.get("last_clock"))
@@ -401,12 +439,17 @@ def touch_case_observation(meta: dict[str, Any]) -> dict[str, Any]:
                 cur["related_count"] = int(meta.get("related_count"))
             except (TypeError, ValueError):
                 pass
+        if _STORE is not None and cur != before:
+            _append_line_unlocked({'kind': 'case_observation', 'link_key': link,
+                                   **{key: cur.get(key) for key in ('cam_id', 'cam_code', 'scenario', 'subject', 'anchor_event_id', 'title', 'action', 'grade', 'level', 'detection_status', 'event_first_clock', 'event_last_clock', 'related_count', 'event_ids')}})
         _CURRENT[link] = cur
         return {"ok": True, "state": dict(cur)}
 
 
 def reopen_case(meta: dict[str, Any]) -> dict[str, Any]:
     """중요도 상승 등 재확인: 이력을 지우지 않고 확인 전으로 되돌림. 배정 유지."""
+    if shared_cases.enabled():
+        return shared_cases.call('reopen_case', meta)
     with _LOCK:
         _load_unlocked()
         link = resolve_link_key_unlocked(meta or {})
@@ -494,6 +537,8 @@ def resolve_link_key(data: dict[str, Any]) -> str | None:
 
 def apply_transition(data: dict[str, Any]) -> dict[str, Any]:
     """서버 권위 전이. 배정 담당자는 처리 사용자로 덮지 않음."""
+    if shared_cases.enabled():
+        return shared_cases.call('apply_transition', data)
     if not isinstance(data, dict):
         raise ValueError("object required")
 
@@ -657,6 +702,19 @@ def get_state_by_link(link_key: str) -> dict[str, Any]:
 
 
 def history_for_link(link_key: str = "", event_ids: list[str] | None = None) -> dict[str, Any]:
+    if shared_cases.enabled() or _STORE is not None:
+        load_logs_into_memory()
+        link = str(link_key or '').strip()
+        if not link and event_ids:
+            with _LOCK:
+                link = next((_EVENT_INDEX[e] for e in event_ids if e in _EVENT_INDEX), '')
+        if not link:
+            return {'ok': False, 'error': '이력을 연결할 link_key/event_id 가 없습니다(추정 연결 안 함)', 'history': []}
+        try:
+            rows = [row for row in iter_history() if str(row.get('link_key') or '') == link and row.get('kind') not in ('observation_day', 'case_observation')]
+        except (OSError, ValueError) as exc:
+            return {'ok': False, 'error': f'조치 이력 읽기 실패: {exc}', 'history': [], 'link_key': link}
+        return {'ok': True, 'error': None, 'history': rows, 'link_key': link}
     load_logs_into_memory()
     link = str(link_key or "").strip()
     if not link and event_ids:
@@ -870,6 +928,8 @@ def case_detail(link_key: str) -> dict[str, Any]:
     live = {str(ep.get("link_key") or ""): ep for ep in snapshot_episodes() if ep.get("link_key")}
     st = get_state_by_link(link_key)
     state = st.get("state")
+    if not st.get("ok"):
+        return {"ok": False, "error": st.get("error"), "state": None, "history": []}
     if not state:
         return {"ok": False, "error": "사건을 찾을 수 없습니다", "state": None, "history": []}
     if link_key in live:
@@ -889,11 +949,19 @@ def case_detail(link_key: str) -> dict[str, Any]:
 
 def iter_history():
     """Stream the audit log on explicit report load; never mutate source records."""
-    with open(log_path(), encoding="utf-8") as stream:
-        for line in stream:
-            if not line.strip():
-                continue
-            row = _parse_line(line)
-            if row is None:
-                raise ValueError("손상된 조치 이력이 있어 통계를 계산하지 못했습니다")
-            yield row
+    if shared_cases.enabled():
+        result = load_logs_into_memory()
+        if not result.get('ok'):
+            raise ValueError(result.get('error'))
+        yield from list(_REMOTE_ROWS)
+    elif _STORE is not None:
+        yield from _STORE.rows()
+    elif os.path.isfile(log_path()):
+        with open(log_path(), encoding="utf-8") as stream:
+            for line in stream:
+                if not line.strip():
+                    continue
+                row = _parse_line(line)
+                if row is None:
+                    raise ValueError("손상된 조치 이력이 있어 통계를 계산하지 못했습니다")
+                yield row
