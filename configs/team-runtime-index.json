@@ -1,8 +1,8 @@
 {
   "name": "Siseon team runtime handoff",
-  "date": "2026-10-15",
-  "source_commit": "9a89ac5",
-  "source_branch": "data/hoodie-ppe-candidates (local integrated runtime; not republished yet)",
+  "date": "2026-10-20",
+  "source_commit": "45120660ef63921edfd5c9bb1c86af685d3231fd",
+  "source_branch": "feat/sisun-dashboard-ops-alert-ux (PR merge 후 main)",
   "python_tested": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
   "runtime_versions": {
     "ultralytics": "8.4.153",
@@ -201,5 +201,6 @@
     "summary": "models/README.md",
     "source_commit_note": "source_commit/source_branch above identify earlier handoff provenance, not the current branch HEAD",
     "publication": "Current local final snapshot; no new GitHub push or Release in this step"
-  }
+  },
+  "release_tag": "runtime-2026-10-20"
 }

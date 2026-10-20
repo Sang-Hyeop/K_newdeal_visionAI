@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "source_commit": "ea3b8eca84baa41ae9cf701bc97472f5dc2f660a",
-  "release_tag": "runtime-2026-10-16",
-  "url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/download/runtime-2026-10-16/siseon-runtime-2026-10-16.zip",
-  "bytes": 114855611,
-  "sha256": "b6e3643ccf2d6cca8273e6ab47074e5e6c3496ac8fb15f8f084ca538f1754330",
-  "scope": "Current five-video runtime, six active model weights (balanced800 PPE epoch1), latest reviews/events/caches and rebuilt backend DB. No rejected candidate weights or training image datasets. Small-head context improvement applies to video5 only.",
+  "source_commit": "45120660ef63921edfd5c9bb1c86af685d3231fd",
+  "release_tag": "runtime-2026-10-20",
+  "url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/download/runtime-2026-10-20/siseon-runtime-2026-10-20.zip",
+  "bytes": 135102606,
+  "sha256": "5994333fc26d66c2788ac9f106539d21799845ca2a3bce4e156f7751fcbd97c4",
+  "scope": "확정 6영상: 모델7개, 현재 리뷰·이벤트·진단 캐시·조회 DB·검증 화면. 원본6영상은 Git에 포함. 학습 원본·개인 조치 기록·브라우저 프로필·접속키 제외.",
   "files": [
     {
       "path": "models/demo_object_adaptation_v1/best.pt",
@@ -16,6 +16,11 @@
       "path": "models/experiments/forklift_real_context_v2/weights/best.pt",
       "bytes": 5444869,
       "sha256": "a8e4a1b2d0a933728a23329410524e74eed78798a45e117e467d8ec2c07cf9aa"
+    },
+    {
+      "path": "models/fire_public/fire_detection.pt",
+      "bytes": 20301317,
+      "sha256": "52684ddffd4797f1bc5ff1bd2b72af3ec34eabf0c1646c37f518bb766b27b79f"
     },
     {
       "path": "models/nvidia_object_adaptation_v1/best.pt",
@@ -49,13 +54,33 @@
     },
     {
       "path": "outputs/backend/full_review.sqlite3",
-      "bytes": 175489024,
-      "sha256": "af460f17929f0eabb7412c3b55190325e0a598f876a348b8ba2e828d3ec525b8"
+      "bytes": 170270720,
+      "sha256": "01c530ab0bc92bcf3e533ed9fb3c24074321509857c3f386689c16acb212d398"
+    },
+    {
+      "path": "outputs/diagnostics/current-time-display.png",
+      "bytes": 87371,
+      "sha256": "498032a764e1fe636c16cc2e40fd7875ade0e2761d6f026c1280eb07da6065b6"
+    },
+    {
+      "path": "outputs/diagnostics/final-python-cleanup.png",
+      "bytes": 129799,
+      "sha256": "3584cc61eeb99388b137477cbc492b9833ea111819dae1115b4f0a72049d2e55"
+    },
+    {
+      "path": "outputs/diagnostics/fire-light-mode-fixed.png",
+      "bytes": 89515,
+      "sha256": "d58e79b530a8294fdc0c1eed8e064d3d65cdc1a77b53ebd71c7dfaa87b96817c"
+    },
+    {
+      "path": "outputs/diagnostics/history-filter-layout.png",
+      "bytes": 88088,
+      "sha256": "14cc511de730aaf67306824ddc9cdca0d65dc6ac74f00635d6bf17fced7621b5"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/detections.jsonl",
-      "bytes": 682554,
-      "sha256": "55e3e3f67dbac2f79af9d0e28331e66dbeaaed97cf4d64ba0fab1ac94d5e8a05"
+      "bytes": 745099,
+      "sha256": "7464f9b080566353cacbd926d992d9b6fd4b75e4a0cd2b44959e526cfcb3c25d"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/object_review_profile_snapshot.json",
@@ -64,33 +89,33 @@
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_0.jpg",
-      "bytes": 591065,
-      "sha256": "737b4777f3b050fb17a07aa96aa0c1ff9eee1cced0b713c7702e5e9147e1865d"
+      "bytes": 592134,
+      "sha256": "e10ccb359c7a8a86a72afd02e4edd5a7d5329bcc485e374fec48b7c82038517e"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_25.jpg",
-      "bytes": 576250,
-      "sha256": "a880d0f15f9fce379f819b9b03c6e8b6a6cd12863d959f34c6bcc8e97fd999ab"
+      "bytes": 577299,
+      "sha256": "e4bc6e3a6de0b7ce00abc6a4457d401aa433bd2fa476dbbee6ae289903460af2"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_50.jpg",
-      "bytes": 598066,
-      "sha256": "59bc2b5d9c25ac30c7610e9cd9410bb74a47ceca0602361a6cf944308a8cfd73"
+      "bytes": 599116,
+      "sha256": "dbbbb8516e7de8bb99fd219158a37edc32e6c05559597a23787159b82eadeed4"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_75.jpg",
-      "bytes": 575260,
-      "sha256": "c32aeacac32186c4fca8014ae12a1789e184b77c47f8e24dd8d7cc237e4c35cb"
+      "bytes": 576307,
+      "sha256": "afe6234b1ad308361bb359a206f8ee8e69f333334c5d25b8c48d0e20becb7e23"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/proximity/events_v1.jsonl",
       "bytes": 49779,
-      "sha256": "e1b5fa662e07c5317a69aab2646019f5f520f2692d15e812355165df55c74b22"
+      "sha256": "ad7c53b22dcc31cf20b533fe9b6c6574f97e3b0252ad26be9f0b6e19b87ae26e"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/proximity/observations_v1.jsonl",
       "bytes": 357777,
-      "sha256": "68beab6b2fd193c43ff78eaa49f5b7eca60609373c6b5eed8344548567b6297e"
+      "sha256": "ed27a091d6c6c7735d3d646acfc041085ee0a266d65c9f544b3b9418060b8d61"
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/review_verification.json",
@@ -99,8 +124,8 @@
     },
     {
       "path": "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/summary.json",
-      "bytes": 5264,
-      "sha256": "fa98accfcec819d4434a31d3e9cbd2bfceb3daa86f6accafacbd4c55db17b17b"
+      "bytes": 5398,
+      "sha256": "680dbfcb7770c88a4329c4fd6cc409783c8ba5da0f87145324688409951dd310"
     },
     {
       "path": "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/detections.jsonl",
@@ -174,13 +199,13 @@
     },
     {
       "path": "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/summary.json",
-      "bytes": 3606,
-      "sha256": "3a3659a7d877c1a467e642fdb6a9d3d9043dc36b7d13ffc07de4ae4e81b6c89a"
+      "bytes": 3740,
+      "sha256": "775d10c73f73fde73226d1cb080af4b612d62ad16407c218cf0ba6fe91b35724"
     },
     {
       "path": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/detections.jsonl",
-      "bytes": 1272345,
-      "sha256": "33c1b70047e7814fb1d29704b959d16315fa3c6705d1a58775ce1709129b1126"
+      "bytes": 1335614,
+      "sha256": "64f56f56c053482f8df1673d88b61de711706968c1a83ae661cebd778e2ba662"
     },
     {
       "path": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/object_profile_snapshot.json",
@@ -214,33 +239,33 @@
     },
     {
       "path": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/summary.json",
-      "bytes": 8244,
-      "sha256": "0e961d5ce225b76f9bde7b1fdbb4ca95b788a9eb5ece37791a7e3af677638591"
+      "bytes": 8380,
+      "sha256": "93512c4b7f26adb3135d22df8dfacb3e1cc17852a76df764332695566c907562"
     },
     {
       "path": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/zone_dwell/events_v1.jsonl",
       "bytes": 30599,
-      "sha256": "d829f471ee7027665c69cab26bf7d66b5fdb4a805b8651c379db68ccce0abaa2"
+      "sha256": "237b172fa5828b9f6ab77c01a96bc497e5df346a4ec8d33aeb7341dab895227a"
     },
     {
       "path": "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/zone_dwell/observations_v1.jsonl",
       "bytes": 628865,
-      "sha256": "0038837a3931250ad85c3aff5818a401d64feed5b44f77e4f7732082a1249292"
+      "sha256": "72ff281c4160bcae89a314510cc3def46afde5f61dbd162c81ce0f5506888914"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl",
-      "bytes": 118284140,
-      "sha256": "da7e1de256aa72bd87d8fc46fd66b5ab539c4712704667158d28f089d83c8c62"
+      "bytes": 114294804,
+      "sha256": "e9159b564b5267e8e4305e8b817b9adde56ea6b10e6741b50e583d00f151d26a"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/events_v1.jsonl",
       "bytes": 2045645,
-      "sha256": "cf2ec4ac50b08b0ed256239c43ba013f0c2f4ef777f14953761e033bd2744b06"
+      "sha256": "749ad0f1a776fead180af03598b2c7d32e24b7545b43a173acd1370f03e8eef4"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/observations_v1.jsonl",
-      "bytes": 7154642,
-      "sha256": "f27f4cfd7e2e0271e4bf71b1d24902f4026b63bd51dd620cb43c0385d4be9124"
+      "bytes": 7152934,
+      "sha256": "99ca5f03740a2f2ef7bbc5096972cbad0ab28e752f3c1d36b84db66218a42e76"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_0.jpg",
@@ -249,13 +274,13 @@
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_25.jpg",
-      "bytes": 413255,
-      "sha256": "bb2f31546370f8d43527fa60e9eb6531e6ab0c762473c59c97cf6f5cf667f34a"
+      "bytes": 413263,
+      "sha256": "fd710a73d8c7523c9d653e9504c904d7c2d9f8ba158472a03d8ca73752f05ed2"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_50.jpg",
-      "bytes": 386796,
-      "sha256": "1ceafc708b99f4707a343516673b753bfb78339a0ee5282f5d0accb245d9fdfb"
+      "bytes": 387024,
+      "sha256": "19302a467fa0a78ea82137a42df53446969bee2c8e4af4a73a1a3ff11c2dfac7"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_75.jpg",
@@ -264,53 +289,83 @@
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/events_v1.jsonl",
-      "bytes": 3567311,
-      "sha256": "51720cad56feb36ac50f363c4756eaf52d797d1de7a339707fed5f68d097cedb"
+      "bytes": 3488571,
+      "sha256": "49cbcd39ead163db3c411e7783e465574f1b100edff0d3a170c8759596fae86d"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/observations_v1.jsonl",
-      "bytes": 18298727,
-      "sha256": "e0b5d331bf6d2f03e74f6d7a24e6e4f64b745d938c3eaf5e80cc4db763a5e5da"
+      "bytes": 17649231,
+      "sha256": "f93e71cbf79fc7a0a99375711dac9de071de9d9d73b66da2a15b84dc30a19e59"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/summary.json",
-      "bytes": 9125,
-      "sha256": "7fcbdeff1e369b394256aae7ba74f358bd460b5620e118b3767a00c646756b07"
+      "bytes": 9515,
+      "sha256": "2542b81ce57ed0f6cbb498d6af81c62af52f8f6faabc4619f6faf537b492a5a8"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/verification.json",
-      "bytes": 6535,
-      "sha256": "31e43c4d0f43b6b5f62cc3e7b1c26091b7353d0c8bd9ba5e9174b08919829335"
+      "bytes": 8032,
+      "sha256": "359473d457cd13cf76fa119ed93e48076b766680c42dc03b5c2161c4bb4011e4"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/events_v1.jsonl",
-      "bytes": 4080241,
-      "sha256": "6f9e8048ea2ae98b1cc26b77bdec2e8ac46263831e44e321aa20845d632c1198"
+      "bytes": 3934335,
+      "sha256": "97d398c714528e186fc919efb7f0f001a195572bdf52f1fa66366d4db1b12c80"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/observations_v1.jsonl",
-      "bytes": 18800718,
-      "sha256": "57feb530316ebf90e707d62ce971fe9a69fce23dd66e0b258ce51144353e9eac"
+      "bytes": 18050159,
+      "sha256": "11b515ae1611bafb78bf6e77bcfffb912a9aab668cf8ccf6a4787445fe1b33fd"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/events_v1.jsonl",
-      "bytes": 3999849,
-      "sha256": "14f240f6555ff5687b517743cd3d387557c458784246e0fb4013d48fd180999d"
+      "bytes": 3853763,
+      "sha256": "3caac6505e4d06be356faf3625efa96d8104c3d5fad5f7f0374ab96af8b7a26a"
     },
     {
       "path": "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/observations_v1.jsonl",
-      "bytes": 18458098,
-      "sha256": "32b10dd30092ada9b48efff412b233c2642482c43ce50f86178427c3015c8115"
+      "bytes": 17707539,
+      "sha256": "9d2bfd1b59e242ae49095bcc19df2eb099a1d82b0a7e5cd972f13c6ed730e751"
+    },
+    {
+      "path": "outputs/diagnostics/presentation6_fire_review/dashboard.png",
+      "bytes": 27475,
+      "sha256": "687eeac7f913dac1ed99f7a53054627f99b43289ec1e3eb2db8ec9e65b32cf2d"
+    },
+    {
+      "path": "outputs/diagnostics/presentation6_fire_review/detections.jsonl",
+      "bytes": 49677,
+      "sha256": "c3f8853bd487ef9fb973f74ff958846e7ae1ea68851bbd73ec4bc8e9520b4377"
+    },
+    {
+      "path": "outputs/diagnostics/presentation6_fire_review/preview.jpg",
+      "bytes": 317795,
+      "sha256": "08a471e518c6151965bcd9ea737462417bc8902d918ba4a6b4804c20f95c430f"
+    },
+    {
+      "path": "outputs/diagnostics/presentation6_fire_review/summary.json",
+      "bytes": 1131,
+      "sha256": "0ad2667fd6ff8de6f590d7e65beaa1e12f0d169c23c1e85cad0a7d7fcc5c10b0"
+    },
+    {
+      "path": "outputs/diagnostics/system-current-check.png",
+      "bytes": 130281,
+      "sha256": "d9e6d728cd9cedbdb7b89743da6fb0e48e0b15a53a9b53aa520716e4e140b6c7"
+    },
+    {
+      "path": "outputs/diagnostics/theater-light-mode-fixed.png",
+      "bytes": 125109,
+      "sha256": "5775dec3de86abbe11dc8a7e6595b92649280dc5ec3542d6dd14b96da783fb53"
     },
     {
       "path": "outputs/events/presentation1/proximity/events_v1.jsonl",
       "bytes": 49779,
-      "sha256": "e1b5fa662e07c5317a69aab2646019f5f520f2692d15e812355165df55c74b22"
+      "sha256": "ad7c53b22dcc31cf20b533fe9b6c6574f97e3b0252ad26be9f0b6e19b87ae26e"
     },
     {
       "path": "outputs/events/presentation1/proximity/observations_v1.jsonl",
       "bytes": 357777,
-      "sha256": "68beab6b2fd193c43ff78eaa49f5b7eca60609373c6b5eed8344548567b6297e"
+      "sha256": "ed27a091d6c6c7735d3d646acfc041085ee0a266d65c9f544b3b9418060b8d61"
     },
     {
       "path": "outputs/events/presentation2/ppe/events_v1.jsonl",
@@ -345,57 +400,67 @@
     {
       "path": "outputs/events/presentation4/zone_dwell/events_v1.jsonl",
       "bytes": 30599,
-      "sha256": "d829f471ee7027665c69cab26bf7d66b5fdb4a805b8651c379db68ccce0abaa2"
+      "sha256": "237b172fa5828b9f6ab77c01a96bc497e5df346a4ec8d33aeb7341dab895227a"
     },
     {
       "path": "outputs/events/presentation4/zone_dwell/observations_v1.jsonl",
       "bytes": 628865,
-      "sha256": "0038837a3931250ad85c3aff5818a401d64feed5b44f77e4f7732082a1249292"
+      "sha256": "72ff281c4160bcae89a314510cc3def46afde5f61dbd162c81ce0f5506888914"
     },
     {
       "path": "outputs/events/presentation5/ppe/events_v1.jsonl",
       "bytes": 2045645,
-      "sha256": "cf2ec4ac50b08b0ed256239c43ba013f0c2f4ef777f14953761e033bd2744b06"
+      "sha256": "749ad0f1a776fead180af03598b2c7d32e24b7545b43a173acd1370f03e8eef4"
     },
     {
       "path": "outputs/events/presentation5/ppe/observations_v1.jsonl",
-      "bytes": 7154642,
-      "sha256": "f27f4cfd7e2e0271e4bf71b1d24902f4026b63bd51dd620cb43c0385d4be9124"
+      "bytes": 7152934,
+      "sha256": "99ca5f03740a2f2ef7bbc5096972cbad0ab28e752f3c1d36b84db66218a42e76"
     },
     {
       "path": "outputs/events/presentation5/proximity/events_v1.jsonl",
-      "bytes": 3567311,
-      "sha256": "51720cad56feb36ac50f363c4756eaf52d797d1de7a339707fed5f68d097cedb"
+      "bytes": 3488571,
+      "sha256": "49cbcd39ead163db3c411e7783e465574f1b100edff0d3a170c8759596fae86d"
     },
     {
       "path": "outputs/events/presentation5/proximity/observations_v1.jsonl",
-      "bytes": 18298727,
-      "sha256": "e0b5d331bf6d2f03e74f6d7a24e6e4f64b745d938c3eaf5e80cc4db763a5e5da"
+      "bytes": 17649231,
+      "sha256": "f93e71cbf79fc7a0a99375711dac9de071de9d9d73b66da2a15b84dc30a19e59"
     },
     {
       "path": "outputs/events/presentation5/zone_access/events_v1.jsonl",
-      "bytes": 4080241,
-      "sha256": "6f9e8048ea2ae98b1cc26b77bdec2e8ac46263831e44e321aa20845d632c1198"
+      "bytes": 3934335,
+      "sha256": "97d398c714528e186fc919efb7f0f001a195572bdf52f1fa66366d4db1b12c80"
     },
     {
       "path": "outputs/events/presentation5/zone_access/observations_v1.jsonl",
-      "bytes": 18800718,
-      "sha256": "57feb530316ebf90e707d62ce971fe9a69fce23dd66e0b258ce51144353e9eac"
+      "bytes": 18050159,
+      "sha256": "11b515ae1611bafb78bf6e77bcfffb912a9aab668cf8ccf6a4787445fe1b33fd"
     },
     {
       "path": "outputs/events/presentation5/zone_dwell/events_v1.jsonl",
-      "bytes": 3999849,
-      "sha256": "14f240f6555ff5687b517743cd3d387557c458784246e0fb4013d48fd180999d"
+      "bytes": 3853763,
+      "sha256": "3caac6505e4d06be356faf3625efa96d8104c3d5fad5f7f0374ab96af8b7a26a"
     },
     {
       "path": "outputs/events/presentation5/zone_dwell/observations_v1.jsonl",
-      "bytes": 18458098,
-      "sha256": "32b10dd30092ada9b48efff412b233c2642482c43ce50f86178427c3015c8115"
+      "bytes": 17707539,
+      "sha256": "9d2bfd1b59e242ae49095bcc19df2eb099a1d82b0a7e5cd972f13c6ed730e751"
+    },
+    {
+      "path": "outputs/events/presentation6/fire/events_v1.jsonl",
+      "bytes": 7057,
+      "sha256": "3d75bf43a7f009b0765a111785ecb3f6e911d95414224250e040739515595c7f"
+    },
+    {
+      "path": "outputs/events/presentation6/fire/observations_v1.jsonl",
+      "bytes": 85697,
+      "sha256": "c3daebb39bacd03091e0853e6108636d1fd315e4fbc60827e5e13b73d737ce29"
     },
     {
       "path": "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4",
-      "bytes": 11055101,
-      "sha256": "3564ba74057d636c5d9b130a8a3f81acb4c16bb6c2d60fa59482e4e47b184ca8"
+      "bytes": 11056023,
+      "sha256": "591cf716ded94b51855c480fc1fb0ffd81c5031c4dd3535d095b21247b221a53"
     },
     {
       "path": "outputs/reviews/2_restricted_zone_intrusion_latest.mp4",
@@ -414,8 +479,13 @@
     },
     {
       "path": "outputs/reviews/5_Logistics_Warehouse_latest.mp4",
-      "bytes": 28839128,
-      "sha256": "7aae7551b91b4a0ecf30cc2ff4a1bed5c85c9ebb3fc51751ef6dde210af67ac2"
+      "bytes": 28764874,
+      "sha256": "c54050a2d907bc0d63073d96a8c20c888164d65a650612939c34a15d4828085a"
+    },
+    {
+      "path": "outputs/reviews/6_parking_lot_fire_latest.mp4",
+      "bytes": 1213337,
+      "sha256": "eca5e58c6a39b712c9a9073b6db7ad96b7f54242b48cc0750e0260d96a6fba19"
     }
   ],
   "previous_file_versions": {
@@ -503,6 +573,10 @@
       {
         "bytes": 174927872,
         "sha256": "f42065e6d6a11049c0110d8b6e03d6324f2b89ae021ab2cd19a5196fe6dcf728"
+      },
+      {
+        "bytes": 170270720,
+        "sha256": "01c530ab0bc92bcf3e533ed9fb3c24074321509857c3f386689c16acb212d398"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/detections.jsonl": [
@@ -513,6 +587,10 @@
       {
         "bytes": 1054855,
         "sha256": "21d1206dcecc8259886d791ad8f28884319787e2c3ae3c31995ba6cfa2d9bd48"
+      },
+      {
+        "bytes": 745099,
+        "sha256": "7464f9b080566353cacbd926d992d9b6fd4b75e4a0cd2b44959e526cfcb3c25d"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/object_review_profile_snapshot.json": [
@@ -529,6 +607,10 @@
       {
         "bytes": 592987,
         "sha256": "f27bb400cba16bd6d8bc417b9e38340d4502f999becf75a810517044be9e89de"
+      },
+      {
+        "bytes": 592134,
+        "sha256": "e10ccb359c7a8a86a72afd02e4edd5a7d5329bcc485e374fec48b7c82038517e"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_25.jpg": [
@@ -539,6 +621,10 @@
       {
         "bytes": 576956,
         "sha256": "c43bfded5621681c3a8101057dd3d90d8a0c974e1060025d4de2babdd3f9cd00"
+      },
+      {
+        "bytes": 577299,
+        "sha256": "e4bc6e3a6de0b7ce00abc6a4457d401aa433bd2fa476dbbee6ae289903460af2"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_50.jpg": [
@@ -549,6 +635,10 @@
       {
         "bytes": 600752,
         "sha256": "34f511a2afefb9a2eecdc5a0f9377c44d38598f0b074bffcbce87cc1948a38df"
+      },
+      {
+        "bytes": 599116,
+        "sha256": "dbbbb8516e7de8bb99fd219158a37edc32e6c05559597a23787159b82eadeed4"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_75.jpg": [
@@ -559,18 +649,30 @@
       {
         "bytes": 575763,
         "sha256": "2274c4037c0ee5fa3e3864deac4b24d958fed44faa46a8aa0e01247bdfab0ee6"
+      },
+      {
+        "bytes": 576307,
+        "sha256": "afe6234b1ad308361bb359a206f8ee8e69f333334c5d25b8c48d0e20becb7e23"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/proximity/events_v1.jsonl": [
       {
         "bytes": 49779,
         "sha256": "e1b5fa662e07c5317a69aab2646019f5f520f2692d15e812355165df55c74b22"
+      },
+      {
+        "bytes": 49779,
+        "sha256": "ad7c53b22dcc31cf20b533fe9b6c6574f97e3b0252ad26be9f0b6e19b87ae26e"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/proximity/observations_v1.jsonl": [
       {
         "bytes": 357777,
         "sha256": "68beab6b2fd193c43ff78eaa49f5b7eca60609373c6b5eed8344548567b6297e"
+      },
+      {
+        "bytes": 357777,
+        "sha256": "ed27a091d6c6c7735d3d646acfc041085ee0a266d65c9f544b3b9418060b8d61"
       }
     ],
     "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/review_verification.json": [
@@ -587,6 +689,10 @@
       {
         "bytes": 5242,
         "sha256": "36e22ceb16a6b2c7dd648a07a7dbec955234115233f7b2fe5c7f2cb8fafecb98"
+      },
+      {
+        "bytes": 5398,
+        "sha256": "680dbfcb7770c88a4329c4fd6cc409783c8ba5da0f87145324688409951dd310"
       }
     ],
     "outputs/diagnostics/presentation2_intrusion_review_2026-10-14/detections.jsonl": [
@@ -809,6 +915,10 @@
       {
         "bytes": 3759,
         "sha256": "8cf589d80585c5dd30a42afe3f73fac28fb0dc98c8339144818df024e33710b2"
+      },
+      {
+        "bytes": 3740,
+        "sha256": "775d10c73f73fde73226d1cb080af4b612d62ad16407c218cf0ba6fe91b35724"
       }
     ],
     "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/detections.jsonl": [
@@ -819,6 +929,10 @@
       {
         "bytes": 2985497,
         "sha256": "5aad5c0aef09ff558dd4bf3424dd87ff99bb74366d6e73d87f9681fc1e965bcb"
+      },
+      {
+        "bytes": 1335614,
+        "sha256": "64f56f56c053482f8df1673d88b61de711706968c1a83ae661cebd778e2ba662"
       }
     ],
     "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/object_profile_snapshot.json": [
@@ -881,18 +995,30 @@
       {
         "bytes": 8326,
         "sha256": "b2de73a8a5b459458a4b71863f20d58263e62fa556a4905d89a95c549bc7d18d"
+      },
+      {
+        "bytes": 8380,
+        "sha256": "93512c4b7f26adb3135d22df8dfacb3e1cc17852a76df764332695566c907562"
       }
     ],
     "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/zone_dwell/events_v1.jsonl": [
       {
         "bytes": 30599,
         "sha256": "d829f471ee7027665c69cab26bf7d66b5fdb4a805b8651c379db68ccce0abaa2"
+      },
+      {
+        "bytes": 30599,
+        "sha256": "237b172fa5828b9f6ab77c01a96bc497e5df346a4ec8d33aeb7341dab895227a"
       }
     ],
     "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/zone_dwell/observations_v1.jsonl": [
       {
         "bytes": 628865,
         "sha256": "0038837a3931250ad85c3aff5818a401d64feed5b44f77e4f7732082a1249292"
+      },
+      {
+        "bytes": 628865,
+        "sha256": "72ff281c4160bcae89a314510cc3def46afde5f61dbd162c81ce0f5506888914"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl": [
@@ -919,6 +1045,10 @@
       {
         "bytes": 117435513,
         "sha256": "35626497c39ceb4af1371f600358bf7d8a3998192239d46f409db34609eb7707"
+      },
+      {
+        "bytes": 114294804,
+        "sha256": "e9159b564b5267e8e4305e8b817b9adde56ea6b10e6741b50e583d00f151d26a"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/events_v1.jsonl": [
@@ -945,6 +1075,10 @@
       {
         "bytes": 2043042,
         "sha256": "cf3938b1fc48078c087c2091068fd5b01fd4c155354622af7895aaacf18e1d0d"
+      },
+      {
+        "bytes": 2045645,
+        "sha256": "749ad0f1a776fead180af03598b2c7d32e24b7545b43a173acd1370f03e8eef4"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/observations_v1.jsonl": [
@@ -971,6 +1105,10 @@
       {
         "bytes": 6907917,
         "sha256": "22ae4f7c95bbc0aaced9cd7ca224655e069e3b913bf33d61739af2cce7658af7"
+      },
+      {
+        "bytes": 7152934,
+        "sha256": "99ca5f03740a2f2ef7bbc5096972cbad0ab28e752f3c1d36b84db66218a42e76"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_0.jpg": [
@@ -1011,6 +1149,10 @@
       {
         "bytes": 411902,
         "sha256": "1da975794a077ccf8ad6290b98811aeb43ca68f468cd5ba2265cd7e0344002ca"
+      },
+      {
+        "bytes": 413263,
+        "sha256": "fd710a73d8c7523c9d653e9504c904d7c2d9f8ba158472a03d8ca73752f05ed2"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_50.jpg": [
@@ -1033,6 +1175,10 @@
       {
         "bytes": 386331,
         "sha256": "b72a76814ed6563186fab85320d7f759cedd2861adc3f4ff0ba479735b0f48b9"
+      },
+      {
+        "bytes": 387024,
+        "sha256": "19302a467fa0a78ea82137a42df53446969bee2c8e4af4a73a1a3ff11c2dfac7"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_75.jpg": [
@@ -1085,6 +1231,10 @@
       {
         "bytes": 3567311,
         "sha256": "99f6aa293bc65d456cea89accb520a15d0a06e87392c4fe1426063a84d766a63"
+      },
+      {
+        "bytes": 3488571,
+        "sha256": "49cbcd39ead163db3c411e7783e465574f1b100edff0d3a170c8759596fae86d"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/observations_v1.jsonl": [
@@ -1111,6 +1261,10 @@
       {
         "bytes": 18298727,
         "sha256": "d7ae2e395650f6cafb057ffb025ff771637a9eb7f95cad26291158f7ced1eed4"
+      },
+      {
+        "bytes": 17649231,
+        "sha256": "f93e71cbf79fc7a0a99375711dac9de071de9d9d73b66da2a15b84dc30a19e59"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/summary.json": [
@@ -1141,6 +1295,10 @@
       {
         "bytes": 9294,
         "sha256": "4c7d83f8f10a2803b57d7d0ea1aa6bb616fb585745a4fe22476daba7ae182617"
+      },
+      {
+        "bytes": 9515,
+        "sha256": "2542b81ce57ed0f6cbb498d6af81c62af52f8f6faabc4619f6faf537b492a5a8"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/verification.json": [
@@ -1163,6 +1321,10 @@
       {
         "bytes": 4141,
         "sha256": "daa106acdd3a04d84b64abbd4cb0cc92d294a5b1acaddae8f14e9b740f2703d3"
+      },
+      {
+        "bytes": 8032,
+        "sha256": "359473d457cd13cf76fa119ed93e48076b766680c42dc03b5c2161c4bb4011e4"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/events_v1.jsonl": [
@@ -1189,6 +1351,10 @@
       {
         "bytes": 4080241,
         "sha256": "8784c76800e8f56585068eb2432e41bd475d683125adaaac15b6d7131b310aa9"
+      },
+      {
+        "bytes": 3934335,
+        "sha256": "97d398c714528e186fc919efb7f0f001a195572bdf52f1fa66366d4db1b12c80"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/observations_v1.jsonl": [
@@ -1215,6 +1381,10 @@
       {
         "bytes": 18800718,
         "sha256": "58af34ce92d98cdac9a26c437e49149a5d53bc8a571a22ab714c64fc9900fe72"
+      },
+      {
+        "bytes": 18050159,
+        "sha256": "11b515ae1611bafb78bf6e77bcfffb912a9aab668cf8ccf6a4787445fe1b33fd"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/events_v1.jsonl": [
@@ -1241,6 +1411,10 @@
       {
         "bytes": 3999849,
         "sha256": "b33f5d2c826c79601922913869c6a382f1efdae8d6410834526c116ca95cbc95"
+      },
+      {
+        "bytes": 3853763,
+        "sha256": "3caac6505e4d06be356faf3625efa96d8104c3d5fad5f7f0374ab96af8b7a26a"
       }
     ],
     "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/observations_v1.jsonl": [
@@ -1267,18 +1441,30 @@
       {
         "bytes": 18458098,
         "sha256": "ebafcbdf14070ed658455a29289d96d291b7d5b09b0feb48766a2f59f60029fd"
+      },
+      {
+        "bytes": 17707539,
+        "sha256": "9d2bfd1b59e242ae49095bcc19df2eb099a1d82b0a7e5cd972f13c6ed730e751"
       }
     ],
     "outputs/events/presentation1/proximity/events_v1.jsonl": [
       {
         "bytes": 49779,
         "sha256": "e1b5fa662e07c5317a69aab2646019f5f520f2692d15e812355165df55c74b22"
+      },
+      {
+        "bytes": 49779,
+        "sha256": "ad7c53b22dcc31cf20b533fe9b6c6574f97e3b0252ad26be9f0b6e19b87ae26e"
       }
     ],
     "outputs/events/presentation1/proximity/observations_v1.jsonl": [
       {
         "bytes": 357777,
         "sha256": "68beab6b2fd193c43ff78eaa49f5b7eca60609373c6b5eed8344548567b6297e"
+      },
+      {
+        "bytes": 357777,
+        "sha256": "ed27a091d6c6c7735d3d646acfc041085ee0a266d65c9f544b3b9418060b8d61"
       }
     ],
     "outputs/events/presentation2/ppe/events_v1.jsonl": [
@@ -1369,12 +1555,20 @@
       {
         "bytes": 30599,
         "sha256": "d829f471ee7027665c69cab26bf7d66b5fdb4a805b8651c379db68ccce0abaa2"
+      },
+      {
+        "bytes": 30599,
+        "sha256": "237b172fa5828b9f6ab77c01a96bc497e5df346a4ec8d33aeb7341dab895227a"
       }
     ],
     "outputs/events/presentation4/zone_dwell/observations_v1.jsonl": [
       {
         "bytes": 628865,
         "sha256": "0038837a3931250ad85c3aff5818a401d64feed5b44f77e4f7732082a1249292"
+      },
+      {
+        "bytes": 628865,
+        "sha256": "72ff281c4160bcae89a314510cc3def46afde5f61dbd162c81ce0f5506888914"
       }
     ],
     "outputs/events/presentation5/ppe/events_v1.jsonl": [
@@ -1401,6 +1595,10 @@
       {
         "bytes": 2043042,
         "sha256": "cf3938b1fc48078c087c2091068fd5b01fd4c155354622af7895aaacf18e1d0d"
+      },
+      {
+        "bytes": 2045645,
+        "sha256": "749ad0f1a776fead180af03598b2c7d32e24b7545b43a173acd1370f03e8eef4"
       }
     ],
     "outputs/events/presentation5/ppe/observations_v1.jsonl": [
@@ -1427,6 +1625,10 @@
       {
         "bytes": 6907917,
         "sha256": "22ae4f7c95bbc0aaced9cd7ca224655e069e3b913bf33d61739af2cce7658af7"
+      },
+      {
+        "bytes": 7152934,
+        "sha256": "99ca5f03740a2f2ef7bbc5096972cbad0ab28e752f3c1d36b84db66218a42e76"
       }
     ],
     "outputs/events/presentation5/proximity/events_v1.jsonl": [
@@ -1453,6 +1655,10 @@
       {
         "bytes": 3567311,
         "sha256": "99f6aa293bc65d456cea89accb520a15d0a06e87392c4fe1426063a84d766a63"
+      },
+      {
+        "bytes": 3488571,
+        "sha256": "49cbcd39ead163db3c411e7783e465574f1b100edff0d3a170c8759596fae86d"
       }
     ],
     "outputs/events/presentation5/proximity/observations_v1.jsonl": [
@@ -1479,6 +1685,10 @@
       {
         "bytes": 18298727,
         "sha256": "d7ae2e395650f6cafb057ffb025ff771637a9eb7f95cad26291158f7ced1eed4"
+      },
+      {
+        "bytes": 17649231,
+        "sha256": "f93e71cbf79fc7a0a99375711dac9de071de9d9d73b66da2a15b84dc30a19e59"
       }
     ],
     "outputs/events/presentation5/zone_access/events_v1.jsonl": [
@@ -1505,6 +1715,10 @@
       {
         "bytes": 4080241,
         "sha256": "8784c76800e8f56585068eb2432e41bd475d683125adaaac15b6d7131b310aa9"
+      },
+      {
+        "bytes": 3934335,
+        "sha256": "97d398c714528e186fc919efb7f0f001a195572bdf52f1fa66366d4db1b12c80"
       }
     ],
     "outputs/events/presentation5/zone_access/observations_v1.jsonl": [
@@ -1531,6 +1745,10 @@
       {
         "bytes": 18800718,
         "sha256": "58af34ce92d98cdac9a26c437e49149a5d53bc8a571a22ab714c64fc9900fe72"
+      },
+      {
+        "bytes": 18050159,
+        "sha256": "11b515ae1611bafb78bf6e77bcfffb912a9aab668cf8ccf6a4787445fe1b33fd"
       }
     ],
     "outputs/events/presentation5/zone_dwell/events_v1.jsonl": [
@@ -1557,6 +1775,10 @@
       {
         "bytes": 3999849,
         "sha256": "b33f5d2c826c79601922913869c6a382f1efdae8d6410834526c116ca95cbc95"
+      },
+      {
+        "bytes": 3853763,
+        "sha256": "3caac6505e4d06be356faf3625efa96d8104c3d5fad5f7f0374ab96af8b7a26a"
       }
     ],
     "outputs/events/presentation5/zone_dwell/observations_v1.jsonl": [
@@ -1583,6 +1805,10 @@
       {
         "bytes": 18458098,
         "sha256": "ebafcbdf14070ed658455a29289d96d291b7d5b09b0feb48766a2f59f60029fd"
+      },
+      {
+        "bytes": 17707539,
+        "sha256": "9d2bfd1b59e242ae49095bcc19df2eb099a1d82b0a7e5cd972f13c6ed730e751"
       }
     ],
     "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4": [
@@ -1593,6 +1819,10 @@
       {
         "bytes": 15097560,
         "sha256": "a8169e0c3a83fbdac0d66d32f23f75125ba8861bfb01a08cd29522988244ad58"
+      },
+      {
+        "bytes": 11056023,
+        "sha256": "591cf716ded94b51855c480fc1fb0ffd81c5031c4dd3535d095b21247b221a53"
       }
     ],
     "outputs/reviews/2_restricted_zone_intrusion_latest.mp4": [
@@ -1665,6 +1895,10 @@
       {
         "bytes": 28728704,
         "sha256": "9ba5c08d833cda68cafc54361900df6c69cca9d98fb8e3e8d3a73a25f0c6b22d"
+      },
+      {
+        "bytes": 28764874,
+        "sha256": "c54050a2d907bc0d63073d96a8c20c888164d65a650612939c34a15d4828085a"
       }
     ]
   },
@@ -2135,171 +2369,6 @@
       "sha256": "928e0407d90dd03d1057831951e5aed837eeb92aa4f5ceb2e15673d0625bc207"
     }
   ],
-  "local_presentation_overrides": {
-    "outputs/backend/full_review.sqlite3": {
-      "bytes": 170270720,
-      "sha256": "01c530ab0bc92bcf3e533ed9fb3c24074321509857c3f386689c16acb212d398"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/detections.jsonl": {
-      "bytes": 745099,
-      "sha256": "7464f9b080566353cacbd926d992d9b6fd4b75e4a0cd2b44959e526cfcb3c25d"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_0.jpg": {
-      "bytes": 592134,
-      "sha256": "e10ccb359c7a8a86a72afd02e4edd5a7d5329bcc485e374fec48b7c82038517e"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_25.jpg": {
-      "bytes": 577299,
-      "sha256": "e4bc6e3a6de0b7ce00abc6a4457d401aa433bd2fa476dbbee6ae289903460af2"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_50.jpg": {
-      "bytes": 599116,
-      "sha256": "dbbbb8516e7de8bb99fd219158a37edc32e6c05559597a23787159b82eadeed4"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/preview_75.jpg": {
-      "bytes": 576307,
-      "sha256": "afe6234b1ad308361bb359a206f8ee8e69f333334c5d25b8c48d0e20becb7e23"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/proximity/events_v1.jsonl": {
-      "bytes": 49779,
-      "sha256": "ad7c53b22dcc31cf20b533fe9b6c6574f97e3b0252ad26be9f0b6e19b87ae26e"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/proximity/observations_v1.jsonl": {
-      "bytes": 357777,
-      "sha256": "ed27a091d6c6c7735d3d646acfc041085ee0a266d65c9f544b3b9418060b8d61"
-    },
-    "outputs/diagnostics/presentation1_equipment_corrected_2026-10-14/video1/summary.json": {
-      "bytes": 5398,
-      "sha256": "680dbfcb7770c88a4329c4fd6cc409783c8ba5da0f87145324688409951dd310"
-    },
-    "outputs/diagnostics/presentation3_ppe_review_2026-10-14/video3/summary.json": {
-      "bytes": 3740,
-      "sha256": "775d10c73f73fde73226d1cb080af4b612d62ad16407c218cf0ba6fe91b35724"
-    },
-    "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/detections.jsonl": {
-      "bytes": 1335614,
-      "sha256": "64f56f56c053482f8df1673d88b61de711706968c1a83ae661cebd778e2ba662"
-    },
-    "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/summary.json": {
-      "bytes": 8380,
-      "sha256": "93512c4b7f26adb3135d22df8dfacb3e1cc17852a76df764332695566c907562"
-    },
-    "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/zone_dwell/events_v1.jsonl": {
-      "bytes": 30599,
-      "sha256": "237b172fa5828b9f6ab77c01a96bc497e5df346a4ec8d33aeb7341dab895227a"
-    },
-    "outputs/diagnostics/presentation4_worker_corrected_final_2026-10-14/video4/zone_dwell/observations_v1.jsonl": {
-      "bytes": 628865,
-      "sha256": "72ff281c4160bcae89a314510cc3def46afde5f61dbd162c81ce0f5506888914"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/detections.jsonl": {
-      "bytes": 114294804,
-      "sha256": "e9159b564b5267e8e4305e8b817b9adde56ea6b10e6741b50e583d00f151d26a"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/events_v1.jsonl": {
-      "bytes": 2045645,
-      "sha256": "749ad0f1a776fead180af03598b2c7d32e24b7545b43a173acd1370f03e8eef4"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/ppe/observations_v1.jsonl": {
-      "bytes": 7152934,
-      "sha256": "99ca5f03740a2f2ef7bbc5096972cbad0ab28e752f3c1d36b84db66218a42e76"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_25.jpg": {
-      "bytes": 413263,
-      "sha256": "fd710a73d8c7523c9d653e9504c904d7c2d9f8ba158472a03d8ca73752f05ed2"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/preview_50.jpg": {
-      "bytes": 387024,
-      "sha256": "19302a467fa0a78ea82137a42df53446969bee2c8e4af4a73a1a3ff11c2dfac7"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/events_v1.jsonl": {
-      "bytes": 3488571,
-      "sha256": "49cbcd39ead163db3c411e7783e465574f1b100edff0d3a170c8759596fae86d"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/proximity/observations_v1.jsonl": {
-      "bytes": 17649231,
-      "sha256": "f93e71cbf79fc7a0a99375711dac9de071de9d9d73b66da2a15b84dc30a19e59"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/summary.json": {
-      "bytes": 9515,
-      "sha256": "2542b81ce57ed0f6cbb498d6af81c62af52f8f6faabc4619f6faf537b492a5a8"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/verification.json": {
-      "bytes": 8032,
-      "sha256": "359473d457cd13cf76fa119ed93e48076b766680c42dc03b5c2161c4bb4011e4"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/events_v1.jsonl": {
-      "bytes": 3934335,
-      "sha256": "97d398c714528e186fc919efb7f0f001a195572bdf52f1fa66366d4db1b12c80"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_access/observations_v1.jsonl": {
-      "bytes": 18050159,
-      "sha256": "11b515ae1611bafb78bf6e77bcfffb912a9aab668cf8ccf6a4787445fe1b33fd"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/events_v1.jsonl": {
-      "bytes": 3853763,
-      "sha256": "3caac6505e4d06be356faf3625efa96d8104c3d5fad5f7f0374ab96af8b7a26a"
-    },
-    "outputs/diagnostics/presentation5_vehicle_rider_review_v2_2026-10-14/video5/zone_dwell/observations_v1.jsonl": {
-      "bytes": 17707539,
-      "sha256": "9d2bfd1b59e242ae49095bcc19df2eb099a1d82b0a7e5cd972f13c6ed730e751"
-    },
-    "outputs/events/presentation1/proximity/events_v1.jsonl": {
-      "bytes": 49779,
-      "sha256": "ad7c53b22dcc31cf20b533fe9b6c6574f97e3b0252ad26be9f0b6e19b87ae26e"
-    },
-    "outputs/events/presentation1/proximity/observations_v1.jsonl": {
-      "bytes": 357777,
-      "sha256": "ed27a091d6c6c7735d3d646acfc041085ee0a266d65c9f544b3b9418060b8d61"
-    },
-    "outputs/events/presentation4/zone_dwell/events_v1.jsonl": {
-      "bytes": 30599,
-      "sha256": "237b172fa5828b9f6ab77c01a96bc497e5df346a4ec8d33aeb7341dab895227a"
-    },
-    "outputs/events/presentation4/zone_dwell/observations_v1.jsonl": {
-      "bytes": 628865,
-      "sha256": "72ff281c4160bcae89a314510cc3def46afde5f61dbd162c81ce0f5506888914"
-    },
-    "outputs/events/presentation5/ppe/events_v1.jsonl": {
-      "bytes": 2045645,
-      "sha256": "749ad0f1a776fead180af03598b2c7d32e24b7545b43a173acd1370f03e8eef4"
-    },
-    "outputs/events/presentation5/ppe/observations_v1.jsonl": {
-      "bytes": 7152934,
-      "sha256": "99ca5f03740a2f2ef7bbc5096972cbad0ab28e752f3c1d36b84db66218a42e76"
-    },
-    "outputs/events/presentation5/proximity/events_v1.jsonl": {
-      "bytes": 3488571,
-      "sha256": "49cbcd39ead163db3c411e7783e465574f1b100edff0d3a170c8759596fae86d"
-    },
-    "outputs/events/presentation5/proximity/observations_v1.jsonl": {
-      "bytes": 17649231,
-      "sha256": "f93e71cbf79fc7a0a99375711dac9de071de9d9d73b66da2a15b84dc30a19e59"
-    },
-    "outputs/events/presentation5/zone_access/events_v1.jsonl": {
-      "bytes": 3934335,
-      "sha256": "97d398c714528e186fc919efb7f0f001a195572bdf52f1fa66366d4db1b12c80"
-    },
-    "outputs/events/presentation5/zone_access/observations_v1.jsonl": {
-      "bytes": 18050159,
-      "sha256": "11b515ae1611bafb78bf6e77bcfffb912a9aab668cf8ccf6a4787445fe1b33fd"
-    },
-    "outputs/events/presentation5/zone_dwell/events_v1.jsonl": {
-      "bytes": 3853763,
-      "sha256": "3caac6505e4d06be356faf3625efa96d8104c3d5fad5f7f0374ab96af8b7a26a"
-    },
-    "outputs/events/presentation5/zone_dwell/observations_v1.jsonl": {
-      "bytes": 17707539,
-      "sha256": "9d2bfd1b59e242ae49095bcc19df2eb099a1d82b0a7e5cd972f13c6ed730e751"
-    },
-    "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4": {
-      "bytes": 11056023,
-      "sha256": "591cf716ded94b51855c480fc1fb0ffd81c5031c4dd3535d095b21247b221a53"
-    },
-    "outputs/reviews/5_Logistics_Warehouse_latest.mp4": {
-      "bytes": 28764874,
-      "sha256": "c54050a2d907bc0d63073d96a8c20c888164d65a650612939c34a15d4828085a"
-    }
-  },
-  "local_runtime_status": "Current local results; remote Release changes only after an explicit publish request"
+  "local_presentation_overrides": {},
+  "local_runtime_status": "Published final six-video runtime; use matching branch before PR merge, main after merge."
 }

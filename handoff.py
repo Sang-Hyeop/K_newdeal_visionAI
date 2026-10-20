@@ -97,7 +97,7 @@ def check(models=False):
         if digest != summary["review_sha256"]:
             raise ValueError("Video6 review checksum mismatch")
         print(
-            "PASS: local video6 source, model and review hashes; fire assets not yet published"
+            "PASS: video6 source, model and review hashes"
         )
     if models:
         import cv2
