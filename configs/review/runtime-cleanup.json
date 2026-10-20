@@ -328,5 +328,16 @@
       "공용 모드 선택 정책"
     ],
     "github_pushed": false
+  },
+  "final_workspace_audit_2026_10_20": {
+    "report": "configs/review/system-current-check.json",
+    "files_inventoried": 52261,
+    "files_content_read_hashed": 48807,
+    "format_errors": 0,
+    "removed_cache_files": 212,
+    "removed_bytes": 2278312,
+    "runtime_code_changed": false,
+    "features_changed": false,
+    "duplicate_data_preserved": true
   }
 }
