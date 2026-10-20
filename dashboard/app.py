@@ -1,5 +1,6 @@
 # 탭 화면 조립·로그인 후 대시보드 실행
 import os
+import uuid
 import threading
 import time
 
@@ -387,7 +388,7 @@ def make_main(cams):
                 reset_notify_state()
                 kpi = kpi_html(None)
                 alerts = idle_alerts
-                sound_html = "<div class='sisun-restart-videos' hidden></div>"
+                sound_html = f"<div class='sisun-restart-videos' data-reset-token='{uuid.uuid4().hex}' hidden></div>"
             else:
                 kpi = gr.update()
                 alerts = tuple(gr.update() for _ in alert_boxes)
@@ -410,7 +411,7 @@ def make_main(cams):
             reset_notify_state()
             paths = _paths()
             # 같은 파일이어도 브라우저 재생위치를 0으로 돌리도록 JS 마커
-            restart = "<div class='sisun-restart-videos' hidden></div>"
+            restart = f"<div class='sisun-restart-videos' data-reset-token='{uuid.uuid4().hex}' hidden></div>"
             return (
                 tuple(paths)
                 + (True, {}, True, restart, kpi_html(None))

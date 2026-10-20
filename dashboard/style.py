@@ -2761,7 +2761,17 @@ BOOT_JS = """
     try { resetSideNeeds(); } catch (e4) {}
   };
   var drainToastPayloads = function() {
-    if (document.querySelector(".sisun-restart-videos")) {
+    // Gradio re-creates the stored HTML when returning to main. A restart
+    // marker is a one-shot command, not a command to repeat on every mount.
+    var resetMarkers = document.querySelectorAll(".sisun-restart-videos");
+    var resetToken = "";
+    resetMarkers.forEach(function(marker) {
+      var token = marker.getAttribute("data-reset-token") || "legacy";
+      if (token !== window.__sisunLastResetToken) resetToken = token;
+      try { marker.remove(); } catch (e) {}
+    });
+    if (resetToken) {
+      window.__sisunLastResetToken = resetToken;
       window.sisunRestartMainVideos();
     }
     ensureBell();

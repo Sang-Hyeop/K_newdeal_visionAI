@@ -95,3 +95,26 @@ class DelayedMainStartTests(unittest.TestCase):
         finally:
             app._ALERT_BUS.clear()
             app._ALERT_BUS.update(previous)
+
+class MainReturnResetTests(unittest.TestCase):
+    run_js = BrowserLogicTests.run_js
+    def test_remounted_restart_marker_does_not_clear_unreviewed_cameras(self):
+        from dashboard.style import BOOT_JS
+        start = BOOT_JS.index('    // Gradio re-creates the stored HTML')
+        end = BOOT_JS.index('    ensureBell();', start)
+        self.run_js('''
+const assert=require('node:assert/strict');
+let markers=[]; let resets=0; let notices=[]; let need={};
+const document={querySelectorAll(){return markers}};
+const window={sisunRestartMainVideos(){resets++;notices=[];need={}}};
+function marker(token){return {getAttribute(){return token},remove(){}}}
+function drain(){
+''' + BOOT_JS[start:end] + '''
+}
+markers=[marker('login-1')];drain();assert.equal(resets,1);
+need={A1:false,A2:true,B1:true,P1:true};notices=['A2','B1','P1'];
+markers=[marker('login-1')];drain();
+assert.equal(resets,1);assert.deepEqual(notices,['A2','B1','P1']);
+assert.equal(need.A2,true);assert.equal(need.B1,true);assert.equal(need.P1,true);
+markers=[marker('refresh-2')];drain();assert.equal(resets,2);
+''')
