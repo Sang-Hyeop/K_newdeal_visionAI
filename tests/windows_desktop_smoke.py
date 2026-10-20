@@ -112,6 +112,7 @@ if __name__ == '__main__':
             # 같은 실행 중 다시 클릭해도 기존 서버는 유지합니다.
             duplicate = subprocess.run([sys.executable, str(desktop.ENTRY)], timeout=45)
             assert duplicate.returncode == 0 and desktop.healthy()
+            time.sleep(2)  # Chrome의 기존 창으로 전달한 새 창 요청이 처리될 때까지 기다립니다.
             close_app_windows(profile)
             assert parent.wait(timeout=30) == 0
             wait(lambda: not desktop.healthy(), '창 종료 후 서버 종료', 20)
