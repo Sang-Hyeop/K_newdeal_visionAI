@@ -637,14 +637,19 @@ def make_history():
             title_html("이벤트 이력 · 창고·유형으로 찾기"),
             elem_classes="t2-title-block",
         )
-        gr.HTML(
-            f"<div class='t2-pick-label' style='{INK_TITLE}'>창고 · 유형 고르기</div>",
-            elem_classes="t2-title-block",
-        )
         btns = []
-        with gr.Row():
-            for name in picks:
-                btns.append(gr.Button(name, elem_classes="t2-pick-btn"))
+        # 두 그룹은 같은 격자 크기를 쓰며 기존 단일 조건 조회를 유지합니다.
+        for label, names in (
+            ("창고", ["전체"] + site_names),
+            ("유형", [s["name"] for s in SCENARIOS]),
+        ):
+            gr.HTML(
+                f"<div class='t2-pick-label' style='{INK_TITLE}'>{label}</div>",
+                elem_classes="t2-title-block",
+            )
+            with gr.Row(elem_classes="t2-history-picks"):
+                for name in names:
+                    btns.append(gr.Button(name, elem_classes="t2-pick-btn"))
         gr.HTML("<p>화재의 확인 중·관측 소실은 경보와 구분한 상태 기록입니다.</p>")
         box = gr.HTML()
 

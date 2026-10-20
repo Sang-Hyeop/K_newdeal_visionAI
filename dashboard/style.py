@@ -126,6 +126,22 @@ html, body, .gradio-container { background: var(--sisun-page) !important; color:
   background: #334155 !important; color: #ffffff !important;
   border: 1px solid #94a3b8 !important; font-weight: 700 !important;
 }
+/* 창고·유형 그룹의 버튼은 동일한 열 너비와 높이를 사용합니다. */
+.t2-history-picks {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+.t2-history-picks .t2-pick-btn {
+  width: 100% !important; min-width: 0 !important;
+  height: 72px !important; min-height: 72px !important;
+  padding: 8px 12px !important; margin: 0 !important;
+  white-space: normal !important; word-break: keep-all;
+  display: flex !important; align-items: center; justify-content: center;
+}
+@media (max-width: 900px) {
+  .t2-history-picks { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
 .t2-stats-wrap { min-height: 72vh; }
 .t2-stat-track {
   flex: 1; height: 32px; background: #334155; border-radius: 8px; overflow: hidden;
