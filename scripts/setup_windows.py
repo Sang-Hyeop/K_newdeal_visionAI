@@ -30,6 +30,15 @@ def main():
     call('-c', 'import gradio,pandas,cv2,torch,ultralytics,psutil,imageio_ffmpeg; print("라이브러리 로딩 정상")')
     call(ROOT / 'scripts/setup_runtime.py')
     call(ROOT / 'handoff.py', 'check', '--models')
+    print('브라우저용 영상 6개와 감지 영상 캐시를 준비합니다. 처음에는 시간이 걸립니다.', flush=True)
+    call('-c', "from pathlib import Path\n"
+         "from dashboard.config import CAMERAS\n"
+         "from dashboard.media import camera_origin, camera_detect\n"
+         "for cam in CAMERAS:\n"
+         "    for build in (camera_origin, camera_detect):\n"
+         "        result = build(cam)\n"
+         "        if not result or not Path(result).is_file(): raise RuntimeError(str(cam))\n"
+         "print('브라우저 영상 준비 완료')")
     stamp.write_text(json.dumps({'requirements': signature}), encoding='utf-8')
     print('시선 설치 및 모델 검증 완료', flush=True)
     return 0
