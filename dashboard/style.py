@@ -1465,13 +1465,16 @@ html.sisun-light .sisun-judgment { color: #0f172a; }
 }
 .sisun-theater-rail {
   flex: 0 0 260px; width: 260px; max-width: 30vw;
-  background: rgba(2, 6, 23, .72); border: 1px solid var(--sisun-line);
+  background: var(--sisun-card-bg) !important;
+  color: var(--sisun-card-fg) !important;
+  border: 1px solid var(--sisun-line);
   border-radius: 12px; display: flex; flex-direction: column;
   min-height: 0; max-height: 72vh; overflow: hidden;
 }
 .sisun-theater-rail-head {
   flex: 0 0 auto; padding: 10px 12px; font-size: 13px; font-weight: 800;
-  color: var(--sisun-title); border-bottom: 1px solid var(--sisun-line);
+  background: var(--sisun-th-bg) !important;
+  color: var(--sisun-title) !important; border-bottom: 1px solid var(--sisun-line);
 }
 .sisun-theater-rail-list {
   flex: 1 1 auto; min-height: 0; overflow-x: hidden; overflow-y: auto;
@@ -1485,6 +1488,7 @@ html.sisun-light .sisun-judgment { color: #0f172a; }
   overflow: visible !important;
 }
 .sisun-theater-rail-list .sisun-cam-cap {
+  color: var(--sisun-title) !important;
   font-size: 11px; font-weight: 800; line-height: 1.2;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -1559,9 +1563,6 @@ html.sisun-light .sisun-judgment { color: #0f172a; }
   object-fit: cover !important; display: block !important;
   opacity: 1 !important; visibility: visible !important;
   position: relative !important; z-index: 1 !important;
-}
-html.sisun-light .sisun-theater-rail {
-  background: rgba(255,255,255,.92); border-color: #cbd5e1;
 }
 /* #2~#7 단일 카메라: 클릭 확대 없이 처음부터 크게 */
 .sisun-wall-solo .sisun-cam {
