@@ -8,7 +8,8 @@ $Root = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..\..\..")).Provide
 $State = Join-Path $Root ".sisun"
 [void][IO.Directory]::CreateDirectory($State)
 $Log = Join-Path $State "install.log"
-Start-Transcript -Path $Log -Append | Out-Null
+if (-not [IO.File]::Exists($Log)) { [IO.File]::WriteAllBytes($Log, [byte[]](0xEF, 0xBB, 0xBF)) }
+Start-Transcript -LiteralPath $Log -Append | Out-Null
 try {
     $Python = Join-Path $State "python\python.exe"
     if (-not (Test-Path -LiteralPath $Python)) {
@@ -17,7 +18,9 @@ try {
         $Expected = "5ee42c4eee1e6b4464bb23722f90b45303f79442df63083f05322f1785f5fdde"
         if (-not (Test-Path -LiteralPath $Installer) -or (Get-FileHash -LiteralPath $Installer -Algorithm SHA256).Hash.ToLower() -ne $Expected) {
             [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-            Invoke-WebRequest -UseBasicParsing -Uri "https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe" -OutFile $Installer
+            $Download = New-Object System.Net.WebClient
+            try { $Download.DownloadFile("https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe", $Installer) }
+            finally { $Download.Dispose() }
         }
         if ((Get-FileHash -LiteralPath $Installer -Algorithm SHA256).Hash.ToLower() -ne $Expected) { throw "Python 설치 파일 해시가 다릅니다." }
         $Target = Join-Path $State "python"
