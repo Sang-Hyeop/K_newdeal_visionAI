@@ -116,7 +116,7 @@ def browser_processes(profile):
 
 def open_window(profile):
     subprocess.Popen([str(browser_path()), '--app=' + URL, '--user-data-dir=' + str(profile),
-                      '--no-first-run', '--no-default-browser-check', '--new-window'])
+                      '--no-first-run', '--no-default-browser-check', '--disable-background-mode', '--new-window'])
 
 
 def recover_unresponsive():

@@ -42,6 +42,29 @@ def start():
     return process, profile
 
 
+def close_app_windows(profile):
+    import ctypes
+    from ctypes import wintypes
+    pids = {process.pid for process in desktop.browser_processes(profile)}
+    user32 = ctypes.WinDLL('user32', use_last_error=True)
+    callback_type = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+    user32.EnumWindows.argtypes = (callback_type, wintypes.LPARAM)
+    user32.IsWindowVisible.argtypes = (wintypes.HWND,)
+    user32.GetWindowThreadProcessId.argtypes = (wintypes.HWND, ctypes.POINTER(wintypes.DWORD))
+    user32.PostMessageW.argtypes = (wintypes.HWND, wintypes.UINT, wintypes.WPARAM, wintypes.LPARAM)
+    closed = []
+    @callback_type
+    def close(hwnd, _):
+        pid = wintypes.DWORD()
+        user32.GetWindowThreadProcessId(hwnd, ctypes.byref(pid))
+        if pid.value in pids and user32.IsWindowVisible(hwnd):
+            user32.PostMessageW(hwnd, 0x0010, 0, 0)  # 사용자가 X를 누르는 WM_CLOSE
+            closed.append(hwnd)
+        return True
+    user32.EnumWindows(close, 0)
+    assert closed, '닫을 실제 앱 창을 찾지 못했습니다.'
+
+
 def verify_login_and_video():
     from playwright.sync_api import sync_playwright
     with sync_playwright() as playwright:
@@ -89,8 +112,7 @@ if __name__ == '__main__':
             # 같은 실행 중 다시 클릭해도 기존 서버는 유지합니다.
             duplicate = subprocess.run([sys.executable, str(desktop.ENTRY)], timeout=45)
             assert duplicate.returncode == 0 and desktop.healthy()
-            for browser in desktop.browser_processes(profile):
-                desktop.stop_tree(browser)
+            close_app_windows(profile)
             assert parent.wait(timeout=30) == 0
             wait(lambda: not desktop.healthy(), '창 종료 후 서버 종료', 20)
             print('실제 앱 종료 및 재실행 검증:', cycle + 1, flush=True)
@@ -101,8 +123,7 @@ if __name__ == '__main__':
         for browser in desktop.browser_processes(profile):
             desktop.stop_tree(browser)
         parent, profile = start()
-        for browser in desktop.browser_processes(profile):
-            desktop.stop_tree(browser)
+        close_app_windows(profile)
         assert parent.wait(timeout=30) == 0
         print('강제 종료 후 재실행 검증 통과', flush=True)
     finally:
