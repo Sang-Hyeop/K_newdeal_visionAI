@@ -10,6 +10,18 @@ $State = Join-Path $Root ".sisun"
 $Log = Join-Path $State "install.log"
 if (-not [IO.File]::Exists($Log)) { [IO.File]::WriteAllBytes($Log, [byte[]](0xEF, 0xBB, 0xBF)) }
 Start-Transcript -LiteralPath $Log -Append | Out-Null
+# 파일 경로에 대괄호가 있어도 PowerShell의 명령 검색으로 해석하지 않습니다.
+function Invoke-InstallProcess([string]$Executable, [string[]]$ProcessArguments) {
+    if (-not [IO.File]::Exists($Executable)) { throw "실행 파일이 없습니다: $Executable" }
+    $Quoted = ($ProcessArguments | ForEach-Object { '"' + $_.Replace('"', '\"') + '"' }) -join ' '
+    $ErrorLog = Join-Path $State "process-error.log"
+    $Running = Start-Process -FilePath $Executable -ArgumentList $Quoted -NoNewWindow -Wait -PassThru -RedirectStandardError $ErrorLog
+    if ([IO.File]::Exists($ErrorLog)) {
+        Get-Content -LiteralPath $ErrorLog -Encoding UTF8 | ForEach-Object { Write-Host $_ }
+    }
+    return $Running.ExitCode
+}
+
 try {
     $Python = Join-Path $State "python\python.exe"
     if (-not (Test-Path -LiteralPath $Python)) {
@@ -31,16 +43,18 @@ try {
     $Venv = Join-Path $State "venv\Scripts\python.exe"
     $EnvironmentOK = $false
     if (Test-Path -LiteralPath $Venv) {
-        & $Venv -c "import sys; assert sys.version_info[:2] == (3,11)" 2>$null
-        $EnvironmentOK = ($LASTEXITCODE -eq 0)
+        $Code = Invoke-InstallProcess $Venv @("-c", "import sys; assert sys.version_info[:2] == (3,11)")
+        $EnvironmentOK = ($Code -eq 0)
     }
     if (-not $EnvironmentOK) {
-        & $Python -m venv --clear (Join-Path $State "venv")
-        if ($LASTEXITCODE -ne 0) { throw "전용 환경 생성 실패" }
+        $Code = Invoke-InstallProcess $Python @("-m", "venv", "--clear", (Join-Path $State "venv"))
+        if ($Code -ne 0) { throw "전용 환경 생성 실패" }
     }
-    & $Venv (Join-Path $Root "scripts\setup_windows.py")
-    if ($LASTEXITCODE -ne 0) { throw "라이브러리 또는 실행 자료 설치 실패. $Log 확인" }
-    & (Join-Path $PSScriptRoot "make_shortcut.ps1")
+    $Code = Invoke-InstallProcess $Venv @((Join-Path $Root "scripts\setup_windows.py"))
+    if ($Code -ne 0) { throw "라이브러리 또는 실행 자료 설치 실패. $Log 확인" }
+    $PowerShell = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
+    $Code = Invoke-InstallProcess $PowerShell @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", (Join-Path $PSScriptRoot "make_shortcut.ps1"))
+    if ($Code -ne 0) { throw "바로가기 생성 실패" }
     Write-Host "설치 완료. 바탕화면 시선을 실행하세요."
 } catch {
     Write-Host "설치 실패:" $_ -ForegroundColor Red
