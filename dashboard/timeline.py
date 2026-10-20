@@ -10,7 +10,11 @@ def event_timestamps(frame):
 
 def event_seconds(frame):
     # Invalid time stays NaN and must never turn into an immediate event.
-    return (event_timestamps(frame) - pd.Timestamp(clock_start())).dt.total_seconds()
+    stamps = event_timestamps(frame)
+    # 영상 시각은 각 기록 날짜의 09:00:00 기준이다. 서버를 밤새 켜 두어도
+    # 어제 적재한 캐시를 오늘 날짜와 빼서 음수로 만들지 않는다.
+    origins = stamps.dt.normalize() + pd.Timedelta(hours=9)
+    return (stamps - origins).dt.total_seconds()
 
 
 def playback_inputs(wall_id, cameras):

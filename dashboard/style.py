@@ -72,10 +72,26 @@ main,
 .t2-page-title { font-size: 1.35rem; font-weight: 800; margin: 0 0 8px 0; line-height: 1.3; }
 .t2-table { width: 100%; border-collapse: collapse; font-size: 14px; }
 
-/* 소리 빈칸·제목 상자: Gradio 테두리/여백을 화면에서 없앰 */
-.t2-sound, .t2-sound.block, .t2-sound .block, .t2-sound .html-container, .t2-sound .prose {
+/* 메인 탭 안 소리 칸은 화면에서 숨김 */
+.t2-sound:not(.t2-sound-global),
+.t2-sound:not(.t2-sound-global).block,
+.t2-sound:not(.t2-sound-global) .block,
+.t2-sound:not(.t2-sound-global) .html-container,
+.t2-sound:not(.t2-sound-global) .prose {
   display: none !important; height: 0 !important; min-height: 0 !important;
   padding: 0 !important; margin: 0 !important; border: none !important; overflow: hidden !important;
+}
+/* 독립 알림 버스: display:none 이면 Gradio 갱신·오디오/토스트 DOM이 끊길 수 있음 → 화면만 숨김 */
+.t2-sound-global,
+.t2-sound-global.block,
+.block.t2-sound-global {
+  display: block !important;
+  position: absolute !important;
+  width: 1px !important; height: 1px !important;
+  margin: 0 !important; padding: 0 !important; border: none !important;
+  overflow: hidden !important; opacity: 0 !important;
+  pointer-events: none !important; z-index: -1 !important;
+  clip: rect(0, 0, 0, 0) !important;
 }
 .t2-title-block, .t2-title-block.block, .t2-title-block .block,
 .t2-title-block .html-container, .t2-title-block .prose {
@@ -715,8 +731,8 @@ html.sisun-side-closed .sisun-dash-row { padding-left: 0 !important; }
   display: flex !important; flex-direction: column !important;
   flex: 0 0 auto !important; min-height: 0 !important;
 }
-.sisun-panel > .block.t2-sound,
-.sisun-panel > .t2-sound {
+.sisun-panel > .block.t2-sound:not(.t2-sound-global),
+.sisun-panel > .t2-sound:not(.t2-sound-global) {
   display: none !important;
   flex: 0 0 0 !important;
   height: 0 !important; min-height: 0 !important; max-height: 0 !important;

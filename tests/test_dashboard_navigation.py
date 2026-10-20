@@ -79,3 +79,19 @@ ensureCasesFilters();assert.ok(box.innerHTML.includes("id='cf-st'"));assert.equa
 box.innerHTML='';ensureCasesFilters();assert.ok(box.innerHTML.includes("id='cf-st'"));
 assert.equal(typeof els['cases-all'].onclick,'function');els['cases-all'].onclick();assert.equal(els['cf-st'].value,'__all_incl_done');
 ''')
+
+class DelayedMainStartTests(unittest.TestCase):
+    def test_first_playhead_after_initial_window_does_not_freeze_kpi(self):
+        from dashboard.config import clock_start
+        previous = dict(app._ALERT_BUS)
+        frame = pd.DataFrame([{'area': 'A1', 'timestamp': clock_start() + pd.Timedelta(seconds=4)}])
+        try:
+            with patch.object(app, '_ensure_clip', return_value=None), patch.object(app, '_existing', return_value=None), patch.object(app, 'reset_notify_state'), patch.object(app, 'kpi_html', side_effect=lambda d: 0 if d is None else len(d)), patch.object(app, 'get_df', return_value=frame), patch.object(app, 'danger_overlay_updates', return_value=()):
+                demo = app.make_main(CAMERAS)
+                demo._live_begin()
+                tick = next(fn.fn for fn in demo.fns.values() if getattr(fn.fn, '__name__', '') == 'tick')
+                self.assertEqual(tick(True, {}, True)[0], 0)
+                self.assertEqual(tick(True, {'A1': 8.0}, True)[0], 1)
+        finally:
+            app._ALERT_BUS.clear()
+            app._ALERT_BUS.update(previous)

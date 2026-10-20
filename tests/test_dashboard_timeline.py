@@ -36,6 +36,18 @@ class DashboardTimelineTests(unittest.TestCase):
         self.assertEqual(ids({'P1':0}),[])  # loop/restart
         self.assertEqual(ids({}),[])  # media not ready
 
+    def test_cached_events_keep_video_seconds_after_calendar_rollover(self):
+        from datetime import timedelta
+        d = self.fixture()
+        original = event_seconds(d)
+        valid = d.timestamp != 'invalid'
+        d.loc[valid, 'timestamp'] = (
+            pd.to_datetime(d.loc[valid, 'timestamp'], format='ISO8601')
+            - timedelta(days=1)
+        ).astype(str)
+        pd.testing.assert_series_equal(event_seconds(d), original)
+        self.assertEqual(list(live_positions(d, {'A1': 10, 'P1': 5}).event_id), ['a', 'b', 'c'])
+
     def test_statistics_accept_mixed_precision_and_unknown_time(self):
         d=self.fixture()
         self.assertEqual(_time_bin_labels(d).iloc[-1],'시각 미상')

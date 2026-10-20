@@ -345,15 +345,14 @@ def make_main(cams):
         def _effective_positions(positions):
             raw = positions if isinstance(positions, dict) else {}
             if kpi_session.get("await_restart"):
-                # 영상 재시작(앞쪽 재생)이 확인되기 전에는 집계하지 않음
-                restarted = any(
-                    (t := _as_time(v)) is not None and t < 2.5
-                    for v in raw.values()
-                )
-                if not restarted:
+                # 재생 위치가 아직 안 오면 대기. 오면 집계 시작.
+                # (예전: t<2.5 만 인정 → 첫 보고가 이미 3초 넘으면 KPI가 영원히 0)
+                vals = [t for t in (_as_time(v) for v in raw.values()) if t is not None]
+                if not vals:
                     return {}
+                if any(t < 2.5 for t in vals):
+                    kpi_session["max_pos"] = {}
                 kpi_session["await_restart"] = False
-                kpi_session["max_pos"] = {}
             out = dict(kpi_session["max_pos"])
             for cam_id, value in raw.items():
                 t = _as_time(value)
