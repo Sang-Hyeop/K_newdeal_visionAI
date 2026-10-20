@@ -34,4 +34,4 @@ D-Fire390장(train240/val60/test90)으로 Detect head를2회차 보완하고 검
 
 실행은 `python handoff.py run --video N`, 무결성 점검은 `python handoff.py check`입니다. 최신 결과는 outputs/reviews/의6개 *_latest.mp4입니다. 사람·PPE·지게차·화재는 기능별 실행 범위를 유지합니다. 실패 가중치와 실험 실행기는 현재 실행에 포함하지 않습니다. 학습 원본·수동 라벨·선정 JSON은 선정 이유를 재현할 근거이므로 보존합니다.
 
-현재 로컬 확정과 GitHub 배포는 별개입니다. 기존 runtime-2026-10-16 Release에는6번 화재가 없으며 사용자의 업로드 요청 전에는 새 Release나 push를 수행하지 않습니다.
+2026-10-20 최종 배포는 runtime-2026-10-20 Release이며 확정 모델7개와6번 화재를 포함합니다. 코드·원본은 저장소에서, 모델·현재 결과는 `python scripts/setup_runtime.py`로 받습니다. PR 병합 전에는 feat/sisun-dashboard-ops-alert-ux 브랜치, 병합 후에는 main을 사용합니다.

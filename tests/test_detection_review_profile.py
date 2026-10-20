@@ -1,3 +1,4 @@
+# 역할: 카메라별 객체 검수 프로필 동작을 회귀 검증합니다.
 import unittest
 from src.detection_review_profile import select_review_objects
 from src.proximity import Proximity

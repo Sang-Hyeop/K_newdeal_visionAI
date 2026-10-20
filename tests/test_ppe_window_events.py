@@ -1,3 +1,4 @@
+# 역할: 시간 창 안전모 판정 동작을 회귀 검증합니다.
 import unittest,json
 from pathlib import Path
 from src.ppe_events import PPEEvents

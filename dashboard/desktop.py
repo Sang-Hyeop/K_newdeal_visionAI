@@ -1,3 +1,4 @@
+# 역할: 브라우저 앱 창과 대시보드 프로세스의 시작·종료를 관리합니다.
 # 시선 데스크톱 창. 브라우저 탭이 아니라 Chrome/Edge 앱 창으로 연다.
 # 창을 닫으면 Gradio·이벤트 API도 같이 끈다.
 import os
@@ -105,6 +106,7 @@ def find_browser():
 def start_ui():
     try:
         from dashboard.app import launch
+
         launch()
     except Exception as e:
         log("ui 오류 " + repr(e))
@@ -131,7 +133,9 @@ def _ps(cmd):
         os.environ.get("SystemRoot", r"C:\Windows"),
         r"System32\WindowsPowerShell\v1.0\powershell.exe",
     )
-    return _hidden_run([ps, "-NoProfile", "-WindowStyle", "Hidden", "-Command", cmd], text=True)
+    return _hidden_run(
+        [ps, "-NoProfile", "-WindowStyle", "Hidden", "-Command", cmd], text=True
+    )
 
 
 def kill_port(port):
@@ -172,6 +176,7 @@ def acquire_lock():
     fp = open(path, "a+")
     if os.name == "nt":
         import msvcrt
+
         try:
             fp.seek(0)
             msvcrt.locking(fp.fileno(), msvcrt.LK_NBLCK, 1)
@@ -180,6 +185,7 @@ def acquire_lock():
             return False
     else:
         import fcntl
+
         try:
             fcntl.flock(fp.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         except OSError:
@@ -247,6 +253,7 @@ def browser_using_profile(marker):
 def stop_backend():
     try:
         from dashboard.api import API_PORT, _stop_api
+
         _stop_api(API_PORT)
     except Exception as e:
         log("api stop " + str(e))
@@ -293,6 +300,7 @@ def main():
     if browser is None:
         log("Chrome/Edge 없음. 기본 브라우저로 엽니다.")
         import webbrowser
+
         webbrowser.open(UI_URL)
         try:
             while True:

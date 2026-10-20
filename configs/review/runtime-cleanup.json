@@ -265,5 +265,79 @@
       "Avoid forced complete event/diagnostic reload when source files did not change.",
       "Initialize/load tab-specific heavy content only when needed."
     ]
+  },
+  "final_python_cleanup_2026_10_20": {
+    "scope": "동작 유지: 한글 파일 역할 설명·들여쓰기·import 표기·대용량 해시 순차 읽기",
+    "python_files_reviewed_and_described": 120,
+    "frozen_support_preserved": "models/ppe_final/ppe_duplicate_filter.py (역할은 src/README.md에 설명)",
+    "semantic_check": "120개 AST 비교: 주석·설명·import 분리/미사용 표준 import 3개 제거·명시적 해시 읽기 5곳 외 차이 없음. JS 문자열은 이스케이프 표기 전후 값 동일.",
+    "hash_read_benchmark": {
+      "scope": "16MiB 파일의 SHA 함수만 측정한 Python tracemalloc 피크; 전체 앱 RAM·FPS 측정 아님",
+      "results": [
+        {
+          "file": "scripts/run_demo_scenarios.py",
+          "identical_sha256": true,
+          "before_peak_bytes": 16782113,
+          "after_peak_bytes": 267672
+        },
+        {
+          "file": "scripts/run_intrusion_review.py",
+          "identical_sha256": true,
+          "before_peak_bytes": 16782113,
+          "after_peak_bytes": 267672
+        },
+        {
+          "file": "scripts/recover_vehicle_cache.py",
+          "identical_sha256": true,
+          "before_peak_bytes": 16781842,
+          "after_peak_bytes": 267672
+        },
+        {
+          "file": "scripts/review_vehicle_recovery_cache.py",
+          "identical_sha256": true,
+          "before_peak_bytes": 16781842,
+          "after_peak_bytes": 267672
+        }
+      ]
+    },
+    "inventory_equivalence": "실제 이벤트·관측 JSONL 20개 파일의 전체 집계·해시 동일",
+    "tests": {
+      "passed": 392,
+      "subtests": 12
+    },
+    "frozen_assets": "확정7모델·82실행자산·5원본·6번화재 해시 통과; 7모델 실제 단일 프레임 추론과 PPE 보조 로드 통과",
+    "ui_validation": {
+      "port": 17869,
+      "mode": "임시 로컬 기록·기존 API 사용, 7860 실제 세션 유지",
+      "verified": [
+        "로그인",
+        "메인6영상 readyState4 및 미디어 오류 없음",
+        "KPI106→137",
+        "CAM01 확인✓→메인 표시 제거·CAM02/05 N 유지",
+        "조치 관리 조회",
+        "이벤트 이력 표",
+        "운영 통계",
+        "테마 전환"
+      ]
+    },
+    "preserved": [
+      "함수명·파일명·API 필드",
+      "모델·임계값·기능별영상범위",
+      "원본·리뷰·이벤트",
+      "실제 조치 기록",
+      "공용 모드 선택 정책"
+    ],
+    "github_pushed": false
+  },
+  "final_workspace_audit_2026_10_20": {
+    "report": "configs/review/system-current-check.json",
+    "files_inventoried": 52261,
+    "files_content_read_hashed": 48807,
+    "format_errors": 0,
+    "removed_cache_files": 212,
+    "removed_bytes": 2278312,
+    "runtime_code_changed": false,
+    "features_changed": false,
+    "duplicate_data_preserved": true
   }
 }

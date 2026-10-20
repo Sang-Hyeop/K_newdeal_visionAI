@@ -1,3 +1,4 @@
+# 역할: 4번 영상의 일괄 검수 연결 동작을 회귀 검증합니다.
 import unittest,json
 from pathlib import Path
 from types import SimpleNamespace

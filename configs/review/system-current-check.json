@@ -1,80 +1,1020 @@
 {
-  "date": "2026-10-18",
-  "status": "three_reported_defects_fixed_and_verified",
-  "scope": "Three time/statistics/playback defects repaired; browser exercised on isolated UI17863/API18013; final models and canonical detection outputs unchanged.",
+  "date": "2026-10-20",
+  "status": "final_local_validation_passed",
+  "scope": "확정 기능 유지. 전체 파일 목록·일반 파일 읽기/형식·모델/영상·백엔드·실제 대시보드 검증. 런타임 소스 추가 변경 없음.",
+  "file_audit": {
+    "files_inventoried": 52261,
+    "bytes_inventoried": 11594466648,
+    "counts_by_root": {
+      "root": 11,
+      ".cursor": 3,
+      "team7_data": 289,
+      ".pytest_cache": 4,
+      ".ruff_cache": 23,
+      "tests": 152,
+      "models": 12,
+      "__pycache__": 1,
+      "docs": 40,
+      "dashboard": 3057,
+      "backend_v1": 38,
+      "configs": 41,
+      "scripts": 11,
+      ".github": 1,
+      "dashboard_data": 1,
+      "data": 48426,
+      "outputs": 88,
+      "src": 63
+    },
+    "checked": {
+      "runtime_cache_metadata": 3454,
+      "files_stream_read_hashed": 48807,
+      "python_syntax": 121,
+      "json": 206,
+      "images_verified": 24483,
+      "jsonl_rows": 20179,
+      "jsonl_files": 56
+    },
+    "additional_formats": {
+      "wav": 2,
+      "csv": 5,
+      "yaml": 56,
+      "label_txt": 21742,
+      "xml": 436,
+      "zip": 1
+    },
+    "errors": [],
+    "excluded_from_content_read": "Git 내부는 git fsck로 별도 검증. 브라우저 프로필·재생성 캐시3454개는 메타데이터만 확인; 일반 파일48807개는 순차 읽기 및 SHA-256 계산. 브라우저 잠금용 심볼릭 링크는 프로젝트 참조 누락으로 취급하지 않고 보존.",
+    "label_check_limit": "라벨 TXT는 숫자·유한값 구문만 확인. 원본 세그멘테이션과 박스 형식을 보존하며 라벨 정답 품질을 재평가한 것은 아님.",
+    "duplicate_groups_over_1MiB": 380,
+    "duplicate_policy": "학습 원본·수동 라벨·검수 이력·실행/인계 경로가 포함되어 삭제/하드링크 통합하지 않음."
+  },
+  "cleanup": {
+    "files_removed": 212,
+    "bytes_removed": 2278312,
+    "scope": "__pycache__, .pytest_cache, .ruff_cache, .DS_Store만 정리. 브라우저 프로필·기록·현재 결과 보존.",
+    "files": [
+      {
+        "path": ".DS_Store",
+        "bytes": 18436
+      },
+      {
+        "path": "team7_data/.DS_Store",
+        "bytes": 6148
+      },
+      {
+        "path": ".pytest_cache/CACHEDIR.TAG",
+        "bytes": 191
+      },
+      {
+        "path": ".pytest_cache/README.md",
+        "bytes": 302
+      },
+      {
+        "path": ".pytest_cache/.gitignore",
+        "bytes": 37
+      },
+      {
+        "path": ".pytest_cache/v/cache/nodeids",
+        "bytes": 40634
+      },
+      {
+        "path": ".ruff_cache/CACHEDIR.TAG",
+        "bytes": 43
+      },
+      {
+        "path": ".ruff_cache/.gitignore",
+        "bytes": 35
+      },
+      {
+        "path": ".ruff_cache/0.15.1/16160805715815451973",
+        "bytes": 1285
+      },
+      {
+        "path": ".ruff_cache/0.15.1/7723693617026407788",
+        "bytes": 242
+      },
+      {
+        "path": ".ruff_cache/0.15.1/1180488169117376655",
+        "bytes": 1285
+      },
+      {
+        "path": ".ruff_cache/0.15.1/3450279448982713669",
+        "bytes": 242
+      },
+      {
+        "path": ".ruff_cache/0.15.1/6847022531291934980",
+        "bytes": 793
+      },
+      {
+        "path": ".ruff_cache/0.15.1/13606462213433058059",
+        "bytes": 793
+      },
+      {
+        "path": ".ruff_cache/0.15.1/3816886912307833011",
+        "bytes": 242
+      },
+      {
+        "path": ".ruff_cache/0.15.1/1969146361310881061",
+        "bytes": 144
+      },
+      {
+        "path": ".ruff_cache/0.15.1/17968278880469895649",
+        "bytes": 793
+      },
+      {
+        "path": ".ruff_cache/0.15.1/15401008560242377261",
+        "bytes": 793
+      },
+      {
+        "path": ".ruff_cache/0.15.1/14013664786466929185",
+        "bytes": 144
+      },
+      {
+        "path": ".ruff_cache/0.15.1/11253322284487366530",
+        "bytes": 1285
+      },
+      {
+        "path": ".ruff_cache/0.15.1/6802644582371298283",
+        "bytes": 405
+      },
+      {
+        "path": ".ruff_cache/0.15.1/7600241679738808834",
+        "bytes": 144
+      },
+      {
+        "path": ".ruff_cache/0.15.1/6438281971245396380",
+        "bytes": 405
+      },
+      {
+        "path": ".ruff_cache/0.15.1/247498735938065903",
+        "bytes": 70
+      },
+      {
+        "path": ".ruff_cache/0.15.1/2568420785746544150",
+        "bytes": 405
+      },
+      {
+        "path": ".ruff_cache/0.15.1/8249260766827607605",
+        "bytes": 242
+      },
+      {
+        "path": ".ruff_cache/0.15.1/6232231077500779826",
+        "bytes": 144
+      },
+      {
+        "path": ".ruff_cache/0.15.1/5661914964730000092",
+        "bytes": 1285
+      },
+      {
+        "path": ".ruff_cache/0.15.1/140566090943114659",
+        "bytes": 405
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_navigation.cpython-311.pyc",
+        "bytes": 17385
+      },
+      {
+        "path": "tests/__pycache__/test_object_recall_ensemble.cpython-311.pyc",
+        "bytes": 5398
+      },
+      {
+        "path": "tests/__pycache__/test_temporal_riders.cpython-311.pyc",
+        "bytes": 9348
+      },
+      {
+        "path": "tests/__pycache__/test_observation_display.cpython-311.pyc",
+        "bytes": 5879
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_unassigned_heads.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 8239
+      },
+      {
+        "path": "tests/__pycache__/test_presentation4_equipment.cpython-311.pyc",
+        "bytes": 2539
+      },
+      {
+        "path": "tests/__pycache__/test_person_display_cleanup.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 6253
+      },
+      {
+        "path": "tests/__pycache__/test_event_contract.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 8812
+      },
+      {
+        "path": "tests/__pycache__/test_runtime_setup.cpython-311.pyc",
+        "bytes": 19329
+      },
+      {
+        "path": "tests/__pycache__/test_scenario_selection.cpython-311.pyc",
+        "bytes": 7203
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_alert_sound.cpython-311.pyc",
+        "bytes": 7082
+      },
+      {
+        "path": "tests/__pycache__/test_shared_cases.cpython-311.pyc",
+        "bytes": 17928
+      },
+      {
+        "path": "tests/__pycache__/test_vehicle_boundary_review.cpython-311.pyc",
+        "bytes": 4520
+      },
+      {
+        "path": "tests/__pycache__/test_cabin_person_dedup.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 3981
+      },
+      {
+        "path": "tests/__pycache__/test_zone_dwell.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5301
+      },
+      {
+        "path": "tests/__pycache__/test_scenario_plan.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 17529
+      },
+      {
+        "path": "tests/__pycache__/test_video4_batch_review.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 7031
+      },
+      {
+        "path": "tests/__pycache__/test_fire_detection.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 10790
+      },
+      {
+        "path": "tests/__pycache__/test_confirmed_equipment.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 6352
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_timeline.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 6215
+      },
+      {
+        "path": "tests/__pycache__/test_vehicle_recovery.cpython-311.pyc",
+        "bytes": 13849
+      },
+      {
+        "path": "tests/__pycache__/test_zone_dwell.cpython-311.pyc",
+        "bytes": 5166
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_judgment_display.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 13643
+      },
+      {
+        "path": "tests/__pycache__/test_temporal_riders.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 9483
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_navigation.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 17562
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_runtime.cpython-311.pyc",
+        "bytes": 19174
+      },
+      {
+        "path": "tests/__pycache__/test_tracked_zone.cpython-311.pyc",
+        "bytes": 9231
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_timeline.cpython-311.pyc",
+        "bytes": 6047
+      },
+      {
+        "path": "tests/__pycache__/test_vehicle_occupancy_gate.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5483
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_alert_response.cpython-311.pyc",
+        "bytes": 22124
+      },
+      {
+        "path": "tests/__pycache__/test_video7_batch_policy.cpython-311.pyc",
+        "bytes": 10684
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_runtime_io.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 9749
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_operations.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 7990
+      },
+      {
+        "path": "tests/__pycache__/test_video4_batch_review.cpython-311.pyc",
+        "bytes": 6895
+      },
+      {
+        "path": "tests/__pycache__/test_presentation1_equipment.cpython-311.pyc",
+        "bytes": 3853
+      },
+      {
+        "path": "tests/__pycache__/test_detection_review_profile.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 14765
+      },
+      {
+        "path": "tests/__pycache__/test_fire_detection.cpython-311.pyc",
+        "bytes": 10655
+      },
+      {
+        "path": "tests/__pycache__/test_lane_hazard.cpython-311.pyc",
+        "bytes": 16478
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_person_crop.cpython-311.pyc",
+        "bytes": 9345
+      },
+      {
+        "path": "tests/__pycache__/test_scenario_render.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 10555
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_person_crop.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 9480
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_alert_sound.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 7217
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_vehicle_guard.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5844
+      },
+      {
+        "path": "tests/__pycache__/test_forklift_association.cpython-311.pyc",
+        "bytes": 4951
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_upper_body_context.cpython-311.pyc",
+        "bytes": 5054
+      },
+      {
+        "path": "tests/__pycache__/test_zone_object_render.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 3202
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_tiled_inference.cpython-311.pyc",
+        "bytes": 4367
+      },
+      {
+        "path": "tests/__pycache__/test_lane_hazard.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 16613
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_alert_ops.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 18159
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_runtime_io.cpython-311.pyc",
+        "bytes": 9604
+      },
+      {
+        "path": "tests/__pycache__/test_current_handoff.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 13974
+      },
+      {
+        "path": "tests/__pycache__/test_equipment_reference.cpython-311.pyc",
+        "bytes": 5147
+      },
+      {
+        "path": "tests/__pycache__/test_event_contract.cpython-311.pyc",
+        "bytes": 8676
+      },
+      {
+        "path": "tests/__pycache__/test_bottom_center_proximity.cpython-311.pyc",
+        "bytes": 3807
+      },
+      {
+        "path": "tests/__pycache__/test_forklift_proximity.cpython-311.pyc",
+        "bytes": 3679
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_judgment_display.cpython-314.pyc",
+        "bytes": 11894
+      },
+      {
+        "path": "tests/__pycache__/test_tracked_zone.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 9366
+      },
+      {
+        "path": "tests/__pycache__/test_equipment_reference.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5282
+      },
+      {
+        "path": "tests/__pycache__/test_zone_object_render.cpython-311.pyc",
+        "bytes": 3067
+      },
+      {
+        "path": "tests/__pycache__/test_proximity.cpython-311.pyc",
+        "bytes": 14537
+      },
+      {
+        "path": "tests/__pycache__/test_observation_display.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 6014
+      },
+      {
+        "path": "tests/__pycache__/test_person_tracker.cpython-311.pyc",
+        "bytes": 8051
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_fire_display.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5475
+      },
+      {
+        "path": "tests/__pycache__/test_forklift_association.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5086
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_judgment_display.cpython-311.pyc",
+        "bytes": 13508
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_unassigned_heads.cpython-311.pyc",
+        "bytes": 8104
+      },
+      {
+        "path": "tests/__pycache__/test_zone_access.cpython-311.pyc",
+        "bytes": 4452
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_window_events.cpython-311.pyc",
+        "bytes": 9360
+      },
+      {
+        "path": "tests/__pycache__/test_runtime_setup.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 19465
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_runtime.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 19310
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_operations.cpython-311.pyc",
+        "bytes": 7850
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_alert_ops.cpython-311.pyc",
+        "bytes": 18024
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_vehicle_guard.cpython-311.pyc",
+        "bytes": 5709
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_fire_display.cpython-311.pyc",
+        "bytes": 4382
+      },
+      {
+        "path": "tests/__pycache__/test_bottom_center_proximity.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 3942
+      },
+      {
+        "path": "tests/__pycache__/test_current_handoff.cpython-311.pyc",
+        "bytes": 13831
+      },
+      {
+        "path": "tests/__pycache__/test_forklift_proximity.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 3814
+      },
+      {
+        "path": "tests/__pycache__/test_cabin_person_dedup.cpython-311.pyc",
+        "bytes": 3846
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_events.cpython-311.pyc",
+        "bytes": 9914
+      },
+      {
+        "path": "tests/__pycache__/test_vehicle_recovery.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 13984
+      },
+      {
+        "path": "tests/__pycache__/test_proximity.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 14672
+      },
+      {
+        "path": "tests/__pycache__/test_video7_batch_policy.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 10819
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_upper_body_context.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5189
+      },
+      {
+        "path": "tests/__pycache__/test_vehicle_boundary_review.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 4655
+      },
+      {
+        "path": "tests/__pycache__/test_person_tracker.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 8186
+      },
+      {
+        "path": "tests/__pycache__/test_shared_cases.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 18058
+      },
+      {
+        "path": "tests/__pycache__/test_vehicle_occupancy_gate.cpython-311.pyc",
+        "bytes": 5348
+      },
+      {
+        "path": "tests/__pycache__/test_zone_access.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 4587
+      },
+      {
+        "path": "tests/__pycache__/test_presentation1_equipment.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 3989
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_alert_response.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 22259
+      },
+      {
+        "path": "tests/__pycache__/test_detection_review_profile.cpython-311.pyc",
+        "bytes": 14630
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_window_events.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 9496
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_tiled_inference.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 4502
+      },
+      {
+        "path": "tests/__pycache__/test_person_display_cleanup.cpython-311.pyc",
+        "bytes": 6118
+      },
+      {
+        "path": "tests/__pycache__/test_ppe_events.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 10049
+      },
+      {
+        "path": "tests/__pycache__/test_confirmed_equipment.cpython-311.pyc",
+        "bytes": 6217
+      },
+      {
+        "path": "tests/__pycache__/test_presentation4_equipment.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 2675
+      },
+      {
+        "path": "tests/__pycache__/test_scenario_plan.cpython-311.pyc",
+        "bytes": 17393
+      },
+      {
+        "path": "tests/__pycache__/test_scenario_render.cpython-311.pyc",
+        "bytes": 10420
+      },
+      {
+        "path": "tests/__pycache__/test_dashboard_fire_display.cpython-314.pyc",
+        "bytes": 3994
+      },
+      {
+        "path": "tests/__pycache__/test_object_recall_ensemble.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 5533
+      },
+      {
+        "path": "tests/__pycache__/test_scenario_selection.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 7338
+      },
+      {
+        "path": "models/ppe_final/__pycache__/ppe_duplicate_filter.cpython-311.pyc",
+        "bytes": 2771
+      },
+      {
+        "path": "__pycache__/handoff.cpython-311.pyc",
+        "bytes": 42598
+      },
+      {
+        "path": "dashboard/.DS_Store",
+        "bytes": 10244
+      },
+      {
+        "path": "dashboard/packaging/.DS_Store",
+        "bytes": 10244
+      },
+      {
+        "path": "dashboard/packaging/icons/.DS_Store",
+        "bytes": 6148
+      },
+      {
+        "path": "dashboard/__pycache__/case_server.cpython-311.pyc",
+        "bytes": 14234
+      },
+      {
+        "path": "dashboard/__pycache__/criteria_runtime.cpython-314.pyc",
+        "bytes": 12193
+      },
+      {
+        "path": "dashboard/__pycache__/config.cpython-314.pyc",
+        "bytes": 14485
+      },
+      {
+        "path": "dashboard/__pycache__/api.cpython-311.pyc",
+        "bytes": 9640
+      },
+      {
+        "path": "dashboard/__pycache__/api.cpython-314.pyc",
+        "bytes": 9030
+      },
+      {
+        "path": "dashboard/__pycache__/operations.cpython-311.pyc",
+        "bytes": 10672
+      },
+      {
+        "path": "dashboard/__pycache__/config.cpython-311.pyc",
+        "bytes": 15521
+      },
+      {
+        "path": "dashboard/__pycache__/criteria_runtime.cpython-311.pyc",
+        "bytes": 16080
+      },
+      {
+        "path": "dashboard/__pycache__/style.cpython-311.pyc",
+        "bytes": 137392
+      },
+      {
+        "path": "dashboard/__pycache__/alert_response.cpython-311.pyc",
+        "bytes": 65900
+      },
+      {
+        "path": "dashboard/__pycache__/desktop.cpython-311.pyc",
+        "bytes": 16626
+      },
+      {
+        "path": "dashboard/__pycache__/case_ui.cpython-311.pyc",
+        "bytes": 1269
+      },
+      {
+        "path": "dashboard/__pycache__/alert_ops.cpython-311.pyc",
+        "bytes": 20851
+      },
+      {
+        "path": "dashboard/__pycache__/sound.cpython-314.pyc",
+        "bytes": 7206
+      },
+      {
+        "path": "dashboard/__pycache__/timeline.cpython-314.pyc",
+        "bytes": 1755
+      },
+      {
+        "path": "dashboard/__pycache__/judgment.cpython-314.pyc",
+        "bytes": 17611
+      },
+      {
+        "path": "dashboard/__pycache__/ui.cpython-311.pyc",
+        "bytes": 35710
+      },
+      {
+        "path": "dashboard/__pycache__/shared_cases.cpython-311.pyc",
+        "bytes": 4315
+      },
+      {
+        "path": "dashboard/__pycache__/fire_integration.cpython-314.pyc",
+        "bytes": 2393
+      },
+      {
+        "path": "dashboard/__pycache__/app.cpython-311.pyc",
+        "bytes": 58995
+      },
+      {
+        "path": "dashboard/__pycache__/fire_integration.cpython-311.pyc",
+        "bytes": 2491
+      },
+      {
+        "path": "dashboard/__pycache__/sound.cpython-311.pyc",
+        "bytes": 6535
+      },
+      {
+        "path": "dashboard/__pycache__/timeline.cpython-311.pyc",
+        "bytes": 2130
+      },
+      {
+        "path": "dashboard/__pycache__/judgment.cpython-311.pyc",
+        "bytes": 18611
+      },
+      {
+        "path": "dashboard/__pycache__/ui.cpython-314.pyc",
+        "bytes": 40313
+      },
+      {
+        "path": "dashboard/__pycache__/__init__.cpython-314.pyc",
+        "bytes": 418
+      },
+      {
+        "path": "dashboard/__pycache__/records.cpython-314.pyc",
+        "bytes": 2011
+      },
+      {
+        "path": "dashboard/__pycache__/display_text.cpython-311.pyc",
+        "bytes": 10172
+      },
+      {
+        "path": "dashboard/__pycache__/media.cpython-311.pyc",
+        "bytes": 10126
+      },
+      {
+        "path": "dashboard/__pycache__/events.cpython-311.pyc",
+        "bytes": 62251
+      },
+      {
+        "path": "dashboard/__pycache__/display_text.cpython-314.pyc",
+        "bytes": 9869
+      },
+      {
+        "path": "dashboard/__pycache__/alert_policy.cpython-311.pyc",
+        "bytes": 909
+      },
+      {
+        "path": "dashboard/__pycache__/events.cpython-314.pyc",
+        "bytes": 56639
+      },
+      {
+        "path": "dashboard/__pycache__/__init__.cpython-311.pyc",
+        "bytes": 463
+      },
+      {
+        "path": "dashboard/__pycache__/records.cpython-311.pyc",
+        "bytes": 2398
+      },
+      {
+        "path": "backend_v1/__pycache__/test_backend.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 23385
+      },
+      {
+        "path": "backend_v1/__pycache__/dashboard_labels.cpython-311.pyc",
+        "bytes": 19077
+      },
+      {
+        "path": "backend_v1/__pycache__/test_backend.cpython-311.pyc",
+        "bytes": 23108
+      },
+      {
+        "path": "backend_v1/__pycache__/dashboard_labels.cpython-314.pyc",
+        "bytes": 20451
+      },
+      {
+        "path": "backend_v1/__pycache__/test_dashboard_labels.cpython-311-pytest-9.1.1.pyc",
+        "bytes": 17876
+      },
+      {
+        "path": "backend_v1/__pycache__/test_dashboard_labels.cpython-311.pyc",
+        "bytes": 17703
+      },
+      {
+        "path": "backend_v1/__pycache__/backend.cpython-311.pyc",
+        "bytes": 29867
+      },
+      {
+        "path": "scripts/__pycache__/review_vehicle_recovery_cache.cpython-311.pyc",
+        "bytes": 9299
+      },
+      {
+        "path": "scripts/__pycache__/setup_runtime.cpython-311.pyc",
+        "bytes": 15584
+      },
+      {
+        "path": "data/.DS_Store",
+        "bytes": 8196
+      },
+      {
+        "path": "src/__pycache__/scenario_selection.cpython-311.pyc",
+        "bytes": 4370
+      },
+      {
+        "path": "src/__pycache__/tracked_proximity.cpython-311.pyc",
+        "bytes": 9029
+      },
+      {
+        "path": "src/__pycache__/proximity.cpython-311.pyc",
+        "bytes": 12476
+      },
+      {
+        "path": "src/__pycache__/object_recall_ensemble.cpython-311.pyc",
+        "bytes": 5618
+      },
+      {
+        "path": "src/__pycache__/observation_display.cpython-311.pyc",
+        "bytes": 3551
+      },
+      {
+        "path": "src/__pycache__/feature_status.cpython-311.pyc",
+        "bytes": 1766
+      },
+      {
+        "path": "src/__pycache__/fire_detection.cpython-311.pyc",
+        "bytes": 15058
+      },
+      {
+        "path": "src/__pycache__/scenario_render.cpython-311.pyc",
+        "bytes": 30356
+      },
+      {
+        "path": "src/__pycache__/vehicle_occupancy.cpython-311.pyc",
+        "bytes": 8032
+      },
+      {
+        "path": "src/__pycache__/detection_review_profile.cpython-311.pyc",
+        "bytes": 33099
+      },
+      {
+        "path": "src/__pycache__/zone_dwell.cpython-311.pyc",
+        "bytes": 6140
+      },
+      {
+        "path": "src/__pycache__/ppe_final_detector.cpython-311.pyc",
+        "bytes": 10165
+      },
+      {
+        "path": "src/__pycache__/scenario_zone.cpython-311.pyc",
+        "bytes": 12414
+      },
+      {
+        "path": "src/__pycache__/zone_access.cpython-311.pyc",
+        "bytes": 5239
+      },
+      {
+        "path": "src/__pycache__/ppe_vehicle_guard.cpython-311.pyc",
+        "bytes": 2955
+      },
+      {
+        "path": "src/__pycache__/ppe_window_events.cpython-311.pyc",
+        "bytes": 10380
+      },
+      {
+        "path": "src/__pycache__/lane_hazard.cpython-311.pyc",
+        "bytes": 10010
+      },
+      {
+        "path": "src/__pycache__/operator_association.cpython-311.pyc",
+        "bytes": 12044
+      },
+      {
+        "path": "src/__pycache__/ppe_tiled_inference.cpython-311.pyc",
+        "bytes": 4580
+      },
+      {
+        "path": "src/__pycache__/ppe_runtime.cpython-311.pyc",
+        "bytes": 14184
+      },
+      {
+        "path": "src/__pycache__/equipment_reference.cpython-311.pyc",
+        "bytes": 2471
+      },
+      {
+        "path": "src/__pycache__/ppe_person_crop.cpython-311.pyc",
+        "bytes": 8270
+      },
+      {
+        "path": "src/__pycache__/forklift_proximity.cpython-311.pyc",
+        "bytes": 9620
+      },
+      {
+        "path": "src/__pycache__/vehicle_recovery.cpython-311.pyc",
+        "bytes": 18989
+      },
+      {
+        "path": "src/__pycache__/ppe_events.cpython-311.pyc",
+        "bytes": 9372
+      },
+      {
+        "path": "src/__pycache__/vehicle_person_cleanup.cpython-311.pyc",
+        "bytes": 5674
+      },
+      {
+        "path": "src/__pycache__/person_display_cleanup.cpython-311.pyc",
+        "bytes": 7556
+      },
+      {
+        "path": "src/__pycache__/ppe_unassigned_heads.cpython-311.pyc",
+        "bytes": 7640
+      },
+      {
+        "path": "src/__pycache__/event_contract.cpython-311.pyc",
+        "bytes": 6338
+      },
+      {
+        "path": "src/__pycache__/person_tracker.cpython-311.pyc",
+        "bytes": 7285
+      },
+      {
+        "path": "src/__pycache__/tracked_zone.cpython-311.pyc",
+        "bytes": 8481
+      }
+    ],
+    "note": "실행 시 필요한 캐시는 자동 재생성될 수 있음."
+  },
   "tests": {
-    "detection_dashboard": 305,
-    "backend": 22,
+    "passed": 393,
+    "subtests": 16,
+    "syntax_python": 121,
+    "undefined_names_import_layout": "PASS",
+    "git_diff_check": "PASS",
+    "git_integrity": "git fsck exit0; 복구 가능한 dangling 객체는 보존",
+    "sqlite_quick_check": "ok",
+    "http_events": "200",
+    "http_fire_events": "200",
     "model_weight_inference": 7,
-    "review_frames_decoded": {
-      "1": 106,
-      "2": 58,
-      "3": 58,
-      "4": 92,
-      "5": 870,
-      "6": 60
-    },
-    "frozen_hash_check": "PASS",
-    "http_events": "PASS",
-    "http_fire_events": "PASS",
-    "http_latest_fire_status": "PASS",
-    "ingestion": "5212 events and3912 observations; zero new duplicates inserted; zero conflicts"
+    "frozen_hash_check": "PASS: 7 models, approved policy/support, 82 assets, 5 source videos, local video6",
+    "review_full_frame_decode": [
+      {
+        "video": 1,
+        "frames": 106,
+        "path": "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4"
+      },
+      {
+        "video": 2,
+        "frames": 58,
+        "path": "outputs/reviews/2_restricted_zone_intrusion_latest.mp4"
+      },
+      {
+        "video": 3,
+        "frames": 58,
+        "path": "outputs/reviews/3_PPE_Helmet_latest.mp4"
+      },
+      {
+        "video": 4,
+        "frames": 92,
+        "path": "outputs/reviews/4_hazard_zone_dwell_latest.mp4"
+      },
+      {
+        "video": 5,
+        "frames": 870,
+        "path": "outputs/reviews/5_Logistics_Warehouse_latest.mp4"
+      },
+      {
+        "video": 6,
+        "frames": 60,
+        "path": "outputs/reviews/6_parking_lot_fire_latest.mp4"
+      }
+    ]
   },
-  "findings": [
-    {
-      "priority": 1,
-      "title": "Statistics tab errors on mixed timestamp precision",
-      "file": "dashboard/ui.py",
-      "line": 344,
-      "reproduction": "Login then #10 종합 데이터; actual UI shows 오류. stats_html(current_262_rows) raises ValueError: unconverted data remains .0",
-      "cause": "Integer-second and fractional-second strings are parsed with one inferred pandas format",
-      "recommended_fix": "Preserve numeric source seconds or normalize timestamp parsing in one shared helper; add mixed-timestamp statistics regression.",
-      "status": "resolved",
-      "resolution": "Shared ISO8601 parsing handles integer/fractional seconds; invalid timestamps remain unknown, including statistical bins."
-    },
-    {
-      "priority": 1,
-      "title": "Main KPI includes future fire events",
-      "file": "dashboard/events.py",
-      "line": 1038,
-      "reproduction": "live_until(current_rows,0.1) includes all four fire rows at4.0/4.6/8.2/8.8",
-      "cause": "Mixed timestamp parse errors coerce fractional fire rows to NaT, then fillna(0) treats them as immediate events",
-      "recommended_fix": "Use normalized source seconds; do not convert invalid timestamps to zero.",
-      "status": "resolved",
-      "resolution": "KPI filters use validated source-relative seconds; no NaT-to-zero fallback."
-    },
-    {
-      "priority": 2,
-      "title": "Playback and event clock are independent",
-      "file": "dashboard/app.py",
-      "line": 338,
-      "reproduction": "Actual parking video loop enabled and pausable; event clock uses time.time()-tab-entry. Saw current video position6sec with8.8sec row already visible after elapsed wall clock exceeded duration.",
-      "cause": "No video currentTime/pause/seek/loop synchronization; wall clock continues across pause and loop",
-      "recommended_fix": "Choose explicitly between cumulative-session history and current-playback history; live camera table should follow actual playhead if intended as synchronized demo.",
-      "status": "resolved",
-      "resolution": "Gradio timer receives actual DOM HTMLMediaElement.currentTime per camera; pause/seek/loop follow playhead; no time.time fallback."
-    }
-  ],
-  "limits": [
-    "Not a complete fresh re-inference of all six source videos",
-    "No Windows installer execution",
-    "No audible-alarm certification",
-    "OS cache write warnings came from isolated sandbox; not treated as confirmed normal-user launch defect"
-  ],
-  "evidence_screenshot": {
-    "path": "outputs/diagnostics/system-current-check.png",
-    "sha256": "8e43494c41b2fdad24cadfe1d4b0a8c198dd1df558d125ba8d81977b6ac2c7c1"
-  },
-  "models_changed": false,
-  "github_pushed": false,
   "browser_verification": {
-    "statistics": "Actual #10 statistics cards and time chart render, no prior error panel.",
-    "main": "All six paused at0; KPI remains0 instead of following wall clock.",
-    "camera_pause": "Parking video paused at6.0 sec; only4.6-sec alert remains despite later wall time.",
-    "camera_seek": "Native fullscreen scrubber Home sets0; table clears. Seeking to6.0 shows only first alert after next tick.",
-    "camera_loop": "Natural12-sec loop observed at2.46sec playing; no previous-cycle alert rows.",
-    "history": "All raw logs retained; only live table/KPI are playhead-filtered.",
-    "probe_note": "An offscreen/native scrubber automation attempt produced one Gradio non-finite currentTime browser-console error; subsequent visible fullscreen native seeking worked. Not presented as proof of a completely error-free browser console."
+    "ui_port": 7860,
+    "api_port": 8010,
+    "latest_code_running": true,
+    "main_visible_videos": 6,
+    "all_ready_state": 4,
+    "media_errors": 0,
+    "kpi_observed": [
+      139,
+      163
+    ],
+    "camera_ack": "CAM01 ✓→메인에서 숨김, CAM02/05 N 유지",
+    "history_layout": "창고4/유형5 분리, 모두 동일 폭 및72px 높이",
+    "history_fire_colors": {
+      "light": "rgb(15, 23, 42)",
+      "dark": "rgb(248, 250, 252)"
+    },
+    "case_management": "저장된 확인/조치 상태 조회; 가짜 조치 입력 없음",
+    "operations": "104건/미완료101, 기존 집계 유지 및 요청한 안내2문단 없음",
+    "console_errors": 0
   },
-  "runtime_code_changed": true
+  "findings": [],
+  "limits": [
+    "단기 로컬 점검이며 장시간 연속 부하·다른 물리 PC 동시 접속은 이번에 수행하지 않음. 공용 사건 통신은 전체 테스트의 임시 DB·독립 프로세스 검증에 포함.",
+    "알림음 로직 회귀는 통과했으나 물리 스피커 소리는 직접 청취하지 않음.",
+    "화면/리뷰 재생·모델 단일 프레임 추론 검증이며 새로운 현장 일반화 정확도를 평가한 것은 아님."
+  ],
+  "evidence_screenshot": "outputs/diagnostics/system-current-check.png",
+  "models_changed": false,
+  "runtime_code_changed": false,
+  "github_pushed": true,
+  "followup_current_time_display_2026_10_20": {
+    "policy": "로그인 또는 메인 새로고침 시 현재 시각을 시작점으로 고정; 9시 표시 기준 제거",
+    "playback_seconds": "명시적 _video_seconds로 표시 시각과 분리. 과거 명시적 경과초 없는 형식만 호환 읽기.",
+    "tests_passed": 395,
+    "subtests": 16,
+    "real_rows_checked": 262,
+    "rows_except_clock_fields_unchanged": true,
+    "video_seconds_unchanged": true,
+    "five_second_visible_events_unchanged": 31,
+    "browser": "격리17872 로그인 시작15:09:08, 새로고침 시작15:10:44; 화재4.0/4.6초가15:10:48.0/48.6 표시됨. KPI137·알림·6영상 유지. 콘솔 오류 없음.",
+    "screenshot": "outputs/diagnostics/current-time-display.png",
+    "existing_action_records": "과거 저장 조치 이력은 덮어쓰지 않음",
+    "running_7860": "다른 앱 실행 프로세스 PID7965가 사용 중이어서 종료하지 않음; 재실행 후 적용",
+    "github_pushed": false
+  },
+  "github_final_distribution_2026_10_20": {
+    "runtime_tag": "runtime-2026-10-20",
+    "asset_count": 96,
+    "zip_bytes": 135102606,
+    "zip_sha256": "5994333fc26d66c2788ac9f106539d21799845ca2a3bce4e156f7751fcbd97c4",
+    "uploaded_asset_digest_verified": true,
+    "public_download_http": 200,
+    "clean_source_archive_install": "96 installed; all model/policy/review hashes PASS; 7 model inferences PASS",
+    "dashboard_clean_source": "isolated UI17874/API18015, six visible videos ready4, KPI130→147, console errors0",
+    "tests_passed": 395,
+    "subtests": 16,
+    "screenshot": "outputs/diagnostics/team-clean-install.png",
+    "physical_other_pc_test": "팀원 확인 예정",
+    "excluded": "학습 원본, 개인 조치 기록, 브라우저 프로필, 접속키",
+    "main_merge": "PR 작성 후 승인/병합 대기",
+    "pr_url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/pull/20",
+    "pr_state": "OPEN",
+    "mergeable": true,
+    "review_required": true,
+    "main_merged": false,
+    "release_url": "https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-20"
+  }
 }

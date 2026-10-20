@@ -1,3 +1,4 @@
+# 역할: 확정 안전모 정책·관측 저장·문맥 탐색 동작을 회귀 검증합니다.
 import importlib.util,json,unittest
 from pathlib import Path
 from src.ppe_events import PPEEvents

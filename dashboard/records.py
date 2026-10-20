@@ -1,4 +1,6 @@
-"""JSONL reuse within one refresh; release parsed records when that refresh ends."""
+# 역할: 한 번의 갱신 안에서 필요한 JSONL만 재사용하고 대용량 로그를 순차 읽습니다.
+"""한 번의 갱신 안에서 필요한 JSONL만 재사용하고 대용량 로그를 순차 읽습니다."""
+
 import json
 from contextlib import contextmanager
 from contextvars import ContextVar
@@ -8,7 +10,9 @@ _snapshot = ContextVar("dashboard_jsonl_snapshot", default=None)
 
 @contextmanager
 def jsonl_snapshot(reuse_paths):
-    token = _snapshot.set({path.resolve(): None for path in reuse_paths if path is not None})
+    token = _snapshot.set(
+        {path.resolve(): None for path in reuse_paths if path is not None}
+    )
     try:
         yield
     finally:

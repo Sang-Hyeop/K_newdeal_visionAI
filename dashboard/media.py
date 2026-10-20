@@ -1,3 +1,4 @@
+# 역할: 원본·감지 영상을 찾고 브라우저 재생용 변환과 캐시를 관리합니다.
 # 발표 영상 찾기·브라우저용 H.264
 import os
 import shutil
@@ -18,6 +19,7 @@ from .config import (
     _src_video,
 )
 
+
 def find_demo(num):
     """확정 리뷰(선·상자)를 먼저 쓰고, 없을 때만 handoff 임시 결과를 쓴다."""
     row = presentation_row(num)
@@ -28,8 +30,16 @@ def find_demo(num):
     found = []
     runs = DATA_ROOT / "outputs" / "handoff_runs"
     if runs.is_dir():
-        found += [p for p in runs.glob(f"presentation{num}_*/**/demo.mp4") if p.is_file() and p.stat().st_size > 0]
-        found += [p for p in runs.glob(f"presentation{num}_*/*.mp4") if p.is_file() and p.stat().st_size > 0]
+        found += [
+            p
+            for p in runs.glob(f"presentation{num}_*/**/demo.mp4")
+            if p.is_file() and p.stat().st_size > 0
+        ]
+        found += [
+            p
+            for p in runs.glob(f"presentation{num}_*/*.mp4")
+            if p.is_file() and p.stat().st_size > 0
+        ]
     if not found:
         return None
     found.sort(key=lambda p: p.stat().st_mtime, reverse=True)
@@ -48,6 +58,7 @@ def ensure_repo_demos():
         cmd = [sys.executable, str(handoff), "run", "--video", str(n)]
         print("handoff 생성", " ".join(cmd))
         subprocess.run(cmd, cwd=str(DATA_ROOT), check=False)
+
 
 def video_path(name):
     path = VIDEO_DIR / name
@@ -106,6 +117,7 @@ def _ffmpeg():
         return exe
     try:
         import imageio_ffmpeg
+
         return imageio_ffmpeg.get_ffmpeg_exe()
     except Exception:
         return None
@@ -141,14 +153,29 @@ def _convert_browser_mp4(src, dest_name):
     fd, temporary = tempfile.mkstemp(prefix=".convert-", suffix=".mp4", dir=LOCAL)
     os.close(fd)
     cmd = [
-        ffmpeg, "-y", "-i", src, "-c:v", "libx264", "-pix_fmt", "yuv420p",
-        "-preset", "veryfast", "-crf", "23",
-        "-movflags", "+faststart", temporary,
+        ffmpeg,
+        "-y",
+        "-i",
+        src,
+        "-c:v",
+        "libx264",
+        "-pix_fmt",
+        "yuv420p",
+        "-preset",
+        "veryfast",
+        "-crf",
+        "23",
+        "-movflags",
+        "+faststart",
+        temporary,
     ]
     try:
         flags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
         subprocess.run(
-            cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            cmd,
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
             creationflags=flags,
         )
         if not os.path.isfile(temporary) or os.path.getsize(temporary) == 0:

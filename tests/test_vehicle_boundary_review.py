@@ -1,3 +1,4 @@
+# 역할: 차량 경계의 사람 관측 검수 동작을 회귀 검증합니다.
 import unittest
 from src.forklift_proximity import ForkliftProximity
 from src.detection_review_profile import select_review_objects

@@ -1,4 +1,5 @@
-"""Canonical output routing: a complete build replaces current; preview never does."""
+# 역할: 현재 결과 교체·모델 고정·인계 계약 동작을 회귀 검증합니다.
+"""현재 결과 교체·모델 고정·인계 계약 동작을 회귀 검증합니다."""
 import hashlib,json,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch

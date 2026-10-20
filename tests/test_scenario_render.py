@@ -1,3 +1,4 @@
+# 역할: 기능별 영상 표시 범위 동작을 회귀 검증합니다.
 import unittest
 
 from src.scenario_render import exclude_driver_overlap_pairs, select_ppe_review_candidates, select_proximity_display_events

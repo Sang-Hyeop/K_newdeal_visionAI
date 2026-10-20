@@ -1,3 +1,4 @@
+# 역할: 작은 머리 타일 탐색 동작을 회귀 검증합니다.
 import unittest
 from types import SimpleNamespace
 import numpy as np

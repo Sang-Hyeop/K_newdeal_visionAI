@@ -1,3 +1,4 @@
+# 역할: ROI 체류 시간과 위험 구간 동작을 회귀 검증합니다.
 import unittest
 from src.zone_dwell import ZoneDwell
 

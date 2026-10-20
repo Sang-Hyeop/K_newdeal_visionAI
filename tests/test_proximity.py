@@ -1,3 +1,4 @@
+# 역할: 사람·지게차 화면상 거리 판정 동작을 회귀 검증합니다.
 import unittest
 from src.proximity import Proximity
 from src.person_tracker import PersonTracker

@@ -1,3 +1,4 @@
+# 역할: 현재 4번 체류 영상의 과거 호환 정책 동작을 회귀 검증합니다.
 import unittest
 from src.operator_association import OperatorAssociation
 from src.lane_hazard import LaneHazard

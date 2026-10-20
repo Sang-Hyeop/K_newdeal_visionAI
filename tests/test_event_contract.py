@@ -1,3 +1,4 @@
+# 역할: 이벤트·관측 출력 계약 동작을 회귀 검증합니다.
 import json,tempfile,unittest
 from pathlib import Path
 from src.feature_status import feature_status

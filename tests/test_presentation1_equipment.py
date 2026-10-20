@@ -1,3 +1,4 @@
+# 역할: 1번 영상의 설비 오탐 제외 동작을 회귀 검증합니다.
 import json, unittest
 from pathlib import Path
 from src.detection_review_profile import exclude_confirmed_equipment

@@ -1,0 +1,192 @@
+{
+  "api": {
+    "http://127.0.0.1:8010/events?limit=1": {
+      "ms": 134.2,
+      "ok": true,
+      "total": 5212,
+      "count": 1,
+      "keys": [
+        "events",
+        "total",
+        "count",
+        "limit",
+        "offset"
+      ]
+    },
+    "http://127.0.0.1:8010/feature-status": {
+      "ms": 408.0,
+      "ok": true,
+      "total": null,
+      "count": 0,
+      "keys": [
+        "count",
+        "feature_status",
+        "global_safety_status"
+      ]
+    },
+    "http://127.0.0.1:7860/sisun/alert-cases?open_only=0": {
+      "ms": 6.6,
+      "ok": true,
+      "total": null,
+      "count": 104,
+      "keys": [
+        "ok",
+        "error",
+        "cases",
+        "summary",
+        "filter_count",
+        "assignees"
+      ]
+    },
+    "http://127.0.0.1:7860/sisun/alert-response/state": {
+      "ms": 1.4,
+      "ok": false,
+      "total": null,
+      "count": 0,
+      "keys": [
+        "ok",
+        "error",
+        "state"
+      ]
+    }
+  },
+  "media": [
+    {
+      "file": "dashboard/data/origin_P1.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.6
+    },
+    {
+      "file": "dashboard/data/origin_B1.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 4.5
+    },
+    {
+      "file": "dashboard/data/origin_A1.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 2.2
+    },
+    {
+      "file": "dashboard/data/origin_A2.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.6
+    },
+    {
+      "file": "dashboard/data/origin_A3.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.7
+    },
+    {
+      "file": "dashboard/data/origin_A4.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 2.2
+    },
+    {
+      "file": "dashboard/data/detect_B1.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 2.8
+    },
+    {
+      "file": "dashboard/data/detect_P1.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.2
+    },
+    {
+      "file": "dashboard/data/detect_A4.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 1.1
+    },
+    {
+      "file": "dashboard/data/detect_A1.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 1.1
+    },
+    {
+      "file": "dashboard/data/detect_A3.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.4
+    },
+    {
+      "file": "dashboard/data/detect_A2.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.3
+    },
+    {
+      "file": "outputs/reviews/6_parking_lot_fire_latest.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.2
+    },
+    {
+      "file": "outputs/reviews/3_PPE_Helmet_latest.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.4
+    },
+    {
+      "file": "outputs/reviews/1_forklift_worker_collision_risk_latest.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 1.3
+    },
+    {
+      "file": "outputs/reviews/5_Logistics_Warehouse_latest.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 3.1
+    },
+    {
+      "file": "outputs/reviews/4_hazard_zone_dwell_latest.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 1.3
+    },
+    {
+      "file": "outputs/reviews/2_restricted_zone_intrusion_latest.mp4",
+      "ok": true,
+      "errors": "",
+      "seconds": 0.3
+    }
+  ],
+  "tests": {
+    "main": 358,
+    "backend": 22,
+    "passed": 380
+  },
+  "models": {
+    "hashes_passed": 7,
+    "cpu_smoke_inference_passed": 7,
+    "not_accuracy_evaluation": true
+  },
+  "browser": {
+    "main_videos": 6,
+    "detail_videos": 6,
+    "case_details": 104,
+    "case_detail_errors": 0,
+    "case_camera_filter_counts": {
+      "A1": 2,
+      "A2": 1,
+      "A3": 4,
+      "A4": 5,
+      "B1": 90,
+      "P1": 2
+    },
+    "filter_reentry": "P1 restored; two rows",
+    "camera_review": "P1 checked; A1/A2/B1 kept N; subsequent individual checks succeeded",
+    "console_errors": 0,
+    "logout": "login screen restored",
+    "navigation_observation": "One rapid page sequence unexpectedly remained on CAM06. Retrying cases succeeded. Not established as persistent defect."
+  }
+}

@@ -1,3 +1,4 @@
+# 역할: 사람별 머리 연결과 확대 탐색 동작을 회귀 검증합니다.
 import unittest
 from types import SimpleNamespace
 import numpy as np

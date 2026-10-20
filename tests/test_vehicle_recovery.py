@@ -1,3 +1,4 @@
+# 역할: 현재 프레임 차량 재탐지와 복구 검수 동작을 회귀 검증합니다.
 import unittest
 import numpy as np
 from src.vehicle_recovery import VehicleRecovery

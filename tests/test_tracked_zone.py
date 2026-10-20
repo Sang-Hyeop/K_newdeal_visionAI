@@ -1,3 +1,4 @@
+# 역할: 추적 대상의 구역·체류 연결 동작을 회귀 검증합니다.
 import unittest
 from src.tracked_zone import TrackedZone
 

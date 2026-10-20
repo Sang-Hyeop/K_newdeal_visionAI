@@ -1,3 +1,4 @@
+# 역할: 구역 접근·침범 관측 동작을 회귀 검증합니다.
 import unittest
 from src.zone_access import ZoneAccess
 

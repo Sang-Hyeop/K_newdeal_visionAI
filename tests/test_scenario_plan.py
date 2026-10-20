@@ -1,3 +1,4 @@
+# 역할: 영상별 활성 기능과 확정 시연 계획 동작을 회귀 검증합니다.
 import unittest,numpy as np
 from src.forklift_proximity import ForkliftProximity
 from src.lane_hazard import LaneHazard

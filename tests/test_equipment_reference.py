@@ -1,3 +1,4 @@
+# 역할: 빈 설비 참조 기반 오탐 제외 동작을 회귀 검증합니다.
 import unittest
 import numpy as np
 from unittest.mock import patch

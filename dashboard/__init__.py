@@ -1,3 +1,4 @@
+# 역할: 대시보드 패키지의 실행 함수를 필요할 때 불러옵니다.
 # 시선 대시보드 패키지 (backend_v1 과 같이 폴더에 모음)
 # 실행: 저장소 루트 dashboard.py / dashboard_desktop.py
 #
@@ -15,4 +16,5 @@
 def launch(*args, **kwargs):
     """지연 import — desktop 등 가벼운 진입이 app 전체를 안 끌어오게."""
     from .app import launch as _launch
+
     return _launch(*args, **kwargs)

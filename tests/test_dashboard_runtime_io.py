@@ -1,4 +1,5 @@
-"""Refresh memory/I/O and concurrent conversion regressions without real ffmpeg."""
+# 역할: 로그 재사용·영상 변환·실패 시 보존 동작을 회귀 검증합니다.
+"""로그 재사용·영상 변환·실패 시 보존 동작을 회귀 검증합니다."""
 import json
 import os
 import subprocess

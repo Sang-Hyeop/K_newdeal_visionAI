@@ -1,8 +1,9 @@
-"""Fire status history must remain visible without becoming camera alarm rows."""
+# 역할: 화재 상태 표시와 경보 분리 동작을 회귀 검증합니다.
+"""화재 상태 표시와 경보 분리 동작을 회귀 검증합니다."""
 import unittest
 import pandas as pd
 from dashboard.events import event_to_row
-from dashboard.ui import table_html
+from dashboard.ui import table_html, status_html
 
 
 class FireDisplayTests(unittest.TestCase):
@@ -19,8 +20,10 @@ class FireDisplayTests(unittest.TestCase):
               event_to_row(self.event('repeated_fire_observations',True,4.6))]
         frame=pd.DataFrame(rows)
         self.assertEqual(rows[0]['status'],'확인 중')
-        self.assertTrue(rows[0]['timestamp'].endswith('04.0'))
-        self.assertTrue(rows[1]['timestamp'].endswith('04.6'))
+        from dashboard.config import clock_start
+        self.assertEqual(pd.Timestamp(rows[0]['timestamp']), pd.Timestamp(clock_start()) + pd.Timedelta(seconds=4))
+        self.assertEqual(pd.Timestamp(rows[1]['timestamp']), pd.Timestamp(clock_start()) + pd.Timedelta(seconds=4.6))
+        self.assertEqual(rows[1]['_video_seconds'], 4.6)
         camera=table_html(frame)
         history=table_html(frame,include_fire_status=True)
         self.assertNotIn('반복 관측 확인 중',camera)
@@ -40,3 +43,12 @@ class FireDisplayTests(unittest.TestCase):
         row=event_to_row(self.event('pending_temporal_confirmation'))
         row.update(scenario='ppe',status='미확인',message='기존 PPE 상태 유지')
         self.assertIn('기존 PPE 상태 유지',table_html(pd.DataFrame([row])))
+
+    def test_fire_status_text_follows_table_theme(self):
+        for state in ('화재 의심', '확인 중', '관측 소실', '판정 불가'):
+            with self.subTest(state=state):
+                html = status_html(state)
+                self.assertIn('color:var(--sisun-table-fg)', html)
+                self.assertNotIn('#f8fafc', html)
+                self.assertIn(state, html)
+        self.assertIn('color:#ef4444', status_html('위험'))

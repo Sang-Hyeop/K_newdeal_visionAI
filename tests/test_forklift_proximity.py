@@ -1,3 +1,4 @@
+# 역할: 차량 간 화면상 근접 동작을 회귀 검증합니다.
 import unittest
 from src.forklift_proximity import ForkliftProximity,unreliable_vehicle_pair
 

@@ -1,3 +1,4 @@
+# 역할: 상반신 문맥 안전모 탐색 동작을 회귀 검증합니다.
 import unittest
 from types import SimpleNamespace
 import numpy as np
