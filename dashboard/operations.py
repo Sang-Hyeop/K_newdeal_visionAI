@@ -101,8 +101,7 @@ def operations_html(period="전체"):
         ("평균 최초 확인", elapsed(m["mean_ack_seconds"])),
         ("평균 최초 완료", elapsed(m["mean_done_seconds"])),
     ]
-    out = "<p>저장된 사건 기준 · 반복 감지 기록은 별도 사건으로 세지 않습니다. 오늘 등록은 오늘 재생 중 감지된 사건이며, 같은 사건은 하루 한 번만 셉니다.</p>"
-    out += (
+    out = (
         "<p>집계 갱신: "
         + datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         + " · 최신 값은 새로고침으로 조회</p>"
@@ -119,7 +118,6 @@ def operations_html(period="전체"):
         )
         + "</div>"
     )
-    out += f"<p>처리 시간은 서버 등록 시각부터 최초 처리까지의 실제 경과시간입니다. 확인 {m['ack_samples']}건 / 완료 {m['done_samples']}건만 계산하며, 누락 기록은 제외합니다. 영상 속 사고 발생부터의 대응시간이 아닙니다.</p>"
 
     def bars(title, counts, labels):
         high = max(counts.values(), default=1)
