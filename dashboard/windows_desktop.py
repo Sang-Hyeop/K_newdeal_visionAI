@@ -82,7 +82,7 @@ def healthy():
     try:
         with urllib.request.urlopen(URL + '/config', timeout=1) as response:
             data = json.load(response)
-        return 'components' in data
+        return 'components' in data and '시선' in str(data.get('title', ''))
     except (OSError, ValueError):
         return False
 
@@ -182,11 +182,11 @@ def run():
     server = None
     try:
         if healthy():
-            raise RuntimeError('7860 포트를 다른 대시보드가 사용 중입니다. 해당 프로그램을 먼저 종료해 주세요.')
+            raise RuntimeError(URL + ' 주소를 다른 대시보드가 사용 중입니다. 해당 프로그램을 먼저 종료해 주세요.')
         for process in browser_processes(profile):
             stop_tree(process)
         browser_path()  # 서버를 띄우기 전에 실행 가능 여부를 확인합니다.
-        env = dict(os.environ, SISUN_DESKTOP='1')
+        env = dict(os.environ, SISUN_DESKTOP='1', PYTHONUTF8='1', PYTHONIOENCODING='utf-8')
         server = subprocess.Popen([sys.executable, str(ENTRY), '--server-worker', str(os.getpid()),
                                    str(psutil.Process().create_time())], cwd=ROOT, env=env,
                                   stdout=sys.stdout, stderr=sys.stderr,

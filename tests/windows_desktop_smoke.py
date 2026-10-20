@@ -36,9 +36,37 @@ def start():
         config = json.load(response)
     videos = [c for c in config['components'] if c['type'] == 'video']
     assert len(videos) >= 6, '6개 영상 컴포넌트 누락'
-    with urllib.request.urlopen('http://127.0.0.1:18010/events?limit=1') as response:
-        assert json.load(response)['total'] > 0
     return process, profile
+
+
+def verify_login_and_video():
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(channel='msedge', headless=True)
+        page = browser.new_page()
+        errors = []
+        page.on('pageerror', lambda error: errors.append(str(error)))
+        page.goto(desktop.URL, timeout=60000)
+        page.get_by_placeholder('아이디').fill('김상협')
+        page.get_by_placeholder('비밀번호').fill('1234')
+        page.get_by_role('button', name='로그인', exact=True).click()
+        page.locator('#sisun-side').wait_for(state='visible', timeout=120000)
+        page.wait_for_function("""() => {
+            const panel = [...document.querySelectorAll('.sisun-panel')].find(p => p.offsetParent !== null);
+            const videos = panel ? [...panel.querySelectorAll('video')] : [];
+            return videos.length >= 6 && videos.every(v => v.readyState >= 2);
+        }""", timeout=180000)
+        wait(lambda: len(page.locator('.t2-kpi').all()) >= 6, 'KPI 표시')
+        before = page.locator('.t2-kpi').first.inner_text()
+        page.wait_for_timeout(7000)
+        after = page.locator('.t2-kpi').first.inner_text()
+        assert before != after, '재생 중 KPI가 갱신되지 않습니다.'
+        with urllib.request.urlopen('http://127.0.0.1:18010/events?limit=1') as response:
+            assert json.load(response)['total'] > 0
+        page.screenshot(path=str(ROOT / 'dashboard/data/windows-main.png'), full_page=True)
+        assert not errors, errors
+        browser.close()
+    print('로그인·6영상 재생·KPI 갱신·이벤트 API 검증 통과', flush=True)
 
 
 if __name__ == '__main__':
@@ -46,6 +74,8 @@ if __name__ == '__main__':
     try:
         for cycle in range(2):
             parent, profile = start()
+            if cycle == 0:
+                verify_login_and_video()
             # 같은 실행 중 다시 클릭해도 기존 서버는 유지합니다.
             duplicate = subprocess.run([sys.executable, str(desktop.ENTRY)], timeout=45)
             assert duplicate.returncode == 0 and desktop.healthy()
