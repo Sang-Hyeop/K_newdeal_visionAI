@@ -36,16 +36,52 @@ else {
     Write-Error "실행 대상 없음. 루트에 시선.vbs 가 필요합니다: $Root"
 }
 
-$W = New-Object -ComObject WScript.Shell
-if (Test-Path -LiteralPath $Lnk) { Remove-Item -LiteralPath $Lnk -Force }
-$S = $W.CreateShortcut($Lnk)
-$S.TargetPath = $Target
-$S.Arguments = $Arguments
-$S.WorkingDirectory = $Root
-$S.WindowStyle = 7
-$S.Description = "시선 안전관제"
-$S.IconLocation = $IconLocation
-$S.Save()
+# Unicode 전용 ShellLinkW로 시스템 코드페이지와 무관하게 한글 경로를 저장합니다.
+Add-Type -TypeDefinition @'
+using System;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
+[ComImport, Guid("00021401-0000-0000-C000-000000000046")]
+class SisunShellLink { }
+[ComImport, Guid("000214F9-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+interface ISisunShellLinkW {
+    void GetPath(IntPtr file, int count, IntPtr data, uint flags);
+    void GetIDList(out IntPtr id);
+    void SetIDList(IntPtr id);
+    void GetDescription(IntPtr text, int count);
+    void SetDescription([MarshalAs(UnmanagedType.LPWStr)] string text);
+    void GetWorkingDirectory(IntPtr text, int count);
+    void SetWorkingDirectory([MarshalAs(UnmanagedType.LPWStr)] string path);
+    void GetArguments(IntPtr text, int count);
+    void SetArguments([MarshalAs(UnmanagedType.LPWStr)] string text);
+    void GetHotkey(out short key);
+    void SetHotkey(short key);
+    void GetShowCmd(out int command);
+    void SetShowCmd(int command);
+    void GetIconLocation(IntPtr path, int count, out int index);
+    void SetIconLocation([MarshalAs(UnmanagedType.LPWStr)] string path, int index);
+    void SetRelativePath([MarshalAs(UnmanagedType.LPWStr)] string path, uint reserved);
+    void Resolve(IntPtr window, uint flags);
+    void SetPath([MarshalAs(UnmanagedType.LPWStr)] string path);
+}
+public static class SisunShortcutWriter {
+    public static void Save(string link, string target, string args, string root, string icon, string description) {
+        object instance = new SisunShellLink();
+        try {
+            var shortcut = (ISisunShellLinkW)instance;
+            shortcut.SetPath(target);
+            shortcut.SetArguments(args);
+            shortcut.SetWorkingDirectory(root);
+            shortcut.SetDescription(description);
+            shortcut.SetShowCmd(7);
+            shortcut.SetIconLocation(icon, 0);
+            ((IPersistFile)instance).Save(link, true);
+        } finally { Marshal.FinalReleaseComObject(instance); }
+    }
+}
+'@
+$IconPath = $IconLocation.Substring(0, $IconLocation.LastIndexOf(','))
+[SisunShortcutWriter]::Save($Lnk, $Target, $Arguments, $Root, $IconPath, "시선 안전관제")
 Write-Host "바로가기:" $Lnk
 Write-Host "대상:" $Target
 Write-Host "아이콘:" $IconLocation
