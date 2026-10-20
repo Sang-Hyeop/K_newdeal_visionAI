@@ -56,3 +56,45 @@ class WindowsLockTests(unittest.TestCase):
             finally:
                 first.release()
                 second.release()
+
+    def test_hung_same_project_owner_is_reaped_but_other_python_survives(self):
+        import subprocess
+        import sys
+        import time
+        import psutil
+        with tempfile.TemporaryDirectory(prefix='시선 old owner ') as folder:
+            root = Path(folder)
+            entry = root / 'dashboard_desktop.py'
+            lock_path = root / 'desktop.lock'
+            ready = root / 'ready'
+            entry.write_text(
+                "import msvcrt, pathlib, time\n"
+                "root = pathlib.Path(__file__).parent\n"
+                "stream = (root / 'desktop.lock').open('a+b')\n"
+                "stream.write(b' '); stream.flush(); stream.seek(0)\n"
+                "msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)\n"
+                "(root / 'ready').touch()\n"
+                "time.sleep(300)\n", encoding='utf-8')
+            owner = subprocess.Popen([sys.executable, str(entry)])
+            unrelated = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(300)'])
+            lock = desktop.InstanceLock(lock_path)
+            try:
+                deadline = time.monotonic() + 10
+                while not ready.exists() and time.monotonic() < deadline:
+                    time.sleep(.1)
+                self.assertTrue(ready.exists())
+                self.assertFalse(lock.acquire())
+                future = time.time() + 200
+                with patch.object(desktop, 'ENTRY', entry), \
+                     patch.object(desktop.time, 'time', return_value=future), \
+                     patch.object(desktop, 'healthy', return_value=False):
+                    desktop.recover_unresponsive()
+                owner.wait(timeout=10)
+                self.assertIsNone(unrelated.poll())
+                self.assertTrue(lock.acquire())
+            finally:
+                lock.release()
+                for child in (owner, unrelated):
+                    if child.poll() is None:
+                        child.terminate()
+                    child.wait(timeout=10)

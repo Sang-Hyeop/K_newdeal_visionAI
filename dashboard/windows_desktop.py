@@ -144,9 +144,12 @@ def server_worker(parent_pid, parent_created):
                 parent = psutil.Process(parent_pid)
                 if abs(parent.create_time() - parent_created) > 0.01:
                     break
+                parent.wait(timeout=1)
+                break
+            except psutil.TimeoutExpired:
+                continue
             except psutil.Error:
                 break
-            time.sleep(1)
         for child in psutil.Process().children(recursive=True):
             stop_tree(child)
         os._exit(0)
@@ -226,10 +229,10 @@ def main():
             if '--server-worker' in sys.argv:
                 return server_worker(int(sys.argv[-2]), float(sys.argv[-1]))
             return run()
-        except Exception:
+        except Exception as error:
             import traceback
             traceback.print_exc()
-            if '--server-worker' not in sys.argv:
+            if '--server-worker' not in sys.argv and os.environ.get('SISUN_NO_DIALOG') != '1':
                 import ctypes
-                ctypes.windll.user32.MessageBoxW(0, '시선 실행에 실패했습니다.\n' + str(DATA / 'desktop.log'), '시선', 16)
+                ctypes.windll.user32.MessageBoxW(0, '시선 실행에 실패했습니다.\n' + str(error) + '\n\n로그: ' + str(DATA / 'desktop.log'), '시선', 16)
             return 1

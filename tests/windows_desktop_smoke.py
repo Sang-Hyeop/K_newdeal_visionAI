@@ -9,10 +9,13 @@ import urllib.request
 
 import psutil
 
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 os.environ['SISUN_UI_PORT'] = '17860'
 os.environ['SISUN_API_PORT'] = '18010'
+os.environ['SISUN_NO_DIALOG'] = '1'
 from dashboard import windows_desktop as desktop
 
 
@@ -57,10 +60,17 @@ def verify_login_and_video():
             return videos.length >= 6 && videos.every(v => v.readyState >= 2);
         }""", timeout=180000)
         wait(lambda: len(page.locator('.t2-kpi').all()) >= 6, 'KPI 표시')
+        # 첫 영상 변환을 기다리는 동안 타임라인이 진행될 수 있으므로 준비 후 새로고침합니다.
+        page.locator('.sisun-panel:visible').get_by_role('button', name='새로고침', exact=True).click()
+        page.wait_for_timeout(1500)
         before = page.locator('.t2-kpi').first.inner_text()
-        page.wait_for_timeout(7000)
+        print('KPI before:', repr(before), flush=True)
+        print('Video state:', page.locator('.sisun-panel:visible video').evaluate_all(
+            'vs => vs.map(v => ({time:v.currentTime, paused:v.paused, ready:v.readyState, duration:v.duration}))'), flush=True)
+        page.screenshot(path=str(ROOT / 'dashboard/data/windows-main.png'), full_page=True)
+        wait(lambda: before != page.locator('.t2-kpi').first.inner_text(), '재생 중 KPI 갱신', 40)
         after = page.locator('.t2-kpi').first.inner_text()
-        assert before != after, '재생 중 KPI가 갱신되지 않습니다.'
+        print('KPI after:', repr(after), flush=True)
         with urllib.request.urlopen('http://127.0.0.1:18010/events?limit=1') as response:
             assert json.load(response)['total'] > 0
         page.screenshot(path=str(ROOT / 'dashboard/data/windows-main.png'), full_page=True)
