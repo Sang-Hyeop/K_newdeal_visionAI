@@ -45,3 +45,6 @@ dashboard_data/
 
 # Legacy desktop browser profile; preserve locally, never publish
 /team7_data/
+
+# Windows 프로젝트 전용 Python·가상환경·설치 로그
+.sisun/

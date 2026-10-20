@@ -3,7 +3,12 @@
 # 구현은 dashboard/desktop.py
 # python dashboard_desktop.py
 
-from dashboard.desktop import main
+import os
+
+if os.name == "nt":
+    from dashboard.windows_desktop import main
+else:
+    from dashboard.desktop import main
 
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -1,0 +1,6 @@
+# Windows 자동 설치용: 감지 및 대시보드 실행 환경을 함께 고정합니다.
+-r requirements-runtime.txt
+gradio==6.28.0
+pandas==3.0.5
+imageio-ffmpeg==0.6.0
+psutil==7.2.2

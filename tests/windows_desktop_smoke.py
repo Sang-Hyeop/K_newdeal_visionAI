@@ -1,0 +1,70 @@
+# 역할: Windows 새 설치에서 실제 서버·앱 창의 종료·재실행·강제 종료 복구를 검증합니다.
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+import urllib.request
+
+import psutil
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+os.environ['SISUN_UI_PORT'] = '17860'
+os.environ['SISUN_API_PORT'] = '18010'
+from dashboard import windows_desktop as desktop
+
+
+def wait(predicate, description, seconds=180):
+    end = time.monotonic() + seconds
+    while time.monotonic() < end:
+        if predicate():
+            return
+        time.sleep(0.5)
+    raise RuntimeError('대기 실패: ' + description)
+
+
+def start():
+    process = subprocess.Popen([sys.executable, str(ROOT / 'dashboard_desktop.py')], cwd=ROOT)
+    wait(lambda: desktop.healthy() or process.poll() is not None, '서버 기동')
+    if process.poll() is not None:
+        raise RuntimeError('서버 시작 실패: ' + (ROOT / 'dashboard/data/desktop.log').read_text(encoding='utf-8'))
+    profile = ROOT / 'dashboard/data/sisun_chrome_profile'
+    wait(lambda: bool(desktop.browser_processes(profile)), '실제 Edge/Chrome 앱 창', 40)
+    with urllib.request.urlopen(desktop.URL + '/config') as response:
+        config = json.load(response)
+    videos = [c for c in config['components'] if c['type'] == 'video']
+    assert len(videos) >= 6, '6개 영상 컴포넌트 누락'
+    with urllib.request.urlopen('http://127.0.0.1:18010/events?limit=1') as response:
+        assert json.load(response)['total'] > 0
+    return process, profile
+
+
+if __name__ == '__main__':
+    parent = None
+    try:
+        for cycle in range(2):
+            parent, profile = start()
+            # 같은 실행 중 다시 클릭해도 기존 서버는 유지합니다.
+            duplicate = subprocess.run([sys.executable, str(desktop.ENTRY)], timeout=45)
+            assert duplicate.returncode == 0 and desktop.healthy()
+            for browser in desktop.browser_processes(profile):
+                desktop.stop_tree(browser)
+            assert parent.wait(timeout=30) == 0
+            wait(lambda: not desktop.healthy(), '창 종료 후 서버 종료', 20)
+            print('실제 앱 종료 및 재실행 검증:', cycle + 1, flush=True)
+        parent, profile = start()
+        parent.kill()
+        parent.wait(timeout=10)
+        wait(lambda: not desktop.healthy(), '강제 종료 후 고아 서버 종료', 20)
+        for browser in desktop.browser_processes(profile):
+            desktop.stop_tree(browser)
+        parent, profile = start()
+        for browser in desktop.browser_processes(profile):
+            desktop.stop_tree(browser)
+        assert parent.wait(timeout=30) == 0
+        print('강제 종료 후 재실행 검증 통과', flush=True)
+    finally:
+        if parent and parent.poll() is None:
+            desktop.stop_tree(psutil.Process(parent.pid))
