@@ -19,7 +19,8 @@ URL = 'http://127.0.0.1:' + os.environ.get('SISUN_UI_PORT', '7860')
 def owned_launcher(process):
     """PID만 믿지 않고 실제 실행 파일의 프로젝트 경로까지 확인합니다."""
     try:
-        return any(Path(arg).resolve() == ENTRY for arg in process.cmdline()[1:])
+        args = [arg for arg in process.cmdline()[1:] if not arg.startswith('-')]
+        return bool(args) and Path(args[0]).resolve() == ENTRY
     except (psutil.Error, OSError, ValueError):
         return False
 
@@ -126,7 +127,7 @@ def recover_unresponsive():
                 continue
             if '--server-worker' in process.cmdline():
                 continue
-            if time.time() - process.create_time() < 150:
+            if time.time() - process.create_time() < 180:
                 continue
             if healthy():
                 return
@@ -151,8 +152,12 @@ def server_worker(parent_pid, parent_created):
         os._exit(0)
     threading.Thread(target=watch_parent, daemon=True).start()
     from dashboard.app import launch
-    launch()
-    return 0
+    try:
+        launch()
+        return 0
+    finally:
+        for child in psutil.Process().children(recursive=True):
+            stop_tree(child)
 
 
 def run():
@@ -160,7 +165,9 @@ def run():
     profile = DATA / 'sisun_chrome_profile'
     lock = InstanceLock(DATA / 'desktop.lock')
     if not lock.acquire():
-        deadline = time.monotonic() + 125
+        if not healthy():
+            recover_unresponsive()
+        deadline = time.monotonic() + 185
         while time.monotonic() < deadline:
             if healthy():
                 open_window(profile)
