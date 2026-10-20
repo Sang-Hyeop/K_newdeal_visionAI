@@ -1,6 +1,6 @@
 ﻿# Windows 공용: 바탕화면에 시선 바로가기 생성 (프로젝트 상대 경로만 사용)
 $ErrorActionPreference = "Stop"
-$Root = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..\..\..")).Path
+$Root = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..\..\..")).ProviderPath
 $Ico = Join-Path $Root "dashboard\packaging\icons\sisun.ico"
 $IconLocation = Join-Path $env:SystemRoot "System32\shell32.dll"
 $IconLocation += ",0"
