@@ -3,7 +3,7 @@
 import unittest
 import pandas as pd
 from dashboard.events import event_to_row
-from dashboard.ui import table_html
+from dashboard.ui import table_html, status_html
 
 
 class FireDisplayTests(unittest.TestCase):
@@ -41,3 +41,12 @@ class FireDisplayTests(unittest.TestCase):
         row=event_to_row(self.event('pending_temporal_confirmation'))
         row.update(scenario='ppe',status='미확인',message='기존 PPE 상태 유지')
         self.assertIn('기존 PPE 상태 유지',table_html(pd.DataFrame([row])))
+
+    def test_fire_status_text_follows_table_theme(self):
+        for state in ('화재 의심', '확인 중', '관측 소실', '판정 불가'):
+            with self.subTest(state=state):
+                html = status_html(state)
+                self.assertIn('color:var(--sisun-table-fg)', html)
+                self.assertNotIn('#f8fafc', html)
+                self.assertIn(state, html)
+        self.assertIn('color:#ef4444', status_html('위험'))

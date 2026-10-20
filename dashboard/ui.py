@@ -505,7 +505,7 @@ def title_html(text):
 
 def status_html(st):
     st = str(st or "")
-    fg = STATUS_FG.get(st, "#f8fafc")
+    fg = STATUS_FG.get(st, "var(--sisun-table-fg)")
     return f"<span style='color:{fg} !important;font-weight:800'>{st}</span>"
 
 
