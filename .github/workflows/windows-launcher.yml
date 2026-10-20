@@ -8,6 +8,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile both VBS scripts and execute the actual launcher
+        shell: powershell
+        run: python -m unittest discover -s tests -p test_windows_launcher_encoding.py -v
       - name: Check Unicode encodings and PowerShell 5.1 syntax
         shell: powershell
         run: |
