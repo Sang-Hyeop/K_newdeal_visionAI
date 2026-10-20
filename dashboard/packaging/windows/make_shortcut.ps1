@@ -65,6 +65,18 @@ interface ISisunShellLinkW {
     void SetPath([MarshalAs(UnmanagedType.LPWStr)] string path);
 }
 public static class SisunShortcutWriter {
+    public static void Verify(string link, string root, string args) {
+        object instance = new SisunShellLink();
+        IntPtr buffer = Marshal.AllocHGlobal(65536);
+        try {
+            ((IPersistFile)instance).Load(link, 0);
+            var shortcut = (ISisunShellLinkW)instance;
+            shortcut.GetWorkingDirectory(buffer, 32768);
+            if (Marshal.PtrToStringUni(buffer) != root) throw new InvalidOperationException("Wrong working directory");
+            shortcut.GetArguments(buffer, 32768);
+            if (Marshal.PtrToStringUni(buffer) != args) throw new InvalidOperationException("Wrong launcher arguments");
+        } finally { Marshal.FreeHGlobal(buffer); Marshal.FinalReleaseComObject(instance); }
+    }
     public static void Save(string link, string target, string args, string root, string icon, string description) {
         object instance = new SisunShellLink();
         try {
