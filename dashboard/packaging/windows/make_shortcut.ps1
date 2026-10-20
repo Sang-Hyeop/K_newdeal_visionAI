@@ -1,9 +1,13 @@
-# Windows 공용: 바탕화면에 시선 바로가기 생성 (프로젝트 상대 경로만 사용)
+﻿# Windows 공용: 바탕화면에 시선 바로가기 생성 (프로젝트 상대 경로만 사용)
 $ErrorActionPreference = "Stop"
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..")).Path
 $Ico = Join-Path $Root "dashboard\packaging\icons\sisun.ico"
-if (-not (Test-Path $Ico)) {
-    Write-Error "아이콘 없음: $Ico"
+$IconLocation = Join-Path $env:SystemRoot "System32\shell32.dll"
+$IconLocation += ",0"
+if (Test-Path -LiteralPath $Ico -PathType Leaf) {
+    $IconLocation = $Ico + ",0"
+} else {
+    Write-Warning "시선 아이콘이 없어 Windows 기본 아이콘을 사용합니다: $Ico"
 }
 $Desktop = [Environment]::GetFolderPath("Desktop")
 $Lnk = Join-Path $Desktop "시선.lnk"
@@ -32,8 +36,8 @@ $S.TargetPath = $Target
 $S.WorkingDirectory = $Root
 $S.WindowStyle = 7
 $S.Description = "시선 안전관제"
-$S.IconLocation = ($Ico + ",0")
+$S.IconLocation = $IconLocation
 $S.Save()
 Write-Host "바로가기:" $Lnk
 Write-Host "대상:" $Target
-Write-Host "아이콘:" $Ico
+Write-Host "아이콘:" $IconLocation
