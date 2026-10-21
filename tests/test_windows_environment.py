@@ -19,7 +19,7 @@ class EnvironmentTests(unittest.TestCase):
     def test_matching_pins_require_dependency_and_import_checks(self):
         pins = {}
         for name in ('requirements-runtime.txt', 'requirements-windows.txt'):
-            for line in (ROOT / name).read_text().splitlines():
+            for line in (ROOT / name).read_text(encoding='utf-8').splitlines():
                 if '==' in line and not line.startswith('#'):
                     key, value = line.split('==')
                     pins[key.strip()] = value.strip()

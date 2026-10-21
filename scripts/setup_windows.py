@@ -20,7 +20,7 @@ def compatible_environment():
     from importlib.metadata import version
     from pip._vendor.packaging.requirements import Requirement
     for filename in ('requirements-runtime.txt', 'requirements-windows.txt'):
-        for line in (ROOT / filename).read_text().splitlines():
+        for line in (ROOT / filename).read_text(encoding='utf-8').splitlines():
             line = line.strip()
             if not line or line.startswith(('#', '-r')):
                 continue
