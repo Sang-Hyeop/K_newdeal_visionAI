@@ -22,6 +22,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python -m unittest discover -s tests -p test_python_launcher.py -v
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s tests -p test_python_shortcut.py -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Compile both VBS scripts and execute the actual launcher
         shell: powershell
         run: python -m unittest discover -s tests -p test_windows_launcher_encoding.py -v
