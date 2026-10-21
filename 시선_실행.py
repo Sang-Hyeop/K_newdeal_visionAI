@@ -15,6 +15,14 @@ SETUP = ROOT / 'scripts/setup_windows.py'
 ENV = dict(os.environ, PYTHONUTF8='1', PYTHONIOENCODING='utf-8')
 
 
+def announce(*values, **options):
+    """영문 Windows 콘솔에서도 한글 안내를 UTF-8로 출력합니다."""
+    stream = sys.stdout
+    if stream is not None and hasattr(stream, 'reconfigure'):
+        stream.reconfigure(encoding='utf-8', errors='backslashreplace')
+    print(*values, **options)
+
+
 def capture(command):
     """환경 검색 실패나 응답 지연은 다음 후보 검색으로 넘깁니다."""
     try:
@@ -61,7 +69,7 @@ def candidates():
 
 
 def probe(python):
-    print('환경 검사:', python, flush=True)
+    announce('환경 검사:', python, flush=True)
     try:
         return subprocess.run([str(python), str(SETUP), '--probe'], cwd=ROOT,
                               env=ENV, timeout=90).returncode == 0
@@ -87,11 +95,11 @@ def prepare():
         except (OSError, ValueError):
             installed = False
         if not installed:
-            print('실행 자료와 영상 준비 중입니다. 창을 닫지 마세요.', flush=True)
+            announce('실행 자료와 영상 준비 중입니다. 창을 닫지 마세요.', flush=True)
             run([python, SETUP, '--reuse'])
             ready.write_text(json.dumps(expected), encoding='utf-8')
         return python
-    print('호환되는 환경이 없어 기존 설치기로 전용 환경을 준비합니다.', flush=True)
+    announce('호환되는 환경이 없어 기존 설치기로 전용 환경을 준비합니다.', flush=True)
     powershell = Path(os.environ['SystemRoot']) / 'System32/WindowsPowerShell/v1.0/powershell.exe'
     run([powershell, '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File',
          ROOT / 'dashboard/packaging/windows/install.ps1'])
@@ -109,7 +117,7 @@ def main():
         sys.stdout = open('CONOUT$', 'w', encoding='utf-8', buffering=1)
         sys.stderr = sys.stdout
         sys.stdin = open('CONIN$', 'r', encoding='utf-8')
-    print('시선 실행을 시작합니다. 환경 확인 결과가 이 창에 표시됩니다.', flush=True)
+    announce('시선 실행을 시작합니다. 환경 확인 결과가 이 창에 표시됩니다.', flush=True)
     if not (ROOT / 'dashboard_desktop.py').is_file() or not SETUP.is_file():
         raise RuntimeError('이 파일만 옮기면 실행할 수 없습니다. 프로젝트 ZIP 전체를 압축 해제하세요.')
     if os.name != 'nt':
@@ -117,7 +125,7 @@ def main():
         return
     STATE.mkdir(exist_ok=True)
     python = prepare()
-    print('시선 실행 환경:', python, flush=True)
+    announce('시선 실행 환경:', python, flush=True)
     # 기존 앱 진입점을 그대로 사용하여 중복 실행·종료·복구 동작을 유지합니다.
     run([python, ROOT / 'dashboard_desktop.py'])
 
@@ -127,7 +135,7 @@ if __name__ == '__main__':
         main()
     except Exception:
         details = traceback.format_exc()
-        print(details, flush=True)
+        announce(details, flush=True)
         try:
             STATE.mkdir(exist_ok=True)
             (STATE / 'python-launch-error.log').write_text(details, encoding='utf-8')

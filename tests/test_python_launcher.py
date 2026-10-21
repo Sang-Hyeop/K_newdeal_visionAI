@@ -1,5 +1,6 @@
 """단일 Python 실행 파일의 환경 선택과 기존 앱 연결을 검증합니다."""
 import importlib.util
+import io
 from pathlib import Path
 import subprocess
 import tempfile
@@ -12,6 +13,13 @@ spec.loader.exec_module(launcher)
 
 
 class LauncherTests(unittest.TestCase):
+    def test_korean_progress_with_western_windows_console(self):
+        output = io.BytesIO()
+        stream = io.TextIOWrapper(output, encoding='cp1252')
+        with patch.object(launcher.sys, 'stdout', stream):
+            launcher.announce('환경 검사', flush=True)
+        self.assertEqual(output.getvalue().decode('utf-8').strip(), '환경 검사')
+
     def test_probe_timeout_is_not_success(self):
         with patch.object(launcher.subprocess, 'run', side_effect=subprocess.TimeoutExpired('python', 90)):
             self.assertFalse(launcher.probe(Path('python.exe')))
