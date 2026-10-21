@@ -57,6 +57,8 @@ class WindowsLauncherExecutionTests(unittest.TestCase):
             script = root / '시선.vbs'
             script.write_bytes((ROOT / '시선.vbs').read_bytes())
             marker = root / 'python-started.txt'
+            subprocess.run([sys.executable, '-m', 'venv', '--without-pip', str(root / '.sisun/venv')], check=True)
+            (root / '.sisun/venv/sisun-install.json').write_text('{}')
             (root / 'dashboard_desktop.py').write_text(
                 "from pathlib import Path\n"
                 "Path(__file__).with_name('python-started.txt').write_text('started')\n",

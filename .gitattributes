@@ -1,0 +1,10 @@
+# 확정 설정·코드 해시가 Windows 자동 줄바꿈 변환으로 달라지지 않게 보존합니다.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.vbs binary
+*.ico binary
+*.icns binary
+*.png binary
+*.mp4 binary
+*.pt binary
