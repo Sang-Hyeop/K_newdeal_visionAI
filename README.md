@@ -43,7 +43,7 @@ ZIP/clone 후 **한 번만** 설치(어느 PC든 동일): macOS는 `macOS용_시
 
 ## 새 PC 설치
 
-Windows 10/11 x64에서는 ZIP 전체를 새 폴더에 압축 해제한 뒤 **`시선_설치.cmd`**를 더블클릭합니다. 인터넷 연결이 필요하며 첫 설치에 Python·라이브러리·모델·리뷰 자료를 내려받습니다. 별도 Python/Conda 수동 설치는 필요하지 않습니다. 설치 완료 후 바탕화면 **시선**으로 실행합니다. 프로젝트 폴더는 삭제하거나 옮기지 않습니다. 기존 `Windows용_시선설치.vbs`도 같은 설치를 실행합니다.
+Windows 10/11 x64에서는 ZIP 전체를 새 폴더에 압축 해제한 뒤 **`시선_설치.cmd`**를 더블클릭합니다. 기존 Python 3.11 64비트가 필요합니다. safety 환경을 먼저 검사하며, 호환되지 않으면 기존 Python으로 전용 가상환경을 준비합니다. 필요한 Python이 없으면 설치 안내만 표시하고 종료하며 Python 자체를 자동 설치하지 않습니다. 첫 준비에 라이브러리·모델·리뷰 자료를 내려받으므로 인터넷 연결이 필요합니다. 설치 완료 후 바탕화면 **시선**으로 실행합니다. 프로젝트 폴더는 삭제하거나 옮기지 않습니다. 기존 `Windows용_시선설치.vbs`도 같은 설치를 실행합니다.
 
 
 backend_v1/API_SPEC.md와 docs/github-team-quickstart.md가 팀원 연동 안내입니다. 신규 PC의 모델 설치는 `python scripts/setup_runtime.py`, 감지 라이브러리는 `python -m pip install -r requirements-runtime.txt`입니다.

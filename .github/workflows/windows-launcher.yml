@@ -76,7 +76,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           path: '시선 [test] project'
-      - name: Install Python, dependencies, runtime assets and shortcut
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prepare dependencies, runtime assets and shortcut using installed Python
         shell: cmd
         run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%CD%\dashboard\packaging\windows\install.ps1"
       - name: Install browser verification dependency

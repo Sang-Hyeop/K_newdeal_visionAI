@@ -9,6 +9,15 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 
 
+class PythonInstallPolicyTests(unittest.TestCase):
+    def test_installer_never_downloads_or_installs_python(self):
+        source = (ROOT / 'dashboard/packaging/windows/install.ps1').read_text(encoding='utf-8-sig')
+        for forbidden in ('python.org/ftp', 'DownloadFile', 'InstallAllUsers=', 'python-3.11.9-amd64.exe'):
+            self.assertNotIn(forbidden, source)
+        self.assertIn('Python을 설치해주세요', source)
+        self.assertIn('if (-not $Python)', source)
+
+
 @unittest.skipUnless(os.name == 'nt', 'Windows PowerShell 5.1 실행 검사')
 class InstallWaitTests(unittest.TestCase):
     def execute(self, code):
