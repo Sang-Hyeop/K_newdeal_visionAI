@@ -1,10 +1,10 @@
-# GitHub 팀 실행 자료 사용하기 — 최종 2026-10-20
+# GitHub 팀 실행 자료 사용하기 — 최종 2026-10-21
 
 코드·설정·원본 영상6개는 저장소에, 확정 모델7개·최신 리뷰6개·이벤트·진단 캐시·조회 DB는 [runtime-2026-10-20](https://github.com/Sang-Hyeop/K_newdeal_visionAI/releases/tag/runtime-2026-10-20)에 있습니다. 개인 조치 기록·접속키·브라우저 프로필·학습 원본은 실행 배포에 포함하지 않습니다.
 
 ## 받을 브랜치
 
-Windows 설치·재실행 보완 PR #23 병합 전에는 `fix/windows-first-run-and-restart`, 병합 후에는 `main`을 받습니다. GitHub Code → Download ZIP으로 받고 새 폴더에 ZIP 전체를 압축 해제합니다.
+Windows 최종 실행 파일 정리본은 `fix/windows-final-entrypoints`에서 받습니다. 해당 PR 병합 후에는 `main`에서 받습니다. GitHub Code → Download ZIP으로 받고 새 폴더에 ZIP 전체를 압축 해제합니다.
 
 ## Windows 자동 설치·실행
 
@@ -16,7 +16,7 @@ Windows 10/11 x64와 Edge 또는 Chrome, 인터넷 연결이 필요합니다. �
 
 ## 설치와 검증
 
-Python3.11 이상의 가상환경을 사용합니다. 기존 safety 환경이 있으면 먼저 활성화합니다.
+Windows 설치기는 Python 3.11 64비트를 사용합니다. 수동 실행도 확정 환경인 Python 3.11을 권장합니다. 기존 safety 환경이 있으면 먼저 활성화합니다.
 
 ```sh
 python --version
