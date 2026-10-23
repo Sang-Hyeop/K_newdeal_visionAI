@@ -87,12 +87,12 @@ _DISPLAY_START = datetime.now().replace(microsecond=0)
 
 
 def clock_start():
-    """현재 재생 세션의 표시 시작 시각을 고정해 반환합니다."""
+    """시선 앱 실행 시 고정한 이벤트 표시 기준 시각을 반환합니다."""
     return _DISPLAY_START
 
 
 def reset_clock_start(now=None):
-    """로그인·명시적 새로고침 시 현재 시각으로 표시 기준을 갱신합니다."""
+    """앱 초기화 시 이벤트 표시 기준 시각을 지정합니다."""
     global _DISPLAY_START
     _DISPLAY_START = (now or datetime.now()).replace(microsecond=0)
     return _DISPLAY_START

@@ -111,7 +111,11 @@ class CaseService:
         for line in Path(path).read_text(encoding="utf-8").splitlines():
             if line.strip():
                 row = json.loads(line)
-                if not isinstance(row, dict) or not row.get("link_key"):
+                # 초기 버전의 episode_id 전용 이력도 원문 보존합니다.
+                # 사건에 추정 연결하지 않으며, 로컬과 동일하게 상태 집계에서는 제외됩니다.
+                legacy = (isinstance(row, dict) and row.get("episode_id")
+                          and row.get("operator_at") and row.get("next_status") in ar.RESPONSE_STATES)
+                if not isinstance(row, dict) or not (row.get("link_key") or legacy):
                     raise ValueError("잘못된 원본 기록")
                 rows.append(row)
         with sqlite3.connect(self.db) as connection:

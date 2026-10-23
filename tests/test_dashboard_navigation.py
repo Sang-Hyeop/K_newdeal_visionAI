@@ -49,6 +49,40 @@ assert.equal(elements['sisun-side-A1'].children[0].textContent,'✓');
 markSideNeed('A1');assert.equal(__sisunSideNeed.A1,true);
 ''')
 
+    def test_main_video_keeps_playing_when_hidden_and_does_not_rewind(self):
+        from dashboard.style import BOOT_JS
+        start = BOOT_JS.index('  var syncCctv =')
+        end = BOOT_JS.index('  var tick =', start)
+        self.run_js('''
+const assert=require('node:assert/strict');let shown=true,pauses=0,plays=0;
+const seenOn=new WeakMap();const gateOn=()=>false;
+const video={currentTime:12,paused:false,setAttribute(){},
+closest(s){return s==='.sisun-wall-main'?{}:null},
+getBoundingClientRect(){return {width:shown?640:0,height:shown?360:0}},
+pause(){pauses++;this.paused=true},play(){plays++;this.paused=false;return Promise.resolve()}};
+const allOf=()=>[video];
+''' + BOOT_JS[start:end] + '''
+syncCctv();shown=false;syncCctv();shown=true;syncCctv();
+assert.equal(pauses,0);assert.equal(video.currentTime,12);
+video.paused=true;shown=false;syncCctv();assert.equal(plays,1);
+''')
+
+    def test_mute_label_only_controls_sound(self):
+        from dashboard.style import BOOT_JS
+        self.assertNotIn('알림 끄기</button>', BOOT_JS)
+        self.assertIn('소리 끄기</button>', BOOT_JS)
+        start = BOOT_JS.index('  var syncMuteButton =')
+        end = BOOT_JS.index('  var setBellMuted =', start)
+        self.run_js('''
+const assert=require('node:assert/strict');let muted=false;
+const button={classList:{toggle(){}},setAttribute(){}};
+const document={getElementById(){return {querySelector(){return button}}}};
+const isBellMuted=()=>muted;
+''' + BOOT_JS[start:end] + '''
+syncMuteButton();assert.equal(button.textContent,'소리 끄기');
+muted=true;syncMuteButton();assert.equal(button.textContent,'소리 켜기');
+''')
+
     def test_detached_audio_finishes_and_old_callback_cannot_stop_new_audio(self):
         from dashboard.style import BOOT_JS
         start=BOOT_JS.index('  var __sisunSoundPlayed =')
@@ -82,6 +116,61 @@ assert.equal(typeof els['cases-all'].onclick,'function');els['cases-all'].onclic
 ''')
 
 class DelayedMainStartTests(unittest.TestCase):
+    def test_login_and_refresh_preserve_app_start_timestamp(self):
+        from dashboard import config
+        previous = dict(app._ALERT_BUS)
+        base = config.clock_start()
+        try:
+            with patch.object(app, '_ensure_clip', return_value=None), patch.object(app, '_existing', return_value=None), patch.object(app, 'reset_notify_state'), patch.object(app, 'load_df', return_value=None):
+                demo = app.make_main(CAMERAS)
+                demo._kpi_new_session()
+                demo._live_begin()
+                refresh = next(fn.fn for fn in demo.fns.values() if getattr(fn.fn, '__name__', '') == 'refresh')
+                refresh()
+                self.assertEqual(config.clock_start(), base)
+        finally:
+            app._ALERT_BUS.clear()
+            app._ALERT_BUS.update(previous)
+
+    def test_global_monitor_counts_without_main_page_timer(self):
+        previous = dict(app._ALERT_BUS)
+        frame = pd.DataFrame([{'area': 'A1', '_video_seconds': 4}, {'area': 'A1', '_video_seconds': 20}])
+        try:
+            app._ALERT_BUS['on'] = True
+            with patch.object(app, '_alert_bus_tick', return_value='notifications'), patch.object(app, 'get_df', return_value=frame), patch.object(app, 'kpi_html', side_effect=len):
+                with patch.object(app, '_alert_bus_elapsed', return_value=8):
+                    self.assertEqual(app._global_monitor_tick(), ('notifications', 1))
+                with patch.object(app, '_alert_bus_elapsed', return_value=25):
+                    self.assertEqual(app._global_monitor_tick(), ('notifications', 2))
+        finally:
+            app._ALERT_BUS.clear()
+            app._ALERT_BUS.update(previous)
+
+    def test_main_counts_while_other_page_has_no_video_playheads(self):
+        previous = dict(app._ALERT_BUS)
+        frame = pd.DataFrame([
+            {'area': 'A1', '_video_seconds': 4},
+            {'area': 'A1', '_video_seconds': 20},
+        ])
+        try:
+            with patch.object(app, '_ensure_clip', return_value=None), patch.object(app, '_existing', return_value=None), patch.object(app, 'reset_notify_state'), patch.object(app, 'kpi_html', side_effect=lambda d: 0 if d is None else len(d)), patch.object(app, 'get_df', return_value=frame), patch.object(app, 'danger_overlay_updates', return_value=()):
+                demo = app.make_main(CAMERAS)
+                demo._live_begin()
+                app._alert_bus_start()
+                stopped = demo._live_stop()
+                self.assertTrue(stopped[len(CAMERAS)])
+                self.assertTrue(stopped[-1]['active'])
+                tick = next(fn.fn for fn in demo.fns.values() if getattr(fn.fn, '__name__', '') == 'tick')
+                with patch.object(app, '_alert_bus_elapsed', return_value=8):
+                    self.assertEqual(tick(True, {}, True)[0], 1)
+                with patch.object(app, '_alert_bus_elapsed', return_value=25):
+                    self.assertEqual(tick(True, {}, True)[0], 2)
+                with patch.object(app, '_alert_bus_elapsed', return_value=30):
+                    self.assertEqual(tick(True, {'A1': 0}, True)[0], 2)
+        finally:
+            app._ALERT_BUS.clear()
+            app._ALERT_BUS.update(previous)
+
     def test_first_playhead_after_initial_window_does_not_freeze_kpi(self):
         from dashboard.config import clock_start
         previous = dict(app._ALERT_BUS)
@@ -99,6 +188,19 @@ class DelayedMainStartTests(unittest.TestCase):
 
 class MainReturnResetTests(unittest.TestCase):
     run_js = BrowserLogicTests.run_js
+    def test_remounted_main_restores_elapsed_position_without_resetting_notices(self):
+        from dashboard.style import BOOT_JS
+        start = BOOT_JS.index('    // Gradio가 숨긴 페이지')
+        end = BOOT_JS.index('    // Gradio re-creates', start)
+        self.run_js('''
+const assert=require('node:assert/strict');const window={};let played=0,removed=0;
+const video={duration:21,readyState:2,currentTime:0,play(){played++;return Promise.resolve()}};
+const marker={getAttribute(k){return k==='data-token'?'resume-1':'30'},remove(){removed++}};
+const document={querySelectorAll(){return [marker]},getElementById(){return {querySelectorAll(){return [video]}}}};
+''' + BOOT_JS[start:end] + '''
+assert.ok(video.currentTime>=9 && video.currentTime<10);assert.equal(played,1);assert.equal(removed,1);
+''')
+
     def test_remounted_restart_marker_does_not_clear_unreviewed_cameras(self):
         from dashboard.style import BOOT_JS
         start = BOOT_JS.index('    // Gradio re-creates the stored HTML')
