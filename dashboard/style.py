@@ -1725,6 +1725,12 @@ BOOT_JS = """
       var box = v.getBoundingClientRect();
       var on = box.width > 8 && box.height > 8;
       var was = seenOn.get(v) === true;
+      // 메인 관제는 다른 탭을 보더라도 재생을 유지한다. 돌아올 때 되감지 않는다.
+      if (v.closest(".sisun-wall-main")) {
+        if (v.paused) v.play().catch(function(){});
+        seenOn.set(v, true);
+        return;
+      }
       if (on) {
         // 창 축소·리사이즈 후 멈춘 영상 재개 (처음 보일 때만 처음으로)
         if (!was) {
@@ -2255,21 +2261,21 @@ BOOT_JS = """
     var muteBtn = rail && rail.querySelector(".sisun-rail-mute-btn");
     if (!muteBtn) return;
     var muted = isBellMuted();
-    muteBtn.textContent = muted ? "알림 켜기" : "알림 끄기";
+    muteBtn.textContent = muted ? "소리 켜기" : "소리 끄기";
     muteBtn.classList.toggle("is-muted", muted);
     muteBtn.setAttribute("aria-pressed", muted ? "true" : "false");
   };
   var setBellMuted = function(on) {
     window.__sisunBellMuted = !!on;
-    // 알림 끄기 = 소리 끔, 알림 켜기 = 소리 다시 켬
+    // 소리만 제어한다. 알림 목록·배지·사건 기록은 계속 갱신한다.
     window.__sisunSound = !on;
     try { sessionStorage.removeItem("sisun-bell-muted"); } catch (e) {}
     var wrap = document.getElementById("sisun-bell-wrap");
     var btn = wrap && wrap.querySelector(".sisun-bell-btn");
     if (btn) {
       btn.classList.toggle("is-muted", !!on);
-      btn.title = on ? "알림 목록 (꺼짐)" : "알림 목록";
-      btn.setAttribute("aria-label", on ? "알림 목록 (꺼짐)" : "알림 목록");
+      btn.title = on ? "알림 목록 (소리 꺼짐)" : "알림 목록";
+      btn.setAttribute("aria-label", on ? "알림 목록 (소리 꺼짐)" : "알림 목록");
     }
     syncMuteButton();
     if (on) {
@@ -2561,7 +2567,7 @@ BOOT_JS = """
       rail.innerHTML =
         "<div class='sisun-rail-head'><span>운영 경보</span>" +
         "<div class='sisun-rail-actions'>" +
-        "<button type='button' class='sisun-rail-mute-btn'>알림 끄기</button>" +
+        "<button type='button' class='sisun-rail-mute-btn'>소리 끄기</button>" +
         "</div></div>" +
         "<div class='sisun-rail-list'></div>";
       document.body.appendChild(rail);
@@ -2570,7 +2576,7 @@ BOOT_JS = """
       if (head) {
         var actions = document.createElement("div");
         actions.className = "sisun-rail-actions";
-        actions.innerHTML = "<button type='button' class='sisun-rail-mute-btn'>알림 끄기</button>";
+        actions.innerHTML = "<button type='button' class='sisun-rail-mute-btn'>소리 끄기</button>";
         head.appendChild(actions);
       }
     }
@@ -2624,7 +2630,7 @@ BOOT_JS = """
     var wrapBtn = wrap.querySelector(".sisun-bell-btn");
     if (wrapBtn) {
       wrapBtn.classList.toggle("is-muted", isBellMuted());
-      wrapBtn.title = isBellMuted() ? "알림 목록 (꺼짐)" : "알림 목록";
+      wrapBtn.title = isBellMuted() ? "알림 목록 (소리 꺼짐)" : "알림 목록";
     }
     if (isBellMuted()) silenceBeeps();
     setRailOpen(isRailOpen());
@@ -2786,6 +2792,28 @@ BOOT_JS = """
     try { resetSideNeeds(); } catch (e4) {}
   };
   var drainToastPayloads = function() {
+    // Gradio가 숨긴 페이지의 video DOM을 제거한 경우 세션 진행 위치로 복원한다.
+    document.querySelectorAll(".sisun-resume-main").forEach(function(marker) {
+      var token = marker.getAttribute("data-token");
+      if (token === window.__sisunLastResumeToken) return;
+      var elapsed = Number(marker.getAttribute("data-elapsed"));
+      var wall = document.getElementById("sisun-wall");
+      var videos = wall && wall.querySelectorAll("video");
+      if (!videos || !videos.length || !Number.isFinite(elapsed)) return;
+      window.__sisunLastResumeToken = token;
+      var requestedAt = Date.now();
+      videos.forEach(function(video) {
+        var resume = function() {
+          if (!Number.isFinite(video.duration) || video.duration <= 0) return;
+          video.currentTime = (elapsed + (Date.now() - requestedAt) / 1000) % video.duration;
+          var p = video.play();
+          if (p && p.catch) p.catch(function(){});
+        };
+        if (video.readyState >= 1) resume();
+        else video.addEventListener("loadedmetadata", resume, {once:true});
+      });
+      marker.remove();
+    });
     // Gradio re-creates the stored HTML when returning to main. A restart
     // marker is a one-shot command, not a command to repeat on every mount.
     var resetMarkers = document.querySelectorAll(".sisun-restart-videos");
@@ -2817,7 +2845,7 @@ BOOT_JS = """
         try { node.remove(); } catch (e2) {}
       });
     }
-    // 알림 끄기: 현재음 즉시 중지 + 대기 오디오 id 소비(켜도 몰아 재생 안 함)
+    // 소리 끄기: 현재음 즉시 중지 + 대기 오디오 id 소비(켜도 몰아 재생 안 함)
     if (soundOff()) {
       silenceBeeps();
       return;
@@ -2940,9 +2968,9 @@ BOOT_JS = """
         "<span class='sisun-case-badge st-" + caseEsc(st) + "'>" + caseEsc(RESP_LABEL[st] || st) + "</span>" +
         "<span>" + caseEsc(c.cam_code || c.cam_id || "") + "</span>" +
         "<span>" + caseEsc(String(c.title || "").replace(/^(위험|주의)\\s*·\\s*/, "")) + "</span></div>" +
-        "<div class='r2'>최초 " + caseEsc(c.event_first_clock || "—") +
+        "<div class='r2'>영상 " + caseEsc(c.video_first_position || "시점 확인 불가") +
         " · 담당 " + caseEsc(c.assigned_to || "—") +
-        " · 처리 " + caseEsc(c.operator_at || "—") +
+        " · 최근 처리 " + caseEsc(c.operator_at || "없음") +
         " · 관련 " + caseEsc(String(c.related_count || 0)) + "건</div></div>";
     }).join("");
     el.querySelectorAll(".sisun-case-row").forEach(function(row) {
@@ -2964,7 +2992,7 @@ BOOT_JS = """
     var at = h.operator_at || "";
     var who = h.operator || "";
     if (kind === "case_open") {
-      return caseEsc(at + " · 배정 " + (h.assigned_to || ""));
+      return caseEsc(at + " · 최초 사건 등록 / 담당자 배정 " + (h.assigned_to || ""));
     }
     if (kind === "reopen") {
       return caseEsc(at + " · " + (who || "system") + " — 재확인(확인 전)");
@@ -3015,8 +3043,10 @@ BOOT_JS = """
           "<span>대응 상태</span><span>" + caseEsc(RESP_LABEL[st] || st) + "</span>" +
           "<span>배정 담당자</span><span>" + caseEsc(s.assigned_to || "—") + "</span>" +
           "<span>최근 처리자</span><span>" + caseEsc(s.last_operator || "—") + "</span>" +
-          "<span>최초 발생</span><span>영상 기준 " + caseEsc(s.event_first_clock || "—") + "</span>" +
-          "<span>최근 관측</span><span>영상 기준 " + caseEsc(s.event_last_clock || "—") + "</span>" +
+          "<span>영상 최초 시점</span><span>" + caseEsc(s.video_first_position || "확인 불가") + "</span>" +
+          "<span>영상 최근 시점</span><span>" + caseEsc(s.video_last_position || "확인 불가") + "</span>" +
+          "<span>이번 재생 기준 발생</span><span>" + caseEsc(s.playback_first_at || "현재 재생에서 관측 안 됨") + "</span>" +
+          "<span>이번 재생 기준 최근</span><span>" + caseEsc(s.playback_last_at || "현재 재생에서 관측 안 됨") + "</span>" +
           "<span>관련 기록</span><span>" + caseEsc(String(s.related_count || 0)) + "건</span>" +
           "<span>권장 행동</span><span>" + caseEsc(s.action || "—") + "</span>" +
           "</div>" +
@@ -3028,7 +3058,8 @@ BOOT_JS = """
             "<textarea class='sisun-cases-note' id='cd-note' placeholder='" +
             (st === "acked" ? "조치 내용 입력(필수)" : "수행 결과 입력(필수)") + "'></textarea>") : "") +
           "<div class='sisun-cases-err' id='cd-err'></div>" +
-          "<div class='sisun-cases-hist'><strong>처리 이력</strong>" +
+          "<div class='sisun-cases-hist'><strong>실제 처리 이력</strong>" +
+          "<div>등록·확인·조치를 수행한 실제 날짜입니다. 과거 이력은 보존합니다.</div>" +
           ((j.history || []).map(function(h){ return "<div>" + histLine(h) + "</div>"; }).join("") ||
             "<div class='sisun-cases-empty'>이력 없음</div>") +
           "</div>";
@@ -3140,11 +3171,17 @@ BOOT_JS = """
       .then(function(r) { return r.json(); })
       .then(function(j) {
         if (!j || j.ok === false) {
+          var storageError = document.getElementById("sisun-cases-storage");
+          if (storageError) storageError.textContent = "사건 저장소 연결 확인 실패 · 변경 결과를 다시 확인하세요";
           var list = document.getElementById("sisun-cases-list");
           if (list) list.innerHTML = "<div class='sisun-cases-err'>" + caseEsc((j && j.error) || "목록 조회 실패") + "</div>";
           return;
         }
         if (loadSeq !== __cases.loadSeq) return;
+        var storage = document.getElementById("sisun-cases-storage");
+        if (storage) storage.textContent = j.storage_mode === "shared"
+          ? "공용 사건 서버 연결됨 · 담당자와 조치 상태를 함께 공유합니다"
+          : "이 컴퓨터의 로컬 기록 · 다른 컴퓨터와 조치 상태를 공유하지 않습니다";
         paintCasesSummary(j.summary || {});
         paintCasesList(j.cases || []);
         if (__cases.selected) {

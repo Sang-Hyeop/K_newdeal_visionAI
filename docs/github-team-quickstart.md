@@ -4,7 +4,7 @@
 
 ## 받을 브랜치
 
-Windows 최종 실행 파일 정리본은 `fix/windows-final-entrypoints`에서 받습니다. 해당 PR 병합 후에는 `main`에서 받습니다. GitHub Code → Download ZIP으로 받고 새 폴더에 ZIP 전체를 압축 해제합니다.
+10월 23일 최종 수정본은 `fix/final-monitoring-shared-cases`에서 받습니다. 해당 PR 병합 후에는 `main`에서 받습니다. GitHub Code → Download ZIP으로 받고 새 폴더에 ZIP 전체를 압축 해제합니다.
 
 ## Windows 자동 설치·실행
 

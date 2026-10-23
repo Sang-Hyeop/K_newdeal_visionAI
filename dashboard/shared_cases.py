@@ -14,6 +14,23 @@ _CACHE_KEY = None
 _LOCK = threading.Lock()
 
 
+def load_local_config(path=None):
+    """앱 실행 시 개인 연결 파일을 읽습니다. 명시적 환경 변수는 우선합니다."""
+    from pathlib import Path
+    if "SISUN_CASE_SERVER" in os.environ:
+        return
+    path = Path(path) if path else Path(__file__).resolve().parents[1] / ".sisun/shared-cases.json"
+    if not path.is_file():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    server = str(data.get("server") or "").rstrip("/")
+    token = str(data.get("token") or "")
+    if not server.startswith(("http://", "https://")) or not token:
+        raise ValueError("공용 사건 연결 파일의 주소와 접속키를 확인하세요")
+    os.environ["SISUN_CASE_SERVER"] = server
+    os.environ["SISUN_CASE_TOKEN"] = token
+
+
 def enabled():
     return bool(os.environ.get("SISUN_CASE_SERVER", "").strip())
 

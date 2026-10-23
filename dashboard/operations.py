@@ -88,18 +88,9 @@ def operations_html(period="전체"):
         return card("조치 이력 조회 실패: " + escape(str(exc)))
     m = operational_metrics(cases, period, histories)
 
-    def elapsed(value):
-        return (
-            "기록 없음"
-            if value is None
-            else (f"{value:.1f}초" if value < 60 else f"{value / 60:.1f}분")
-        )
-
     tiles = [
         ("등록 사건", f"{m['total']}건"),
         ("미완료", f"{m['unfinished']}건"),
-        ("평균 최초 확인", elapsed(m["mean_ack_seconds"])),
-        ("평균 최초 완료", elapsed(m["mean_done_seconds"])),
     ]
     out = (
         "<p>집계 갱신: "

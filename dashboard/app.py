@@ -95,6 +95,18 @@ def _alert_bus_tick():
     return beep_html(kind)
 
 
+def _global_monitor_tick():
+    """탭 외부의 타이머로 알림과 메인 숫자를 함께 갱신한다."""
+    sound = _alert_bus_tick()
+    if not _ALERT_BUS.get("on"):
+        return sound, gr.update()
+    view = get_df()
+    if view is None:
+        view = peek_df()
+    positions = {cam["id"]: _alert_bus_elapsed() for cam in CAMERAS}
+    return sound, kpi_html(live_positions(view, positions))
+
+
 _ICON_DIR = os.path.join(os.path.dirname(__file__), "packaging", "icons")
 _FAVICON = next(
     (
@@ -395,9 +407,6 @@ def make_main(cams):
 
         def new_session():
             """로그인 직후 한 번: KPI·알림을 0부터 다시 셈."""
-            from .events import rebase_display_clock
-
-            rebase_display_clock()
             kpi_session["started"] = False
             kpi_session["max_pos"] = {}
             kpi_session["await_restart"] = True
@@ -406,7 +415,8 @@ def make_main(cams):
             reset_notify_state()
 
         def begin():
-            paths = _paths()
+            paths = (_paths() if not kpi_session["started"]
+                     else [gr.update() for _ in vids])
             if not kpi_session["started"]:
                 kpi_session["started"] = True
                 kpi_session["max_pos"] = {}
@@ -418,9 +428,14 @@ def make_main(cams):
                 alerts = idle_alerts
                 sound_html = f"<div class='sisun-restart-videos' data-reset-token='{uuid.uuid4().hex}' hidden></div>"
             else:
-                kpi = gr.update()
+                view = peek_df()
+                elapsed = _alert_bus_elapsed()
+                kpi = kpi_html(live_positions(view, {cam["id"]: elapsed for cam in cams}))
                 alerts = tuple(gr.update() for _ in alert_boxes)
-                sound_html = gr.update()
+                sound_html = (
+                    f"<div class='sisun-resume-main' data-token='{uuid.uuid4().hex}' "
+                    f"data-elapsed='{elapsed:.3f}' hidden></div>"
+                )
             return (
                 tuple(paths)
                 + (True, {}, True, sound_html, kpi)
@@ -430,9 +445,6 @@ def make_main(cams):
 
         def refresh():
             """새로고침: 영상을 처음으로 되돌리고 KPI·알림을 0부터 다시 셈."""
-            from .events import rebase_display_clock
-
-            rebase_display_clock()
             load_df(force=True)
             kpi_session["started"] = True
             kpi_session["max_pos"] = {}
@@ -451,19 +463,19 @@ def make_main(cams):
             )
 
         def stop():
-            """다른 탭/로그아웃 시 메인 틱만 멈춤. KPI·누적 위치는 유지."""
+            """다른 탭에서도 공통 세션 시계의 메인 집계를 계속한다."""
             n = len(vids)
             return (
                 tuple(gr.update() for _ in range(n))
                 + (
-                    False,
+                    True,
                     gr.update(),
                     True,
                     gr.update(),
                     gr.update(),
                 )
                 + tuple(gr.update() for _ in alert_boxes)
-                + (gr.update(active=False),)
+                + (gr.update(active=True),)
             )
 
         def tick(on, positions, is_ready):
@@ -478,7 +490,13 @@ def make_main(cams):
             if view is None:
                 return (kpi_html(None),) + idle_alerts
             raw = positions if isinstance(positions, dict) else {}
-            effective = _effective_positions(raw)
+            # 숨겨진 영상 DOM은 일시 정지되거나 재생 위치를 주지 않을 수 있다.
+            # 알림과 동일한 시계로 집계하여 탭 이동·영상 루프에 종속되지 않는다.
+            counting = (
+                {cam["id"]: _alert_bus_elapsed() for cam in cams}
+                if _ALERT_BUS.get("on") else raw
+            )
+            effective = _effective_positions(counting)
             # 틱 도중 새로고침이 끼면 이전 집계로 KPI를 덮지 않음
             if (
                 kpi_session.get("await_restart")
@@ -516,6 +534,7 @@ def make_main(cams):
         demo._live_begin = begin
         demo._live_stop = stop
         demo._live_outs = outs
+        demo._global_kpi = kpis
         demo._kpi_new_session = new_session
     return demo
 
@@ -691,6 +710,11 @@ def make_history():
 
 
 def launch():
+    # 앱 실행 시 표시 기준을 한 번 고정한다. 로그인/탭 이동으로 날짜를 바꾸지 않는다.
+    from .events import rebase_display_clock
+    rebase_display_clock()
+    from .shared_cases import load_local_config
+    load_local_config()
     os.environ.setdefault("GRADIO_DEFAULT_CONCURRENCY_LIMIT", "40")
     _BOOT_TIMERS.clear()
     demos = []
@@ -789,8 +813,8 @@ def launch():
             alert_sound = gr.HTML(elem_classes="t2-sound t2-sound-global")
             alert_timer = gr.Timer(0.4, active=False)
             alert_timer.tick(
-                _alert_bus_tick,
-                outputs=[alert_sound],
+                _global_monitor_tick,
+                outputs=[alert_sound, demos[0][1]._global_kpi],
                 concurrency_limit=1,
             )
 
@@ -987,14 +1011,20 @@ def launch():
                 "date_from": str(q.get("date_from") or ""),
                 "date_to": str(q.get("date_to") or ""),
             }
-            return list_cases(filters)
+            from .case_ui import case_display_payload
+            from .alert_ops import snapshot_episodes
+            from .config import clock_start
+            return case_display_payload(list_cases(filters), get_df(), snapshot_episodes(), clock_start())
 
         @fastapi_app.get("/sisun/alert-cases/detail")
         async def _sisun_alert_cases_detail(request: Request):
             link = str(request.query_params.get("link_key") or "").strip()
             if not link:
                 return {"ok": False, "error": "link_key required"}
-            return case_detail(link)
+            from .case_ui import case_display_payload
+            from .alert_ops import snapshot_episodes
+            from .config import clock_start
+            return case_display_payload(case_detail(link), get_df(), snapshot_episodes(), clock_start())
 
     threading.Thread(target=_mount_response_route, daemon=True).start()
     app.launch(**launch_kw)

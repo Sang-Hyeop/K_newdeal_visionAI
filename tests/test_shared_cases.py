@@ -25,6 +25,16 @@ def action(prev, nxt, req, who='작업자 A'):
 
 
 class SharedStoreTests(unittest.TestCase):
+    def test_legacy_history_is_preserved_without_guessing_case_link(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp)/"legacy.jsonl"
+            legacy = dict(episode_id="old-episode",operator_at="2026-10-19 12:00:00",next_status="acked")
+            source.write_text(json.dumps(legacy),encoding="utf-8")
+            store = CaseService(Path(tmp)/"legacy.db")
+            self.assertEqual(store.import_log(source),1)
+            rows=store.execute("snapshot",[])["rows"]
+            self.assertEqual(rows,[legacy])
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.db = Path(self.tmp.name) / 'shared.sqlite3'
